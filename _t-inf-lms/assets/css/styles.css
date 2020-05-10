@@ -167,7 +167,10 @@ nav#mainNavigation > .dropdownButton > .dropdown > .courseNav > a { display: blo
 
 #studentNavigation > .studentLinks > a:hover { text-decoration: underline; }
 
-@media only screen and (min-width: 750px) { #studentNavigation { display: block; } }
+.openNavigation:target + #studentNavigation { display: block; }
+
+@media only screen and (min-width: 750px) { #studentNavigation { display: block; }
+  .openNavigation { display: none; } }
 
 .doelstellingResultaten { display: flex; border-bottom: 1px solid #a1a1a1; padding: 8px; }
 
