@@ -32,7 +32,7 @@
     text-decoration: underline;
 }
 
-.openNavigation:target+#studentNavigation {
+#studentNavigation:target {
     display: block;
 }
 
