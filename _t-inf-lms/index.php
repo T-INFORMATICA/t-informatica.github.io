@@ -252,6 +252,7 @@ $controller = new MainController($model);
 <section id="profileContent">
     <a href="#studentNavigation" id="openNavButton" class="material-icons">menu</a>
     <nav id="studentNavigation">
+        <a href="#close" id="closeNavButton" class="material-icons">close</a>
         <h1>LMS</h1>
         <div class="studentLinks"> 
 <?php

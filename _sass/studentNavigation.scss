@@ -32,7 +32,8 @@
     text-decoration: underline;
 }
 
-#openNavButton {
+#openNavButton,
+#closeNavButton {
     float: right;
     margin-right: 10px;
     margin-top: 10px;
@@ -50,7 +51,8 @@
         display: block;
     }
 
-    #openNavButton {
+    #openNavButton,
+    #closeNavButton {
         display: none;
     }
 }
