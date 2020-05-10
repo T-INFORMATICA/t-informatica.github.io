@@ -207,14 +207,6 @@
       <!-- Script pointing to search-script.js -->
       <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
       
-      <!-- Configuration -->
-      <script>
-          SimpleJekyllSearch({
-          searchInput: document.getElementById('search-input'),
-          resultsContainer: document.getElementById('results-container'),
-          json: '/_t-inf-lms/search.json'
-          })
-      </script>
     </div>
   </span>
 </nav>
@@ -256,4 +248,12 @@ $controller = new MainController($model);
       </footer>
     </div>
   </body>
+  <!-- Configuration -->
+  <script>
+      SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/_t-inf-lms/search.json'
+      })
+  </script>
 </html>
