@@ -7,7 +7,7 @@ $(function(){
     }
     else {
       let id = $('select.lang-select').val();
-      localStorage.setItem( 'lang', 'id' );
+      localStorage.setItem( 'lang', id );
       showCode(id);
     }
 });
@@ -15,7 +15,7 @@ $(function(){
 
 $('select.lang-select').change(function() {
     let id = $(this).val();
-    localStorage.setItem( 'lang', 'id' );
+    localStorage.setItem( 'lang', id );
     //setCookie("lang", id, 900);
     showCode(id);
 });
