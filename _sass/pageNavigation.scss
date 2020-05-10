@@ -1,0 +1,54 @@
+#pageActions>a {
+    font-weight: 500;
+    color: #3176d9;
+    display: block;
+    padding: 4px;
+}
+
+#pageActions>a:hover {
+    color: #1e53a0;
+}
+
+
+#pageNavigation {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    
+    background-color: white;
+
+    border-left: 1px solid #dedede;
+    padding: 8px;
+
+    z-index: 0;
+}
+
+#toc ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#toc ul>li>ul {
+    padding-left: 8px;
+}
+
+#toc a {
+    display: block;
+    color: #888;
+    padding: 4px;
+}
+
+#toc a:hover {
+    color: #3176d9;
+}
+
+
+@media only screen and (min-width: 900px) {
+    #pageNavigation {
+        display: block;
+    }
+}

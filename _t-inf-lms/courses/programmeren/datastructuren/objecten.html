@@ -1,0 +1,562 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecten</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html"><u>Objecten</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Objecten</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">complex</a>
+            
+                <a href="#" class="tag">simpel</a>
+            
+                <a href="#" class="tag">primitive</a>
+            
+                <a href="#" class="tag">object</a>
+            
+                <a href="#" class="tag">instantie</a>
+            
+                <a href="#" class="tag">constructor</a>
+            
+                <a href="#" class="tag">new</a>
+            
+        </div>
+
+        <h2 id="complex-vs-simpel">Complex vs simpel</h2>
+
+<p>Simpel en complex zijn twee belangrijke termen binnen programmeren. Het zijn twee categorieën waarin je data kunt opdelen.</p>
+
+<p><strong>Let op!</strong> Simpel en complex beschrijven niet hoe gemakkelijk of moeilijk iets is!</p>
+
+<p>Wanneer iets <strong>simpel</strong> is, bedoelt men dat iets enkelvoudig is, met andere woorden: het bestaat uit slechts 1 onderdeel. Zo is er het datatype integer, waarmee je één geheel getal kunt opslaan in een variabele.
+Wanneer een datatype simpel is, wordt dit in programmeren een <strong>primitive datatype</strong> genoemd.</p>
+
+<p>Wanneer iets <strong>complex</strong> is, bedoelt men dat iets meervoudig is, met andere woorden: het kan bestaan uit meerdere onderdelen. Zo is er het datatype Date, waarmee je een datum (bestaande uit een jaar, maand en dag) en tijd (bestaande uit een uur, minuut, seconde en milliseconde) kunt opslaan.</p>
+
+<h2 id="objecten-en-instanties">Objecten en instanties</h2>
+
+<p>Een datatype bepaalt welke soort waarde je kan opslaan in een variabele.</p>
+
+<ul>
+  <li>Integer bepaalt dat je een geheel getal kan opslaan.</li>
+  <li>Decimal bepaalt dat je een komma getal kan opslaan.</li>
+  <li>Bool bepaalt dat je true of false kunt opslaan.</li>
+  <li>String bepaalt dat je tekst kunt opslaan.</li>
+</ul>
+
+<p>De datatypes hierboven zijn voorbeelden van <strong>primitive datatypes</strong>, omdat ze maar één waarde kunnen bijhouden (een variabele van het datatype integer kan immers maar één getal bijhouden).</p>
+
+<p>Een variabele van een primitive datatype (in dit voorbeeld integer) wordt op de volgende manier aangemaakt:</p>
+
+<ol>
+  <li><strong>Declareer</strong> de variabele</li>
+  <li><strong>Geef een naam</strong> aan de variabele</li>
+  <li><strong>Geef een initiële waarde</strong> aan de variabele</li>
+</ol>
+
+<pre class="prettyprint linenums lang lang-JS">
+    let myVariable = 0;
+//   1	    2	     3
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+    $myVariable = 0;
+//  1    2        3
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+    int myVariable = 0;
+//   1	   2	     3
+</pre>
+
+<p>Een <strong>complex datatype</strong> is een datatype waarin meerdere waardes kunnen worden bijgehouden. Een voorbeeld hiervan is het datatype Date.</p>
+
+<p>Het datatype Date wordt gebruikt om, aan de hand van een datum (jaar, maand, dag) en tijd (uur, minuut, seconde, milliseconde), een moment in de tijd bij te houden. Date is dus een voorbeeld van een complex datatype omdat <strong>het bestaat uit meerdere waardes</strong>.</p>
+
+<p>Een variabele van een complex datatype (in dit voorbeeld Date) wordt op dezelfde manier aangemaakt als een variabele van een simpel datatype:</p>
+
+<ol>
+  <li><strong>Declareer</strong> de variabele</li>
+  <li><strong>Geef een naam</strong> aan de variabele</li>
+  <li><strong>Geef een initiële waarde</strong> aan de variabele</li>
+</ol>
+
+<p>Het probleem is echter stap 3: Hoe initialiseer je de waarde van een complexe variabele?</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+// !! DIT IS FOUT !!
+let verjaardag = 0; 		// verjaardag is nu een integer, geen Date
+let verjaardag = "11/10/1987";	// verjaardag is nu een string, geen Date
+let verjaardag = 11/10/1987; 	// dit is geen geldige waarde, en zal dus een
+				// error geven
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+// !! DIT IS FOUT !!
+$verjaardag = 0; 		 // verjaardag is nu een integer, geen Date
+$verjaardag = "11/10/1987"; 	// verjaardag is nu een string, geen Date
+$verjaardag = 11/10/1987;   	// dit is geen geldige waarde, en zal dus een
+				// error geven
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+// !! DIT IS FOUT !!
+Date verjaardag = 0; 		// verjaardag is nu een integer, geen Date
+Date verjaardag = "11/10/1987"; // verjaardag is nu een string, geen Date
+Date verjaardag = 11/10/1987;   // dit is geen geldige waarde, en zal dus een
+				// error geven
+</pre>
+
+<p>De oplossing hiervoor is het aanmaken van een object. <strong>Een object is een een waarde met een complex datatype</strong>. Een object wordt op de volgende manier aangemaakt:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+let verjaardag = new Date();
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$verjaardag = new Date();
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+Date verjaardag = new Date();
+</pre>
+
+<p>Het <strong>new</strong> keyword geeft aan dat je een object wilt aanmaken. Dit wordt dan gevolgd door het aanroepen van een speciale functie: de <strong>constructor</strong>. De constructor is een speciale functie die een nieuw object kan maken. Deze functie heeft dezelfde naam als het datatype waarvoor de constructor een object zal maken.</p>
+
+<p>Elke keer dat je een nieuw object aanmaakt, maak je een nieuwe <strong>instantie</strong> aan van dat complexe datatype.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+let verjaardag = new Date();		// met Date() roep je de 
+					// constructor-functie aan, waarmee je 
+					// een object van het datatype Date maakt
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$verjaardag = new Date();		// met Date() roep je de 
+					// constructor-functie aan, waarmee je 
+					// een object van het datatype Date maakt
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+Date verjaardag = new Date();		// met Date() roep je de 
+					// constructor-functie aan, waarmee je 
+					// een object van het datatype Date maakt
+</pre>
+
+<h2 id="complexe-datatypes">Complexe datatypes</h2>
+
+<p>Complexe datatypes kunnen uit meerdere waarden bestaan. Een complex datatype is dus een verzameling van waardes. Bijvoorbeeld: Het datatype Date zou 2 waarden kunnen bevatten:</p>
+
+<ul>
+  <li>Een <strong>datum</strong> waarde. Omdat een datum uit 3 waarden bestaat (jaar, maand, dag) is dit op zich ook weer een complex datatype.</li>
+  <li>Een <strong>tijd</strong> waarde. Omdat een tijd uit 4 waarden bestaat (uur, minuut, seconde, milliseconde) is dit op zich ook weer een complex datatype.</li>
+</ul>
+
+<p>Het datatype van de datum-waarde zou op zich dan weer 3 waarden kunnen bevatten:</p>
+
+<ul>
+  <li>Een integer waarde waarin het jaar wordt bijgehouden.</li>
+  <li>Een integer waarde waarin de maand wordt bijgehouden.</li>
+  <li>Een integer waarde waarin de dag wordt bijgehouden.</li>
+</ul>
+
+<p>En het datatype van de tijd-waarde zou op zich 4 waarden kunnen bevatten:</p>
+
+<ul>
+  <li>Een integer waarde waarin het uur wordt bijgehouden.</li>
+  <li>Een integer waarde waarin de minuten worden bijgehouden.</li>
+  <li>Een integer waarde waarin de seconden worden bijgehouden.</li>
+  <li>Een integer waarde waarin de milliseconden worden bijgehouden.</li>
+</ul>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/datastructuren/#objecten"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/datastructuren/objecten.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#complex-vs-simpel">Complex vs simpel</a></li>
+  <li><a href="#objecten-en-instanties">Objecten en instanties</a></li>
+  <li><a href="#complexe-datatypes">Complexe datatypes</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

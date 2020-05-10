@@ -1,0 +1,41 @@
+
+
+#courseContent,
+#profileContent,
+#exerciseContent {
+    padding-top: 50px;
+}
+
+@media only screen and (min-width: 750px) {
+    #courseContent,
+    #profileContent {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-areas: "courseNav chapterContent";
+        grid-gap: 20px;
+        padding-top: 0;
+    }
+    
+    #courseNavigation {
+        grid-area: courseNav;
+    }
+    
+    #chapterContent {
+        grid-area: chapterContent;
+    }
+}
+
+
+@media only screen and (min-width: 900px) {
+    #courseContent {
+        display: grid;
+        grid-template-columns: 200px minmax(0, auto) 200px;
+        grid-template-areas: "courseNav chapterContent toc";
+        grid-gap: 20px;
+        padding-top: 0;
+    }
+    
+    #toc {
+        grid-area: toc;
+    } 
+}

@@ -1,0 +1,456 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Functies</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+      <h1>Databanken</h1>
+      
+        
+
+    
+        
+
+    
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database ontwerp</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's dessertenboek</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">Sql</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek database</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Sql functies</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">functie</a>
+            
+                <a href="#" class="tag">SUM</a>
+            
+                <a href="#" class="tag">MIN</a>
+            
+                <a href="#" class="tag">MAX</a>
+            
+                <a href="#" class="tag">COUNT</a>
+            
+                <a href="#" class="tag">AVG</a>
+            
+        </div>
+
+        <h1 id="sql-functies-en-operaties">SQL Functies en Operaties</h1>
+
+<p>Een SQL query bestaat uit drie onderdelen:</p>
+
+<ul>
+  <li>projectie</li>
+  <li>brontabel</li>
+  <li>selectie</li>
+</ul>
+
+<p>Met een projectie wordt bepaald welke kolommen uit een tabel worden genomen om een nieuwe tabel te maken.</p>
+
+<pre class="prettyprint linenums lang-sql">
+select componist, titel, niveau 	-- 3: projectie
+from Stuk 				-- 1: brontabel
+where genre = 'klassiek'; 		-- 2: selectie
+</pre>
+
+<p>Een projectie moet niet alleen kolomnamen bevatten. Dit mag ook een constante zijn, bijvoorbeeld een constant stukje tekst, een constant getal of een constante datum. In het voorbeeld hieronder wordt een kolom toegevoegd, waar in elke cel de waarde “heeft als niveau” wordt gezet.</p>
+
+<pre class="prettyprint linenums lang-sql">
+select componist, titel, 'heeft als niveau', niveau
+from Stuk;
+</pre>
+
+<p>Een projectie kan dus meer dan alleen kolomnamen bevatten.</p>
+
+<h2 id="waardes-per-kolom-aanpassen">Waardes per Kolom Aanpassen</h2>
+
+<p>In de databank heeft elk muziekstuk een bepaalde, officiële speelduur gekregen. Om tijdens een concert elk nummer voldoende tijd te geven (de speler op het podium laten komen, tijd voor applaus, …) wilt een muziekschool een resultaattabel waarin elk nummer 10% meer tijd krijgt.</p>
+
+<p>Een SQL query kan hiervoor in de projectie gebruik maken van de gekende wiskundige operaties: optellen (+), vermenigvuldigen (*), delen (/) en aftrekken (-).</p>
+
+<pre class="prettyprint linenums lang-sql">
+select nr,
+ titel,
+ speelduur * 1.1 -- verhoog de speelduur met 10%
+from Stuk;
+</pre>
+
+<h2 id="waardes-per-kolom-samenvoegen">Waardes per Kolom Samenvoegen</h2>
+
+<p>Concatenatie is het samenvoegen van twee of meer kolommen in één kolom.</p>
+
+<p>Zo kan een</p>
+
+<pre class="prettyprint linenums lang-sql">
+SELECT CONCAT(titel, 'heeft als niveau', niveau)
+FROM Stuk;
+</pre>
+
+<h2 id="rijen-samenvoegen">Rijen Samenvoegen</h2>
+
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/databanken/sql/#statistische-informatie"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/databanken/sql/statistische-informatie.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#sql-functies-en-operaties">SQL Functies en Operaties</a>
+    <ul>
+      <li><a href="#waardes-per-kolom-aanpassen">Waardes per Kolom Aanpassen</a></li>
+      <li><a href="#waardes-per-kolom-samenvoegen">Waardes per Kolom Samenvoegen</a></li>
+      <li><a href="#rijen-samenvoegen">Rijen Samenvoegen</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

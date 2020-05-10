@@ -1,0 +1,697 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functies</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html"><u>Functies</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Functies</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">functie</a>
+            
+                <a href="#" class="tag">signature</a>
+            
+                <a href="#" class="tag">return</a>
+            
+                <a href="#" class="tag">return value</a>
+            
+                <a href="#" class="tag">parameter</a>
+            
+                <a href="#" class="tag">void</a>
+            
+        </div>
+
+        <h2 id="wat-is-een-functie">Wat is een functie?</h2>
+
+<p><strong>Een functie is een codeblok met een naam</strong>. Aangezien een codeblok een lijst met instructies is, is een functie dus een lijst met instructies waar je een naam aan geeft.</p>
+
+<ul>
+  <li>De instructies in dat codeblok worden pas uitgevoerd als je de juiste naam aanroept.</li>
+  <li>Roep je de functie nergens aan, dan worden die instructies nooit uitgevoerd!</li>
+</ul>
+
+<p>Je kan een functie vergelijken met een To Do-lijst. Op zo’n lijst staan een aantal instructies (koop paprika’s, koop aardappelen, …), en je geeft dat lijstje een logische naam (boodschappen).
+Boodschappen doen is zo heel gemakkelijk. Je neemt het To Do-lijstje met de juiste naam (‘Boodschappen ALDI’) en overloopt alle instructies één voor één tot je het lijstje hebt afgewerkt.</p>
+
+<p>Een functie werkt op dezelfde manier:</p>
+
+<p>Je plaatst alle <strong>instructies</strong> die bij elkaar horen in het lijstje (het codeblok), en je geeft dat lijstje een <strong>naam</strong> (Explodeer).</p>
+
+<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+FUNCTIE: EXPLODEER
+</pre>
+<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter 
+	// van de explosie
+}
+</pre>
+
+<h2 id="een-functie-maken">Een functie maken</h2>
+
+<pre class="prettyprint linenums lang lang-JS lang-PHP">
+function Explodeer() 	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Explodeer()  	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+</pre>
+
+<p>Het gedeelte <code class="highlighter-rouge">function Explodeer()</code> heet de <strong>signature</strong> van de functie. Deze signature moet <strong>uniek</strong> zijn in de scope van de functie. De signature geeft aan dat dit de enige functie Explodeer is binnen de scope.</p>
+
+<p><strong>Opgelet!</strong> Een declaratie is <strong>GEEN instructie</strong>! Aan het einde volgt er dus <strong>GEEN puntkomma</strong>.</p>
+
+<h2 id="een-functie-gebruiken">Een functie gebruiken</h2>
+
+<p>Een functie is een codeblok met een naam. De instructies in dat codeblok worden pas uitgevoerd als je de juiste naam aanroept. Roep je de functie nergens aan, dan worden die instructies nooit uitgevoerd!</p>
+
+<p>De volgende code doet dus niets, want hoewel de functie wel gedeclareerd is wordt deze nergens bij naam aangeroepen:</p>
+
+<pre class="prettyprint linenums lang lang-JS lang-PHP">
+function Explodeer() 	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Explodeer()  	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+</pre>
+
+<p>De functie moet nog worden aangeroepen (= gebruikt) voordat de instructies worden uitgevoerd. Bij een functie aanroep gebruik je gewoon de naam van de functie, gevolgd door de haakjes:</p>
+
+<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+Explodeer();
+</pre>
+
+<p><strong>Opgelet!</strong> Een functie aanroep is <strong>WEL een instructie!</strong> Aan het einde volgt er dus <strong>WEL een puntkomma</strong>.</p>
+
+<h2 id="parameters">Parameters</h2>
+
+<p>Een functie is een lijst met instructies waar je een naam aan geeft. Die lijst van instructies kan eender welke instructie bevatten, van het aanmaken van variabelen tot het aanroepen van andere functies.</p>
+
+<p>De Scope van variabelen in een functie zorgt ervoor dat die variabelen (en dus de waarde die daarin zit opgeslagen) enkel en alleen binnen die functie bereikbaar is. Een vervelend effect hiervan is dat je geen variabelen kunt gebruiken die in andere functies zijn aangemaakt.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+function Functie1()  	// de signature van functie 1
+{
+	let mijnVar = 7;	// maak een variabele aan
+	Functie2();		// roep functie 2 aan
+}
+function Functie2()  	// de signature van functie 2
+{
+	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+function Functie1()  	// de signature van functie 1
+{
+	$mijnVar = 7;	// maak een variabele aan
+	Functie2();		// roep functie 2 aan
+}
+function Functie2()  	// de signature van functie 2
+{
+	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Functie1()  	// de signature van functie 1
+{
+	int mijnVar = 7;	// maak een variabele aan
+	Functie2();		// roep functie 2 aan
+}
+void Functie2()  	// de signature van functie 2
+{
+	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
+}
+</pre>
+
+<p>Moest je in Functie2() de variabele mijnVar willen gebruiken, is dit dus niet mogelijk.</p>
+
+<p>Functies hebben echter een handige manier om de <em>waarde</em> van een variabele aan de functie te kunnen doorgeven. Functies kunnen gebruik maken van speciale functie-variabelen, die je bij het aanroepen van die functie kunt invullen. Deze speciale functie-variabelen heten <strong>parameters</strong>.</p>
+
+<p>Een parameter is een variabele in de functie, waarvan de waarde wordt bepaald bij het aanroepen van de functie.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+function Functie1()  	// de signature van functie 1
+{
+	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
+}
+function Functie2(mijnParameter)  	// de signature van functie 2 met één parameter
+{
+	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+function Functie1()  	// de signature van functie 1
+{
+	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
+}
+function Functie2($mijnParameter)  	// de signature van functie 2 met één parameter
+{
+	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Functie1()  	// de signature van functie 1
+{
+	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
+}
+void Functie2(int mijnParameter)  	// de signature van functie 2 met één parameter
+{
+	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
+}
+</pre>
+
+<p>Je kan hiermee zelfs de waarde van een andere variabele doorgeven aan de parameter.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+function Functie1()  	// de signature van functie 1
+{
+	let mijnVar = 7;
+	Functie2(mijnVar);	// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.
+}
+function Functie2(mijnParameter)  	// de signature van functie 2 met één parameter
+{
+	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+function Functie1()  	// de signature van functie 1
+{
+	$mijnVar = 7;
+	Functie2($mijnVar);	// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.
+}
+function Functie2($mijnParameter)  	// de signature van functie 2 met één parameter
+{
+	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Functie1()  	// de signature van functie 1
+{
+	int mijnVar = 7;
+	Functie2(mijnVar);	// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.
+}
+void Functie2(int mijnParameter)  	// de signature van functie 2 met één parameter
+{
+	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
+}
+</pre>
+
+<h2 id="return-waarde">Return waarde</h2>
+
+<p>Een functie is een lijst met instructies waar je een naam aan geeft. Die lijst van instructies kan eender welke instructie bevatten, van het aanmaken van variabelen tot het aanroepen van andere functies. Parameters zijn een manier om een waarde door te geven van de aanroep naar de functie. Ook het omgekeerde is soms nodig: een waarde doorgeven van de functie naar de plaats waar je de functie aanroept.</p>
+
+<p>Het is belangrijk om te weten dat een functie in principe maar één doel (één ‘functie’) mag hebben. Als een functie dus iets teruggeeft aan de plaats waar de functie werd aangeroepen, dan kan dat maar één waarde zijn.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p>De functie Optellen(getal1, getal2) heeft één duidelijk doel: tel de waardes van de twee parameters op. Deze functie kan je aanroepen met Optellen(3, 7), waarop de variabele som de waarde 10 zal bevatten.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+Optellen(3, 7);
+
+function Optellen(getal1, getal2)  	// de signature van functie 1
+{
+	let som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+Optellen(3, 7);
+
+function Optellen($getal1, $getal2)  	// de signature van functie 1
+{
+	$som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+Optellen(3, 7);
+
+void Optellen(int getal1, int getal2)  	// de signature van functie 1
+{
+	int som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
+}
+</pre>
+
+<p>Het probleem is ook hier de scope van de variabele in de functie. De functie is aangeroepen, de getallen zijn samengeteld, maar ik kan het resultaat van die som nergens anders gebruiken.</p>
+
+<pre class="prettyprint linenums lang lang-JS lang-PHP lang-JS">
+Optellen(3, 7); // de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!
+</pre>
+
+<p>Hiervoor wordt het keyword return gebruikt. Return zorgt ervoor dat een functie niet alleen iets kan berekenen, maar het resultaat van die berekening ook kan teruggeven aan de plaats waar de functie werd aangeroepen.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+let resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
+
+function Optellen(getal1, getal2)  	// de signature van functie 1
+{
+	let som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
+	return som;			// geef de waarde van som terug naar de aanroep!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
+
+function Optellen($getal1, $getal2)  	// de signature van functie 1
+{
+	$som = $getal1 + $getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
+	return $som;			// geef de waarde van som terug naar de aanroep!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
+
+int Optellen(int getal1, int getal2)  	// OPGELET: in C# moet je het datatype van de return waarde ook tonen!
+{
+	int som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
+	return som;			// geef de waarde van som terug naar de aanroep!
+}
+</pre>
+<div class="lang lang-CS">// OPGELET: in C# moet je het datatype van de return waarde ook tonen!</div>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/codeblokken/#functies"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/codeblokken/functies.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#wat-is-een-functie">Wat is een functie?</a></li>
+  <li><a href="#een-functie-maken">Een functie maken</a></li>
+  <li><a href="#een-functie-gebruiken">Een functie gebruiken</a></li>
+  <li><a href="#parameters">Parameters</a></li>
+  <li><a href="#return-waarde">Return waarde</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

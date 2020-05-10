@@ -1,0 +1,34 @@
+
+
+
+<div class="modal popup" id="question">
+	<a href="#" class="modalBackground"></a>
+	<div class="window">
+<form action="index.php?show=exercise" method="POST">
+    <h3>{{question}}</h3>
+    <input type="hidden" name="exerciseSetId" value="{{exerciseSetId}}">
+    <ul>
+        {{#answers}}
+        <li>
+            <input type="radio" name="selectedAnswer" id="selectedAnswer-{{counter}}" value="{{answer}}">
+            <label for="selectedAnswer-{{counter}}">{{answer}}</label>
+        </li>
+        {{/answers}}
+    </ul>
+
+    <input type="submit">
+</form>
+	</div>
+</div>
+
+{{#previousCorrect}}
+<p>
+    Correct!
+</p>
+{{/previousCorrect}}
+{{#previousIncorrect}}
+<p>
+    {{previousIncorrect}}
+</p>
+{{/previousIncorrect}}
+<a href="#question">volgende vraag</a>

@@ -1,0 +1,16 @@
+
+<h1>Evaluaties</h1>
+
+<div class="evaluatiesTimeline">
+	{{#opdrachten}}
+	<div class="timeline-item" data-date='{{datum}}'>
+		<h3><label for="checkbox-{{datum}}">{{opdrachtNaam}}</label></h3>
+		<input type="checkbox" id="checkbox-{{datum}}" checked>
+		<ul class="expand">
+		{{#evaluaties}}
+			<li><b class="result">{{waarde}}</b> {{doelstelling}}<br>{{commentaar}} </li>
+		{{/evaluaties}}
+		</ul>
+	</div>
+	{{/opdrachten}}
+</div>

@@ -1,0 +1,716 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Filteren</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+      <h1>Databanken</h1>
+      
+        
+
+    
+        
+
+    
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database ontwerp</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's dessertenboek</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">Sql</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek database</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Data filteren</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">where</a>
+            
+                <a href="#" class="tag">limit</a>
+            
+                <a href="#" class="tag">offset</a>
+            
+                <a href="#" class="tag">distinct</a>
+            
+                <a href="#" class="tag">order by</a>
+            
+        </div>
+
+        <h1 id="data-filteren">DATA FILTEREN</h1>
+
+<p>Tabellen in databanken hebben vaak duizenden of miljoenen rijen data. Al deze rijen doornemen is enorm veel werk. Daarom is het belangrijk dat een query niet alleen kolom(men) kan selecteren, maar ook kan kiezen welke rijen getoond worden. Bijvoorbeeld:</p>
+
+<table>
+   <tr>
+      <th>Id</th>
+      <th>Merk/Model</th>
+      <th># Wielen</th>
+      <th># Deuren</th>
+      <th>Type</th>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>Ford Focus</td>
+      <td>4</td>
+      <td>4</td>
+      <td>Sedan</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>Tesla Roadster</td>
+      <td>4</td>
+      <td>2</td>
+      <td>Sports</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>Kawakasi Ninja</td>
+      <td>2</td>
+      <td>0</td>
+      <td>Motorcycle</td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>McLaren Formula 1</td>
+      <td>4</td>
+      <td>0</td>
+      <td>Race</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>Tesla S</td>
+      <td>4</td>
+      <td>4</td>
+      <td>Sedan</td>
+   </tr>
+</table>
+
+<ul>
+  <li>Toon enkel rijen waarvan het aantal wielen gelijk is aan 4</li>
+  <li>Toon enkel rijen waarvan het Type gelijk is aan ‘Sedan’ of ‘Race’</li>
+</ul>
+
+<p>Rijen worden niet geselecteerd zoals kolommen (rijen hebben geen naam zoals kolommen dat hebben), maar wel gefilterd. Data kan op verschillende manieren worden gefilterd.</p>
+
+<h2 id="filteren-met-where">Filteren met WHERE</h2>
+
+<p>Een <code class="highlighter-rouge">WHERE</code> filter gebruikt voorwaarden (logische operaties), en toont enkel die rijen die aan die voorwaarden voldoen.</p>
+
+<pre class="prettyprint linenums lang-sql">
+-- Select query met filters
+SELECT column, another_column, ...
+FROM mytable
+WHERE condition
+    AND/OR another_condition
+    AND/OR ...;
+</pre>
+
+<p>Het is mogelijk om meerdere voorwaarden aan een query op te leggen door gebruik te maken van de keywords AND en OR (bijvoorbeeld: #wheels = 4 AND #doors = 2).</p>
+
+<h3 id="filteren-op-getalwaardes">Filteren op getalwaardes</h3>
+
+<p>De logische operatoren hieronder kunnen gebruikt worden voor data die een getalwaarde voorstellen (zoals integers of decimals):</p>
+
+<table>
+   <tr>
+      <th>Operator</th>
+      <th>Voorwaarde</th>
+      <th>SQL Voorbeeld</th>
+   </tr>
+   <tr>
+      <td>=, !=, &lt; &lt;=, &gt;, &gt;=</td>
+      <td>Standaard operators</td>
+      <td>col_name != 4</td>
+   </tr>
+   <tr>
+      <td>BETWEEN … AND …</td>
+      <td>Getal bevindt zich tussen 2 getallen (inclusief)</td>
+      <td>col_name BETWEEN 1.5 AND 10.5</td>
+   </tr>
+   <tr>
+      <td>NOT BETWEEN … AND …</td>
+      <td>Getal bevindt zich niet tussen 2 getallen (inclusief)</td>
+      <td>col_name NOT BETWEEN 1 AND 10</td>
+   </tr>
+   <tr>
+      <td>IN (…)</td>
+      <td>Getal bestaat in een lijst</td>
+      <td>col_name IN (2, 4, 6)</td>
+   </tr>
+   <tr>
+      <td>NOT IN (…)</td>
+      <td>Getal bestaat niet in een lijst</td>
+      <td>col_name NOT IN (1, 3, 5)</td>
+   </tr>
+</table>
+
+<h3 id="filteren-op-tekstwaardes">Filteren op tekstwaardes</h3>
+
+<p>De logische operatoren hieronder kunnen gebruikt worden voor data die een tekstwaarde voorstellen (zoals <code class="highlighter-rouge">varchar</code> of <code class="highlighter-rouge">text</code>):</p>
+<table>
+   <tr>
+      <th>Operator</th>
+      <th>Voorwaarde</th>
+      <th>SQL Voorbeeld</th>
+   </tr>
+   <tr>
+      <td>=</td>
+      <td>Case sensitive exact string comparison (notice the single equals)</td>
+      <td>col_name = "abc"</td>
+   </tr>
+   <tr>
+      <td>!= or &lt;&gt;</td>
+      <td>Case sensitive exact string inequality comparison</td>
+      <td>col_name != "abcd"</td>
+   </tr>
+   <tr>
+      <td>LIKE</td>
+      <td>Case insensitive exact string comparison</td>
+      <td>col_name LIKE "ABC"</td>
+   </tr>
+   <tr>
+      <td>NOT LIKE</td>
+      <td>Case insensitive exact string inequality comparison</td>
+      <td>col_name NOT LIKE "ABCD"</td>
+   </tr>
+   <tr>
+      <td>%</td>
+      <td>Used anywhere in a string to match a sequence of zero or more characters (only with LIKE or NOT LIKE)</td>
+      <td>"col_name LIKE ""%AT%""</td>
+   </tr>
+   <tr>
+      <td>(matches ""AT"", ""ATTIC"", ""CAT"" or even ""BATS"")"</td>
+   </tr>
+   <tr>
+      <td>_</td>
+      <td>Used anywhere in a string to match a single character (only with LIKE or NOT LIKE)</td>
+      <td>"col_name LIKE ""AN_""</td>
+   </tr>
+   <tr>
+      <td>(matches ""AND"", but not ""AN"")"</td>
+   </tr>
+   <tr>
+      <td>IN (…)</td>
+      <td>String exists in a list</td>
+      <td>col_name IN ("A", "B", "C")</td>
+   </tr>
+   <tr>
+      <td>NOT IN (…)</td>
+      <td>String does not exist in a list</td>
+      <td>col_name NOT IN ("D", "E", "F")</td>
+   </tr>
+</table>
+
+<p>Opgelet! Zorg ervoor dat alle tekst waardes tussen dubbele aanhalingstekens staan.</p>
+
+<h2 id="filteren-met-distinct">Filteren met DISTINCT</h2>
+
+<p>De <code class="highlighter-rouge">DISTINCT</code> filter verwijdert alle dubbele rijen uit het resultaat van een query.</p>
+
+<pre class="prettyprint linenums lang-sql">
+-- Select query met unieke resultaten
+SELECT DISTINCT column, another_column, ...
+FROM mytable
+WHERE condition(s);
+</pre>
+
+<p>Bijvoorbeeld:
+Uit de volgende tabel wil je te weten komen hoeveel wielen een voertuig kan hebben. Je wilt dus een resultaat zien met daarin 2 en 4.</p>
+
+<table>
+   <tr>
+      <th>Id</th>
+      <th>Merk/Model</th>
+      <th># Wielen</th>
+      <th># Deuren</th>
+      <th>Type</th>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>Ford Focus</td>
+      <td>4</td>
+      <td>4</td>
+      <td>Sedan</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>Tesla Roadster</td>
+      <td>4</td>
+      <td>2</td>
+      <td>Sports</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>Kawakasi Ninja</td>
+      <td>2</td>
+      <td>0</td>
+      <td>Motorcycle</td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>McLaren Formula 1</td>
+      <td>4</td>
+      <td>0</td>
+      <td>Race</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>Tesla S</td>
+      <td>4</td>
+      <td>4</td>
+      <td>Sedan</td>
+   </tr>
+</table>
+
+<pre class="prettyprint linenums lang-sql">
+-- selecteer de kolom wielen uit de tabel autos
+SELECT Wielen
+FROM autos;
+</pre>
+
+<p>Deze query geeft als resultaat de tabel hieronder. In deze resultaattabel is niet elke rij uniek: het getal 4 komt immers 4 keer voor.</p>
+
+<table>
+   <tr>
+      <th> # Wielen</th>
+   </tr>
+   <tr>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>2</td>
+   </tr>
+   <tr>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>4</td>
+   </tr>
+</table>
+
+<p>Om dit op te lossen gebruik je het keyword DISTINCT. Dit zorgt ervoor dat elke rij die de query teruggeeft een unieke rij is.</p>
+
+<pre class="prettyprint linenums lang-sql">
+-- selecteer de kolom wielen uit de tabel autos
+SELECT DISTINCT Wielen
+FROM autos;
+</pre>
+
+<p>Deze query geeft als resultaat de tabel hieronder.</p>
+
+<table>
+   <tr>
+      <th> # Wielen</th>
+   </tr>
+   <tr>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>2</td>
+   </tr>
+</table>
+
+<h2 id="sorteren-met-order-by">Sorteren met ORDER BY</h2>
+
+<p>In een tabel in een relationele databank maakt de volgorde van rijen geen verschil. Dit is heel handig wanneer data toegevoegd wordt aan een databank (rijen kunnen in eender welke volgorde worden toegevoegd aan een tabel), maar wanneer data wordt opgevraagd is het vaak handig om deze data op een bepaalde manier gesorteerd te krijgen.</p>
+
+<p>Sorteren gebeurt met het ORDER BY keyword. Hierbij wordt aangeduid welke kolom gebruikt wordt om te sorteren, en of er oplopend (ascending → <code class="highlighter-rouge">ASC</code>) of aflopend (descending → <code class="highlighter-rouge">DESC</code>) wordt gesorteerd.</p>
+
+<pre class="prettyprint linenums lang-sql">
+-- Select query with ordered results
+SELECT column, another_column, ...
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC;
+</pre>
+
+<h2 id="filteren-met-limit-en-offset">Filteren met LIMIT en OFFSET</h2>
+
+<p>De LIMIT filter toont enkel de eerste zoveel rijen uit je query. De OFFSET filter bepaalt na welke rij de LIMIT filter begint. 
+Hoewel je deze filter kan gebruiken zonder een ORDER BY sortering, heeft dit zelden zin. Daarom worden deze twee SQL commando’s vaak samen gebruikt.</p>
+
+<pre class="prettyprint linenums lang-sql">
+-- Select query met beperkt aantal rijen
+SELECT column, another_column, … 
+FROM mytable
+WHERE condition(s)
+ORDER BY column ASC/DESC
+LIMIT aantal_rijen OFFSET vanaf_rij_nummer;
+</pre>
+
+<p>Bijvoorbeeld:
+Hoewel een webshop zoals bol.com vaak honderden of duizenden producten verkoopt, worden die data niet allemaal tegelijk getoond. In plaats daarvan worden de producten in pagina’s van 50 producten per pagina gestoken.</p>
+
+<p>De eerste pagina toont dus 50 producten vanaf rij 1 (LIMIT 50 OFFSET 0; ), de tweede pagina 50 producten vanaf rij 51 (LIMIT 50 OFFSET 0; ), …</p>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/databanken/sql/#data-filteren"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/databanken/sql/data-filteren.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#data-filteren">DATA FILTEREN</a>
+    <ul>
+      <li><a href="#filteren-met-where">Filteren met WHERE</a>
+        <ul>
+          <li><a href="#filteren-op-getalwaardes">Filteren op getalwaardes</a></li>
+          <li><a href="#filteren-op-tekstwaardes">Filteren op tekstwaardes</a></li>
+        </ul>
+      </li>
+      <li><a href="#filteren-met-distinct">Filteren met DISTINCT</a></li>
+      <li><a href="#sorteren-met-order-by">Sorteren met ORDER BY</a></li>
+      <li><a href="#filteren-met-limit-en-offset">Filteren met LIMIT en OFFSET</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

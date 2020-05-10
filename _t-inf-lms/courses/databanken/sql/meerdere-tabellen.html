@@ -1,0 +1,850 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joins</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+      <h1>Databanken</h1>
+      
+        
+
+    
+        
+
+    
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database ontwerp</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's dessertenboek</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">Sql</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek database</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html"><u>Joins</u></a>
+              
+
+              
+            
+          </div>
+          
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Joins</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">inner join</a>
+            
+                <a href="#" class="tag">full outer join</a>
+            
+                <a href="#" class="tag">left outer join</a>
+            
+        </div>
+
+        <h1 id="joins">Joins</h1>
+
+<p>Een query bestaat uit 3 onderdelen:</p>
+
+<ol>
+  <li>Projectie</li>
+  <li>brontabel</li>
+  <li>selectie</li>
+</ol>
+
+<p>Alle query’s tot nu toe maakten gebruik van één brontabel. Een databank bestaat echter altijd uit meerdere tabellen. De data die je wilt opvragen zit vaak verspreid over verschillende tabellen.</p>
+
+<p>In SQL is het mogelijk om meerdere tabellen samen te voegen tot één grote tabel, waarin alle gegevens van die tabellen worden verzameld. Deze grote tabel kan dan gebruikt worden als brontabel in een query. Het samenvoegen van deze tabellen wordt ook wel eens een <code class="highlighter-rouge">join</code> genoemd.</p>
+
+<h1 id="soorten-joins">Soorten Joins</h1>
+
+<p>Er zijn verschillende manieren om twee tabellen samen te voegen:</p>
+
+<ul>
+  <li>Plaats alle rijen van tabel A en B onder elkaar in één nieuwe tabel.</li>
+  <li>Zoek naar alle rijen die in tabel A en B hetzelfde zijn, en plaats die in één nieuwe tabel.</li>
+  <li>Maak combinaties van alle rijen in tabel A en B, en plaats die in één nieuwe tabel.</li>
+  <li>…</li>
+</ul>
+
+<p>Er is dus meer dan één <code class="highlighter-rouge">join</code> commando. Om elk van deze <code class="highlighter-rouge">join</code>s uit te leggen worden twee voorbeeldtabellen gebruikt: <code class="highlighter-rouge">Color</code> en <code class="highlighter-rouge">Size</code>. Beide tabellen hebben een achtergrondkleur gekregen, om elke soort <code class="highlighter-rouge">join</code> te verduidelijken.</p>
+
+<table style="max-width: 400px">
+ <tr style="background-color: white">
+  <th colspan="2" style="text-align: right">
+   Color
+  </th>
+ </tr>
+ 
+ <tr style="background-color: white">
+  <th>
+   id
+  </th>
+  <th>
+   color
+  </th>
+ </tr>
+ 
+ <tr style="background-color: lightblue">
+  <td>
+   1
+  </td>
+  <td>
+   red
+  </td>
+ </tr>
+ 
+ <tr style="background-color: lightblue">
+  <td>
+   2
+  </td>
+  <td>
+   blue
+  </td>
+ </tr>
+</table>
+
+<table style="max-width: 400px">
+ <tr style="background-color: white">
+  <th colspan="2" style="text-align: right">
+   Size
+  </th>
+ </tr>
+ 
+ <tr style="background-color: white">
+  <th>
+   id
+  </th>
+  <th>
+   size
+  </th>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td>
+   1
+  </td>
+  <td>
+   small
+  </td>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td>
+   3
+  </td>
+  <td>
+   medium
+  </td>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td>
+   4
+  </td>
+  <td>
+   large
+  </td>
+ </tr>
+</table>
+
+<h2 id="cross-join">Cross Join</h2>
+
+<p>Een <code class="highlighter-rouge">cross join</code> maakt een tabel met alle fields uit tabel A en B. Elke record in de nieuwe tabel is een mogelijke combinatie tussen een record uit tabel A en een record uit tabel B.</p>
+
+<pre class="prettyprint linenums lang-sql">
+SELECT * 
+FROM 
+ Color 
+ CROSS JOIN 
+ Size
+</pre>
+
+<table style="max-width: 600px">
+ <tr style="background-color: white">
+  <th colspan="4" style="text-align: right">
+   Cross Join
+  </th>
+ </tr>
+ 
+ <tr style="background-color: white">
+  <th>
+   Color.id
+  </th>
+  <th>
+   Color.color
+  </th>
+  <th>
+   Size.id
+  </th>
+  <th>
+   Size.size
+  </th>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+1
+  </td>
+  <td style="background-color: lightblue">
+red
+  </td>
+  <td>
+1
+  </td>
+  <td>
+small
+  </td>
+ </tr>
+
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+2
+  </td>
+  <td style="background-color: lightblue">
+blue
+  </td>
+  <td>
+1
+  </td>
+  <td>
+small
+  </td>
+ </tr>
+
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+1
+  </td>
+  <td style="background-color: lightblue">
+red
+  </td>
+  <td>
+3
+  </td>
+  <td>
+medium
+  </td>
+ </tr>
+
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+2
+  </td>
+  <td style="background-color: lightblue">
+blue
+  </td>
+  <td>
+3
+  </td>
+  <td>
+medium
+  </td>
+ </tr>
+
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+1
+  </td>
+  <td style="background-color: lightblue">
+red
+  </td>
+  <td>
+4
+  </td>
+  <td>
+large
+  </td>
+ </tr>
+
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+2
+  </td>
+  <td style="background-color: lightblue">
+blue
+  </td>
+  <td>
+4
+  </td>
+  <td>
+large
+  </td>
+ </tr>
+</table>
+
+<h2 id="inner-join">(Inner) Join</h2>
+
+<p>Een <code class="highlighter-rouge">inner join</code> (vaak ook afgekort tot <code class="highlighter-rouge">join</code>) is een <code class="highlighter-rouge">cross join</code> waarin enkel de rijen staan die voldoen aan een voorwaarde.</p>
+
+<pre class="prettyprint linenums lang-sql">
+SELECT * 
+FROM 
+ Color 
+ INNER JOIN 
+ Size
+ ON Color.id = Size.id
+</pre>
+
+<table style="max-width: 600px">
+ <tr style="background-color: white">
+  <th colspan="4" style="text-align: right">
+   Inner Join
+  </th>
+ </tr>
+ 
+ <tr style="background-color: white">
+  <th>
+   Color.id
+  </th>
+  <th>
+   Color.color
+  </th>
+  <th>
+   Size.id
+  </th>
+  <th>
+   Size.size
+  </th>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+1
+  </td>
+  <td style="background-color: lightblue">
+red
+  </td>
+  <td>
+1
+  </td>
+  <td>
+small
+  </td>
+ </tr>
+</table>
+
+<h2 id="left-outer-join">Left (Outer) Join</h2>
+
+<p>Een <code class="highlighter-rouge">left outer join</code> (ook wel <code class="highlighter-rouge">left join</code> genoemd) is, net als de <code class="highlighter-rouge">inner join</code>, een <code class="highlighter-rouge">join</code> met een voorwaarde. Het resultaat hiervan is een <code class="highlighter-rouge">inner join</code>, met daarbij ook <strong>alle rijen uit de eerste tabel die niet aan de voorwaarde voldoen</strong>. De kolommen uit de tweede tabel worden met een <code class="highlighter-rouge">null</code> waarde ingevuld.</p>
+
+<pre class="prettyprint linenums lang-sql">
+SELECT * 
+FROM 
+ Color 
+ LEFT OUTER JOIN 
+ Size
+ ON Color.id = Size.id
+</pre>
+
+<table style="max-width: 600px">
+ <tr style="background-color: white">
+  <th colspan="4" style="text-align: right">
+   Left Outer Join
+  </th>
+ </tr>
+ 
+ <tr style="background-color: white">
+  <th>
+   Color.id
+  </th>
+  <th>
+   Color.color
+  </th>
+  <th>
+   Size.id
+  </th>
+  <th>
+   Size.size
+  </th>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+1
+  </td>
+  <td style="background-color: lightblue">
+red
+  </td>
+  <td>
+1
+  </td>
+  <td>
+small
+  </td>
+ </tr>
+ 
+ <tr style="background-color: white">
+  <td style="background-color: lightblue">
+2
+  </td>
+  <td style="background-color: lightblue">
+blue
+  </td>
+  <td>
+null
+  </td>
+  <td>
+null
+  </td>
+ </tr>
+</table>
+
+<h2 id="right-outer-join">Right (Outer) Join</h2>
+
+<p>Een <code class="highlighter-rouge">right outer join</code> (ook wel <code class="highlighter-rouge">right join</code> genoemd) is, net als de <code class="highlighter-rouge">inner join</code>, een <code class="highlighter-rouge">join</code> met een voorwaarde. Het resultaat hiervan is een <code class="highlighter-rouge">inner join</code>, met daarbij ook <strong>alle rijen uit de tweede tabel die niet aan de voorwaarde voldoen</strong>. De kolommen uit de eerste tabel worden met een <code class="highlighter-rouge">null</code> waarde ingevuld.</p>
+
+<pre class="prettyprint linenums lang-sql">
+SELECT * 
+FROM 
+ Color 
+ LEFT OUTER JOIN 
+ Size
+ ON Color.id = Size.id
+</pre>
+
+<table style="max-width: 600px">
+ <tr style="background-color: white">
+  <th colspan="4" style="text-align: right">
+   Right Outer Join
+  </th>
+ </tr>
+ 
+ <tr style="background-color: white">
+  <th>
+   Color.id
+  </th>
+  <th>
+   Color.color
+  </th>
+  <th>
+   Size.id
+  </th>
+  <th>
+   Size.size
+  </th>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td style="background-color: lightblue">
+1
+  </td>
+  <td style="background-color: lightblue">
+red
+  </td>
+  <td>
+1
+  </td>
+  <td>
+small
+  </td>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td style="background-color: white">
+null
+  </td>
+  <td style="background-color: white">
+null
+  </td>
+  <td>
+3
+  </td>
+  <td>
+medium
+  </td>
+ </tr>
+ 
+ <tr style="background-color: lightgreen">
+  <td style="background-color: white">
+null
+  </td>
+  <td style="background-color: white">
+null
+  </td>
+  <td>
+4
+  </td>
+  <td>
+large
+  </td>
+ </tr>
+</table>
+
+<h1 id="voorwaarden-en-relaties">Voorwaarden en Relaties</h1>
+
+<p>Bij de <code class="highlighter-rouge">inner join</code>, <code class="highlighter-rouge">left join</code> en <code class="highlighter-rouge">right join</code> wordt een voorwaarde meegegeven met behulp van het <code class="highlighter-rouge">on</code> keyword. Deze voorwaarde drukt het verband uit tussen tabel A en tabel B: namelijk, welke velden komen voor in tabel A èn tabel B, en bevatten dezelfde semantische gegevens? In het overgrote deel van situaties is dit verband een refererende sleutel die verwijst naar een primaire sleutel.</p>
+
+<p>Het databankontwerp toont heel duidelijk welke verbanden je kan gebruiken om twee tabellen samen te voegen. Staat er een pijl tussen twee tabellen? Dan is er een verband tussen de tabellen.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p>In de muziekschooldatabase bevat het veld <code class="highlighter-rouge">Stuk.componist</code> dezelfde semantische gegevens als <code class="highlighter-rouge">Componist.nr</code>. Het is dus mogelijk om een verband tussen deze twee tabellen te maken.
+Dit is ook zichtbaar in het databankontwerp: <code class="highlighter-rouge">Stuk.componist</code> is een refererende sleutel naar <code class="highlighter-rouge">Componist.nr</code>, wat ook duidelijk is aangegeven met een pijl tussen de twee velden.</p>
+
+<p>Een inner join tussen deze twee tabellen ziet er dus zo uit:</p>
+
+<pre class="prettyprint linenums lang-sql">
+SELECT * 
+FROM 
+ Stuk
+ INNER JOIN 
+ Componist
+ ON Stuk.componist = Componist.nr
+</pre>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/databanken/sql/#meerdere-tabellen"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/databanken/sql/meerdere-tabellen.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#joins">Joins</a></li>
+  <li><a href="#soorten-joins">Soorten Joins</a>
+    <ul>
+      <li><a href="#cross-join">Cross Join</a></li>
+      <li><a href="#inner-join">(Inner) Join</a></li>
+      <li><a href="#left-outer-join">Left (Outer) Join</a></li>
+      <li><a href="#right-outer-join">Right (Outer) Join</a></li>
+    </ul>
+  </li>
+  <li><a href="#voorwaarden-en-relaties">Voorwaarden en Relaties</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

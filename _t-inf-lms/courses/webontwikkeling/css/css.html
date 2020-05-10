@@ -1,0 +1,568 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+      <h1>Webontwikkeling</h1>
+      
+        
+
+    
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">Html</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites maken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en inline</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">Css</a></h2>
+            
+              
+                <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html"><u>Css</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box model</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State selectors</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid basisbegrippen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid implementatie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische websites</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">Url parameters</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">Sql database connection</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Css</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">instructie</a>
+            
+                <a href="#" class="tag">commentaar</a>
+            
+        </div>
+
+        <h2 id="wat-is-css">Wat is CSS?</h2>
+
+<p>CSS (<strong><span style="text-decoration:underline;">C</span>ascading <span style="text-decoration:underline;">S</span>tyle <span style="text-decoration:underline;">S</span>heets</strong>) is <strong>de taal die een HTML document opmaakt</strong>. CSS zegt hoe HTML-elementen moeten worden weergegeven in de browser.</p>
+
+<h2 id="syntax">Syntax</h2>
+
+<p>CSS-code bestaat uit codeblokken. Elk codeblok bestaat uit 2 delen:</p>
+
+<ul>
+  <li><strong>Selector</strong>: De selector duidt aan welke HTML elementen opmaak zullen krijgen.</li>
+  <li><strong>Declaratie</strong>: De declaratie bestaat uit 1 of meerdere opmaakregels die tussen accolades worden geplaatst.</li>
+</ul>
+
+<p>Een <strong>opmaakregel</strong> bestaat uit een <strong>property</strong> en <strong>waarde</strong> en eindigt met een <strong>puntkomma</strong>.</p>
+
+<p><img src="/_t-inf-lms/assets/img/css-css.PNG" alt="drawing" /></p>
+
+<p>Bijvoorbeeld:</p>
+
+<p>Stel dat alle &lt;p&gt; elementen op dezelfde manier moeten opgemaakt worden:</p>
+
+<ul>
+  <li>De tekst moet gecentreerd staan.</li>
+  <li>De tekstkleur moet rood zijn.</li>
+</ul>
+
+<p>De selector moet dan p (de naam van het element) selecteren.  <br />
+De declaratie bestaat dan uit 2 opmaakregels:</p>
+
+<pre>
+p
+{
+	text-align: center;
+	color: red;
+}
+</pre>
+
+<p><br />
+In dit voorbeeld wordt het &lt;p&gt; element opgemaakt met een rode tekstkleur en gecentreerde tekst.</p>
+
+<p>Door verschillende codeblokken onder elkaar te schrijven, krijgen verschillende elementen een bepaalde opmaak toegewezen.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p>Onderstaande CSS code doet het volgende:</p>
+
+<ul>
+  <li>Elke paragraaf wordt gecentreerd en krijgt een rode tekstkleur.</li>
+  <li>Elke h1 koptekst wordt onderlijnd en krijgt een rode achtergrondkleur.</li>
+  <li>Elke hyperlink wordt vet getoond en krijgt een oranje tekstkleur.</li>
+</ul>
+
+<pre>
+p
+{
+	text-align: center;
+	color: red;
+}
+
+h1
+{
+	text-decoration: underline;
+	background-color: red
+}
+
+a
+{
+	font-weight: bold;
+	color: orange;
+}
+</pre>
+
+<h2 id="het-style-element">Het &lt;STYLE&gt; element</h2>
+
+<p>CSS beschrijft hoe elk element moet worden weergegeven in de browser. Het geeft dus informatie over de website, maar bevat zelf geen zichtbare informatie. CSS-code hoort daarom thuis in het &lt;head&gt; element van de webpagina.</p>
+
+<p>Nu is het niet mogelijk om zomaar CSS te beginnen typen in een HTML document. Het is aan jou als ontwikkelaar om duidelijk te maken waar er HTML-code staat, en waar er CSS code staat.</p>
+
+<p>Om aan te duiden waar CSS code wordt geschreven bestaat het &lt;style&gt; element. Alle inhoud van het &lt;style&gt; element wordt door de browser gelezen als CSS code.</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;style&gt;
+body {
+    background-color: lightblue;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Mijn eerste CSS pagina&lt;/h1&gt;
+		&lt;p&gt;Dit is een paragraaf.&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2 id="externe-stylesheets">Externe stylesheets</h2>
+
+<p>Met een externe stylesheet kan het uiterlijk van een hele website veranderd worden door slechts één bestand te wijzigen!</p>
+
+<p>Een externe stylesheet is een manier om CSS code in een apart bestand te plaatsen, zodat HTML en CSS code grotendeels gescheiden blijft.</p>
+
+<p>Elke pagina die de stijlregels in dit bestand gebruikt moet een verwijzing naar de externe stylesheet bevatten in het <code>&lt;<strong>link</strong>&gt;</code>-element. Het <code>&lt;<strong>link</strong>&gt;</code>-element wordt geplaatst binnen in het element &lt;head&gt;:</p>
+
+<pre>
+&lt;head&gt;
+&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+&lt;/head&gt;
+</pre>
+
+<p>Een externe stylesheet kan in elke teksteditor worden geschreven. Het bestand mag geen HTML-tags bevatten. Het stylesheet bestand moet worden opgeslagen met de extensie .css. Hier is hoe het bestand ‘mystyle.css’ er uit ziet:</p>
+
+<pre>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+</pre>
+
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/webontwikkeling/css/#css"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/webontwikkeling/css/css.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#wat-is-css">Wat is CSS?</a></li>
+  <li><a href="#syntax">Syntax</a></li>
+  <li><a href="#het-style-element">Het &lt;STYLE&gt; element</a></li>
+  <li><a href="#externe-stylesheets">Externe stylesheets</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

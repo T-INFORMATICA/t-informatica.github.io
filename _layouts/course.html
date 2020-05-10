@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<section id="courseContent">
+    <nav id="courseNavigation">
+        
+        {% if page.course == "programmeren" %}
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="{{site.baseurl}}/assets/js/proglang.js"></script>
+        {% endif %}
+    {% include courseNavigation.html %}
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>{{ page.title | capitalize }}</h1>
+
+        <div id="chapterTags">
+            {% for tag in page.tags %}
+                <a href="#" class="tag">{{tag}}</a>
+            {% endfor %}
+        </div>
+
+        {{ content }}
+
+    </section>
+
+
+    <section id="pageNavigation">
+        {% include pageNavigation.html %}
+    </section>
+</section>

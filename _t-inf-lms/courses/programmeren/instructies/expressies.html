@@ -1,0 +1,663 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressies</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html"><u>Expressies</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Expressies</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">expressie</a>
+            
+                <a href="#" class="tag">rekenkundige operatie</a>
+            
+                <a href="#" class="tag">logische operatie</a>
+            
+                <a href="#" class="tag">operatie</a>
+            
+                <a href="#" class="tag">voorwaarde</a>
+            
+                <a href="#" class="tag">operator</a>
+            
+                <a href="#" class="tag">vergelijking</a>
+            
+        </div>
+
+        <h2 id="expressie">Expressie</h2>
+
+<p>Een expressie is een bewerking met als resultaat een waarde. Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
+5 		// resultaat is 5
+2 &gt; 7 		// resultaat is false (= niet waar)
+3 * 18 / 2 	// resultaat is 27
+</pre>
+
+<p>Wanneer het resultaat van de expressie <em>waar</em> of <em>niet waar</em> is, wordt dit een <strong>voorwaarde</strong> genoemd.</p>
+
+<p>Er zijn verschillende soorten bewerkingen die een programmeur kan gebruiken. Zo’n bewerking wordt ook wel een <strong>operatie</strong> genoemd. Er zijn verschillende soorten operaties. De 2 meest bekende zijn:</p>
+
+<ul>
+  <li><strong>rekenkundige operaties</strong></li>
+  <li><strong>logische operaties</strong></li>
+</ul>
+
+<p>Een operatie is een bewerking van 2 waardes. Wanneer je verschillende operaties achter elkaar schrijft (bijv.: 3 * 18 / 2 ) dan worden die operaties uitgevoerd volgens de wiskundige volgorde van bewerkingen.</p>
+
+<p>Een expressie is het geheel van alle operaties die bij elkaar horen. Een expressie kan dus bestaan uit geen, één of meerdere operaties, zolang het resultaat maar een waarde is. Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
+5 		// 1 expressie, 0 operaties (waarde is 5)
+2 &gt; 7 		// 1 expressie, 1 operatie  (waarde is false)
+3 * 18 / 2 	// 1 expressie, 2 operaties (waarde is 27)
+</pre>
+
+<p>Om een expressie te gebruiken moet de programmeur zich houden aan 2 regels:</p>
+<ul>
+  <li>Een expressie mag nooit op zichzelf staan</li>
+  <li>Het resultaat van een expressie moet altijd gebruikt worden</li>
+</ul>
+
+<pre class="prettyprint linenums lang lang-JS">
+5 + 2			// error, een expressie kan niet op zichzelf staan
+5 + 2;			// error, het resultaat wordt niet gebruikt
+var getal = 5 + 2; 	// correct
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+5 + 2			// error, een expressie kan niet op zichzelf staan
+5 + 2;			// error, het resultaat wordt niet gebruikt
+$getal = 5 + 2; 	// correct
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+5 + 2			// error, een expressie kan niet op zichzelf staan
+5 + 2;			// error, het resultaat wordt niet gebruikt
+int getal = 5 + 2; 	// correct
+</pre>
+
+<p>In dit hoofdstuk worden variabelen gebruikt om de waarde van een operatie op te slaan. Op die manier zal de code geen errors of warnings tonen.</p>
+
+<h2 id="rekenkundige-operaties">Rekenkundige operaties</h2>
+
+<p>In programmeren zal je vaak wiskundige bewerkingen nodig hebben. Dit hoofdstuk gaat over de 4 basis bewerkingen:</p>
+<ul>
+  <li>Optellen</li>
+  <li>Aftrekken</li>
+  <li>Vermenigvuldigen</li>
+  <li>Delen</li>
+</ul>
+
+<p>Wanneer we in programmeren spreken over een bewerking, noemen we dit ook wel een <strong>operatie</strong>. Het teken van de bewerking noemen we dan ook de <strong>operator</strong>. Bijvoorbeeld:</p>
+
+<ul>
+  <li>Optellen:		+</li>
+  <li>Aftrekken:		-</li>
+  <li>Vermenigvuldigen:	*</li>
+  <li>Delen:		/</li>
+</ul>
+
+<p>Getallen kunnen gebruikt worden om met te rekenen. Variabelen worden gebruikt om het resultaat van die bewerking bij te houden.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var voorbeeld1 = 5 * 2;
+var voorbeeld2 = 9 / 3;
+var voorbeeld3 = 7 + 4;
+var voorbeeld4 = 8 - 1;
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$voorbeeld1 = 5 * 2;
+$voorbeeld2 = 9 / 3;
+$voorbeeld3 = 7 + 4;
+$voorbeeld4 = 8 - 1;
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int voorbeeld1 = 5 * 2;
+int voorbeeld2 = 9 / 3;
+int voorbeeld3 = 7 + 4;
+int voorbeeld4 = 8 - 1;
+</pre>
+
+<p>Ook variabelen kunnen gebruikt worden om met te rekenen:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var voorbeeld1 = 6;
+var voorbeeld2 = 2;
+
+var voorbeeld3 = voorbeeld1 * 3;
+var voorbeeld4 = 8 + voorbeeld2;
+
+var voorbeeld5 = voorbeeld1 / voorbeeld2;
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$voorbeeld1 = 6;
+$voorbeeld2 = 2;
+
+$voorbeeld3 = $voorbeeld1 * 3;
+$voorbeeld4 = 8 + $voorbeeld2;
+
+$voorbeeld5 = $voorbeeld1 / $voorbeeld2;
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int voorbeeld1 = 6;
+int voorbeeld2 = 2;
+
+int voorbeeld3 = voorbeeld1 * 3;
+int voorbeeld4 = 8 + voorbeeld2;
+
+int voorbeeld5 = voorbeeld1 / voorbeeld2;
+</pre>
+
+<h2 id="logische-operaties">Logische operaties</h2>
+
+<p>Net zoals bij rekenkundige operaties, wordt ook bij logische operaties gesproken over operaties en operators. Logische operaties zijn vergelijkingen tussen 2 waarden of variabelen. Zo’n vergelijking heeft altijd als uitkomst <em>true</em> of <em>false</em>.</p>
+
+<p>In programmeren zal je vaak logische vergelijkingen nodig hebben. De 4 basis vergelijkingen zijn:</p>
+
+<ul>
+  <li><strong>Groter</strong> dan</li>
+  <li><strong>Kleiner</strong> dan</li>
+  <li>Is <strong>gelijk</strong> aan</li>
+  <li>Is <strong>niet</strong> gelijk</li>
+</ul>
+
+<p>Een vergelijking is een soort <strong>operatie</strong>. Het teken van de vergelijking heet de <strong>operator</strong>. Volgende operators kunnen gebruikt worden bij vergelijkingen.</p>
+
+<ul>
+  <li><strong>Groter</strong> dan:			&gt;</li>
+  <li><strong>Kleiner</strong> dan:			&lt;</li>
+  <li>Is <strong>gelijk</strong> aan:			==</li>
+  <li>Is <strong>niet gelijk</strong>:			!=</li>
+  <li>Is <strong>groter of gelijk</strong>:		&gt;=</li>
+  <li>Is <strong>kleiner of gelijk</strong>:		&lt;=</li>
+</ul>
+
+<p>Opgelet! Er is <strong>een verschil tussen = en ==</strong>.</p>
+
+<ul>
+  <li><strong>=</strong>	dit is de <strong>assignment</strong> operator: een enkel gelijk-aan teken wordt gebruikt om een waarde aan een variabele <strong>toe te wijzen</strong>.</li>
+  <li><strong>==</strong>	dit is de <strong>equal</strong> operator: een dubbel gelijk-aan teken wordt gebruikt om 2 waarden of variabelen met elkaar te <strong>vergelijken</strong>.</li>
+</ul>
+
+<p><strong>Vergelijkingen geven altijd een booleaanse uitkomst: <em>waar</em> of niet <em>waar</em>.</strong> Vergelijkingen worden immers steeds gebruikt om een vraag te stellen:</p>
+
+<ul>
+  <li>Is X groter dan Y?</li>
+  <li>Is X kleiner dan Y?</li>
+  <li>Is X gelijk aan Y?</li>
+  <li>Is X niet gelijk aan Y?</li>
+</ul>
+
+<p>Het antwoord op deze vraag is altijd ja (true) of neen (false).</p>
+
+<h3 id="vergelijkingen">Vergelijkingen</h3>
+
+<p>Omdat de uitkomst van een vergelijking een booleaanse waarde is (true of false), kan dit worden bijgehouden in een booleaanse variabele.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var voorbeeld1 = 5 &gt; 3; // true, want 5 is groter dan 3
+var voorbeeld2 = 5 &lt; 3; // false, want 5 is niet kleiner dan 3
+var voorbeeld2 = 5 == 3; // false, want 5 is niet gelijk aan 3
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$voorbeeld1 = 5 &gt; 3; // true, want 5 is groter dan 3
+$voorbeeld2 = 5 &lt; 3; // false, want 5 is niet kleiner dan 3
+$voorbeeld2 = 5 == 3; // false, want 5 is niet gelijk aan 3
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+bool voorbeeld1 = 5 &gt; 3; // true, want 5 is groter dan 3
+bool voorbeeld2 = 5 &lt; 3; // false, want 5 is niet kleiner dan 3
+bool voorbeeld2 = 5 == 3; // false, want 5 is niet gelijk aan 3
+</pre>
+
+<p>Uiteraard is het nogal onzinnig om deze vergelijkingen te maken: het is op voorhand al duidelijk dat 3 kleiner is dan 5. Waar vergelijkingen dus echt interessant worden is wanneer je gebruik maakt van variabelen.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var test1 = 27;
+var test2 = 17;
+
+var test = test1 &lt; test2; // false, want test1 is groter
+
+test2 = 32;
+
+var test = test1 &lt; test2; // true, want test1 is kleiner
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$test1 = 27;
+$test2 = 17;
+
+$test = $test1 &lt; $test2; // false, want test1 is groter
+
+$test2 = 32;
+
+$test = $test1 &lt; $test2; // true, want test1 is kleiner
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int test1 = 27;
+int test2 = 17;
+
+bool test = test1 &lt; test2; // false, want test1 is groter
+
+test2 = 32;
+
+bool test = test1 &lt; test2; // true, want test1 is kleiner
+</pre>
+
+<h3 id="voorwaarden">Voorwaarden</h3>
+
+<p><strong>Een voorwaarde is een expressie met als uitkomst true of false</strong>. Voorwaarden worden gebruikt om code uit te voeren als de voorwaarde waar is. Hierover meer in een ander hoofdstuk.</p>
+
+<h2 id="coding-guidelines">Coding Guidelines</h2>
+
+<p>Wanneer we een operatie uitvoeren, zorgen we steeds voor een spatie voor en na de operator:</p>
+<ul>
+  <li>WEL:		1 &lt; 3<br />
+   	1 + 3</li>
+  <li>NIET:	1&lt;3<br />
+   	1+3</li>
+</ul>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/instructies/#expressies"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/instructies/expressies.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#expressie">Expressie</a></li>
+  <li><a href="#rekenkundige-operaties">Rekenkundige operaties</a></li>
+  <li><a href="#logische-operaties">Logische operaties</a>
+    <ul>
+      <li><a href="#vergelijkingen">Vergelijkingen</a></li>
+      <li><a href="#voorwaarden">Voorwaarden</a></li>
+    </ul>
+  </li>
+  <li><a href="#coding-guidelines">Coding Guidelines</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

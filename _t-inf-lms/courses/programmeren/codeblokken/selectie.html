@@ -1,0 +1,678 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectie</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html"><u>Selectie</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Selectie</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">selectie</a>
+            
+                <a href="#" class="tag">sequentie</a>
+            
+                <a href="#" class="tag">if</a>
+            
+                <a href="#" class="tag">else if</a>
+            
+                <a href="#" class="tag">else</a>
+            
+        </div>
+
+        <h2 id="sequentie">Sequentie</h2>
+<p>Alle code die tot nu toe werd behandeld heeft één ding gemeen: instructies worden één per één uitgevoerd, van boven naar onder, zonder uitzondering. Dit wordt ook wel een <strong>sequentie</strong> genoemd.</p>
+
+<p>Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.</p>
+
+<pre class="prettyprint linenums lang lang-JS lang-PHP">
+function Explodeer(x) 
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Explodeer(x) 
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+}
+</pre>
+
+<h2 id="selectie">Selectie</h2>
+
+<p>Selectie is het uitvoeren van code als een voorwaarde waar of niet waar is.</p>
+
+<p>Bijvoorbeeld: Een explosie mag pas geluid maken als de schade groter is dan 10. Met andere woorden: Als x groter is dan 10, maak dan een geluid (anders sla je die instructie over).</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+function Explodeer(x) 
+{
+	if (x &gt; 10) {
+		// maak een geluidje
+	}
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+function Explodeer(x) 
+{
+	if ($x &gt; 10) {
+		// maak een geluidje
+	}
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Explodeer(x) 
+{
+	if (x &gt; 10) {
+		// maak een geluidje
+	}
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+}
+</pre>
+
+<p>Een <strong>selectie-codeblok gaat, aan de hand van een voorwaarde, selecteren welke instructies mogen uitgevoerd worden</strong>. Een selectie kan bestaan uit meerdere codeblokken:</p>
+<ul>
+  <li>Het IF-codeblok</li>
+  <li>Het ELSE IF-codeblok</li>
+  <li>Het ELSE-codeblok</li>
+</ul>
+
+<h3 id="if-blok">IF blok</h3>
+
+<p>Elke selectie begint met 1 IF blok. Het IF blok is altijd het eerste codeblok van een selectie, en er kan maximaal 1 IF blok in een selectie bestaan. Het IF blok maakt gebruik van een voorwaarde om te selecteren welke instructies worden uitgevoerd.</p>
+
+<p>IF wilt dus eigenlijk zeggen: <strong>als de voorwaarde waar is</strong>, voer dan deze instructies uit.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var intTest = 0;
+
+if (intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+	// In dit voorbeeld wordt de code hier uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$intTest = 0;
+
+if ($intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+	// In dit voorbeeld wordt de code hier uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int intTest = 0;
+
+if (intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+	// In dit voorbeeld wordt de code hier uitgevoerd.
+}
+</pre>
+
+<h3 id="else-if-blok">ELSE IF-blok</h3>
+
+<p>Een ELSE IF blok kan worden toegevoegd aan een selectie, volgend op een IF-blok of een ander ELSE IF blok.</p>
+
+<ul>
+  <li>Er mogen meerdere ELSE IF blokken worden toegevoegd aan een selectie.</li>
+  <li>Het ELSE IF blok maakt gebruik van een voorwaarde om te selecteren welke instructies worden uitgevoerd.</li>
+  <li>Een ELSE IF blok wordt nooit uitgevoerd als een voorgaand IF of ELSE IF blok reeds werd uitgevoerd.</li>
+</ul>
+
+<p>ELSE IF wilt dus eigenlijk zeggen: <strong>als de voorgaande IF en ELSE IFs niet waar zijn, en deze voorwaarde wel waar is</strong>, voer dan deze instructies uit. Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+var intTest = 2;
+if (intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+}
+else if (intTest &lt; 3) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 3.
+	// In dit voorbeeld wordt de code hier uitgevoerd.
+}
+else if (intTest &lt; 5) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 5.
+	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
+	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$intTest = 2;
+if ($intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+}
+else if ($intTest &lt; 3) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 3.
+	// In dit voorbeeld wordt de code hier uitgevoerd.
+}
+else if ($intTest &lt; 5) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 5.
+	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
+	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int intTest = 2;
+if (intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+}
+else if (intTest &lt; 3) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 3.
+	// In dit voorbeeld wordt de code hier uitgevoerd.
+}
+else if (intTest &lt; 5) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 5.
+	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
+	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
+}
+</pre>
+
+<h3 id="else-blok">ELSE blok</h3>
+
+<p>Een ELSE blok kan als laatste worden toegevoegd aan een selectie. Het ELSE blok is altijd het laatste codeblok van een selectie, en er kan maximaal 1 ELSE blok in een selectie bestaan.</p>
+
+<ul>
+  <li>Een ELSE blok is niet verplicht. Een selectie kan bestaan zonder ELSE blok.</li>
+  <li>Het ELSE blok heeft geen voorwaarde. Een ELSE blok wordt alleen uitgevoerd als alle voorgaande IF en ELSE IF blokken niet werden uitgevoerd.</li>
+</ul>
+
+<p>ELSE wilt dus eigenlijk zeggen: <strong>in alle andere gevallen</strong>, voer dan het volgende codeblok uit.
+Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var intTest = 6;
+
+if (intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+}
+else if (intTest &lt; 3) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 3.
+}
+else if (intTest &lt; 5) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 5.
+}
+else
+{
+	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
+	// In dit voorbeeld wordt deze code uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$intTest = 6;
+
+if ($intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+}
+else if ($intTest &lt; 3) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 3.
+}
+else if ($intTest &lt; 5) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 5.
+}
+else
+{
+	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
+	// In dit voorbeeld wordt deze code uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int intTest = 6;
+
+if (intTest &lt; 1) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 1.
+}
+else if (intTest &lt; 3) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 3.
+}
+else if (intTest &lt; 5) 
+{
+	// voer deze code uit enkel als intTest kleiner is dan 5.
+}
+else
+{
+	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
+	// In dit voorbeeld wordt deze code uitgevoerd.
+}
+</pre>
+
+<h2 id="coding-guidelines">Coding Guidelines</h2>
+
+<p>Wanneer je een IF / ELSE IF blok schrijft, laat je een spatie tussen het keyword en de haakjes:</p>
+<ul>
+  <li>WEL:	if (intTest &lt; 1)</li>
+  <li>NIET:	if(intTest &lt; 1)</li>
+</ul>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/codeblokken/#selectie"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/codeblokken/selectie.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#sequentie">Sequentie</a></li>
+  <li><a href="#selectie">Selectie</a>
+    <ul>
+      <li><a href="#if-blok">IF blok</a></li>
+      <li><a href="#else-if-blok">ELSE IF-blok</a></li>
+      <li><a href="#else-blok">ELSE blok</a></li>
+    </ul>
+  </li>
+  <li><a href="#coding-guidelines">Coding Guidelines</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

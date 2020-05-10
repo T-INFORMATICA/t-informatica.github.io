@@ -1,0 +1,616 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html"><u>Arrays</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Arrays</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">index</a>
+            
+                <a href="#" class="tag">indexed array</a>
+            
+                <a href="#" class="tag">associative array</a>
+            
+        </div>
+
+        <h2 id="arrays">Arrays</h2>
+
+<p>Als je een lijst van waardes wilt opslaan (bv. Een lijst met merken van auto’s), zou dit er als volgt kunnen uitzien:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var auto1 = "Volvo";
+var auto2 = "BMW";
+var auto3 = "Toyota";
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$auto1 = "Volvo";
+$auto2 = "BMW";
+$auto3 = "Toyota";
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+string auto1 = "Volvo";
+string auto2 = "BMW";
+string auto3 = "Toyota";
+</pre>
+
+<p>Dankzij een duidelijke naamgeving weet de programmeur nu dat in auto2 de waarde “BMW” werd opgeslagen. De computer kan echter geen Nederlands of Engels lezen. Je kan dus niet aan de computer vragen: “geef mij de waarde van de tweede en de derde auto”.</p>
+
+<p>De oplossing is het gebruiken van arrays. Arrays zijn een speciaal soort variabele: <strong>Een array is een naam waar je meerdere waardes aan kunt toewijzen</strong>. Een array wordt daarom ook wel eens een lijst genoemd.</p>
+
+<h2 id="indexed-arrays">Indexed arrays</h2>
+<p>Een array is een variabele waarin je meer dan 1 waarde kunt opslaan. Het aanmaken van een array verloopt dan ook heel gelijkaardig als het aanmaken van een variabele:</p>
+
+<ul>
+  <li><strong>Declareer</strong> een variabele</li>
+  <li><strong>Benoem</strong> de variabele</li>
+  <li><strong>Geef een waard</strong>e aan de variabele</li>
+</ul>
+
+<pre class="prettyprint linenums lang lang-JS">
+ 1	2	   	3		// 1: declareer; 2: benoem; 3: waarde;
+var autos = ["Volvo", "BMW", "Toyota"];
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+  2	   		3		// 1: declareer; 2: benoem; 3: waarde;
+$autos = array("Volvo", "BMW", "Toyota");
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+ 1	   2	   	     3		// 1: declareer; 2: benoem; 3: waarde;
+string[] autos = {"Volvo", "BMW", "Toyota"};
+</pre>
+
+<p>De plaats van een waarde in de array wordt ook wel de <strong>index</strong> genoemd. De index is een getal dat aanduidt op welke plaats een waarde zich bevindt in de array.</p>
+
+<p><strong>Let op!</strong> De index begint te tellen vanaf 0! De eerste waarde heeft daarom index 0, de tweede waarde index 1, enz…</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+// index:	   0	1	 2
+var autos = ["Volvo", "BMW", "Toyota"];
+var tweedeAuto = autos[1];
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+// index:	  0	  1	    2
+$autos = array("Volvo", "BMW", "Toyota");
+$tweedeAuto = autos[1];
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+// index:	    0	     1	      2
+string[] autos = {"Volvo", "BMW", "Toyota"};
+string tweedeAuto = autos[1];
+</pre>
+
+<p>Met de index kan je waardes in de array <strong>opvragen of aanpassen</strong>.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var eersteAuto = autos[0];	// vraag de eerste waarde in de array op
+autos[0] = "Renault";		// pas de eerste waarde in de array aan
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$eersteAuto = autos[0];		// vraag de eerste waarde in de array op
+autos[0] = "Renault";		// pas de eerste waarde in de array aan
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+String eersteAuto = autos[0];	// vraag de eerste waarde in de array op
+autos[0] = "Renault";		// pas de eerste waarde in de array aan
+</pre>
+
+<p>Om deze reden worden dit soort arrays ook wel <strong>indexed arrays</strong> genoemd: elke waarde krijgt automatisch een index toegewezen.</p>
+
+<h2 id="arrays-eigenschappen-en-functies">Arrays: eigenschappen en functies</h2>
+
+<p>Arrays worden dus gebruikt om meerdere waardes op te slaan onder één naam. Ze hebben ook nog een heleboel andere eigenschappen en functies die ervoor zorgen dat arrays heel erg handig zijn.</p>
+
+<ul>
+  <li>Het aantal waardes in de array opvragen</li>
+  <li>Een bepaalde waarde verwijderen uit de array</li>
+  <li>Een bepaalde waarde toevoegen in de array</li>
+  <li>…</li>
+</ul>
+
+<p>Elke programmeertaal heeft zo z’n eigen manieren om die eigenschappen op te vragen. Hier worden enkele voorbeelden getoond van de belangrijkste array-functies.</p>
+
+<h3 id="aantal-waardes">Aantal waardes</h3>
+
+<pre class="prettyprint linenums lang lang-JS">
+var autos = ["Volvo", "BMW", "Toyota"];
+var aantal = autos.length;
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array("Volvo", "BMW", "Toyota");
+$aantal = count($autos);
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+string[] autos = {"Volvo", "BMW", "Toyota"};
+int aantal = autos.Length;
+</pre>
+
+<h3 id="waardes-verwijderen">Waardes verwijderen</h3>
+
+<pre class="prettyprint linenums lang lang-JS">
+var autos = ["Volvo", "BMW", "Toyota"];
+
+var verwijderdeAuto1 = autos.pop();		// verwijdert de laatste waarde
+var verwijderdeAuto2 = autos.shift();	// verwijdert de eerste waarde
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array("Volvo", "BMW", "Toyota");
+$verwijderdeAuto = unset($autos[0]);	// OPGELET! Verwijdert OOK de index, 
+					// waardoor dit een associative array wordt!
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+// In C# is de grootte van een array vastgelegd wanneer je de array aanmaakt.
+// Je kan waardes dus niet zomaar verwijderen.
+</pre>
+
+<h3 id="waardes-toevoegen">Waardes toevoegen</h3>
+
+<pre class="prettyprint linenums lang lang-JS">
+var autos = ["Volvo", "BMW", "Toyota"];
+autos.push("Renault");			// voegt een waarde toe aan het einde
+autos.unshift("Renault");		// voegt een waarde toe aan het begin
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array("Volvo", "BMW", "Toyota");
+$aantal[] = "Renault";			// voegt een waarde toe aan het einde
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+// In C# is de grootte van een array vastgelegd wanneer je de array aanmaakt.
+// Je kan waardes dus niet zomaar toevoegen.
+</pre>
+
+<div class="lang lang-PHP"> 
+
+<h2>Associative Arrays</h2>
+
+<p>Indexed arrays gebruiken een index om een waarde op te vragen.</p>
+
+<pre class="prettyprint linenums lang lang-PHP">
+// index:	  0	  1	    2
+$autos = array("Volvo", "BMW", "Toyota");
+$tweedeAuto = autos[1];
+</pre>
+
+<p>Een andere manier om deze array te schrijven is als volgt:</p>
+
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array(0 =&gt; "Volvo", 1 =&gt; "BMW", 2 =&gt; "Toyota");
+$tweedeAuto = autos[1];
+</pre>
+
+<p>Op deze manier kan je zelf de index kiezen die bij elke waarde hoort. Je kan zelfs een compleet andere index kiezen, en op dezelfde manier een waarde opvragen:</p>
+
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array (7 =&gt; "Volvo", 5 =&gt; "BMW", 13 =&gt; "Toyota");
+
+echo $autos[7]; 		// toont Volvo op het scherm
+echo $autos[5]; 		// toont BMW op het scherm
+echo $autos[13]; 		// toont Toyota op het scherm
+</pre>
+
+<p>Bovenstaande array wordt ook een <b>associative array</b> genoemd. Associative arrays zijn een uitbreiding op indexed arrays. Ze worden zo genoemd omdat in dit soort arrays de waarde wordt geassocieerd met een zelf gekozen index, meestal een naam of getal.<p>
+
+<p>Een naam kan eender wat zijn, zo lang het uniek is:</p>
+<ul>
+	<li>Een getal</li>
+ <li>Een letter</li>
+ <li>Een woord</li>
+</ul>
+
+<p>Het is dus mogelijk om in plaats een getal een woord te gebruiken. Zo kan je automerken bijvoorbeeld associëren met het land waar ze gemaakt worden.</p>
+
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array ("Zweeds" =&gt; "Volvo", "Duits" =&gt; "BMW", "Japans" =&gt; "Toyota");
+
+echo $autos["Zweeds"]; 		// toont Volvo op het scherm
+echo $autos["Duits"]; 		// toont BMW op het scherm
+echo $autos["Japans"]; 		// toont Toyota op het scherm
+</pre>
+</p></p></div>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/instructies/#arrays"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/instructies/arrays.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#arrays">Arrays</a></li>
+  <li><a href="#indexed-arrays">Indexed arrays</a></li>
+  <li><a href="#arrays-eigenschappen-en-functies">Arrays: eigenschappen en functies</a>
+    <ul>
+      <li><a href="#aantal-waardes">Aantal waardes</a></li>
+      <li><a href="#waardes-verwijderen">Waardes verwijderen</a></li>
+      <li><a href="#waardes-toevoegen">Waardes toevoegen</a></li>
+    </ul>
+  </li>
+  <li>Associative Arrays</li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

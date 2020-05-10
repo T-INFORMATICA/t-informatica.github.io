@@ -1,0 +1,49 @@
+
+#mainLayoutGridContainer>footer {
+  height: 100px;
+}
+
+#mainLayoutGridContainer {
+    
+    height: 100%;
+}
+
+header {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+}
+  
+  
+@media only screen and (min-width: 750px) {
+    #mainLayoutGridContainer {
+      display: grid;
+      grid-template-rows: 50px auto 100px;
+    
+      grid-template-areas: "."
+                          "content"
+                          "footer";
+  }
+
+  #mainLayoutGridContainer>section#courseContent,
+  #mainLayoutGridContainer>section#profileContent {
+      grid-area: content;
+  }
+
+  #mainLayoutGridContainer>footer {
+      grid-area: footer;
+  }
+
+}
+
+@media print
+{    
+    nav#mainNavigation,
+    footer
+    {
+        display: none !important;
+    }
+}

@@ -1,0 +1,689 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Ontwerp</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+      <h1>Databanken</h1>
+      
+        
+
+    
+        
+
+    
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database ontwerp</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's dessertenboek</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">Sql</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek database</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Database ontwerp</h1>
+
+        <div id="chapterTags">
+            
+        </div>
+
+        <h2>Inhoud van de cursus</h2>
+
+<h3>LEERDOELEN</h3>
+
+
+
+
+<h3>OPBOUW VAN DE CURSUS</h3><h4>Data</h4>
+                                <p>Om te kunnen werken met databanken, is het belangrijk om te weten wat data precies is. In dit deel krijg je duidelijk te zien wat data precies is en waar een databank voor dient.</p><h4>Voorbeeld Databank</h4>
+                                <p>Met dit voorbeeld kom je voor het eerst in aanraking met data. Bekijk dit voorbeeld goed, want met deze data zullen we proberen een goede databank in elkaar te steken.</p><h4>Fouten in Relationele Databanken</h4>
+                                <p>Wanneer je niet gewend bent om te werken met relationele databanken zijn sommige fouten snel gemaakt. In dit hoofdstuk leer je die fouten te herkennen en vermijden.</p><h4>Tabellen</h4>
+                                <p>Elke relationele databank bestaat uit tabellen (ook wel relaties genoemd). Elke tabel moet voldoen aan enkele voorwaarden, zodat je een optimale databank kunt ontwerpen.</p><h4>Sleutels</h4>
+                                <p>Een relationele databank bestaat uit tabellen. Maar hoe zijn die tabellen met elkaar verbonden? In dit hoofdstuk wordt uitgelegd hoe sleutels hier een sleutelrol in spelen.</p><h4>Multipliciteit</h4>
+                                <p>Een relatie toont dat een oudertabel en kindtabel zijn verbonden met elkaar. Het is vaak belangrijk te weten op welke manier deze verbonden zijn. De multipliciteit in een relatie is daarbij heel belangrijk.</p><h4>Normalisatie en Standaardisatie</h4>
+                                <p>Een relationele databank bestaat uit tabellen. Maar hoe maak je nu een goede databank?</p>
+            <h3>BELANGRIJKE TERMEN</h3><table><thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div style="position: relative;"><span id="inleiding" style="position: absolute; top:-75px;"></span></div>
+                                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+                                    <td>
+                                    data
+                                    </td>
+                                    <td>
+                                    een verzameling van gegevens.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    relatie
+                                    </td>
+                                    <td>
+                                    Een andere naam voor een tabel in een databank.
+                                    </td>
+                                </tr></tbody><thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div style="position: relative;"><span id="désirée's-dessertenboek" style="position: absolute; top:-75px;"></span></div>
+                                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+                                    <td>
+                                    databank
+                                    </td>
+                                    <td>
+                                    Een gestructureerde verzameling van data.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    relationele databank
+                                    </td>
+                                    <td>
+                                    Een gestructureerde verzameling van data waarbij de opgeslagen data wordt onderverdeeld in tabellen.
+                                    </td>
+                                </tr></tbody><thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div style="position: relative;"><span id="fouten" style="position: absolute; top:-75px;"></span></div>
+                                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+                                    <td>
+                                    redundantie
+                                    </td>
+                                    <td>
+                                    Een fout in het databankontwerp waardoor bepaalde informatie meer dan één keer wordt opgeslagen.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    herhalende groep
+                                    </td>
+                                    <td>
+                                    Een fout in het databankontwerp waarbij een een waarde uit meerdere kolommen, meerdere rijen of een combinatie van de twee bestaat.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    niet-gestandaardiseerde waarde
+                                    </td>
+                                    <td>
+                                    Een fout in het databankontwerp waarbij twee of meer waardes die dezelfde betekenis hebben, toch verschillend zijn in de databank.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    samengestelde data
+                                    </td>
+                                    <td>
+                                    Data die bestaat uit meerdere waardes.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    enkelvoudige data
+                                    </td>
+                                    <td>
+                                    Data die bestaat uit één waarde.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    cel
+                                    </td>
+                                    <td>
+                                    De plaats waar een rij en een kolom kruisen.
+                                    </td>
+                                </tr></tbody><thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div style="position: relative;"><span id="tabellen" style="position: absolute; top:-75px;"></span></div>
+                                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+                                    <td>
+                                    record
+                                    </td>
+                                    <td>
+                                    Een enkele rij in een tabel die alle gegevens van één entiteit opslaat.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    field
+                                    </td>
+                                    <td>
+                                    Een enkele kolom die één eigenschap van een entiteit in de tabel voorstelt.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    populatie
+                                    </td>
+                                    <td>
+                                    De verzameling van alle records van een tabel.
+                                    </td>
+                                </tr></tbody><thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div style="position: relative;"><span id="sleutels" style="position: absolute; top:-75px;"></span></div>
+                                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+                                    <td>
+                                    primaire sleutel
+                                    </td>
+                                    <td>
+                                    Een kolom of combinatie van kolommen die ervoor zorgt dat je een rij op unieke wijze kunt identificeren.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    kandidaatsleutel
+                                    </td>
+                                    <td>
+                                    Alle kolommen of combinaties van kolommen die mogelijk als primaire sleutel gekozen kunnen worden.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    alternatieve sleutel
+                                    </td>
+                                    <td>
+                                    Alle kolommen of combinaties van kolommen die mogelijk als primaire sleutel gekozen kunnen worden, maar geen primaire sleutel zijn.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    refererende sleutel
+                                    </td>
+                                    <td>
+                                    een kolom waarvan de waarde verwijst naar een rij in een andere tabel, via de primaire sleutel van die tweede tabel.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    relatie tussen tabellen
+                                    </td>
+                                    <td>
+                                    Een link die gelegd wordt tussen twee tabellen door naar de primaire sleutel te verwijzen met een refererende sleutel.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    kindtabel
+                                    </td>
+                                    <td>
+                                    De tabel in een relatie tussen tabellen die de refererende sleutel bevat.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    oudertabel
+                                    </td>
+                                    <td>
+                                    De tabel in een relatie tussen tabellen die de primaire sleutel bevat waarnaar verwezen wordt.
+                                    </td>
+                                </tr></tbody><thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div style="position: relative;"><span id="multipliciteit" style="position: absolute; top:-75px;"></span></div>
+                                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+                                    <td>
+                                    optionaliteit
+                                    </td>
+                                    <td>
+                                    Hoeveel rijen van een tabel minimaal verbonden kunnen zijn met één rij van een andere tabel.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    kardinaliteit
+                                    </td>
+                                    <td>
+                                    Hoeveel rijen van een tabel maximaal verbonden kunnen zijn met één rij van een andere tabel.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    multipliciteit
+                                    </td>
+                                    <td>
+                                    Hoeveel rijen van een tabel minimaal en maximaal verbonden kunnen zijn met één rij van een andere tabel.
+                                    </td>
+                                </tr></tbody><thead>
+                            <tr>
+                                <th colspan="2">
+                                    <div style="position: relative;"><span id="normalisatie" style="position: absolute; top:-75px;"></span></div>
+                                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><tr>
+                                    <td>
+                                    normaliseren
+                                    </td>
+                                    <td>
+                                    Het proces om in een database herhalende groepen en redundantie te elimineren.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    normaalvorm 1
+                                    </td>
+                                    <td>
+                                    Een normaalvorm die herhalende groepen elimineert. Elke tabel krijgt hier een primaire sleutel en elke kolom mag slechts atomaire waarden bevatten.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    normaalvorm 2
+                                    </td>
+                                    <td>
+                                    Een normaalvorm die redundantie vermindert. Alle velden die geen kandidaat sleutel zijn, zijn functioneel afhankelijk van de volledige primaire sleutel van die tabel.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    normaalvorm 3
+                                    </td>
+                                    <td>
+                                    Een normaalvorm die redundantie vermindert. Alle velden die geen kandidaat sleutel zijn, zijn functioneel onafhankelijk van alle andere velden die geen kandidaat sleutel zijn.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    normaalvorm
+                                    </td>
+                                    <td>
+                                    Een stap in het normalisatie-proces.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    standaardisatie
+                                    </td>
+                                    <td>
+                                    Twee of meer waardes die dezelfde betekenis hebben krijgen dezelfde waarde in de databank.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    functionele afhankelijkheid
+                                    </td>
+                                    <td>
+                                    Wanneer de waarde in één kolom bepaalt welke waarde in een andere kolom staat.
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                    partiële afhankelijkheid
+                                    </td>
+                                    <td>
+                                    Wanneer de primaire sleutel uit meerdere kolommen bestaat, maar dat er maar één kolom uit de primaire sleutel de waarde bepaalt van een andere kolom.
+                                    </td>
+                                </tr></tbody></table>
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/#index"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/databanken/database-ontwerp/index.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li>Inhoud van de cursus
+    <ul>
+      <li>LEERDOELEN</li>
+      <li>OPBOUW VAN DE CURSUS
+        <ul>
+          <li>Data</li>
+          <li>Voorbeeld Databank</li>
+          <li>Fouten in Relationele Databanken</li>
+          <li>Tabellen</li>
+          <li>Sleutels</li>
+          <li>Multipliciteit</li>
+          <li>Normalisatie en Standaardisatie</li>
+        </ul>
+      </li>
+      <li>BELANGRIJKE TERMEN</li>
+    </ul>
+  </li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

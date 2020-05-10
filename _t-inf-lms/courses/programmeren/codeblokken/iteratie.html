@@ -1,0 +1,656 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteratie</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html"><u>Iteratie</u></a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Iteratie</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">iteratie</a>
+            
+                <a href="#" class="tag">for</a>
+            
+                <a href="#" class="tag">while</a>
+            
+                <a href="#" class="tag">array</a>
+            
+                <a href="#" class="tag">itereren</a>
+            
+        </div>
+
+        <h2 id="sequentie">Sequentie</h2>
+<p>Alle code die tot nu toe werd behandeld heeft één ding gemeen: instructies worden één per één uitgevoerd, van boven naar onder, zonder uitzondering. Dit wordt ook wel een <strong>sequentie</strong> genoemd.</p>
+
+<p>Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.</p>
+
+<pre class="prettyprint linenums lang lang-JS lang-PHP">
+function Explodeer(x) 
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+void Explodeer(x) 
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+}
+</pre>
+
+<h2 id="iteratie">Iteratie</h2>
+
+<p>Iteratie is het herhaaldelijk uitvoeren van code zo lang een voorwaarde <em>waar</em> is.</p>
+<ul>
+  <li>Herhaal een codeblok 6 keer</li>
+  <li>Herhaal een codeblok tot Y gelijk is aan 10</li>
+  <li>…</li>
+</ul>
+
+<p>Bijvoorbeeld: Een explosie laat een licht 10 maal flikkeren. Hiervoor wordt een variabele y gemaakt die optelt. Pas als de variabele y niet langer kleiner is dan 10, gaat het codeblok verder met z’n instructies (<code class="highlighter-rouge">doe 5 schade</code>).</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+function Explodeer() 
+{
+	// maak een geluidje
+	var y = 0;
+	while (y &lt; 10) {
+		// laat een licht flikkeren
+		y = y + 1;
+	}
+	// doe 5 schade
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+function Explodeer() 
+{
+	// maak een geluidje
+	$y = 0;
+	while ($y &lt; 10) {
+		// laat een licht flikkeren
+		$y = $y + 1;
+	}
+	// doe 5 schade
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+function Explodeer() 
+{
+	// maak een geluidje
+	int y = 0;
+	while (y &lt; 10) {
+		// laat een licht flikkeren
+		y = y + 1;
+	}
+	// doe 5 schade
+}
+</pre>
+
+<p>Een <strong>iteratie-codeblok gaat, aan de hand van een voorwaarde, instructies herhalen</strong> zolang die voorwaarde waar is.</p>
+
+<p>Het herhalen van instructies wordt ook wel <strong>itereren</strong> genoemd. Eén herhaling is dus één iteratie. Wanneer een codeblok itereert, gebeuren er meerdere iteraties (herhalingen) van de instructies in het codeblok. Iteratie is een belangrijk onderdeel van het DRY principe.</p>
+
+<p>Er zijn verschillende soorten iteratie-codeblokken:</p>
+
+<ul>
+  <li>Het WHILE codeblok</li>
+  <li>Het FOR codeblok</li>
+</ul>
+
+<p>Beide blokken itereren (herhalen) hun instructies op een andere manier.</p>
+
+<h3 id="while-blok">WHILE blok</h3>
+
+<p>WHILE wilt in het Nederlands zeggen: zolang. Het while codeblok herhaalt de instructies in in het codeblok <strong>zolang een voorwaarde waar is</strong>.
+WHILE wilt dus eigenlijk zeggen: <strong>zolang de voorwaarde waar is</strong>, voer deze instructies opnieuw uit. Bijvoorbeeld:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var intTest = 0;
+
+while (intTest &lt; 10) 
+{
+	intTest = intTest + 1;
+	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
+	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$intTest = 0;
+
+while ($intTest &lt; 10) 
+{
+	$intTest = $intTest + 1;
+	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
+	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+int intTest = 0;
+
+while (intTest &lt; 10) 
+{
+	intTest = intTest + 1;
+	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
+	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
+}
+</pre>
+
+<h3 id="for-blok">FOR blok</h3>
+
+<p>In het vorige voorbeeld werd een WHILE blok gebruikt gedurende een specifiek aantal keer (10 maal). Dit is één van de meest voorkomende manieren om code te herhalen. Deze manier van werken vereist 3 stappen:</p>
+
+<ol>
+  <li>Maak een variabele aan</li>
+  <li>Kijk na of die variabele kleiner is dan 10</li>
+  <li>Verhoog de variabele met 1</li>
+</ol>
+
+<p>Vergeet een programmeur 1 van deze 3 stappen, bevat het programma fouten of (nog erger) loopt het programma vast. Om zeker te zijn dat programmeurs deze stappen allemaal uitvoeren, bestaat er een kortere versie. Deze kortere versie is het FOR blok.</p>
+
+<p>Het FOR blok is een iteratie waarbij deze 3 stappen in 1 regel code worden geschreven:</p>
+
+<ol>
+  <li>Maak een variabele aan</li>
+  <li>Kijk na of die variabele kleiner is dan 10</li>
+  <li>Verhoog de variabele met 1</li>
+</ol>
+
+<pre class="prettyprint linenums lang lang-JS">
+//     stap 1   stap 2	  stap 3
+for (var i = 0; i &lt; 10; i = i + 1)
+{
+	// voer deze code opnieuw uit zolang i kleiner is dan 10.
+	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+//    stap 1  stap 2	stap 3
+for ($i = 0; $i &lt; 10; $i = $i + 1)
+{
+	// voer deze code opnieuw uit zolang i kleiner is dan 10.
+	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+//     stap 1   stap 2	  stap 3
+for (int i = 0; i &lt; 10; i = i + 1)
+{
+	// voer deze code opnieuw uit zolang i kleiner is dan 10.
+	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
+}
+</pre>
+
+<h2 id="itereren-door-een-array">Itereren door een array</h2>
+
+<p>De index van een indexed array is een integer (een geheel getal). Dat wilt zeggen dat elke variabele die een geheel getal bevat gebruikt kan worden om een element uit de array op te vragen.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var autos = ["Volvo", "BMW", "Toyota"];
+var index = 1;
+var tweedeAuto = autos[index];
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array("Volvo", "BMW", "Toyota");
+$index = 1;
+$tweedeAuto = autos[$index];
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+string[] autos = {"Volvo", "BMW", "Toyota"};
+int index = 1;
+string tweedeAuto = autos[index];
+</pre>
+
+<p>Zo’n index variabele wordt heel vaak gebruikt in een for-loop wanneer het nodig is om alle items in een lijst te overlopen.</p>
+
+<p>Een for-loop maakt een variabele aan, en verhoogt deze variabele bij elke iteratie. Wanneer die variabele groter wordt dan een bepaalde maximumwaarde stopt de for-loop.</p>
+
+<p>Als de variabele van een for-loop dus begint bij 0, en eindigt voor het aantal waardes in een array, kan je met een for-loop elke index van een array overlopen.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+var autos = ["Volvo", "BMW", "Toyota"];
+var aantal = autos.length;
+
+for (let i = 0; i &lt; aantal; ++i) {
+	console.log(autos[i]);
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$autos = array("Volvo", "BMW", "Toyota");
+$aantal = count($autos);
+
+for ($i = 0; $i &lt; $aantal; ++$i) {
+	echo $autos[$i];
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+string[] autos = {"Volvo", "BMW", "Toyota"};
+int aantal = autos.Length;
+
+for (int i = 0; i &lt; aantal; ++i) {
+	console.log(autos[i]);
+}
+</pre>
+
+<h2 id="coding-guidelines">Coding Guidelines</h2>
+
+<p>Wanneer je een WHILE blok schrijft, laat je een spatie tussen het keyword en de haakjes:</p>
+<ul>
+  <li>WEL:		<code class="highlighter-rouge">while (intTest &lt; 1)</code></li>
+  <li>NIET:	<code class="highlighter-rouge">while(intTest &lt; 1)</code></li>
+</ul>
+
+<p>Wanneer je een FOR blok schrijft, laat je een spatie:
+Tussen het keyword for en de haakjes
+Na elke puntkomma</p>
+<ul>
+  <li>WEL:		<code class="highlighter-rouge">for (int i = 0; i &lt; 10; i += 1)</code></li>
+  <li>NIET:	<code class="highlighter-rouge">for(int i = 0; i &lt; 10; i += 1)</code></li>
+</ul>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/codeblokken/#iteratie"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/codeblokken/iteratie.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#sequentie">Sequentie</a></li>
+  <li><a href="#iteratie">Iteratie</a>
+    <ul>
+      <li><a href="#while-blok">WHILE blok</a></li>
+      <li><a href="#for-blok">FOR blok</a></li>
+    </ul>
+  </li>
+  <li><a href="#itereren-door-een-array">Itereren door een array</a></li>
+  <li><a href="#coding-guidelines">Coding Guidelines</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

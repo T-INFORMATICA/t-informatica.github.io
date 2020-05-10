@@ -1,0 +1,668 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klassen</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html"><u>Klassen</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Klassen</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">klasse</a>
+            
+                <a href="#" class="tag">class</a>
+            
+                <a href="#" class="tag">constructor</a>
+            
+                <a href="#" class="tag">field</a>
+            
+                <a href="#" class="tag">method</a>
+            
+                <a href="#" class="tag">klassediagram</a>
+            
+        </div>
+
+        <h2 id="wat-is-een-klasse">Wat is een klasse?</h2>
+<p>Een klasse is een groep variabelen en functies die bij elkaar horen waar je een naam aan geeft. Klassen zijn, nog veel meer dan functies, hèt middel bij uitstek om ons aan het DRY principe te houden.</p>
+
+<p>Een klasse is in feite een complex datatype dat je zelf maakt. Vanaf een klasse gemaakt is, kunnen objecten worden aangemaakt met als datatype de naam van die klasse. In volgend voorbeeld wordt een klasse <code class="highlighter-rouge">Leerling</code> gemaakt:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {		// KLASSE
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {		// KLASSE
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+public class Leerling {		// KLASSE
+}
+</pre>
+
+<p>Wanneer die klasse gemaakt is kan je een variabele van het datatype <code class="highlighter-rouge">Leerling</code> aanmaken:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+let voorbeeldLeerling = new Leerling();		// OBJECT
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$voorbeeldLeerling = new Leerling();		// OBJECT
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+Leerling voorbeeldLeerling = new Leerling();	// OBJECT
+</pre>
+
+<p>In dit voorbeeld wordt dus een variabele gemaakt met de naam <code class="highlighter-rouge">voorbeeldLeerling</code>. In die variabele wordt een waarde (object) bewaard van het datatype Leerling door <code class="highlighter-rouge">new Leerling()</code> aan te roepen.</p>
+
+<p><strong>Opgelet!</strong> Uiteraard is een lege klasse <code class="highlighter-rouge">Leerling</code> nogal zinloos. De bedoeling is dat de klasse wordt gevuld met functies en variabelen die bij een leerling horen.</p>
+
+<h2 id="fields">Fields</h2>
+
+<p>In een klasse kunnen variabelen worden opgeslagen.</p>
+
+<p>Om deze waardes op te slaan, zijn variabelen nodig die bij de klasse Leerling horen, ook wel klasse-variabelen genoemd. Een klasse-variabele wordt ook wel eens een field of member genoemd.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = "Sam";	// _naam is een klasse-var
+		this._leeftijd = 18;	// _leeftijd is een klasse-var
+	}
+}
+let voorbeeldLeerling = new Leerling();
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {	
+	private $_naam = "Sam";		// _naam is een klasse-variabele
+	private $_leeftijd = 18;	// _leeftijd is een klasse-variabele
+}
+$voorbeeldLeerling = new Leerling();	
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {	
+	string _naam = "Sam";	// _naam is een klasse-variabele
+	int _leeftijd = 18;	// _leeftijd is een klasse-variabele
+}
+Leerling voorbeeldLeerling = new Leerling();
+</pre>
+
+<p>In bovenstaand voorbeeld heeft de klasse Leerling dus 2 variabelen:</p>
+<ul>
+  <li><code class="highlighter-rouge">_naam</code></li>
+  <li><code class="highlighter-rouge">_leeftijd</code></li>
+</ul>
+
+<p>Deze variabelen kunnen gebruikt worden in héél de klasse Leerling, omdat het klasse variabelen zijn.</p>
+
+<h2 id="methods">Methods</h2>
+
+<p>In een klasse kunnen ook functies worden gedefinieerd. Deze klase-functies worden methods genoemd. Een method is een functie die enkel werkt voor instanties van de klasse waarin die method is geschreven.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p>De klasse Leerling krijgt een method <code class="highlighter-rouge">Slaap()</code>. Deze method toont de tekst “zzzzzzzz” in de console. Elke variabele van het datatype Leerling kan nu de functie <code class="highlighter-rouge">Slaap()</code> gebruiken door <code class="highlighter-rouge">mijnVariabele.Slaap();</code> aan te roepen.</p>
+
+<p>Probeer je echter de method <code class="highlighter-rouge">Slaap()</code> aan te roepen zonder een object krijg je een foutmelding: <code class="highlighter-rouge">Slaap</code> is not defined. Het programma meldt hier letterlijk: de functie <code class="highlighter-rouge">Slaap()</code> bestaat niet. Dit is correct, want er bestaat enkel een method genaamd <code class="highlighter-rouge">Slaap()</code>. Wil je een method aanroepen, dan heb je een object nodig van het juiste datatype.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+	Slaap() {
+		console.log("zzzzzzzzzzzzzzzzz");
+	}
+}
+let voorbeeldLeerling = new Leerling();
+voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {
+	function Slaap() {
+		echo "zzzzzzzzzzzzzzzzz";
+	}
+}
+$voorbeeldLeerling = new Leerling();
+voorbeeldLeerling-&gt;Slaap(); 	// toont zzzzzzz in de console
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {
+	void Slaap() {
+		console.log("zzzzzzzzzzzzzzzzz");
+	}
+}
+Leerling voorbeeldLeerling = new Leerling();
+voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
+</pre>
+
+<h2 id="de-constructor">De constructor</h2>
+
+<p>In de volgende code staat iets vreemds:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+}
+
+let voorbeeldLeerling = new Leerling();
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {
+}
+
+$voorbeeldLeerling = new Leerling();
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {
+}
+
+Leerling voorbeeldLeerling = new Leerling();
+</pre>
+
+<p>Hoewel de klasse Leerling géén haakjes heeft, moet een object ervan worden aangemaakt door <code class="highlighter-rouge">new Leerling()</code> te schrijven: de naam van de klasse, gevolgd door haakjes. Dit komt doordat elke klasse automatisch een speciale functie heeft genaamd de constructor.</p>
+
+<p>De constructor is een speciale functie die een nieuw object aanmaakt. Het datatype van dat object is de klasse waar de constructor toe behoort. De lijn code <code class="highlighter-rouge">new Leerling()</code> doet eigenlijk het volgende:</p>
+
+<ol>
+  <li>new geeft aan dat de constructor moet worden aangeroepen.</li>
+  <li><code class="highlighter-rouge">Leerling()</code> geeft aan dat de constructor van de klasse <code class="highlighter-rouge">Leerling</code> gebruikt moet worden.</li>
+</ol>
+
+<p>De constructor is zoals elke andere method, maar heeft een paar beperkingen:</p>
+
+<ul>
+  <li>De constructor geeft niets terug: hij mag dus het keyword return niet bevatten.</li>
+  <li>De constructor kan maar één keer worden aangeroepen per object: enkel bij het aanmaken van een object.</li>
+  <li>De signature is anders: bestaat enkel uit de naam van de functie en de parameters</li>
+</ul>
+
+<p>Elke klasse heeft een constructor, zelfs als die niet wordt geschreven. Als je een klasse maakt zonder constructor, wordt er (stiekem) toch een lege constructor gemaakt.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+	constructor() {
+	}
+}
+let voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {	
+	function __construct() {
+	}
+}
+$voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {	
+	public Leerling() {
+	}
+}
+Leerling voorbeeldLeerling = new Leerling(); // Dit roept de constructor aan
+</pre>
+
+<p>De constructor wordt ook gebruikt om klasse-variabelen een waarde te geven bij het aanmaken van een object. De constructor is immers een method zoals elke andere. Geef je de constructor-functie een parameter, dan moet je die parameter ook invullen bij het aanroepen.</p>
+
+<p>Het voorbeeld hieronder toont een klasse Leerling met twee fields: <code class="highlighter-rouge">_naam</code> en <code class="highlighter-rouge">_leeftijd</code>. De constructor krijgt twee parameters: <code class="highlighter-rouge">naamLeerling</code> en <code class="highlighter-rouge">leeftijdLeerling</code>. In de constructor worden de parameter-waardes doorgegeven aan de fields.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = naamLeerling;		
+		this._leeftijd = leeftijdLeerling;	
+	}
+}
+
+// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
+let voorbeeldLeerling = new Leerling("Sam", 18);
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {	
+	private $_naam = "";		
+	private $_leeftijd = 0;		
+
+	function __construct($naamLeerling, $leeftijdLeerling) {
+		$this-&gt;_naam = $naamLeerling;
+		$this-&gt;_leeftijd = $leeftijdLeerling;
+	}
+}
+
+// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
+$voorbeeldLeerling = new Leerling("Sam", 18);	
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {	
+	string naam = "";		
+	int _leeftijd = 0;	
+
+	public Leerling(string naamLeerling, int leeftijdLeerling) {
+		this._naam = naamLeerling;
+		this._leeftijd = leeftijdLeerling;
+	}
+}
+
+// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
+Leerling voorbeeldLeerling = new Leerling("Sam", 18);
+</pre>
+
+<h2 id="klasse-diagrammen">Klasse Diagrammen</h2>
+<p>Klassen (en de objecten die daarmee gemaakt worden) zijn de essentie van Object Georiënteerd Programmeren. De meeste moderne programma’s zijn gebaseerd op dit systeem.</p>
+
+<p>Programmeurs gebruiken daarom vaak klasse diagrammen om te laten zien hoe een programma in elkaar steekt, zonder dat iemand daarvoor de code van het programma moet openen. Een klasse diagram is een snelle, overzichtelijke manier om te tonen welke variabelen en functies een klasse allemaal bevat.</p>
+
+<p>Een klasse diagram heeft daarom 3 vakken:</p>
+
+<ol>
+  <li>In het bovenste vak vind je de naam van de klasse</li>
+  <li>In het middenste vak vind je de fields van de klasse.
+Fields worden geschreven als volgt:
+    <ul>
+      <li>naamVanField : datatype</li>
+    </ul>
+  </li>
+  <li>In het onderste vak vind je de methods van de klasse
+ 	Methods worden geschreven als volgt:
+    <ul>
+      <li>NaamVanMethod ( naamParameter1 : datatype, naamParam2 : datatype) : returntype</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Vaak hebben klassediagrammen ook losstaande tekstvakken met extra informatie over de methods of fields.</p>
+
+<p><img src="/_t-inf-lms/assets/img/klassen_1.jpg" alt="klassediagram" style="max-width: 50%" /></p>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/datastructuren/#klassen"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/datastructuren/klassen.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#wat-is-een-klasse">Wat is een klasse?</a></li>
+  <li><a href="#fields">Fields</a></li>
+  <li><a href="#methods">Methods</a></li>
+  <li><a href="#de-constructor">De constructor</a></li>
+  <li><a href="#klasse-diagrammen">Klasse Diagrammen</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

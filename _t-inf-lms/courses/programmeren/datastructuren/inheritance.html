@@ -1,0 +1,540 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html"><u>Inheritance</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access modifiers</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Inheritance</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">klasse</a>
+            
+                <a href="#" class="tag">class</a>
+            
+                <a href="#" class="tag">superklasse</a>
+            
+                <a href="#" class="tag">subklasse</a>
+            
+                <a href="#" class="tag">parent</a>
+            
+                <a href="#" class="tag">child</a>
+            
+        </div>
+
+        <h2 id="dont-repeat-yourself">Don’t Repeat Yourself</h2>
+
+<p>Klassen zijn een goede manier om het DRY principe te respecteren. Met een klasse moeten de fields en methods van die klasse maar 1x worden geschreven, terwijl elk object van die klasse er toegang tot heeft.</p>
+
+<p>Het gebeurt echter vaak dat verschillende klassen een aantal fields en methods delen. In het voorbeeld hieronder bevatten <code class="highlighter-rouge">Leerling</code> en <code class="highlighter-rouge">Leraar</code> beide een field <code class="highlighter-rouge">id</code> en een field <code class="highlighter-rouge">naam</code>. Nog belangrijker is dat deze fields in beide klasse semantisch hetzelfde zijn: in beide klassen heeft bijvoorbeeld de field <code class="highlighter-rouge">naam</code> hetzelfde doel. In dit geval is het doel om “de naam van een persoon” op te slaan.</p>
+
+<p>In een klasse <code class="highlighter-rouge">klas</code> is het field <code class="highlighter-rouge">naam</code> semantisch verschillend: hier wordt niet de naam van een persoon bijgehouden, maar wel de “naam van een klasgroep”.</p>
+
+<p><img src="/_t-inf-lms/assets/img/inheritance_1.png" alt="klassediagram" style="height: auto; max-width: 100%" /></p>
+
+<p>Wanneer verschillende klassen een aantal fields of methods delen die semantisch hetzelfde zijn, wordt het DRY principe weer geschonden. Op verschillende plaatsen in de code kunnen methods en fields die hetzelfde doen teruggevonden worden. Met behulp van inheritance kan dit voorkomen worden.</p>
+
+<h2 id="inheritance">Inheritance</h2>
+
+<p>Inheritance (‘overerving’) is een manier om fields en methods die semantisch hetzelfde zijn in een aparte, gedeelde klasse te zetten. Deze klasse wordt dan de <strong>superklasse</strong> genoemd.</p>
+
+<p>De klassen waaruit deze fields en methods werden weggehaald, worden dan aangeduid als subklassen. <strong>De subklassen ‘erven’ de eigenschappen van de superklasse</strong> (de fields en methods) en kunnen daar dus gebruik van maken.</p>
+
+<p>In het voorbeeld hieronder zijn er 2 klassen <code class="highlighter-rouge">Leraar</code> en <code class="highlighter-rouge">Leerling</code> gedefinieerd:</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+Javascript
+class Leerling {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = "";
+		this._leeftijd = 0;
+		this._hoed = null;
+	}
+}
+
+class Leraar {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = "";
+		this._leeftijd = 0;
+		this._diplomas = [];
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {	
+	private $_naam = "";
+	private $_leeftijd = 0;
+	private $_hoed = null;
+}
+
+class Leraar {	
+	private $_naam = "";
+	private $_leeftijd = 0;
+	private $_diplomas = array();
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {	
+	string _naam = "";
+	int _leeftijd = 0;
+	int _hoed = null;
+}
+
+class Leraar {	
+	string _naam = "";
+	int _leeftijd = 0;
+	int _diplomas = [];
+}
+</pre>
+
+<p>Beide klassen hebben een field <code class="highlighter-rouge">naam</code> en een field <code class="highlighter-rouge">leeftijd</code> die semantisch hetzelfde zijn. Het DRY principe wordt dus geschonden.</p>
+
+<p>Daarom wordt er nu een derde klasse gemaakt: <code class="highlighter-rouge">Persoon</code>. Persoon wordt de <strong>superklasse</strong> van <code class="highlighter-rouge">Leerling</code> en <code class="highlighter-rouge">Leraar</code>. <code class="highlighter-rouge">Leerling</code> en <code class="highlighter-rouge">Leraar</code> worden vervolgens aangeduid dat ze overerven van de klasse Persoon. Dit zijn de <strong>subklassen</strong> van de klasse Persoon.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Persoon {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = "";
+		this._leeftijd = 0;
+	}
+}
+
+class Leerling extends Persoon { // extends duid aan dat er wordt overgeërfd
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._hoed = null;
+	}
+}
+
+class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._diplomas = [];
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Persoon {	
+	private $_naam = "";
+	private $_leeftijd = 0;
+}
+
+class Leerling extends Persoon { // extends duid aan dat er wordt overgeërfd
+	private $_hoed = null;
+}
+
+class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
+	private $_diplomas = array();
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Persoon {	
+	string _naam = "";
+	int _leeftijd = 0;
+}
+
+class Leerling : Persoon {	 // : duid aan dat er wordt overgeërfd
+	int _hoed = null;
+}
+
+class Leraar : Persoon {	 // : duid aan dat er wordt overgeërfd
+	int _diplomas = [];
+}
+</pre>
+
+<p>Er wordt terug helemaal voldaan aan het DRY principe.</p>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/datastructuren/#inheritance"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/datastructuren/inheritance.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#dont-repeat-yourself">Don’t Repeat Yourself</a></li>
+  <li><a href="#inheritance">Inheritance</a></li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

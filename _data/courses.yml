@@ -1,0 +1,188 @@
+- name: "programmeren"
+  link: /courses/programmeren/
+  subjects:
+    - name: "Instructies"
+      link: "/courses/programmeren/instructies/"
+      chapters:
+        - name: Variabelen
+          link: "/courses/programmeren/instructies/variabelen.html"
+          doel: "instructies"
+        - name: Expressies
+          link: "/courses/programmeren/instructies/expressies.html"
+          doel: "instructies"
+        - name: Arrays
+          link: "/courses/programmeren/instructies/arrays.html"
+          doel: "Arrays"
+        - name: Instructies
+          link: "/courses/programmeren/instructies/instructies.html"
+          doel: "instructies"
+    - name: "Codeblokken"
+      link: "/courses/programmeren/codeblokken/"
+      chapters:
+        - name: Codeblokken
+          link: "/courses/programmeren/codeblokken/codeblokken.html"
+          doel: "instructies"
+        - name: Functies
+          link: "/courses/programmeren/codeblokken/functies.html"
+          doel: "Codeblokken (functie)"
+        - name: Selectie
+          link: "/courses/programmeren/codeblokken/selectie.html"
+          doel: "Codeblokken (selectie)"
+        - name: Iteratie
+          link: "/courses/programmeren/codeblokken/iteratie.html"
+          doel: "Codeblokken (iteratie)"
+    - name: "Datastructuren"
+      link: "/courses/programmeren/datastructuren/"
+      chapters:
+        - name: Objecten
+          link: "/courses/programmeren/datastructuren/objecten.html"
+          doel: "OO programmeren"
+        - name: Klassen
+          link: "/courses/programmeren/datastructuren/klassen.html"
+          doel: "OO programmeren"
+        - name: Inheritance
+          link: "/courses/programmeren/datastructuren/inheritance.html"
+          doel: "OO programmeren"
+        - name: "Access Modifiers"
+          link: "/courses/programmeren/datastructuren/access-modifiers.html"
+          doel: "OO programmeren"
+        - name: "Relaties"
+          link: "/courses/programmeren/datastructuren/relaties.html"
+          doel: "OO programmeren"
+        - name: "Domeinmodel"
+          link: "/courses/programmeren/datastructuren/domeinmodel.html"
+          doel: "OO ontwerp"
+- name: "webontwikkeling"
+  link: /courses/webontwikkeling/
+  subjects:
+    - name: "HTML"
+      link: "/courses/webontwikkeling/html"
+      chapters:
+        - name: Websites Maken
+          link: "/courses/webontwikkeling/html/websites-maken.html"
+          doel: "structuur"
+        - name: Elementen
+          link: "/courses/webontwikkeling/html/elementen.html"
+          doel: "structuur"
+        - name: Attributen
+          link: "/courses/webontwikkeling/html/attributen.html"
+          doel: "structuur"
+        - name: Block en Inline
+          link: "/courses/webontwikkeling/html/block-en-inline.html"
+          doel: "structuur"
+        - name: Structuur
+          link: "/courses/webontwikkeling/html/structuur.html"
+          doel: "structuur"
+        - name: Semantiek
+          link: "/courses/webontwikkeling/html/semantiek.html"
+          doel: "structuur"
+    - name: "CSS"
+      link: "/courses/webontwikkeling/css"
+      chapters:
+        - name: CSS
+          link: "/courses/webontwikkeling/css/css.html"
+          doel: "opmaak"
+        - name: Selectors
+          link: "/courses/webontwikkeling/css/selectors.html"
+          doel: "opmaak"
+        - name: Kleuren
+          link: "/courses/webontwikkeling/css/kleuren.html"
+          doel: "opmaak"
+        - name: Tekst
+          link: "/courses/webontwikkeling/css/tekst.html"
+          doel: "opmaak"
+        - name: Box Model
+          link: "/courses/webontwikkeling/css/box-model.html"
+          doel: "box model"
+        - name: State Selectors
+          link: "/courses/webontwikkeling/css/state-selectors.html"
+          doel: "opmaak"
+    - name: "Layout"
+      link: "/courses/webontwikkeling/layout"
+      chapters:
+        - name: Inleiding
+          link: "/courses/webontwikkeling/layout/inleiding.html"
+        - name: Grid Basisbegrippen
+          link: "/courses/webontwikkeling/layout/grid-basisbegrippen.html"
+        - name: Grid Implementatie
+          link: "/courses/webontwikkeling/layout/grid-implementatie.html"
+        - name: Uitbreiding
+          link: "/courses/webontwikkeling/layout/uitbreiding.html"
+#    - name: "Statische Websites"
+#      link: "/courses/webontwikkeling/statische-websites.html"
+#      chapters:
+#        - name: Inleiding
+#          link: "/courses/webontwikkeling/statische-websites/inleiding.html"
+#        - name: Responsive Websites
+#          link: "/courses/webontwikkeling/statische-websites/responsive-websites.html"
+#        - name: Icons
+#          link: "/courses/webontwikkeling/statische-websites/icons.html"
+#        - name: Popup
+#          link: "/courses/webontwikkeling/statische-websites/popup.html"
+#        - name: Modal Popup
+#          link: "/courses/webontwikkeling/statische-websites/modal-popup.html"
+#        - name: Menu
+#          link: "/courses/webontwikkeling/statische-websites/menu.html"
+    - name: "Dynamische Websites"
+      link: "/courses/webontwikkeling/dynamische-websites"
+      chapters:
+        - name: URL Parameters
+          link: "/courses/webontwikkeling/dynamische-websites/url-parameters.html"
+          doel: "dynamische websites"
+        - name: SQL Database Connection
+          link: "/courses/webontwikkeling/dynamische-websites/sql-database-connection.html"
+          doel: "dynamische websites"
+- name: "databanken"
+  link: /courses/databanken/
+  subjects:
+    - name: "Database Ontwerp"
+      link: "/courses/databanken/database-ontwerp"
+      chapters:
+        - name: Inleiding
+          link: "/courses/databanken/database-ontwerp/inleiding.html"
+          doel: "database ontwerp"
+        - name: Désirée's Dessertenboek
+          link: "/courses/databanken/database-ontwerp/voorbeeld.html"
+          doel: "database ontwerp"
+        - name: Fouten
+          link: "/courses/databanken/database-ontwerp/fouten.html"
+          doel: "database ontwerp"
+        - name: Tabellen
+          link: "/courses/databanken/database-ontwerp/tabellen.html"
+          doel: "database ontwerp"
+        - name: Sleutels
+          link: "/courses/databanken/database-ontwerp/sleutels.html"
+          doel: "database normalisatie"
+        - name: Multipliciteit
+          link: "/courses/databanken/database-ontwerp/multipliciteit.html"
+          doel: "database ontwerp"
+        - name: Normalisatie
+          link: "/courses/databanken/database-ontwerp/normalisatie.html"
+          doel: "database normalisatie"
+    - name: "SQL"
+      link: "/courses/databanken/sql"
+      chapters:
+        - name: Inleiding
+          link: "/courses/databanken/sql/inleiding.html"
+          doel: "Queries"
+        - name: Muziek Database
+          link: "/courses/databanken/sql/voorbeeld.html"
+          doel: "Queries"
+        - name: Projecties
+          link: "/courses/databanken/sql/projecties.html"
+          doel: "Queries"
+        - name: Selecties
+          link: "/courses/databanken/sql/selecties.html"
+          doel: "Queries"
+        - name: Ordening
+          link: "/courses/databanken/sql/ordening.html"
+          doel: "Queries"
+        - name: Joins
+          link: "/courses/databanken/sql/meerdere-tabellen.html"
+          doel: "Queries"
+#        - name: Statistische Informatie
+#          link: "/courses/databanken/sql/statische-informatie.html"
+#        - name: Subselects
+#          link: "/courses/databanken/sql/subselects.html"
+#        - name: Inhoud Wijzigen
+#          link: "/courses/databanken/sql/inhoud-wijzigen.html"

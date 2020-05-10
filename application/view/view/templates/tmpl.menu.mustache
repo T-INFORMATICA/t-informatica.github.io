@@ -1,0 +1,25 @@
+{{#loggedIn}}
+    <h2> 
+        {{studentNaam}}
+    </h2>
+    <a href="?show=puntenboek">Rapport</a>
+    <a href="?show=evaluaties">Evaluaties</a>
+    <hr>
+    <a href="?show=profiel">Profiel</a>
+    <a href="logout.php">logout</a>
+{{/loggedIn}}
+{{^loggedIn}}
+<script>
+function ShowPopup() {
+    var win = window.open('{{{url}}}', 'windowName',"width=721, height=589");   
+    var timer = setInterval(function() {   
+            if(win.closed) {  
+                    clearInterval(timer);  
+                    location.reload(); 
+            }  
+    }, 1000); 
+}
+    </script>
+    <a id="loginButton" href="javascript:;" onclick="ShowPopup();">login</a>
+
+{{/loggedIn}}

@@ -1,0 +1,87 @@
+
+    <h1>Rapport</h1>
+    {{#punten}}
+    <div id="grades">
+        <section class="doelstellingResultaten">
+            <div class="doelstellingResultatenTitel">
+                <h3>{{onderwerp}}</h3>
+                <h4>Resultaat</h4>
+                <h4>termen Geleerd</h4>
+            </div>
+            <div class="resultaten">
+                
+                {{#doelstellingen}}
+                <div class="doelstellingResultaat">
+                    <h3>{{doelstelling}}</h3>
+                    <ul>
+                        {{#A}}<li class="selected">
+                            <span>A</span>
+                            {{#commentaar}}
+                            <div class="popup">
+                                {{commentaar}}
+                            </div>
+                            {{/commentaar}}
+                        </li>{{/A}}
+                        {{^A}}<li><span>A</span></li>{{/A}}
+
+                        
+                        {{#B}}<li class="selected">
+                            <span>B</span>
+                            {{#commentaar}}
+                            <div class="popup">
+                                {{commentaar}}
+                            </div>
+                            {{/commentaar}}
+                        </li>{{/B}}
+                        {{^B}}<li><span>B</span></li>{{/B}}
+
+                        
+                        {{#C}}<li class="selected">
+                            <span>C</span>
+                            {{#commentaar}}
+                            <div class="popup">
+                                {{commentaar}}
+                            </div>
+                            {{/commentaar}}
+                        </li>{{/C}}
+                        {{^C}}<li><span>C</span></li>{{/C}}
+
+                        
+                        {{#D}}<li class="selected">
+                            <span>D</span>
+                            {{#commentaar}}
+                            <div class="popup">
+                                {{commentaar}}
+                            </div>
+                            {{/commentaar}}
+                        </li>{{/D}}
+                        {{^D}}<li><span>D</span></li>{{/D}}
+
+                        
+                        {{#E}}<li class="selected">
+                            <span>E</span>
+                            {{#commentaar}}
+                            <div class="popup">
+                                {{commentaar}}
+                            </div>
+                            {{/commentaar}}
+                        </li>{{/E}}
+                        {{^E}}<li><span>E</span></li>{{/E}}
+
+                        
+                    </ul>
+                    <div class="progress">
+                        <div class="progressbar">
+                            <div class="progressbarProgress" style="width: calc(100% * ({{woordenGeleerd}} / {{woordenTotaal}}))"></div>
+                            <p class="progressbarLabel">{{woordenGeleerd}} / {{woordenTotaal}}</p>
+                        </div>
+                        <span class="material-icons">assignment</span>
+                    </div>
+                </div>
+                {{/doelstellingen}}
+                
+            </div>
+            
+        </section>
+    </div>
+    {{/punten}}

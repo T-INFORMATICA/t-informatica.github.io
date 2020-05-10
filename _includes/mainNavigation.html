@@ -1,0 +1,68 @@
+<nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="{{site.baseurl}}/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      {% for course in site.data.courses %}
+      <div class="courseNav">
+        <h1><a href="{{site.baseurl}}{{ course.link }}">{{ course.name }}</a></h1>
+          {% for subject in course.subjects %}
+          
+          <div class="subjectNav">
+            <h2><a href="{{site.baseurl}}{{ subject.link }}">{{ subject.name }}</a></h2>
+            {% for chapter in subject.chapters %}
+            <a href="{{site.baseurl}}{{ chapter.link }}">{{ chapter.name }}</a>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="{{site.baseurl}}/?show=puntenboek">Rapport</a></li>
+        <li><a href="{{site.baseurl}}/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="{{site.baseurl}}/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="{{site.baseurl}}/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="{{site.baseurl}}/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '{{site.baseurl}}/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>

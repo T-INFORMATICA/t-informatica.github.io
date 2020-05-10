@@ -1,0 +1,595 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+      <h1>Webontwikkeling</h1>
+      
+        
+
+    
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">Html</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites maken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en inline</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">Css</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">Css</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html"><u>Selectors</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box model</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State selectors</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid basisbegrippen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid implementatie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische websites</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">Url parameters</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">Sql database connection</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Selectors</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">voorrang</a>
+            
+                <a href="#" class="tag">conflicterende stijlregels</a>
+            
+        </div>
+
+        <h1 id="selectors">Selectors</h1>
+
+<p><img src="/_t-inf-lms/assets/img/css-selectors1.PNG" alt="drawing" /></p>
+
+<p><strong>De Selector selecteert welke HTML elementen worden aangepast door CSS</strong>. Een CSS selector kan bijvoorbeeld alle <code>&lt;<b>p</b>&gt;</code> elementen selecteren, zodat CSS de tekstkleur daarvan kan aanpassen. <br />
+Een stijlregel wordt dus toegepast op <b>alle elementen die overeenkomen met de selector</b>. CSS heeft verschillende soorten selectors.</p>
+
+<h2 id="selectors-overzicht">Selectors overzicht</h2>
+
+<table>
+  <tr>
+   <th>selector</th>
+   <th>voorbeeld</th>
+   <th>uitleg</th>
+  </tr>
+  <tr>
+   <td>De element selector</td>
+   <td><code>p</code></td>
+   <td>
+	   Selecteer alle &lt;p&gt; elementen.<br />
+De element selector is de simpelste: Je gebruikt de tagnaam van het HTML element als selector, en alle HTML elementen met die tagnaam zullen vanaf dan deze stijlregels volgen.
+   </td>
+  </tr>
+  <tr>
+   <td>De ALL selector</td>
+   <td><code>*</code></td>
+   <td>
+	   Selecteer alle elementen.<br />
+De * selector wordt gebruikt om stijlregels toe te passen op <b>alle elementen</b>. Wil je dat alle elementen op je website een bepaald lettertype gebruiken, kan je hiervoor de * selector gebruiken.
+   </td>
+  </tr>
+  <tr>
+   <td>De class selector</td>
+   <td><code>.intro</code></td>
+   <td>
+	   Selecteer alle elementen met class="intro".<br />
+Wanneer elementen zijn gemarkeerd met het class-attribute kan je deze elementen ook een eigen stijl geven.
+Je doet dit door middel van een <b>punt</b>, gevolgd door de naam die je in het class-attribute hebt geschreven.
+   </td>
+  </tr>
+  <tr>
+   <td>De id selector</td>
+   <td><code>#firstname</code></td>
+   <td>
+	   Selecteer het element met  id="firstname".<br />
+Wanneer elementen zijn gemarkeerd met het ID-attribute kan je deze elementen een eigen stijl geven.
+Je doet dit door middel van een <b>hekje</b>, gevolgd door de naam die je in het ID-attribute hebt geschreven.
+   </td>
+  </tr>
+  <tr>
+   <td>Selectors combineren</td>
+   <td><code>div, p</code></td>
+   <td>Selecteer alle &lt;div&gt; elementen en alle &lt;p&gt; elementen.</td>
+  </tr>
+  <tr>
+   <td>Geneste elementen selector</td>
+   <td><code>div p</code></td>
+   <td>Selecteer alle &lt;p&gt; elementen die zich bevinden in &lt;div&gt; elementen.</td>
+  </tr>
+  <tr>
+   <td>Parent-child selector</td>
+   <td><code>div &gt; p</code></td>
+   <td>Selecteer alle &lt;p&gt; elementen waarvan de parent een &lt;div&gt; element is.</td>
+  </tr>
+  <tr>
+   <td>After selector</td>
+   <td><code>div + p</code></td>
+   <td>Selecteer alle &lt;p&gt; elementen die direct na &lt;div&gt; elementen staan.</td>
+  </tr>
+  <tr>
+   <td>Before selector</td>
+   <td><code>p ~ ul</code></td>
+   <td>Selecteer elk &lt;ul&gt; element dat wordt voorafgegaan door een &lt;p&gt; element.</td>
+  </tr>
+</table>
+
+<h2 id="voorrang-van-selectors">Voorrang van selectors</h2>
+
+<h3 id="opbouw-van-stijlregels">Opbouw van stijlregels</h3>
+
+<p>Wanneer verschillende selectors van toepassing zijn, gaat CSS proberen al deze selectors met elkaar te combineren.</p>
+
+<p>Een div element van de klasse “content” en een ID “koptekst” kan reageren op 3 selectors:</p>
+
+<ol>
+  <li>div</li>
+  <li>.content</li>
+  <li>#koptekst</li>
+</ol>
+
+<p>Bijvoorbeeld:</p>
+
+<pre>
+div {
+	background-color: red;
+}
+.content {
+	color: green;
+}
+#koptekst {
+	font-family: verdana;
+}
+</pre>
+
+<p>Wanneer, zoals in bovenstaand voorbeeld, alle 3 de selectors stijlregels krijgen, wordt voor het element <code>&lt;<b>div</b> class="content" id="koptekst"&gt;</code> een combinatie gemaakt van deze 3 stijlregels:</p>
+
+<pre>
+	background-color: red;
+	color: green;
+	font-family: verdana;
+</pre>
+
+<h3 id="conflicterende-stijlregels">Conflicterende stijlregels</h3>
+
+<p>Stijlregels kunnen soms conflicteren: Wanneer je een div element van de klasse “content” hebt voorzien en een ID “koptekst” hebt gegeven, kan het wel eens gebeuren dat verschillende selectors dezelfde stijlregels proberen toe te passen:</p>
+
+<pre>
+div {
+	Background-color: red;
+}
+.content {
+	Background-color: green;
+}
+#koptekst {
+	Background-color: blue;
+}
+</pre>
+
+<p><br />
+Het is daarom belangrijk om te weten welke selector voorrang krijgt.De algemene regel is: <strong>hoe specifieker de selector, hoe meer voorrang.</strong></p>
+
+<p>De selectors die we tot nu toe bekeken hebben hebben hun voorrang als volgt:</p>
+
+<ol>
+  <li>De ID selector overschrijft alle andere stijlregels.</li>
+  <li>De Class selector overschrijft alle stijlregels, behalve die van de ID selector.</li>
+  <li>De element selector volgt na de Class selector.</li>
+  <li>De * selector wordt enkel aan het einde toegevoegd, als alle andere stijlregels zijn toegepast.</li>
+</ol>
+
+<p>Wanneer twee selectors <strong>even specifiek zijn</strong> geldt de <strong>onderste stijlregel in de css code</strong>.</p>
+
+<p>In volgend voorbeeld zal elke &lt;div&gt; een groene achtergrond kleur krijgen.</p>
+
+<pre>
+div {
+	Background-color: red;
+}
+div {
+	Background-color: green;
+}
+</pre>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/webontwikkeling/css/#selectors"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/webontwikkeling/css/selectors.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#selectors">Selectors</a>
+    <ul>
+      <li><a href="#selectors-overzicht">Selectors overzicht</a></li>
+      <li><a href="#voorrang-van-selectors">Voorrang van selectors</a>
+        <ul>
+          <li><a href="#opbouw-van-stijlregels">Opbouw van stijlregels</a></li>
+          <li><a href="#conflicterende-stijlregels">Conflicterende stijlregels</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>

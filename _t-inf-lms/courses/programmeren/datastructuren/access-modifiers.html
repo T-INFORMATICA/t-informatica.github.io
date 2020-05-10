@@ -1,0 +1,640 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Modifiers</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- HOME BUTTON -->
+  <a href="/_t-inf-lms/"><span class="material-icons">home</span></a>
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Elementen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html">SQL Database Connection</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <span class="dropdownButton profileButton">
+    <span class="material-icons">
+      person
+    </span>
+    <div class="small dropdown">
+      <ul>
+        <li><a href="/_t-inf-lms/?show=puntenboek">Rapport</a></li>
+        <li><a href="/_t-inf-lms/?show=evaluaties">Evaluaties</a></li>
+        <hr>
+        <li><a href="/_t-inf-lms/?show=profiel">Profiel</a></li>
+      </ul>
+    </div>
+  </span>
+  <!-- EXERCISE BUTTON -->
+  <a href="/_t-inf-lms/exercise.html" class="exerciseButton"><span class="material-icons">assignment</span></a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+      <!-- Configuration -->
+      <script>
+          SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/_t-inf-lms/search.json'
+          })
+      </script>
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+        <script ></script>
+        <div class="select nav-link">
+            <select name="slct" class="lang-select" id="slct">
+            <option value="lang-JS" class="lang-JS">JS</option>
+            <option value="lang-PHP" class="lang-PHP">PHP</option>
+            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            </select>
+        </div>
+        <script src="/_t-inf-lms/assets/js/proglang.js"></script>
+        
+      <h1>Programmeren</h1>
+      
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html"><u>Access modifiers</u></a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Access modifiers</h1>
+
+        <div id="chapterTags">
+            
+                <a href="#" class="tag">public</a>
+            
+                <a href="#" class="tag">private</a>
+            
+                <a href="#" class="tag">protected</a>
+            
+                <a href="#" class="tag">set</a>
+            
+                <a href="#" class="tag">setter</a>
+            
+                <a href="#" class="tag">get</a>
+            
+                <a href="#" class="tag">getter</a>
+            
+        </div>
+
+        <h2 id="voorbeeld">Voorbeeld</h2>
+
+<p>Om te verduidelijken wat Access Modifiers precies zijn wordt een voorbeeld klasse <code class="highlighter-rouge">Leerling gebruikt</code>. Deze klasse heeft 2 fields: <code class="highlighter-rouge">_naam</code> en <code class="highlighter-rouge">_leeftijd</code>.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = "";	
+		this._leeftijd = 0;
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {	
+	public $_naam = "";
+	public $_leeftijd = 0;
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {	
+	string naam = "";
+	int _leeftijd = 0;
+}
+</pre>
+
+<p>Voor dit voorbeeld wordt ook een object aangemaakt van het datatype <code class="highlighter-rouge">Leerling</code> genaamd <code class="highlighter-rouge">leerling1</code>.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+let leerling1 = new Leerling();
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$leerling1 = new Leerling();
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+Leerling leerling1 = new Leerling();
+</pre>
+
+<h2 id="field-en-method-access">Field en Method access</h2>
+
+<p>Variabelen hebben een bepaald datatype. Dit datatype bepaald wat voor soorten waardes in een variabele kunnen worden opgeslagen. Zo kan een integer alleen gehele getallen opslaan, terwijl een string tekst kan opslaan.</p>
+
+<p>Bij veel fields zijn deze beperkingen niet genoeg. Een leeftijd mag bijvoorbeeld nooit negatief zijn, en een naam bevat geen leestekens. Afhankelijk waar een field voor dient, gelden er dus andere regels. Het doel van een field heet ook wel de <strong>semantiek</strong> van een field. De regels die bepalen wat je in een field steekt zijn dan ook <strong>semantische regels</strong>.</p>
+
+<p>In het voorbeeld kan op dit moment elk field rechtstreeks aangepast worden. Er is dus geen enkele manier om deze semantische regels af te dwingen!</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+let leerling1 = new Leerling();
+Leerling1._naam = "#?!";			// Dit zou niet mogen!
+Leerling1._leeftijd = -2148;			// Dit zou niet mogen!
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+$leerling1 = new Leerling();
+Leerling1-&gt;_naam = "#?!";			// Dit zou niet mogen!
+Leerling1-&gt;_leeftijd = -2148;			// Dit zou niet mogen!
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+Leerling leerling1 = new Leerling();
+Leerling1._naam = "#?!";			// Dit zou niet mogen!
+Leerling1._leeftijd = -2148;			// Dit zou niet mogen!
+</pre>
+
+<p>Wat hier vooral belangrijk is, is dat de variabelen <code class="highlighter-rouge">_naam</code> en <code class="highlighter-rouge">_leeftijd</code> op dit moment gebruikt kunnen worden <strong>buiten de scope van de klasse</strong>, waardoor hun waarden zomaar aangepast kunnen worden.</p>
+
+<p>Dit is dus absoluut niet de bedoeling. Er moeten daarom 2 belangrijke dingen gebeuren:</p>
+
+<ol>
+  <li><strong>Fields beperken tot de scope van de klasse</strong>: fields mogen niet rechtstreeks worden aangepast buiten de scope van de klasse.</li>
+  <li><strong>Semantische regels toepassen bij het aanpassen van fields</strong>: De klasse moet ervoor zorgen dat je de waarden kunt aanpassen, waarbij de semantische regels worden toegepast.</li>
+</ol>
+
+<h3 id="private-protected-en-public">Private, Protected en Public</h3>
+
+<p>Om te bepalen wat de scope van een field of method is worden <strong>access modifiers</strong> gebruikt. Dit zijn keywords die je plaatst bij het aanmaken van een field of method.</p>
+
+<p>Er zijn 3 belangrijke access modifiers:</p>
+
+<ul>
+  <li>Private: de field of method is <strong>niet beschikbaar</strong> buiten de scope van de klasse.</li>
+  <li>Protected: de field of method is <strong>niet beschikbaar</strong> buiten de scope van de klasse, <strong>behalve voor de subklassen</strong>.</li>
+  <li>Public: de field of method is <strong>wel beschikbaar</strong> buiten de scope van de klasse.</li>
+</ul>
+
+<p><strong>Fields moeten altijd private zijn</strong> (indien mogelijk)! Alleen zo kunnen de semantische regels worden afgedwongen. Elke programmeertaal heeft zijn eigen regels over het gebruik van access modifiers.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+// In Javascript bestaan er geen access modifiers. Alle fields en methods zijn altijd public! 
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+// In PHP ben je verplicht om bij een field een access modifier te plaatsen!
+// In PHP moet je dit niet doen bij methods.  
+// Methods zonder access modifier zijn steeds public!
+class Leerling {	
+	private $_naam = "";			// Dit field is private
+	public $_leeftijd = 0;			// Dit field is public (mag niet!)
+
+	private function Slaap2() {		// Deze method is private
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+// In C# moet je geen access modifier plaatsen bij fields en methods. 
+// Fields zonder access modifier zijn steeds private! 
+// Methods zonder access modifier zijn steeds public!
+class Leerling {	
+	string naam = "";				// Dit field is private
+	private string voornaam = "";		// Dit field is private
+	public int _leeftijd = 0;		// Dit field is public (mag niet!)
+	
+	private void Slaap() {			// Deze method is private
+	}
+}
+</pre>
+
+<h3 id="set-functie-semantische-regels-toepassen">Set functie: semantische regels toepassen</h3>
+
+<p>Wanneer elk field een private access modifier krijgt, is het helemaal niet meer mogelijk om de waarde aan te passen of op te vragen. Dit is uiteraard niet de bedoeling!</p>
+
+<p>Het is wel de bedoeling dat een field kan worden aangepast, maar enkel op zo’n manier dat de semantische regels worden toegepast. Bijvoorbeeld: Wanneer de leeftijd wordt aangepast, mag dit geen negatieve waarde krijgen. Wanneer de naam wordt aangepast, mag dit enkel letters en spaties bevatten.</p>
+
+<p>Om dit te kunnen doen, wordt een truc toegepast. <strong>Elk field dat aanpasbaar moet zijn, krijgt een public functie.</strong> In deze functie kunnen, met behulp van programmeercode, de semantische regels worden toegepast.</p>
+
+<p>Dit soort functie wordt een <strong>Set functie</strong> genoemd. Dit wordt ook wel eens afgekort tot <strong>setter</strong>. Deze functie krijgt een parameter, waaraan de nieuwe waarde voor het field wordt meegegeven. In de functie worden de semantische regels dan bepaald.</p>
+
+<p>Hieronder wordt het voorbeeld zo aangepast dat <code class="highlighter-rouge">_leeftijd</code> een Set functie krijgt, genaamd <code class="highlighter-rouge">SetLeeftijd</code>.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = "";	
+		this._leeftijd = 0;
+	}
+
+	function SetLeeftijd(leeftijd) {
+		If (leeftijd &gt; 0) {
+			this._leeftijd = leeftijd;
+		}
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {	
+	private $_naam = "";
+	private $_leeftijd = 0;
+
+	function SetLeeftijd($leeftijd) {
+		If ($leeftijd &gt; 0) {
+			$this-&gt;_leeftijd = $leeftijd;
+		}
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {	
+	string naam = "";
+	int _leeftijd = 0;
+
+	public void SetLeeftijd(int leeftijd) {
+		If (leeftijd &gt; 0) {
+			this._leeftijd = leeftijd;
+		}
+	}
+}
+</pre>
+
+<p>Dit systeem heeft enkele voordelen:</p>
+
+<ul>
+  <li>De naam van een leerling kan niet worden aangepast.</li>
+  <li>De leeftijd van een leerling kan wel worden aangepast, maar enkel door een geldige leeftijd.</li>
+</ul>
+
+<h3 id="get-functie-private-fields-opvragen">Get functie: private fields opvragen</h3>
+
+<p>Wanneer elk field een private access modifier krijgt, is het helemaal niet meer mogelijk om de waarde op te vragen. Ook dit is uiteraard niet de bedoeling!</p>
+
+<p>Om dit te kunnen doen, wordt dezelfde truc toegepast. <strong>Elk field dat op te vragen moet zijn, krijgt een public functie.</strong> Deze functie geeft de waarde van een private field terug. Dit soort functie wordt een <strong>Get functie</strong> genoemd, vaak afgekort tot <strong>getter</strong>.</p>
+
+<p>Hieronder wordt het voorbeeld zo aangepast dat <code class="highlighter-rouge">_naam</code> een Get functie krijgt, genaamd <code class="highlighter-rouge">GetNaam</code>. Dit is een heel simpele functie, die gewoon de waarde van <code class="highlighter-rouge">_naam</code> teruggeeft.</p>
+
+<pre class="prettyprint linenums lang lang-JS">
+class Leerling {
+	constructor(naamLeerling, leeftijdLeerling) {
+		this._naam = "";	
+		this._leeftijd = 0;
+	}
+
+	function GetNaam() {
+		return this._naam;
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-PHP">
+class Leerling {	
+	private $_naam = "";
+	private $_leeftijd = 0;
+
+	function GetNaam() {
+		return $this-&gt;_naam;
+	}
+}
+</pre>
+<pre class="prettyprint linenums lang lang-CS">
+class Leerling {	
+	string naam = "";
+	int _leeftijd = 0;
+
+	public void GetNaam() {
+		return this._naam;
+	}
+}
+</pre>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/programmeren/datastructuren/#access-modifiers"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/cursus/edit/application-development/_courses/programmeren/datastructuren/access-modifiers.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#voorbeeld">Voorbeeld</a></li>
+  <li><a href="#field-en-method-access">Field en Method access</a>
+    <ul>
+      <li><a href="#private-protected-en-public">Private, Protected en Public</a></li>
+      <li><a href="#set-functie-semantische-regels-toepassen">Set functie: semantische regels toepassen</a></li>
+      <li><a href="#get-functie-private-fields-opvragen">Get functie: private fields opvragen</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+</html>
