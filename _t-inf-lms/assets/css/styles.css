@@ -197,7 +197,7 @@ nav#mainNavigation > .dropdownButton > .dropdown > .courseNav > a { display: blo
 
 .doelstellingResultaten .doelstellingResultaat > .progress > .progressbar { display: inline-block; width: 80%; }
 
-.doelstellingResultaten .doelstellingResultaat > .progress > .material-icons { display: inline-block; width: 15%; vertical-align: top; }
+.doelstellingResultaten .doelstellingResultaat > .progress > .material-icons { width: 15%; vertical-align: top; float: right; }
 
 .doelstellingResultaten .doelstellingResultaat > ul > li { display: inline-block; width: 20%; text-align: center; }
 
