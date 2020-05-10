@@ -32,8 +32,15 @@
     text-decoration: underline;
 }
 
+#openNavButton {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
 #studentNavigation:target {
     display: block;
+    position: relative;
 }
 
 
@@ -43,7 +50,7 @@
         display: block;
     }
 
-    .openNavigation {
+    #openNavButton {
         display: none;
     }
 }
