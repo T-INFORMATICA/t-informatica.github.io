@@ -191,7 +191,7 @@
     </div>
   </span>
   <!-- PROFILE DROPDOWN -->
-  <a class="material-icons profileButton">person</a>
+  <a href="/_t-inf-lms/" class="material-icons profileButton">person</a>
   <!-- SEARCH BUTTON -->
   <span  class="searchButton" id="searchButton">
     <a href="#searchButton" class="material-icons">search</a>
