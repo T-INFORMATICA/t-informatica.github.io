@@ -283,8 +283,14 @@
                                     "definition": "De manier waarop twee klassen met elkaar zijn verbonden."
                                 }
                             ]
-                        },
+                        }
                                 
+                    ]
+                },
+                
+                {
+                    "name": "Software Ontwikkeling",
+                    "chapters": [
                         {
                             "name": "Domeinmodel",
                             "definitions": [

@@ -74,7 +74,13 @@
             
             <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
             
-            <a href="/_t-inf-lms/courses/programmeren/datastructuren/domeinmodel.html">Domeinmodel</a>
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/software-ontwikkeling/">Software Ontwikkeling</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/software-ontwikkeling/domeinmodel.html">Domeinmodel</a>
             
           </div>
           
