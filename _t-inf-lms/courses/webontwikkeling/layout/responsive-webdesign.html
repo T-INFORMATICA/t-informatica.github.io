@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Uitbreiding</title>
+    <title>Responsive Webdesign</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
 
@@ -379,25 +379,27 @@
 
     <section id="chapterContent">
         
-        <h1>Css grid uitbreiding</h1>
+        <h1>Responsive webdesign</h1>
 
         <div id="chapterTags">
             
-                <a href="#" class="tag">instructie</a>
+                <a href="#" class="tag">media query</a>
             
-                <a href="#" class="tag">commentaar</a>
+                <a href="#" class="tag">viewport</a>
+            
+                <a href="#" class="tag">mobile first</a>
             
         </div>
 
-        <h1 id="2-responsive-webdesign">2 RESPONSIVE WEBDESIGN</h1>
+        <h1 id="responsive-webdesign">Responsive Webdesign</h1>
 
-<h2 id="21-wat-is-responsive-web-design">2.1 Wat is Responsive Web Design?</h2>
+<h2 id="wat-is-responsive-web-design">Wat is Responsive Web Design?</h2>
 
 <p>Responsive Web Design is het schrijven van HTML en CSS code, die ervoor zorgt dat een website zich aanpast aan het apparaat waarop de website wordt bekeken.</p>
 
-<p>Responsive Web Design gebruikt **enkel **HTML en CSS.</p>
+<p>Responsive Web Design gebruikt <strong>enkel</strong> HTML en CSS.</p>
 
-<h2 id="22-ontwerpen-met-de-gebruiker-in-gedachten">2.2 Ontwerpen met de gebruiker in gedachten</h2>
+<h2 id="ontwerpen-met-de-gebruiker-in-gedachten">Ontwerpen met de gebruiker in gedachten</h2>
 
 <p>Websites kunnen bekeken worden op veel verschillende apparaten: computers, tables, smartphones, …</p>
 
@@ -411,15 +413,15 @@
 
 <p><strong>Belangrijk!</strong> Bij het ontwikkelen van een Responsive Website ontwikkel je steeds <strong>mobile first</strong>. Mobile first wilt zeggen dat je je website eerst laat werken voor kleine apparaten (smartphones) en daarna CSS regels toevoegt om de website ook toonbaar te maken voor grotere schermen.</p>
 
-<h2 id="23-viewport">2.3 Viewport</h2>
+<h2 id="viewport">Viewport</h2>
 
 <p>Het zichtbare deel van een website in de browser wordt de <strong>viewport</strong> genoemd.</p>
 
+<p>Op basis van deze viewport kan de browser bepalen hoe groot het scherm is waarop de website wordt weergegeven. Om ervoor te zorgen dat de website deze informatie kan gebruiken, moet een <code class="highlighter-rouge">&amp;lt;**meta**&gt;</code> tag worden toegevoegd in het <code class="highlighter-rouge">&amp;lt;**head**&gt;</code>-element.</p>
+
 <p><img src="/_t-inf-lms/assets/img/layout-2.png" alt="" style="height: auto; max-width: 100%" /></p>
 
-<p>Op basis van deze viewport kan de browser bepalen hoe groot het scherm is waarop de website wordt weergegeven. Om ervoor te zorgen dat de website deze informatie kan gebruiken, moet een <code>&lt;<strong>meta</strong>&gt;</code> tag worden toegevoegd in het <code>&lt;<strong>head</strong>&gt;</code>-element.</p>
-
-<p>Een <code>&lt;<strong>meta</strong>&gt;</code> tag dient om extra informatie te geven over de website. In dit geval willen we informatie over de grootte en schaal van de website verkrijgen.</p>
+<p>Een <code class="highlighter-rouge">&amp;lt;**meta**&gt;</code> tag dient om extra informatie te geven over de website. In dit geval willen we informatie over de grootte en schaal van de website verkrijgen.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 </code></pre></div></div>
@@ -429,14 +431,14 @@ Dankzij het <code class="highlighter-rouge">name</code>-attribute weet de browse
 
 <p>Het <code class="highlighter-rouge">content</code>-attribute bepaald hoe de viewport zal worden weergegeven: in dit geval zal de breedte gelijk oplopen met de breedte van het apparaat, en wordt de initiele schaal van de website op 1.0 gezet (= 100%).</p>
 
-<h2 id="24-media-query">2.4 Media Query</h2>
+<h2 id="media-query">Media Query</h2>
 
 <p>Een Media Query is een blok CSS regels die enkel wordt uitgevoerd als een bepaalde voorwaarde waar is.</p>
 
 <p>In een Media Query kunnen CSS regels ook overschreven worden zodra de voorwaarde waar is.</p>
 
 <p>Bijvoorbeeld:  <br />
-Het <code>&lt;<strong>body</strong>&gt;</code> element krijgt een lichtgroene achtergrondkleur. Maar wanneer het browservenster kleiner is dan 500px, verandert de achtergrondkleur van het <code>&lt;<strong>body</strong>&gt;</code> element naar lichtblauw.</p>
+Het <code class="highlighter-rouge">&amp;lt;**body**&gt;</code> element krijgt een lichtgroene achtergrondkleur. Maar wanneer het browservenster kleiner is dan 500px, verandert de achtergrondkleur van het <code class="highlighter-rouge">&amp;lt;**body**&gt;</code> element naar lichtblauw.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body {
     background-color: lightgreen;
@@ -470,12 +472,12 @@ Het <code>&lt;<strong>body</strong>&gt;</code> element krijgt een lichtgroene ac
 <hr>
 <div id="toc">
 <ul>
-  <li><a href="#2-responsive-webdesign">2 RESPONSIVE WEBDESIGN</a>
+  <li><a href="#responsive-webdesign">Responsive Webdesign</a>
     <ul>
-      <li><a href="#21-wat-is-responsive-web-design">2.1 Wat is Responsive Web Design?</a></li>
-      <li><a href="#22-ontwerpen-met-de-gebruiker-in-gedachten">2.2 Ontwerpen met de gebruiker in gedachten</a></li>
-      <li><a href="#23-viewport">2.3 Viewport</a></li>
-      <li><a href="#24-media-query">2.4 Media Query</a></li>
+      <li><a href="#wat-is-responsive-web-design">Wat is Responsive Web Design?</a></li>
+      <li><a href="#ontwerpen-met-de-gebruiker-in-gedachten">Ontwerpen met de gebruiker in gedachten</a></li>
+      <li><a href="#viewport">Viewport</a></li>
+      <li><a href="#media-query">Media Query</a></li>
     </ul>
   </li>
 </ul>
