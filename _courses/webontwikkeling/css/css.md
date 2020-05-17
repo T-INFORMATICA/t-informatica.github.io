@@ -56,7 +56,7 @@ Stel dat alle &lt;p> elementen op dezelfde manier moeten opgemaakt worden:
 De selector moet dan p (de naam van het element) selecteren.  \
 De declaratie bestaat dan uit 2 opmaakregels:
 
-<pre>
+<pre class="prettyprint">
 p
 {
 	text-align: center;
@@ -80,7 +80,7 @@ Onderstaande CSS code doet het volgende:
 *   Elke h1 koptekst wordt onderlijnd en krijgt een rode achtergrondkleur.
 *   Elke hyperlink wordt vet getoond en krijgt een oranje tekstkleur.
 
-<pre>
+<pre class="prettyprint">
 p
 {
 	text-align: center;
@@ -112,7 +112,7 @@ Nu is het niet mogelijk om zomaar CSS te beginnen typen in een HTML document. He
 Om aan te duiden waar CSS code wordt geschreven bestaat het &lt;style> element. Alle inhoud van het &lt;style> element wordt door de browser gelezen als CSS code.
 
 
-<pre>
+<pre class="prettyprint">
 &lt;!DOCTYPE html>
 &lt;html>
 	&lt;head>
@@ -147,7 +147,7 @@ Een externe stylesheet is een manier om CSS code in een apart bestand te plaatse
 
 Elke pagina die de stijlregels in dit bestand gebruikt moet een verwijzing naar de externe stylesheet bevatten in het <code>&lt;<strong>link</strong>></code>-element. Het <code>&lt;<strong>link</strong>></code>-element wordt geplaatst binnen in het element &lt;head>:
 
-<pre>
+<pre class="prettyprint">
 &lt;head>
 &lt;link rel="stylesheet" type="text/css" href="mystyle.css">
 &lt;/head>
@@ -157,7 +157,7 @@ Elke pagina die de stijlregels in dit bestand gebruikt moet een verwijzing naar 
 Een externe stylesheet kan in elke teksteditor worden geschreven. Het bestand mag geen HTML-tags bevatten. Het stylesheet bestand moet worden opgeslagen met de extensie .css. Hier is hoe het bestand 'mystyle.css' er uit ziet:
 
 
-<pre>
+<pre class="prettyprint">
 body {
     background-color: lightblue;
 }

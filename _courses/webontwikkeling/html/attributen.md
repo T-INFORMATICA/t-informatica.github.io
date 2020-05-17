@@ -24,7 +24,7 @@ Een attribute geeft extra informatie aan een element. Bijvoorbeeld:
 *   het href attribute duidt aan waar je naartoe surft als je op een link klikt.
 *   Het target attribute duidt aan of je de link opent op hetzelfde tabblad, of een nieuw tabblad.
 
-<pre>
+<pre class="prettyprint">
 &lt;a>						 duidt een link aan die niets doet
 dit is een link
 &lt;/a>

@@ -35,7 +35,7 @@ Een tag is een **codewoord tussen een kleiner dan (&lt;) en groter dan (>) teken
 HTML heeft een lijst[^2] met codewoorden die je kan gebruiken (je mag codewoorden niet verzinnen). Afhankelijk van welk codewoord je gebruikt, wordt de inhoud aangeduid als iets anders.
 
 
-<pre>
+<pre class="prettyprint">
 &lt;img>		→ duidt een afbeelding (image) aan
 &lt;video>		→ duidt een video aan
 &lt;h1>		→ duidt een koptekst (heading niveau 1) aan
@@ -49,7 +49,7 @@ Er bestaan 2 soorten tags:
 1. Openingstags:		<code>&lt;<strong>h1</strong>>		</code>Duidt aan waar de inhoud (koptekst) begint
 2. Sluitingstags:		<code>&lt;/<strong>h1</strong>>		</code>Duidt aan waar de inhoud (koptekst) eindigt
 
-<pre>
+<pre class="prettyprint">
 &lt;p>dit is een paragraaf&lt;/p> en dit niet meer	→ duidt een paragraaf aan
 &lt;a>dit is een link&lt;/a> en dit niet meer		→ duidt een link aan
 &lt;h1>dit is een koptekst&lt;/h1> en dit niet meer	→ duidt een koptekst aan
@@ -63,7 +63,7 @@ Er bestaan 2 soorten tags:
 Een **HTML-element** is een blok code, bestaande uit een **openingstag**, **inhoud** en **sluitingstag**.
 
 
-<pre>
+<pre class="prettyprint">
 &lt;p> Dit is een paragraaf element. &lt;/p>
 &lt;h1> Dit is een koptekst element. &lt;/h1>
 </pre>
@@ -84,7 +84,7 @@ In HTML kan inhoud niet bestaan zonder dit tussen een openingstag en sluitingsta
 Je kan hier zelf geen inhoud meer aan toevoegen, want deze elementen doen dit zelf al. Deze speciale elementen bestaan dus <strong>enkel uit een openingstag</strong>, zonder inhoud of sluitingstag.
 
 
-<pre>
+<pre class="prettyprint">
 &lt;p>
 	Dit is een gewoon element.
 &lt;/p>
@@ -101,7 +101,7 @@ Het **nesten** van elementen wilt zeggen dat je **een element insluit in een and
 Bijvoorbeeld: Hieronder is het h1-element (groen) ingesloten door het body-element (rood):
 
 
-<pre>
+<pre class="prettyprint">
 &lt;body>
 	&lt;h1>
 		Dit element is genest in het body element.
@@ -114,7 +114,7 @@ Bijvoorbeeld: Hieronder is het h1-element (groen) ingesloten door het body-eleme
 Of een iets uitgebreider voorbeeld:
 
 
-<pre>
+<pre class="prettyprint">
 &lt;html>
 	&lt;body>
 		&lt;h1>
@@ -147,7 +147,7 @@ Hoewel indentatie in HTML niet verplicht is, helpt het om de leesbaarheid van je
 In het volgende voorbeeld staat het aantal indentaties aangeduid door zwarte lijnen voor elke lijn code.
 
 
-<pre>
+<pre class="prettyprint">
 &lt;p>
 ---→Dit is tekst in de paragraaf.
 	
