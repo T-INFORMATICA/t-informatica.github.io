@@ -103,14 +103,21 @@
     - name: "Layout"
       link: "/courses/webontwikkeling/layout"
       chapters:
-        - name: Inleiding
+        - name: Responsive Webdesign
+          link: "/courses/webontwikkeling/layout/responsive-webdesign.html"
+          doel: "responsive websites"
+        - name: CSS Grid
           link: "/courses/webontwikkeling/layout/css-grid.html"
+          doel: "layout"
         - name: Grid Basisbegrippen
           link: "/courses/webontwikkeling/layout/grid-basisbegrippen.html"
+          doel: "layout"
         - name: Grid Implementatie
           link: "/courses/webontwikkeling/layout/grid-implementatie.html"
+          doel: "layout"
         - name: Uitbreiding
           link: "/courses/webontwikkeling/layout/uitbreiding.html"
+          doel: "layout"
 #    - name: "Statische Websites"
 #      link: "/courses/webontwikkeling/statische-websites.html"
 #      chapters:

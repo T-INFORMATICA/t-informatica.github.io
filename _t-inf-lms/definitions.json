@@ -619,6 +619,12 @@
                     "name": "Layout",
                     "chapters": [
                         {
+                            "name": "Responsive Webdesign",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
                             "name": "CSS Grid Inleiding",
                             "definitions": [
                             ]
