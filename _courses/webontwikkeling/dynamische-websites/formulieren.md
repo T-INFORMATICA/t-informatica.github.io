@@ -1,8 +1,9 @@
 ---
-title: SQL Database Connection
+title: Formulieren
 tags: 
- - instructie
- - commentaar
+ - POST
+ - form
+ - input
 description:
 ---
 
