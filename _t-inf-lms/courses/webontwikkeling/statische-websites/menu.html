@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instructies</title>
+    <title>Menu</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
 
@@ -371,95 +371,152 @@
 
     <section id="chapterContent">
         
-        <h1>Instructies</h1>
+        <h1>Menu</h1>
 
         <div id="chapterTags">
             
-                <a href="#" class="tag">instructie</a>
+                <a href="#" class="tag">verticaal menu</a>
             
-                <a href="#" class="tag">commentaar</a>
+                <a href="#" class="tag">horizontaal menu</a>
             
         </div>
 
-        <h1 id="instructies">INSTRUCTIES</h1>
+        <h1 id="menu">Menu</h1>
 
-<h2 id="instructie">Instructie</h2>
+<p>Een menu is niet meer dan een lijst van hyperlinks, zoals in het voorbeeld hieronder.</p>
 
-<p>Programmeren is het geven van instructies (bevelen) aan een computer. Als je een instructie geeft aan je computer, doe je 1 van volgende zaken:</p>
-<ul>
-  <li>Het opslaan van data (het getal 7 bewaren in een variabele)</li>
-  <li>Het aanpassen van data (een nieuwe waarde opslaan in de variabele)</li>
-</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul class="menu"&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;menu link 1&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;menu link 2&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;menu link 3&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;menu link 4&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
 
-<p>Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).</p>
+<p><br />
+Door de juiste opmaak toe te voegen aan deze elementen kan deze lijst zo worden aangepast dat deze eruit ziet als een menu.</p>
 
-<pre class="prettyprint linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<p>Hier maakt het vooral uit of de list items <strong>block</strong> of <strong>inline</strong> elementen zijn. Door dit gedrag van een list item aan te passen, kunnen elementen naast elkaar of boven elkaar geplaatst worden, kan er padding of margin toegevoegd worden, …</p>
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+<h2 id="verticaal-menu">Verticaal menu</h2>
 
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<p>Een verticaal menu is een menu waarbij de items in het menu onder elkaar (verticaal) worden geplaatst. De volgende stappen zijn nodig om van een lijst een verticaal menu te maken:</p>
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+<ol>
+  <li>Verwijder de bullets van de lijst.</li>
+  <li>Verwijder de margin en padding van de lijst.</li>
+  <li>Geef de lijst een breedte.</li>
+  <li>Geef de <strong><code class="highlighter-rouge">a</code></strong> elementen weer als block-elementen.</li>
+  <li>Geef de <strong><code class="highlighter-rouge">a</code></strong> elementen een hoogte en breedte van 100%, zodat ze hun parent volledig opvullen.</li>
+</ol>
 
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+.menu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+</code></pre></div></div>
 
-int getal = 5 + 2; // wel een instructie
-</pre>
+<p><br />
+Dit is een basis verticaal menu. Hierop kan nu gemakkelijk worden uitgebreid met extra stijlregels. De onderstaande code werkt het voorbeeld hiernaast (rechts) uit.</p>
 
-<p>Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.</p>
+<p>HTML:</p>
 
-<p>Het verschil tussen iemand die kan programmeren en een programmeur is dat een programmeur zijn code kan organiseren in blokken code, en die blokken zo gebruiken dat er een duidelijk gestructureerd programma ontstaat.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul class="menu styledMenu"&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;Home&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;About Us&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;Blog&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href="#"&gt;Contact&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
 
-<h2 id="32-commentaar">3.2 Commentaar</h2>
+<p>CSS:</p>
 
-<p>Soms gebeurt het dat code niet gemakkelijk leesbaar is, hoe hard je ook je best doet om duidelijke namen te gebruiken. In dat geval is het handig om gewone, door mensen leesbare tekst toe te voegen aan code die enkel bedoeld is voor de programmeur, maar niet voor de computer.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
 
-<p>Dit soort tekst wordt commentaar genoemd. Commentaar is onzichtbaar voor de computer.</p>
+.menu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 
-<p>In de voorbeelden hierboven (en in andere hoofdstukken) werd er reeds gebruik gemaakt van commentaar. 
-Je kan commentaar op 2 manieren toevoegen:</p>
-<ul>
-  <li>Commentaar die 1 lijn tekst gebruikt.</li>
-  <li>Commentaar die meerdere lijnen tekst gebruiken.</li>
-</ul>
+.styledMenu {
+	background-color: #3A3A3A;
+	font-family: sans-serif;
+}
 
-<h3 id="321-commentaar-op-één-lijn">3.2.1 Commentaar op één lijn</h3>
-<p>Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.</p>
+.styledMenu li {
+	padding-top: 2px;
+}
 
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt door de computer genegeerd
-</pre>
+.styledMenu li:first-of-type {
+	padding-top: 0;
+}
 
-<h3 id="322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</h3>
-<p>Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:</p>
-<ul>
-  <li>Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).</li>
-  <li>Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).</li>
-</ul>
+.styledMenu a {
+	padding: 6px;
+	color: white;
+	text-decoration: none;
+	background-color: #3F3F3F;
+	font-size: 14px;
 
-<p>Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.</p>
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt
-// door de computer genegeerd
+}
 
+.styledMenu a:hover {
+	background-color: #D70000;
+}
+</code></pre></div></div>
 
-/* Heel deze zin
-wordt genegeerd
-door de computer.
-Je kan niet programmeren
-totdat je het ster-slash einde
-Typt */
-</pre>
+<h2 id="horizontaal-menu">Horizontaal menu</h2>
+
+<p>Een horizontaal menu werkt op dezelfde manier als een verticaal menu, met één verschil: De <strong><code class="highlighter-rouge">li</code></strong> elementen zijn niet langer block elementen. De code is dus hetzelfde als die van het horizontale menu, met daarin één uitbreiding.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+
+.menu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.menu li {
+	display: inline-block;
+}
+</code></pre></div></div>
+
 
 
     </section>
@@ -481,15 +538,10 @@ Typt */
 <hr>
 <div id="toc">
 <ul>
-  <li><a href="#instructies">INSTRUCTIES</a>
+  <li><a href="#menu">Menu</a>
     <ul>
-      <li><a href="#instructie">Instructie</a></li>
-      <li><a href="#32-commentaar">3.2 Commentaar</a>
-        <ul>
-          <li><a href="#321-commentaar-op-één-lijn">3.2.1 Commentaar op één lijn</a></li>
-          <li><a href="#322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</a></li>
-        </ul>
-      </li>
+      <li><a href="#verticaal-menu">Verticaal menu</a></li>
+      <li><a href="#horizontaal-menu">Horizontaal menu</a></li>
     </ul>
   </li>
 </ul>

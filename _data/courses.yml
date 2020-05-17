@@ -119,20 +119,23 @@
           link: "/courses/webontwikkeling/layout/uitbreiding.html"
           doel: "layout"
 #    - name: "Statische Websites"
-#      link: "/courses/webontwikkeling/statische-websites.html"
+#      link: "/courses/webontwikkeling/statische-websites"
 #      chapters:
-#        - name: Inleiding
-#          link: "/courses/webontwikkeling/statische-websites/inleiding.html"
-#        - name: Responsive Websites
-#          link: "/courses/webontwikkeling/statische-websites/responsive-websites.html"
 #        - name: Icons
 #          link: "/courses/webontwikkeling/statische-websites/icons.html"
-#        - name: Popup
-#          link: "/courses/webontwikkeling/statische-websites/popup.html"
-#        - name: Modal Popup
-#          link: "/courses/webontwikkeling/statische-websites/modal-popup.html"
+#          doel: "opmaak"
 #        - name: Menu
 #          link: "/courses/webontwikkeling/statische-websites/menu.html"
+#          doel: "opmaak"
+#        - name: Popup
+#          link: "/courses/webontwikkeling/statische-websites/popup.html"
+#          doel: "opmaak"
+#        - name: Modal Popup
+#          link: "/courses/webontwikkeling/statische-websites/modal-popup.html"
+#          doel: "opmaak"
+#        - name: Responsive Menu
+#          link: "/courses/webontwikkeling/statische-websites/responsive-menu.html"
+#          doel: "responsive websites"
     - name: "Dynamische Websites"
       link: "/courses/webontwikkeling/dynamische-websites"
       chapters:

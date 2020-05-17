@@ -1,82 +1,164 @@
 ---
-title: Instructies
+title: Menu
 tags: 
- - instructie
- - commentaar
+ - verticaal menu
+ - horizontaal menu
 description:
 ---
 
 
-# INSTRUCTIES
+# Menu
 
-## Instructie
-
-Programmeren is het geven van instructies (bevelen) aan een computer. Als je een instructie geeft aan je computer, doe je 1 van volgende zaken:
- - Het opslaan van data (het getal 7 bewaren in een variabele)
- - Het aanpassen van data (een nieuwe waarde opslaan in de variabele)
-
-Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).
-
-<pre class="prettyprint linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-int getal = 5 + 2; // wel een instructie
-</pre>
-
-Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.
-
-Het verschil tussen iemand die kan programmeren en een programmeur is dat een programmeur zijn code kan organiseren in blokken code, en die blokken zo gebruiken dat er een duidelijk gestructureerd programma ontstaat.
-
-## 3.2 Commentaar
-
-Soms gebeurt het dat code niet gemakkelijk leesbaar is, hoe hard je ook je best doet om duidelijke namen te gebruiken. In dat geval is het handig om gewone, door mensen leesbare tekst toe te voegen aan code die enkel bedoeld is voor de programmeur, maar niet voor de computer. 
-
-Dit soort tekst wordt commentaar genoemd. Commentaar is onzichtbaar voor de computer.
-
-In de voorbeelden hierboven (en in andere hoofdstukken) werd er reeds gebruik gemaakt van commentaar. 
-Je kan commentaar op 2 manieren toevoegen:
- - Commentaar die 1 lijn tekst gebruikt.
- - Commentaar die meerdere lijnen tekst gebruiken.
- 
-### 3.2.1 Commentaar op één lijn
-Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.
-
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt door de computer genegeerd
-</pre>
-
-### 3.2.2 Commentaar op meerdere lijnen
-Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:
- - Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).
- - Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).
-
-Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt
-// door de computer genegeerd
+Een menu is niet meer dan een lijst van hyperlinks, zoals in het voorbeeld hieronder.
 
 
-/* Heel deze zin
-wordt genegeerd
-door de computer.
-Je kan niet programmeren
-totdat je het ster-slash einde
-Typt */
-</pre>
+```
+<ul class="menu">
+	<li>
+		<a href="#">menu link 1</a>
+	</li>
+	<li>
+		<a href="#">menu link 2</a>
+	</li>
+	<li>
+		<a href="#">menu link 3</a>
+	</li>
+	<li>
+		<a href="#">menu link 4</a>
+	</li>
+</ul>
+```
+
+
+ \
+Door de juiste opmaak toe te voegen aan deze elementen kan deze lijst zo worden aangepast dat deze eruit ziet als een menu.
+
+Hier maakt het vooral uit of de list items **block** of **inline** elementen zijn. Door dit gedrag van een list item aan te passen, kunnen elementen naast elkaar of boven elkaar geplaatst worden, kan er padding of margin toegevoegd worden, ...
+
+
+## Verticaal menu
+
+Een verticaal menu is een menu waarbij de items in het menu onder elkaar (verticaal) worden geplaatst. De volgende stappen zijn nodig om van een lijst een verticaal menu te maken:
+
+
+
+1. Verwijder de bullets van de lijst.
+2. Verwijder de margin en padding van de lijst.
+3. Geef de lijst een breedte.
+4. Geef de **`a`** elementen weer als block-elementen.
+5. Geef de **`a`** elementen een hoogte en breedte van 100%, zodat ze hun parent volledig opvullen.
+
+```
+.menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+
+.menu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+```
+
+
+
+ \
+Dit is een basis verticaal menu. Hierop kan nu gemakkelijk worden uitgebreid met extra stijlregels. De onderstaande code werkt het voorbeeld hiernaast (rechts) uit.
+
+
+HTML:
+
+
+```
+<ul class="menu styledMenu">
+	<li>
+		<a href="#">Home</a>
+	</li>
+	<li>
+		<a href="#">About Us</a>
+	</li>
+	<li>
+		<a href="#">Blog</a>
+	</li>
+	<li>
+		<a href="#">Contact</a>
+	</li>
+</ul>
+```
+
+
+
+CSS:
+
+
+```
+.menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+
+.menu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.styledMenu {
+	background-color: #3A3A3A;
+	font-family: sans-serif;
+}
+
+.styledMenu li {
+	padding-top: 2px;
+}
+
+.styledMenu li:first-of-type {
+	padding-top: 0;
+}
+
+.styledMenu a {
+	padding: 6px;
+	color: white;
+	text-decoration: none;
+	background-color: #3F3F3F;
+	font-size: 14px;
+
+}
+
+.styledMenu a:hover {
+	background-color: #D70000;
+}
+```
+
+
+
+## Horizontaal menu
+
+Een horizontaal menu werkt op dezelfde manier als een verticaal menu, met één verschil: De **`li`** elementen zijn niet langer block elementen. De code is dus hetzelfde als die van het horizontale menu, met daarin één uitbreiding.
+
+
+```
+.menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+
+.menu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.menu li {
+	display: inline-block;
+}
+```
+
+

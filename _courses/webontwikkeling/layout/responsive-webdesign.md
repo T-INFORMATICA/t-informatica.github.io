@@ -37,12 +37,12 @@ We spreken over Responsive Web Design wanneer je CSS en HTML gebruikt om inhoud 
 
 Het zichtbare deel van een website in de browser wordt de **viewport** genoemd. 
 
-Op basis van deze viewport kan de browser bepalen hoe groot het scherm is waarop de website wordt weergegeven. Om ervoor te zorgen dat de website deze informatie kan gebruiken, moet een `&lt;**meta**>` tag worden toegevoegd in het `&lt;**head**>`-element.
+Op basis van deze viewport kan de browser bepalen hoe groot het scherm is waarop de website wordt weergegeven. Om ervoor te zorgen dat de website deze informatie kan gebruiken, moet een **`<meta>`** tag worden toegevoegd in het **`<head>`**-element.
 
 
 <img src="{{ site.baseurl }}/assets/img/layout-2.png" alt="" style="height: auto; max-width: 100%">
 
-Een `&lt;**meta**>` tag dient om extra informatie te geven over de website. In dit geval willen we informatie over de grootte en schaal van de website verkrijgen.
+Een **`<meta>`** tag dient om extra informatie te geven over de website. In dit geval willen we informatie over de grootte en schaal van de website verkrijgen.
 
 
 ```
@@ -63,7 +63,7 @@ Een Media Query is een blok CSS regels die enkel wordt uitgevoerd als een bepaal
 In een Media Query kunnen CSS regels ook overschreven worden zodra de voorwaarde waar is. 
 
 Bijvoorbeeld:  \
-Het `&lt;**body**>` element krijgt een lichtgroene achtergrondkleur. Maar wanneer het browservenster kleiner is dan 500px, verandert de achtergrondkleur van het `&lt;**body**>` element naar lichtblauw.
+Het **`<body>`** element krijgt een lichtgroene achtergrondkleur. Maar wanneer het browservenster kleiner is dan 500px, verandert de achtergrondkleur van het **`<body>`** element naar lichtblauw.
 
 
 ```

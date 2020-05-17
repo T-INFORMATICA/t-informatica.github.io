@@ -1,82 +1,109 @@
 ---
-title: Instructies
+title: Popup
 tags: 
- - instructie
- - commentaar
+ - popup
+ - target
 description:
 ---
 
+# Popup
 
-# INSTRUCTIES
+Dit hoofdstuk gaat over elementen die verschijnen en verdwijnen. Dat is immers wat een popup is: een element dat verschijnt of verdwijnt wanneer de gebruiker iets doet.
 
-## Instructie
+De meeste bronnen op het internet maken hiervoor handig gebruik van Javascript. Deze Javascript-methodes om popups te maken zijn zeker niet fout, en hebben hun eigen voordelen en nadelen waar in deze cursus niet op wordt ingegaan.
 
-Programmeren is het geven van instructies (bevelen) aan een computer. Als je een instructie geeft aan je computer, doe je 1 van volgende zaken:
- - Het opslaan van data (het getal 7 bewaren in een variabele)
- - Het aanpassen van data (een nieuwe waarde opslaan in de variabele)
+In deze cursus wordt op zoek gegaan naar oplossingen die enkel en alleen gebruik maken van HTML en CSS. Ook voor een popup kunnen de mogelijkheden van HTML en CSS worden gebruikt om een simpele, maar effectieve popup in elkaar te steken.
 
-Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).
-
-<pre class="prettyprint linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-int getal = 5 + 2; // wel een instructie
-</pre>
-
-Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.
-
-Het verschil tussen iemand die kan programmeren en een programmeur is dat een programmeur zijn code kan organiseren in blokken code, en die blokken zo gebruiken dat er een duidelijk gestructureerd programma ontstaat.
-
-## 3.2 Commentaar
-
-Soms gebeurt het dat code niet gemakkelijk leesbaar is, hoe hard je ook je best doet om duidelijke namen te gebruiken. In dat geval is het handig om gewone, door mensen leesbare tekst toe te voegen aan code die enkel bedoeld is voor de programmeur, maar niet voor de computer. 
-
-Dit soort tekst wordt commentaar genoemd. Commentaar is onzichtbaar voor de computer.
-
-In de voorbeelden hierboven (en in andere hoofdstukken) werd er reeds gebruik gemaakt van commentaar. 
-Je kan commentaar op 2 manieren toevoegen:
- - Commentaar die 1 lijn tekst gebruikt.
- - Commentaar die meerdere lijnen tekst gebruiken.
- 
-### 3.2.1 Commentaar op één lijn
-Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.
-
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt door de computer genegeerd
-</pre>
-
-### 3.2.2 Commentaar op meerdere lijnen
-Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:
- - Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).
- - Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).
-
-Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt
-// door de computer genegeerd
+Hiervoor worden 2 technieken van HTML/CSS gebruikt: bookmarks in HTML en de :target CSS selector.
 
 
-/* Heel deze zin
-wordt genegeerd
-door de computer.
-Je kan niet programmeren
-totdat je het ster-slash einde
-Typt */
-</pre>
+## Bookmarks
+
+Een HTML hyperlink (een **`<a>`**-element) dient om te verwijzen naar een andere bron. Meestal doelt men hiermee op een ander html-document. Wanneer je bijvoorbeeld klikt in een menu op de “Portfolio” link, wordt je meestal naar een andere pagina (bijv. portfolio.html) geleidt.
+
+Dit is echter géén vereiste. Een hyperlink kan evengoed verwijzen naar een onderdeel of element op _dezelfde_ pagina! Wanneer een hyperlink verwijst naar een element op dezelfde pagina, wordt dat ook een **bookmark** genoemd. Je hebt hiervoor 2 zaken nodig:
+
+
+
+1. Een element met een unieke ID
+2. Een hyperlink om naar dat element te verwijzen
+
+```
+<!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --> 
+<a href="#mijnElement">Ga naar mijnElement!</a>
+
+<!-- andere code --> 
+
+<div id="mijnElement">
+	<!-- hier komt de inhoud van mijnElement -->
+</div>
+```
+
+
+Door met de hyperlink naar de juiste ID te verwijzen, zal de pagina scrollen tot de browser dat element tegenkomt.
+
+
+## CSS selector :target
+
+Wanneer een gebruiker klikt op een bookmark, wordt het element waar de bookmark naar verwijst aangeduid door HTML als het ‘doel’ (engels: _target_) van de gebruiker. Het is deze plaats op de pagina waar de gebruiker naartoe wilt. 
+
+In CSS kan dat doel eigen stijlregels krijgen met de :target selector.
+
+
+```
+:target {
+	background-color: red;
+}
+```
+
+
+ \
+In dit geval zal elk element dat wordt aangeduid door de gebruiker een rode achtergrondkleur krijgen. Klikt de gebruiker dus op de link in het vorige voorbeeld, dan zal de div `#mijnElement` rood oplichten.
+
+
+## 4.3 Een popup maken
+
+Om een popup te maken moet het voorbeeld hierboven slechts een beetje worden uitgebreid. 
+
+In dit voorbeeld stelt het element `#mijnElement` de popup voor. Daarom moet `#mijnElement` standaard _on_zichtbaar zijn bij het laden van de pagina: een popup is immers onzichtbaar zolang die niet geopend werd door de gebruiker.
+
+Het is pas wanneer de gebruiker een actie onderneemt om de popup te openen (zoals klikken op de link in dit voorbeeld) dat de popup zichbaar mag worden. 
+
+
+
+*   #mijnElement wordt onzichtbaar gemaakt met de stijlregel **`display: none;`**
+*   Wanneer #mijnElement wordt aangeduid als target, wordt het element zichtbaar gemaakt met de stijlregel **`display: block;`**
+
+
+## CSS:
+
+
+```
+#mijnElement {
+	display: none;
+}
+#mijnElement:target {
+	display: block;
+}
+```
+
+
+
+## HTML:
+
+
+```
+<!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --> 
+<a href="#mijnElement">Ga naar mijnElement!</a>
+
+<!-- andere code --> 
+
+<div id="mijnElement">
+	<!-- hier komt de inhoud van mijnElement -->
+</div>
+```
+
+
+ \
+Wanneer nu op de link wordt geklikt, wordt `#mijnElement` zichtbaar gemaakt.
+

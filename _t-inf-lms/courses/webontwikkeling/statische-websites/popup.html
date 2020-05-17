@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instructies</title>
+    <title>Popup</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
 
@@ -371,95 +371,101 @@
 
     <section id="chapterContent">
         
-        <h1>Instructies</h1>
+        <h1>Popup</h1>
 
         <div id="chapterTags">
             
-                <a href="#" class="tag">instructie</a>
+                <a href="#" class="tag">popup</a>
             
-                <a href="#" class="tag">commentaar</a>
+                <a href="#" class="tag">target</a>
             
         </div>
 
-        <h1 id="instructies">INSTRUCTIES</h1>
+        <h1 id="popup">Popup</h1>
 
-<h2 id="instructie">Instructie</h2>
+<p>Dit hoofdstuk gaat over elementen die verschijnen en verdwijnen. Dat is immers wat een popup is: een element dat verschijnt of verdwijnt wanneer de gebruiker iets doet.</p>
 
-<p>Programmeren is het geven van instructies (bevelen) aan een computer. Als je een instructie geeft aan je computer, doe je 1 van volgende zaken:</p>
+<p>De meeste bronnen op het internet maken hiervoor handig gebruik van Javascript. Deze Javascript-methodes om popups te maken zijn zeker niet fout, en hebben hun eigen voordelen en nadelen waar in deze cursus niet op wordt ingegaan.</p>
+
+<p>In deze cursus wordt op zoek gegaan naar oplossingen die enkel en alleen gebruik maken van HTML en CSS. Ook voor een popup kunnen de mogelijkheden van HTML en CSS worden gebruikt om een simpele, maar effectieve popup in elkaar te steken.</p>
+
+<p>Hiervoor worden 2 technieken van HTML/CSS gebruikt: bookmarks in HTML en de :target CSS selector.</p>
+
+<h2 id="bookmarks">Bookmarks</h2>
+
+<p>Een HTML hyperlink (een <strong><code class="highlighter-rouge">&lt;a&gt;</code></strong>-element) dient om te verwijzen naar een andere bron. Meestal doelt men hiermee op een ander html-document. Wanneer je bijvoorbeeld klikt in een menu op de “Portfolio” link, wordt je meestal naar een andere pagina (bijv. portfolio.html) geleidt.</p>
+
+<p>Dit is echter géén vereiste. Een hyperlink kan evengoed verwijzen naar een onderdeel of element op <em>dezelfde</em> pagina! Wanneer een hyperlink verwijst naar een element op dezelfde pagina, wordt dat ook een <strong>bookmark</strong> genoemd. Je hebt hiervoor 2 zaken nodig:</p>
+
+<ol>
+  <li>Een element met een unieke ID</li>
+  <li>Een hyperlink om naar dat element te verwijzen</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --&gt; 
+&lt;a href="#mijnElement"&gt;Ga naar mijnElement!&lt;/a&gt;
+
+&lt;!-- andere code --&gt; 
+
+&lt;div id="mijnElement"&gt;
+	&lt;!-- hier komt de inhoud van mijnElement --&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>Door met de hyperlink naar de juiste ID te verwijzen, zal de pagina scrollen tot de browser dat element tegenkomt.</p>
+
+<h2 id="css-selector-target">CSS selector :target</h2>
+
+<p>Wanneer een gebruiker klikt op een bookmark, wordt het element waar de bookmark naar verwijst aangeduid door HTML als het ‘doel’ (engels: <em>target</em>) van de gebruiker. Het is deze plaats op de pagina waar de gebruiker naartoe wilt.</p>
+
+<p>In CSS kan dat doel eigen stijlregels krijgen met de :target selector.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:target {
+	background-color: red;
+}
+</code></pre></div></div>
+
+<p><br />
+In dit geval zal elk element dat wordt aangeduid door de gebruiker een rode achtergrondkleur krijgen. Klikt de gebruiker dus op de link in het vorige voorbeeld, dan zal de div <code class="highlighter-rouge">#mijnElement</code> rood oplichten.</p>
+
+<h2 id="43-een-popup-maken">4.3 Een popup maken</h2>
+
+<p>Om een popup te maken moet het voorbeeld hierboven slechts een beetje worden uitgebreid.</p>
+
+<p>In dit voorbeeld stelt het element <code class="highlighter-rouge">#mijnElement</code> de popup voor. Daarom moet <code class="highlighter-rouge">#mijnElement</code> standaard _on_zichtbaar zijn bij het laden van de pagina: een popup is immers onzichtbaar zolang die niet geopend werd door de gebruiker.</p>
+
+<p>Het is pas wanneer de gebruiker een actie onderneemt om de popup te openen (zoals klikken op de link in dit voorbeeld) dat de popup zichbaar mag worden.</p>
+
 <ul>
-  <li>Het opslaan van data (het getal 7 bewaren in een variabele)</li>
-  <li>Het aanpassen van data (een nieuwe waarde opslaan in de variabele)</li>
+  <li>#mijnElement wordt onzichtbaar gemaakt met de stijlregel <strong><code class="highlighter-rouge">display: none;</code></strong></li>
+  <li>Wanneer #mijnElement wordt aangeduid als target, wordt het element zichtbaar gemaakt met de stijlregel <strong><code class="highlighter-rouge">display: block;</code></strong></li>
 </ul>
 
-<p>Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).</p>
+<h2 id="css">CSS:</h2>
 
-<pre class="prettyprint linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#mijnElement {
+	display: none;
+}
+#mijnElement:target {
+	display: block;
+}
+</code></pre></div></div>
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+<h2 id="html">HTML:</h2>
 
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --&gt; 
+&lt;a href="#mijnElement"&gt;Ga naar mijnElement!&lt;/a&gt;
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+&lt;!-- andere code --&gt; 
 
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+&lt;div id="mijnElement"&gt;
+	&lt;!-- hier komt de inhoud van mijnElement --&gt;
+&lt;/div&gt;
+</code></pre></div></div>
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+<p><br />
+Wanneer nu op de link wordt geklikt, wordt <code class="highlighter-rouge">#mijnElement</code> zichtbaar gemaakt.</p>
 
-int getal = 5 + 2; // wel een instructie
-</pre>
-
-<p>Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.</p>
-
-<p>Het verschil tussen iemand die kan programmeren en een programmeur is dat een programmeur zijn code kan organiseren in blokken code, en die blokken zo gebruiken dat er een duidelijk gestructureerd programma ontstaat.</p>
-
-<h2 id="32-commentaar">3.2 Commentaar</h2>
-
-<p>Soms gebeurt het dat code niet gemakkelijk leesbaar is, hoe hard je ook je best doet om duidelijke namen te gebruiken. In dat geval is het handig om gewone, door mensen leesbare tekst toe te voegen aan code die enkel bedoeld is voor de programmeur, maar niet voor de computer.</p>
-
-<p>Dit soort tekst wordt commentaar genoemd. Commentaar is onzichtbaar voor de computer.</p>
-
-<p>In de voorbeelden hierboven (en in andere hoofdstukken) werd er reeds gebruik gemaakt van commentaar. 
-Je kan commentaar op 2 manieren toevoegen:</p>
-<ul>
-  <li>Commentaar die 1 lijn tekst gebruikt.</li>
-  <li>Commentaar die meerdere lijnen tekst gebruiken.</li>
-</ul>
-
-<h3 id="321-commentaar-op-één-lijn">3.2.1 Commentaar op één lijn</h3>
-<p>Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.</p>
-
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt door de computer genegeerd
-</pre>
-
-<h3 id="322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</h3>
-<p>Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:</p>
-<ul>
-  <li>Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).</li>
-  <li>Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).</li>
-</ul>
-
-<p>Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.</p>
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt
-// door de computer genegeerd
-
-
-/* Heel deze zin
-wordt genegeerd
-door de computer.
-Je kan niet programmeren
-totdat je het ster-slash einde
-Typt */
-</pre>
 
 
     </section>
@@ -481,15 +487,13 @@ Typt */
 <hr>
 <div id="toc">
 <ul>
-  <li><a href="#instructies">INSTRUCTIES</a>
+  <li><a href="#popup">Popup</a>
     <ul>
-      <li><a href="#instructie">Instructie</a></li>
-      <li><a href="#32-commentaar">3.2 Commentaar</a>
-        <ul>
-          <li><a href="#321-commentaar-op-één-lijn">3.2.1 Commentaar op één lijn</a></li>
-          <li><a href="#322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</a></li>
-        </ul>
-      </li>
+      <li><a href="#bookmarks">Bookmarks</a></li>
+      <li><a href="#css-selector-target">CSS selector :target</a></li>
+      <li><a href="#43-een-popup-maken">4.3 Een popup maken</a></li>
+      <li><a href="#css">CSS:</a></li>
+      <li><a href="#html">HTML:</a></li>
     </ul>
   </li>
 </ul>

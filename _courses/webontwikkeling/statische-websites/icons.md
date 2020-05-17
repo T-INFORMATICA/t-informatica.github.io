@@ -1,82 +1,84 @@
 ---
-title: Instructies
+title: Icons
 tags: 
- - instructie
- - commentaar
+ - icon
+ - rasterized image
+ - vectorized image
+ - icon library
 description:
 ---
 
 
-# INSTRUCTIES
+# ICONS
 
-## Instructie
+Icons zijn kleine afbeeldingen die gebruikt worden om een bepaald onderdeel van je webpagina te verduidelijken.  \
+Bijvoorbeeld: In een menu kan je elke link een icoontje geven (een huis-icoontje voor de “home” link, een enveloppe-icoontje voor “contact”, enz.
 
-Programmeren is het geven van instructies (bevelen) aan een computer. Als je een instructie geeft aan je computer, doe je 1 van volgende zaken:
- - Het opslaan van data (het getal 7 bewaren in een variabele)
- - Het aanpassen van data (een nieuwe waarde opslaan in de variabele)
+Je kan hiervoor 2 soorten afbeeldingen gebruiken: 
 
-Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).
+1. Rasterized images
+2. Vectorized images
 
-<pre class="prettyprint linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-int getal = 5 + 2; // wel een instructie
-</pre>
-
-Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.
-
-Het verschil tussen iemand die kan programmeren en een programmeur is dat een programmeur zijn code kan organiseren in blokken code, en die blokken zo gebruiken dat er een duidelijk gestructureerd programma ontstaat.
-
-## 3.2 Commentaar
-
-Soms gebeurt het dat code niet gemakkelijk leesbaar is, hoe hard je ook je best doet om duidelijke namen te gebruiken. In dat geval is het handig om gewone, door mensen leesbare tekst toe te voegen aan code die enkel bedoeld is voor de programmeur, maar niet voor de computer. 
-
-Dit soort tekst wordt commentaar genoemd. Commentaar is onzichtbaar voor de computer.
-
-In de voorbeelden hierboven (en in andere hoofdstukken) werd er reeds gebruik gemaakt van commentaar. 
-Je kan commentaar op 2 manieren toevoegen:
- - Commentaar die 1 lijn tekst gebruikt.
- - Commentaar die meerdere lijnen tekst gebruiken.
- 
-### 3.2.1 Commentaar op één lijn
-Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.
-
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt door de computer genegeerd
-</pre>
-
-### 3.2.2 Commentaar op meerdere lijnen
-Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:
- - Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).
- - Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).
-
-Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt
-// door de computer genegeerd
+Beide types afbeeldingen hebben hun voor- en nadelen. Het is aan de ontwikkelaar om de beste keuze te maken, afhankelijk van de situatie.
 
 
-/* Heel deze zin
-wordt genegeerd
-door de computer.
-Je kan niet programmeren
-totdat je het ster-slash einde
-Typt */
-</pre>
+## Rasterized images
+
+Een rasterized image is een moeilijke naam voor een ‘normale’ afbeelding, zoals een .jpg, .gif of .png. Deze afbeeldingen zijn gemakkelijk op te slaan en te bewerken, en kunnen zowat elke vorm en kleur opslaan die je wilt. 
+
+<img src="{{ site.baseurl }}/assets/img/statische-websites-1.png" alt="" style="height: auto; max-width: 100%">
+
+Een rasterized image bestaat in feite uit een groot raster, waar elke cel in het raster 1 pixel voorstelt. Zo’n pixel kan leeg of gevuld zijn, maar nooit slechts voor de helft gevuld worden.
+
+Het voordeel van dit raster is dat dit toestaat elke pixel apart in te kleuren, waardoor afbeeldingen enorm veel detail kunnen bevatten. Dat is ook de reden waarom foto’s steeds een rasterized image zijn.
+
+Het nadeel van een rasterized image is dat je deze afbeeldingen zeer slecht kunt vergroten en verkleinen. Bij het vergroten van de afbeelding, worden immers de pixels gewoon mee vergroot.
+
+De meeste foto’s en tekeningen die je tegenkomt op het internet zijn rasterized images. Wanneer je met een camera een foto trekt, of een document inscant met een scanner, zal je ook een rasterized image krijgen.
+
+
+## Vectorized images
+
+Een vectorized image is een afbeelding die is opgebouwd uit punten en lijnen tussen die punten, ook wel “paden” genoemd. Deze paden worden berekend door de computer. Het is dus de computer die berekend en bepaald waar elke pixel komt, op basis van de punten die worden meegegeven.
+
+<img src="{{ site.baseurl }}/assets/img/statische-websites-2.png" alt="" style="height: auto; max-width: 100%">
+
+Het voordeel van dit soort afbeeldingen is dat je deze kunt vergroten en verkleinen zonder kwaliteitsverlies.
+
+Het nadeel van een vectorized image is dat je geen raster hebt waarbij je elke pixel apart kunt manipuleren. Je kan dus niet zoveel detail toevoegen als in een rasterized image.
+
+Een bekend voorbeeld van vectorized images zijn lettertypes. Een letter kan zo groot of klein mogelijk gemaakt worden, zonder dat er kwaliteitsverlies optreedt.
+
+**Icons zijn meestal vectorized images**:
+
+*   Een icon heeft zelden veel kleine details. Icons zijn over het algemeen versimpelde, kleine afbeeldingen van een bepaald onderwerp.
+*   Een icon wordt vaak in verschillende groottes gebruikt. Knoppen en hun icons zijn vaak groter op een mobile website, zodat ze gemakkelijk aan te klikken zijn op een touch-screen, en kleiner op een desktop-website.
+
+<img src="{{ site.baseurl }}/assets/img/statische-websites-3.png" alt="" style="height: auto; max-width: 100%">
+
+
+## Icon libraries
+
+Het is niet nodig om zelf icons te tekenen. De bedoeling van een icon is dat het heel herkenbaar en duidelijk is. Daarom wordt vaak aangeraden om gebruik te maken van een icon library.
+
+Een icon library is een grote verzameling icons. Door in het **`<head>`**-element te verwijzen naar een icon-library bestand met een **`<link>`** tag kan je de icons die daarin zijn verzameld gebruiken.
+
+Enkele bekende icon libraries:
+
+
+
+*   **Font Awesome**: Deze icon library wordt al enkele jaren gezien als de standaard icon library voor zo goed als elke website. De link hieronder is voor Font Awesome versie 5. Een overzicht van alle icoontjes vind je terug op [fontawesome.com/icons](https://fontawesome.com/icons) 
+
+```
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+```
+
+
+*   **Google Icons**: Google heeft, als onderdeel van zijn Material Design language, een eigen icon library die iedereen vrij mag gebruiken. Een overzicht van alle icoontjes vind je terug op [material.io/icons/](https://material.io/icons/) 
+
+```
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+```
+
+
+In deze cursus wordt vooral gewerkt met de Google Icons library.

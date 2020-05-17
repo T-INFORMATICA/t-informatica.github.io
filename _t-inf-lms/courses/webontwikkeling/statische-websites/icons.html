@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instructies</title>
+    <title>Icons</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
 
@@ -371,95 +371,92 @@
 
     <section id="chapterContent">
         
-        <h1>Instructies</h1>
+        <h1>Icons</h1>
 
         <div id="chapterTags">
             
-                <a href="#" class="tag">instructie</a>
+                <a href="#" class="tag">icon</a>
             
-                <a href="#" class="tag">commentaar</a>
+                <a href="#" class="tag">rasterized image</a>
+            
+                <a href="#" class="tag">vectorized image</a>
+            
+                <a href="#" class="tag">icon library</a>
             
         </div>
 
-        <h1 id="instructies">INSTRUCTIES</h1>
+        <h1 id="icons">ICONS</h1>
 
-<h2 id="instructie">Instructie</h2>
+<p>Icons zijn kleine afbeeldingen die gebruikt worden om een bepaald onderdeel van je webpagina te verduidelijken.  <br />
+Bijvoorbeeld: In een menu kan je elke link een icoontje geven (een huis-icoontje voor de “home” link, een enveloppe-icoontje voor “contact”, enz.</p>
 
-<p>Programmeren is het geven van instructies (bevelen) aan een computer. Als je een instructie geeft aan je computer, doe je 1 van volgende zaken:</p>
+<p>Je kan hiervoor 2 soorten afbeeldingen gebruiken:</p>
+
+<ol>
+  <li>Rasterized images</li>
+  <li>Vectorized images</li>
+</ol>
+
+<p>Beide types afbeeldingen hebben hun voor- en nadelen. Het is aan de ontwikkelaar om de beste keuze te maken, afhankelijk van de situatie.</p>
+
+<h2 id="rasterized-images">Rasterized images</h2>
+
+<p>Een rasterized image is een moeilijke naam voor een ‘normale’ afbeelding, zoals een .jpg, .gif of .png. Deze afbeeldingen zijn gemakkelijk op te slaan en te bewerken, en kunnen zowat elke vorm en kleur opslaan die je wilt.</p>
+
+<p><img src="/_t-inf-lms/assets/img/statische-websites-1.png" alt="" style="height: auto; max-width: 100%" /></p>
+
+<p>Een rasterized image bestaat in feite uit een groot raster, waar elke cel in het raster 1 pixel voorstelt. Zo’n pixel kan leeg of gevuld zijn, maar nooit slechts voor de helft gevuld worden.</p>
+
+<p>Het voordeel van dit raster is dat dit toestaat elke pixel apart in te kleuren, waardoor afbeeldingen enorm veel detail kunnen bevatten. Dat is ook de reden waarom foto’s steeds een rasterized image zijn.</p>
+
+<p>Het nadeel van een rasterized image is dat je deze afbeeldingen zeer slecht kunt vergroten en verkleinen. Bij het vergroten van de afbeelding, worden immers de pixels gewoon mee vergroot.</p>
+
+<p>De meeste foto’s en tekeningen die je tegenkomt op het internet zijn rasterized images. Wanneer je met een camera een foto trekt, of een document inscant met een scanner, zal je ook een rasterized image krijgen.</p>
+
+<h2 id="vectorized-images">Vectorized images</h2>
+
+<p>Een vectorized image is een afbeelding die is opgebouwd uit punten en lijnen tussen die punten, ook wel “paden” genoemd. Deze paden worden berekend door de computer. Het is dus de computer die berekend en bepaald waar elke pixel komt, op basis van de punten die worden meegegeven.</p>
+
+<p><img src="/_t-inf-lms/assets/img/statische-websites-2.png" alt="" style="height: auto; max-width: 100%" /></p>
+
+<p>Het voordeel van dit soort afbeeldingen is dat je deze kunt vergroten en verkleinen zonder kwaliteitsverlies.</p>
+
+<p>Het nadeel van een vectorized image is dat je geen raster hebt waarbij je elke pixel apart kunt manipuleren. Je kan dus niet zoveel detail toevoegen als in een rasterized image.</p>
+
+<p>Een bekend voorbeeld van vectorized images zijn lettertypes. Een letter kan zo groot of klein mogelijk gemaakt worden, zonder dat er kwaliteitsverlies optreedt.</p>
+
+<p><strong>Icons zijn meestal vectorized images</strong>:</p>
+
 <ul>
-  <li>Het opslaan van data (het getal 7 bewaren in een variabele)</li>
-  <li>Het aanpassen van data (een nieuwe waarde opslaan in de variabele)</li>
+  <li>Een icon heeft zelden veel kleine details. Icons zijn over het algemeen versimpelde, kleine afbeeldingen van een bepaald onderwerp.</li>
+  <li>Een icon wordt vaak in verschillende groottes gebruikt. Knoppen en hun icons zijn vaak groter op een mobile website, zodat ze gemakkelijk aan te klikken zijn op een touch-screen, en kleiner op een desktop-website.</li>
 </ul>
 
-<p>Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).</p>
+<p><img src="/_t-inf-lms/assets/img/statische-websites-3.png" alt="" style="height: auto; max-width: 100%" /></p>
 
-<pre class="prettyprint linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<h2 id="icon-libraries">Icon libraries</h2>
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+<p>Het is niet nodig om zelf icons te tekenen. De bedoeling van een icon is dat het heel herkenbaar en duidelijk is. Daarom wordt vaak aangeraden om gebruik te maken van een icon library.</p>
 
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<p>Een icon library is een grote verzameling icons. Door in het <strong><code class="highlighter-rouge">&lt;head&gt;</code></strong>-element te verwijzen naar een icon-library bestand met een <strong><code class="highlighter-rouge">&lt;link&gt;</code></strong> tag kan je de icons die daarin zijn verzameld gebruiken.</p>
 
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
+<p>Enkele bekende icon libraries:</p>
 
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-int getal = 5 + 2; // wel een instructie
-</pre>
-
-<p>Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.</p>
-
-<p>Het verschil tussen iemand die kan programmeren en een programmeur is dat een programmeur zijn code kan organiseren in blokken code, en die blokken zo gebruiken dat er een duidelijk gestructureerd programma ontstaat.</p>
-
-<h2 id="32-commentaar">3.2 Commentaar</h2>
-
-<p>Soms gebeurt het dat code niet gemakkelijk leesbaar is, hoe hard je ook je best doet om duidelijke namen te gebruiken. In dat geval is het handig om gewone, door mensen leesbare tekst toe te voegen aan code die enkel bedoeld is voor de programmeur, maar niet voor de computer.</p>
-
-<p>Dit soort tekst wordt commentaar genoemd. Commentaar is onzichtbaar voor de computer.</p>
-
-<p>In de voorbeelden hierboven (en in andere hoofdstukken) werd er reeds gebruik gemaakt van commentaar. 
-Je kan commentaar op 2 manieren toevoegen:</p>
 <ul>
-  <li>Commentaar die 1 lijn tekst gebruikt.</li>
-  <li>Commentaar die meerdere lijnen tekst gebruiken.</li>
+  <li><strong>Font Awesome</strong>: Deze icon library wordt al enkele jaren gezien als de standaard icon library voor zo goed als elke website. De link hieronder is voor Font Awesome versie 5. Een overzicht van alle icoontjes vind je terug op <a href="https://fontawesome.com/icons">fontawesome.com/icons</a></li>
 </ul>
 
-<h3 id="321-commentaar-op-één-lijn">3.2.1 Commentaar op één lijn</h3>
-<p>Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"&gt;
+</code></pre></div></div>
 
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt door de computer genegeerd
-</pre>
-
-<h3 id="322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</h3>
-<p>Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:</p>
 <ul>
-  <li>Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).</li>
-  <li>Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).</li>
+  <li><strong>Google Icons</strong>: Google heeft, als onderdeel van zijn Material Design language, een eigen icon library die iedereen vrij mag gebruiken. Een overzicht van alle icoontjes vind je terug op <a href="https://material.io/icons/">material.io/icons/</a></li>
 </ul>
 
-<p>Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.</p>
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt
-// door de computer genegeerd
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;
+</code></pre></div></div>
 
-
-/* Heel deze zin
-wordt genegeerd
-door de computer.
-Je kan niet programmeren
-totdat je het ster-slash einde
-Typt */
-</pre>
+<p>In deze cursus wordt vooral gewerkt met de Google Icons library.</p>
 
 
     </section>
@@ -481,15 +478,11 @@ Typt */
 <hr>
 <div id="toc">
 <ul>
-  <li><a href="#instructies">INSTRUCTIES</a>
+  <li><a href="#icons">ICONS</a>
     <ul>
-      <li><a href="#instructie">Instructie</a></li>
-      <li><a href="#32-commentaar">3.2 Commentaar</a>
-        <ul>
-          <li><a href="#321-commentaar-op-één-lijn">3.2.1 Commentaar op één lijn</a></li>
-          <li><a href="#322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</a></li>
-        </ul>
-      </li>
+      <li><a href="#rasterized-images">Rasterized images</a></li>
+      <li><a href="#vectorized-images">Vectorized images</a></li>
+      <li><a href="#icon-libraries">Icon libraries</a></li>
     </ul>
   </li>
 </ul>

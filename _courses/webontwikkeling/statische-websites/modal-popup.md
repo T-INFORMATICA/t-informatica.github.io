@@ -1,82 +1,203 @@
 ---
-title: Instructies
+title: Modal Popup Window
 tags: 
- - instructie
- - commentaar
+ - modal
+ - popup
+ - window
+ - target
 description:
 ---
 
+# Modal Popup Window
 
-# INSTRUCTIES
+Een modal popup window bestaat uit 3 delen:
 
-## Instructie
+*   **Modal**: het venster bevindt zich bovenop alle andere inhoud.
+*   **Popup**: het venster wordt geopend of gesloten door een actie van de gebruiker.
+*   **Window**: het is een venster dat een beperkt deel van het scherm inneemt.
 
-Programmeren is het geven van instructies (bevelen) aan een computer. Als je een instructie geeft aan je computer, doe je 1 van volgende zaken:
- - Het opslaan van data (het getal 7 bewaren in een variabele)
- - Het aanpassen van data (een nieuwe waarde opslaan in de variabele)
+<img src="{{ site.baseurl }}/assets/img/statische-websites-4.png" alt="" style="height: auto; max-width: 100%">
 
-Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).
-
-<pre class="prettyprint linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="prettyprint linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
-
-5 + 2; /* geen instructie (geeft een fout omdat het result van de expressie niet wordt opgeslagen) */
-
-int getal = 5 + 2; // wel een instructie
-</pre>
-
-Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.
-
-Het verschil tussen iemand die kan programmeren en een programmeur is dat een programmeur zijn code kan organiseren in blokken code, en die blokken zo gebruiken dat er een duidelijk gestructureerd programma ontstaat.
-
-## 3.2 Commentaar
-
-Soms gebeurt het dat code niet gemakkelijk leesbaar is, hoe hard je ook je best doet om duidelijke namen te gebruiken. In dat geval is het handig om gewone, door mensen leesbare tekst toe te voegen aan code die enkel bedoeld is voor de programmeur, maar niet voor de computer. 
-
-Dit soort tekst wordt commentaar genoemd. Commentaar is onzichtbaar voor de computer.
-
-In de voorbeelden hierboven (en in andere hoofdstukken) werd er reeds gebruik gemaakt van commentaar. 
-Je kan commentaar op 2 manieren toevoegen:
- - Commentaar die 1 lijn tekst gebruikt.
- - Commentaar die meerdere lijnen tekst gebruiken.
- 
-### 3.2.1 Commentaar op één lijn
-Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.
-
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt door de computer genegeerd
-</pre>
-
-### 3.2.2 Commentaar op meerdere lijnen
-Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:
- - Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).
- - Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).
-
-Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
-// Dit gedeelte wordt
-// door de computer genegeerd
+Een modal popup bestaat meestal uit 2 delen:
 
 
-/* Heel deze zin
-wordt genegeerd
-door de computer.
-Je kan niet programmeren
-totdat je het ster-slash einde
-Typt */
-</pre>
+1. **Het popup venster zelf**: meestal een **`<div>`** element met daarin tekst, afbeeldingen, knoppen en een simpele layout. 
+    *   Het popup venster wordt meestal standaard verborgen met de **`display: none;`** stijlregel
+2. **Een hyperlink, knop of icoontje** waarop je kan klikken om de popup te openen. 
+    *   Wanneer de popup wordt geopend wordt meestal de rest van de website vager gemaakt met een doorzichtige overlay, die zich tussen de popup en de website bevindt.
+
+## Modal
+
+Wanneer een element Modal is, wilt dit zeggen dat het venster bovenop alle andere content wordt weergegeven. Vaak staat dit element ook gecentreerd op het scherm. Meestal wordt de achtergrond ook verduisterd.
+
+Deze techniek maakt daarom gebruik van 3 onderdelen:
+
+1. Een **container** die alle modal elementen verzamelt. (`.modal`)
+2. De aanklikbare, verduisterde **achtergrond** van het Modal Window. (`.modalBackground`)
+3. Een tweede container, waarin het **venster** komt. (`.window`)
+
+```
+<div class="modal">
+	<a href="#" class="modalBackground"></a>
+	<div class="window">
+		test
+	</div>
+</div>
+```
+
+```
+.modal>a.modalBackground {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+
+.modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+```
+
+## Popup
+
+Er worden aan de CSS code 2 selectors toegevoegd:
+
+*   De `.popup` selector, die elk element met de klasse popup standaard onzichtbaar maakt.
+*   De `.popup:target` selector[^1], die elk element met de klasse popup zichtbaar maakt vanaf deze geselecteerd wordt.
+
+De HTML code wordt slechts op 2 plaatsen aangepast: 
+
+*   De div met klasse `.modal` krijgt nu ook de klasse `.popup` toegewezen.
+*   Een hyperlink wordt op de website geplaatst die het popup window opent.
+
+```
+.modal>a.modalBackground {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+
+.modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+.popup {
+	display: none;
+}
+
+.popup:target {
+	display: grid;
+}
+```
+
+
+
+```
+<a href="#modal1">KLIK</a>
+<div class="modal popup">
+	<a href="#" class="modalBackground"></a>
+	<div class="window">
+		test
+	</div>
+</div>
+```
+
+
+
+
+## Window
+
+In dit voorbeeld wordt een simpel, wit venster met een close-icon uitgewerkt.
+
+<img src="{{ site.baseurl }}/assets/img/statische-websites-5.png" alt="" style="height: auto; max-width: 100%">
+
+*   In het venster (`.window`) worden een **`<a>`** en **`<p>`**-element geplaatst. 
+*   Het  **`<a>`**-element (`.fa.fa-times`)  is een inline element, dus kan hier een Font Awesome icon van gemaakt worden. Daarom dat de classes `fa` en `fa-times` worden toegevoegd.
+
+```
+<div class="modal popup">
+	<a href="#" class="modalBackground"></a>
+	<div class="window">
+		<a href="#" class="fa fa-times"></a>
+		<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor sagittis, aliquet dui id, maximus ex. Pellentesque ut dictum nisl, non suscipit sapien. 
+		</p>
+	</div>
+</div>
+```
+
+De stijlregels hieronder geven het voorbeeld hetzelfde uitzicht als op de afbeelding:
+
+
+```
+.window {
+	position: relative;		/* Dit zorgt ervoor dat het venster bovenop de 						   verduisterde achtergrond getoond wordt. */
+	background-color: white;	/* zet de achtergrondkleur op wit, in 								   plaats van doorzichtig. */
+	border: 1px solid black;	/* geef het popup venster een dunne rand. */
+
+	margin: 10% auto;		/* plaats de popup in het midden, met een 							   beetje ruimte van de bovenrand. */
+	width: 400px;			/* geef de popup een breedte van 400px */
+}
+
+
+.window>.fa-times {
+	float: right;			/* plaats het kruis aan de rechterkant van het 
+					   venster */
+	padding: 5px;			/* zorg ervoor dat het kruis niet tegen de 
+					   rand plakt */
+
+	color: black;			/* geef het kruis een zwarte kleur */
+	text-decoration: none;	/* verwijder de onderlijning */
+}
+
+.window>p {
+	margin: 30px;			/* zorg dat de paragraaf-tekst wat ruimte 
+					   heeft rondom de tekst */
+}
+
+.modal>a.modalBackground {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+}
+
+.modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+.popup {
+	display: none;
+}
+
+.popup:target {
+	display: grid;
+}
+```
+
+
