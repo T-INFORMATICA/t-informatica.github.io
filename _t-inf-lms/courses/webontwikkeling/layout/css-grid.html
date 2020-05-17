@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Implementatie</title>
+    <title>CSS Grid Inleiding</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
 
@@ -319,7 +319,7 @@
             <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
             
               
-              <a href="/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html">Inleiding</a>
+                <a href="/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html"><u>Inleiding</u></a>
               
 
               
@@ -331,7 +331,7 @@
               
             
               
-                <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html"><u>Grid implementatie</u></a>
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid implementatie</a>
               
 
               
@@ -379,7 +379,7 @@
 
     <section id="chapterContent">
         
-        <h1>Css grid implementatie</h1>
+        <h1>Css grid inleiding</h1>
 
         <div id="chapterTags">
             
@@ -389,220 +389,45 @@
             
         </div>
 
-        <h1 id="een-css-grid-maken">Een CSS Grid maken</h1>
+        <h1 id="inleiding">Inleiding</h1>
 
-<p>Een CSS Grid maken gebeurt in een paar eenvoudige, maar vooral ook logische stappen.</p>
+<p>CSS Grid is een systeem in CSS dat gemaakt is om de manier waarop een website van layout wordt voorzien te veranderen. CSS is altijd de taal geweest om layout aan een website te geven, maar dit was nog nooit zo gemakkelijk.</p>
 
-<p>Om te beginnen heb je, zoals bij elke layout, een ontwerp nodig. In dit hoofdstuk wordt gewerkt aan de hand van onderstaand voorbeeld:</p>
+<p>Terugkijkend naar het verleden HTML en CSS zijn er al veel manieren geprobeerd om layout aan websites te geven. Eerst werden tabellen gebruikt, vervolgens floats, positionering en inline-block. Al deze methoden waren in feite hacks en waren vaak heel beperkt in hun mogelijkheden.</p>
 
-<p><img src="/_t-inf-lms/assets/img/css-grid-10.png" alt="" style="height: auto; max-width: 100%" /></p>
+<p>Grid is de allereerste CSS module die speciaal is gecreëerd om deze lay-out problemen op te lossen.</p>
 
-<h2 id="stap-0-voorbereiding">Stap 0: voorbereiding</h2>
+<h2 id="rasters">Rasters</h2>
 
-<p>Om een CSS Grid te kunnen gebruiken is het belangrijk om op voorhand, op papier, het ontwerp in een raster om te zetten. Dit gaat je bij de volgende stappen enorm hard verder helpen. Bijvoorbeeld:</p>
+<p>Een raster is niet meer dan een structuur met kolommen en rijen. Een gekend voorbeeld van een raster is bijvoorbeeld het werkblad in Google Sheets.</p>
 
-<p><img src="/_t-inf-lms/assets/img/css-grid-11.png" alt="" style="height: auto; max-width: 100%" /></p>
+<p>Een raster bestaat steeds uit kolommen, rijen en cellen. Het is belangrijk om te weten wat deze drie termen precies willen zeggen.</p>
 
-<h2 id="stap-1-definieer-elementen">Stap 1: Definieer elementen</h2>
+<p><img src="/_t-inf-lms/assets/img/css-grid-1.png" alt="" style="height: auto; max-width: 100%" /></p>
 
-<p>Definieer de belangrijkste elementen in het ontwerp. Hierbij kan gebruik gemaakt worden van alle block-level elementen zoals <strong><code class="highlighter-rouge">header</code></strong>, <strong><code class="highlighter-rouge">footer</code></strong>, <strong><code class="highlighter-rouge">aside</code></strong>, enz. Om het simpel te houden kies ik hier voor <strong><code class="highlighter-rouge">div</code></strong> elementen.</p>
+<h3 id="kolommen">Kolommen</h3>
 
-<p>Omdat het voor CSS Grid niet langer een verschil maakt in welke volgorde HTML elementen worden geplaatst, kies je best voor de **meest logische **volgorde. Je moet hiervoor niet langer kijken naar je ontwerp!</p>
+<p>Een kolom is een verticale reeks cellen in een raster. In het voorbeeld hieronder is de kolom A aangeduid.</p>
 
-<p>Zo is het bijvoorbeeld logisch dat als eerste de header wordt gedefinieerd, vervolgens de titel, gevolgd door de menu, de main content en als laatste de footer.</p>
+<p><img src="/_t-inf-lms/assets/img/css-grid-2.png" alt="" style="height: auto; max-width: 100%" /></p>
 
-<p>Deze elementen zullen de Grid Items in de CSS Grid layout worden.</p>
+<h3 id="rijen">Rijen</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="header"&gt;
-&lt;/div&gt;
+<p>Een rij is een horizontale reeks cellen in een raster. In het voorbeeld hieronder is rij 1 aangeduid.</p>
 
-&lt;h1 class="title"&gt;
-&lt;/h1&gt;
+<p><img src="/_t-inf-lms/assets/img/css-grid-3.png" alt="" style="height: auto; max-width: 100%" /></p>
 
-&lt;div class="menu"&gt;
-&lt;/div&gt;
+<h3 id="cellen">Cellen</h3>
 
-&lt;div class="main"&gt;
-&lt;/div&gt;
+<p>Een cel is een plaats in het raster waarin data (meestal tekst) kan geplaatst worden, waarvan de naam wordt bepaald door de kolom en de rij waarop de cel zich zich bevindt.</p>
 
-&lt;div class="footer"&gt;
-&lt;/div&gt;
-</code></pre></div></div>
+<p>De cel in het voorbeeld hieronder bevindt zich op positie A1.</p>
 
-<h2 id="stap-2-maak-een-grid-container">Stap 2: Maak een Grid Container</h2>
+<p><img src="/_t-inf-lms/assets/img/css-grid-4.png" alt="" style="height: auto; max-width: 100%" /></p>
 
-<p>Maak nu een Grid Container die al deze elementen omvat. Meestal wordt hier een <strong><code class="highlighter-rouge">div</code></strong> element voor gebruikt.</p>
+<p>Cellen kunnen meerdere rijen en/of kolommen overspannen, om zo meer plaats in te nemen op het raster. Ook in het voorbeeld hiernaast bevindt de cel waarin “Hallo” staat geschreven zich op positie A1, maar is ditmaal 2 kolommen breed en 2 rijen hoog.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="site"&gt;
-	&lt;div class="header"&gt;
-	&lt;/div&gt;
-
-	&lt;h1 class="title"&gt;
-	&lt;/h1&gt;
-
-	&lt;div class="main"&gt;
-	&lt;/div&gt;
-
-	&lt;div class="menu"&gt;
-	&lt;/div&gt;
-
-	&lt;div class="footer"&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div></div>
-
-<p><br />
-Vervolgens gebruik je CSS om hier <strong><code class="highlighter-rouge">display: grid;</code></strong> op toe te passen.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-}
-</code></pre></div></div>
-
-<h2 id="stap-3-kolommen-en-rijen">Stap 3: kolommen en rijen</h2>
-
-<p>De volgende stap is het bepalen van de kolommen en rijen in de Grid Container. Hiervoor wordt gebruik gemaakt van 2 CSS properties:</p>
-
-<ul>
-  <li><strong><code class="highlighter-rouge">grid-template-columns</code></strong></li>
-  <li><strong><code class="highlighter-rouge">grid-template-rows</code></strong></li>
-</ul>
-
-<p><br />
-Beide properties werken op dezelfde manier:  <br />
-Wil je 3 kolommen in je CSS Grid? Dan geef je <strong><code class="highlighter-rouge">grid-template-columns</code></strong> 3 waardes. <br />
-Onderstaand voorbeeld maakt dus 3 kolommen, met de eerste en laatste kolom 25 pixels breed, en de middelste kolom 50px breed:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 25px 50px 25px;
-</code></pre></div></div>
-
-<p><br />
-Je kan hiervoor werken met de volgende waardes:</p>
-
-<ul>
-  <li>pixel-waardes (px)</li>
-  <li>procentuele waardes (%)</li>
-  <li>em-eenheden (em)</li>
-  <li>de nieuwe fractie-eenheid (fr)</li>
-  <li>auto</li>
-</ul>
-
-<p>Je mag deze waardes door elkaar gebruiken. In onderstaand voorbeeld is de eerste kolom 50% breed, de tweede 50 pixels breed en de laatste kolom 25 pixels breed:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 50% 50px 25px;
-</code></pre></div></div>
-
-<p>Afhankelijk van jouw specifieke ontwerp ga je een andere eenheid nodig hebben, maar vaak wordt gekozen binnen CSS Grid om, indien mogelijk, gebruik te maken van de fractie-eenheid.</p>
-
-<p>De fractie eenheid zegt hoeveel delen van de totale vrije ruimte iets zal innemen. Bijvoorbeeld:</p>
-
-<p>Als we de totale vrije ruimte indelen in 4 delen (4fr), dan zal de eerste kolom 2fr innemen, de tweede kolom 1fr en de derde kolom ook 1fr.</p>
-
-<p><img src="/_t-inf-lms/assets/img/css-grid-12.png" alt="" style="height: auto; max-width: 100%" /></p>
-
-<p>Hetzelfde geld voor <strong><code class="highlighter-rouge">grid-template-rows</code></strong>, waarbij je de hoogte gaat bepalen van elke opeenvolgende rij.</p>
-
-<p>Op dit moment ziet de HTML code er nog steeds als volgt uit:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="site"&gt;
-	&lt;div class="header"&gt;
-	&lt;/div&gt;
-
-	&lt;h1 class="title"&gt;
-	&lt;/h1&gt;
-
-	&lt;div class="main"&gt;
-	&lt;/div&gt;
-
-	&lt;div class="menu"&gt;
-	&lt;/div&gt;
-
-	&lt;div class="footer"&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div></div>
-
-<p>En de CSS code ziet er als volgt uit:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	grid-template-rows: auto 1fr 3fr;
-}
-</code></pre></div></div>
-
-<h2 id="stap-4-grid-areas-definieren">Stap 4: Grid Areas definieren</h2>
-
-<p>Op dit punt is er een Grid Container gemaakt, en heeft deze Grid Container de correcte rijen en kolommen gedefinieerd voor het ontwerp. Het raster (de combinatie van rijen en kolommen) bestaat momenteel uit Grid Cells, maar zoals te zien in het ontwerp moeten sommige onderdelen verschillende Grid Cells overspannen.</p>
-
-<p>Hiervoor dienen Grid Areas. Een Grid Area is één of meerdere Grid Cells die je één naam geeft. Die naam kan vervolgens gebruikt worden om een Grid Item op de juiste plaats te zetten. Om elk onderdeel van het ontwerp op de juiste plaats te kunnen zetten, moeten we Grid Areas definiëren.</p>
-
-<p>Hiervoor wordt gebruik gemaakt van de volgende CSS property:</p>
-
-<ul>
-  <li><strong><code class="highlighter-rouge">grid-template-areas</code></strong>: deze property geeft aan elke Grid Cell in de Grid Container een naam. Cellen die dezelfde naam krijgen behoren tot dezelfde Grid Area.</li>
-</ul>
-
-<p>In onderstaand voorbeeld kan je zien dat de bovenste 3 Grid Cells de naam “title” krijgen. Deze 3 cellen vormen dus één Grid Area genaamd “title”.  <br />
-Zo worden ook de Grid Areas “main”, “header”, “menu” en “footer” gedefinieerd.</p>
-
-<p><strong>opgelet!</strong> Soms wil je een cel leeg laten. Gebruik hiervoor een <strong>punt</strong>. Een punt duidt aan dat een bepaalde cel niet gebruikt zal worden in een area.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	grid-template-rows: auto 1fr 3fr;
-	Grid-template-areas: 
-		"title title title"
-		"main header header"
-		"main menu footer";
-}
-</code></pre></div></div>
-
-<p>Om elk Grid Item in de juiste Grid Area te krijgen, wordt op elk Grid Item de volgende property toegepast:</p>
-
-<ul>
-  <li><strong><code class="highlighter-rouge">grid-area</code></strong>: deze property geeft aan in welke Grid Area het Grid Item moet komen.</li>
-</ul>
-
-<p>Bijvoorbeeld:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	grid-template-rows: auto 1fr 3fr;
-	Grid-template-areas: 
-		"title title title"
-		"main header header"
-		"main menu footer";
-}
-
-.header {
-	grid-area: header;
-	background-color: magenta;
-}
-
-.title {
-	grid-area: title;
-	background-color: blue;
-}
-
-.menu {
-	grid-area: menu;
-	background-color: orange;
-}
-
-.main {
-	grid-area: main;
-	background-color: green;
-}
-
-.footer {
-	grid-area: footer;
-	background-color: red;
-}
-</code></pre></div></div>
-
+<p><img src="/_t-inf-lms/assets/img/css-grid-5.png" alt="" style="height: auto; max-width: 100%" /></p>
 
 
     </section>
@@ -613,24 +438,26 @@ Zo worden ook de Grid Areas “main”, “header”, “menu” en “footer”
 
 <div id="pageActions">
 
-    <a href="/_t-inf-lms/courses/webontwikkeling/layout/#grid-implementatie"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <a href="/_t-inf-lms/courses/webontwikkeling/layout/#css-grid"><span class="material-icons">assignment</span> Oefen theorie</a>
     <hr>
     <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
     <a href="https://github.com/T-INFORMATICA/_cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
-    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/layout/grid-implementatie.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/layout/css-grid.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
 
     
 </div>
 <hr>
 <div id="toc">
 <ul>
-  <li><a href="#een-css-grid-maken">Een CSS Grid maken</a>
+  <li><a href="#inleiding">Inleiding</a>
     <ul>
-      <li><a href="#stap-0-voorbereiding">Stap 0: voorbereiding</a></li>
-      <li><a href="#stap-1-definieer-elementen">Stap 1: Definieer elementen</a></li>
-      <li><a href="#stap-2-maak-een-grid-container">Stap 2: Maak een Grid Container</a></li>
-      <li><a href="#stap-3-kolommen-en-rijen">Stap 3: kolommen en rijen</a></li>
-      <li><a href="#stap-4-grid-areas-definieren">Stap 4: Grid Areas definieren</a></li>
+      <li><a href="#rasters">Rasters</a>
+        <ul>
+          <li><a href="#kolommen">Kolommen</a></li>
+          <li><a href="#rijen">Rijen</a></li>
+          <li><a href="#cellen">Cellen</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>

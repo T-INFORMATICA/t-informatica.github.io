@@ -129,7 +129,7 @@
           <div class="subjectNav">
             <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
             
-            <a href="/_t-inf-lms/courses/webontwikkeling/layout/inleiding.html">Inleiding</a>
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html">Inleiding</a>
             
             <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
             
