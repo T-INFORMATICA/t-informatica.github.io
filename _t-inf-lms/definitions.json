@@ -652,6 +652,36 @@
                 },
                 
                 {
+                    "name": "Statische Websites",
+                    "chapters": [
+                        {
+                            "name": "Icons",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
+                            "name": "Menu",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
+                            "name": "Popup",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
+                            "name": "Modal Popup Window",
+                            "definitions": [
+                            ]
+                        }
+                                
+                    ]
+                },
+                
+                {
                     "name": "Dynamische Websites",
                     "chapters": [
                         {
