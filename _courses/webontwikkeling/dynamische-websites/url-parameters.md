@@ -10,7 +10,7 @@ definitions:
 description: 
 ---
 
-De URL van een pagina is het adres dat je bovenaan in de adresbalk intypt. In PHP is het mogelijk om deze URL uit te breiden met variabelen en waardes, om zo gegevens door te geven naar een bepaalde pagina.
+De URL van een pagina is het adres dat je bovenaan in de adresbalk intypt. In PHP is het mogelijk om deze URL uit te breiden met variabelen en waardes, om te gebruiken in de pagina zelf.
 
 Alle gegevens die op deze manier worden doorgegeven, worden opgeslagen in een array met de naam `$_GET`.
 
