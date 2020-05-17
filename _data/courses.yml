@@ -132,6 +132,9 @@
         - name: URL Parameters
           link: "/courses/webontwikkeling/dynamische-websites/url-parameters.html"
           doel: "dynamische websites"
+        - name: Formulieren
+          link: "/courses/webontwikkeling/dynamische-websites/formulieren.html"
+          doel: "dynamische websites"
         - name: SQL Database Connection
           link: "/courses/webontwikkeling/dynamische-websites/sql-database-connection.html"
           doel: "dynamische websites"
