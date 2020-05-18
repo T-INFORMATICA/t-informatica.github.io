@@ -24,7 +24,7 @@ Elk HTML element heeft een standaard manier waarop het wordt weergegeven, afhank
 
 Een block-level element begint altijd op een nieuwe regel en neemt de volledige breedte van de pagina in beslag (strekt zich uit naar links en rechts zo ver als het kan).
 
-<pre style="background-color: #30638e">
+<pre style="background-color: #30638e; color: white">
 Dit is een block level element
 </pre>
 
