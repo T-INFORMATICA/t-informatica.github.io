@@ -32,7 +32,7 @@ Een webpagina dient om inhoud te laten zien aan een bezoeker. HTML dient om die 
 
 Een tag is een **codewoord tussen een kleiner dan (&lt;) en groter dan (>) teken.**
 
-HTML heeft een lijst[^2] met codewoorden die je kan gebruiken (je mag codewoorden niet verzinnen). Afhankelijk van welk codewoord je gebruikt, wordt de inhoud aangeduid als iets anders.
+HTML heeft een lijst met codewoorden die je kan gebruiken (je mag codewoorden niet verzinnen). Afhankelijk van welk codewoord je gebruikt, wordt de inhoud aangeduid als iets anders.
 
 
 <pre class="prettyprint">
