@@ -46,7 +46,7 @@ Een inline element start niet op een nieuwe regel en neemt slechts zoveel breedt
 
 Een _inline element begint en eindigt_ waar de inhoud ervan begint en eindigt. 
 
-Dus in het midden van deze zin staat <span style="background-color: #30638e">een voorbeeld</span> van een inline element.
+Dus in het midden van deze zin staat <span style="background-color: #30638e; color: white">een voorbeeld</span> van een inline element.
 
 Voorbeelden van inline elementen:
 
