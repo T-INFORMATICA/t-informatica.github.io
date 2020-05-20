@@ -1,5 +1,5 @@
 $(function() {
-  $("pre.prettyprint").html(function(index,currentcontent) {
+  $("pre").html(function(index,currentcontent) {
     return escapeHTMLEncode(currentcontent);
   });
 });

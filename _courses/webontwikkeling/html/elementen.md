@@ -30,15 +30,15 @@ description: Een website bestaat vaak uit verschillende onderdelen. Met HTML wor
 
 Een webpagina dient om inhoud te laten zien aan een bezoeker. HTML dient om die inhoud aan te duiden als tekst, titel, lijst, link, … Tags zijn de codewoorden die HTML gebruikt om aan te duiden waar elk deel van de inhoud voor dient.
 
-Een tag is een **codewoord tussen een kleiner dan (&lt;) en groter dan (>) teken.**
+Een tag is een **codewoord tussen een kleiner dan (`<`) en groter dan (`>`) teken.**
 
 HTML heeft een lijst met codewoorden die je kan gebruiken (je mag codewoorden niet verzinnen). Afhankelijk van welk codewoord je gebruikt, wordt de inhoud aangeduid als iets anders.
 
 
 <pre>
-&lt;img>		→ duidt een afbeelding (image) aan
-&lt;video>		→ duidt een video aan
-&lt;h1>		→ duidt een koptekst (heading niveau 1) aan
+<img>		→ duidt een afbeelding (image) aan
+<video>		→ duidt een video aan
+<h1>		→ duidt een koptekst (heading niveau 1) aan
 </pre>
 
 
@@ -46,13 +46,13 @@ Er bestaan 2 soorten tags:
 
 
 
-1. Openingstags:		<code>&lt;<strong>h1</strong>>		</code>Duidt aan waar de inhoud (koptekst) begint
-2. Sluitingstags:		<code>&lt;/<strong>h1</strong>>		</code>Duidt aan waar de inhoud (koptekst) eindigt
+1. Openingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) begint
+2. Sluitingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) eindigt
 
 <pre>
-&lt;p>dit is een paragraaf&lt;/p> en dit niet meer	→ duidt een paragraaf aan
-&lt;a>dit is een link&lt;/a> en dit niet meer		→ duidt een link aan
-&lt;h1>dit is een koptekst&lt;/h1> en dit niet meer	→ duidt een koptekst aan
+<p>dit is een paragraaf</p> en dit niet meer	→ duidt een paragraaf aan
+<a>dit is een link</a> en dit niet meer		→ duidt een link aan
+<h1>dit is een koptekst</h1> en dit niet meer	→ duidt een koptekst aan
 </pre>
 
 
@@ -64,8 +64,8 @@ Een **HTML-element** is een blok code, bestaande uit een **openingstag**, **inho
 
 
 <pre>
-&lt;p> Dit is een paragraaf element. &lt;/p>
-&lt;h1> Dit is een koptekst element. &lt;/h1>
+<p> Dit is een paragraaf element. </p>
+<h1> Dit is een koptekst element. </h1>
 </pre>
 
 
@@ -78,18 +78,18 @@ In HTML kan inhoud niet bestaan zonder dit tussen een openingstag en sluitingsta
 
 
 
-*   <code>&lt;<strong>hr</strong>></code> (horizontal rule) duidt een horizontale regel aan, en voegt die zelf ook toe.
-*   <code>&lt;<strong>br</strong>></code> (break) duidt een witregel aan in tekst, en voegt die witregel zelf ook toe.
+*   **`<hr>`** (horizontal rule) duidt een horizontale regel aan, en voegt die zelf ook toe.
+*   **`<br>`** (break) duidt een witregel aan in tekst, en voegt die witregel zelf ook toe.
 
 Je kan hier zelf geen inhoud meer aan toevoegen, want deze elementen doen dit zelf al. Deze speciale elementen bestaan dus <strong>enkel uit een openingstag</strong>, zonder inhoud of sluitingstag.
 
 
 <pre>
-&lt;p>
+<p>
 	Dit is een gewoon element.
-&lt;/p>
+</p>
 Hieronder volgt een zelfsluitend element (zonder sluitingstag!):
-&lt;hr>				→ toevoegen en aanduiden van een horizontale lijn
+<hr>				→ toevoegen en aanduiden van een horizontale lijn
 </pre>
 
 
@@ -102,12 +102,12 @@ Bijvoorbeeld: Hieronder is het h1-element (groen) ingesloten door het body-eleme
 
 
 <pre>
-&lt;body>
-	&lt;h1>
+<body>
+	<h1>
 		Dit element is genest in het body element.
 		Dit element is deel van de inhoud van het body element.
-	&lt;/h1>
-&lt;/body>
+	</h1>
+</body>
 </pre>
 
 
@@ -115,17 +115,17 @@ Of een iets uitgebreider voorbeeld:
 
 
 <pre>
-&lt;html>
-	&lt;body>
-		&lt;h1>
+<html>
+	<body>
+		<h1>
 			Dit is een kop1-element.
-		&lt;/h1>
-		&lt;p>
+		</h1>
+		<p>
 			Dit is een paragraaf. Hierin staat meestal wat meer tekst!
 			<b>Deze tekst wordt in het vet weergegeven.</b>
-		&lt;/p>
-	&lt;/body>
-&lt;/html>
+		</p>
+	</body>
+</html>
 </pre>
 
 
@@ -135,7 +135,7 @@ Hierboven wordt duidelijk gemaakt dat:
 
 *   Het `h1` element en het `p` element zijn genest in het `body` element.
 *   In het `p` element is een `b` element genest.
-*   De **inhoud** van het <code>&lt;<strong>body</strong>></code>-element bestaat uit het <code>&lt;<strong>h1</strong>></code>-element, het <code>&lt;<strong>p</strong>></code>-element, het <code>&lt;<strong>b</strong>></code> element dat in het <code>&lt;<strong>p</strong>></code>-element steekt, en de teksten in de elementen <code>&lt;<strong>h1</strong>></code>, <code>&lt;<strong>p</strong>></code> en <code>&lt;<strong>b</strong>> </code>
+*   De **inhoud** van het **`<body>`**-element bestaat uit het **`<h1>`**-element, het **`<p>`**-element, het **`<b>`** element dat in het **`<p>`**-element steekt, en de teksten in de elementen **`<h1>`**, **`<p>`** en **`<b>`**
 
 
 ## Indentatie
@@ -148,23 +148,23 @@ In het volgende voorbeeld staat het aantal indentaties aangeduid door zwarte lij
 
 
 <pre>
-&lt;p>
+<p>
 ---→Dit is tekst in de paragraaf.
 	
----→&lt;ul>
----→---→&lt;li>
----→---→---→&lt;a>
+---→<ul>
+---→---→<li>
+---→---→---→<a>
 ---→---→---→---→Dit is een link
----→---→---→&lt;/a>
----→---→&lt;/li>
----→&lt;/ul>
+---→---→---→</a>
+---→---→</li>
+---→</ul>
 
----→&lt;ol>
----→---→&lt;li>
+---→<ol>
+---→---→<li>
 ---→---→---→Dit is een genummerd item
----→---→&lt;/li>
----→&lt;/ol>
-&lt;/p>
+---→---→</li>
+---→</ol>
+</p>
 </pre>
 
 Zo zie je dat:

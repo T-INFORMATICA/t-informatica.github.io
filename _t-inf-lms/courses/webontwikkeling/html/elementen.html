@@ -432,140 +432,156 @@
 
 <p>Een webpagina dient om inhoud te laten zien aan een bezoeker. HTML dient om die inhoud aan te duiden als tekst, titel, lijst, link, … Tags zijn de codewoorden die HTML gebruikt om aan te duiden waar elk deel van de inhoud voor dient.</p>
 
-<p>Een tag is een <strong>codewoord tussen een kleiner dan (&lt;) en groter dan (&gt;) teken.</strong></p>
+<p>Een tag is een <strong>codewoord tussen een kleiner dan (<code class="highlighter-rouge">&lt;</code>) en groter dan (<code class="highlighter-rouge">&gt;</code>) teken.</strong></p>
 
 <p>HTML heeft een lijst met codewoorden die je kan gebruiken (je mag codewoorden niet verzinnen). Afhankelijk van welk codewoord je gebruikt, wordt de inhoud aangeduid als iets anders.</p>
 
 <pre>
-&lt;img&gt;		→ duidt een afbeelding (image) aan
-&lt;video&gt;		→ duidt een video aan
-&lt;h1&gt;		→ duidt een koptekst (heading niveau 1) aan
-</pre>
+<img />		→ duidt een afbeelding (image) aan
+<video>		→ duidt een video aan
+<h1>		→ duidt een koptekst (heading niveau 1) aan
+&lt;/pre&gt;
 
-<p>Er bestaan 2 soorten tags:</p>
 
-<ol>
-  <li>Openingstags:		<code>&lt;<strong>h1</strong>&gt;		</code>Duidt aan waar de inhoud (koptekst) begint</li>
-  <li>Sluitingstags:		<code>&lt;/<strong>h1</strong>&gt;		</code>Duidt aan waar de inhoud (koptekst) eindigt</li>
-</ol>
+Er bestaan 2 soorten tags:
 
-<pre>
-&lt;p&gt;dit is een paragraaf&lt;/p&gt; en dit niet meer	→ duidt een paragraaf aan
-&lt;a&gt;dit is een link&lt;/a&gt; en dit niet meer		→ duidt een link aan
-&lt;h1&gt;dit is een koptekst&lt;/h1&gt; en dit niet meer	→ duidt een koptekst aan
-</pre>
 
-<h2 id="elementen">Elementen</h2>
 
-<p>Een <strong>HTML-element</strong> is een blok code, bestaande uit een <strong>openingstag</strong>, <strong>inhoud</strong> en <strong>sluitingstag</strong>.</p>
+1. Openingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) begint
+2. Sluitingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) eindigt
 
 <pre>
-&lt;p&gt; Dit is een paragraaf element. &lt;/p&gt;
-&lt;h1&gt; Dit is een koptekst element. &lt;/h1&gt;
+<p>dit is een paragraaf</p> en dit niet meer	→ duidt een paragraaf aan
+<a>dit is een link</a> en dit niet meer		→ duidt een link aan
+<h1>dit is een koptekst</h1> en dit niet meer	→ duidt een koptekst aan
 </pre>
 
-<p>In HTML kan inhoud niet bestaan zonder dit tussen een openingstag en sluitingstag te plaatsen. HTML wordt gebruikt om inhoud toe te voegen aan een website, dus spreken we nooit over het schrijven van tags, maar over het schrijven van elementen.</p>
 
-<h3 id="zelfsluitende-elementen">Zelfsluitende elementen</h3>
 
-<p><strong>Sommige elementen voegen de inhoud die ze aanduiden zelf toe.</strong></p>
 
-<ul>
-  <li><code>&lt;<strong>hr</strong>&gt;</code> (horizontal rule) duidt een horizontale regel aan, en voegt die zelf ook toe.</li>
-  <li><code>&lt;<strong>br</strong>&gt;</code> (break) duidt een witregel aan in tekst, en voegt die witregel zelf ook toe.</li>
-</ul>
+## Elementen
 
-<p>Je kan hier zelf geen inhoud meer aan toevoegen, want deze elementen doen dit zelf al. Deze speciale elementen bestaan dus <strong>enkel uit een openingstag</strong>, zonder inhoud of sluitingstag.</p>
+Een **HTML-element** is een blok code, bestaande uit een **openingstag**, **inhoud** en **sluitingstag**.
+
 
 <pre>
-&lt;p&gt;
+<p> Dit is een paragraaf element. </p>
+<h1> Dit is een koptekst element. </h1>
+</pre>
+
+
+In HTML kan inhoud niet bestaan zonder dit tussen een openingstag en sluitingstag te plaatsen. HTML wordt gebruikt om inhoud toe te voegen aan een website, dus spreken we nooit over het schrijven van tags, maar over het schrijven van elementen.
+
+
+### Zelfsluitende elementen
+
+**Sommige elementen voegen de inhoud die ze aanduiden zelf toe.** 
+
+
+
+*   **`<hr />`** (horizontal rule) duidt een horizontale regel aan, en voegt die zelf ook toe.
+*   **`<br />`** (break) duidt een witregel aan in tekst, en voegt die witregel zelf ook toe.
+
+Je kan hier zelf geen inhoud meer aan toevoegen, want deze elementen doen dit zelf al. Deze speciale elementen bestaan dus <strong>enkel uit een openingstag</strong>, zonder inhoud of sluitingstag.
+
+
+<pre>
+<p>
 	Dit is een gewoon element.
-&lt;/p&gt;
+</p>
 Hieronder volgt een zelfsluitend element (zonder sluitingstag!):
-&lt;hr&gt;				→ toevoegen en aanduiden van een horizontale lijn
+<hr />				→ toevoegen en aanduiden van een horizontale lijn
 </pre>
 
-<h2 id="nesten">Nesten</h2>
 
-<p>Het <strong>nesten</strong> van elementen wilt zeggen dat je <strong>een element insluit in een ander element</strong>. Het ingesloten element is deel van de inhoud van het andere element.</p>
 
-<p>Bijvoorbeeld: Hieronder is het h1-element (groen) ingesloten door het body-element (rood):</p>
+## Nesten
+
+Het **nesten** van elementen wilt zeggen dat je **een element insluit in een ander element**. Het ingesloten element is deel van de inhoud van het andere element.
+
+Bijvoorbeeld: Hieronder is het h1-element (groen) ingesloten door het body-element (rood):
+
 
 <pre>
-&lt;body&gt;
-	&lt;h1&gt;
+<body>
+	<h1>
 		Dit element is genest in het body element.
 		Dit element is deel van de inhoud van het body element.
-	&lt;/h1&gt;
-&lt;/body&gt;
+	</h1>
+</body>
 </pre>
 
-<p>Of een iets uitgebreider voorbeeld:</p>
+
+Of een iets uitgebreider voorbeeld:
+
 
 <pre>
-&lt;html&gt;
-	&lt;body&gt;
-		&lt;h1&gt;
+<html>
+	<body>
+		<h1>
 			Dit is een kop1-element.
-		&lt;/h1&gt;
-		&lt;p&gt;
+		</h1>
+		<p>
 			Dit is een paragraaf. Hierin staat meestal wat meer tekst!
 			<b>Deze tekst wordt in het vet weergegeven.</b>
-		&lt;/p&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+		</p>
+	</body>
+</html>
 </pre>
 
-<p>Hierboven wordt duidelijk gemaakt dat:</p>
 
-<ul>
-  <li>Het <code class="highlighter-rouge">h1</code> element en het <code class="highlighter-rouge">p</code> element zijn genest in het <code class="highlighter-rouge">body</code> element.</li>
-  <li>In het <code class="highlighter-rouge">p</code> element is een <code class="highlighter-rouge">b</code> element genest.</li>
-  <li>De <strong>inhoud</strong> van het <code>&lt;<strong>body</strong>&gt;</code>-element bestaat uit het <code>&lt;<strong>h1</strong>&gt;</code>-element, het <code>&lt;<strong>p</strong>&gt;</code>-element, het <code>&lt;<strong>b</strong>&gt;</code> element dat in het <code>&lt;<strong>p</strong>&gt;</code>-element steekt, en de teksten in de elementen <code>&lt;<strong>h1</strong>&gt;</code>, <code>&lt;<strong>p</strong>&gt;</code> en <code>&lt;<strong>b</strong>&gt; </code></li>
-</ul>
+Hierboven wordt duidelijk gemaakt dat:
 
-<h2 id="indentatie">Indentatie</h2>
 
-<p>Indentatie is <strong>het aantal spaties voor elke lijn code</strong>, dat aanduidt <strong>in welk element die lijn code is genest</strong>.</p>
 
-<p>Hoewel indentatie in HTML niet verplicht is, helpt het om de leesbaarheid van je code enorm te verhogen. Als je indentatie correct is, kan je in één oogopslag zien op hoe je code genest is.</p>
+*   Het `h1` element en het `p` element zijn genest in het `body` element.
+*   In het `p` element is een `b` element genest.
+*   De **inhoud** van het **`<body>`**-element bestaat uit het **`<h1>`**-element, het **`<p>`**-element, het **`<b>`** element dat in het **`<p>`**-element steekt, en de teksten in de elementen **`<h1>`**, **`<p>`** en **`<b>`**
 
-<p>In het volgende voorbeeld staat het aantal indentaties aangeduid door zwarte lijnen voor elke lijn code.</p>
+
+## Indentatie
+
+Indentatie is **het aantal spaties voor elke lijn code**, dat aanduidt **in welk element die lijn code is genest**.
+
+Hoewel indentatie in HTML niet verplicht is, helpt het om de leesbaarheid van je code enorm te verhogen. Als je indentatie correct is, kan je in één oogopslag zien op hoe je code genest is.
+
+In het volgende voorbeeld staat het aantal indentaties aangeduid door zwarte lijnen voor elke lijn code.
+
 
 <pre>
-&lt;p&gt;
+<p>
 ---→Dit is tekst in de paragraaf.
 	
----→&lt;ul&gt;
----→---→&lt;li&gt;
----→---→---→&lt;a&gt;
+---→<ul>
+---→---→<li>
+---→---→---→<a>
 ---→---→---→---→Dit is een link
----→---→---→&lt;/a&gt;
----→---→&lt;/li&gt;
----→&lt;/ul&gt;
+---→---→---→</a>
+---→---→</li>
+---→</ul>
 
----→&lt;ol&gt;
----→---→&lt;li&gt;
+---→<ol>
+---→---→<li>
 ---→---→---→Dit is een genummerd item
----→---→&lt;/li&gt;
----→&lt;/ol&gt;
-&lt;/p&gt;
+---→---→</li>
+---→</ol>
+</p>
 </pre>
 
-<p>Zo zie je dat:</p>
+Zo zie je dat:
 
-<ul>
-  <li>Het <code class="highlighter-rouge">p</code> element niet genest is</li>
-  <li>De elementen <code class="highlighter-rouge">ul</code> en <code class="highlighter-rouge">ol</code> genest zijn in het <code class="highlighter-rouge">p</code> element</li>
-  <li>Alle <code class="highlighter-rouge">li</code> elementen genest zijn in een <code class="highlighter-rouge">ul</code> of <code class="highlighter-rouge">ol</code> element</li>
-</ul>
+*   Het `p` element niet genest is
+*   De elementen `ul` en `ol` genest zijn in het `p` element
+*   Alle `li` elementen genest zijn in een `ul` of `ol` element
 
-<h2 id="coding-guidelines">Coding Guidelines</h2>
 
-<p>Hoewel HTML niet hoofdlettergevoelig is, worden alle tag-namen in <strong>lowercase</strong> geschreven.</p>
+## Coding Guidelines
 
-<p>Bij het schrijven van code let je steeds op de correcte <strong>indentatie</strong>.</p>
+Hoewel HTML niet hoofdlettergevoelig is, worden alle tag-namen in **lowercase** geschreven.
 
+Bij het schrijven van code let je steeds op de correcte **indentatie**.
+
+</b></p></h1></p></b></p></h1></body></h1></h1></h1></video></pre>
 
 
     </section>
@@ -588,14 +604,6 @@ Hieronder volgt een zelfsluitend element (zonder sluitingstag!):
 <div id="toc">
 <ul>
   <li><a href="#html-tags">HTML tags</a></li>
-  <li><a href="#elementen">Elementen</a>
-    <ul>
-      <li><a href="#zelfsluitende-elementen">Zelfsluitende elementen</a></li>
-    </ul>
-  </li>
-  <li><a href="#nesten">Nesten</a></li>
-  <li><a href="#indentatie">Indentatie</a></li>
-  <li><a href="#coding-guidelines">Coding Guidelines</a></li>
 </ul>
 </div>
     </section>
