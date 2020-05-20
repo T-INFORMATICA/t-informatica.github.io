@@ -36,7 +36,7 @@ Deze techniek maakt daarom gebruik van 3 onderdelen:
 2. De aanklikbare, verduisterde **achtergrond** van het Modal Window. (`.modalBackground`)
 3. Een tweede container, waarin het **venster** komt. (`.window`)
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 &lt;div class=&quot;modal&quot;&gt;
 	&lt;a href=&quot;#&quot; class=&quot;modalBackground&quot;&gt;&lt;/a&gt;
 	&lt;div class=&quot;window&quot;&gt;
@@ -45,7 +45,7 @@ Deze techniek maakt daarom gebruik van 3 onderdelen:
 &lt;/div&gt;
 </pre>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 .modal>a.modalBackground {
 	position: fixed;
 	width: 100%;
@@ -78,7 +78,7 @@ De HTML code wordt slechts op 2 plaatsen aangepast:
 *   De div met klasse `.modal` krijgt nu ook de klasse `.popup` toegewezen.
 *   Een hyperlink wordt op de website geplaatst die het popup window opent.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 .modal>a.modalBackground {
 	position: fixed;
 	width: 100%;
@@ -109,7 +109,7 @@ De HTML code wordt slechts op 2 plaatsen aangepast:
 
 
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 &lt;a href=&quot;#modal1&quot;&gt;KLIK&lt;/a&gt;
 &lt;div class=&quot;modal popup&quot;&gt;
 	&lt;a href=&quot;#&quot; class=&quot;modalBackground&quot;&gt;&lt;/a&gt;
@@ -131,7 +131,7 @@ In dit voorbeeld wordt een simpel, wit venster met een close-icon uitgewerkt.
 *   In het venster (`.window`) worden een **`<a>`** en **`<p>`**-element geplaatst. 
 *   Het  **`<a>`**-element (`.fa.fa-times`)  is een inline element, dus kan hier een Font Awesome icon van gemaakt worden. Daarom dat de classes `fa` en `fa-times` worden toegevoegd.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 &lt;div class=&quot;modal popup&quot;&gt;
 	&lt;a href=&quot;#&quot; class=&quot;modalBackground&quot;&gt;&lt;/a&gt;
 	&lt;div class=&quot;window&quot;&gt;
@@ -146,7 +146,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor sagit
 De stijlregels hieronder geven het voorbeeld hetzelfde uitzicht als op de afbeelding:
 
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 .window {
 	position: relative;		/* Dit zorgt ervoor dat het venster bovenop de 						   verduisterde achtergrond getoond wordt. */
 	background-color: white;	/* zet de achtergrondkleur op wit, in 								   plaats van doorzichtig. */

@@ -21,19 +21,19 @@ description: Wanneer een klasse een variabele bevat, is er een relatie tussen di
 ## Relaties
 Wanneer een klasse een variabele bevat, is er een relatie tussen die klasse en het datatype van de variabele. Ook wanneer een klasse een method bevat met een parameter van een datatype, is er een relatie tussen die klasse en het datatype van die parameter. In het voorbeeld hieronder zou je bijvoorbeeld kunnen zeggen dat er een relatie is tussen Leerling en string, want de klasse Leerling heeft een field van het datatype string.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	constructor(naamLeerling) {
 		this._naam = "";		// Een relatie tussen Leerling en string
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	public $_naam = "";		// Een relatie tussen Leerling en string
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string naam = "";			// Een relatie tussen Leerling en string
 }

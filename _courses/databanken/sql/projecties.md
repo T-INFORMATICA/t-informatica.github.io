@@ -23,7 +23,7 @@ Een select query gebruikt een tabel om een nieuwe tabel te maken. Die nieuwe tab
 
 Een kolom projectie is de meest eenvoudige soort projectie. Hierbij worden de gewenste kolommen opgesomd in de query.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select componist, titel, niveau
 from Stuk;
 </pre>
@@ -95,7 +95,7 @@ Resultaat:
 
 Een projectie op alle kolommen kan ook. De afkorting hiervoor is een asterisk (`*`).
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select *
 from Stuk;
 </pre>
@@ -104,7 +104,7 @@ from Stuk;
 
 Een projectie moet niet alleen kolomnamen bevatten. Dit mag ook een constante zijn, bijvoorbeeld een constant stukje tekst, een constant getal of een constante datum:
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select componist, titel, 'heeft als niveau', niveau
 from Stuk;
 </pre>
@@ -191,7 +191,7 @@ Resultaat:
 
 Een select-query mag ook expressies bevatten. De waarde van die expressie wordt dan berekend uit kolomwaardes en/of constanten.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select naam || ' is gevestigd in ' || plaats
 from Muziekschool;
 </pre>
@@ -217,7 +217,7 @@ De expressie hierboven heet een concatenation. Een concatenation is het samenvoe
 
 Om de naam van een kolom in een projectie te wijzigen kan een kolom-alias gebruikt worden.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select nr as stuk,
        titel,
        speelduur * 1.1 as effectieve_speelduur
@@ -232,7 +232,7 @@ Eén van de basisregels van een tabel in een relationele databank is dat alle ri
 
 Bijvoorbeeld:
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select genre, niveau
 from Stuk;
 </pre>
@@ -294,7 +294,7 @@ In deze projectie staan 11 rijen, waarvan enkele meerdere keren voorkomen. Dit k
 
 Om de dubbele rijen weg te laten, moet er een speciaal keyword worden gebruikt in de select-query: `distinct`.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select distinct genre, niveau
 from Stuk;
 </pre>

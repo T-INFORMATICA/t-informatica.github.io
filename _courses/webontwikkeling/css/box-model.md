@@ -170,7 +170,7 @@ De mogelijke waardes zijn:
 Onderstaand voorbeeld zorgt dat de &lt;h1> heading aan de linkerkant in het &lt;div>-element getoond wordt, waarbij de tekst in het &lt;p>-element zich rondom het &lt;h1> element schikt.
 
 
-<pre class="prettyprint">
+<pre>
 &lt;style>
 h1 { 
 	float: left;

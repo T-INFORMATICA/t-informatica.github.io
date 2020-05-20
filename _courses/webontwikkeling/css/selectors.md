@@ -110,7 +110,7 @@ Een div element van de klasse “content” en een ID “koptekst” kan reagere
 Bijvoorbeeld:
 
 
-<pre class="prettyprint">
+<pre>
 div {
 	background-color: red;
 }
@@ -125,7 +125,7 @@ div {
 
 Wanneer, zoals in bovenstaand voorbeeld, alle 3 de selectors stijlregels krijgen, wordt voor het element <code>&lt;<b>div</b> class="content" id="koptekst"></code> een combinatie gemaakt van deze 3 stijlregels:
 
-<pre class="prettyprint">
+<pre>
 	background-color: red;
 	color: green;
 	font-family: verdana;
@@ -138,7 +138,7 @@ Wanneer, zoals in bovenstaand voorbeeld, alle 3 de selectors stijlregels krijgen
 Stijlregels kunnen soms conflicteren: Wanneer je een div element van de klasse “content” hebt voorzien en een ID “koptekst” hebt gegeven, kan het wel eens gebeuren dat verschillende selectors dezelfde stijlregels proberen toe te passen:
 
 
-<pre class="prettyprint">
+<pre>
 div {
 	Background-color: red;
 }
@@ -167,7 +167,7 @@ Wanneer twee selectors **even specifiek zijn** geldt de **onderste stijlregel in
 
 In volgend voorbeeld zal elke &lt;div> een groene achtergrond kleur krijgen.
 
-<pre class="prettyprint">
+<pre>
 div {
 	Background-color: red;
 }

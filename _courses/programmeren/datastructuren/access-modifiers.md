@@ -27,7 +27,7 @@ description: Ook programmeurs maken vaak fouten. Access modifiers zijn een manie
 
 Om te verduidelijken wat Access Modifiers precies zijn wordt een voorbeeld klasse `Leerling gebruikt`. Deze klasse heeft 2 fields: `_naam` en `_leeftijd`.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "";	
@@ -35,13 +35,13 @@ class Leerling {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	public $_naam = "";
 	public $_leeftijd = 0;
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string naam = "";
 	int _leeftijd = 0;
@@ -50,13 +50,13 @@ class Leerling {
 
 Voor dit voorbeeld wordt ook een object aangemaakt van het datatype `Leerling` genaamd `leerling1`.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 let leerling1 = new Leerling();
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $leerling1 = new Leerling();
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 Leerling leerling1 = new Leerling();
 </pre>
 
@@ -68,17 +68,17 @@ Bij veel fields zijn deze beperkingen niet genoeg. Een leeftijd mag bijvoorbeeld
 
 In het voorbeeld kan op dit moment elk field rechtstreeks aangepast worden. Er is dus geen enkele manier om deze semantische regels af te dwingen!
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 let leerling1 = new Leerling();
 Leerling1._naam = "#?!";			// Dit zou niet mogen!
 Leerling1._leeftijd = -2148;			// Dit zou niet mogen!
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $leerling1 = new Leerling();
 Leerling1->_naam = "#?!";			// Dit zou niet mogen!
 Leerling1->_leeftijd = -2148;			// Dit zou niet mogen!
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 Leerling leerling1 = new Leerling();
 Leerling1._naam = "#?!";			// Dit zou niet mogen!
 Leerling1._leeftijd = -2148;			// Dit zou niet mogen!
@@ -103,10 +103,10 @@ Er zijn 3 belangrijke access modifiers:
 
 **Fields moeten altijd private zijn** (indien mogelijk)! Alleen zo kunnen de semantische regels worden afgedwongen. Elke programmeertaal heeft zijn eigen regels over het gebruik van access modifiers.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 // In Javascript bestaan er geen access modifiers. Alle fields en methods zijn altijd public! 
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 // In PHP ben je verplicht om bij een field een access modifier te plaatsen!
 // In PHP moet je dit niet doen bij methods.  
 // Methods zonder access modifier zijn steeds public!
@@ -118,7 +118,7 @@ class Leerling {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 // In C# moet je geen access modifier plaatsen bij fields en methods. 
 // Fields zonder access modifier zijn steeds private! 
 // Methods zonder access modifier zijn steeds public!
@@ -144,7 +144,7 @@ Dit soort functie wordt een **Set functie** genoemd. Dit wordt ook wel eens afge
 
 Hieronder wordt het voorbeeld zo aangepast dat `_leeftijd` een Set functie krijgt, genaamd `SetLeeftijd`.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "";	
@@ -158,7 +158,7 @@ class Leerling {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -170,7 +170,7 @@ class Leerling {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string naam = "";
 	int _leeftijd = 0;
@@ -196,7 +196,7 @@ Om dit te kunnen doen, wordt dezelfde truc toegepast. **Elk field dat op te vrag
 
 Hieronder wordt het voorbeeld zo aangepast dat `_naam` een Get functie krijgt, genaamd `GetNaam`. Dit is een heel simpele functie, die gewoon de waarde van `_naam` teruggeeft.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "";	
@@ -208,7 +208,7 @@ class Leerling {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -218,7 +218,7 @@ class Leerling {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string naam = "";
 	int _leeftijd = 0;

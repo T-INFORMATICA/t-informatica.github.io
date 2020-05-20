@@ -25,28 +25,28 @@ Een klasse is een groep variabelen en functies die bij elkaar horen waar je een 
 
 Een klasse is in feite een complex datatype dat je zelf maakt. Vanaf een klasse gemaakt is, kunnen objecten worden aangemaakt met als datatype de naam van die klasse. In volgend voorbeeld wordt een klasse `Leerling` gemaakt:
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {		// KLASSE
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {		// KLASSE
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 public class Leerling {		// KLASSE
 }
 </pre>
 
 Wanneer die klasse gemaakt is kan je een variabele van het datatype `Leerling` aanmaken:
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 let voorbeeldLeerling = new Leerling();		// OBJECT
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $voorbeeldLeerling = new Leerling();		// OBJECT
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 Leerling voorbeeldLeerling = new Leerling();	// OBJECT
 </pre>
 
@@ -60,7 +60,7 @@ In een klasse kunnen variabelen worden opgeslagen.
 
 Om deze waardes op te slaan, zijn variabelen nodig die bij de klasse Leerling horen, ook wel klasse-variabelen genoemd. Een klasse-variabele wordt ook wel eens een field of member genoemd.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "Sam";	// _naam is een klasse-var
@@ -69,14 +69,14 @@ class Leerling {
 }
 let voorbeeldLeerling = new Leerling();
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	private $_naam = "Sam";		// _naam is een klasse-variabele
 	private $_leeftijd = 18;	// _leeftijd is een klasse-variabele
 }
 $voorbeeldLeerling = new Leerling();	
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string _naam = "Sam";	// _naam is een klasse-variabele
 	int _leeftijd = 18;	// _leeftijd is een klasse-variabele
@@ -100,7 +100,7 @@ De klasse Leerling krijgt een method `Slaap()`. Deze method toont de tekst "zzzz
 
 Probeer je echter de method `Slaap()` aan te roepen zonder een object krijg je een foutmelding: `Slaap` is not defined. Het programma meldt hier letterlijk: de functie `Slaap()` bestaat niet. Dit is correct, want er bestaat enkel een method genaamd `Slaap()`. Wil je een method aanroepen, dan heb je een object nodig van het juiste datatype.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	Slaap() {
 		console.log("zzzzzzzzzzzzzzzzz");
@@ -109,7 +109,7 @@ class Leerling {
 let voorbeeldLeerling = new Leerling();
 voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {
 	function Slaap() {
 		echo "zzzzzzzzzzzzzzzzz";
@@ -118,7 +118,7 @@ class Leerling {
 $voorbeeldLeerling = new Leerling();
 voorbeeldLeerling->Slaap(); 	// toont zzzzzzz in de console
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {
 	void Slaap() {
 		console.log("zzzzzzzzzzzzzzzzz");
@@ -132,19 +132,19 @@ voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
 
 In de volgende code staat iets vreemds:
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 }
 
 let voorbeeldLeerling = new Leerling();
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {
 }
 
 $voorbeeldLeerling = new Leerling();
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {
 }
 
@@ -166,21 +166,21 @@ De constructor is zoals elke andere method, maar heeft een paar beperkingen:
  
 Elke klasse heeft een constructor, zelfs als die niet wordt geschreven. Als je een klasse maakt zonder constructor, wordt er (stiekem) toch een lege constructor gemaakt.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	constructor() {
 	}
 }
 let voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	function __construct() {
 	}
 }
 $voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	public Leerling() {
 	}
@@ -192,7 +192,7 @@ De constructor wordt ook gebruikt om klasse-variabelen een waarde te geven bij h
 
 Het voorbeeld hieronder toont een klasse Leerling met twee fields: `_naam` en `_leeftijd`. De constructor krijgt twee parameters: `naamLeerling` en `leeftijdLeerling`. In de constructor worden de parameter-waardes doorgegeven aan de fields.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = naamLeerling;		
@@ -203,7 +203,7 @@ class Leerling {
 // Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
 let voorbeeldLeerling = new Leerling("Sam", 18);
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	private $_naam = "";		
 	private $_leeftijd = 0;		
@@ -217,7 +217,7 @@ class Leerling {
 // Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
 $voorbeeldLeerling = new Leerling("Sam", 18);	
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string naam = "";		
 	int _leeftijd = 0;	

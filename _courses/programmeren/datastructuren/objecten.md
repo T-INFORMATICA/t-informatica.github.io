@@ -53,15 +53,15 @@ Een variabele van een primitive datatype (in dit voorbeeld integer) wordt op de 
  2. **Geef een naam** aan de variabele
  3. **Geef een initiële waarde** aan de variabele
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
     let myVariable = 0;
 //   1	    2	     3
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
     $myVariable = 0;
 //  1    2        3
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
     int myVariable = 0;
 //   1	   2	     3
 </pre>
@@ -78,21 +78,21 @@ Een variabele van een complex datatype (in dit voorbeeld Date) wordt op dezelfde
 
  Het probleem is echter stap 3: Hoe initialiseer je de waarde van een complexe variabele?
  
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 // !! DIT IS FOUT !!
 let verjaardag = 0; 		// verjaardag is nu een integer, geen Date
 let verjaardag = "11/10/1987";	// verjaardag is nu een string, geen Date
 let verjaardag = 11/10/1987; 	// dit is geen geldige waarde, en zal dus een
 				// error geven
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 // !! DIT IS FOUT !!
 $verjaardag = 0; 		 // verjaardag is nu een integer, geen Date
 $verjaardag = "11/10/1987"; 	// verjaardag is nu een string, geen Date
 $verjaardag = 11/10/1987;   	// dit is geen geldige waarde, en zal dus een
 				// error geven
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 // !! DIT IS FOUT !!
 Date verjaardag = 0; 		// verjaardag is nu een integer, geen Date
 Date verjaardag = "11/10/1987"; // verjaardag is nu een string, geen Date
@@ -102,13 +102,13 @@ Date verjaardag = 11/10/1987;   // dit is geen geldige waarde, en zal dus een
 
 De oplossing hiervoor is het aanmaken van een object. **Een object is een een waarde met een complex datatype**. Een object wordt op de volgende manier aangemaakt:
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 let verjaardag = new Date();
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $verjaardag = new Date();
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 Date verjaardag = new Date();
 </pre>
 
@@ -116,17 +116,17 @@ Het **new** keyword geeft aan dat je een object wilt aanmaken. Dit wordt dan gev
 
 Elke keer dat je een nieuw object aanmaakt, maak je een nieuwe **instantie** aan van dat complexe datatype. 
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 let verjaardag = new Date();		// met Date() roep je de 
 					// constructor-functie aan, waarmee je 
 					// een object van het datatype Date maakt
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $verjaardag = new Date();		// met Date() roep je de 
 					// constructor-functie aan, waarmee je 
 					// een object van het datatype Date maakt
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 Date verjaardag = new Date();		// met Date() roep je de 
 					// constructor-functie aan, waarmee je 
 					// een object van het datatype Date maakt

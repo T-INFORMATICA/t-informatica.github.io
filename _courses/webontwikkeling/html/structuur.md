@@ -33,7 +33,7 @@ Structuur wordt gegeven door middel van block elementen zoals het <code>&lt;<str
 Dit vertaalt zich dan naar de volgende code:
 
 
-<pre class="prettyprint">
+<pre>
 &lt;div>
 	&lt;div id="1">
 	&lt;/div>
@@ -56,7 +56,7 @@ Deze hoofdstructuur kan dan gemakkelijk uitgebreid worden met een **substructuur
 <img src="{{ site.baseurl }}/assets/img/html-structuur4.jpg" alt="klassediagram" style="height: auto; max-width: 100%">
 
 
-<pre class="prettyprint">
+<pre>
 &lt;div>
 	&lt;div id="1">
 		&lt;div id="1.1">

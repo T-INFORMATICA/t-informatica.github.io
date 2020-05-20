@@ -21,21 +21,21 @@ Programmeren is het geven van instructies (bevelen) aan een computer. Als je een
 
 Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 5 + 2 /* geen instructie, want geen toewijzing (enkel een expressie) */
 
 5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
 
 var getal = 5 + 2; // wel een instructie
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
 
 5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
 
 $getal = 5 + 2; // wel een instructie
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
 
 5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
@@ -61,7 +61,7 @@ Je kan commentaar op 2 manieren toevoegen:
 ### 3.2.1 Commentaar op één lijn
 Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.
 
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
+<pre class="linenums lang lang-PHP lang-CS lang-JS">
 // Dit gedeelte wordt door de computer genegeerd
 </pre>
 
@@ -72,7 +72,7 @@ Je kan dit doen door:
  - Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).
 
 Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.
-<pre class="prettyprint linenums lang lang-PHP lang-CS lang-JS">
+<pre class="linenums lang lang-PHP lang-CS lang-JS">
 // Dit gedeelte wordt
 // door de computer genegeerd
 

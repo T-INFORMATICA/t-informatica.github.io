@@ -20,7 +20,7 @@ Een SQL query bestaat uit drie onderdelen:
  
 Met een projectie wordt bepaald welke kolommen uit een tabel worden genomen om een nieuwe tabel te maken. 
  
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select componist, titel, niveau 	-- 3: projectie
 from Stuk 				-- 1: brontabel
 where genre = 'klassiek'; 		-- 2: selectie
@@ -28,7 +28,7 @@ where genre = 'klassiek'; 		-- 2: selectie
  
 Een projectie moet niet alleen kolomnamen bevatten. Dit mag ook een constante zijn, bijvoorbeeld een constant stukje tekst, een constant getal of een constante datum. In het voorbeeld hieronder wordt een kolom toegevoegd, waar in elke cel de waarde "heeft als niveau" wordt gezet.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select componist, titel, 'heeft als niveau', niveau
 from Stuk;
 </pre>
@@ -41,7 +41,7 @@ In de databank heeft elk muziekstuk een bepaalde, officiële speelduur gekregen.
 
 Een SQL query kan hiervoor in de projectie gebruik maken van de gekende wiskundige operaties: optellen (+), vermenigvuldigen (\*), delen (/) en aftrekken (-).
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select nr,
  titel,
  speelduur * 1.1 -- verhoog de speelduur met 10%
@@ -54,7 +54,7 @@ Concatenatie is het samenvoegen van twee of meer kolommen in één kolom.
 
 Zo kan een 
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT CONCAT(titel, 'heeft als niveau', niveau)
 FROM Stuk;
 </pre>

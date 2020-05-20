@@ -464,7 +464,7 @@
 
 <p>Een <code class="highlighter-rouge">cross join</code> maakt een tabel met alle fields uit tabel A en B. Elke record in de nieuwe tabel is een mogelijke combinatie tussen een record uit tabel A en een record uit tabel B.</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -589,7 +589,7 @@ large
 
 <p>Een <code class="highlighter-rouge">inner join</code> (vaak ook afgekort tot <code class="highlighter-rouge">join</code>) is een <code class="highlighter-rouge">cross join</code> waarin enkel de rijen staan die voldoen aan een voorwaarde.</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -640,7 +640,7 @@ small
 
 <p>Een <code class="highlighter-rouge">left outer join</code> (ook wel <code class="highlighter-rouge">left join</code> genoemd) is, net als de <code class="highlighter-rouge">inner join</code>, een <code class="highlighter-rouge">join</code> met een voorwaarde. Het resultaat hiervan is een <code class="highlighter-rouge">inner join</code>, met daarbij ook <strong>alle rijen uit de eerste tabel die niet aan de voorwaarde voldoen</strong>. De kolommen uit de tweede tabel worden met een <code class="highlighter-rouge">null</code> waarde ingevuld.</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -706,7 +706,7 @@ null
 
 <p>Een <code class="highlighter-rouge">right outer join</code> (ook wel <code class="highlighter-rouge">right join</code> genoemd) is, net als de <code class="highlighter-rouge">inner join</code>, een <code class="highlighter-rouge">join</code> met een voorwaarde. Het resultaat hiervan is een <code class="highlighter-rouge">inner join</code>, met daarbij ook <strong>alle rijen uit de tweede tabel die niet aan de voorwaarde voldoen</strong>. De kolommen uit de eerste tabel worden met een <code class="highlighter-rouge">null</code> waarde ingevuld.</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -796,7 +796,7 @@ Dit is ook zichtbaar in het databankontwerp: <code class="highlighter-rouge">Stu
 
 <p>Een inner join tussen deze twee tabellen ziet er dus zo uit:</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Stuk

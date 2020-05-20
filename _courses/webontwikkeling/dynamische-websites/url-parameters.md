@@ -35,7 +35,7 @@ En om meerdere variabelen door te geven ziet de URL er zo uit:
  
 Dit is hetzelfde als de `$_GET` array als volgt in te vullen:
 
-<pre class="prettyprint linenums">
+<pre class="linenums">
 $_GET["productID"] = 1;
 $_GET["productnaam"] = "Shampoo";
 </pre>
@@ -44,7 +44,7 @@ Door deze variabelen via de URL mee te geven, wordt de `$_GET` array echter **au
 
 De `$_GET` array werkt verder zoals elke andere associative array. Zo is het mogelijk om waardes op te vragen, aan te passen of toe te voegen met de volgende code:
 
-<pre class="prettyprint linenums">
+<pre class="linenums">
 echo $_GET["productID"];		// toon 1 op het scherm
 echo $_GET["productNaam"];		// toon Shampoo op het scherm
 $_GET["productnaam"] = "Zeep";	// verandert de waarde “Shampoo” in “zeep” in de $_GET array

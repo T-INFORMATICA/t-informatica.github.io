@@ -68,7 +68,7 @@ Rijen worden niet geselecteerd zoals kolommen (rijen hebben geen naam zoals kolo
 
 Een `WHERE` filter gebruikt voorwaarden (logische operaties), en toont enkel die rijen die aan die voorwaarden voldoen.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 -- Select query met filters
 SELECT column, another_column, ...
 FROM mytable
@@ -179,7 +179,7 @@ Opgelet! Zorg ervoor dat alle tekst waardes tussen dubbele aanhalingstekens staa
 
 De `DISTINCT` filter verwijdert alle dubbele rijen uit het resultaat van een query.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 -- Select query met unieke resultaten
 SELECT DISTINCT column, another_column, ...
 FROM mytable
@@ -234,7 +234,7 @@ Uit de volgende tabel wil je te weten komen hoeveel wielen een voertuig kan hebb
    </tr>
 </table>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 -- selecteer de kolom wielen uit de tabel autos
 SELECT Wielen
 FROM autos;
@@ -265,7 +265,7 @@ Deze query geeft als resultaat de tabel hieronder. In deze resultaattabel is nie
 
 Om dit op te lossen gebruik je het keyword DISTINCT. Dit zorgt ervoor dat elke rij die de query teruggeeft een unieke rij is. 
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 -- selecteer de kolom wielen uit de tabel autos
 SELECT DISTINCT Wielen
 FROM autos;
@@ -291,7 +291,7 @@ In een tabel in een relationele databank maakt de volgorde van rijen geen versch
 
 Sorteren gebeurt met het ORDER BY keyword. Hierbij wordt aangeduid welke kolom gebruikt wordt om te sorteren, en of er oplopend (ascending → `ASC`) of aflopend (descending → `DESC`) wordt gesorteerd.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 -- Select query with ordered results
 SELECT column, another_column, ...
 FROM mytable
@@ -304,7 +304,7 @@ ORDER BY column ASC/DESC;
 De LIMIT filter toont enkel de eerste zoveel rijen uit je query. De OFFSET filter bepaalt na welke rij de LIMIT filter begint. 
 Hoewel je deze filter kan gebruiken zonder een ORDER BY sortering, heeft dit zelden zin. Daarom worden deze twee SQL commando’s vaak samen gebruikt.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 -- Select query met beperkt aantal rijen
 SELECT column, another_column, … 
 FROM mytable

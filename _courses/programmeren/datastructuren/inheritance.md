@@ -38,7 +38,7 @@ De klassen waaruit deze fields en methods werden weggehaald, worden dan aangedui
 
 In het voorbeeld hieronder zijn er 2 klassen `Leraar` en `Leerling` gedefinieerd:
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 Javascript
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
@@ -56,7 +56,7 @@ class Leraar {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -69,7 +69,7 @@ class Leraar {
 	private $_diplomas = array();
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string _naam = "";
 	int _leeftijd = 0;
@@ -87,7 +87,7 @@ Beide klassen hebben een field `naam` en een field `leeftijd` die semantisch het
 
 Daarom wordt er nu een derde klasse gemaakt: `Persoon`. Persoon wordt de **superklasse** van `Leerling` en `Leraar`. `Leerling` en `Leraar` worden vervolgens aangeduid dat ze overerven van de klasse Persoon. Dit zijn de **subklassen** van de klasse Persoon.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Persoon {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "";
@@ -107,7 +107,7 @@ class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Persoon {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -121,7 +121,7 @@ class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
 	private $_diplomas = array();
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Persoon {	
 	string _naam = "";
 	int _leeftijd = 0;

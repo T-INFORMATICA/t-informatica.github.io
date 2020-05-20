@@ -28,7 +28,7 @@ description: Wat zijn codeblokken?
 
 Een codeblok ziet er bijvoorbeeld zo uit:
 
-<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+<pre class="linenums lang lang-JS lang-CS lang-PHP">
 {
 	// instructies
 	// instructies
@@ -64,7 +64,7 @@ Hieronder staat twee maal dezelfde code geschreven. Links staat het voorbeeld me
  </tr>
  <tr>
   <td>
-<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+<pre class="linenums lang lang-JS lang-CS lang-PHP">
 { // blok 1
 	// instructies
 	// instructies
@@ -82,7 +82,7 @@ Hieronder staat twee maal dezelfde code geschreven. Links staat het voorbeeld me
 </pre>
   </td>
   <td>
-<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+<pre class="linenums lang lang-JS lang-CS lang-PHP">
 { // blok 1
 // instructies			
 // instructies
@@ -116,7 +116,7 @@ De scope van een stuk code laat zien op welke plaatsen in de programma-code je i
    - De variabele groen kan je dus gebruiken in het blauwe en rode blok.
    - De variabele blauw kan je enkel in het blauwe blok gebruiken.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 { // parent blok
 	var inParent = "groen";		// scope is de parent en beide children
 	
@@ -129,7 +129,7 @@ De scope van een stuk code laat zien op welke plaatsen in de programma-code je i
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 { // parent blok
 	$inParent = "groen";		// scope is de parent en beide children
 	
@@ -142,7 +142,7 @@ De scope van een stuk code laat zien op welke plaatsen in de programma-code je i
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 { // parent blok
 	string inParent = "groen";		// scope is de parent en beide children
 	
@@ -169,7 +169,7 @@ Dit wil zeggen: probeer jezelf niet keer op keer te herhalen in je code.
 
 Waarom is dit principe zo belangrijk? Stel je voor dat we een codeblok hebben om een explosie te maken. Het codeblok zou er waarschijnlijk als volgt uitzien:
 
-<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+<pre class="linenums lang lang-JS lang-CS lang-PHP">
 // codeblok voor explosie:
 {
 	// maak een geluidje
@@ -184,7 +184,7 @@ In een spel zijn er verschillende dingen die kunnen exploderen: wanneer een auto
 <table style="width: 100%">
  <tr>
   <td>
-<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+<pre class="linenums lang lang-JS lang-CS lang-PHP">
 AUTO:
 
 // explosie instructies:
@@ -195,7 +195,7 @@ AUTO:
 </pre>
   </td>
   <td>
-<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+<pre class="linenums lang lang-JS lang-CS lang-PHP">
 GRANAAT:
 
 // explosie instructies:

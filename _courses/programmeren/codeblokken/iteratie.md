@@ -18,7 +18,7 @@ Alle code die tot nu toe werd behandeld heeft één ding gemeen: instructies wor
 
 Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.
 
-<pre class="prettyprint linenums lang lang-JS lang-PHP">
+<pre class="linenums lang lang-JS lang-PHP">
 function Explodeer(x) 
 {
 	// maak een geluidje
@@ -26,7 +26,7 @@ function Explodeer(x)
 	// doe x schade
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 void Explodeer(x) 
 {
 	// maak een geluidje
@@ -44,7 +44,7 @@ Iteratie is het herhaaldelijk uitvoeren van code zo lang een voorwaarde *waar* i
 
 Bijvoorbeeld: Een explosie laat een licht 10 maal flikkeren. Hiervoor wordt een variabele y gemaakt die optelt. Pas als de variabele y niet langer kleiner is dan 10, gaat het codeblok verder met z’n instructies (`doe 5 schade`). 
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 function Explodeer() 
 {
 	// maak een geluidje
@@ -56,7 +56,7 @@ function Explodeer()
 	// doe 5 schade
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 function Explodeer() 
 {
 	// maak een geluidje
@@ -68,7 +68,7 @@ function Explodeer()
 	// doe 5 schade
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 function Explodeer() 
 {
 	// maak een geluidje
@@ -97,7 +97,7 @@ Beide blokken itereren (herhalen) hun instructies op een andere manier.
 WHILE wilt in het Nederlands zeggen: zolang. Het while codeblok herhaalt de instructies in in het codeblok **zolang een voorwaarde waar is**.
 WHILE wilt dus eigenlijk zeggen: **zolang de voorwaarde waar is**, voer deze instructies opnieuw uit. Bijvoorbeeld: 
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 var intTest = 0;
 
 while (intTest < 10) 
@@ -107,7 +107,7 @@ while (intTest < 10)
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $intTest = 0;
 
 while ($intTest < 10) 
@@ -117,7 +117,7 @@ while ($intTest < 10)
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 int intTest = 0;
 
 while (intTest < 10) 
@@ -144,7 +144,7 @@ Het FOR blok is een iteratie waarbij deze 3 stappen in 1 regel code worden gesch
  2. Kijk na of die variabele kleiner is dan 10
  3. Verhoog de variabele met 1
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 //     stap 1   stap 2	  stap 3
 for (var i = 0; i < 10; i = i + 1)
 {
@@ -152,7 +152,7 @@ for (var i = 0; i < 10; i = i + 1)
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 //    stap 1  stap 2	stap 3
 for ($i = 0; $i < 10; $i = $i + 1)
 {
@@ -160,7 +160,7 @@ for ($i = 0; $i < 10; $i = $i + 1)
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 //     stap 1   stap 2	  stap 3
 for (int i = 0; i < 10; i = i + 1)
 {
@@ -173,17 +173,17 @@ for (int i = 0; i < 10; i = i + 1)
 
 De index van een indexed array is een integer (een geheel getal). Dat wilt zeggen dat elke variabele die een geheel getal bevat gebruikt kan worden om een element uit de array op te vragen.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 var autos = ["Volvo", "BMW", "Toyota"];
 var index = 1;
 var tweedeAuto = autos[index];
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $autos = array("Volvo", "BMW", "Toyota");
 $index = 1;
 $tweedeAuto = autos[$index];
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 string[] autos = {"Volvo", "BMW", "Toyota"};
 int index = 1;
 string tweedeAuto = autos[index];
@@ -195,7 +195,7 @@ Een for-loop maakt een variabele aan, en verhoogt deze variabele bij elke iterat
 
 Als de variabele van een for-loop dus begint bij 0, en eindigt voor het aantal waardes in een array, kan je met een for-loop elke index van een array overlopen.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 var autos = ["Volvo", "BMW", "Toyota"];
 var aantal = autos.length;
 
@@ -203,7 +203,7 @@ for (let i = 0; i < aantal; ++i) {
 	console.log(autos[i]);
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $autos = array("Volvo", "BMW", "Toyota");
 $aantal = count($autos);
 
@@ -211,7 +211,7 @@ for ($i = 0; $i < $aantal; ++$i) {
 	echo $autos[$i];
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 string[] autos = {"Volvo", "BMW", "Toyota"};
 int aantal = autos.Length;
 

@@ -364,7 +364,7 @@
 
 <p>De volgende select-query laat een aantal gegevens van klassieke muziekstukken afdrukken op volgorde van niveau:</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select nr, genre, niveau, round(speelduur)
 from Stuk
 where genre = 'klassiek'
@@ -420,7 +420,7 @@ order by niveau;
 
 <p>Standaard wordt oplopend (‘ascending’) gesorteerd. Desgewenst kunnen we dit expliciet in het statement opnemen: … order by speelduur asc. Aflopend sorteren (‘descending’) kan ook:</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select nr, genre, niveau, round(speelduur)
 from Stuk
 where genre = 'klassiek'

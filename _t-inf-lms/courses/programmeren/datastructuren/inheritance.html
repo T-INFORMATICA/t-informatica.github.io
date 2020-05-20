@@ -410,7 +410,7 @@
 
 <p>In het voorbeeld hieronder zijn er 2 klassen <code class="highlighter-rouge">Leraar</code> en <code class="highlighter-rouge">Leerling</code> gedefinieerd:</p>
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 Javascript
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
@@ -428,7 +428,7 @@ class Leraar {
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Leerling {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -441,7 +441,7 @@ class Leraar {
 	private $_diplomas = array();
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Leerling {	
 	string _naam = "";
 	int _leeftijd = 0;
@@ -459,7 +459,7 @@ class Leraar {
 
 <p>Daarom wordt er nu een derde klasse gemaakt: <code class="highlighter-rouge">Persoon</code>. Persoon wordt de <strong>superklasse</strong> van <code class="highlighter-rouge">Leerling</code> en <code class="highlighter-rouge">Leraar</code>. <code class="highlighter-rouge">Leerling</code> en <code class="highlighter-rouge">Leraar</code> worden vervolgens aangeduid dat ze overerven van de klasse Persoon. Dit zijn de <strong>subklassen</strong> van de klasse Persoon.</p>
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 class Persoon {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "";
@@ -479,7 +479,7 @@ class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
 	}
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 class Persoon {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -493,7 +493,7 @@ class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
 	private $_diplomas = array();
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 class Persoon {	
 	string _naam = "";
 	int _leeftijd = 0;

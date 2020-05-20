@@ -364,7 +364,7 @@
 
 <p>Een selectie legt voorwaarden op aan elke rij, in een extra where-clausule. Alleen rijen die aan de voorwaarde(n) voldoen, worden opgenomen in de resultaattabel.</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select componist, titel, niveau 	-- 3: projectie
 from Stuk 				-- 1: brontabel
 where genre = 'klassiek'; 		-- 2: selectie
@@ -389,7 +389,7 @@ where genre = 'klassiek'; 		-- 2: selectie
 
 <p>Een voorwaarde kan ook opgebouwd worden met behulp van <code class="highlighter-rouge">between ... and ...</code></p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select naam, geboortedatum
 from Componist
 where geboortedatum between '1700-01-01' and '1799-12-31';
@@ -410,7 +410,7 @@ where geboortedatum between '1700-01-01' and '1799-12-31';
 
 <p>Een <code class="highlighter-rouge">between ... and ...</code>  voorwaarde kan ook worden omgekeerd met behulp van het not keyword. Dit geeft dan alle componisten terug die niet zijn geboren tussen die data.</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select naam, geboortedatum
 from Componist
 where geboortedatum not between '1700-01-01' and '1799-12-31';
@@ -422,7 +422,7 @@ where geboortedatum not between '1700-01-01' and '1799-12-31';
 
 <p>Zo kan bijvoorbeeld een selectie worden gemaakt van componisten op basis van een deel van hun naam:</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select naam componist
 from Componist
 where naam like '%ar%';
@@ -483,7 +483,7 @@ where naam like '%ar%';
 <h2 id="voorwaarde-met-in-">Voorwaarde met in …</h2>
 <p>Een select-query met or kan soms worden vereenvoudigd door het gebruik van in voorwaarde.</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select *
 from Stuk
 where genre = 'klassiek' or genre = 'jazz' or genre = 'house';
@@ -491,7 +491,7 @@ where genre = 'klassiek' or genre = 'jazz' or genre = 'house';
 
 <p>kan worden vereenvoudigd tot:</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select *
 from Stuk
 where genre in ('klassiek', 'jazz', 'house');
@@ -501,7 +501,7 @@ where genre in ('klassiek', 'jazz', 'house');
 
 <p>Ook op nulls kan worden gecontroleerd binnen een selectievoorwaarde. In de volgende query worden alle originele stukken geselecteerd:</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select *
 from Stuk
 where origineel is null; -- alle originele stukken
@@ -513,7 +513,7 @@ where origineel is null; -- alle originele stukken
 
 <p>Bewerkingen zijn dan de stukken waarbij origineel juist wel is ingevuld, dus ‘not null’ is:</p>
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 select *
 from Stuk
 where origineel is not null; -- alle bewerkingen

@@ -56,19 +56,19 @@ Het aanmaken van een variabele wordt ook wel het **declareren** van een variabel
  
 Wil je bijvoorbeeld bijhouden hoeveel levens een speler heeft, dan maak je een variabele zo aan:
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
  1	2	   3		// 1: declareer; 2: benoem; 3: waarde;
 var aantalLevens = 3;
 
 /* Javascript bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 1  2	   	3		// 1: declareer; 2: benoem; 3: waarde;
 $aantalLevens = 3;
 
 /* PHP bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
  1	   2	   3		// 1: declareer; 2: benoem; 3: waarde;
 int aantalLevens = 3;
 </pre>
@@ -98,7 +98,7 @@ Terwijl een programma wordt uitgevoerd (wanneer het spel dus gespeeld wordt) kan
 
 Bv.: een speler start het spel opnieuw op, dus het 'aantalLevens' wordt terug op 3 gezet:
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 var aantalLevens = 1;
 
 // de speler start het spel opnieuw:
@@ -106,7 +106,7 @@ aantalLevens = 3; 	// let op: 'var' wordt NIET opnieuw geschreven!
 			// 'var' dient om een nieuwe variabele te maken
 			// en hier passen we een bestaande variabele aan
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $aantalLevens = 1;
 
 // de speler start het spel opnieuw:
@@ -114,7 +114,7 @@ $aantalLevens = 3;	// let op: '$' wordt OOK HIER opnieuw geschreven!
 			// '$' dient om een nieuwe variabele te maken
 			// en OOK om een bestaande variabele te gebruiken!
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 int aantalLevens = 1;
 
 // de speler start het spel opnieuw:
@@ -126,15 +126,15 @@ aantalLevens = 3; 	// let op: 'int' wordt NIET opnieuw geschreven!
 Als bijvoorbeeld de speler een leven verliest kan het 'aantalLevens' vermindert worden met 1. 
 De nieuwe waarde van 'aantalLevens' is dus de oude waarde van 'aantalLevens' min één.
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 var aantalLevens = 3;
 aantalLevens = aantalLevens - 1;
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $aantalLevens = 3;
 $aantalLevens = $aantalLevens - 1;
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 int aantalLevens = 3;
 aantalLevens = aantalLevens - 1;
 </pre>

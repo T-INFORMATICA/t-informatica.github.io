@@ -20,7 +20,7 @@ Alle code die tot nu toe werd behandeld heeft één ding gemeen: instructies wor
 
 Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.
 
-<pre class="prettyprint linenums lang lang-JS lang-PHP">
+<pre class="linenums lang lang-JS lang-PHP">
 function Explodeer(x) 
 {
 	// maak een geluidje
@@ -28,7 +28,7 @@ function Explodeer(x)
 	// doe x schade
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 void Explodeer(x) 
 {
 	// maak een geluidje
@@ -43,7 +43,7 @@ Selectie is het uitvoeren van code als een voorwaarde waar of niet waar is.
 
 Bijvoorbeeld: Een explosie mag pas geluid maken als de schade groter is dan 10. Met andere woorden: Als x groter is dan 10, maak dan een geluid (anders sla je die instructie over).
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 function Explodeer(x) 
 {
 	if (x > 10) {
@@ -53,7 +53,7 @@ function Explodeer(x)
 	// doe x schade
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 function Explodeer(x) 
 {
 	if ($x > 10) {
@@ -63,7 +63,7 @@ function Explodeer(x)
 	// doe x schade
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 void Explodeer(x) 
 {
 	if (x > 10) {
@@ -87,7 +87,7 @@ IF wilt dus eigenlijk zeggen: **als de voorwaarde waar is**, voer dan deze instr
 
 Bijvoorbeeld: 
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 var intTest = 0;
 
 if (intTest < 1) 
@@ -96,7 +96,7 @@ if (intTest < 1)
 	// In dit voorbeeld wordt de code hier uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $intTest = 0;
 
 if ($intTest < 1) 
@@ -105,7 +105,7 @@ if ($intTest < 1)
 	// In dit voorbeeld wordt de code hier uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 int intTest = 0;
 
 if (intTest < 1) 
@@ -125,7 +125,7 @@ Een ELSE IF blok kan worden toegevoegd aan een selectie, volgend op een IF-blok 
  
 ELSE IF wilt dus eigenlijk zeggen: **als de voorgaande IF en ELSE IFs niet waar zijn, en deze voorwaarde wel waar is**, voer dan deze instructies uit. Bijvoorbeeld: 
 
-<pre class="prettyprint linenums lang lang-JS lang-CS lang-PHP">
+<pre class="linenums lang lang-JS lang-CS lang-PHP">
 var intTest = 2;
 if (intTest < 1) 
 {
@@ -143,7 +143,7 @@ else if (intTest < 5)
 	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $intTest = 2;
 if ($intTest < 1) 
 {
@@ -161,7 +161,7 @@ else if ($intTest < 5)
 	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 int intTest = 2;
 if (intTest < 1) 
 {
@@ -190,7 +190,7 @@ Een ELSE blok kan als laatste worden toegevoegd aan een selectie. Het ELSE blok 
 ELSE wilt dus eigenlijk zeggen: **in alle andere gevallen**, voer dan het volgende codeblok uit.
 Bijvoorbeeld: 
 
-<pre class="prettyprint linenums lang lang-JS">
+<pre class="linenums lang lang-JS">
 var intTest = 6;
 
 if (intTest < 1) 
@@ -211,7 +211,7 @@ else
 	// In dit voorbeeld wordt deze code uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-PHP">
+<pre class="linenums lang lang-PHP">
 $intTest = 6;
 
 if ($intTest < 1) 
@@ -232,7 +232,7 @@ else
 	// In dit voorbeeld wordt deze code uitgevoerd.
 }
 </pre>
-<pre class="prettyprint linenums lang lang-CS">
+<pre class="linenums lang lang-CS">
 int intTest = 6;
 
 if (intTest < 1) 

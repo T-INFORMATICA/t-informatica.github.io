@@ -125,7 +125,7 @@ Er is dus meer dan één `join` commando. Om elk van deze `join`s uit te leggen 
 
 Een `cross join` maakt een tabel met alle fields uit tabel A en B. Elke record in de nieuwe tabel is een mogelijke combinatie tussen een record uit tabel A en een record uit tabel B.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -250,7 +250,7 @@ large
 
 Een `inner join` (vaak ook afgekort tot `join`) is een `cross join` waarin enkel de rijen staan die voldoen aan een voorwaarde.
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -302,7 +302,7 @@ small
 Een `left outer join` (ook wel `left join` genoemd) is, net als de `inner join`, een `join` met een voorwaarde. Het resultaat hiervan is een `inner join`, met daarbij ook **alle rijen uit de eerste tabel die niet aan de voorwaarde voldoen**. De kolommen uit de tweede tabel worden met een `null` waarde ingevuld.
 
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -369,7 +369,7 @@ null
 Een `right outer join` (ook wel `right join` genoemd) is, net als de `inner join`, een `join` met een voorwaarde. Het resultaat hiervan is een `inner join`, met daarbij ook **alle rijen uit de tweede tabel die niet aan de voorwaarde voldoen**. De kolommen uit de eerste tabel worden met een `null` waarde ingevuld.
 
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Color 
@@ -461,7 +461,7 @@ Dit is ook zichtbaar in het databankontwerp: `Stuk.componist` is een refererende
 Een inner join tussen deze twee tabellen ziet er dus zo uit:
 
 
-<pre class="prettyprint linenums lang-sql">
+<pre class="linenums lang-sql">
 SELECT * 
 FROM 
  Stuk
