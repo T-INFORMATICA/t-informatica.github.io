@@ -30,7 +30,7 @@ from Stuk;
 
 Resultaat:
 
-<table>
+<table class="styledTable">
    <tr>
       <td>COMPONIST</td>
       <td>TITEL</td>
@@ -111,7 +111,7 @@ from Stuk;
 
 Resultaat:
 
-<table>
+<table class="styledTable">
    <tr>
       <td>COMPONIST</td>
       <td>TITEL</td>
@@ -198,7 +198,7 @@ from Muziekschool;
 
 De expressie hierboven heet een concatenation. Een concatenation is het samenvoegen van tekst-waarden zodat het één tekst wordt.
 
-<table>
+<table class="styledTable">
    <tr>
       <td>CONCATENATION</td>
    </tr>
@@ -239,7 +239,7 @@ from Stuk;
 
 Resultaat:
 
-<table>
+<table class="styledTable">
    <tr>
       <th>GENRE</th>
       <th>NIVEAU</th>
@@ -302,7 +302,7 @@ from Stuk;
 Resultaat:
 
 
-<table>
+<table class="styledTable">
    <tr>
       <th>GENRE</th>
       <th>NIVEAU</th>

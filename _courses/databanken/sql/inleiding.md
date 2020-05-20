@@ -62,7 +62,7 @@ Een tabel dient om een entiteit (bijvoorbeeld “Honden”) te definiëren. Elke
 
 Als de Overheidsdienst Mobiliteit een database heeft, bevindt zich daar waarschijnlijk een tabel in met alle voertuigen die mensen in België gebruiken. Deze tabel zou bijvoorbeeld de modelnaam, het type, aantal wielen en aantal deuren kunnen bijhouden.
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Id</th>
       <th>Merk/Model</th>

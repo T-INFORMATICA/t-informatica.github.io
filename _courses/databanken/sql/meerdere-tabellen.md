@@ -41,7 +41,7 @@ Er zijn verschillende manieren om twee tabellen samen te voegen:
  
 Er is dus meer dan één `join` commando. Om elk van deze `join`s uit te leggen worden twee voorbeeldtabellen gebruikt: `Color` en `Size`. Beide tabellen hebben een achtergrondkleur gekregen, om elke soort `join` te verduidelijken.
 
-<table style="max-width: 400px">
+<table class="styledTable" style="max-width: 400px">
  <tr style="background-color: white">
   <th colspan="2" style="text-align: right">
    Color
@@ -77,7 +77,7 @@ Er is dus meer dan één `join` commando. Om elk van deze `join`s uit te leggen 
 </table>
 
 
-<table style="max-width: 400px">
+<table class="styledTable" style="max-width: 400px">
  <tr style="background-color: white">
   <th colspan="2" style="text-align: right">
    Size
@@ -133,7 +133,7 @@ FROM
  Size
 </pre>
 
-<table style="max-width: 600px">
+<table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
   <th colspan="4" style="text-align: right">
    Cross Join
@@ -259,7 +259,7 @@ FROM
  ON Color.id = Size.id
 </pre>
 
-<table style="max-width: 600px">
+<table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
   <th colspan="4" style="text-align: right">
    Inner Join
@@ -311,7 +311,7 @@ FROM
  ON Color.id = Size.id
 </pre>
 
-<table style="max-width: 600px">
+<table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
   <th colspan="4" style="text-align: right">
    Left Outer Join
@@ -378,7 +378,7 @@ FROM
  ON Color.id = Size.id
 </pre>
 
-<table style="max-width: 600px">
+<table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
   <th colspan="4" style="text-align: right">
    Right Outer Join

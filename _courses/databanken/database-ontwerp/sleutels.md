@@ -50,7 +50,7 @@ In het voorbeeld hieronder:
  - De combinatie 'naam' en 'eenheid' is een **slechte** primaire sleutel
    - Hoewel deze primaire sleutel voldoet aan eis 2 (de combinatie 'naam' en 'eenheid' is uniek'), voldoet hij niet aan eis 1 (het deel 'eenheid' van de sleutel is niet verplicht) en ook niet aan eis 3 (je kan het deel 'eenheid' laten vallen en nog steeds een primaire sleutel verkrijgen)
 
-<table>
+<table class="styledTable">
    <tr>
       <td>← p →</td>
       <td></td>

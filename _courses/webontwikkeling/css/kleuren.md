@@ -35,7 +35,7 @@ CSS ondersteunt 140 standaard kleurnamen.
 Enkele voorbeelden:
 
 
-<table>
+<table class="styledTable">
   <tr>
    <td><b>Kleur</b>
    </td>
@@ -99,7 +99,7 @@ Bijvoorbeeld, RGB (255,0,0) is helder rood, omdat de  roodwaarde de hoogste waar
 Enkele voorbeelden van RGB-waardes:
 
 
-<table>
+<table class="styledTable">
   <tr>
    <td><b>Color</b>
    </td>
@@ -157,7 +157,7 @@ HEX-waarden zijn **niet** hoofdlettergevoelig: #ff0000 is hetzelfde als #FF0000.
 Enkele voorbeelden van HEX-waardes:
 
 
-<table>
+<table class="styledTable">
   <tr>
    <td><b>Color</b>
    </td>
@@ -214,7 +214,7 @@ In deze CODE hoofdstukken worden enkele belangrijke CSS stijlregels aangeleerd d
 ## 5.1 Overzicht
 
 
-<table>
+<table class="styledTable">
   <tr>
    <th>property
    </th>

@@ -1,2 +1,4 @@
 baseurl: "/_t-inf-lms" 
 destination: "_t-inf-lms"
+
+highlighter: rouge

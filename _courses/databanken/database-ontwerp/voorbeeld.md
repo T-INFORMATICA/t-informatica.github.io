@@ -38,7 +38,7 @@ De energie per persoon van een gerecht wordt door het rdbms berekend uit de opge
 
 Hieronder vindt je drie voorbeeld recepten. 
 
-<table>
+<table class="styledTable">
 <thead><tr><th>gerecht</th><td colspan="4">Coupe Kiwano</td></tr></thead><tbody>
  <tr><th>bereidingstijd (minuten)</th><td colspan="4">20</td></tr>
  <tr><th>bereidingswijze</th><td colspan="4">Schil de kiwano, snijd hem in stukjes, voeg de tequila toe en laat dit mengsel 15 minuten staan. Neem per persoon 3 bolletjes ijs en voeg hier de kiwano met tequila aan toe. Serveer met gezoete, stijfgeslagen slagroom.</td></tr>
@@ -52,7 +52,7 @@ Hieronder vindt je drie voorbeeld recepten.
 
 ----
 
-<table>
+<table class="styledTable">
 <thead><tr><th>gerecht</th><td colspan="4">Mango Plus Plus</td></tr></thead><tbody>
  <tr><th>bereidingstijd (minuten)</th><td colspan="4">8</td></tr>
  <tr><th>bereidingswijze</th><td colspan="4">Snijd de - geschilde - mango in stukjes, meng deze met de gehalveerde aardbeien, en serveer dit met de zure room.</td></tr>
@@ -64,7 +64,7 @@ Hieronder vindt je drie voorbeeld recepten.
  
  ----
 
-<table>
+<table class="styledTable">
 <thead><tr><th>gerecht</th><td colspan="4">Glace Terrace</td></tr></thead><tbody>
  <tr><th>bereidingstijd (minuten)</th><td colspan="4">5</td></tr>
  <tr><th>bereidingswijze</th><td colspan="4">Neem drie bolletjes ijs, voeg hieraan de gesneden aardbeien toe, besprenkel dit rijkelijk met pernod en maak dit bijzondere gerecht af met versgemalen peper.</td></tr>

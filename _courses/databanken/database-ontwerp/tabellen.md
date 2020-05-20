@@ -22,7 +22,7 @@ Een tabel geeft één ding weer in een database. De kolommen van de tabel (field
 
 Bijvoorbeeld: een tabel Ingrediënt, dat bestaat uit een gerecht, product en hoeveelheid per persoon.
 
-<table>
+<table class="styledTable">
    <tr>
       <th>gerecht</th>
       <th>product</th>
@@ -101,7 +101,7 @@ Elke tabel in een relationele databank moet aan bepaalde voorwaarden voldoen:
 De rijen van een tabel worden de records genoemd. De opgeslagen gegevens in een tabel vormen rij per rij een record.
 In dit voorbeeld zijn er 12 records: 
 
-<table>
+<table class="styledTable">
    <tr>
       <th>gerecht</th>
       <th>product</th>
@@ -181,7 +181,7 @@ In dit voorbeeld zijn er 3 velden:
  - Product
  - HoeveelheidPP
  
- <table>
+ <table class="styledTable">
    <tr>
       <th>gerecht</th>
       <th>product</th>

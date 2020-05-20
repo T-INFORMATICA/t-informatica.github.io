@@ -35,7 +35,7 @@ description: Een relationele databank bestaat uit tabellen. Maar hoe maak je nu 
 
 Dit deel vertrekt vanuit een database die nog veel **redundantie**, **herhalende groepen** en **niet-gestandaardiseerde waardes** bevat.
 
-<table>
+<table class="styledTable">
    <tr>
       <th rowspan="2">naam</th>
       <th rowspan="2">energiePP</th>
@@ -204,7 +204,7 @@ De regels voor de eerste normaalvorm zijn:
 Normalisatie is het proces om in een database herhalende groepen en redundantie te elimineren. De eerste normaalvorm draait om het elimineren van herhalende groepen. In de onderstaande tabel zijn er meerdere ingrediënten per recept. Dit is dus een herhalende groep. 
 
 
-<table>
+<table class="styledTable">
    <tr>
       <th rowspan="2">naam</th>
       <th rowspan="2">energiePP</th>

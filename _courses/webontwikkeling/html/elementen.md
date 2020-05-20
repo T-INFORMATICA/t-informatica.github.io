@@ -35,12 +35,11 @@ Een tag is een **codewoord tussen een kleiner dan (`<`) en groter dan (`>`) teke
 HTML heeft een lijst met codewoorden die je kan gebruiken (je mag codewoorden niet verzinnen). Afhankelijk van welk codewoord je gebruikt, wordt de inhoud aangeduid als iets anders.
 
 
-<pre>
+``` html
 <img>		→ duidt een afbeelding (image) aan
 <video>		→ duidt een video aan
 <h1>		→ duidt een koptekst (heading niveau 1) aan
-</pre>
-
+```
 
 Er bestaan 2 soorten tags:
 
@@ -49,11 +48,11 @@ Er bestaan 2 soorten tags:
 1. Openingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) begint
 2. Sluitingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) eindigt
 
-<pre>
+``` html
 <p>dit is een paragraaf</p> en dit niet meer	→ duidt een paragraaf aan
 <a>dit is een link</a> en dit niet meer		→ duidt een link aan
 <h1>dit is een koptekst</h1> en dit niet meer	→ duidt een koptekst aan
-</pre>
+```
 
 
 
@@ -63,10 +62,10 @@ Er bestaan 2 soorten tags:
 Een **HTML-element** is een blok code, bestaande uit een **openingstag**, **inhoud** en **sluitingstag**.
 
 
-<pre>
+``` html
 <p> Dit is een paragraaf element. </p>
 <h1> Dit is een koptekst element. </h1>
-</pre>
+```
 
 
 In HTML kan inhoud niet bestaan zonder dit tussen een openingstag en sluitingstag te plaatsen. HTML wordt gebruikt om inhoud toe te voegen aan een website, dus spreken we nooit over het schrijven van tags, maar over het schrijven van elementen.
@@ -84,13 +83,13 @@ In HTML kan inhoud niet bestaan zonder dit tussen een openingstag en sluitingsta
 Je kan hier zelf geen inhoud meer aan toevoegen, want deze elementen doen dit zelf al. Deze speciale elementen bestaan dus <strong>enkel uit een openingstag</strong>, zonder inhoud of sluitingstag.
 
 
-<pre>
+``` html
 <p>
 	Dit is een gewoon element.
 </p>
 Hieronder volgt een zelfsluitend element (zonder sluitingstag!):
 <hr>				→ toevoegen en aanduiden van een horizontale lijn
-</pre>
+```
 
 
 
@@ -101,20 +100,20 @@ Het **nesten** van elementen wilt zeggen dat je **een element insluit in een and
 Bijvoorbeeld: Hieronder is het h1-element (groen) ingesloten door het body-element (rood):
 
 
-<pre>
+``` html
 <body>
 	<h1>
 		Dit element is genest in het body element.
 		Dit element is deel van de inhoud van het body element.
 	</h1>
 </body>
-</pre>
+```
 
 
 Of een iets uitgebreider voorbeeld:
 
 
-<pre>
+``` html
 <html>
 	<body>
 		<h1>
@@ -126,7 +125,7 @@ Of een iets uitgebreider voorbeeld:
 		</p>
 	</body>
 </html>
-</pre>
+```
 
 
 Hierboven wordt duidelijk gemaakt dat:
@@ -147,7 +146,7 @@ Hoewel indentatie in HTML niet verplicht is, helpt het om de leesbaarheid van je
 In het volgende voorbeeld staat het aantal indentaties aangeduid door zwarte lijnen voor elke lijn code.
 
 
-<pre>
+```html
 <p>
 ---→Dit is tekst in de paragraaf.
 	
@@ -165,7 +164,7 @@ In het volgende voorbeeld staat het aantal indentaties aangeduid door zwarte lij
 ---→---→</li>
 ---→</ol>
 </p>
-</pre>
+```
 
 Zo zie je dat:
 

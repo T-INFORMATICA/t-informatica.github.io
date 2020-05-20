@@ -32,7 +32,7 @@ layout: course
 {%- for course in site.data.courses -%}
     {%- for subject in course.subjects -%}
         {%- if page.url contains subject.link -%}
-            {{- "<table>" -}}
+            {{- "<table class='styledTable'>" -}}
                     {%- for chapter in subject.chapters -%}
                         <thead>
                             <tr>

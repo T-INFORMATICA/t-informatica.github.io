@@ -14,7 +14,7 @@ description:
 Tabellen in databanken hebben vaak duizenden of miljoenen rijen data. Al deze rijen doornemen is enorm veel werk. Daarom is het belangrijk dat een query niet alleen kolom(men) kan selecteren, maar ook kan kiezen welke rijen getoond worden. Bijvoorbeeld:
 
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Id</th>
       <th>Merk/Model</th>
@@ -83,7 +83,7 @@ Het is mogelijk om meerdere voorwaarden aan een query op te leggen door gebruik 
 
 De logische operatoren hieronder kunnen gebruikt worden voor data die een getalwaarde voorstellen (zoals integers of decimals):
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Operator</th>
       <th>Voorwaarde</th>
@@ -119,7 +119,7 @@ De logische operatoren hieronder kunnen gebruikt worden voor data die een getalw
 ### Filteren op tekstwaardes
 
 De logische operatoren hieronder kunnen gebruikt worden voor data die een tekstwaarde voorstellen (zoals `varchar` of `text`):
-<table>
+<table class="styledTable">
    <tr>
       <th>Operator</th>
       <th>Voorwaarde</th>
@@ -189,7 +189,7 @@ WHERE condition(s);
 Bijvoorbeeld:
 Uit de volgende tabel wil je te weten komen hoeveel wielen een voertuig kan hebben. Je wilt dus een resultaat zien met daarin 2 en 4.
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Id</th>
       <th>Merk/Model</th>
@@ -242,7 +242,7 @@ FROM autos;
 
 Deze query geeft als resultaat de tabel hieronder. In deze resultaattabel is niet elke rij uniek: het getal 4 komt immers 4 keer voor.
 
-<table>
+<table class="styledTable">
    <tr>
       <th> # Wielen</th>
    </tr>
@@ -273,7 +273,7 @@ FROM autos;
 
 Deze query geeft als resultaat de tabel hieronder.
 
-<table>
+<table class="styledTable">
    <tr>
       <th> # Wielen</th>
    </tr>

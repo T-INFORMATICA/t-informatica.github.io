@@ -47,7 +47,7 @@ Het CSS **Box Model** is eigenlijk gewoon een rechthoek dat **rond elk HTML elem
 
 ## Overzicht
 
-<table>
+<table class="styledTable">
 <tr><th>property</th><th>code</th><th>uitleg</th></tr>
 	<tr><td>De width property</td><td><code>width: 500px;</code></td><td>De width-property stelt de breedte van een element in. <br><b>Opgelet!</b> De width-property bevat standaard geen padding, border of margin. <b>De totale, werkelijke breedte van een element bestaat dus uit width + padding + border.</b><br>De mogelijke waardes zijn:<ul> <li>Een pixel waarde</li><li>Een % waarde</li></ul>
 </td></tr>
@@ -61,7 +61,7 @@ Het CSS **Box Model** is eigenlijk gewoon een rechthoek dat **rond elk HTML elem
 
 
 
-<table>
+<table class="styledTable">
 <tr><th>property</th><th>code</th><th>uitleg</th></tr>
   <tr>
    <td>De box-sizing property
@@ -96,7 +96,7 @@ De box-sizing-property kan dit gedrag aanpassen.
 
 # BORDER PROPERTIES
 
-<table>
+<table class="styledTable">
 <tr><th>property</th><th>code</th><th>uitleg</th></tr>
   <tr>
    <td>De border-width property</td>

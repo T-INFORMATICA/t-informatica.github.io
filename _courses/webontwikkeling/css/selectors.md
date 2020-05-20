@@ -23,7 +23,7 @@ Een stijlregel wordt dus toegepast op <b>alle elementen die overeenkomen met de 
 ## Selectors overzicht
 
 
-<table>
+<table class="styledTable">
   <tr>
    <th>selector</th>
    <th>voorbeeld</th>

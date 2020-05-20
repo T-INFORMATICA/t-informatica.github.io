@@ -53,7 +53,7 @@ Indentatie is de hoeveelheid inspringing (*spaties* of *tabs*) voor elke lijn co
 Hieronder staat twee maal dezelfde code geschreven. Links staat het voorbeeld met indentatie. Rechts staat hetzelfde voorbeeld, maar zonder indentatie.
 
 
-<table style="width: 100%">
+<table class="styledTable" style="width: 100%">
  <tr>
   <td>
 	  Met indentatie:
@@ -181,7 +181,7 @@ Waarom is dit principe zo belangrijk? Stel je voor dat we een codeblok hebben om
 
 In een spel zijn er verschillende dingen die kunnen exploderen: wanneer een auto of granaat ontploft, moet in beide gevallen het explosie-codeblok worden uitgevoerd. Zowel de auto als de granaat krijgen dus hetzelfde explosie-codeblok:
 
-<table style="width: 100%">
+<table class="styledTable" style="width: 100%">
  <tr>
   <td>
 <pre class="linenums lang lang-JS lang-CS lang-PHP">

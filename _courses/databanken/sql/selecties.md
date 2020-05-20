@@ -51,7 +51,7 @@ where geboortedatum between '1700-01-01' and '1799-12-31';
 
 In dit geval is de voorwaarde hetzelfde als `geboortedatum >= '1700-01-01' and geboortedatum <= '1799-12-31'`. De resultaattabel bestaat uit alle componisten die geboren zijn in de achttiende eeuw:
 
-<table>
+<table class="styledTable">
    <tr>
       <td>NAAM</td>
       <td>GEBOORTEDATUM</td>
@@ -84,7 +84,7 @@ where naam like '%ar%';
 
 Het resultaat bevat iedereen met ‘ar’ in de naam:
 
-<table>
+<table class="styledTable">
    <tr>
       <td>COMPONIST</td>
    </tr>
@@ -101,7 +101,7 @@ Het resultaat bevat iedereen met ‘ar’ in de naam:
 
 De like voorwaarde maakt gebruikt van **wildcards**. Een wildcard is een speciaal symbool, waar een like-voorwaarde mee bepaald of twee teksten gelijk zijn of niet.
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Symbool</th>
       <th>Omschrijving</th>

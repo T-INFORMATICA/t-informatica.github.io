@@ -41,7 +41,7 @@ In dit hoofdstuk wordt getoond hoe je deze fouten herkend. In een volgend hoofds
 
 Hieronder staat één van de drie voorbeeld recepten.
 
-<table>
+<table class="styledTable">
 <thead><tr><th>gerecht</th><td colspan="5">Coupe Kiwano</td></tr></thead><tbody>
  <tr><th>bereidingstijd (minuten)</th><td colspan="5">20</td></tr>
  <tr><th>bereidingswijze</th><td colspan="5">Schil de kiwano, snijd hem in stukjes, voeg de tequila toe en laat dit mengsel 15 minuten staan. Neem per persoon 3 bolletjes ijs en voeg hier de kiwano met tequila aan toe. Serveer met gezoete, stijfgeslagen slagroom.</td></tr>
@@ -73,7 +73,7 @@ Per recept zijn vier kenmerken opgenomen:
 
 Alle recepten en hun ingredienten kunnen we samenbrengen in één grote tabel genaamd Recept. Om de tabel wat kleiner en leesbaarder te maken zijn sommige namen van kolommen veranderd ("hoeveelheid per persoon" wordt "hoeveelheid PP"). 
 
-<table>
+<table class="styledTable">
    <tr>
       <th rowspan="2">naam</th>
       <th rowspan="2">energiePP</th>
@@ -267,7 +267,7 @@ De tabel heet dan 'Ingrediënt', met één rij per ingrediënt. Deze tabel heeft
 
 Deze willekeur staat dan ook haaks op een goede structuur: De kracht van een goede structuur ligt in het gelijkwaardig behandelen van informatie, ongeacht wat de gebruiker later met die informatie doet of hoe de gebruiker die informatie bekijkt.
 
-<table>
+<table class="styledTable">
    <tr>
       <th rowspan="2">naam</th>
       <th rowspan="2">eenheid</th>

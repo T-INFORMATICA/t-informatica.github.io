@@ -109,7 +109,7 @@ In deze CODE hoofdstukken worden enkele belangrijke CSS stijlregels aangeleerd d
 ## Overzicht
 
 
-<table>
+<table class="styledTable">
   <tr>
    <th>property</th>
    <th>code</th>

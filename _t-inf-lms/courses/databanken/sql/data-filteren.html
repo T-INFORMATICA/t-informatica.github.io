@@ -9,8 +9,9 @@
     <title>Data Filteren</title>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script> 
+
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
-    <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
@@ -363,7 +364,7 @@
 
 <p>Tabellen in databanken hebben vaak duizenden of miljoenen rijen data. Al deze rijen doornemen is enorm veel werk. Daarom is het belangrijk dat een query niet alleen kolom(men) kan selecteren, maar ook kan kiezen welke rijen getoond worden. Bijvoorbeeld:</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Id</th>
       <th>Merk/Model</th>
@@ -434,7 +435,7 @@ WHERE condition
 
 <p>De logische operatoren hieronder kunnen gebruikt worden voor data die een getalwaarde voorstellen (zoals integers of decimals):</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Operator</th>
       <th>Voorwaarde</th>
@@ -470,7 +471,7 @@ WHERE condition
 <h3 id="filteren-op-tekstwaardes">Filteren op tekstwaardes</h3>
 
 <p>De logische operatoren hieronder kunnen gebruikt worden voor data die een tekstwaarde voorstellen (zoals <code class="highlighter-rouge">varchar</code> of <code class="highlighter-rouge">text</code>):</p>
-<table>
+<table class="styledTable">
    <tr>
       <th>Operator</th>
       <th>Voorwaarde</th>
@@ -540,7 +541,7 @@ WHERE condition(s);
 <p>Bijvoorbeeld:
 Uit de volgende tabel wil je te weten komen hoeveel wielen een voertuig kan hebben. Je wilt dus een resultaat zien met daarin 2 en 4.</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Id</th>
       <th>Merk/Model</th>
@@ -593,7 +594,7 @@ FROM autos;
 
 <p>Deze query geeft als resultaat de tabel hieronder. In deze resultaattabel is niet elke rij uniek: het getal 4 komt immers 4 keer voor.</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <th> # Wielen</th>
    </tr>
@@ -624,7 +625,7 @@ FROM autos;
 
 <p>Deze query geeft als resultaat de tabel hieronder.</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <th> # Wielen</th>
    </tr>

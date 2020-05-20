@@ -9,8 +9,9 @@
     <title>Projecties</title>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script> 
+
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
-    <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
@@ -398,7 +399,7 @@ where geboortedatum between '1700-01-01' and '1799-12-31';
 
 <p>In dit geval is de voorwaarde hetzelfde als <code class="highlighter-rouge">geboortedatum &gt;= '1700-01-01' and geboortedatum &lt;= '1799-12-31'</code>. De resultaattabel bestaat uit alle componisten die geboren zijn in de achttiende eeuw:</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <td>NAAM</td>
       <td>GEBOORTEDATUM</td>
@@ -431,7 +432,7 @@ where naam like '%ar%';
 
 <p>Het resultaat bevat iedereen met ‘ar’ in de naam:</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <td>COMPONIST</td>
    </tr>
@@ -448,7 +449,7 @@ where naam like '%ar%';
 
 <p>De like voorwaarde maakt gebruikt van <strong>wildcards</strong>. Een wildcard is een speciaal symbool, waar een like-voorwaarde mee bepaald of twee teksten gelijk zijn of niet.</p>
 
-<table>
+<table class="styledTable">
    <tr>
       <th>Symbool</th>
       <th>Omschrijving</th>

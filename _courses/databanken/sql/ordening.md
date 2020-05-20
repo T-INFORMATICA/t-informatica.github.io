@@ -27,7 +27,7 @@ order by niveau;
 
 Resultaat:
 
-<table>
+<table class="styledTable">
    <tr>
       <th>NR</th>
       <th>GENRE</th>

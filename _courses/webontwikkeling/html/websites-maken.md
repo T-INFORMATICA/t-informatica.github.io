@@ -42,7 +42,7 @@ Deze 2 talen vullen elkaar zodanig aan, dat je snel en gemakkelijk een website k
 
 **CSS is de taal die zegt hoe de inhoud eruit ziet**. CSS bepaalt dus **de opmaak** van je website. CSS zegt hoe een titel, lijst, link, tekst, … eruit ziet. 
 
-<table>
+<table class="styledTable">
     <tr>
         <th style="width: 50%">
             website 1

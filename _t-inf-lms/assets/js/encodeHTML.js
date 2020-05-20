@@ -1,7 +1,9 @@
 $(function() {
+  /*$("pre").addClass("prettyprint");
+  
   $("pre").html(function(index,currentcontent) {
     return escapeHTMLEncode(currentcontent);
-  });
+  });*/ 
 });
 
 
