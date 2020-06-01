@@ -46,7 +46,7 @@ Een **opmaakregel** bestaat uit een **property** en **waarde** en eindigt met ee
 
 Bijvoorbeeld:
 
-Stel dat alle &lt;p> elementen op dezelfde manier moeten opgemaakt worden:
+Stel dat alle `<p>` elementen op dezelfde manier moeten opgemaakt worden:
 
 
 
@@ -56,17 +56,16 @@ Stel dat alle &lt;p> elementen op dezelfde manier moeten opgemaakt worden:
 De selector moet dan p (de naam van het element) selecteren.  \
 De declaratie bestaat dan uit 2 opmaakregels:
 
-<pre>
+```css
 p
 {
 	text-align: center;
 	color: red;
 }
-</pre>
+```
 
 
- \
-In dit voorbeeld wordt het &lt;p> element opgemaakt met een rode tekstkleur en gecentreerde tekst.
+In dit voorbeeld wordt het `<p>` element opgemaakt met een rode tekstkleur en gecentreerde tekst.
 
 Door verschillende codeblokken onder elkaar te schrijven, krijgen verschillende elementen een bepaalde opmaak toegewezen.
 
@@ -80,7 +79,7 @@ Onderstaande CSS code doet het volgende:
 *   Elke h1 koptekst wordt onderlijnd en krijgt een rode achtergrondkleur.
 *   Elke hyperlink wordt vet getoond en krijgt een oranje tekstkleur.
 
-<pre>
+```css
 p
 {
 	text-align: center;
@@ -98,25 +97,25 @@ a
 	font-weight: bold;
 	color: orange;
 }
-</pre>
+```
 
 
 
 
-## Het &lt;STYLE> element
+## Het `<STYLE>` element
 
-CSS beschrijft hoe elk element moet worden weergegeven in de browser. Het geeft dus informatie over de website, maar bevat zelf geen zichtbare informatie. CSS-code hoort daarom thuis in het &lt;head> element van de webpagina.
+CSS beschrijft hoe elk element moet worden weergegeven in de browser. Het geeft dus informatie over de website, maar bevat zelf geen zichtbare informatie. CSS-code hoort daarom thuis in het <head> element van de webpagina.
 
 Nu is het niet mogelijk om zomaar CSS te beginnen typen in een HTML document. Het is aan jou als ontwikkelaar om duidelijk te maken waar er HTML-code staat, en waar er CSS code staat.
 
-Om aan te duiden waar CSS code wordt geschreven bestaat het &lt;style> element. Alle inhoud van het &lt;style> element wordt door de browser gelezen als CSS code.
+Om aan te duiden waar CSS code wordt geschreven bestaat het <style> element. Alle inhoud van het <style> element wordt door de browser gelezen als CSS code.
 
 
-<pre>
-&lt;!DOCTYPE html>
-&lt;html>
-	&lt;head>
-		&lt;style>
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
 body {
     background-color: lightblue;
 }
@@ -128,15 +127,14 @@ p {
     font-family: verdana;
     font-size: 20px;
 }
-		&lt;/style>
-	&lt;/head>
-	&lt;body>
-		&lt;h1>Mijn eerste CSS pagina</h1>
-		&lt;p>Dit is een paragraaf.</p>
-	&lt;/body>
-&lt;/html>
-</pre>
-
+		</style>
+	</head>
+	<body>
+		<h1>Mijn eerste CSS pagina</h1>
+		<p>Dit is een paragraaf.</p>
+	</body>
+</html>
+```
 
 
 ## Externe stylesheets
@@ -145,19 +143,23 @@ Met een externe stylesheet kan het uiterlijk van een hele website veranderd word
 
 Een externe stylesheet is een manier om CSS code in een apart bestand te plaatsen, zodat HTML en CSS code grotendeels gescheiden blijft.
 
-Elke pagina die de stijlregels in dit bestand gebruikt moet een verwijzing naar de externe stylesheet bevatten in het <code>&lt;<strong>link</strong>></code>-element. Het <code>&lt;<strong>link</strong>></code>-element wordt geplaatst binnen in het element &lt;head>:
+Elke pagina die de stijlregels in dit bestand gebruikt moet een verwijzing naar de externe stylesheet bevatten in het **`<link>`**-element. Het **`<link>`**-element wordt geplaatst binnen in het element <head>:
 
-<pre>
-&lt;head>
-&lt;link rel="stylesheet" type="text/css" href="mystyle.css">
-&lt;/head>
-</pre>
-
-
-Een externe stylesheet kan in elke teksteditor worden geschreven. Het bestand mag geen HTML-tags bevatten. Het stylesheet bestand moet worden opgeslagen met de extensie .css. Hier is hoe het bestand 'mystyle.css' er uit ziet:
+```html
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+```
 
 
-<pre>
+ - Een externe stylesheet kan in elke teksteditor worden geschreven. 
+ - Het bestand mag geen HTML-tags bevatten. 
+ - Het stylesheet bestand moet worden opgeslagen met de extensie .css. 
+
+Hier is hoe het bestand 'mystyle.css' er uit ziet:
+
+
+```css
 body {
     background-color: lightblue;
 }
@@ -166,7 +168,7 @@ h1 {
     color: navy;
     margin-left: 20px;
 }
-</pre>
+```
 
 
 

@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -408,39 +408,60 @@ Boodschappen doen is zo heel gemakkelijk. Je neemt het To Do-lijstje met de juis
 
 <p>Je plaatst alle <strong>instructies</strong> die bij elkaar horen in het lijstje (het codeblok), en je geeft dat lijstje een <strong>naam</strong> (Explodeer).</p>
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-FUNCTIE: EXPLODEER
-</pre>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe 10 schade
-	// aan alle spelers binnen 5 meter 
-	// van de explosie
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">FUNCTIE</span><span class="p">:</span> <span class="nx">EXPLODEER</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter </span>
+	<span class="c1">// van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">FUNCTIE</span><span class="o">:</span> <span class="nx">EXPLODEER</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter </span>
+	<span class="c1">// van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FUNCTIE</span><span class="p">:</span> <span class="n">EXPLODEER</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter </span>
+	<span class="c1">// van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="een-functie-maken">Een functie maken</h2>
 
-<pre class="linenums lang lang-JS lang-PHP">
-function Explodeer() 	// de signature
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe 10 schade
-	// aan alle spelers binnen 5 meter van de explosie
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Explodeer()  	// de signature
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe 10 schade
-	// aan alle spelers binnen 5 meter van de explosie
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Explodeer</span><span class="p">()</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Explodeer</span><span class="p">()</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Explodeer</span><span class="p">()</span>  	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Het gedeelte <code class="highlighter-rouge">function Explodeer()</code> heet de <strong>signature</strong> van de functie. Deze signature moet <strong>uniek</strong> zijn in de scope van de functie. De signature geeft aan dat dit de enige functie Explodeer is binnen de scope.</p>
 
@@ -452,30 +473,39 @@ void Explodeer()  	// de signature
 
 <p>De volgende code doet dus niets, want hoewel de functie wel gedeclareerd is wordt deze nergens bij naam aangeroepen:</p>
 
-<pre class="linenums lang lang-JS lang-PHP">
-function Explodeer() 	// de signature
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe 10 schade
-	// aan alle spelers binnen 5 meter van de explosie
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Explodeer()  	// de signature
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe 10 schade
-	// aan alle spelers binnen 5 meter van de explosie
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Explodeer</span><span class="p">()</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Explodeer</span><span class="p">()</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Explodeer</span><span class="p">()</span>  	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>De functie moet nog worden aangeroepen (= gebruikt) voordat de instructies worden uitgevoerd. Bij een functie aanroep gebruik je gewoon de naam van de functie, gevolgd door de haakjes:</p>
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-Explodeer();
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Explodeer</span><span class="p">();</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Explodeer</span><span class="p">();</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Explodeer</span><span class="p">();</span>
+</code></pre></div></div>
 
 <p><strong>Opgelet!</strong> Een functie aanroep is <strong>WEL een instructie!</strong> Aan het einde volgt er dus <strong>WEL een puntkomma</strong>.</p>
 
@@ -487,39 +517,36 @@ Explodeer();
 
 <p>Bijvoorbeeld:</p>
 
-<pre class="linenums lang lang-JS">
-function Functie1()  	// de signature van functie 1
-{
-	let mijnVar = 7;	// maak een variabele aan
-	Functie2();		// roep functie 2 aan
-}
-function Functie2()  	// de signature van functie 2
-{
-	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-function Functie1()  	// de signature van functie 1
-{
-	$mijnVar = 7;	// maak een variabele aan
-	Functie2();		// roep functie 2 aan
-}
-function Functie2()  	// de signature van functie 2
-{
-	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Functie1()  	// de signature van functie 1
-{
-	int mijnVar = 7;	// maak een variabele aan
-	Functie2();		// roep functie 2 aan
-}
-void Functie2()  	// de signature van functie 2
-{
-	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">mijnVar</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>	<span class="c1">// maak een variabele aan</span>
+	<span class="nx">Functie2</span><span class="p">();</span>		<span class="c1">// roep functie 2 aan</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">Functie2</span><span class="p">()</span>  	<span class="c1">// de signature van functie 2</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="nv">$mijnVar</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>	<span class="c1">// maak een variabele aan</span>
+	<span class="nx">Functie2</span><span class="p">();</span>		<span class="c1">// roep functie 2 aan</span>
+<span class="p">}</span>
+<span class="k">function</span> <span class="nf">Functie2</span><span class="p">()</span>  	<span class="c1">// de signature van functie 2</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">mijnVar</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>	<span class="c1">// maak een variabele aan</span>
+	<span class="nf">Functie2</span><span class="p">();</span>		<span class="c1">// roep functie 2 aan</span>
+<span class="p">}</span>
+<span class="k">void</span> <span class="nf">Functie2</span><span class="p">()</span>  	<span class="c1">// de signature van functie 2</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Moest je in Functie2() de variabele mijnVar willen gebruiken, is dit dus niet mogelijk.</p>
 
@@ -527,72 +554,66 @@ void Functie2()  	// de signature van functie 2
 
 <p>Een parameter is een variabele in de functie, waarvan de waarde wordt bepaald bij het aanroepen van de functie.</p>
 
-<pre class="linenums lang lang-JS">
-function Functie1()  	// de signature van functie 1
-{
-	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
-}
-function Functie2(mijnParameter)  	// de signature van functie 2 met één parameter
-{
-	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-function Functie1()  	// de signature van functie 1
-{
-	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
-}
-function Functie2($mijnParameter)  	// de signature van functie 2 met één parameter
-{
-	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Functie1()  	// de signature van functie 1
-{
-	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
-}
-void Functie2(int mijnParameter)  	// de signature van functie 2 met één parameter
-{
-	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="nx">Functie2</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>		<span class="c1">// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">Functie2</span><span class="p">(</span><span class="nx">mijnParameter</span><span class="p">)</span>  	<span class="c1">// de signature van functie 2 met één parameter</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnParameter WEL gebruiken.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="nx">Functie2</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>		<span class="c1">// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.</span>
+<span class="p">}</span>
+<span class="k">function</span> <span class="nf">Functie2</span><span class="p">(</span><span class="nv">$mijnParameter</span><span class="p">)</span>  	<span class="c1">// de signature van functie 2 met één parameter</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnParameter WEL gebruiken.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="nf">Functie2</span><span class="p">(</span><span class="m">7</span><span class="p">);</span>		<span class="c1">// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.</span>
+<span class="p">}</span>
+<span class="k">void</span> <span class="nf">Functie2</span><span class="p">(</span><span class="kt">int</span> <span class="n">mijnParameter</span><span class="p">)</span>  	<span class="c1">// de signature van functie 2 met één parameter</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnParameter WEL gebruiken.</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Je kan hiermee zelfs de waarde van een andere variabele doorgeven aan de parameter.</p>
 
-<pre class="linenums lang lang-JS">
-function Functie1()  	// de signature van functie 1
-{
-	let mijnVar = 7;
-	Functie2(mijnVar);	// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.
-}
-function Functie2(mijnParameter)  	// de signature van functie 2 met één parameter
-{
-	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-function Functie1()  	// de signature van functie 1
-{
-	$mijnVar = 7;
-	Functie2($mijnVar);	// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.
-}
-function Functie2($mijnParameter)  	// de signature van functie 2 met één parameter
-{
-	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Functie1()  	// de signature van functie 1
-{
-	int mijnVar = 7;
-	Functie2(mijnVar);	// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.
-}
-void Functie2(int mijnParameter)  	// de signature van functie 2 met één parameter
-{
-	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">mijnVar</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+	<span class="nx">Functie2</span><span class="p">(</span><span class="nx">mijnVar</span><span class="p">);</span>	<span class="c1">// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">Functie2</span><span class="p">(</span><span class="nx">mijnParameter</span><span class="p">)</span>  	<span class="c1">// de signature van functie 2 met één parameter</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="nv">$mijnVar</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+	<span class="nx">Functie2</span><span class="p">(</span><span class="nv">$mijnVar</span><span class="p">);</span>	<span class="c1">// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.</span>
+<span class="p">}</span>
+<span class="k">function</span> <span class="nf">Functie2</span><span class="p">(</span><span class="nv">$mijnParameter</span><span class="p">)</span>  	<span class="c1">// de signature van functie 2 met één parameter</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Functie1</span><span class="p">()</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">mijnVar</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
+	<span class="nf">Functie2</span><span class="p">(</span><span class="n">mijnVar</span><span class="p">);</span>	<span class="c1">// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde van mijnVar.</span>
+<span class="p">}</span>
+<span class="k">void</span> <span class="nf">Functie2</span><span class="p">(</span><span class="kt">int</span> <span class="n">mijnParameter</span><span class="p">)</span>  	<span class="c1">// de signature van functie 2 met één parameter</span>
+<span class="p">{</span>
+	<span class="c1">// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="return-waarde">Return waarde</h2>
 
@@ -604,67 +625,65 @@ void Functie2(int mijnParameter)  	// de signature van functie 2 met één param
 
 <p>De functie Optellen(getal1, getal2) heeft één duidelijk doel: tel de waardes van de twee parameters op. Deze functie kan je aanroepen met Optellen(3, 7), waarop de variabele som de waarde 10 zal bevatten.</p>
 
-<pre class="linenums lang lang-JS">
-Optellen(3, 7);
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Optellen</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
 
-function Optellen(getal1, getal2)  	// de signature van functie 1
-{
-	let som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-Optellen(3, 7);
+<span class="kd">function</span> <span class="nx">Optellen</span><span class="p">(</span><span class="nx">getal1</span><span class="p">,</span> <span class="nx">getal2</span><span class="p">)</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">som</span> <span class="o">=</span> <span class="nx">getal1</span> <span class="o">+</span> <span class="nx">getal2</span><span class="p">;</span>	<span class="c1">// bevat de waarde 10 bij de aanroep Optellen(3, 7);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Optellen</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
 
-function Optellen($getal1, $getal2)  	// de signature van functie 1
-{
-	$som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
-}
-</pre>
-<pre class="linenums lang lang-CS">
-Optellen(3, 7);
+<span class="k">function</span> <span class="nf">Optellen</span><span class="p">(</span><span class="nv">$getal1</span><span class="p">,</span> <span class="nv">$getal2</span><span class="p">)</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="nv">$som</span> <span class="o">=</span> <span class="nx">getal1</span> <span class="o">+</span> <span class="nx">getal2</span><span class="p">;</span>	<span class="c1">// bevat de waarde 10 bij de aanroep Optellen(3, 7);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Optellen</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span>
 
-void Optellen(int getal1, int getal2)  	// de signature van functie 1
-{
-	int som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
-}
-</pre>
+<span class="k">void</span> <span class="nf">Optellen</span><span class="p">(</span><span class="kt">int</span> <span class="n">getal1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">getal2</span><span class="p">)</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">som</span> <span class="p">=</span> <span class="n">getal1</span> <span class="p">+</span> <span class="n">getal2</span><span class="p">;</span>	<span class="c1">// bevat de waarde 10 bij de aanroep Optellen(3, 7);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Het probleem is ook hier de scope van de variabele in de functie. De functie is aangeroepen, de getallen zijn samengeteld, maar ik kan het resultaat van die som nergens anders gebruiken.</p>
 
-<pre class="linenums lang lang-JS lang-PHP lang-JS">
-Optellen(3, 7); // de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Optellen</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Optellen</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Optellen</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span> <span class="c1">// de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!</span>
+</code></pre></div></div>
 
 <p>Hiervoor wordt het keyword return gebruikt. Return zorgt ervoor dat een functie niet alleen iets kan berekenen, maar het resultaat van die berekening ook kan teruggeven aan de plaats waar de functie werd aangeroepen.</p>
 
-<pre class="linenums lang lang-JS">
-let resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">resultaat</span> <span class="o">=</span> <span class="nx">Optellen</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden</span>
 
-function Optellen(getal1, getal2)  	// de signature van functie 1
-{
-	let som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
-	return som;			// geef de waarde van som terug naar de aanroep!
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-$resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
+<span class="kd">function</span> <span class="nx">Optellen</span><span class="p">(</span><span class="nx">getal1</span><span class="p">,</span> <span class="nx">getal2</span><span class="p">)</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">som</span> <span class="o">=</span> <span class="nx">getal1</span> <span class="o">+</span> <span class="nx">getal2</span><span class="p">;</span>	<span class="c1">// bevat de waarde 10 bij de aanroep Optellen(3, 7);</span>
+	<span class="k">return</span> <span class="nx">som</span><span class="p">;</span>			<span class="c1">// geef de waarde van som terug naar de aanroep!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$resultaat</span> <span class="o">=</span> <span class="nx">Optellen</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden</span>
 
-function Optellen($getal1, $getal2)  	// de signature van functie 1
-{
-	$som = $getal1 + $getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
-	return $som;			// geef de waarde van som terug naar de aanroep!
-}
-</pre>
-<pre class="linenums lang lang-CS">
-int resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
+<span class="k">function</span> <span class="nf">Optellen</span><span class="p">(</span><span class="nv">$getal1</span><span class="p">,</span> <span class="nv">$getal2</span><span class="p">)</span>  	<span class="c1">// de signature van functie 1</span>
+<span class="p">{</span>
+	<span class="nv">$som</span> <span class="o">=</span> <span class="nv">$getal1</span> <span class="o">+</span> <span class="nv">$getal2</span><span class="p">;</span>	<span class="c1">// bevat de waarde 10 bij de aanroep Optellen(3, 7);</span>
+	<span class="k">return</span> <span class="nv">$som</span><span class="p">;</span>			<span class="c1">// geef de waarde van som terug naar de aanroep!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">resultaat</span> <span class="p">=</span> <span class="nf">Optellen</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">7</span><span class="p">);</span> <span class="c1">// maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden</span>
 
-int Optellen(int getal1, int getal2)  	// OPGELET: in C# moet je het datatype van de return waarde ook tonen!
-{
-	int som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
-	return som;			// geef de waarde van som terug naar de aanroep!
-}
-</pre>
-<div class="lang lang-CS">// OPGELET: in C# moet je het datatype van de return waarde ook tonen!</div>
+<span class="kt">int</span> <span class="nf">Optellen</span><span class="p">(</span><span class="kt">int</span> <span class="n">getal1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">getal2</span><span class="p">)</span>  	<span class="c1">// OPGELET: in C# moet je het datatype van de return waarde ook tonen!</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">som</span> <span class="p">=</span> <span class="n">getal1</span> <span class="p">+</span> <span class="n">getal2</span><span class="p">;</span>	<span class="c1">// bevat de waarde 10 bij de aanroep Optellen(3, 7);</span>
+	<span class="k">return</span> <span class="n">som</span><span class="p">;</span>			<span class="c1">// geef de waarde van som terug naar de aanroep!</span>
+<span class="p">}</span>
+
+<span class="c1">// OPGELET: in C# moet je het datatype van de return waarde ook tonen!</span>
+</code></pre></div></div>
 
 
     </section>

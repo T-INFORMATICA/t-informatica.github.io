@@ -29,11 +29,21 @@ description: Elk programma maakt bewerkingen met data. In dit hoofdstuk leer je 
 
 Een expressie is een bewerking met als resultaat een waarde. Bijvoorbeeld:
 
-<pre class="linenums lang lang-PHP lang-CS lang-JS">
+```javascript
 5 		// resultaat is 5
 2 > 7 		// resultaat is false (= niet waar)
 3 * 18 / 2 	// resultaat is 27
-</pre>
+```
+```php
+5 		// resultaat is 5
+2 > 7 		// resultaat is false (= niet waar)
+3 * 18 / 2 	// resultaat is 27
+```
+```csharp
+5 		// resultaat is 5
+2 > 7 		// resultaat is false (= niet waar)
+3 * 18 / 2 	// resultaat is 27
+```
 
 Wanneer het resultaat van de expressie *waar* of *niet waar* is, wordt dit een **voorwaarde** genoemd.
 
@@ -46,31 +56,41 @@ Een operatie is een bewerking van 2 waardes. Wanneer je verschillende operaties 
 
 Een expressie is het geheel van alle operaties die bij elkaar horen. Een expressie kan dus bestaan uit geen, één of meerdere operaties, zolang het resultaat maar een waarde is. Bijvoorbeeld:
 
-<pre class="linenums lang lang-PHP lang-CS lang-JS">
+```javascript
 5 		// 1 expressie, 0 operaties (waarde is 5)
 2 > 7 		// 1 expressie, 1 operatie  (waarde is false)
 3 * 18 / 2 	// 1 expressie, 2 operaties (waarde is 27)
-</pre>
+```
+```php
+5 		// 1 expressie, 0 operaties (waarde is 5)
+2 > 7 		// 1 expressie, 1 operatie  (waarde is false)
+3 * 18 / 2 	// 1 expressie, 2 operaties (waarde is 27)
+```
+```csharp
+5 		// 1 expressie, 0 operaties (waarde is 5)
+2 > 7 		// 1 expressie, 1 operatie  (waarde is false)
+3 * 18 / 2 	// 1 expressie, 2 operaties (waarde is 27)
+```
 
 Om een expressie te gebruiken moet de programmeur zich houden aan 2 regels:
  - Een expressie mag nooit op zichzelf staan
  - Het resultaat van een expressie moet altijd gebruikt worden
 
-<pre class="linenums lang lang-JS">
+```javascript
 5 + 2			// error, een expressie kan niet op zichzelf staan
 5 + 2;			// error, het resultaat wordt niet gebruikt
 var getal = 5 + 2; 	// correct
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 5 + 2			// error, een expressie kan niet op zichzelf staan
 5 + 2;			// error, het resultaat wordt niet gebruikt
 $getal = 5 + 2; 	// correct
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 5 + 2			// error, een expressie kan niet op zichzelf staan
 5 + 2;			// error, het resultaat wordt niet gebruikt
 int getal = 5 + 2; 	// correct
-</pre>
+```
 
 In dit hoofdstuk worden variabelen gebruikt om de waarde van een operatie op te slaan. Op die manier zal de code geen errors of warnings tonen.
 
@@ -91,28 +111,28 @@ Wanneer we in programmeren spreken over een bewerking, noemen we dit ook wel een
   
 Getallen kunnen gebruikt worden om met te rekenen. Variabelen worden gebruikt om het resultaat van die bewerking bij te houden.
  
-<pre class="linenums lang lang-JS">
+```javascript
 var voorbeeld1 = 5 * 2;
 var voorbeeld2 = 9 / 3;
 var voorbeeld3 = 7 + 4;
 var voorbeeld4 = 8 - 1;
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $voorbeeld1 = 5 * 2;
 $voorbeeld2 = 9 / 3;
 $voorbeeld3 = 7 + 4;
 $voorbeeld4 = 8 - 1;
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int voorbeeld1 = 5 * 2;
 int voorbeeld2 = 9 / 3;
 int voorbeeld3 = 7 + 4;
 int voorbeeld4 = 8 - 1;
-</pre>
+```
 
 Ook variabelen kunnen gebruikt worden om met te rekenen:
 
-<pre class="linenums lang lang-JS">
+```javascript
 var voorbeeld1 = 6;
 var voorbeeld2 = 2;
 
@@ -120,8 +140,8 @@ var voorbeeld3 = voorbeeld1 * 3;
 var voorbeeld4 = 8 + voorbeeld2;
 
 var voorbeeld5 = voorbeeld1 / voorbeeld2;
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $voorbeeld1 = 6;
 $voorbeeld2 = 2;
 
@@ -129,8 +149,8 @@ $voorbeeld3 = $voorbeeld1 * 3;
 $voorbeeld4 = 8 + $voorbeeld2;
 
 $voorbeeld5 = $voorbeeld1 / $voorbeeld2;
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int voorbeeld1 = 6;
 int voorbeeld2 = 2;
 
@@ -138,7 +158,7 @@ int voorbeeld3 = voorbeeld1 * 3;
 int voorbeeld4 = 8 + voorbeeld2;
 
 int voorbeeld5 = voorbeeld1 / voorbeeld2;
-</pre>
+```
 
 ## Logische operaties
 
@@ -180,25 +200,25 @@ Omdat de uitkomst van een vergelijking een booleaanse waarde is (true of false),
 
 Bijvoorbeeld:
 
-<pre class="linenums lang lang-JS">
+```javascript
 var voorbeeld1 = 5 > 3; // true, want 5 is groter dan 3
 var voorbeeld2 = 5 < 3; // false, want 5 is niet kleiner dan 3
 var voorbeeld2 = 5 == 3; // false, want 5 is niet gelijk aan 3
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $voorbeeld1 = 5 > 3; // true, want 5 is groter dan 3
 $voorbeeld2 = 5 < 3; // false, want 5 is niet kleiner dan 3
 $voorbeeld2 = 5 == 3; // false, want 5 is niet gelijk aan 3
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 bool voorbeeld1 = 5 > 3; // true, want 5 is groter dan 3
 bool voorbeeld2 = 5 < 3; // false, want 5 is niet kleiner dan 3
 bool voorbeeld2 = 5 == 3; // false, want 5 is niet gelijk aan 3
-</pre>
+```
 
 Uiteraard is het nogal onzinnig om deze vergelijkingen te maken: het is op voorhand al duidelijk dat 3 kleiner is dan 5. Waar vergelijkingen dus echt interessant worden is wanneer je gebruik maakt van variabelen.
 
-<pre class="linenums lang lang-JS">
+```javascript
 var test1 = 27;
 var test2 = 17;
 
@@ -207,8 +227,8 @@ var test = test1 < test2; // false, want test1 is groter
 test2 = 32;
 
 var test = test1 < test2; // true, want test1 is kleiner
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $test1 = 27;
 $test2 = 17;
 
@@ -217,8 +237,8 @@ $test = $test1 < $test2; // false, want test1 is groter
 $test2 = 32;
 
 $test = $test1 < $test2; // true, want test1 is kleiner
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int test1 = 27;
 int test2 = 17;
 
@@ -227,7 +247,7 @@ bool test = test1 < test2; // false, want test1 is groter
 test2 = 32;
 
 bool test = test1 < test2; // true, want test1 is kleiner
-</pre>
+```
 
 ### Voorwaarden
 

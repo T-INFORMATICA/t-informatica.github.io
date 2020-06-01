@@ -18,22 +18,33 @@ Alle code die tot nu toe werd behandeld heeft één ding gemeen: instructies wor
 
 Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.
 
-<pre class="linenums lang lang-JS lang-PHP">
-function Explodeer(x) 
+```javascript
+function Explodeer(x) 	// de signature
 {
 	// maak een geluidje
 	// laat een licht rood/oranje flikkeren
 	// doe x schade
+	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
-<pre class="linenums lang lang-CS">
-void Explodeer(x) 
+```
+```php
+function Explodeer(x) 	// de signature
 {
 	// maak een geluidje
 	// laat een licht rood/oranje flikkeren
 	// doe x schade
+	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
+```
+```csharp
+void Explodeer(x)  	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+```
 
 ## Iteratie
 
@@ -44,7 +55,7 @@ Iteratie is het herhaaldelijk uitvoeren van code zo lang een voorwaarde *waar* i
 
 Bijvoorbeeld: Een explosie laat een licht 10 maal flikkeren. Hiervoor wordt een variabele y gemaakt die optelt. Pas als de variabele y niet langer kleiner is dan 10, gaat het codeblok verder met z’n instructies (`doe 5 schade`). 
 
-<pre class="linenums lang lang-JS">
+```javascript
 function Explodeer() 
 {
 	// maak een geluidje
@@ -55,8 +66,8 @@ function Explodeer()
 	}
 	// doe 5 schade
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 function Explodeer() 
 {
 	// maak een geluidje
@@ -67,8 +78,8 @@ function Explodeer()
 	}
 	// doe 5 schade
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 function Explodeer() 
 {
 	// maak een geluidje
@@ -79,7 +90,7 @@ function Explodeer()
 	}
 	// doe 5 schade
 }
-</pre>
+```
 
 Een **iteratie-codeblok gaat, aan de hand van een voorwaarde, instructies herhalen** zolang die voorwaarde waar is. 
 
@@ -97,7 +108,7 @@ Beide blokken itereren (herhalen) hun instructies op een andere manier.
 WHILE wilt in het Nederlands zeggen: zolang. Het while codeblok herhaalt de instructies in in het codeblok **zolang een voorwaarde waar is**.
 WHILE wilt dus eigenlijk zeggen: **zolang de voorwaarde waar is**, voer deze instructies opnieuw uit. Bijvoorbeeld: 
 
-<pre class="linenums lang lang-JS">
+```javascript
 var intTest = 0;
 
 while (intTest < 10) 
@@ -106,8 +117,8 @@ while (intTest < 10)
 	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $intTest = 0;
 
 while ($intTest < 10) 
@@ -116,8 +127,8 @@ while ($intTest < 10)
 	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int intTest = 0;
 
 while (intTest < 10) 
@@ -126,7 +137,7 @@ while (intTest < 10)
 	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
-</pre>
+```
 
 ### FOR blok
 
@@ -144,50 +155,50 @@ Het FOR blok is een iteratie waarbij deze 3 stappen in 1 regel code worden gesch
  2. Kijk na of die variabele kleiner is dan 10
  3. Verhoog de variabele met 1
 
-<pre class="linenums lang lang-JS">
+```javascript
 //     stap 1   stap 2	  stap 3
 for (var i = 0; i < 10; i = i + 1)
 {
 	// voer deze code opnieuw uit zolang i kleiner is dan 10.
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 //    stap 1  stap 2	stap 3
 for ($i = 0; $i < 10; $i = $i + 1)
 {
 	// voer deze code opnieuw uit zolang i kleiner is dan 10.
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 //     stap 1   stap 2	  stap 3
 for (int i = 0; i < 10; i = i + 1)
 {
 	// voer deze code opnieuw uit zolang i kleiner is dan 10.
 	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
 }
-</pre>
+```
 
 ## Itereren door een array
 
 De index van een indexed array is een integer (een geheel getal). Dat wilt zeggen dat elke variabele die een geheel getal bevat gebruikt kan worden om een element uit de array op te vragen.
 
-<pre class="linenums lang lang-JS">
+```javascript
 var autos = ["Volvo", "BMW", "Toyota"];
 var index = 1;
 var tweedeAuto = autos[index];
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $autos = array("Volvo", "BMW", "Toyota");
 $index = 1;
 $tweedeAuto = autos[$index];
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 string[] autos = {"Volvo", "BMW", "Toyota"};
 int index = 1;
 string tweedeAuto = autos[index];
-</pre>
+```
 
 Zo'n index variabele wordt heel vaak gebruikt in een for-loop wanneer het nodig is om alle items in een lijst te overlopen. 
 
@@ -195,34 +206,35 @@ Een for-loop maakt een variabele aan, en verhoogt deze variabele bij elke iterat
 
 Als de variabele van een for-loop dus begint bij 0, en eindigt voor het aantal waardes in een array, kan je met een for-loop elke index van een array overlopen.
 
-<pre class="linenums lang lang-JS">
+```javascript
 var autos = ["Volvo", "BMW", "Toyota"];
 var aantal = autos.length;
 
 for (let i = 0; i < aantal; ++i) {
 	console.log(autos[i]);
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $autos = array("Volvo", "BMW", "Toyota");
 $aantal = count($autos);
 
 for ($i = 0; $i < $aantal; ++$i) {
 	echo $autos[$i];
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 string[] autos = {"Volvo", "BMW", "Toyota"};
 int aantal = autos.Length;
 
 for (int i = 0; i < aantal; ++i) {
 	console.log(autos[i]);
 }
-</pre>
+```
 
 ## Coding Guidelines
 
-Wanneer je een WHILE blok schrijft, laat je een spatie tussen het keyword en de haakjes:
+Wanneer je een `WHILE` blok schrijft, laat je een spatie tussen het keyword en de haakjes:
+
  - WEL:		`while (intTest < 1)`
  - NIET:	`while(intTest < 1)`
 

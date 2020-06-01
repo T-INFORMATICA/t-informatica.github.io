@@ -69,14 +69,14 @@ Enkele bekende icon libraries:
 
 *   **Font Awesome**: Deze icon library wordt al enkele jaren gezien als de standaard icon library voor zo goed als elke website. De link hieronder is voor Font Awesome versie 5. Een overzicht van alle icoontjes vind je terug op [fontawesome.com/icons](https://fontawesome.com/icons) 
 
-```
+```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 ```
 
 
 *   **Google Icons**: Google heeft, als onderdeel van zijn Material Design language, een eigen icon library die iedereen vrij mag gebruiken. Een overzicht van alle icoontjes vind je terug op [material.io/icons/](https://material.io/icons/) 
 
-```
+```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 ```
 

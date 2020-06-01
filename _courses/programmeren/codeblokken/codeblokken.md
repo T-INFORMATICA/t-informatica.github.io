@@ -28,12 +28,24 @@ description: Wat zijn codeblokken?
 
 Een codeblok ziet er bijvoorbeeld zo uit:
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+```javascript
 {
 	// instructies
 	// instructies
 }
-</pre>
+```
+```php
+{
+	// instructies
+	// instructies
+}
+```
+```csharp
+{
+	// instructies
+	// instructies
+}
+```
 
 ## Nesten
 
@@ -52,37 +64,8 @@ Indentatie is de hoeveelheid inspringing (*spaties* of *tabs*) voor elke lijn co
 
 Hieronder staat twee maal dezelfde code geschreven. Links staat het voorbeeld met indentatie. Rechts staat hetzelfde voorbeeld, maar zonder indentatie.
 
-
-<table class="styledTable" style="width: 100%">
- <tr>
-  <td>
-	  Met indentatie:
-  </td>
-  <td>
-	  Zonder indentatie:
-  </td>
- </tr>
- <tr>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-{ // blok 1
-	// instructies
-	// instructies
-
-	{ // blok 2
-		// instructies
-		// instructies
-	}
-
-	{ // blok 3
-		// instructies
-		// instructies		
-	}
-}
-</pre>
-  </td>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+### zonder indentatie:
+```javascript
 { // blok 1
 // instructies			
 // instructies
@@ -97,10 +80,89 @@ Hieronder staat twee maal dezelfde code geschreven. Links staat het voorbeeld me
 // instructies
 }
 }
-</pre>
-  </td>
- </tr>
-</table>
+```
+```php
+{ // blok 1
+// instructies			
+// instructies
+
+{ // blok 2
+// instructies
+// instructies
+}
+
+{ // blok 3
+// instructies
+// instructies
+}
+}
+```
+```csharp
+{ // blok 1
+// instructies			
+// instructies
+
+{ // blok 2
+// instructies
+// instructies
+}
+
+{ // blok 3
+// instructies
+// instructies
+}
+}
+```
+
+### met indentatie:
+```javascript
+{ // blok 1
+	// instructies
+	// instructies
+
+	{ // blok 2
+		// instructies
+		// instructies
+	}
+
+	{ // blok 3
+		// instructies
+		// instructies		
+	}
+}
+```
+```php
+{ // blok 1
+	// instructies
+	// instructies
+
+	{ // blok 2
+		// instructies
+		// instructies
+	}
+
+	{ // blok 3
+		// instructies
+		// instructies		
+	}
+}
+```
+```csharp
+{ // blok 1
+	// instructies
+	// instructies
+
+	{ // blok 2
+		// instructies
+		// instructies
+	}
+
+	{ // blok 3
+		// instructies
+		// instructies		
+	}
+}
+```
 
 
 In het linkse voorbeeld kan je heel duidelijk zien welke de children zijn van Blok 1. In het rechtse voorbeeld is dit veel moeilijker. Bij indentatie worden de volgende regels gevolgd:
@@ -116,7 +178,7 @@ De scope van een stuk code laat zien op welke plaatsen in de programma-code je i
    - De variabele groen kan je dus gebruiken in het blauwe en rode blok.
    - De variabele blauw kan je enkel in het blauwe blok gebruiken.
 
-<pre class="linenums lang lang-JS">
+```javascript
 { // parent blok
 	var inParent = "groen";		// scope is de parent en beide children
 	
@@ -128,8 +190,8 @@ De scope van een stuk code laat zien op welke plaatsen in de programma-code je i
 		var inChild2 = "rood";	// scope is enkel child blok 2
 	}
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 { // parent blok
 	$inParent = "groen";		// scope is de parent en beide children
 	
@@ -141,8 +203,8 @@ De scope van een stuk code laat zien op welke plaatsen in de programma-code je i
 		$inChild2 = "rood";	// scope is enkel child blok 2
 	}
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 { // parent blok
 	string inParent = "groen";		// scope is de parent en beide children
 	
@@ -154,7 +216,7 @@ De scope van een stuk code laat zien op welke plaatsen in de programma-code je i
 		string inChild2 = "rood";	// scope is enkel child blok 2
 	}
 }
-</pre>
+```
 
 
 ## DRY
@@ -169,7 +231,7 @@ Dit wil zeggen: probeer jezelf niet keer op keer te herhalen in je code.
 
 Waarom is dit principe zo belangrijk? Stel je voor dat we een codeblok hebben om een explosie te maken. Het codeblok zou er waarschijnlijk als volgt uitzien:
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+```
 // codeblok voor explosie:
 {
 	// maak een geluidje
@@ -177,14 +239,11 @@ Waarom is dit principe zo belangrijk? Stel je voor dat we een codeblok hebben om
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
+```
 
 In een spel zijn er verschillende dingen die kunnen exploderen: wanneer een auto of granaat ontploft, moet in beide gevallen het explosie-codeblok worden uitgevoerd. Zowel de auto als de granaat krijgen dus hetzelfde explosie-codeblok:
 
-<table class="styledTable" style="width: 100%">
- <tr>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+```javascript
 AUTO:
 
 // explosie instructies:
@@ -192,10 +251,8 @@ AUTO:
 	// laat een licht rood/oranje flikkeren
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
-</pre>
-  </td>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+
+	
 GRANAAT:
 
 // explosie instructies:
@@ -203,10 +260,43 @@ GRANAAT:
 	// laat een licht rood/oranje flikkeren
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
-</pre>
-  </td>
- </tr>
-</table>
+```
+```php
+AUTO:
+
+// explosie instructies:
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+
+	
+GRANAAT:
+
+// explosie instructies:
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+```
+```csharp
+AUTO:
+
+// explosie instructies:
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+
+	
+GRANAAT:
+
+// explosie instructies:
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+```
 
 Als er nu een kleine aanpassing gemaakt moet worden in de explosie-code (bijvoorbeeld om een rook-effect toevoegen) moet die aanpassing in al die explosie-codeblokken worden gedaan. 
  - Dit is heel erg veel werk.

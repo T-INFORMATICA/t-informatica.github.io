@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -395,22 +395,30 @@
 
 <p>Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.</p>
 
-<pre class="linenums lang lang-JS lang-PHP">
-function Explodeer(x) 
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe x schade
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Explodeer(x) 
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe x schade
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Explodeer</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Explodeer</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Explodeer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="selectie">Selectie</h2>
 
@@ -418,36 +426,33 @@ void Explodeer(x)
 
 <p>Bijvoorbeeld: Een explosie mag pas geluid maken als de schade groter is dan 10. Met andere woorden: Als x groter is dan 10, maak dan een geluid (anders sla je die instructie over).</p>
 
-<pre class="linenums lang lang-JS">
-function Explodeer(x) 
-{
-	if (x &gt; 10) {
-		// maak een geluidje
-	}
-	// laat een licht rood/oranje flikkeren
-	// doe x schade
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-function Explodeer(x) 
-{
-	if ($x &gt; 10) {
-		// maak een geluidje
-	}
-	// laat een licht rood/oranje flikkeren
-	// doe x schade
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Explodeer(x) 
-{
-	if (x &gt; 10) {
-		// maak een geluidje
-	}
-	// laat een licht rood/oranje flikkeren
-	// doe x schade
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Explodeer</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// maak een geluidje</span>
+	<span class="p">}</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Explodeer</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nv">$x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// maak een geluidje</span>
+	<span class="p">}</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Explodeer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// maak een geluidje</span>
+	<span class="p">}</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Een <strong>selectie-codeblok gaat, aan de hand van een voorwaarde, selecteren welke instructies mogen uitgevoerd worden</strong>. Een selectie kan bestaan uit meerdere codeblokken:</p>
 <ul>
@@ -464,33 +469,30 @@ void Explodeer(x)
 
 <p>Bijvoorbeeld:</p>
 
-<pre class="linenums lang lang-JS">
-var intTest = 0;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">intTest</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-if (intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-	// In dit voorbeeld wordt de code hier uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-$intTest = 0;
+<span class="k">if</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+	<span class="c1">// In dit voorbeeld wordt de code hier uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$intTest</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-if ($intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-	// In dit voorbeeld wordt de code hier uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-CS">
-int intTest = 0;
+<span class="k">if</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+	<span class="c1">// In dit voorbeeld wordt de code hier uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">intTest</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 
-if (intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-	// In dit voorbeeld wordt de code hier uitgevoerd.
-}
-</pre>
+<span class="k">if</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+	<span class="c1">// In dit voorbeeld wordt de code hier uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h3 id="else-if-blok">ELSE IF-blok</h3>
 
@@ -504,60 +506,57 @@ if (intTest &lt; 1)
 
 <p>ELSE IF wilt dus eigenlijk zeggen: <strong>als de voorgaande IF en ELSE IFs niet waar zijn, en deze voorwaarde wel waar is</strong>, voer dan deze instructies uit. Bijvoorbeeld:</p>
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-var intTest = 2;
-if (intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-}
-else if (intTest &lt; 3) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 3.
-	// In dit voorbeeld wordt de code hier uitgevoerd.
-}
-else if (intTest &lt; 5) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 5.
-	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
-	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-$intTest = 2;
-if ($intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-}
-else if ($intTest &lt; 3) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 3.
-	// In dit voorbeeld wordt de code hier uitgevoerd.
-}
-else if ($intTest &lt; 5) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 5.
-	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
-	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
-}
-</pre>
-<pre class="linenums lang lang-CS">
-int intTest = 2;
-if (intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-}
-else if (intTest &lt; 3) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 3.
-	// In dit voorbeeld wordt de code hier uitgevoerd.
-}
-else if (intTest &lt; 5) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 5.
-	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
-	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">intTest</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 3.</span>
+	<span class="c1">// In dit voorbeeld wordt de code hier uitgevoerd.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 5.</span>
+	<span class="c1">// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde</span>
+	<span class="c1">// WAAR. Het vorige blok werd immers reeds uitgevoerd!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$intTest</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 3.</span>
+	<span class="c1">// In dit voorbeeld wordt de code hier uitgevoerd.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 5.</span>
+	<span class="c1">// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde</span>
+	<span class="c1">// WAAR. Het vorige blok werd immers reeds uitgevoerd!</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">intTest</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 3.</span>
+	<span class="c1">// In dit voorbeeld wordt de code hier uitgevoerd.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">5</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 5.</span>
+	<span class="c1">// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde</span>
+	<span class="c1">// WAAR. Het vorige blok werd immers reeds uitgevoerd!</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h3 id="else-blok">ELSE blok</h3>
 
@@ -571,69 +570,66 @@ else if (intTest &lt; 5)
 <p>ELSE wilt dus eigenlijk zeggen: <strong>in alle andere gevallen</strong>, voer dan het volgende codeblok uit.
 Bijvoorbeeld:</p>
 
-<pre class="linenums lang lang-JS">
-var intTest = 6;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">intTest</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
-if (intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-}
-else if (intTest &lt; 3) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 3.
-}
-else if (intTest &lt; 5) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 5.
-}
-else
-{
-	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
-	// In dit voorbeeld wordt deze code uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-$intTest = 6;
+<span class="k">if</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 3.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 5.</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+	<span class="c1">// In ELK ANDER GEVAL wordt deze code uitgevoerd.</span>
+	<span class="c1">// In dit voorbeeld wordt deze code uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$intTest</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
 
-if ($intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-}
-else if ($intTest &lt; 3) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 3.
-}
-else if ($intTest &lt; 5) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 5.
-}
-else
-{
-	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
-	// In dit voorbeeld wordt deze code uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-CS">
-int intTest = 6;
+<span class="k">if</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 3.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 5.</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+	<span class="c1">// In ELK ANDER GEVAL wordt deze code uitgevoerd.</span>
+	<span class="c1">// In dit voorbeeld wordt deze code uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">intTest</span> <span class="p">=</span> <span class="m">6</span><span class="p">;</span>
 
-if (intTest &lt; 1) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 1.
-}
-else if (intTest &lt; 3) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 3.
-}
-else if (intTest &lt; 5) 
-{
-	// voer deze code uit enkel als intTest kleiner is dan 5.
-}
-else
-{
-	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
-	// In dit voorbeeld wordt deze code uitgevoerd.
-}
-</pre>
+<span class="k">if</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">1</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 1.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 3.</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">5</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="c1">// voer deze code uit enkel als intTest kleiner is dan 5.</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+	<span class="c1">// In ELK ANDER GEVAL wordt deze code uitgevoerd.</span>
+	<span class="c1">// In dit voorbeeld wordt deze code uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="coding-guidelines">Coding Guidelines</h2>
 

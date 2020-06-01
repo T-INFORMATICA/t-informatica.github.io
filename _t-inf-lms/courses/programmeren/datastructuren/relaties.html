@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -395,23 +395,20 @@
         <h2 id="relaties">Relaties</h2>
 <p>Wanneer een klasse een variabele bevat, is er een relatie tussen die klasse en het datatype van de variabele. Ook wanneer een klasse een method bevat met een parameter van een datatype, is er een relatie tussen die klasse en het datatype van die parameter. In het voorbeeld hieronder zou je bijvoorbeeld kunnen zeggen dat er een relatie is tussen Leerling en string, want de klasse Leerling heeft een field van het datatype string.</p>
 
-<pre class="linenums lang lang-JS">
-class Leerling {
-	constructor(naamLeerling) {
-		this._naam = "";		// Een relatie tussen Leerling en string
-	}
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {	
-	public $_naam = "";		// Een relatie tussen Leerling en string
-}
-</pre>
-<pre class="linenums lang lang-CS">
-class Leerling {	
-	string naam = "";			// Een relatie tussen Leerling en string
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_naam</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>		<span class="c1">// Een relatie tussen Leerling en string</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="k">public</span> <span class="nv">$_naam</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>		<span class="c1">// Een relatie tussen Leerling en string</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="kt">string</span> <span class="n">naam</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>			<span class="c1">// Een relatie tussen Leerling en string</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Wanneer het gaat over simpele datatypes, zoals string, integer, boolean, etc., zijn deze relaties niet zo belangrijk om aan te duiden. Deze datatypes zijn immers universeel gekend door alle gebruikers van de programmeertaal, dus is ook duidelijk wat de effecten en mogelijkheden zijn bij het gebruiken van die datatypes.</p>
 
@@ -433,7 +430,7 @@ class Leerling {
 
 <p>Een associatie is de minst specifieke relatie die er bestaat. Het zegt gewoon dat 2 klassen iets met elkaar te maken hebben en wordt in een klassediagram aangeduid door een gewone, open pijl.</p>
 
-<p><img src="/_t-inf-lms/assets/img/relaties_1.png" alt="klassediagram" style="height: auto; max-width: 100%" /></p>
+<p><img src="/_t-inf-lms/assets/img/relaties_1.png" alt="klassediagram" style="height: auto; max-width: 50%" /></p>
 
 <h3 id="compositie">Compositie</h3>
 
@@ -441,7 +438,7 @@ class Leerling {
 
 <p>Een compositie is dus een meer specifieke relatie dan een associatie. Het zegt dat één klasse een object van een andere klasse bevat en wordt in een klassediagram aangeduid door een gewone, open pijl met een gevuld diamantje aan het andere uiteinde.</p>
 
-<p><img src="/_t-inf-lms/assets/img/relaties_2.png" alt="klassediagram" style="height: auto; max-width: 100%" /></p>
+<p><img src="/_t-inf-lms/assets/img/relaties_2.png" alt="klassediagram" style="height: auto; max-width: 50%" /></p>
 
 <h3 id="overerving">Overerving</h3>
 
@@ -449,7 +446,7 @@ class Leerling {
 
 <p>Ook een overerving is een meer specifieke relatie dan een associatie, en wordt in een klassediagram aangeduid door een volle of streepjeslijn met een lege pijl aan het uiteinde.</p>
 
-<p><img src="/_t-inf-lms/assets/img/relaties_3.png" alt="klassediagram" style="height: auto; max-width: 100%" /></p>
+<p><img src="/_t-inf-lms/assets/img/relaties_3.png" alt="klassediagram" style="height: auto; max-width: 50%" /></p>
 
 
     </section>

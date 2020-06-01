@@ -64,7 +64,7 @@ Hyperlinks hebben 4 State Selectors die je bijna altijd moet definieren:
 *   De :**hover** state: Een hyperlink waar de gebruiker met zijn muis over staat.
 *   De :**active** state: Een hyperlink die verwijst naar de huidige pagina.
 
-<pre>
+```css
 /* link waar nog niet op geklikt is */
 a:link {
     color: #FF0000;
@@ -84,7 +84,7 @@ a:hover {
 a:active {
     color: #0000FF;
 }
-</pre>
+```
 
 
 **Belangrijk**:<br>

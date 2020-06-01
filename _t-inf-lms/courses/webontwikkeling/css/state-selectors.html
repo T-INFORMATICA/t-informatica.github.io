@@ -479,27 +479,26 @@
   <li>De :<strong>active</strong> state: Een hyperlink die verwijst naar de huidige pagina.</li>
 </ul>
 
-<pre>
-/* link waar nog niet op geklikt is */
-a:link {
-    color: #FF0000;
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* link waar nog niet op geklikt is */</span>
+<span class="nt">a</span><span class="nd">:link</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#FF0000</span><span class="p">;</span>
+<span class="p">}</span>
 
-/* link waar al wel op geklikt is */
-a:visited {
-    color: #00FF00;
-}
+<span class="c">/* link waar al wel op geklikt is */</span>
+<span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#00FF00</span><span class="p">;</span>
+<span class="p">}</span>
 
-/* link waar de muis over staat */
-a:hover {
-    color: #FF00FF;
-}
+<span class="c">/* link waar de muis over staat */</span>
+<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#FF00FF</span><span class="p">;</span>
+<span class="p">}</span>
 
-/* link die verwijst naar de huidige pagina */
-a:active {
-    color: #0000FF;
-}
-</pre>
+<span class="c">/* link die verwijst naar de huidige pagina */</span>
+<span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#0000FF</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p><strong>Belangrijk</strong>:<br />
 a:hover <strong>MOET</strong> komen <strong>na</strong> a:link en a:visited om te werken! <em>(als je a:link en/of a:visited hebt gedefinieerd)</em> <br />

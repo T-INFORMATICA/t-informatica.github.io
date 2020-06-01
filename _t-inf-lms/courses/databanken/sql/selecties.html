@@ -366,11 +366,10 @@
 
 <p>Een selectie legt voorwaarden op aan elke rij, in een extra where-clausule. Alleen rijen die aan de voorwaarde(n) voldoen, worden opgenomen in de resultaattabel.</p>
 
-<pre class="linenums lang-sql">
-select componist, titel, niveau 	-- 3: projectie
-from Stuk 				-- 1: brontabel
-where genre = 'klassiek'; 		-- 2: selectie
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">componist</span><span class="p">,</span> <span class="n">titel</span><span class="p">,</span> <span class="n">niveau</span> 	<span class="c1">-- 3: projectie</span>
+<span class="k">from</span> <span class="n">Stuk</span> 				<span class="c1">-- 1: brontabel</span>
+<span class="k">where</span> <span class="n">genre</span> <span class="o">=</span> <span class="s1">'klassiek'</span><span class="p">;</span> 		<span class="c1">-- 2: selectie</span>
+</code></pre></div></div>
 
 <h2 id="voorwaarde-met-vergelijking">Voorwaarde met vergelijking</h2>
 
@@ -391,11 +390,10 @@ where genre = 'klassiek'; 		-- 2: selectie
 
 <p>Een voorwaarde kan ook opgebouwd worden met behulp van <code class="highlighter-rouge">between ... and ...</code></p>
 
-<pre class="linenums lang-sql">
-select naam, geboortedatum
-from Componist
-where geboortedatum between '1700-01-01' and '1799-12-31';
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">naam</span><span class="p">,</span> <span class="n">geboortedatum</span>
+<span class="k">from</span> <span class="n">Componist</span>
+<span class="k">where</span> <span class="n">geboortedatum</span> <span class="k">between</span> <span class="s1">'1700-01-01'</span> <span class="k">and</span> <span class="s1">'1799-12-31'</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>In dit geval is de voorwaarde hetzelfde als <code class="highlighter-rouge">geboortedatum &gt;= '1700-01-01' and geboortedatum &lt;= '1799-12-31'</code>. De resultaattabel bestaat uit alle componisten die geboren zijn in de achttiende eeuw:</p>
 
@@ -412,11 +410,10 @@ where geboortedatum between '1700-01-01' and '1799-12-31';
 
 <p>Een <code class="highlighter-rouge">between ... and ...</code>  voorwaarde kan ook worden omgekeerd met behulp van het not keyword. Dit geeft dan alle componisten terug die niet zijn geboren tussen die data.</p>
 
-<pre class="linenums lang-sql">
-select naam, geboortedatum
-from Componist
-where geboortedatum not between '1700-01-01' and '1799-12-31';
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">naam</span><span class="p">,</span> <span class="n">geboortedatum</span>
+<span class="k">from</span> <span class="n">Componist</span>
+<span class="k">where</span> <span class="n">geboortedatum</span> <span class="k">not</span> <span class="k">between</span> <span class="s1">'1700-01-01'</span> <span class="k">and</span> <span class="s1">'1799-12-31'</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h2 id="voorwaarde-met-like-">Voorwaarde met like …</h2>
 
@@ -424,11 +421,10 @@ where geboortedatum not between '1700-01-01' and '1799-12-31';
 
 <p>Zo kan bijvoorbeeld een selectie worden gemaakt van componisten op basis van een deel van hun naam:</p>
 
-<pre class="linenums lang-sql">
-select naam componist
-from Componist
-where naam like '%ar%';
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">naam</span> <span class="n">componist</span>
+<span class="k">from</span> <span class="n">Componist</span>
+<span class="k">where</span> <span class="n">naam</span> <span class="k">like</span> <span class="s1">'%ar%'</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Het resultaat bevat iedereen met ‘ar’ in de naam:</p>
 
@@ -485,29 +481,26 @@ where naam like '%ar%';
 <h2 id="voorwaarde-met-in-">Voorwaarde met in …</h2>
 <p>Een select-query met or kan soms worden vereenvoudigd door het gebruik van in voorwaarde.</p>
 
-<pre class="linenums lang-sql">
-select *
-from Stuk
-where genre = 'klassiek' or genre = 'jazz' or genre = 'house';
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span>
+<span class="k">from</span> <span class="n">Stuk</span>
+<span class="k">where</span> <span class="n">genre</span> <span class="o">=</span> <span class="s1">'klassiek'</span> <span class="k">or</span> <span class="n">genre</span> <span class="o">=</span> <span class="s1">'jazz'</span> <span class="k">or</span> <span class="n">genre</span> <span class="o">=</span> <span class="s1">'house'</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>kan worden vereenvoudigd tot:</p>
 
-<pre class="linenums lang-sql">
-select *
-from Stuk
-where genre in ('klassiek', 'jazz', 'house');
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span>
+<span class="k">from</span> <span class="n">Stuk</span>
+<span class="k">where</span> <span class="n">genre</span> <span class="k">in</span> <span class="p">(</span><span class="s1">'klassiek'</span><span class="p">,</span> <span class="s1">'jazz'</span><span class="p">,</span> <span class="s1">'house'</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h2 id="vergelijking-met-null">Vergelijking met null</h2>
 
 <p>Ook op nulls kan worden gecontroleerd binnen een selectievoorwaarde. In de volgende query worden alle originele stukken geselecteerd:</p>
 
-<pre class="linenums lang-sql">
-select *
-from Stuk
-where origineel is null; -- alle originele stukken
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span>
+<span class="k">from</span> <span class="n">Stuk</span>
+<span class="k">where</span> <span class="n">origineel</span> <span class="k">is</span> <span class="k">null</span><span class="p">;</span> <span class="c1">-- alle originele stukken</span>
+</code></pre></div></div>
 
 <p>Want: de originele stukken zijn de niet-bewerkte stukken, dus de stukken waarvan de kolom ‘origineel’ niet is ingevuld.</p>
 
@@ -515,11 +508,10 @@ where origineel is null; -- alle originele stukken
 
 <p>Bewerkingen zijn dan de stukken waarbij origineel juist wel is ingevuld, dus ‘not null’ is:</p>
 
-<pre class="linenums lang-sql">
-select *
-from Stuk
-where origineel is not null; -- alle bewerkingen
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span>
+<span class="k">from</span> <span class="n">Stuk</span>
+<span class="k">where</span> <span class="n">origineel</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span><span class="p">;</span> <span class="c1">-- alle bewerkingen</span>
+</code></pre></div></div>
 
 
     </section>

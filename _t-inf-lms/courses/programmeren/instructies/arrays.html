@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -390,21 +390,18 @@
 
 <p>Als je een lijst van waardes wilt opslaan (bv. Een lijst met merken van auto’s), zou dit er als volgt kunnen uitzien:</p>
 
-<pre class="linenums lang lang-JS">
-var auto1 = "Volvo";
-var auto2 = "BMW";
-var auto3 = "Toyota";
-</pre>
-<pre class="linenums lang lang-PHP">
-$auto1 = "Volvo";
-$auto2 = "BMW";
-$auto3 = "Toyota";
-</pre>
-<pre class="linenums lang lang-CS">
-string auto1 = "Volvo";
-string auto2 = "BMW";
-string auto3 = "Toyota";
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">auto1</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">auto2</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">auto3</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$auto1</span> <span class="o">=</span> <span class="s2">"Volvo"</span><span class="p">;</span>
+<span class="nv">$auto2</span> <span class="o">=</span> <span class="s2">"BMW"</span><span class="p">;</span>
+<span class="nv">$auto3</span> <span class="o">=</span> <span class="s2">"Toyota"</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">string</span> <span class="n">auto1</span> <span class="p">=</span> <span class="s">"Volvo"</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">auto2</span> <span class="p">=</span> <span class="s">"BMW"</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">auto3</span> <span class="p">=</span> <span class="s">"Toyota"</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Dankzij een duidelijke naamgeving weet de programmeur nu dat in auto2 de waarde “BMW” werd opgeslagen. De computer kan echter geen Nederlands of Engels lezen. Je kan dus niet aan de computer vragen: “geef mij de waarde van de tweede en de derde auto”.</p>
 
@@ -419,53 +416,44 @@ string auto3 = "Toyota";
   <li><strong>Geef een waard</strong>e aan de variabele</li>
 </ul>
 
-<pre class="linenums lang lang-JS">
- 1	2	   	3		// 1: declareer; 2: benoem; 3: waarde;
-var autos = ["Volvo", "BMW", "Toyota"];
-</pre>
-<pre class="linenums lang lang-PHP">
-  2	   		3		// 1: declareer; 2: benoem; 3: waarde;
-$autos = array("Volvo", "BMW", "Toyota");
-</pre>
-<pre class="linenums lang lang-CS">
- 1	   2	   	     3		// 1: declareer; 2: benoem; 3: waarde;
-string[] autos = {"Volvo", "BMW", "Toyota"};
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="mi">1</span>	<span class="mi">2</span>	   	<span class="mi">3</span>		<span class="c1">// 1: declareer; 2: benoem; 3: waarde;</span>
+<span class="kd">var</span> <span class="nx">autos</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">];</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="mi">2</span>	   		<span class="mi">3</span>		<span class="c1">// 1: declareer; 2: benoem; 3: waarde;</span>
+<span class="nv">$autos</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">);</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="m">1</span>	   <span class="m">2</span>	   	     <span class="m">3</span>		<span class="c1">// 1: declareer; 2: benoem; 3: waarde;</span>
+<span class="kt">string</span><span class="p">[]</span> <span class="n">autos</span> <span class="p">=</span> <span class="p">{</span><span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Toyota"</span><span class="p">};</span>
+</code></pre></div></div>
 
 <p>De plaats van een waarde in de array wordt ook wel de <strong>index</strong> genoemd. De index is een getal dat aanduidt op welke plaats een waarde zich bevindt in de array.</p>
 
 <p><strong>Let op!</strong> De index begint te tellen vanaf 0! De eerste waarde heeft daarom index 0, de tweede waarde index 1, enz…</p>
 
-<pre class="linenums lang lang-JS">
-// index:	   0	1	 2
-var autos = ["Volvo", "BMW", "Toyota"];
-var tweedeAuto = autos[1];
-</pre>
-<pre class="linenums lang lang-PHP">
-// index:	  0	  1	    2
-$autos = array("Volvo", "BMW", "Toyota");
-$tweedeAuto = autos[1];
-</pre>
-<pre class="linenums lang lang-CS">
-// index:	    0	     1	      2
-string[] autos = {"Volvo", "BMW", "Toyota"};
-string tweedeAuto = autos[1];
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// index:	   0	1	 2</span>
+<span class="kd">var</span> <span class="nx">autos</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">tweedeAuto</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// index:	  0	  1	    2</span>
+<span class="nv">$autos</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">);</span>
+<span class="nv">$tweedeAuto</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// index:	    0	     1	      2</span>
+<span class="kt">string</span><span class="p">[]</span> <span class="n">autos</span> <span class="p">=</span> <span class="p">{</span><span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Toyota"</span><span class="p">};</span>
+<span class="kt">string</span> <span class="n">tweedeAuto</span> <span class="p">=</span> <span class="n">autos</span><span class="p">[</span><span class="m">1</span><span class="p">];</span>
+</code></pre></div></div>
 
 <p>Met de index kan je waardes in de array <strong>opvragen of aanpassen</strong>.</p>
 
-<pre class="linenums lang lang-JS">
-var eersteAuto = autos[0];	// vraag de eerste waarde in de array op
-autos[0] = "Renault";		// pas de eerste waarde in de array aan
-</pre>
-<pre class="linenums lang lang-PHP">
-$eersteAuto = autos[0];		// vraag de eerste waarde in de array op
-autos[0] = "Renault";		// pas de eerste waarde in de array aan
-</pre>
-<pre class="linenums lang lang-CS">
-String eersteAuto = autos[0];	// vraag de eerste waarde in de array op
-autos[0] = "Renault";		// pas de eerste waarde in de array aan
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">eersteAuto</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>	<span class="c1">// vraag de eerste waarde in de array op</span>
+<span class="nx">autos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Renault</span><span class="dl">"</span><span class="p">;</span>		<span class="c1">// pas de eerste waarde in de array aan</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$eersteAuto</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>		<span class="c1">// vraag de eerste waarde in de array op</span>
+<span class="nx">autos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Renault"</span><span class="p">;</span>		<span class="c1">// pas de eerste waarde in de array aan</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">String</span> <span class="n">eersteAuto</span> <span class="p">=</span> <span class="n">autos</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>	<span class="c1">// vraag de eerste waarde in de array op</span>
+<span class="n">autos</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="s">"Renault"</span><span class="p">;</span>		<span class="c1">// pas de eerste waarde in de array aan</span>
+</code></pre></div></div>
 
 <p>Om deze reden worden dit soort arrays ook wel <strong>indexed arrays</strong> genoemd: elke waarde krijgt automatisch een index toegewezen.</p>
 
@@ -484,52 +472,43 @@ autos[0] = "Renault";		// pas de eerste waarde in de array aan
 
 <h3 id="aantal-waardes">Aantal waardes</h3>
 
-<pre class="linenums lang lang-JS">
-var autos = ["Volvo", "BMW", "Toyota"];
-var aantal = autos.length;
-</pre>
-<pre class="linenums lang lang-PHP">
-$autos = array("Volvo", "BMW", "Toyota");
-$aantal = count($autos);
-</pre>
-<pre class="linenums lang lang-CS">
-string[] autos = {"Volvo", "BMW", "Toyota"};
-int aantal = autos.Length;
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">autos</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">aantal</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$autos</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">);</span>
+<span class="nv">$aantal</span> <span class="o">=</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$autos</span><span class="p">);</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">string</span><span class="p">[]</span> <span class="n">autos</span> <span class="p">=</span> <span class="p">{</span><span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Toyota"</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">aantal</span> <span class="p">=</span> <span class="n">autos</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h3 id="waardes-verwijderen">Waardes verwijderen</h3>
 
-<pre class="linenums lang lang-JS">
-var autos = ["Volvo", "BMW", "Toyota"];
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">autos</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">];</span>
 
-var verwijderdeAuto1 = autos.pop();		// verwijdert de laatste waarde
-var verwijderdeAuto2 = autos.shift();	// verwijdert de eerste waarde
-</pre>
-<pre class="linenums lang lang-PHP">
-$autos = array("Volvo", "BMW", "Toyota");
-$verwijderdeAuto = unset($autos[0]);	// OPGELET! Verwijdert OOK de index, 
-					// waardoor dit een associative array wordt!
-</pre>
-<pre class="linenums lang lang-CS">
-// In C# is de grootte van een array vastgelegd wanneer je de array aanmaakt.
-// Je kan waardes dus niet zomaar verwijderen.
-</pre>
+<span class="kd">var</span> <span class="nx">verwijderdeAuto1</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>		<span class="c1">// verwijdert de laatste waarde</span>
+<span class="kd">var</span> <span class="nx">verwijderdeAuto2</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>	<span class="c1">// verwijdert de eerste waarde</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$autos</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">);</span>
+<span class="nv">$verwijderdeAuto</span> <span class="o">=</span> <span class="nb">unset</span><span class="p">(</span><span class="nv">$autos</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>	<span class="c1">// OPGELET! Verwijdert OOK de index, </span>
+					<span class="c1">// waardoor dit een associative array wordt!</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// In C# is de grootte van een array vastgelegd wanneer je de array aanmaakt.</span>
+<span class="c1">// Je kan waardes dus niet zomaar verwijderen.</span>
+</code></pre></div></div>
 
 <h3 id="waardes-toevoegen">Waardes toevoegen</h3>
 
-<pre class="linenums lang lang-JS">
-var autos = ["Volvo", "BMW", "Toyota"];
-autos.push("Renault");			// voegt een waarde toe aan het einde
-autos.unshift("Renault");		// voegt een waarde toe aan het begin
-</pre>
-<pre class="linenums lang lang-PHP">
-$autos = array("Volvo", "BMW", "Toyota");
-$aantal[] = "Renault";			// voegt een waarde toe aan het einde
-</pre>
-<pre class="linenums lang lang-CS">
-// In C# is de grootte van een array vastgelegd wanneer je de array aanmaakt.
-// Je kan waardes dus niet zomaar toevoegen.
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">autos</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">];</span>
+<span class="nx">autos</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">"</span><span class="s2">Renault</span><span class="dl">"</span><span class="p">);</span>			<span class="c1">// voegt een waarde toe aan het einde</span>
+<span class="nx">autos</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="dl">"</span><span class="s2">Renault</span><span class="dl">"</span><span class="p">);</span>		<span class="c1">// voegt een waarde toe aan het begin</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$autos</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">);</span>
+<span class="nv">$aantal</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">"Renault"</span><span class="p">;</span>			<span class="c1">// voegt een waarde toe aan het einde</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// In C# is de grootte van een array vastgelegd wanneer je de array aanmaakt.</span>
+<span class="c1">// Je kan waardes dus niet zomaar toevoegen.</span>
+</code></pre></div></div>
 
 <div class="lang lang-PHP"> 
 
@@ -537,28 +516,28 @@ $aantal[] = "Renault";			// voegt een waarde toe aan het einde
 
 <p>Indexed arrays gebruiken een index om een waarde op te vragen.</p>
 
-<pre class="linenums lang lang-PHP">
+```php
 // index:	  0	  1	    2
 $autos = array("Volvo", "BMW", "Toyota");
 $tweedeAuto = autos[1];
-</pre>
+```
 
 <p>Een andere manier om deze array te schrijven is als volgt:</p>
 
-<pre class="linenums lang lang-PHP">
+```php
 $autos = array(0 =&gt; "Volvo", 1 =&gt; "BMW", 2 =&gt; "Toyota");
 $tweedeAuto = autos[1];
-</pre>
+```
 
 <p>Op deze manier kan je zelf de index kiezen die bij elke waarde hoort. Je kan zelfs een compleet andere index kiezen, en op dezelfde manier een waarde opvragen:</p>
 
-<pre class="linenums lang lang-PHP">
+```php
 $autos = array (7 =&gt; "Volvo", 5 =&gt; "BMW", 13 =&gt; "Toyota");
 
 echo $autos[7]; 		// toont Volvo op het scherm
 echo $autos[5]; 		// toont BMW op het scherm
 echo $autos[13]; 		// toont Toyota op het scherm
-</pre>
+```
 
 <p>Bovenstaande array wordt ook een <b>associative array</b> genoemd. Associative arrays zijn een uitbreiding op indexed arrays. Ze worden zo genoemd omdat in dit soort arrays de waarde wordt geassocieerd met een zelf gekozen index, meestal een naam of getal.<p>
 
@@ -571,13 +550,13 @@ echo $autos[13]; 		// toont Toyota op het scherm
 
 <p>Het is dus mogelijk om in plaats een getal een woord te gebruiken. Zo kan je automerken bijvoorbeeld associëren met het land waar ze gemaakt worden.</p>
 
-<pre class="linenums lang lang-PHP">
+```php
 $autos = array ("Zweeds" =&gt; "Volvo", "Duits" =&gt; "BMW", "Japans" =&gt; "Toyota");
 
 echo $autos["Zweeds"]; 		// toont Volvo op het scherm
 echo $autos["Duits"]; 		// toont BMW op het scherm
 echo $autos["Japans"]; 		// toont Toyota op het scherm
-</pre>
+```
 </p></p></div>
 
 

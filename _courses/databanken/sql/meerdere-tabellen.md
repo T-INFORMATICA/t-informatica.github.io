@@ -125,13 +125,13 @@ Er is dus meer dan één `join` commando. Om elk van deze `join`s uit te leggen 
 
 Een `cross join` maakt een tabel met alle fields uit tabel A en B. Elke record in de nieuwe tabel is een mogelijke combinatie tussen een record uit tabel A en een record uit tabel B.
 
-<pre class="linenums lang-sql">
+```sql
 SELECT * 
 FROM 
  Color 
  CROSS JOIN 
  Size
-</pre>
+```
 
 <table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
@@ -250,14 +250,14 @@ large
 
 Een `inner join` (vaak ook afgekort tot `join`) is een `cross join` waarin enkel de rijen staan die voldoen aan een voorwaarde.
 
-<pre class="linenums lang-sql">
+```sql
 SELECT * 
 FROM 
  Color 
  INNER JOIN 
  Size
  ON Color.id = Size.id
-</pre>
+```
 
 <table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
@@ -302,14 +302,14 @@ small
 Een `left outer join` (ook wel `left join` genoemd) is, net als de `inner join`, een `join` met een voorwaarde. Het resultaat hiervan is een `inner join`, met daarbij ook **alle rijen uit de eerste tabel die niet aan de voorwaarde voldoen**. De kolommen uit de tweede tabel worden met een `null` waarde ingevuld.
 
 
-<pre class="linenums lang-sql">
+```sql
 SELECT * 
 FROM 
  Color 
  LEFT OUTER JOIN 
  Size
  ON Color.id = Size.id
-</pre>
+```
 
 <table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
@@ -369,14 +369,14 @@ null
 Een `right outer join` (ook wel `right join` genoemd) is, net als de `inner join`, een `join` met een voorwaarde. Het resultaat hiervan is een `inner join`, met daarbij ook **alle rijen uit de tweede tabel die niet aan de voorwaarde voldoen**. De kolommen uit de eerste tabel worden met een `null` waarde ingevuld.
 
 
-<pre class="linenums lang-sql">
+```sql
 SELECT * 
 FROM 
  Color 
  LEFT OUTER JOIN 
  Size
  ON Color.id = Size.id
-</pre>
+```
 
 <table class="styledTable" style="max-width: 600px">
  <tr style="background-color: white">
@@ -461,11 +461,11 @@ Dit is ook zichtbaar in het databankontwerp: `Stuk.componist` is een refererende
 Een inner join tussen deze twee tabellen ziet er dus zo uit:
 
 
-<pre class="linenums lang-sql">
+```sql
 SELECT * 
 FROM 
  Stuk
  INNER JOIN 
  Componist
  ON Stuk.componist = Componist.nr
-</pre>
+```

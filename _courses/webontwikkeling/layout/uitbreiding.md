@@ -21,7 +21,7 @@ In veel ontwerpen wordt er tussen de verschillende grid-items wat ruimte gelaten
 CSS Grid heeft ook hier een nieuwe stijlregel voor voorzien:
 
 
-```
+```css
 /* voeg 10px ruimte toe tussen elke kolom */
 grid-column-gap: 10px; 
 /* voeg 10px ruimte toe tussen elke rij */

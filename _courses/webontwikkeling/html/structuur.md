@@ -26,28 +26,28 @@ In het voorbeeld hieronder zie je 2 websites met dezelfde structuur, maar een an
 
 ## Block elementen
 
-Structuur wordt gegeven door middel van block elementen zoals het <code>&lt;<strong>div</strong>></code> element. Je kan bijvoorbeeld de gehele website als  één <code>&lt;<strong>div</strong>></code> element bekijken, waarin 4 verschillende <code>&lt;<strong>div</strong>></code> elementen worden geplaatst. 
+Structuur wordt gegeven door middel van block elementen zoals het **`div`** element. Je kan bijvoorbeeld de gehele website als  één **`div`** element bekijken, waarin 4 verschillende **`div`** elementen worden geplaatst. 
 
 <img src="{{ site.baseurl }}/assets/img/html-structuur3.jpg" alt="klassediagram" style="height: auto; max-width: 100%">
 
 Dit vertaalt zich dan naar de volgende code:
 
 
-<pre>
-&lt;div>
-	&lt;div id="1">
-	&lt;/div>
+```html
+<div>
+	<div id="1">
+	</div>
 
-	&lt;div id="2">
-	&lt;/div>
+	<div id="2">
+	</div>
 
-	&lt;div id="3">
-	&lt;/div>
+	<div id="3">
+	</div>
 
-	&lt;div id="4">
-	&lt;/div>
-&lt;/div>
-</pre>
+	<div id="4">
+	</div>
+</div>
+```
 
 
 
@@ -56,29 +56,29 @@ Deze hoofdstructuur kan dan gemakkelijk uitgebreid worden met een **substructuur
 <img src="{{ site.baseurl }}/assets/img/html-structuur4.jpg" alt="klassediagram" style="height: auto; max-width: 100%">
 
 
-<pre>
-&lt;div>
-	&lt;div id="1">
-		&lt;div id="1.1">
-		&lt;/div>
+```html
+<div>
+	<div id="1">
+		<div id="1.1">
+		</div>
 
-		&lt;div id="1.2">
-		&lt;/div>
+		<div id="1.2">
+		</div>
 
-		&lt;div id="1.3">
-		&lt;/div>
+		<div id="1.3">
+		</div>
 
-		&lt;div id="1.4">
-		&lt;/div>
-	&lt;/div>
+		<div id="1.4">
+		</div>
+	</div>
 
-	&lt;div id="2">
-	&lt;/div>
+	<div id="2">
+	</div>
 
-	&lt;div id="3">
-	&lt;/div>
+	<div id="3">
+	</div>
 
-	&lt;div id="4">
-	&lt;/div>
-&lt;/div>
-</pre>
+	<div id="4">
+	</div>
+</div>
+```

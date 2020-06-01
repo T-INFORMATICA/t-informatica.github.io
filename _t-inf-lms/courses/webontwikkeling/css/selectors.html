@@ -438,7 +438,7 @@ Een stijlregel wordt dus toegepast op <b>alle elementen die overeenkomen met de 
 
 <h2 id="selectors-overzicht">Selectors overzicht</h2>
 
-<table class="styledTable">
+<table class="styledTable" style="text-align: center">
   <tr>
    <th>selector</th>
    <th>voorbeeld</th>
@@ -447,7 +447,7 @@ Een stijlregel wordt dus toegepast op <b>alle elementen die overeenkomen met de 
   <tr>
    <td>De element selector</td>
    <td><code>p</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer alle &lt;p&gt; elementen.<br />
 De element selector is de simpelste: Je gebruikt de tagnaam van het HTML element als selector, en alle HTML elementen met die tagnaam zullen vanaf dan deze stijlregels volgen.
    </td>
@@ -455,7 +455,7 @@ De element selector is de simpelste: Je gebruikt de tagnaam van het HTML element
   <tr>
    <td>De ALL selector</td>
    <td><code>*</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer alle elementen.<br />
 De * selector wordt gebruikt om stijlregels toe te passen op <b>alle elementen</b>. Wil je dat alle elementen op je website een bepaald lettertype gebruiken, kan je hiervoor de * selector gebruiken.
    </td>
@@ -463,7 +463,7 @@ De * selector wordt gebruikt om stijlregels toe te passen op <b>alle elementen</
   <tr>
    <td>De class selector</td>
    <td><code>.intro</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer alle elementen met class="intro".<br />
 Wanneer elementen zijn gemarkeerd met het class-attribute kan je deze elementen ook een eigen stijl geven.
 Je doet dit door middel van een <b>punt</b>, gevolgd door de naam die je in het class-attribute hebt geschreven.
@@ -472,7 +472,7 @@ Je doet dit door middel van een <b>punt</b>, gevolgd door de naam die je in het 
   <tr>
    <td>De id selector</td>
    <td><code>#firstname</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer het element met  id="firstname".<br />
 Wanneer elementen zijn gemarkeerd met het ID-attribute kan je deze elementen een eigen stijl geven.
 Je doet dit door middel van een <b>hekje</b>, gevolgd door de naam die je in het ID-attribute hebt geschreven.
@@ -481,27 +481,27 @@ Je doet dit door middel van een <b>hekje</b>, gevolgd door de naam die je in het
   <tr>
    <td>Selectors combineren</td>
    <td><code>div, p</code></td>
-   <td>Selecteer alle &lt;div&gt; elementen en alle &lt;p&gt; elementen.</td>
+   <td style="text-align: left">Selecteer alle &lt;div&gt; elementen en alle &lt;p&gt; elementen.</td>
   </tr>
   <tr>
    <td>Geneste elementen selector</td>
    <td><code>div p</code></td>
-   <td>Selecteer alle &lt;p&gt; elementen die zich bevinden in &lt;div&gt; elementen.</td>
+   <td style="text-align: left">Selecteer alle &lt;p&gt; elementen die zich bevinden in &lt;div&gt; elementen.</td>
   </tr>
   <tr>
    <td>Parent-child selector</td>
    <td><code>div &gt; p</code></td>
-   <td>Selecteer alle &lt;p&gt; elementen waarvan de parent een &lt;div&gt; element is.</td>
+   <td style="text-align: left">Selecteer alle &lt;p&gt; elementen waarvan de parent een &lt;div&gt; element is.</td>
   </tr>
   <tr>
    <td>After selector</td>
    <td><code>div + p</code></td>
-   <td>Selecteer alle &lt;p&gt; elementen die direct na &lt;div&gt; elementen staan.</td>
+   <td style="text-align: left">Selecteer alle &lt;p&gt; elementen die direct na &lt;div&gt; elementen staan.</td>
   </tr>
   <tr>
    <td>Before selector</td>
    <td><code>p ~ ul</code></td>
-   <td>Selecteer elk &lt;ul&gt; element dat wordt voorafgegaan door een &lt;p&gt; element.</td>
+   <td style="text-align: left">Selecteer elk &lt;ul&gt; element dat wordt voorafgegaan door een &lt;p&gt; element.</td>
   </tr>
 </table>
 
@@ -514,48 +514,45 @@ Je doet dit door middel van een <b>hekje</b>, gevolgd door de naam die je in het
 <p>Een div element van de klasse “content” en een ID “koptekst” kan reageren op 3 selectors:</p>
 
 <ol>
-  <li>div</li>
-  <li>.content</li>
-  <li>#koptekst</li>
+  <li><code class="highlighter-rouge">div</code></li>
+  <li><code class="highlighter-rouge">.content</code></li>
+  <li><code class="highlighter-rouge">#koptekst</code></li>
 </ol>
 
 <p>Bijvoorbeeld:</p>
 
-<pre>
-div {
-	background-color: red;
-}
-.content {
-	color: green;
-}
-#koptekst {
-	font-family: verdana;
-}
-</pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.content</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#koptekst</span> <span class="p">{</span>
+	<span class="nl">font-family</span><span class="p">:</span> <span class="n">verdana</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Wanneer, zoals in bovenstaand voorbeeld, alle 3 de selectors stijlregels krijgen, wordt voor het element <code>&lt;<b>div</b> class="content" id="koptekst"&gt;</code> een combinatie gemaakt van deze 3 stijlregels:</p>
 
-<pre>
-	background-color: red;
-	color: green;
-	font-family: verdana;
-</pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="nt">background-color</span><span class="o">:</span> <span class="nt">red</span><span class="o">;</span>
+	<span class="nt">color</span><span class="o">:</span> <span class="nt">green</span><span class="o">;</span>
+	<span class="nt">font-family</span><span class="o">:</span> <span class="nt">verdana</span><span class="o">;</span>
+</code></pre></div></div>
 
 <h3 id="conflicterende-stijlregels">Conflicterende stijlregels</h3>
 
 <p>Stijlregels kunnen soms conflicteren: Wanneer je een div element van de klasse “content” hebt voorzien en een ID “koptekst” hebt gegeven, kan het wel eens gebeuren dat verschillende selectors dezelfde stijlregels proberen toe te passen:</p>
 
-<pre>
-div {
-	Background-color: red;
-}
-.content {
-	Background-color: green;
-}
-#koptekst {
-	Background-color: blue;
-}
-</pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+	<span class="py">Background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.content</span> <span class="p">{</span>
+	<span class="py">Background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#koptekst</span> <span class="p">{</span>
+	<span class="py">Background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p><br />
 Het is daarom belangrijk om te weten welke selector voorrang krijgt.De algemene regel is: <strong>hoe specifieker de selector, hoe meer voorrang.</strong></p>
@@ -571,16 +568,15 @@ Het is daarom belangrijk om te weten welke selector voorrang krijgt.De algemene 
 
 <p>Wanneer twee selectors <strong>even specifiek zijn</strong> geldt de <strong>onderste stijlregel in de css code</strong>.</p>
 
-<p>In volgend voorbeeld zal elke &lt;div&gt; een groene achtergrond kleur krijgen.</p>
+<p>In volgend voorbeeld zal elke <code class="highlighter-rouge">&lt;div&gt;</code> een groene achtergrond kleur krijgen.</p>
 
-<pre>
-div {
-	Background-color: red;
-}
-div {
-	Background-color: green;
-}
-</pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+	<span class="py">Background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span> <span class="p">{</span>
+	<span class="py">Background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 
     </section>

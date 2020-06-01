@@ -21,8 +21,8 @@ $('select.lang-select').change(function() {
 });
 
 function showCode(lang) {
-    $(`.lang:not(.${lang})`).css("display", "none");
-    $(`.lang.${lang}`).css("display", "");
+    $(`div.highlighter-rouge:not(.${lang})`).css("display", "none");
+    $(`div.highlighter-rouge.${lang}`).css("display", "");
 }
 /*
 function setCookie(cname, cvalue, exdays) {

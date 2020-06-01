@@ -366,12 +366,11 @@
 
 <p>De volgende select-query laat een aantal gegevens van klassieke muziekstukken afdrukken op volgorde van niveau:</p>
 
-<pre class="linenums lang-sql">
-select nr, genre, niveau, round(speelduur)
-from Stuk
-where genre = 'klassiek'
-order by niveau;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">nr</span><span class="p">,</span> <span class="n">genre</span><span class="p">,</span> <span class="n">niveau</span><span class="p">,</span> <span class="n">round</span><span class="p">(</span><span class="n">speelduur</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">Stuk</span>
+<span class="k">where</span> <span class="n">genre</span> <span class="o">=</span> <span class="s1">'klassiek'</span>
+<span class="k">order</span> <span class="k">by</span> <span class="n">niveau</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Resultaat:</p>
 
@@ -422,12 +421,11 @@ order by niveau;
 
 <p>Standaard wordt oplopend (‘ascending’) gesorteerd. Desgewenst kunnen we dit expliciet in het statement opnemen: … order by speelduur asc. Aflopend sorteren (‘descending’) kan ook:</p>
 
-<pre class="linenums lang-sql">
-select nr, genre, niveau, round(speelduur)
-from Stuk
-where genre = 'klassiek'
-order by niveau desc;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">nr</span><span class="p">,</span> <span class="n">genre</span><span class="p">,</span> <span class="n">niveau</span><span class="p">,</span> <span class="n">round</span><span class="p">(</span><span class="n">speelduur</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">Stuk</span>
+<span class="k">where</span> <span class="n">genre</span> <span class="o">=</span> <span class="s1">'klassiek'</span>
+<span class="k">order</span> <span class="k">by</span> <span class="n">niveau</span> <span class="k">desc</span><span class="p">;</span>
+</code></pre></div></div>
 
 
     </section>

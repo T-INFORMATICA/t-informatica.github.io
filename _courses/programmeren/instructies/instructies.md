@@ -21,27 +21,27 @@ Programmeren is het geven van instructies (bevelen) aan een computer. Als je een
 
 Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).
 
-<pre class="linenums lang lang-JS">
+```javascript
 5 + 2 /* geen instructie, want geen toewijzing (enkel een expressie) */
 
 5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
 
 var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
 
 5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
 
 $getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
 
 5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
 
 int getal = 5 + 2; // wel een instructie
-</pre>
+```
 
 Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.
 
@@ -63,7 +63,7 @@ Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daa
 
 <pre class="linenums lang lang-PHP lang-CS lang-JS">
 // Dit gedeelte wordt door de computer genegeerd
-</pre>
+```
 
 ### 3.2.2 Commentaar op meerdere lijnen
 Commentaar kan je ook verspreiden over meerdere lijnen.
@@ -83,4 +83,4 @@ door de computer.
 Je kan niet programmeren
 totdat je het ster-slash einde
 Typt */
-</pre>
+```

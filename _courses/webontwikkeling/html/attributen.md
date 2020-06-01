@@ -24,19 +24,19 @@ Een attribute geeft extra informatie aan een element. Bijvoorbeeld:
 *   het href attribute duidt aan waar je naartoe surft als je op een link klikt.
 *   Het target attribute duidt aan of je de link opent op hetzelfde tabblad, of een nieuw tabblad.
 
-<pre>
-&lt;a>						 duidt een link aan die niets doet
+``` html
+<a>						 duidt een link aan die niets doet
 dit is een link
-&lt;/a>
+</a>
 
-&lt;a href="https://www.google.be">	  	 duidt een link aan naar de website van 
+<a href="https://www.google.be">	  	 duidt een link aan naar de website van 
 	dit is een link			  	 google
-&lt;/a>
+</a>
 
-&lt;a href="https://www.google.be" target="_blank">
+<a href="https://www.google.be" target="_blank">
 	dit is een link			 	 duidt een link aan naar de website van 
-&lt;/a>			  			 google, die in een nieuw tabblad wordt 
-</pre>
+</a>			  			 google, die in een nieuw tabblad wordt 
+```
 
 
 

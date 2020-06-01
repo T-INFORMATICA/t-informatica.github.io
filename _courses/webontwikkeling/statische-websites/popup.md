@@ -28,7 +28,7 @@ Dit is echter géén vereiste. Een hyperlink kan evengoed verwijzen naar een ond
 1. Een element met een unieke ID
 2. Een hyperlink om naar dat element te verwijzen
 
-```
+```html
 <!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --> 
 <a href="#mijnElement">Ga naar mijnElement!</a>
 
@@ -50,7 +50,7 @@ Wanneer een gebruiker klikt op een bookmark, wordt het element waar de bookmark 
 In CSS kan dat doel eigen stijlregels krijgen met de :target selector.
 
 
-```
+```css
 :target {
 	background-color: red;
 }
@@ -78,7 +78,7 @@ Het is pas wanneer de gebruiker een actie onderneemt om de popup te openen (zoal
 ## CSS:
 
 
-```
+```css
 #mijnElement {
 	display: none;
 }
@@ -92,7 +92,7 @@ Het is pas wanneer de gebruiker een actie onderneemt om de popup te openen (zoal
 ## HTML:
 
 
-```
+```html
 <!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --> 
 <a href="#mijnElement">Ga naar mijnElement!</a>
 

@@ -38,7 +38,7 @@ De klassen waaruit deze fields en methods werden weggehaald, worden dan aangedui
 
 In het voorbeeld hieronder zijn er 2 klassen `Leraar` en `Leerling` gedefinieerd:
 
-<pre class="linenums lang lang-JS">
+```javascript
 Javascript
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
@@ -55,8 +55,8 @@ class Leraar {
 		this._diplomas = [];
 	}
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Leerling {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -68,8 +68,8 @@ class Leraar {
 	private $_leeftijd = 0;
 	private $_diplomas = array();
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 class Leerling {	
 	string _naam = "";
 	int _leeftijd = 0;
@@ -81,13 +81,13 @@ class Leraar {
 	int _leeftijd = 0;
 	int _diplomas = [];
 }
-</pre>
+```
 
 Beide klassen hebben een field `naam` en een field `leeftijd` die semantisch hetzelfde zijn. Het DRY principe wordt dus geschonden.
 
 Daarom wordt er nu een derde klasse gemaakt: `Persoon`. Persoon wordt de **superklasse** van `Leerling` en `Leraar`. `Leerling` en `Leraar` worden vervolgens aangeduid dat ze overerven van de klasse Persoon. Dit zijn de **subklassen** van de klasse Persoon.
 
-<pre class="linenums lang lang-JS">
+```javascript
 class Persoon {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "";
@@ -106,8 +106,8 @@ class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
 		this._diplomas = [];
 	}
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Persoon {	
 	private $_naam = "";
 	private $_leeftijd = 0;
@@ -120,8 +120,8 @@ class Leerling extends Persoon { // extends duid aan dat er wordt overgeërfd
 class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
 	private $_diplomas = array();
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 class Persoon {	
 	string _naam = "";
 	int _leeftijd = 0;
@@ -134,6 +134,6 @@ class Leerling : Persoon {	 // : duid aan dat er wordt overgeërfd
 class Leraar : Persoon {	 // : duid aan dat er wordt overgeërfd
 	int _diplomas = [];
 }
-</pre>
+```
 
 Er wordt terug helemaal voldaan aan het DRY principe.

@@ -12,7 +12,7 @@ description:
 Een menu is niet meer dan een lijst van hyperlinks, zoals in het voorbeeld hieronder.
 
 
-```
+```html
 <ul class="menu">
 	<li>
 		<a href="#">menu link 1</a>
@@ -48,7 +48,7 @@ Een verticaal menu is een menu waarbij de items in het menu onder elkaar (vertic
 4. Geef de **`a`** elementen weer als block-elementen.
 5. Geef de **`a`** elementen een hoogte en breedte van 100%, zodat ze hun parent volledig opvullen.
 
-```
+```css
 .menu {
 	list-style-type: none;
 	padding: 0;
@@ -72,7 +72,7 @@ Dit is een basis verticaal menu. Hierop kan nu gemakkelijk worden uitgebreid met
 HTML:
 
 
-```
+```html
 <ul class="menu styledMenu">
 	<li>
 		<a href="#">Home</a>
@@ -94,7 +94,7 @@ HTML:
 CSS:
 
 
-```
+```css
 .menu {
 	list-style-type: none;
 	padding: 0;
@@ -142,7 +142,7 @@ CSS:
 Een horizontaal menu werkt op dezelfde manier als een verticaal menu, met één verschil: De **`li`** elementen zijn niet langer block elementen. De code is dus hetzelfde als die van het horizontale menu, met daarin één uitbreiding.
 
 
-```
+```css
 .menu {
 	list-style-type: none;
 	padding: 0;

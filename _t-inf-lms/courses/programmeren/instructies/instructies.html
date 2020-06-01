@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -394,27 +394,24 @@
 
 <p>Om te zorgen dat de computer weet waar een instructie begint en eindigt, wordt in de meeste programmeertalen aan het einde van een instructie een bepaald teken geplaatst. In Javascript is dat teken een puntkomma ( ; ).</p>
 
-<pre class="linenums lang lang-JS">
-5 + 2 /* geen instructie, want geen toewijzing (enkel een expressie) */
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span> <span class="cm">/* geen instructie, want geen toewijzing (enkel een expressie) */</span>
 
-5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
+<span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="cm">/* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */</span>
 
-var getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="linenums lang lang-PHP">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<span class="kd">var</span> <span class="nx">getal</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// wel een instructie</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span> <span class="cm">/* geen instructie, want geen puntkomma (enkel een expressie) */</span>
 
-5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
+<span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="cm">/* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */</span>
 
-$getal = 5 + 2; // wel een instructie
-</pre>
-<pre class="linenums lang lang-CS">
-5 + 2 /* geen instructie, want geen puntkomma (enkel een expressie) */
+<span class="nv">$getal</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// wel een instructie</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">5</span> <span class="p">+</span> <span class="m">2</span> <span class="cm">/* geen instructie, want geen puntkomma (enkel een expressie) */</span>
 
-5 + 2; /* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */
+<span class="m">5</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span> <span class="cm">/* geen instructie (enkel een expressie, geeft een fout omdat het resultaat van de expressie niet wordt opgeslagen) */</span>
 
-int getal = 5 + 2; // wel een instructie
-</pre>
+<span class="kt">int</span> <span class="n">getal</span> <span class="p">=</span> <span class="m">5</span> <span class="p">+</span> <span class="m">2</span><span class="p">;</span> <span class="c1">// wel een instructie</span>
+</code></pre></div></div>
 
 <p>Heb je de hoofdstukken variabelen en expressies goed begrepen, kan je dus nu in feite programmeren.</p>
 
@@ -438,17 +435,15 @@ Je kan commentaar op 2 manieren toevoegen:</p>
 
 <pre class="linenums lang lang-PHP lang-CS lang-JS">
 // Dit gedeelte wordt door de computer genegeerd
-</pre>
+```
 
-<h3 id="322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</h3>
-<p>Commentaar kan je ook verspreiden over meerdere lijnen.
-Je kan dit doen door:</p>
-<ul>
-  <li>Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).</li>
-  <li>Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).</li>
-</ul>
+### 3.2.2 Commentaar op meerdere lijnen
+Commentaar kan je ook verspreiden over meerdere lijnen.
+Je kan dit doen door:
+ - Ofwel plaats je aan het begin van elke lijn 2 forward slashes (//).
+ - Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).
 
-<p>Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.</p>
+Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.
 <pre class="linenums lang lang-PHP lang-CS lang-JS">
 // Dit gedeelte wordt
 // door de computer genegeerd
@@ -460,7 +455,8 @@ door de computer.
 Je kan niet programmeren
 totdat je het ster-slash einde
 Typt */
-</pre>
+```
+</pre></pre>
 
 
     </section>
@@ -486,7 +482,6 @@ Typt */
   <li><a href="#32-commentaar">3.2 Commentaar</a>
     <ul>
       <li><a href="#321-commentaar-op-één-lijn">3.2.1 Commentaar op één lijn</a></li>
-      <li><a href="#322-commentaar-op-meerdere-lijnen">3.2.2 Commentaar op meerdere lijnen</a></li>
     </ul>
   </li>
 </ul>

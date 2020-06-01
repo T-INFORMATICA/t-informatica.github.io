@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -397,30 +397,24 @@
 
 <p>Een klasse is in feite een complex datatype dat je zelf maakt. Vanaf een klasse gemaakt is, kunnen objecten worden aangemaakt met als datatype de naam van die klasse. In volgend voorbeeld wordt een klasse <code class="highlighter-rouge">Leerling</code> gemaakt:</p>
 
-<pre class="linenums lang lang-JS">
-class Leerling {		// KLASSE
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {		// KLASSE
-}
-</pre>
-<pre class="linenums lang lang-CS">
-public class Leerling {		// KLASSE
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>		<span class="c1">// KLASSE</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>		<span class="c1">// KLASSE</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>		<span class="c1">// KLASSE</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Wanneer die klasse gemaakt is kan je een variabele van het datatype <code class="highlighter-rouge">Leerling</code> aanmaken:</p>
 
-<pre class="linenums lang lang-JS">
-let voorbeeldLeerling = new Leerling();		// OBJECT
-</pre>
-<pre class="linenums lang lang-PHP">
-$voorbeeldLeerling = new Leerling();		// OBJECT
-</pre>
-<pre class="linenums lang lang-CS">
-Leerling voorbeeldLeerling = new Leerling();	// OBJECT
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>		<span class="c1">// OBJECT</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>		<span class="c1">// OBJECT</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Leerling</span> <span class="n">voorbeeldLeerling</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Leerling</span><span class="p">();</span>	<span class="c1">// OBJECT</span>
+</code></pre></div></div>
 
 <p>In dit voorbeeld wordt dus een variabele gemaakt met de naam <code class="highlighter-rouge">voorbeeldLeerling</code>. In die variabele wordt een waarde (object) bewaard van het datatype Leerling door <code class="highlighter-rouge">new Leerling()</code> aan te roepen.</p>
 
@@ -432,29 +426,26 @@ Leerling voorbeeldLeerling = new Leerling();	// OBJECT
 
 <p>Om deze waardes op te slaan, zijn variabelen nodig die bij de klasse Leerling horen, ook wel klasse-variabelen genoemd. Een klasse-variabele wordt ook wel eens een field of member genoemd.</p>
 
-<pre class="linenums lang lang-JS">
-class Leerling {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "Sam";	// _naam is een klasse-var
-		this._leeftijd = 18;	// _leeftijd is een klasse-var
-	}
-}
-let voorbeeldLeerling = new Leerling();
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {	
-	private $_naam = "Sam";		// _naam is een klasse-variabele
-	private $_leeftijd = 18;	// _leeftijd is een klasse-variabele
-}
-$voorbeeldLeerling = new Leerling();	
-</pre>
-<pre class="linenums lang lang-CS">
-class Leerling {	
-	string _naam = "Sam";	// _naam is een klasse-variabele
-	int _leeftijd = 18;	// _leeftijd is een klasse-variabele
-}
-Leerling voorbeeldLeerling = new Leerling();
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">,</span> <span class="nx">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_naam</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Sam</span><span class="dl">"</span><span class="p">;</span>	<span class="c1">// _naam is een klasse-var</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_leeftijd</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>	<span class="c1">// _leeftijd is een klasse-var</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="k">private</span> <span class="nv">$_naam</span> <span class="o">=</span> <span class="s2">"Sam"</span><span class="p">;</span>		<span class="c1">// _naam is een klasse-variabele</span>
+	<span class="k">private</span> <span class="nv">$_leeftijd</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>	<span class="c1">// _leeftijd is een klasse-variabele</span>
+<span class="p">}</span>
+<span class="nv">$voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>	
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="kt">string</span> <span class="n">_naam</span> <span class="p">=</span> <span class="s">"Sam"</span><span class="p">;</span>	<span class="c1">// _naam is een klasse-variabele</span>
+	<span class="kt">int</span> <span class="n">_leeftijd</span> <span class="p">=</span> <span class="m">18</span><span class="p">;</span>	<span class="c1">// _leeftijd is een klasse-variabele</span>
+<span class="p">}</span>
+<span class="n">Leerling</span> <span class="n">voorbeeldLeerling</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Leerling</span><span class="p">();</span>
+</code></pre></div></div>
 
 <p>In bovenstaand voorbeeld heeft de klasse Leerling dus 2 variabelen:</p>
 <ul>
@@ -474,56 +465,50 @@ Leerling voorbeeldLeerling = new Leerling();
 
 <p>Probeer je echter de method <code class="highlighter-rouge">Slaap()</code> aan te roepen zonder een object krijg je een foutmelding: <code class="highlighter-rouge">Slaap</code> is not defined. Het programma meldt hier letterlijk: de functie <code class="highlighter-rouge">Slaap()</code> bestaat niet. Dit is correct, want er bestaat enkel een method genaamd <code class="highlighter-rouge">Slaap()</code>. Wil je een method aanroepen, dan heb je een object nodig van het juiste datatype.</p>
 
-<pre class="linenums lang lang-JS">
-class Leerling {
-	Slaap() {
-		console.log("zzzzzzzzzzzzzzzzz");
-	}
-}
-let voorbeeldLeerling = new Leerling();
-voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {
-	function Slaap() {
-		echo "zzzzzzzzzzzzzzzzz";
-	}
-}
-$voorbeeldLeerling = new Leerling();
-voorbeeldLeerling-&gt;Slaap(); 	// toont zzzzzzz in de console
-</pre>
-<pre class="linenums lang lang-CS">
-class Leerling {
-	void Slaap() {
-		console.log("zzzzzzzzzzzzzzzzz");
-	}
-}
-Leerling voorbeeldLeerling = new Leerling();
-voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>
+	<span class="nx">Slaap</span><span class="p">()</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">zzzzzzzzzzzzzzzzz</span><span class="dl">"</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>
+<span class="nx">voorbeeldLeerling</span><span class="p">.</span><span class="nx">Slaap</span><span class="p">();</span> 	<span class="c1">// toont zzzzzzz in de console</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>
+	<span class="k">function</span> <span class="nf">Slaap</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">echo</span> <span class="s2">"zzzzzzzzzzzzzzzzz"</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>
+<span class="nx">voorbeeldLeerling</span><span class="o">-&gt;</span><span class="na">Slaap</span><span class="p">();</span> 	<span class="c1">// toont zzzzzzz in de console</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>
+	<span class="k">void</span> <span class="nf">Slaap</span><span class="p">()</span> <span class="p">{</span>
+		<span class="n">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s">"zzzzzzzzzzzzzzzzz"</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Leerling</span> <span class="n">voorbeeldLeerling</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Leerling</span><span class="p">();</span>
+<span class="n">voorbeeldLeerling</span><span class="p">.</span><span class="nf">Slaap</span><span class="p">();</span> 	<span class="c1">// toont zzzzzzz in de console</span>
+</code></pre></div></div>
 
 <h2 id="de-constructor">De constructor</h2>
 
 <p>In de volgende code staat iets vreemds:</p>
 
-<pre class="linenums lang lang-JS">
-class Leerling {
-}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>
+<span class="p">}</span>
 
-let voorbeeldLeerling = new Leerling();
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {
-}
+<span class="kd">let</span> <span class="nx">voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>
+<span class="p">}</span>
 
-$voorbeeldLeerling = new Leerling();
-</pre>
-<pre class="linenums lang lang-CS">
-class Leerling {
-}
+<span class="nv">$voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>
+<span class="p">}</span>
 
-Leerling voorbeeldLeerling = new Leerling();
-</pre>
+<span class="n">Leerling</span> <span class="n">voorbeeldLeerling</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Leerling</span><span class="p">();</span>
+</code></pre></div></div>
 
 <p>Hoewel de klasse Leerling géén haakjes heeft, moet een object ervan worden aangemaakt door <code class="highlighter-rouge">new Leerling()</code> te schrijven: de naam van de klasse, gevolgd door haakjes. Dit komt doordat elke klasse automatisch een speciale functie heeft genaamd de constructor.</p>
 
@@ -544,71 +529,65 @@ Leerling voorbeeldLeerling = new Leerling();
 
 <p>Elke klasse heeft een constructor, zelfs als die niet wordt geschreven. Als je een klasse maakt zonder constructor, wordt er (stiekem) toch een lege constructor gemaakt.</p>
 
-<pre class="linenums lang lang-JS">
-class Leerling {
-	constructor() {
-	}
-}
-let voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {	
-	function __construct() {
-	}
-}
-$voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
-</pre>
-<pre class="linenums lang lang-CS">
-class Leerling {	
-	public Leerling() {
-	}
-}
-Leerling voorbeeldLeerling = new Leerling(); // Dit roept de constructor aan
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>	<span class="c1">// Dit roept de constructor aan</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="nv">$voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">();</span>	<span class="c1">// Dit roept de constructor aan</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="k">public</span> <span class="nf">Leerling</span><span class="p">()</span> <span class="p">{</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Leerling</span> <span class="n">voorbeeldLeerling</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Leerling</span><span class="p">();</span> <span class="c1">// Dit roept de constructor aan</span>
+</code></pre></div></div>
 
 <p>De constructor wordt ook gebruikt om klasse-variabelen een waarde te geven bij het aanmaken van een object. De constructor is immers een method zoals elke andere. Geef je de constructor-functie een parameter, dan moet je die parameter ook invullen bij het aanroepen.</p>
 
 <p>Het voorbeeld hieronder toont een klasse Leerling met twee fields: <code class="highlighter-rouge">_naam</code> en <code class="highlighter-rouge">_leeftijd</code>. De constructor krijgt twee parameters: <code class="highlighter-rouge">naamLeerling</code> en <code class="highlighter-rouge">leeftijdLeerling</code>. In de constructor worden de parameter-waardes doorgegeven aan de fields.</p>
 
-<pre class="linenums lang lang-JS">
-class Leerling {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = naamLeerling;		
-		this._leeftijd = leeftijdLeerling;	
-	}
-}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">,</span> <span class="nx">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_naam</span> <span class="o">=</span> <span class="nx">naamLeerling</span><span class="p">;</span>		
+		<span class="k">this</span><span class="p">.</span><span class="nx">_leeftijd</span> <span class="o">=</span> <span class="nx">leeftijdLeerling</span><span class="p">;</span>	
+	<span class="p">}</span>
+<span class="p">}</span>
 
-// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
-let voorbeeldLeerling = new Leerling("Sam", 18);
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {	
-	private $_naam = "";		
-	private $_leeftijd = 0;		
+<span class="c1">// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18</span>
+<span class="kd">let</span> <span class="nx">voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">(</span><span class="dl">"</span><span class="s2">Sam</span><span class="dl">"</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="k">private</span> <span class="nv">$_naam</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>		
+	<span class="k">private</span> <span class="nv">$_leeftijd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>		
 
-	function __construct($naamLeerling, $leeftijdLeerling) {
-		$this-&gt;_naam = $naamLeerling;
-		$this-&gt;_leeftijd = $leeftijdLeerling;
-	}
-}
+	<span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$naamLeerling</span><span class="p">,</span> <span class="nv">$leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_naam</span> <span class="o">=</span> <span class="nv">$naamLeerling</span><span class="p">;</span>
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_leeftijd</span> <span class="o">=</span> <span class="nv">$leeftijdLeerling</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
-$voorbeeldLeerling = new Leerling("Sam", 18);	
-</pre>
-<pre class="linenums lang lang-CS">
-class Leerling {	
-	string naam = "";		
-	int _leeftijd = 0;	
+<span class="c1">// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18</span>
+<span class="nv">$voorbeeldLeerling</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Leerling</span><span class="p">(</span><span class="s2">"Sam"</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>	
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="kt">string</span> <span class="n">naam</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>		
+	<span class="kt">int</span> <span class="n">_leeftijd</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>	
 
-	public Leerling(string naamLeerling, int leeftijdLeerling) {
-		this._naam = naamLeerling;
-		this._leeftijd = leeftijdLeerling;
-	}
-}
+	<span class="k">public</span> <span class="nf">Leerling</span><span class="p">(</span><span class="kt">string</span> <span class="n">naamLeerling</span><span class="p">,</span> <span class="kt">int</span> <span class="n">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">_naam</span> <span class="p">=</span> <span class="n">naamLeerling</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">_leeftijd</span> <span class="p">=</span> <span class="n">leeftijdLeerling</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
-Leerling voorbeeldLeerling = new Leerling("Sam", 18);
-</pre>
+<span class="c1">// Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18</span>
+<span class="n">Leerling</span> <span class="n">voorbeeldLeerling</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Leerling</span><span class="p">(</span><span class="s">"Sam"</span><span class="p">,</span> <span class="m">18</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h2 id="klasse-diagrammen">Klasse Diagrammen</h2>
 <p>Klassen (en de objecten die daarmee gemaakt worden) zijn de essentie van Object Georiënteerd Programmeren. De meeste moderne programma’s zijn gebaseerd op dit systeem.</p>

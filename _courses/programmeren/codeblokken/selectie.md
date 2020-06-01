@@ -20,22 +20,33 @@ Alle code die tot nu toe werd behandeld heeft één ding gemeen: instructies wor
 
 Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.
 
-<pre class="linenums lang lang-JS lang-PHP">
-function Explodeer(x) 
+```javascript
+function Explodeer(x) 	// de signature
 {
 	// maak een geluidje
 	// laat een licht rood/oranje flikkeren
 	// doe x schade
+	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
-<pre class="linenums lang lang-CS">
-void Explodeer(x) 
+```
+```php
+function Explodeer(x) 	// de signature
 {
 	// maak een geluidje
 	// laat een licht rood/oranje flikkeren
 	// doe x schade
+	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
+```
+```csharp
+void Explodeer(x)  	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe x schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+```
 
 ## Selectie
 
@@ -43,7 +54,7 @@ Selectie is het uitvoeren van code als een voorwaarde waar of niet waar is.
 
 Bijvoorbeeld: Een explosie mag pas geluid maken als de schade groter is dan 10. Met andere woorden: Als x groter is dan 10, maak dan een geluid (anders sla je die instructie over).
 
-<pre class="linenums lang lang-JS">
+```javascript
 function Explodeer(x) 
 {
 	if (x > 10) {
@@ -52,8 +63,8 @@ function Explodeer(x)
 	// laat een licht rood/oranje flikkeren
 	// doe x schade
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 function Explodeer(x) 
 {
 	if ($x > 10) {
@@ -62,8 +73,8 @@ function Explodeer(x)
 	// laat een licht rood/oranje flikkeren
 	// doe x schade
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 void Explodeer(x) 
 {
 	if (x > 10) {
@@ -72,7 +83,7 @@ void Explodeer(x)
 	// laat een licht rood/oranje flikkeren
 	// doe x schade
 }
-</pre>
+```
 
 Een **selectie-codeblok gaat, aan de hand van een voorwaarde, selecteren welke instructies mogen uitgevoerd worden**. Een selectie kan bestaan uit meerdere codeblokken:
  - Het IF-codeblok
@@ -87,7 +98,7 @@ IF wilt dus eigenlijk zeggen: **als de voorwaarde waar is**, voer dan deze instr
 
 Bijvoorbeeld: 
 
-<pre class="linenums lang lang-JS">
+```javascript
 var intTest = 0;
 
 if (intTest < 1) 
@@ -95,8 +106,8 @@ if (intTest < 1)
 	// voer deze code uit enkel als intTest kleiner is dan 1.
 	// In dit voorbeeld wordt de code hier uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $intTest = 0;
 
 if ($intTest < 1) 
@@ -104,8 +115,8 @@ if ($intTest < 1)
 	// voer deze code uit enkel als intTest kleiner is dan 1.
 	// In dit voorbeeld wordt de code hier uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int intTest = 0;
 
 if (intTest < 1) 
@@ -113,7 +124,7 @@ if (intTest < 1)
 	// voer deze code uit enkel als intTest kleiner is dan 1.
 	// In dit voorbeeld wordt de code hier uitgevoerd.
 }
-</pre>
+```
 
 ### ELSE IF-blok
 
@@ -125,7 +136,7 @@ Een ELSE IF blok kan worden toegevoegd aan een selectie, volgend op een IF-blok 
  
 ELSE IF wilt dus eigenlijk zeggen: **als de voorgaande IF en ELSE IFs niet waar zijn, en deze voorwaarde wel waar is**, voer dan deze instructies uit. Bijvoorbeeld: 
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+```javascript
 var intTest = 2;
 if (intTest < 1) 
 {
@@ -142,8 +153,8 @@ else if (intTest < 5)
 	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
 	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $intTest = 2;
 if ($intTest < 1) 
 {
@@ -160,8 +171,8 @@ else if ($intTest < 5)
 	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
 	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int intTest = 2;
 if (intTest < 1) 
 {
@@ -178,7 +189,7 @@ else if (intTest < 5)
 	// Deze code wordt NIET uitgevoerd, ook al is de voorwaarde
 	// WAAR. Het vorige blok werd immers reeds uitgevoerd!
 }
-</pre>
+```
 
 ### ELSE blok
 
@@ -190,7 +201,7 @@ Een ELSE blok kan als laatste worden toegevoegd aan een selectie. Het ELSE blok 
 ELSE wilt dus eigenlijk zeggen: **in alle andere gevallen**, voer dan het volgende codeblok uit.
 Bijvoorbeeld: 
 
-<pre class="linenums lang lang-JS">
+```javascript
 var intTest = 6;
 
 if (intTest < 1) 
@@ -210,8 +221,8 @@ else
 	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
 	// In dit voorbeeld wordt deze code uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $intTest = 6;
 
 if ($intTest < 1) 
@@ -231,8 +242,8 @@ else
 	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
 	// In dit voorbeeld wordt deze code uitgevoerd.
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int intTest = 6;
 
 if (intTest < 1) 
@@ -252,7 +263,7 @@ else
 	// In ELK ANDER GEVAL wordt deze code uitgevoerd.
 	// In dit voorbeeld wordt deze code uitgevoerd.
 }
-</pre>
+```
 
 ## Coding Guidelines
 

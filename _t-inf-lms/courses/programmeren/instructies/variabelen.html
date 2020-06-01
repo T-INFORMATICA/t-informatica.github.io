@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -432,22 +432,19 @@
 
 <p>Wil je bijvoorbeeld bijhouden hoeveel levens een speler heeft, dan maak je een variabele zo aan:</p>
 
-<pre class="linenums lang lang-JS">
- 1	2	   3		// 1: declareer; 2: benoem; 3: waarde;
-var aantalLevens = 3;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="mi">1</span>	<span class="mi">2</span>	   <span class="mi">3</span>		<span class="c1">// 1: declareer; 2: benoem; 3: waarde;</span>
+<span class="kd">var</span> <span class="nx">aantalLevens</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
-/* Javascript bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
-</pre>
-<pre class="linenums lang lang-PHP">
-1  2	   	3		// 1: declareer; 2: benoem; 3: waarde;
-$aantalLevens = 3;
+<span class="cm">/* Javascript bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span>  <span class="mi">2</span>	   	<span class="mi">3</span>		<span class="c1">// 1: declareer; 2: benoem; 3: waarde;</span>
+<span class="nv">$aantalLevens</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 
-/* PHP bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
-</pre>
-<pre class="linenums lang lang-CS">
- 1	   2	   3		// 1: declareer; 2: benoem; 3: waarde;
-int aantalLevens = 3;
-</pre>
+<span class="cm">/* PHP bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="m">1</span>	   <span class="m">2</span>	   <span class="m">3</span>		<span class="c1">// 1: declareer; 2: benoem; 3: waarde;</span>
+<span class="kt">int</span> <span class="n">aantalLevens</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Wat gebeurt er hier precies?</p>
 <ol>
@@ -496,46 +493,40 @@ int aantalLevens = 3;
 
 <p>Bv.: een speler start het spel opnieuw op, dus het ‘aantalLevens’ wordt terug op 3 gezet:</p>
 
-<pre class="linenums lang lang-JS">
-var aantalLevens = 1;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">aantalLevens</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-// de speler start het spel opnieuw:
-aantalLevens = 3; 	// let op: 'var' wordt NIET opnieuw geschreven!
-			// 'var' dient om een nieuwe variabele te maken
-			// en hier passen we een bestaande variabele aan
-</pre>
-<pre class="linenums lang lang-PHP">
-$aantalLevens = 1;
+<span class="c1">// de speler start het spel opnieuw:</span>
+<span class="nx">aantalLevens</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> 	<span class="c1">// let op: 'var' wordt NIET opnieuw geschreven!</span>
+			<span class="c1">// 'var' dient om een nieuwe variabele te maken</span>
+			<span class="c1">// en hier passen we een bestaande variabele aan</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$aantalLevens</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-// de speler start het spel opnieuw:
-$aantalLevens = 3;	// let op: '$' wordt OOK HIER opnieuw geschreven!
-			// '$' dient om een nieuwe variabele te maken
-			// en OOK om een bestaande variabele te gebruiken!
-</pre>
-<pre class="linenums lang lang-CS">
-int aantalLevens = 1;
+<span class="c1">// de speler start het spel opnieuw:</span>
+<span class="nv">$aantalLevens</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>	<span class="c1">// let op: '$' wordt OOK HIER opnieuw geschreven!</span>
+			<span class="c1">// '$' dient om een nieuwe variabele te maken</span>
+			<span class="c1">// en OOK om een bestaande variabele te gebruiken!</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">aantalLevens</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 
-// de speler start het spel opnieuw:
-aantalLevens = 3; 	// let op: 'int' wordt NIET opnieuw geschreven!
-			// 'var' dient om een nieuwe variabele te maken
-			// en hier passen we een bestaande variabele aan
-</pre>
+<span class="c1">// de speler start het spel opnieuw:</span>
+<span class="n">aantalLevens</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span> 	<span class="c1">// let op: 'int' wordt NIET opnieuw geschreven!</span>
+			<span class="c1">// 'var' dient om een nieuwe variabele te maken</span>
+			<span class="c1">// en hier passen we een bestaande variabele aan</span>
+</code></pre></div></div>
 
 <p>Als bijvoorbeeld de speler een leven verliest kan het ‘aantalLevens’ vermindert worden met 1. 
 De nieuwe waarde van ‘aantalLevens’ is dus de oude waarde van ‘aantalLevens’ min één.</p>
 
-<pre class="linenums lang lang-JS">
-var aantalLevens = 3;
-aantalLevens = aantalLevens - 1;
-</pre>
-<pre class="linenums lang lang-PHP">
-$aantalLevens = 3;
-$aantalLevens = $aantalLevens - 1;
-</pre>
-<pre class="linenums lang lang-CS">
-int aantalLevens = 3;
-aantalLevens = aantalLevens - 1;
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">aantalLevens</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="nx">aantalLevens</span> <span class="o">=</span> <span class="nx">aantalLevens</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$aantalLevens</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="nv">$aantalLevens</span> <span class="o">=</span> <span class="nv">$aantalLevens</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">aantalLevens</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+<span class="n">aantalLevens</span> <span class="p">=</span> <span class="n">aantalLevens</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h2 id="coding-guidelines">Coding Guidelines</h2>
 

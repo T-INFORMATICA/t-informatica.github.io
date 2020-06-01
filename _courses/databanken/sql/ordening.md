@@ -18,12 +18,12 @@ Eén van de basisregels van een tabel in een relationele databank is dat de volg
 
 De volgende select-query laat een aantal gegevens van klassieke muziekstukken afdrukken op volgorde van niveau:
 
-<pre class="linenums lang-sql">
+```sql
 select nr, genre, niveau, round(speelduur)
 from Stuk
 where genre = 'klassiek'
 order by niveau;
-</pre>
+```
 
 Resultaat:
 
@@ -74,9 +74,9 @@ Resultaat:
 
 Standaard wordt oplopend (‘ascending’) gesorteerd. Desgewenst kunnen we dit expliciet in het statement opnemen: ... order by speelduur asc. Aflopend sorteren (‘descending’) kan ook:
 
-<pre class="linenums lang-sql">
+```sql
 select nr, genre, niveau, round(speelduur)
 from Stuk
 where genre = 'klassiek'
 order by niveau desc;
-</pre>
+```

@@ -453,50 +453,50 @@
 
 <p>Deze elementen zullen de Grid Items in de CSS Grid layout worden.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="header"&gt;
-&lt;/div&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-&lt;h1 class="title"&gt;
-&lt;/h1&gt;
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/h1&gt;</span>
 
-&lt;div class="menu"&gt;
-&lt;/div&gt;
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-&lt;div class="main"&gt;
-&lt;/div&gt;
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-&lt;div class="footer"&gt;
-&lt;/div&gt;
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <h2 id="stap-2-maak-een-grid-container">Stap 2: Maak een Grid Container</h2>
 
 <p>Maak nu een Grid Container die al deze elementen omvat. Meestal wordt hier een <strong><code class="highlighter-rouge">div</code></strong> element voor gebruikt.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="site"&gt;
-	&lt;div class="header"&gt;
-	&lt;/div&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"site"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
 
-	&lt;h1 class="title"&gt;
-	&lt;/h1&gt;
+	<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/h1&gt;</span>
 
-	&lt;div class="main"&gt;
-	&lt;/div&gt;
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
 
-	&lt;div class="menu"&gt;
-	&lt;/div&gt;
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
 
-	&lt;div class="footer"&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <p><br />
 Vervolgens gebruik je CSS om hier <strong><code class="highlighter-rouge">display: grid;</code></strong> op toe te passen.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.site</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h2 id="stap-3-kolommen-en-rijen">Stap 3: kolommen en rijen</h2>
@@ -513,7 +513,7 @@ Beide properties werken op dezelfde manier:  <br />
 Wil je 3 kolommen in je CSS Grid? Dan geef je <strong><code class="highlighter-rouge">grid-template-columns</code></strong> 3 waardes. <br />
 Onderstaand voorbeeld maakt dus 3 kolommen, met de eerste en laatste kolom 25 pixels breed, en de middelste kolom 50px breed:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 25px 50px 25px;
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">25px</span> <span class="nt">50px</span> <span class="nt">25px</span><span class="o">;</span>
 </code></pre></div></div>
 
 <p><br />
@@ -529,7 +529,7 @@ Je kan hiervoor werken met de volgende waardes:</p>
 
 <p>Je mag deze waardes door elkaar gebruiken. In onderstaand voorbeeld is de eerste kolom 50% breed, de tweede 50 pixels breed en de laatste kolom 25 pixels breed:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grid-template-columns: 50% 50px 25px;
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">50</span><span class="o">%</span> <span class="nt">50px</span> <span class="nt">25px</span><span class="o">;</span>
 </code></pre></div></div>
 
 <p>Afhankelijk van jouw specifieke ontwerp ga je een andere eenheid nodig hebben, maar vaak wordt gekozen binnen CSS Grid om, indien mogelijk, gebruik te maken van de fractie-eenheid.</p>
@@ -544,31 +544,31 @@ Je kan hiervoor werken met de volgende waardes:</p>
 
 <p>Op dit moment ziet de HTML code er nog steeds als volgt uit:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="site"&gt;
-	&lt;div class="header"&gt;
-	&lt;/div&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"site"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
 
-	&lt;h1 class="title"&gt;
-	&lt;/h1&gt;
+	<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/h1&gt;</span>
 
-	&lt;div class="main"&gt;
-	&lt;/div&gt;
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
 
-	&lt;div class="menu"&gt;
-	&lt;/div&gt;
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
 
-	&lt;div class="footer"&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <p>En de CSS code ziet er als volgt uit:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	grid-template-rows: auto 1fr 3fr;
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.site</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+	<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">2</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
+	<span class="py">grid-template-rows</span><span class="p">:</span> <span class="nb">auto</span> <span class="m">1</span><span class="n">fr</span> <span class="m">3</span><span class="n">fr</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h2 id="stap-4-grid-areas-definieren">Stap 4: Grid Areas definieren</h2>
@@ -588,15 +588,15 @@ Zo worden ook de Grid Areas “main”, “header”, “menu” en “footer”
 
 <p><strong>opgelet!</strong> Soms wil je een cel leeg laten. Gebruik hiervoor een <strong>punt</strong>. Een punt duidt aan dat een bepaalde cel niet gebruikt zal worden in een area.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	grid-template-rows: auto 1fr 3fr;
-	Grid-template-areas: 
-		"title title title"
-		"main header header"
-		"main menu footer";
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.site</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+	<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">2</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
+	<span class="py">grid-template-rows</span><span class="p">:</span> <span class="nb">auto</span> <span class="m">1</span><span class="n">fr</span> <span class="m">3</span><span class="n">fr</span><span class="p">;</span>
+	<span class="py">Grid-template-areas</span><span class="p">:</span> 
+		<span class="s1">"title title title"</span>
+		<span class="s1">"main header header"</span>
+		<span class="s1">"main menu footer"</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>Om elk Grid Item in de juiste Grid Area te krijgen, wordt op elk Grid Item de volgende property toegepast:</p>
@@ -607,40 +607,40 @@ Zo worden ook de Grid Areas “main”, “header”, “menu” en “footer”
 
 <p>Bijvoorbeeld:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.site {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	grid-template-rows: auto 1fr 3fr;
-	Grid-template-areas: 
-		"title title title"
-		"main header header"
-		"main menu footer";
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.site</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+	<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">2</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
+	<span class="py">grid-template-rows</span><span class="p">:</span> <span class="nb">auto</span> <span class="m">1</span><span class="n">fr</span> <span class="m">3</span><span class="n">fr</span><span class="p">;</span>
+	<span class="py">Grid-template-areas</span><span class="p">:</span> 
+		<span class="s1">"title title title"</span>
+		<span class="s1">"main header header"</span>
+		<span class="s1">"main menu footer"</span><span class="p">;</span>
+<span class="p">}</span>
 
-.header {
-	grid-area: header;
-	background-color: magenta;
-}
+<span class="nc">.header</span> <span class="p">{</span>
+	<span class="py">grid-area</span><span class="p">:</span> <span class="n">header</span><span class="p">;</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">magenta</span><span class="p">;</span>
+<span class="p">}</span>
 
-.title {
-	grid-area: title;
-	background-color: blue;
-}
+<span class="nc">.title</span> <span class="p">{</span>
+	<span class="py">grid-area</span><span class="p">:</span> <span class="n">title</span><span class="p">;</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
 
-.menu {
-	grid-area: menu;
-	background-color: orange;
-}
+<span class="nc">.menu</span> <span class="p">{</span>
+	<span class="py">grid-area</span><span class="p">:</span> <span class="n">menu</span><span class="p">;</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+<span class="p">}</span>
 
-.main {
-	grid-area: main;
-	background-color: green;
-}
+<span class="nc">.main</span> <span class="p">{</span>
+	<span class="py">grid-area</span><span class="p">:</span> <span class="n">main</span><span class="p">;</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span>
 
-.footer {
-	grid-area: footer;
-	background-color: red;
-}
+<span class="nc">.footer</span> <span class="p">{</span>
+	<span class="py">grid-area</span><span class="p">:</span> <span class="n">footer</span><span class="p">;</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 

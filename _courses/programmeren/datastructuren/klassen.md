@@ -25,30 +25,30 @@ Een klasse is een groep variabelen en functies die bij elkaar horen waar je een 
 
 Een klasse is in feite een complex datatype dat je zelf maakt. Vanaf een klasse gemaakt is, kunnen objecten worden aangemaakt met als datatype de naam van die klasse. In volgend voorbeeld wordt een klasse `Leerling` gemaakt:
 
-<pre class="linenums lang lang-JS">
+```javascript
 class Leerling {		// KLASSE
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Leerling {		// KLASSE
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 public class Leerling {		// KLASSE
 }
-</pre>
+```
 
 Wanneer die klasse gemaakt is kan je een variabele van het datatype `Leerling` aanmaken:
 
-<pre class="linenums lang lang-JS">
+```javascript
 let voorbeeldLeerling = new Leerling();		// OBJECT
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $voorbeeldLeerling = new Leerling();		// OBJECT
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 Leerling voorbeeldLeerling = new Leerling();	// OBJECT
-</pre>
+```
 
 In dit voorbeeld wordt dus een variabele gemaakt met de naam `voorbeeldLeerling`. In die variabele wordt een waarde (object) bewaard van het datatype Leerling door `new Leerling()` aan te roepen.
 
@@ -60,7 +60,7 @@ In een klasse kunnen variabelen worden opgeslagen.
 
 Om deze waardes op te slaan, zijn variabelen nodig die bij de klasse Leerling horen, ook wel klasse-variabelen genoemd. Een klasse-variabele wordt ook wel eens een field of member genoemd.
 
-<pre class="linenums lang lang-JS">
+```javascript
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = "Sam";	// _naam is een klasse-var
@@ -68,21 +68,21 @@ class Leerling {
 	}
 }
 let voorbeeldLeerling = new Leerling();
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Leerling {	
 	private $_naam = "Sam";		// _naam is een klasse-variabele
 	private $_leeftijd = 18;	// _leeftijd is een klasse-variabele
 }
 $voorbeeldLeerling = new Leerling();	
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 class Leerling {	
 	string _naam = "Sam";	// _naam is een klasse-variabele
 	int _leeftijd = 18;	// _leeftijd is een klasse-variabele
 }
 Leerling voorbeeldLeerling = new Leerling();
-</pre>
+```
 
 In bovenstaand voorbeeld heeft de klasse Leerling dus 2 variabelen:
  - `_naam`
@@ -100,7 +100,7 @@ De klasse Leerling krijgt een method `Slaap()`. Deze method toont de tekst "zzzz
 
 Probeer je echter de method `Slaap()` aan te roepen zonder een object krijg je een foutmelding: `Slaap` is not defined. Het programma meldt hier letterlijk: de functie `Slaap()` bestaat niet. Dit is correct, want er bestaat enkel een method genaamd `Slaap()`. Wil je een method aanroepen, dan heb je een object nodig van het juiste datatype.
 
-<pre class="linenums lang lang-JS">
+```javascript
 class Leerling {
 	Slaap() {
 		console.log("zzzzzzzzzzzzzzzzz");
@@ -108,8 +108,8 @@ class Leerling {
 }
 let voorbeeldLeerling = new Leerling();
 voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Leerling {
 	function Slaap() {
 		echo "zzzzzzzzzzzzzzzzz";
@@ -117,8 +117,8 @@ class Leerling {
 }
 $voorbeeldLeerling = new Leerling();
 voorbeeldLeerling->Slaap(); 	// toont zzzzzzz in de console
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 class Leerling {
 	void Slaap() {
 		console.log("zzzzzzzzzzzzzzzzz");
@@ -126,30 +126,30 @@ class Leerling {
 }
 Leerling voorbeeldLeerling = new Leerling();
 voorbeeldLeerling.Slaap(); 	// toont zzzzzzz in de console
-</pre>
+```
 
 ## De constructor
 
 In de volgende code staat iets vreemds:
 
-<pre class="linenums lang lang-JS">
+```javascript
 class Leerling {
 }
 
 let voorbeeldLeerling = new Leerling();
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Leerling {
 }
 
 $voorbeeldLeerling = new Leerling();
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 class Leerling {
 }
 
 Leerling voorbeeldLeerling = new Leerling();
-</pre>
+```
 
 Hoewel de klasse Leerling géén haakjes heeft, moet een object ervan worden aangemaakt door `new Leerling()` te schrijven: de naam van de klasse, gevolgd door haakjes. Dit komt doordat elke klasse automatisch een speciale functie heeft genaamd de constructor.
 
@@ -166,33 +166,33 @@ De constructor is zoals elke andere method, maar heeft een paar beperkingen:
  
 Elke klasse heeft een constructor, zelfs als die niet wordt geschreven. Als je een klasse maakt zonder constructor, wordt er (stiekem) toch een lege constructor gemaakt.
 
-<pre class="linenums lang lang-JS">
+```javascript
 class Leerling {
 	constructor() {
 	}
 }
 let voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Leerling {	
 	function __construct() {
 	}
 }
 $voorbeeldLeerling = new Leerling();	// Dit roept de constructor aan
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 class Leerling {	
 	public Leerling() {
 	}
 }
 Leerling voorbeeldLeerling = new Leerling(); // Dit roept de constructor aan
-</pre>
+```
 
 De constructor wordt ook gebruikt om klasse-variabelen een waarde te geven bij het aanmaken van een object. De constructor is immers een method zoals elke andere. Geef je de constructor-functie een parameter, dan moet je die parameter ook invullen bij het aanroepen.
 
 Het voorbeeld hieronder toont een klasse Leerling met twee fields: `_naam` en `_leeftijd`. De constructor krijgt twee parameters: `naamLeerling` en `leeftijdLeerling`. In de constructor worden de parameter-waardes doorgegeven aan de fields.
 
-<pre class="linenums lang lang-JS">
+```javascript
 class Leerling {
 	constructor(naamLeerling, leeftijdLeerling) {
 		this._naam = naamLeerling;		
@@ -202,8 +202,8 @@ class Leerling {
 
 // Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
 let voorbeeldLeerling = new Leerling("Sam", 18);
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 class Leerling {	
 	private $_naam = "";		
 	private $_leeftijd = 0;		
@@ -216,8 +216,8 @@ class Leerling {
 
 // Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
 $voorbeeldLeerling = new Leerling("Sam", 18);	
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 class Leerling {	
 	string naam = "";		
 	int _leeftijd = 0;	
@@ -230,7 +230,7 @@ class Leerling {
 
 // Dankzij de constructor wordt _naam gelijk aan "Sam" en _leeftijd 18
 Leerling voorbeeldLeerling = new Leerling("Sam", 18);
-</pre>
+```
 
 ## Klasse Diagrammen
 Klassen (en de objecten die daarmee gemaakt worden) zijn de essentie van Object Georiënteerd Programmeren. De meeste moderne programma's zijn gebaseerd op dit systeem.

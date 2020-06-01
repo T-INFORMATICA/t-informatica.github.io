@@ -366,10 +366,9 @@
 
 <p>Een kolom projectie is de meest eenvoudige soort projectie. Hierbij worden de gewenste kolommen opgesomd in de query.</p>
 
-<pre class="linenums lang-sql">
-select componist, titel, niveau
-from Stuk;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">componist</span><span class="p">,</span> <span class="n">titel</span><span class="p">,</span> <span class="n">niveau</span>
+<span class="k">from</span> <span class="n">Stuk</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Resultaat:</p>
 
@@ -438,19 +437,17 @@ from Stuk;
 
 <p>Een projectie op alle kolommen kan ook. De afkorting hiervoor is een asterisk (<code class="highlighter-rouge">*</code>).</p>
 
-<pre class="linenums lang-sql">
-select *
-from Stuk;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span>
+<span class="k">from</span> <span class="n">Stuk</span><span class="p">;</span>
+</code></pre></div></div>
 
 <h2 id="constanten-in-select-queries">Constanten in Select Queries</h2>
 
 <p>Een projectie moet niet alleen kolomnamen bevatten. Dit mag ook een constante zijn, bijvoorbeeld een constant stukje tekst, een constant getal of een constante datum:</p>
 
-<pre class="linenums lang-sql">
-select componist, titel, 'heeft als niveau', niveau
-from Stuk;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">componist</span><span class="p">,</span> <span class="n">titel</span><span class="p">,</span> <span class="s1">'heeft als niveau'</span><span class="p">,</span> <span class="n">niveau</span>
+<span class="k">from</span> <span class="n">Stuk</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Resultaat:</p>
 
@@ -534,10 +531,10 @@ from Stuk;
 
 Een select-query mag ook expressies bevatten. De waarde van die expressie wordt dan berekend uit kolomwaardes en/of constanten.
 
-<pre class="linenums lang-sql">
+```sql
 select naam || ' is gevestigd in ' || plaats
 from Muziekschool;
-</pre>
+```
 
 De expressie hierboven heet een concatenation. Een concatenation is het samenvoegen van tekst-waarden zodat het één tekst wordt.
 
@@ -560,12 +557,11 @@ De expressie hierboven heet een concatenation. Een concatenation is het samenvoe
 
 <p>Om de naam van een kolom in een projectie te wijzigen kan een kolom-alias gebruikt worden.</p>
 
-<pre class="linenums lang-sql">
-select nr as stuk,
-       titel,
-       speelduur * 1.1 as effectieve_speelduur
-from Stuk;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">nr</span> <span class="k">as</span> <span class="n">stuk</span><span class="p">,</span>
+       <span class="n">titel</span><span class="p">,</span>
+       <span class="n">speelduur</span> <span class="o">*</span> <span class="mi">1</span><span class="p">.</span><span class="mi">1</span> <span class="k">as</span> <span class="n">effectieve_speelduur</span>
+<span class="k">from</span> <span class="n">Stuk</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Hierboven krijgt de kolom nr de nieuwe naam stuk. De kolom met de expressie speelduur * 1.1 krijgt de nieuwe naam effectieve_speelduur. Hiervoor wordt het keyword as gebruikt.</p>
 
@@ -575,10 +571,9 @@ from Stuk;
 
 <p>Bijvoorbeeld:</p>
 
-<pre class="linenums lang-sql">
-select genre, niveau
-from Stuk;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="n">genre</span><span class="p">,</span> <span class="n">niveau</span>
+<span class="k">from</span> <span class="n">Stuk</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Resultaat:</p>
 
@@ -637,10 +632,9 @@ from Stuk;
 
 <p>Om de dubbele rijen weg te laten, moet er een speciaal keyword worden gebruikt in de select-query: <code class="highlighter-rouge">distinct</code>.</p>
 
-<pre class="linenums lang-sql">
-select distinct genre, niveau
-from Stuk;
-</pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="k">distinct</span> <span class="n">genre</span><span class="p">,</span> <span class="n">niveau</span>
+<span class="k">from</span> <span class="n">Stuk</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Resultaat:</p>
 

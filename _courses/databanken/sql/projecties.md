@@ -23,10 +23,10 @@ Een select query gebruikt een tabel om een nieuwe tabel te maken. Die nieuwe tab
 
 Een kolom projectie is de meest eenvoudige soort projectie. Hierbij worden de gewenste kolommen opgesomd in de query.
 
-<pre class="linenums lang-sql">
+```sql
 select componist, titel, niveau
 from Stuk;
-</pre>
+```
 
 Resultaat:
 
@@ -95,19 +95,19 @@ Resultaat:
 
 Een projectie op alle kolommen kan ook. De afkorting hiervoor is een asterisk (`*`).
 
-<pre class="linenums lang-sql">
+```sql
 select *
 from Stuk;
-</pre>
+```
 
 ## Constanten in Select Queries
 
 Een projectie moet niet alleen kolomnamen bevatten. Dit mag ook een constante zijn, bijvoorbeeld een constant stukje tekst, een constant getal of een constante datum:
 
-<pre class="linenums lang-sql">
+```sql
 select componist, titel, 'heeft als niveau', niveau
 from Stuk;
-</pre>
+```
 
 Resultaat:
 
@@ -191,10 +191,10 @@ Resultaat:
 
 Een select-query mag ook expressies bevatten. De waarde van die expressie wordt dan berekend uit kolomwaardes en/of constanten.
 
-<pre class="linenums lang-sql">
+```sql
 select naam || ' is gevestigd in ' || plaats
 from Muziekschool;
-</pre>
+```
 
 De expressie hierboven heet een concatenation. Een concatenation is het samenvoegen van tekst-waarden zodat het één tekst wordt.
 
@@ -217,12 +217,12 @@ De expressie hierboven heet een concatenation. Een concatenation is het samenvoe
 
 Om de naam van een kolom in een projectie te wijzigen kan een kolom-alias gebruikt worden.
 
-<pre class="linenums lang-sql">
+```sql
 select nr as stuk,
        titel,
        speelduur * 1.1 as effectieve_speelduur
 from Stuk;
-</pre>
+```
 
 Hierboven krijgt de kolom nr de nieuwe naam stuk. De kolom met de expressie speelduur * 1.1 krijgt de nieuwe naam effectieve_speelduur. Hiervoor wordt het keyword as gebruikt.
 
@@ -232,10 +232,10 @@ Eén van de basisregels van een tabel in een relationele databank is dat alle ri
 
 Bijvoorbeeld:
 
-<pre class="linenums lang-sql">
+```sql
 select genre, niveau
 from Stuk;
-</pre>
+```
 
 Resultaat:
 
@@ -294,10 +294,10 @@ In deze projectie staan 11 rijen, waarvan enkele meerdere keren voorkomen. Dit k
 
 Om de dubbele rijen weg te laten, moet er een speciaal keyword worden gebruikt in de select-query: `distinct`.
 
-<pre class="linenums lang-sql">
+```sql
 select distinct genre, niveau
 from Stuk;
-</pre>
+```
 
 Resultaat:
 

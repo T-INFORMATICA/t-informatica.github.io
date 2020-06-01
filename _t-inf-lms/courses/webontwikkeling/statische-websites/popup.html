@@ -450,14 +450,14 @@
   <li>Een hyperlink om naar dat element te verwijzen</li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --&gt; 
-&lt;a href="#mijnElement"&gt;Ga naar mijnElement!&lt;/a&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --&gt;</span> 
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#mijnElement"</span><span class="nt">&gt;</span>Ga naar mijnElement!<span class="nt">&lt;/a&gt;</span>
 
-&lt;!-- andere code --&gt; 
+<span class="c">&lt;!-- andere code --&gt;</span> 
 
-&lt;div id="mijnElement"&gt;
-	&lt;!-- hier komt de inhoud van mijnElement --&gt;
-&lt;/div&gt;
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"mijnElement"</span><span class="nt">&gt;</span>
+	<span class="c">&lt;!-- hier komt de inhoud van mijnElement --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <p>Door met de hyperlink naar de juiste ID te verwijzen, zal de pagina scrollen tot de browser dat element tegenkomt.</p>
@@ -468,9 +468,9 @@
 
 <p>In CSS kan dat doel eigen stijlregels krijgen met de :target selector.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:target {
-	background-color: red;
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">:target</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p><br />
@@ -491,24 +491,24 @@ In dit geval zal elk element dat wordt aangeduid door de gebruiker een rode acht
 
 <h2 id="css">CSS:</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#mijnElement {
-	display: none;
-}
-#mijnElement:target {
-	display: block;
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#mijnElement</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#mijnElement</span><span class="nd">:target</span> <span class="p">{</span>
+	<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h2 id="html">HTML:</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --&gt; 
-&lt;a href="#mijnElement"&gt;Ga naar mijnElement!&lt;/a&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Deze link laat de pagina scrollen naar het element met ID mijnElement --&gt;</span> 
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#mijnElement"</span><span class="nt">&gt;</span>Ga naar mijnElement!<span class="nt">&lt;/a&gt;</span>
 
-&lt;!-- andere code --&gt; 
+<span class="c">&lt;!-- andere code --&gt;</span> 
 
-&lt;div id="mijnElement"&gt;
-	&lt;!-- hier komt de inhoud van mijnElement --&gt;
-&lt;/div&gt;
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"mijnElement"</span><span class="nt">&gt;</span>
+	<span class="c">&lt;!-- hier komt de inhoud van mijnElement --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <p><br />

@@ -20,11 +20,11 @@ Een selectie is heel gelijkaardig, maar werkt met de records in plaats van de fi
 
 Een selectie legt voorwaarden op aan elke rij, in een extra where-clausule. Alleen rijen die aan de voorwaarde(n) voldoen, worden opgenomen in de resultaattabel.
 
-<pre class="linenums lang-sql">
+```sql
 select componist, titel, niveau 	-- 3: projectie
 from Stuk 				-- 1: brontabel
 where genre = 'klassiek'; 		-- 2: selectie
-</pre>
+```
 
 ## Voorwaarde met vergelijking
 
@@ -43,11 +43,11 @@ Al deze logische operators kunnen vergelijkingen maken tussen getallen, tekst en
 
 Een voorwaarde kan ook opgebouwd worden met behulp van `between ... and ...`
 
-<pre class="linenums lang-sql">
+```sql
 select naam, geboortedatum
 from Componist
 where geboortedatum between '1700-01-01' and '1799-12-31';
-</pre>
+```
 
 In dit geval is de voorwaarde hetzelfde als `geboortedatum >= '1700-01-01' and geboortedatum <= '1799-12-31'`. De resultaattabel bestaat uit alle componisten die geboren zijn in de achttiende eeuw:
 
@@ -64,11 +64,11 @@ In dit geval is de voorwaarde hetzelfde als `geboortedatum >= '1700-01-01' and g
 
 Een `between ... and ...`  voorwaarde kan ook worden omgekeerd met behulp van het not keyword. Dit geeft dan alle componisten terug die niet zijn geboren tussen die data.
 
-<pre class="linenums lang-sql">
+```sql
 select naam, geboortedatum
 from Componist
 where geboortedatum not between '1700-01-01' and '1799-12-31';
-</pre>
+```
 
 ## Voorwaarde met like …
 
@@ -76,11 +76,11 @@ Voor tekst bestaat er een speciale voorwaarde: like. De like voorwaarde kan op d
 
 Zo kan bijvoorbeeld een selectie worden gemaakt van componisten op basis van een deel van hun naam:
 
-<pre class="linenums lang-sql">
+```sql
 select naam componist
 from Componist
 where naam like '%ar%';
-</pre>
+```
 
 Het resultaat bevat iedereen met ‘ar’ in de naam:
 
@@ -137,29 +137,29 @@ De like voorwaarde maakt gebruikt van **wildcards**. Een wildcard is een speciaa
 ## Voorwaarde met in …
 Een select-query met or kan soms worden vereenvoudigd door het gebruik van in voorwaarde.
 
-<pre class="linenums lang-sql">
+```sql
 select *
 from Stuk
 where genre = 'klassiek' or genre = 'jazz' or genre = 'house';
-</pre>
+```
 
 kan worden vereenvoudigd tot:
 
-<pre class="linenums lang-sql">
+```sql
 select *
 from Stuk
 where genre in ('klassiek', 'jazz', 'house');
-</pre>
+```
 
 ## Vergelijking met null
 
 Ook op nulls kan worden gecontroleerd binnen een selectievoorwaarde. In de volgende query worden alle originele stukken geselecteerd:
 
-<pre class="linenums lang-sql">
+```sql
 select *
 from Stuk
 where origineel is null; -- alle originele stukken
-</pre>
+```
 
 Want: de originele stukken zijn de niet-bewerkte stukken, dus de stukken waarvan de kolom 'origineel' niet is ingevuld. 
 
@@ -167,8 +167,8 @@ Want: de originele stukken zijn de niet-bewerkte stukken, dus de stukken waarvan
 
 Bewerkingen zijn dan de stukken waarbij origineel juist wel is ingevuld, dus ‘not null’ is:
 
-<pre class="linenums lang-sql">
+```sql
 select *
 from Stuk
 where origineel is not null; -- alle bewerkingen
-</pre>
+```

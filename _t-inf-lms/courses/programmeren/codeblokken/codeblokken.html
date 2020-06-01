@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -400,12 +400,21 @@
 
 <p>Een codeblok ziet er bijvoorbeeld zo uit:</p>
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-{
-	// instructies
-	// instructies
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+	<span class="c1">// instructies</span>
+	<span class="c1">// instructies</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+	<span class="c1">// instructies</span>
+	<span class="c1">// instructies</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+	<span class="c1">// instructies</span>
+	<span class="c1">// instructies</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="nesten">Nesten</h2>
 
@@ -426,54 +435,99 @@
 
 <p>Hieronder staat twee maal dezelfde code geschreven. Links staat het voorbeeld met indentatie. Rechts staat hetzelfde voorbeeld, maar zonder indentatie.</p>
 
-<table class="styledTable" style="width: 100%">
- <tr>
-  <td>
-	  Met indentatie:
-  </td>
-  <td>
-	  Zonder indentatie:
-  </td>
- </tr>
- <tr>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-{ // blok 1
-	// instructies
-	// instructies
+<h3 id="zonder-indentatie">zonder indentatie:</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// blok 1</span>
+<span class="c1">// instructies			</span>
+<span class="c1">// instructies</span>
 
-	{ // blok 2
-		// instructies
-		// instructies
-	}
+<span class="p">{</span> <span class="c1">// blok 2</span>
+<span class="c1">// instructies</span>
+<span class="c1">// instructies</span>
+<span class="p">}</span>
 
-	{ // blok 3
-		// instructies
-		// instructies		
-	}
-}
-</pre>
-  </td>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-{ // blok 1
-// instructies			
-// instructies
+<span class="p">{</span> <span class="c1">// blok 3</span>
+<span class="c1">// instructies</span>
+<span class="c1">// instructies</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// blok 1</span>
+<span class="c1">// instructies			</span>
+<span class="c1">// instructies</span>
 
-{ // blok 2
-// instructies
-// instructies
-}
+<span class="p">{</span> <span class="c1">// blok 2</span>
+<span class="c1">// instructies</span>
+<span class="c1">// instructies</span>
+<span class="p">}</span>
 
-{ // blok 3
-// instructies
-// instructies
-}
-}
-</pre>
-  </td>
- </tr>
-</table>
+<span class="p">{</span> <span class="c1">// blok 3</span>
+<span class="c1">// instructies</span>
+<span class="c1">// instructies</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// blok 1</span>
+<span class="c1">// instructies			</span>
+<span class="c1">// instructies</span>
+
+<span class="p">{</span> <span class="c1">// blok 2</span>
+<span class="c1">// instructies</span>
+<span class="c1">// instructies</span>
+<span class="p">}</span>
+
+<span class="p">{</span> <span class="c1">// blok 3</span>
+<span class="c1">// instructies</span>
+<span class="c1">// instructies</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="met-indentatie">met indentatie:</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// blok 1</span>
+	<span class="c1">// instructies</span>
+	<span class="c1">// instructies</span>
+
+	<span class="p">{</span> <span class="c1">// blok 2</span>
+		<span class="c1">// instructies</span>
+		<span class="c1">// instructies</span>
+	<span class="p">}</span>
+
+	<span class="p">{</span> <span class="c1">// blok 3</span>
+		<span class="c1">// instructies</span>
+		<span class="c1">// instructies		</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// blok 1</span>
+	<span class="c1">// instructies</span>
+	<span class="c1">// instructies</span>
+
+	<span class="p">{</span> <span class="c1">// blok 2</span>
+		<span class="c1">// instructies</span>
+		<span class="c1">// instructies</span>
+	<span class="p">}</span>
+
+	<span class="p">{</span> <span class="c1">// blok 3</span>
+		<span class="c1">// instructies</span>
+		<span class="c1">// instructies		</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// blok 1</span>
+	<span class="c1">// instructies</span>
+	<span class="c1">// instructies</span>
+
+	<span class="p">{</span> <span class="c1">// blok 2</span>
+		<span class="c1">// instructies</span>
+		<span class="c1">// instructies</span>
+	<span class="p">}</span>
+
+	<span class="p">{</span> <span class="c1">// blok 3</span>
+		<span class="c1">// instructies</span>
+		<span class="c1">// instructies		</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>In het linkse voorbeeld kan je heel duidelijk zien welke de children zijn van Blok 1. In het rechtse voorbeeld is dit veel moeilijker. Bij indentatie worden de volgende regels gevolgd:</p>
 
@@ -495,45 +549,42 @@
   </li>
 </ul>
 
-<pre class="linenums lang lang-JS">
-{ // parent blok
-	var inParent = "groen";		// scope is de parent en beide children
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// parent blok</span>
+	<span class="kd">var</span> <span class="nx">inParent</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">groen</span><span class="dl">"</span><span class="p">;</span>		<span class="c1">// scope is de parent en beide children</span>
 	
-	{ // child 1 blok
-		var inChild1 = "blauw";	// scope is enkel child blok 1
-	}
+	<span class="p">{</span> <span class="c1">// child 1 blok</span>
+		<span class="kd">var</span> <span class="nx">inChild1</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">blauw</span><span class="dl">"</span><span class="p">;</span>	<span class="c1">// scope is enkel child blok 1</span>
+	<span class="p">}</span>
 
-	{ // child 2 blok
-		var inChild2 = "rood";	// scope is enkel child blok 2
-	}
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-{ // parent blok
-	$inParent = "groen";		// scope is de parent en beide children
+	<span class="p">{</span> <span class="c1">// child 2 blok</span>
+		<span class="kd">var</span> <span class="nx">inChild2</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">rood</span><span class="dl">"</span><span class="p">;</span>	<span class="c1">// scope is enkel child blok 2</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// parent blok</span>
+	<span class="nv">$inParent</span> <span class="o">=</span> <span class="s2">"groen"</span><span class="p">;</span>		<span class="c1">// scope is de parent en beide children</span>
 	
-	{ // child 1 blok
-		$inChild1 = "blauw";	// scope is enkel child blok 1
-	}
+	<span class="p">{</span> <span class="c1">// child 1 blok</span>
+		<span class="nv">$inChild1</span> <span class="o">=</span> <span class="s2">"blauw"</span><span class="p">;</span>	<span class="c1">// scope is enkel child blok 1</span>
+	<span class="p">}</span>
 
-	{ // child 2 blok
-		$inChild2 = "rood";	// scope is enkel child blok 2
-	}
-}
-</pre>
-<pre class="linenums lang lang-CS">
-{ // parent blok
-	string inParent = "groen";		// scope is de parent en beide children
+	<span class="p">{</span> <span class="c1">// child 2 blok</span>
+		<span class="nv">$inChild2</span> <span class="o">=</span> <span class="s2">"rood"</span><span class="p">;</span>	<span class="c1">// scope is enkel child blok 2</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="c1">// parent blok</span>
+	<span class="kt">string</span> <span class="n">inParent</span> <span class="p">=</span> <span class="s">"groen"</span><span class="p">;</span>		<span class="c1">// scope is de parent en beide children</span>
 	
-	{ // child 1 blok
-		string inChild1 = "blauw";	// scope is enkel child blok 1
-	}
+	<span class="p">{</span> <span class="c1">// child 1 blok</span>
+		<span class="kt">string</span> <span class="n">inChild1</span> <span class="p">=</span> <span class="s">"blauw"</span><span class="p">;</span>	<span class="c1">// scope is enkel child blok 1</span>
+	<span class="p">}</span>
 
-	{ // child 2 blok
-		string inChild2 = "rood";	// scope is enkel child blok 2
-	}
-}
-</pre>
+	<span class="p">{</span> <span class="c1">// child 2 blok</span>
+		<span class="kt">string</span> <span class="n">inChild2</span> <span class="p">=</span> <span class="s">"rood"</span><span class="p">;</span>	<span class="c1">// scope is enkel child blok 2</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="dry">DRY</h2>
 
@@ -547,44 +598,68 @@
 
 <p>Waarom is dit principe zo belangrijk? Stel je voor dat we een codeblok hebben om een explosie te maken. Het codeblok zou er waarschijnlijk als volgt uitzien:</p>
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-// codeblok voor explosie:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// codeblok voor explosie:
 {
 	// maak een geluidje
 	// laat een licht rood/oranje flikkeren
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
+</code></pre></div></div>
 
 <p>In een spel zijn er verschillende dingen die kunnen exploderen: wanneer een auto of granaat ontploft, moet in beide gevallen het explosie-codeblok worden uitgevoerd. Zowel de auto als de granaat krijgen dus hetzelfde explosie-codeblok:</p>
 
-<table class="styledTable" style="width: 100%">
- <tr>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-AUTO:
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">AUTO</span><span class="p">:</span>
 
-// explosie instructies:
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe 10 schade
-	// aan alle spelers binnen 5 meter van de explosie
-</pre>
-  </td>
-  <td>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
-GRANAAT:
+<span class="c1">// explosie instructies:</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
 
-// explosie instructies:
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe 10 schade
-	// aan alle spelers binnen 5 meter van de explosie
-</pre>
-  </td>
- </tr>
-</table>
+	
+<span class="nx">GRANAAT</span><span class="p">:</span>
+
+<span class="c1">// explosie instructies:</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">AUTO</span><span class="o">:</span>
+
+<span class="c1">// explosie instructies:</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+
+	
+<span class="nx">GRANAAT</span><span class="o">:</span>
+
+<span class="c1">// explosie instructies:</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AUTO</span><span class="p">:</span>
+
+<span class="c1">// explosie instructies:</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+
+	
+<span class="n">GRANAAT</span><span class="p">:</span>
+
+<span class="c1">// explosie instructies:</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe 10 schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+</code></pre></div></div>
 
 <p>Als er nu een kleine aanpassing gemaakt moet worden in de explosie-code (bijvoorbeeld om een rook-effect toevoegen) moet die aanpassing in al die explosie-codeblokken worden gedaan.</p>
 <ul>
@@ -618,7 +693,12 @@ GRANAAT:
 <ul>
   <li><a href="#codeblokken">Codeblokken</a></li>
   <li><a href="#nesten">Nesten</a></li>
-  <li><a href="#indentatie">Indentatie</a></li>
+  <li><a href="#indentatie">Indentatie</a>
+    <ul>
+      <li><a href="#zonder-indentatie">zonder indentatie:</a></li>
+      <li><a href="#met-indentatie">met indentatie:</a></li>
+    </ul>
+  </li>
   <li><a href="#scope">Scope</a></li>
   <li><a href="#dry">DRY</a></li>
 </ul>

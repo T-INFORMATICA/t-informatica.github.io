@@ -464,20 +464,18 @@
 
 <p>Dit is hetzelfde als de <code class="highlighter-rouge">$_GET</code> array als volgt in te vullen:</p>
 
-<pre class="linenums">
-$_GET["productID"] = 1;
-$_GET["productnaam"] = "Shampoo";
-</pre>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"productID"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nv">$_GET</span><span class="p">[</span><span class="s2">"productnaam"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Shampoo"</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>Door deze variabelen via de URL mee te geven, wordt de <code class="highlighter-rouge">$_GET</code> array echter <strong>automatisch ingevuld</strong>, en moet je dus deze 2 regels code <strong>niet zelf schrijven</strong>.</p>
 
 <p>De <code class="highlighter-rouge">$_GET</code> array werkt verder zoals elke andere associative array. Zo is het mogelijk om waardes op te vragen, aan te passen of toe te voegen met de volgende code:</p>
 
-<pre class="linenums">
-echo $_GET["productID"];		// toon 1 op het scherm
-echo $_GET["productNaam"];		// toon Shampoo op het scherm
-$_GET["productnaam"] = "Zeep";	// verandert de waarde “Shampoo” in “zeep” in de $_GET array
-</pre>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">echo</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"productID"</span><span class="p">];</span>		<span class="c1">// toon 1 op het scherm</span>
+<span class="k">echo</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">"productNaam"</span><span class="p">];</span>		<span class="c1">// toon Shampoo op het scherm</span>
+<span class="nv">$_GET</span><span class="p">[</span><span class="s2">"productnaam"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Zeep"</span><span class="p">;</span>	<span class="c1">// verandert de waarde “Shampoo” in “zeep” in de $_GET array</span>
+</code></pre></div></div>
 
 
     </section>

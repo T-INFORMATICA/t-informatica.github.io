@@ -53,18 +53,18 @@ Een variabele van een primitive datatype (in dit voorbeeld integer) wordt op de 
  2. **Geef een naam** aan de variabele
  3. **Geef een initiële waarde** aan de variabele
 
-<pre class="linenums lang lang-JS">
+```javascript
     let myVariable = 0;
 //   1	    2	     3
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
     $myVariable = 0;
 //  1    2        3
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
     int myVariable = 0;
 //   1	   2	     3
-</pre>
+```
 
 Een **complex datatype** is een datatype waarin meerdere waardes kunnen worden bijgehouden. Een voorbeeld hiervan is het datatype Date.
 
@@ -78,59 +78,59 @@ Een variabele van een complex datatype (in dit voorbeeld Date) wordt op dezelfde
 
  Het probleem is echter stap 3: Hoe initialiseer je de waarde van een complexe variabele?
  
-<pre class="linenums lang lang-JS">
+```javascript
 // !! DIT IS FOUT !!
 let verjaardag = 0; 		// verjaardag is nu een integer, geen Date
 let verjaardag = "11/10/1987";	// verjaardag is nu een string, geen Date
 let verjaardag = 11/10/1987; 	// dit is geen geldige waarde, en zal dus een
 				// error geven
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 // !! DIT IS FOUT !!
 $verjaardag = 0; 		 // verjaardag is nu een integer, geen Date
 $verjaardag = "11/10/1987"; 	// verjaardag is nu een string, geen Date
 $verjaardag = 11/10/1987;   	// dit is geen geldige waarde, en zal dus een
 				// error geven
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 // !! DIT IS FOUT !!
 Date verjaardag = 0; 		// verjaardag is nu een integer, geen Date
 Date verjaardag = "11/10/1987"; // verjaardag is nu een string, geen Date
 Date verjaardag = 11/10/1987;   // dit is geen geldige waarde, en zal dus een
 				// error geven
-</pre>
+```
 
 De oplossing hiervoor is het aanmaken van een object. **Een object is een een waarde met een complex datatype**. Een object wordt op de volgende manier aangemaakt:
 
-<pre class="linenums lang lang-JS">
+```javascript
 let verjaardag = new Date();
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $verjaardag = new Date();
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 Date verjaardag = new Date();
-</pre>
+```
 
 Het **new** keyword geeft aan dat je een object wilt aanmaken. Dit wordt dan gevolgd door het aanroepen van een speciale functie: de **constructor**. De constructor is een speciale functie die een nieuw object kan maken. Deze functie heeft dezelfde naam als het datatype waarvoor de constructor een object zal maken.
 
 Elke keer dat je een nieuw object aanmaakt, maak je een nieuwe **instantie** aan van dat complexe datatype. 
 
-<pre class="linenums lang lang-JS">
+```javascript
 let verjaardag = new Date();		// met Date() roep je de 
 					// constructor-functie aan, waarmee je 
 					// een object van het datatype Date maakt
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $verjaardag = new Date();		// met Date() roep je de 
 					// constructor-functie aan, waarmee je 
 					// een object van het datatype Date maakt
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 Date verjaardag = new Date();		// met Date() roep je de 
 					// constructor-functie aan, waarmee je 
 					// een object van het datatype Date maakt
-</pre>
+```
 
 ## Complexe datatypes
 

@@ -34,10 +34,10 @@ Voorbeelden van block-level-elementen:
 
 
 
-*   <code>&lt;<strong>h1</strong>></code>
-*   <code>&lt;<strong>h7</strong>></code>
-*   <code>&lt;<strong>p</strong>></code> 
-*   <code>&lt;<strong>div</strong>></code> 
+*   **`<h1>`**
+*   **`<h7>`**
+*   **`<p>`**
+*   **`<div>`**
 
 
 ## Inline elementen
@@ -52,12 +52,12 @@ Voorbeelden van inline elementen:
 
 
 
-*   <code>&lt;<strong>i</strong>></code> 
-*   <code>&lt;<strong>b</strong>></code> 
-*   <code>&lt;<strong>u</strong>></code> 
-*   <code>&lt;<strong>a</strong>></code> 
-*   <code>&lt;<strong>img</strong>></code> 
-*   <code>&lt;<strong>span</strong>></code> 
+*   **`<i>`**
+*   **`<b>`**
+*   **`<u>`**
+*   **`<a>`**
+*   **`<img>`**
+*   **`<span>`**
 
 
 

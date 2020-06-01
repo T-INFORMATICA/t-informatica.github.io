@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -412,103 +412,97 @@
 
 <p>In het voorbeeld hieronder zijn er 2 klassen <code class="highlighter-rouge">Leraar</code> en <code class="highlighter-rouge">Leerling</code> gedefinieerd:</p>
 
-<pre class="linenums lang lang-JS">
-Javascript
-class Leerling {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";
-		this._leeftijd = 0;
-		this._hoed = null;
-	}
-}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Javascript</span>
+<span class="kd">class</span> <span class="nx">Leerling</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">,</span> <span class="nx">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_naam</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_leeftijd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_hoed</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-class Leraar {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";
-		this._leeftijd = 0;
-		this._diplomas = [];
-	}
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-class Leerling {	
-	private $_naam = "";
-	private $_leeftijd = 0;
-	private $_hoed = null;
-}
+<span class="kd">class</span> <span class="nx">Leraar</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">,</span> <span class="nx">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_naam</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_leeftijd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_diplomas</span> <span class="o">=</span> <span class="p">[];</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="k">private</span> <span class="nv">$_naam</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+	<span class="k">private</span> <span class="nv">$_leeftijd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">private</span> <span class="nv">$_hoed</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
 
-class Leraar {	
-	private $_naam = "";
-	private $_leeftijd = 0;
-	private $_diplomas = array();
-}
-</pre>
-<pre class="linenums lang lang-CS">
-class Leerling {	
-	string _naam = "";
-	int _leeftijd = 0;
-	int _hoed = null;
-}
+<span class="kd">class</span> <span class="nc">Leraar</span> <span class="p">{</span>	
+	<span class="k">private</span> <span class="nv">$_naam</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+	<span class="k">private</span> <span class="nv">$_leeftijd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">private</span> <span class="nv">$_diplomas</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Leerling</span> <span class="p">{</span>	
+	<span class="kt">string</span> <span class="n">_naam</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">_leeftijd</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">_hoed</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
 
-class Leraar {	
-	string _naam = "";
-	int _leeftijd = 0;
-	int _diplomas = [];
-}
-</pre>
+<span class="k">class</span> <span class="nc">Leraar</span> <span class="p">{</span>	
+	<span class="kt">string</span> <span class="n">_naam</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">_leeftijd</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">_diplomas</span> <span class="p">=</span> <span class="p">[];</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Beide klassen hebben een field <code class="highlighter-rouge">naam</code> en een field <code class="highlighter-rouge">leeftijd</code> die semantisch hetzelfde zijn. Het DRY principe wordt dus geschonden.</p>
 
 <p>Daarom wordt er nu een derde klasse gemaakt: <code class="highlighter-rouge">Persoon</code>. Persoon wordt de <strong>superklasse</strong> van <code class="highlighter-rouge">Leerling</code> en <code class="highlighter-rouge">Leraar</code>. <code class="highlighter-rouge">Leerling</code> en <code class="highlighter-rouge">Leraar</code> worden vervolgens aangeduid dat ze overerven van de klasse Persoon. Dit zijn de <strong>subklassen</strong> van de klasse Persoon.</p>
 
-<pre class="linenums lang lang-JS">
-class Persoon {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";
-		this._leeftijd = 0;
-	}
-}
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Persoon</span> <span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">,</span> <span class="nx">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_naam</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_leeftijd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-class Leerling extends Persoon { // extends duid aan dat er wordt overgeërfd
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._hoed = null;
-	}
-}
+<span class="kd">class</span> <span class="nx">Leerling</span> <span class="kd">extends</span> <span class="nx">Persoon</span> <span class="p">{</span> <span class="c1">// extends duid aan dat er wordt overgeërfd</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">,</span> <span class="nx">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_hoed</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._diplomas = [];
-	}
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-class Persoon {	
-	private $_naam = "";
-	private $_leeftijd = 0;
-}
+<span class="kd">class</span> <span class="nx">Leraar</span> <span class="kd">extends</span> <span class="nx">Persoon</span> <span class="p">{</span>   <span class="c1">// extends duid aan dat er wordt overgeërfd</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">naamLeerling</span><span class="p">,</span> <span class="nx">leeftijdLeerling</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">_diplomas</span> <span class="o">=</span> <span class="p">[];</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Persoon</span> <span class="p">{</span>	
+	<span class="k">private</span> <span class="nv">$_naam</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+	<span class="k">private</span> <span class="nv">$_leeftijd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-class Leerling extends Persoon { // extends duid aan dat er wordt overgeërfd
-	private $_hoed = null;
-}
+<span class="kd">class</span> <span class="nc">Leerling</span> <span class="k">extends</span> <span class="nx">Persoon</span> <span class="p">{</span> <span class="c1">// extends duid aan dat er wordt overgeërfd</span>
+	<span class="k">private</span> <span class="nv">$_hoed</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
 
-class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
-	private $_diplomas = array();
-}
-</pre>
-<pre class="linenums lang lang-CS">
-class Persoon {	
-	string _naam = "";
-	int _leeftijd = 0;
-}
+<span class="kd">class</span> <span class="nc">Leraar</span> <span class="k">extends</span> <span class="nx">Persoon</span> <span class="p">{</span>   <span class="c1">// extends duid aan dat er wordt overgeërfd</span>
+	<span class="k">private</span> <span class="nv">$_diplomas</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Persoon</span> <span class="p">{</span>	
+	<span class="kt">string</span> <span class="n">_naam</span> <span class="p">=</span> <span class="s">""</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">_leeftijd</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-class Leerling : Persoon {	 // : duid aan dat er wordt overgeërfd
-	int _hoed = null;
-}
+<span class="k">class</span> <span class="nc">Leerling</span> <span class="p">:</span> <span class="n">Persoon</span> <span class="p">{</span>	 <span class="c1">// : duid aan dat er wordt overgeërfd</span>
+	<span class="kt">int</span> <span class="n">_hoed</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
 
-class Leraar : Persoon {	 // : duid aan dat er wordt overgeërfd
-	int _diplomas = [];
-}
-</pre>
+<span class="k">class</span> <span class="nc">Leraar</span> <span class="p">:</span> <span class="n">Persoon</span> <span class="p">{</span>	 <span class="c1">// : duid aan dat er wordt overgeërfd</span>
+	<span class="kt">int</span> <span class="n">_diplomas</span> <span class="p">=</span> <span class="p">[];</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Er wordt terug helemaal voldaan aan het DRY principe.</p>
 

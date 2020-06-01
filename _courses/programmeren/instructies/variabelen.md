@@ -56,22 +56,22 @@ Het aanmaken van een variabele wordt ook wel het **declareren** van een variabel
  
 Wil je bijvoorbeeld bijhouden hoeveel levens een speler heeft, dan maak je een variabele zo aan:
 
-<pre class="linenums lang lang-JS">
+```javascript
  1	2	   3		// 1: declareer; 2: benoem; 3: waarde;
 var aantalLevens = 3;
 
 /* Javascript bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 1  2	   	3		// 1: declareer; 2: benoem; 3: waarde;
 $aantalLevens = 3;
 
 /* PHP bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
  1	   2	   3		// 1: declareer; 2: benoem; 3: waarde;
 int aantalLevens = 3;
-</pre>
+```
  
  Wat gebeurt er hier precies?
  1. Een **variabele wordt gedeclareerd**
@@ -98,46 +98,46 @@ Terwijl een programma wordt uitgevoerd (wanneer het spel dus gespeeld wordt) kan
 
 Bv.: een speler start het spel opnieuw op, dus het 'aantalLevens' wordt terug op 3 gezet:
 
-<pre class="linenums lang lang-JS">
+```javascript
 var aantalLevens = 1;
 
 // de speler start het spel opnieuw:
 aantalLevens = 3; 	// let op: 'var' wordt NIET opnieuw geschreven!
 			// 'var' dient om een nieuwe variabele te maken
 			// en hier passen we een bestaande variabele aan
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $aantalLevens = 1;
 
 // de speler start het spel opnieuw:
 $aantalLevens = 3;	// let op: '$' wordt OOK HIER opnieuw geschreven!
 			// '$' dient om een nieuwe variabele te maken
 			// en OOK om een bestaande variabele te gebruiken!
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int aantalLevens = 1;
 
 // de speler start het spel opnieuw:
 aantalLevens = 3; 	// let op: 'int' wordt NIET opnieuw geschreven!
 			// 'var' dient om een nieuwe variabele te maken
 			// en hier passen we een bestaande variabele aan
-</pre>
+```
 
 Als bijvoorbeeld de speler een leven verliest kan het 'aantalLevens' vermindert worden met 1. 
 De nieuwe waarde van 'aantalLevens' is dus de oude waarde van 'aantalLevens' min één.
 
-<pre class="linenums lang lang-JS">
+```javascript
 var aantalLevens = 3;
 aantalLevens = aantalLevens - 1;
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $aantalLevens = 3;
 $aantalLevens = $aantalLevens - 1;
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int aantalLevens = 3;
 aantalLevens = aantalLevens - 1;
-</pre>
+```
 
 ## Coding Guidelines
 

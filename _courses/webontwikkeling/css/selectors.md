@@ -23,7 +23,7 @@ Een stijlregel wordt dus toegepast op <b>alle elementen die overeenkomen met de 
 ## Selectors overzicht
 
 
-<table class="styledTable">
+<table class="styledTable" style="text-align: center">
   <tr>
    <th>selector</th>
    <th>voorbeeld</th>
@@ -32,7 +32,7 @@ Een stijlregel wordt dus toegepast op <b>alle elementen die overeenkomen met de 
   <tr>
    <td>De element selector</td>
    <td><code>p</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer alle &lt;p> elementen.<br>
 De element selector is de simpelste: Je gebruikt de tagnaam van het HTML element als selector, en alle HTML elementen met die tagnaam zullen vanaf dan deze stijlregels volgen.
    </td>
@@ -40,7 +40,7 @@ De element selector is de simpelste: Je gebruikt de tagnaam van het HTML element
   <tr>
    <td>De ALL selector</td>
    <td><code>*</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer alle elementen.<br>
 De * selector wordt gebruikt om stijlregels toe te passen op <b>alle elementen</b>. Wil je dat alle elementen op je website een bepaald lettertype gebruiken, kan je hiervoor de * selector gebruiken.
    </td>
@@ -48,7 +48,7 @@ De * selector wordt gebruikt om stijlregels toe te passen op <b>alle elementen</
   <tr>
    <td>De class selector</td>
    <td><code>.intro</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer alle elementen met class="intro".<br>
 Wanneer elementen zijn gemarkeerd met het class-attribute kan je deze elementen ook een eigen stijl geven.
 Je doet dit door middel van een <b>punt</b>, gevolgd door de naam die je in het class-attribute hebt geschreven.
@@ -57,7 +57,7 @@ Je doet dit door middel van een <b>punt</b>, gevolgd door de naam die je in het 
   <tr>
    <td>De id selector</td>
    <td><code>#firstname</code></td>
-   <td>
+   <td style="text-align: left">
 	   Selecteer het element met  id="firstname".<br>
 Wanneer elementen zijn gemarkeerd met het ID-attribute kan je deze elementen een eigen stijl geven.
 Je doet dit door middel van een <b>hekje</b>, gevolgd door de naam die je in het ID-attribute hebt geschreven.
@@ -66,27 +66,27 @@ Je doet dit door middel van een <b>hekje</b>, gevolgd door de naam die je in het
   <tr>
    <td>Selectors combineren</td>
    <td><code>div, p</code></td>
-   <td>Selecteer alle &lt;div> elementen en alle &lt;p> elementen.</td>
+   <td style="text-align: left">Selecteer alle &lt;div> elementen en alle &lt;p> elementen.</td>
   </tr>
   <tr>
    <td>Geneste elementen selector</td>
    <td><code>div p</code></td>
-   <td>Selecteer alle &lt;p> elementen die zich bevinden in &lt;div> elementen.</td>
+   <td style="text-align: left">Selecteer alle &lt;p> elementen die zich bevinden in &lt;div> elementen.</td>
   </tr>
   <tr>
    <td>Parent-child selector</td>
    <td><code>div > p</code></td>
-   <td>Selecteer alle &lt;p> elementen waarvan de parent een &lt;div> element is.</td>
+   <td style="text-align: left">Selecteer alle &lt;p> elementen waarvan de parent een &lt;div> element is.</td>
   </tr>
   <tr>
    <td>After selector</td>
    <td><code>div + p</code></td>
-   <td>Selecteer alle &lt;p> elementen die direct na &lt;div> elementen staan.</td>
+   <td style="text-align: left">Selecteer alle &lt;p> elementen die direct na &lt;div> elementen staan.</td>
   </tr>
   <tr>
    <td>Before selector</td>
    <td><code>p ~ ul</code></td>
-   <td>Selecteer elk &lt;ul> element dat wordt voorafgegaan door een &lt;p> element.</td>
+   <td style="text-align: left">Selecteer elk &lt;ul> element dat wordt voorafgegaan door een &lt;p> element.</td>
   </tr>
 </table>
 
@@ -103,14 +103,14 @@ Een div element van de klasse “content” en een ID “koptekst” kan reagere
 
 
 
-1. div
-2. .content
-3. #koptekst
+1. `div`
+2. `.content`
+3. `#koptekst`
 
 Bijvoorbeeld:
 
 
-<pre>
+```css
 div {
 	background-color: red;
 }
@@ -120,16 +120,16 @@ div {
 #koptekst {
 	font-family: verdana;
 }
-</pre>
+```
 
 
 Wanneer, zoals in bovenstaand voorbeeld, alle 3 de selectors stijlregels krijgen, wordt voor het element <code>&lt;<b>div</b> class="content" id="koptekst"></code> een combinatie gemaakt van deze 3 stijlregels:
 
-<pre>
+```css
 	background-color: red;
 	color: green;
 	font-family: verdana;
-</pre>
+```
 
 
 
@@ -138,7 +138,7 @@ Wanneer, zoals in bovenstaand voorbeeld, alle 3 de selectors stijlregels krijgen
 Stijlregels kunnen soms conflicteren: Wanneer je een div element van de klasse “content” hebt voorzien en een ID “koptekst” hebt gegeven, kan het wel eens gebeuren dat verschillende selectors dezelfde stijlregels proberen toe te passen:
 
 
-<pre>
+```css
 div {
 	Background-color: red;
 }
@@ -148,7 +148,7 @@ div {
 #koptekst {
 	Background-color: blue;
 }
-</pre>
+```
 
 
  \
@@ -165,13 +165,13 @@ De selectors die we tot nu toe bekeken hebben hebben hun voorrang als volgt:
 
 Wanneer twee selectors **even specifiek zijn** geldt de **onderste stijlregel in de css code**.
 
-In volgend voorbeeld zal elke &lt;div> een groene achtergrond kleur krijgen.
+In volgend voorbeeld zal elke `<div>` een groene achtergrond kleur krijgen.
 
-<pre>
+```css
 div {
 	Background-color: red;
 }
 div {
 	Background-color: green;
 }
-</pre>
+```

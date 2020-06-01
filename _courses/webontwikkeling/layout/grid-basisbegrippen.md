@@ -22,7 +22,7 @@ Dit is het element waarop **`display: grid;`** op wordt toegepast. Dit is ook he
 In het voorbeeld hieronder is het element met de klasse **`container`** de Grid Container.
 
 
-```
+```html
 <div class="container">
   <div class="item item-1"></div>
   <div class="item item-2"></div>
@@ -39,7 +39,7 @@ Grid Items zijn enkel de elementen die **rechtstreeks** in de Grid Container gep
 In het voorbeeld hieronder zijn alle elementen van de klasse **`item`** Grid Items, maar de elementen van de klasse **`sub-item`** niet.
 
 
-```
+```html
 <div class="container">
   <div class="item"></div> 
   <div class="item">

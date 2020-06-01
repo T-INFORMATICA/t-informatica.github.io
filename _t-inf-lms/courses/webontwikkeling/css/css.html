@@ -448,7 +448,7 @@
 
 <p>Bijvoorbeeld:</p>
 
-<p>Stel dat alle &lt;p&gt; elementen op dezelfde manier moeten opgemaakt worden:</p>
+<p>Stel dat alle <code class="highlighter-rouge">&lt;p&gt;</code> elementen op dezelfde manier moeten opgemaakt worden:</p>
 
 <ul>
   <li>De tekst moet gecentreerd staan.</li>
@@ -458,16 +458,14 @@
 <p>De selector moet dan p (de naam van het element) selecteren.  <br />
 De declaratie bestaat dan uit 2 opmaakregels:</p>
 
-<pre>
-p
-{
-	text-align: center;
-	color: red;
-}
-</pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span>
+<span class="p">{</span>
+	<span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<p><br />
-In dit voorbeeld wordt het &lt;p&gt; element opgemaakt met een rode tekstkleur en gecentreerde tekst.</p>
+<p>In dit voorbeeld wordt het <code class="highlighter-rouge">&lt;p&gt;</code> element opgemaakt met een rode tekstkleur en gecentreerde tekst.</p>
 
 <p>Door verschillende codeblokken onder elkaar te schrijven, krijgen verschillende elementen een bepaalde opmaak toegewezen.</p>
 
@@ -481,58 +479,56 @@ In dit voorbeeld wordt het &lt;p&gt; element opgemaakt met een rode tekstkleur e
   <li>Elke hyperlink wordt vet getoond en krijgt een oranje tekstkleur.</li>
 </ul>
 
-<pre>
-p
-{
-	text-align: center;
-	color: red;
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span>
+<span class="p">{</span>
+	<span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
 
-h1
-{
-	text-decoration: underline;
-	background-color: red
-}
+<span class="nt">h1</span>
+<span class="p">{</span>
+	<span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span>
+<span class="p">}</span>
 
-a
-{
-	font-weight: bold;
-	color: orange;
-}
-</pre>
+<span class="nt">a</span>
+<span class="p">{</span>
+	<span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<h2 id="het-style-element">Het &lt;STYLE&gt; element</h2>
+<h2 id="het-style-element">Het <code class="highlighter-rouge">&lt;STYLE&gt;</code> element</h2>
 
 <p>CSS beschrijft hoe elk element moet worden weergegeven in de browser. Het geeft dus informatie over de website, maar bevat zelf geen zichtbare informatie. CSS-code hoort daarom thuis in het &lt;head&gt; element van de webpagina.</p>
 
 <p>Nu is het niet mogelijk om zomaar CSS te beginnen typen in een HTML document. Het is aan jou als ontwikkelaar om duidelijk te maken waar er HTML-code staat, en waar er CSS code staat.</p>
 
-<p>Om aan te duiden waar CSS code wordt geschreven bestaat het &lt;style&gt; element. Alle inhoud van het &lt;style&gt; element wordt door de browser gelezen als CSS code.</p>
+<p>Om aan te duiden waar CSS code wordt geschreven bestaat het <style> element. Alle inhoud van het <style> element wordt door de browser gelezen als CSS code.</style></style></p>
 
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;style&gt;
-body {
-    background-color: lightblue;
-}
-h1 {
-    color: white;
-    text-align: center;
-}
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-		&lt;/style&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;Mijn eerste CSS pagina&lt;/h1&gt;
-		&lt;p&gt;Dit is een paragraaf.&lt;/p&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;style&gt;</span>
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="n">verdana</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+		<span class="nt">&lt;/style&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;h1&gt;</span>Mijn eerste CSS pagina<span class="nt">&lt;/h1&gt;</span>
+		<span class="nt">&lt;p&gt;</span>Dit is een paragraaf.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
 
 <h2 id="externe-stylesheets">Externe stylesheets</h2>
 
@@ -540,26 +536,30 @@ p {
 
 <p>Een externe stylesheet is een manier om CSS code in een apart bestand te plaatsen, zodat HTML en CSS code grotendeels gescheiden blijft.</p>
 
-<p>Elke pagina die de stijlregels in dit bestand gebruikt moet een verwijzing naar de externe stylesheet bevatten in het <code>&lt;<strong>link</strong>&gt;</code>-element. Het <code>&lt;<strong>link</strong>&gt;</code>-element wordt geplaatst binnen in het element &lt;head&gt;:</p>
+<p>Elke pagina die de stijlregels in dit bestand gebruikt moet een verwijzing naar de externe stylesheet bevatten in het <strong><code class="highlighter-rouge">&lt;link&gt;</code></strong>-element. Het <strong><code class="highlighter-rouge">&lt;link&gt;</code></strong>-element wordt geplaatst binnen in het element &lt;head&gt;:</p>
 
-<pre>
-&lt;head&gt;
-&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
-&lt;/head&gt;
-</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"mystyle.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre></div></div>
 
-<p>Een externe stylesheet kan in elke teksteditor worden geschreven. Het bestand mag geen HTML-tags bevatten. Het stylesheet bestand moet worden opgeslagen met de extensie .css. Hier is hoe het bestand ‘mystyle.css’ er uit ziet:</p>
+<ul>
+  <li>Een externe stylesheet kan in elke teksteditor worden geschreven.</li>
+  <li>Het bestand mag geen HTML-tags bevatten.</li>
+  <li>Het stylesheet bestand moet worden opgeslagen met de extensie .css.</li>
+</ul>
 
-<pre>
-body {
-    background-color: lightblue;
-}
+<p>Hier is hoe het bestand ‘mystyle.css’ er uit ziet:</p>
 
-h1 {
-    color: navy;
-    margin-left: 20px;
-}
-</pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">navy</span><span class="p">;</span>
+    <span class="nl">margin-left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 
 
@@ -584,7 +584,7 @@ h1 {
 <ul>
   <li><a href="#wat-is-css">Wat is CSS?</a></li>
   <li><a href="#syntax">Syntax</a></li>
-  <li><a href="#het-style-element">Het &lt;STYLE&gt; element</a></li>
+  <li><a href="#het-style-element">Het <code class="highlighter-rouge">&lt;STYLE&gt;</code> element</a></li>
   <li><a href="#externe-stylesheets">Externe stylesheets</a></li>
 </ul>
 </div>

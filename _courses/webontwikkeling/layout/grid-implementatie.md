@@ -34,7 +34,7 @@ Zo is het bijvoorbeeld logisch dat als eerste de header wordt gedefinieerd, verv
 Deze elementen zullen de Grid Items in de CSS Grid layout worden.
 
 
-```
+```html
 <div class="header">
 </div>
 
@@ -58,7 +58,7 @@ Deze elementen zullen de Grid Items in de CSS Grid layout worden.
 Maak nu een Grid Container die al deze elementen omvat. Meestal wordt hier een **`div`** element voor gebruikt.
 
 
-```
+```html
 <div class="site">
 	<div class="header">
 	</div>
@@ -82,7 +82,7 @@ Maak nu een Grid Container die al deze elementen omvat. Meestal wordt hier een *
 Vervolgens gebruik je CSS om hier **`display: grid;`** op toe te passen.
 
 
-```
+```css
 .site {
 	display: grid;
 }
@@ -105,7 +105,7 @@ Wil je 3 kolommen in je CSS Grid? Dan geef je **`grid-template-columns`** 3 waar
 Onderstaand voorbeeld maakt dus 3 kolommen, met de eerste en laatste kolom 25 pixels breed, en de middelste kolom 50px breed:
 
 
-```
+```css
 grid-template-columns: 25px 50px 25px;
 ```
 
@@ -124,7 +124,7 @@ Je kan hiervoor werken met de volgende waardes:
 Je mag deze waardes door elkaar gebruiken. In onderstaand voorbeeld is de eerste kolom 50% breed, de tweede 50 pixels breed en de laatste kolom 25 pixels breed:
 
 
-```
+```css
 grid-template-columns: 50% 50px 25px;
 ```
 
@@ -143,7 +143,7 @@ Hetzelfde geld voor **`grid-template-rows`**, waarbij je de hoogte gaat bepalen 
 Op dit moment ziet de HTML code er nog steeds als volgt uit:
 
 
-```
+```html
 <div class="site">
 	<div class="header">
 	</div>
@@ -166,7 +166,7 @@ Op dit moment ziet de HTML code er nog steeds als volgt uit:
 En de CSS code ziet er als volgt uit:
 
 
-```
+```css
 .site {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
@@ -194,7 +194,7 @@ Zo worden ook de Grid Areas “main”, “header”, “menu” en “footer”
 **opgelet!** Soms wil je een cel leeg laten. Gebruik hiervoor een **punt**. Een punt duidt aan dat een bepaalde cel niet gebruikt zal worden in een area.
 
 
-```
+```css
 .site {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
@@ -216,7 +216,7 @@ Om elk Grid Item in de juiste Grid Area te krijgen, wordt op elk Grid Item de vo
 Bijvoorbeeld:
 
 
-```
+```css
 .site {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;

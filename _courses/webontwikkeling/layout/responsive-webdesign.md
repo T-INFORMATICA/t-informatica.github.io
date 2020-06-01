@@ -45,7 +45,7 @@ Op basis van deze viewport kan de browser bepalen hoe groot het scherm is waarop
 Een **`<meta>`** tag dient om extra informatie te geven over de website. In dit geval willen we informatie over de grootte en schaal van de website verkrijgen.
 
 
-```
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
@@ -66,7 +66,7 @@ Bijvoorbeeld:  \
 Het **`<body>`** element krijgt een lichtgroene achtergrondkleur. Maar wanneer het browservenster kleiner is dan 500px, verandert de achtergrondkleur van het **`<body>`** element naar lichtblauw.
 
 
-```
+```css
 body {
     background-color: lightgreen;
 }

@@ -237,9 +237,9 @@
         <script ></script>
         <div class="select nav-link">
             <select name="slct" class="lang-select" id="slct">
-            <option value="lang-JS" class="lang-JS">JS</option>
-            <option value="lang-PHP" class="lang-PHP">PHP</option>
-            <option value="lang-CS" class="lang-CS">C&#35;</option>
+            <option value="language-javascript" class="lang-JS">JS</option>
+            <option value="language-php" class="lang-PHP">PHP</option>
+            <option value="language-csharp" class="lang-CS">C&#35;</option>
             </select>
         </div>
         <script src="/_t-inf-lms/assets/js/proglang.js"></script>
@@ -395,22 +395,30 @@
 
 <p>Bijvoorbeeld: De functie Explodeer maakt eerst een geluid, laat daarna een licht flikkeren, en doet vervolgens schade. Deze instructies zullen altijd in deze volgorde worden uitgevoerd, geen enkele instructie zal worden overgeslagen.</p>
 
-<pre class="linenums lang lang-JS lang-PHP">
-function Explodeer(x) 
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe x schade
-}
-</pre>
-<pre class="linenums lang lang-CS">
-void Explodeer(x) 
-{
-	// maak een geluidje
-	// laat een licht rood/oranje flikkeren
-	// doe x schade
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Explodeer</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Explodeer</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> 	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Explodeer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  	<span class="c1">// de signature</span>
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="c1">// laat een licht rood/oranje flikkeren</span>
+	<span class="c1">// doe x schade</span>
+	<span class="c1">// aan alle spelers binnen 5 meter van de explosie</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="iteratie">Iteratie</h2>
 
@@ -423,42 +431,39 @@ void Explodeer(x)
 
 <p>Bijvoorbeeld: Een explosie laat een licht 10 maal flikkeren. Hiervoor wordt een variabele y gemaakt die optelt. Pas als de variabele y niet langer kleiner is dan 10, gaat het codeblok verder met z’n instructies (<code class="highlighter-rouge">doe 5 schade</code>).</p>
 
-<pre class="linenums lang lang-JS">
-function Explodeer() 
-{
-	// maak een geluidje
-	var y = 0;
-	while (y &lt; 10) {
-		// laat een licht flikkeren
-		y = y + 1;
-	}
-	// doe 5 schade
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-function Explodeer() 
-{
-	// maak een geluidje
-	$y = 0;
-	while ($y &lt; 10) {
-		// laat een licht flikkeren
-		$y = $y + 1;
-	}
-	// doe 5 schade
-}
-</pre>
-<pre class="linenums lang lang-CS">
-function Explodeer() 
-{
-	// maak een geluidje
-	int y = 0;
-	while (y &lt; 10) {
-		// laat een licht flikkeren
-		y = y + 1;
-	}
-	// doe 5 schade
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Explodeer</span><span class="p">()</span> 
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span> <span class="p">(</span><span class="nx">y</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// laat een licht flikkeren</span>
+		<span class="nx">y</span> <span class="o">=</span> <span class="nx">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="c1">// doe 5 schade</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">Explodeer</span><span class="p">()</span> 
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="nv">$y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span> <span class="p">(</span><span class="nv">$y</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// laat een licht flikkeren</span>
+		<span class="nv">$y</span> <span class="o">=</span> <span class="nv">$y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="c1">// doe 5 schade</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">function</span> <span class="nf">Explodeer</span><span class="p">()</span> 
+<span class="p">{</span>
+	<span class="c1">// maak een geluidje</span>
+	<span class="kt">int</span> <span class="n">y</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+	<span class="k">while</span> <span class="p">(</span><span class="n">y</span> <span class="p">&lt;</span> <span class="m">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// laat een licht flikkeren</span>
+		<span class="n">y</span> <span class="p">=</span> <span class="n">y</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="c1">// doe 5 schade</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Een <strong>iteratie-codeblok gaat, aan de hand van een voorwaarde, instructies herhalen</strong> zolang die voorwaarde waar is.</p>
 
@@ -478,36 +483,33 @@ function Explodeer()
 <p>WHILE wilt in het Nederlands zeggen: zolang. Het while codeblok herhaalt de instructies in in het codeblok <strong>zolang een voorwaarde waar is</strong>.
 WHILE wilt dus eigenlijk zeggen: <strong>zolang de voorwaarde waar is</strong>, voer deze instructies opnieuw uit. Bijvoorbeeld:</p>
 
-<pre class="linenums lang lang-JS">
-var intTest = 0;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">intTest</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-while (intTest &lt; 10) 
-{
-	intTest = intTest + 1;
-	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
-	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-$intTest = 0;
+<span class="k">while</span> <span class="p">(</span><span class="nx">intTest</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="nx">intTest</span> <span class="o">=</span> <span class="nx">intTest</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="c1">// voer deze code opnieuw uit zolang intTest kleiner is dan 10.</span>
+	<span class="c1">// In dit voorbeeld wordt de code 10 maal uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$intTest</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-while ($intTest &lt; 10) 
-{
-	$intTest = $intTest + 1;
-	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
-	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-CS">
-int intTest = 0;
+<span class="k">while</span> <span class="p">(</span><span class="nv">$intTest</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="nv">$intTest</span> <span class="o">=</span> <span class="nv">$intTest</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="c1">// voer deze code opnieuw uit zolang intTest kleiner is dan 10.</span>
+	<span class="c1">// In dit voorbeeld wordt de code 10 maal uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">intTest</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 
-while (intTest &lt; 10) 
-{
-	intTest = intTest + 1;
-	// voer deze code opnieuw uit zolang intTest kleiner is dan 10.
-	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
-}
-</pre>
+<span class="k">while</span> <span class="p">(</span><span class="n">intTest</span> <span class="p">&lt;</span> <span class="m">10</span><span class="p">)</span> 
+<span class="p">{</span>
+	<span class="n">intTest</span> <span class="p">=</span> <span class="n">intTest</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span>
+	<span class="c1">// voer deze code opnieuw uit zolang intTest kleiner is dan 10.</span>
+	<span class="c1">// In dit voorbeeld wordt de code 10 maal uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h3 id="for-blok">FOR blok</h3>
 
@@ -529,50 +531,44 @@ while (intTest &lt; 10)
   <li>Verhoog de variabele met 1</li>
 </ol>
 
-<pre class="linenums lang lang-JS">
-//     stap 1   stap 2	  stap 3
-for (var i = 0; i &lt; 10; i = i + 1)
-{
-	// voer deze code opnieuw uit zolang i kleiner is dan 10.
-	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-//    stap 1  stap 2	stap 3
-for ($i = 0; $i &lt; 10; $i = $i + 1)
-{
-	// voer deze code opnieuw uit zolang i kleiner is dan 10.
-	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
-}
-</pre>
-<pre class="linenums lang lang-CS">
-//     stap 1   stap 2	  stap 3
-for (int i = 0; i &lt; 10; i = i + 1)
-{
-	// voer deze code opnieuw uit zolang i kleiner is dan 10.
-	// In dit voorbeeld wordt de code 10 maal uitgevoerd.
-}
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//     stap 1   stap 2	  stap 3</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// voer deze code opnieuw uit zolang i kleiner is dan 10.</span>
+	<span class="c1">// In dit voorbeeld wordt de code 10 maal uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//    stap 1  stap 2	stap 3</span>
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">=</span> <span class="nv">$i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// voer deze code opnieuw uit zolang i kleiner is dan 10.</span>
+	<span class="c1">// In dit voorbeeld wordt de code 10 maal uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//     stap 1   stap 2	  stap 3</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10</span><span class="p">;</span> <span class="n">i</span> <span class="p">=</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// voer deze code opnieuw uit zolang i kleiner is dan 10.</span>
+	<span class="c1">// In dit voorbeeld wordt de code 10 maal uitgevoerd.</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="itereren-door-een-array">Itereren door een array</h2>
 
 <p>De index van een indexed array is een integer (een geheel getal). Dat wilt zeggen dat elke variabele die een geheel getal bevat gebruikt kan worden om een element uit de array op te vragen.</p>
 
-<pre class="linenums lang lang-JS">
-var autos = ["Volvo", "BMW", "Toyota"];
-var index = 1;
-var tweedeAuto = autos[index];
-</pre>
-<pre class="linenums lang lang-PHP">
-$autos = array("Volvo", "BMW", "Toyota");
-$index = 1;
-$tweedeAuto = autos[$index];
-</pre>
-<pre class="linenums lang lang-CS">
-string[] autos = {"Volvo", "BMW", "Toyota"};
-int index = 1;
-string tweedeAuto = autos[index];
-</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">autos</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">tweedeAuto</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">[</span><span class="nx">index</span><span class="p">];</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$autos</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">);</span>
+<span class="nv">$index</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nv">$tweedeAuto</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">[</span><span class="nv">$index</span><span class="p">];</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">string</span><span class="p">[]</span> <span class="n">autos</span> <span class="p">=</span> <span class="p">{</span><span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Toyota"</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">index</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">tweedeAuto</span> <span class="p">=</span> <span class="n">autos</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
+</code></pre></div></div>
 
 <p>Zo’n index variabele wordt heel vaak gebruikt in een for-loop wanneer het nodig is om alle items in een lijst te overlopen.</p>
 
@@ -580,34 +576,32 @@ string tweedeAuto = autos[index];
 
 <p>Als de variabele van een for-loop dus begint bij 0, en eindigt voor het aantal waardes in een array, kan je met een for-loop elke index van een array overlopen.</p>
 
-<pre class="linenums lang lang-JS">
-var autos = ["Volvo", "BMW", "Toyota"];
-var aantal = autos.length;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">autos</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">BMW</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Toyota</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">aantal</span> <span class="o">=</span> <span class="nx">autos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 
-for (let i = 0; i &lt; aantal; ++i) {
-	console.log(autos[i]);
-}
-</pre>
-<pre class="linenums lang lang-PHP">
-$autos = array("Volvo", "BMW", "Toyota");
-$aantal = count($autos);
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aantal</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">autos</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$autos</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Toyota"</span><span class="p">);</span>
+<span class="nv">$aantal</span> <span class="o">=</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$autos</span><span class="p">);</span>
 
-for ($i = 0; $i &lt; $aantal; ++$i) {
-	echo $autos[$i];
-}
-</pre>
-<pre class="linenums lang lang-CS">
-string[] autos = {"Volvo", "BMW", "Toyota"};
-int aantal = autos.Length;
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$aantal</span><span class="p">;</span> <span class="o">++</span><span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">echo</span> <span class="nv">$autos</span><span class="p">[</span><span class="nv">$i</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">string</span><span class="p">[]</span> <span class="n">autos</span> <span class="p">=</span> <span class="p">{</span><span class="s">"Volvo"</span><span class="p">,</span> <span class="s">"BMW"</span><span class="p">,</span> <span class="s">"Toyota"</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">aantal</span> <span class="p">=</span> <span class="n">autos</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
 
-for (int i = 0; i &lt; aantal; ++i) {
-	console.log(autos[i]);
-}
-</pre>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">aantal</span><span class="p">;</span> <span class="p">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="n">autos</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <h2 id="coding-guidelines">Coding Guidelines</h2>
 
-<p>Wanneer je een WHILE blok schrijft, laat je een spatie tussen het keyword en de haakjes:</p>
+<p>Wanneer je een <code class="highlighter-rouge">WHILE</code> blok schrijft, laat je een spatie tussen het keyword en de haakjes:</p>
+
 <ul>
   <li>WEL:		<code class="highlighter-rouge">while (intTest &lt; 1)</code></li>
   <li>NIET:	<code class="highlighter-rouge">while(intTest &lt; 1)</code></li>

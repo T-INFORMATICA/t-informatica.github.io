@@ -32,10 +32,8 @@ Een functie werkt op dezelfde manier:
 
 Je plaatst alle **instructies** die bij elkaar horen in het lijstje (het codeblok), en je geeft dat lijstje een **naam** (Explodeer).
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+```javascript
 FUNCTIE: EXPLODEER
-</pre>
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
 {
 	// maak een geluidje
 	// laat een licht rood/oranje flikkeren
@@ -43,11 +41,31 @@ FUNCTIE: EXPLODEER
 	// aan alle spelers binnen 5 meter 
 	// van de explosie
 }
-</pre>
+```
+```php
+FUNCTIE: EXPLODEER
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter 
+	// van de explosie
+}
+```
+```csharp
+FUNCTIE: EXPLODEER
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter 
+	// van de explosie
+}
+```
 
 ## Een functie maken
 
-<pre class="linenums lang lang-JS lang-PHP">
+```javascript
 function Explodeer() 	// de signature
 {
 	// maak een geluidje
@@ -55,8 +73,17 @@ function Explodeer() 	// de signature
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```php
+function Explodeer() 	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+```
+```csharp
 void Explodeer()  	// de signature
 {
 	// maak een geluidje
@@ -64,7 +91,7 @@ void Explodeer()  	// de signature
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
+```
 
 Het gedeelte `function Explodeer()` heet de **signature** van de functie. Deze signature moet **uniek** zijn in de scope van de functie. De signature geeft aan dat dit de enige functie Explodeer is binnen de scope.
 
@@ -76,7 +103,7 @@ Een functie is een codeblok met een naam. De instructies in dat codeblok worden 
 
 De volgende code doet dus niets, want hoewel de functie wel gedeclareerd is wordt deze nergens bij naam aangeroepen: 
 
-<pre class="linenums lang lang-JS lang-PHP">
+```javascript
 function Explodeer() 	// de signature
 {
 	// maak een geluidje
@@ -84,8 +111,17 @@ function Explodeer() 	// de signature
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```php
+function Explodeer() 	// de signature
+{
+	// maak een geluidje
+	// laat een licht rood/oranje flikkeren
+	// doe 10 schade
+	// aan alle spelers binnen 5 meter van de explosie
+}
+```
+```csharp
 void Explodeer()  	// de signature
 {
 	// maak een geluidje
@@ -93,13 +129,19 @@ void Explodeer()  	// de signature
 	// doe 10 schade
 	// aan alle spelers binnen 5 meter van de explosie
 }
-</pre>
+```
 
 De functie moet nog worden aangeroepen (= gebruikt) voordat de instructies worden uitgevoerd. Bij een functie aanroep gebruik je gewoon de naam van de functie, gevolgd door de haakjes:
 
-<pre class="linenums lang lang-JS lang-CS lang-PHP">
+```javascript
 Explodeer();
-</pre>
+```
+```php
+Explodeer();
+```
+```csharp
+Explodeer();
+```
 
 **Opgelet!** Een functie aanroep is **WEL een instructie!** Aan het einde volgt er dus **WEL een puntkomma**.
 
@@ -112,7 +154,7 @@ De Scope van variabelen in een functie zorgt ervoor dat die variabelen (en dus d
 
 Bijvoorbeeld:
 
-<pre class="linenums lang lang-JS">
+```javascript
 function Functie1()  	// de signature van functie 1
 {
 	let mijnVar = 7;	// maak een variabele aan
@@ -122,8 +164,8 @@ function Functie2()  	// de signature van functie 2
 {
 	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 function Functie1()  	// de signature van functie 1
 {
 	$mijnVar = 7;	// maak een variabele aan
@@ -133,8 +175,8 @@ function Functie2()  	// de signature van functie 2
 {
 	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 void Functie1()  	// de signature van functie 1
 {
 	int mijnVar = 7;	// maak een variabele aan
@@ -144,7 +186,7 @@ void Functie2()  	// de signature van functie 2
 {
 	// Functie 2 kan de waarde van mijnVar NIET gebruiken vanwege de scope van mijnVar!
 }
-</pre>
+```
 
 Moest je in Functie2() de variabele mijnVar willen gebruiken, is dit dus niet mogelijk.
 
@@ -152,7 +194,7 @@ Functies hebben echter een handige manier om de *waarde* van een variabele aan d
 
 Een parameter is een variabele in de functie, waarvan de waarde wordt bepaald bij het aanroepen van de functie.
 
-<pre class="linenums lang lang-JS">
+```javascript
 function Functie1()  	// de signature van functie 1
 {
 	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
@@ -161,8 +203,8 @@ function Functie2(mijnParameter)  	// de signature van functie 2 met één param
 {
 	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 function Functie1()  	// de signature van functie 1
 {
 	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
@@ -171,8 +213,8 @@ function Functie2($mijnParameter)  	// de signature van functie 2 met één para
 {
 	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 void Functie1()  	// de signature van functie 1
 {
 	Functie2(7);		// roep functie 2 aan, en vul de parameter mijnParameter in met de waarde 7.
@@ -181,11 +223,11 @@ void Functie2(int mijnParameter)  	// de signature van functie 2 met één param
 {
 	// Functie 2 kan de waarde van mijnParameter WEL gebruiken.
 }
-</pre>
+```
 
 Je kan hiermee zelfs de waarde van een andere variabele doorgeven aan de parameter.
 
-<pre class="linenums lang lang-JS">
+```javascript
 function Functie1()  	// de signature van functie 1
 {
 	let mijnVar = 7;
@@ -195,8 +237,8 @@ function Functie2(mijnParameter)  	// de signature van functie 2 met één param
 {
 	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 function Functie1()  	// de signature van functie 1
 {
 	$mijnVar = 7;
@@ -206,8 +248,8 @@ function Functie2($mijnParameter)  	// de signature van functie 2 met één para
 {
 	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 void Functie1()  	// de signature van functie 1
 {
 	int mijnVar = 7;
@@ -217,7 +259,7 @@ void Functie2(int mijnParameter)  	// de signature van functie 2 met één param
 {
 	// Functie 2 kan de waarde van mijnVar niet gebruiken, maar die van mijnParameter wel!
 }
-</pre>
+```
 
 ## Return waarde
 
@@ -229,40 +271,46 @@ Bijvoorbeeld:
 
 De functie Optellen(getal1, getal2) heeft één duidelijk doel: tel de waardes van de twee parameters op. Deze functie kan je aanroepen met Optellen(3, 7), waarop de variabele som de waarde 10 zal bevatten.
 
-<pre class="linenums lang lang-JS">
+```javascript
 Optellen(3, 7);
 
 function Optellen(getal1, getal2)  	// de signature van functie 1
 {
 	let som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 Optellen(3, 7);
 
 function Optellen($getal1, $getal2)  	// de signature van functie 1
 {
 	$som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 Optellen(3, 7);
 
 void Optellen(int getal1, int getal2)  	// de signature van functie 1
 {
 	int som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
 }
-</pre>
+```
 
 Het probleem is ook hier de scope van de variabele in de functie. De functie is aangeroepen, de getallen zijn samengeteld, maar ik kan het resultaat van die som nergens anders gebruiken.
 
-<pre class="linenums lang lang-JS lang-PHP lang-JS">
+```javascript
 Optellen(3, 7); // de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!
-</pre>
+```
+```php
+Optellen(3, 7); // de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!
+```
+```csharp
+Optellen(3, 7); // de getallen zijn opgeteld, maar nu wil ik aan het resultaat van die som geraken!
+```
 
 Hiervoor wordt het keyword return gebruikt. Return zorgt ervoor dat een functie niet alleen iets kan berekenen, maar het resultaat van die berekening ook kan teruggeven aan de plaats waar de functie werd aangeroepen.
 
-<pre class="linenums lang lang-JS">
+```javascript
 let resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
 
 function Optellen(getal1, getal2)  	// de signature van functie 1
@@ -270,8 +318,8 @@ function Optellen(getal1, getal2)  	// de signature van functie 1
 	let som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
 	return som;			// geef de waarde van som terug naar de aanroep!
 }
-</pre>
-<pre class="linenums lang lang-PHP">
+```
+```php
 $resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
 
 function Optellen($getal1, $getal2)  	// de signature van functie 1
@@ -279,8 +327,8 @@ function Optellen($getal1, $getal2)  	// de signature van functie 1
 	$som = $getal1 + $getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
 	return $som;			// geef de waarde van som terug naar de aanroep!
 }
-</pre>
-<pre class="linenums lang lang-CS">
+```
+```csharp
 int resultaat = Optellen(3, 7); // maak een variabele aan, waarin het resultaat van de functie optellen bewaard kan worden
 
 int Optellen(int getal1, int getal2)  	// OPGELET: in C# moet je het datatype van de return waarde ook tonen!
@@ -288,5 +336,6 @@ int Optellen(int getal1, int getal2)  	// OPGELET: in C# moet je het datatype va
 	int som = getal1 + getal2;	// bevat de waarde 10 bij de aanroep Optellen(3, 7);
 	return som;			// geef de waarde van som terug naar de aanroep!
 }
-</pre>
-<div class="lang lang-CS">// OPGELET: in C# moet je het datatype van de return waarde ook tonen!</div>
+
+// OPGELET: in C# moet je het datatype van de return waarde ook tonen!
+```
