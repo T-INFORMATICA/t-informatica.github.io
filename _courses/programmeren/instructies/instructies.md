@@ -61,7 +61,13 @@ Je kan commentaar op 2 manieren toevoegen:
 ### 3.2.1 Commentaar op één lijn
 Commentaar op één lijn duid je aan met 2 forward slashes ( // ). Alles dat daarop volgt wordt genegeerd door de computer.
 
-<pre class="linenums lang lang-PHP lang-CS lang-JS">
+```javascript
+// Dit gedeelte wordt door de computer genegeerd
+```
+```php
+// Dit gedeelte wordt door de computer genegeerd
+```
+```csharp
 // Dit gedeelte wordt door de computer genegeerd
 ```
 
@@ -72,7 +78,32 @@ Je kan dit doen door:
  - Ofwel plaats je aan het begin van je eerste lijn commentaar een forward slash, gevolgd door een sterretje ( /* ) en aan het einde van je laatste lijn commentaar een sterretje, gevolgd door een forward slash ( */ ).
 
 Alles dat zich tussen /* en */ bevindt zal dan genegeerd worden door de computer.
-<pre class="linenums lang lang-PHP lang-CS lang-JS">
+
+```javascript
+// Dit gedeelte wordt
+// door de computer genegeerd
+
+
+/* Heel deze zin
+wordt genegeerd
+door de computer.
+Je kan niet programmeren
+totdat je het ster-slash einde
+Typt */
+```
+```php
+// Dit gedeelte wordt
+// door de computer genegeerd
+
+
+/* Heel deze zin
+wordt genegeerd
+door de computer.
+Je kan niet programmeren
+totdat je het ster-slash einde
+Typt */
+```
+```csharp
 // Dit gedeelte wordt
 // door de computer genegeerd
 
