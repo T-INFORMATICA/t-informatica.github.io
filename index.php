@@ -14,7 +14,7 @@ $view = new MainView();
 $model = new MainModel($view);
 $controller = new MainController($model);
 ?>
-
+ 
 <section id="profileContent">
     <a href="#studentNavigation" id="openNavButton" class="material-icons">menu</a>
     <nav id="studentNavigation">
