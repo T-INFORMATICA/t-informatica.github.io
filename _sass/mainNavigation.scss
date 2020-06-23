@@ -131,61 +131,68 @@ nav#mainNavigation>.dropdownButton>.dropdown a {
 nav#mainNavigation>.dropdownButton:hover>.dropdown,
 nav#mainNavigation>.dropdownButton>.dropdown:hover {
     display: block;
-    display: grid;
 }
 
-nav#mainNavigation>.dropdownButton>.dropdown>.courseNav {
+nav#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav {
     border: 1px solid #dedede;
     background-color: #fafafa;
-    position: relative;
-    padding: 16px;
-    margin: 16px 8px;
+    margin-bottom: 1rem;
 }
 
-nav#mainNavigation>.dropdownButton>.dropdown>.courseNav>h1 {
-    position: absolute;
-    top: -12px;
-    left: 8px;
+nav#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav>h1 {
     font-size: 18px;
     font-weight: normal;
-    margin: 0;
+    margin: 0px;
     background-color: #fafafa;
     padding: 0 4px;
-    border: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    display: inline-block;
 }
   
-nav#mainNavigation>.dropdownButton>.dropdown>.courseNav>a {
+nav#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav>a {
     display: block;
 }
 
 
 
-#mainNavigation>.dropdownButton>.dropdown>.courseNav>.subjectNav h2>a:hover {
+#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav>.subjectNav h2>a:hover {
     color: #3176d9;
 }
 
-#mainNavigation>.dropdownButton>.dropdown>.courseNav>.subjectNav a {
+#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav>.subjectNav a {
     display: block;
     font-size: 16px;
     margin: 8px;
 }
 
-#mainNavigation>.dropdownButton>.dropdown>.courseNav>.subjectNav h2 {
+#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav>.subjectNav h2 {
     font-weight: 500;
     margin: 0;
 }
 
-#mainNavigation>.dropdownButton>.dropdown>.courseNav>.subjectNav>a {
+#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav>.subjectNav>a {
     margin-left: 16px;
     color: #505050;
 }
 
-#mainNavigation>.dropdownButton>.dropdown>.courseNav>.subjectNav>a:hover {
+#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav>.subjectNav>a:hover {
     text-decoration: underline;
 }
   
 @media only screen and (min-width: 750px) {
-    nav#mainNavigation>.dropdownButton>.dropdown {
-      grid-template-columns: 1fr 1fr 1fr;
+    nav#mainNavigation>.dropdownButton>.dropdown>.layout {
+        columns: 4 300px;
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+        padding: 1rem;
+        max-width: 100vw;
+    }
+    
+    nav#mainNavigation>.dropdownButton>.dropdown>.layout>.courseNav {
+        box-sizing: border-box;
+        width: 100%;
+        column-span: none;
+        column-fill: auto;
+        break-inside: avoid;
     }
 }

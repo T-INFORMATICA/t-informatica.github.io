@@ -32,6 +32,8 @@
     </span>
     <div class="dropdown">
       
+  <div class="layout">
+      
       <div class="courseNav">
         <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
           
@@ -211,6 +213,7 @@
           
         </div>
       
+      </div>
     </div>
   </span>
   <!-- PROFILE DROPDOWN -->
@@ -247,7 +250,7 @@ $view = new MainView();
 $model = new MainModel($view);
 $controller = new MainController($model);
 ?>
-
+ 
 <section id="profileContent">
     <a href="#studentNavigation" id="openNavButton" class="material-icons">menu</a>
     <nav id="studentNavigation">

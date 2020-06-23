@@ -6,6 +6,8 @@
       expand_more
     </span>
     <div class="dropdown">
+      
+  <div class="layout">
       {% for course in site.data.courses %}
       <div class="courseNav">
         <h1><a href="{{site.baseurl}}{{ course.link }}">{{ course.name }}</a></h1>
@@ -20,6 +22,7 @@
           {% endfor %}
         </div>
       {% endfor %}
+      </div>
     </div>
   </span>
   <!-- PROFILE DROPDOWN -->
