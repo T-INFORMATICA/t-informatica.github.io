@@ -581,6 +581,81 @@ Het is daarom belangrijk om te weten welke selector voorrang krijgt.De algemene 
 <span class="p">}</span>
 </code></pre></div></div>
 
+<h2 id="state-selectors">State Selectors</h2>
+
+<p>In andere hoofdstukken werd bekeken hoe CSS de standaard opmaak van een element kan veranderen.</p>
+
+<p>Gebruikers van een website kunnen de opmaak van een element echter aanpassen:</p>
+
+<ul>
+  <li>Wanneer een gebruiker met zijn muis over een knop gaat, verandert de knop van kleur</li>
+  <li>Wanneer een gebruiker klikt op een tekstveld, verandert de opmaak zodat duidelijk wordt dat het tekstveld is geselecteerd.</li>
+</ul>
+
+<p>De gebruiker past door zijn acties elementen aan, en als webdesigner wil je dat je opmaak deze aanpassingen weergeeft.</p>
+
+<p>Dit gebeurt aan de hand van CSS state selectors. Een state gaat over een specifieke momentopname van een element.</p>
+
+<p>Enkele voorbeelden:</p>
+
+<ul>
+  <li>De :<strong>hover</strong> state: dit geeft aan dat een gebruiker met zijn muis boven op een element hangt.</li>
+  <li>De :<strong>focus</strong> state: dit geeft aan dat een gebruiker een element heeft geselecteerd.</li>
+</ul>
+
+<h2 id="state-selectors-gebruiken">State selectors gebruiken</h2>
+
+<p>State selectors zijn een uitbreiding op de CSS selectors die je al kent. Wanneer je een aan de hand van een selector een element hebt opgemaakt, kan je aan die selector een State Selector toevoegen met een <strong>dubbelpunt</strong>.</p>
+
+<p><img src="/_t-inf-lms/assets/img/css-stateselectors1.PNG" alt="drawing" /></p>
+
+<h2 id="andere-state-selectors">Andere State Selectors</h2>
+
+<p>Sommige state selectors dienen om specifieke elementen aan te duiden. Enkele voorbeelden:</p>
+
+<ul>
+  <li>De :<strong>first-child</strong> state: Dit zal het eerste element opmaken dat zich in de selector bevindt.</li>
+  <li>De :<strong>empty</strong> state: Dit zal alle elementen van de selector opmaken die geen enkel ander element bevatten.</li>
+</ul>
+
+<h2 id="state-selector-voorbeelden">State selector voorbeelden</h2>
+
+<h2 id="hyperlinks">Hyperlinks</h2>
+
+<p>Hyperlinks hebben 4 State Selectors die je bijna altijd moet definieren:</p>
+
+<ul>
+  <li>De :<strong>link</strong> state: Een hyperlink waar de gebruiker nog niet op heeft geklikt.</li>
+  <li>De :<strong>visited</strong> state: Een hyperlink waar de gebruiker al wel op heeft geklikt.</li>
+  <li>De :<strong>hover</strong> state: Een hyperlink waar de gebruiker met zijn muis over staat.</li>
+  <li>De :<strong>active</strong> state: Een hyperlink die verwijst naar de huidige pagina.</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* link waar nog niet op geklikt is */</span>
+<span class="nt">a</span><span class="nd">:link</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#FF0000</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* link waar al wel op geklikt is */</span>
+<span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#00FF00</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* link waar de muis over staat */</span>
+<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#FF00FF</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* link die verwijst naar de huidige pagina */</span>
+<span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#0000FF</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Belangrijk</strong>:<br />
+a:hover <strong>MOET</strong> komen <strong>na</strong> a:link en a:visited om te werken! <em>(als je a:link en/of a:visited hebt gedefinieerd)</em> <br />
+a:active <strong>MOET</strong> komen <strong>na</strong> a:hover om te werken! <em>(als je a:hover hebt gedefinieerd)</em></p>
+
 
     </section>
 
@@ -610,6 +685,11 @@ Het is daarom belangrijk om te weten welke selector voorrang krijgt.De algemene 
           <li><a href="#conflicterende-stijlregels">Conflicterende stijlregels</a></li>
         </ul>
       </li>
+      <li><a href="#state-selectors">State Selectors</a></li>
+      <li><a href="#state-selectors-gebruiken">State selectors gebruiken</a></li>
+      <li><a href="#andere-state-selectors">Andere State Selectors</a></li>
+      <li><a href="#state-selector-voorbeelden">State selector voorbeelden</a></li>
+      <li><a href="#hyperlinks">Hyperlinks</a></li>
     </ul>
   </li>
 </ul>

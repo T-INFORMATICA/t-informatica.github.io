@@ -524,6 +524,10 @@
                                 {
                                     "name": "conflicterende stijlregel",
                                     "definition": "Wanneer twee verschillende declaraties dezelfde stijlregel op hetzelfde element toepassen."
+                                },
+                                {
+                                    "name": "hover",
+                                    "definition": "Wanneer een gebruiker met de muis over een element gaat."
                                 }
                             ]
                         },
