@@ -126,8 +126,6 @@
             
             <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
             
-            <a href="/_t-inf-lms/courses/webontwikkeling/css/state-selectors.html">State Selectors</a>
-            
           </div>
           
           

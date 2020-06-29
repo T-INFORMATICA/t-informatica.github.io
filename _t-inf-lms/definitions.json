@@ -604,16 +604,6 @@
                                     "definition": "de hoogte van de inhoud van het element."
                                 }
                             ]
-                        },
-                                
-                        {
-                            "name": "State Selectors",
-                            "definitions": [
-                                {
-                                    "name": "hover",
-                                    "definition": "Wanneer een gebruiker met de muis over een element gaat."
-                                }
-                            ]
                         }
                                 
                     ]

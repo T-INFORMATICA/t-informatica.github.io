@@ -97,9 +97,9 @@
         - name: Box Model
           link: "/courses/webontwikkeling/css/box-model.html"
           doel: "box model"
-        - name: State Selectors
-          link: "/courses/webontwikkeling/css/state-selectors.html"
-          doel: "opmaak"
+#        - name: State Selectors
+#          link: "/courses/webontwikkeling/css/state-selectors.html"
+#          doel: "opmaak"
     - name: "Layout"
       link: "/courses/webontwikkeling/layout"
       chapters:
