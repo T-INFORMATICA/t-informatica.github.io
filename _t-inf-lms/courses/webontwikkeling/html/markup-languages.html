@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>State Selectors</title>
+    <title>Markup met Markdown</title>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script> 
@@ -414,90 +414,216 @@
 
     <section id="chapterContent">
         
-        <h1>State selectors</h1>
+        <h1>Markup met markdown</h1>
 
         <div id="chapterTags">
             
-                <a href="#" class="tag">hover</a>
-            
-                <a href="#" class="tag">focus</a>
-            
         </div>
 
-        <h1 id="state-selectors">State Selectors</h1>
+        <h2 id="structuur-vs-opmaak">Structuur vs. opmaak</h2>
 
-<p>In andere hoofdstukken werd bekeken hoe CSS de standaard opmaak van een element kan veranderen.</p>
+<p><strong>Markup duidt aan waar inhoud voor dient</strong>. Het bepaalt <strong>de structuur</strong> van je website. Markup duidt aan wat een titel is, wat een lijst is, wat een link is, wat gewone tekst is, …</p>
 
-<p>Gebruikers van een website kunnen de opmaak van een element echter aanpassen:</p>
+<p><strong>Opmaak zegt hoe de inhoud eruit ziet</strong>. Het bepaalt dus <strong>de opmaak</strong> van je website. Opmaak zegt hoe een titel, lijst, link, tekst, … eruit ziet.</p>
 
+<table class="styledTable">
+    <tr>
+        <th style="width: 50%">
+            website 1
+        </th>
+        <th style="width: 50%">
+            website 2
+        </th>
+    </tr>
+    <tr>
+        <td><img src="/_t-inf-lms/assets/img/websites-maken-1.jpg" /></td>
+        <td><img src="/_t-inf-lms/assets/img/websites-maken-2.jpg" /></td>
+    </tr>
+    <tr>
+        <td>De websites links en recht hebben dezelfde inhoud.</td>
+        <td>De structuur is hetzelfde. De markup code is dus identiek. De opmaak is anders. </td>
+    </tr>
+</table>
+
+<h2 id="markup">Markup</h2>
+
+<p>Markup is code die je toevoegt aan een tekstdocument, waarbij die code aanduidt waar de tekst van dat document voor dient. Er is dus code die aanduidt welk deel van het tekstdocument de titel is, welk deel een lijst is, …</p>
+
+<p>Met een markup-taal doe je eigenlijk hetzelfde als je met een programma zoals Microsoft Word of Google Docs doet: je duidt een woordje aan als <strong>vette tekst</strong> of <em>schuine tekst</em>, je duidt een onderdeel aan als titel of je lijst onderdelen in je tekst op. Het verschil is dat je met een markup-taal dit doet door code te schrijven in plaats van op een knop te klikken.</p>
+
+<p>Werken met een programma zoals Microsoft Word heeft uiteraard heel wat voordelen. Het is vaak heel gemakkelijk om gewoon op een knop te moeten klikken in plaats van code te schrijven. Er zijn echter ook wel heel wat nadelen aan verbonden.</p>
 <ul>
-  <li>Wanneer een gebruiker met zijn muis over een knop gaat, verandert de knop van kleur</li>
-  <li>Wanneer een gebruiker klikt op een tekstveld, verandert de opmaak zodat duidelijk wordt dat het tekstveld is geselecteerd.</li>
+  <li>De meeste van dit soort programma’s zijn niet gratis.</li>
+  <li>Documenten van één programma kan je moeilijk openen in een ander programma.</li>
+  <li>Om iets te veranderen in zo’n document <strong>moet</strong> je de juiste software gebruiken.</li>
+  <li>Markup en opmaak worden vaak door elkaar gebruikt, wat voor problemen kan zorgen in je document-structuur.<br />
+Zo kan je bijvoorbeeld een tekst opmaken als een titel, zonder dat je het aanduidt als een titel. Het programma maakt daardoor geen goede inhoudsopgave, omdat het jouw tekst niet herkent als een titel.</li>
 </ul>
 
-<p>De gebruiker past door zijn acties elementen aan, en als webdesigner wil je dat je opmaak deze aanpassingen weergeeft.</p>
-
-<p>Dit gebeurt aan de hand van CSS state selectors. Een state gaat over een specifieke momentopname van een element.</p>
-
-<p>Enkele voorbeelden:</p>
-
+<p>Wanneer je werkt met een markup-taal vallen deze nadelen weg:</p>
 <ul>
-  <li>De :<strong>hover</strong> state: dit geeft aan dat een gebruiker met zijn muis boven op een element hangt.</li>
-  <li>De :<strong>focus</strong> state: dit geeft aan dat een gebruiker een element heeft geselecteerd.</li>
+  <li>Je kan een document met markup-code maken in de meest simpele tekst-programma’s (bv. Kladblok)</li>
+  <li>Een document met markup-code bestaat alleen uit tekst. Je kan elk tekst-programma gebruiken om zo’n document te openen en bewerken.</li>
+  <li>markup-code kan weinig of geen opmaak voorzien aan een document. Hiervoor gebruik je vaak een andere code-taal (vaak zelfs in een apart document).</li>
 </ul>
 
-<h2 id="state-selectors-gebruiken">State selectors gebruiken</h2>
+<h2 id="markdown">Markdown</h2>
 
-<p>State selectors zijn een uitbreiding op de CSS selectors die je al kent. Wanneer je een aan de hand van een selector een element hebt opgemaakt, kan je aan die selector een State Selector toevoegen met een <strong>dubbelpunt</strong>.</p>
+<p>Markdown is de naam van een heel simpele markup-taal. De code die je toevoegt aan een tekst is vaak een speciaal teken of een combinatie van speciale tekens, waarbij elk speciaal teken een eigen effect heeft.</p>
 
-<p><img src="/_t-inf-lms/assets/img/css-stateselectors1.PNG" alt="drawing" /></p>
+<h3 id="schuine-tekst">Schuine Tekst</h3>
 
-<h2 id="andere-state-selectors">Andere State Selectors</h2>
+<p>Om een woord schuin te maken (ook wel <strong>italic</strong> genoemd) met Markdown zet je het woord tussen <em>underscores</em> ( <code class="highlighter-rouge">_</code> ). Bijvoorbeeld <code class="highlighter-rouge">_woord_</code> wordt getoond als <em><code class="highlighter-rouge">woord</code></em>.</p>
 
-<p>Sommige state selectors dienen om specifieke elementen aan te duiden. Enkele voorbeelden:</p>
+<h3 id="vette-tekst">Vette Tekst</h3>
 
+<p>Om een woord vet te maken (ook wel <strong>bold</strong> genoemd) met Markdown zet je het woord tussen <em>twee sterretjes</em> ( <code class="highlighter-rouge">**</code> ). Bijvoorbeeld <code class="highlighter-rouge">**woord**</code> wordt getoond als <strong><code class="highlighter-rouge">woord</code></strong>.</p>
+
+<h3 id="schuine-vette-tekst">Schuine Vette Tekst</h3>
+
+<p>Je kan uiteraard woorden ook bold <em>en</em> italic maken. Je kunt zelfs meerdere woorden tegelijk bold, italic of beide maken.</p>
+
+<p>Bijvoorbeeld:</p>
 <ul>
-  <li>De :<strong>first-child</strong> state: Dit zal het eerste element opmaken dat zich in de selector bevindt.</li>
-  <li>De :<strong>empty</strong> state: Dit zal alle elementen van de selector opmaken die geen enkel ander element bevatten.</li>
+  <li><code class="highlighter-rouge">**_zowel bold als italic_**</code> wordt getoond als <strong><em><code class="highlighter-rouge">zowel bold als italic</code></em></strong></li>
+  <li><code class="highlighter-rouge">**alles bold en _enkel dit italic_**</code> wordt getoond als <strong><code class="highlighter-rouge">alles bold en </code><em><code class="highlighter-rouge">enkel dit italic</code></em></strong></li>
 </ul>
 
-<h2 id="state-selector-voorbeelden">State selector voorbeelden</h2>
+<h3 id="kopteksten">Kopteksten</h3>
 
-<h2 id="hyperlinks">Hyperlinks</h2>
+<p>Kopteksten worden vaak gebruikt in websites, documenten, artikels, … om aandacht te vestigen op een bepaald deel van de tekst. Het zijn een soort titels van een stuk tekst.</p>
 
-<p>Hyperlinks hebben 4 State Selectors die je bijna altijd moet definieren:</p>
+<p>Er zijn 6 niveau’s van kopteksten:</p>
 
-<ul>
-  <li>De :<strong>link</strong> state: Een hyperlink waar de gebruiker nog niet op heeft geklikt.</li>
-  <li>De :<strong>visited</strong> state: Een hyperlink waar de gebruiker al wel op heeft geklikt.</li>
-  <li>De :<strong>hover</strong> state: Een hyperlink waar de gebruiker met zijn muis over staat.</li>
-  <li>De :<strong>active</strong> state: Een hyperlink die verwijst naar de huidige pagina.</li>
-</ul>
+<h1 id="koptekst-1">koptekst 1</h1>
+<h2 id="koptekst-2">koptekst 2</h2>
+<h3 id="koptekst-3">koptekst 3</h3>
+<h4 id="koptekst-4">koptekst 4</h4>
+<h5 id="koptekst-5">koptekst 5</h5>
+<h6 id="koptekst-6">koptekst 6</h6>
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* link waar nog niet op geklikt is */</span>
-<span class="nt">a</span><span class="nd">:link</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="m">#FF0000</span><span class="p">;</span>
-<span class="p">}</span>
+<p>Om een koptekst in Markdown aan te duiden gebruik je een hekje (<code class="highlighter-rouge">#</code>), ook wel <strong>hash</strong> of <strong>hashtag</strong> genoemd.</p>
 
-<span class="c">/* link waar al wel op geklikt is */</span>
-<span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="m">#00FF00</span><span class="p">;</span>
-<span class="p">}</span>
+<p>Om een koptekst van niveau 1 te maken, begin je de koptekst met 1 hekje. Om een koptekst van niveau 5 te maken, begin je de koptekst met 5 hekjes.</p>
 
-<span class="c">/* link waar de muis over staat */</span>
-<span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="m">#FF00FF</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c">/* link die verwijst naar de huidige pagina */</span>
-<span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span>
-    <span class="nl">color</span><span class="p">:</span> <span class="m">#0000FF</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># koptekst 1
+## koptekst 2
+### koptekst 3
+#### koptekst 4
+##### koptekst 5
+###### koptekst 6
 </code></pre></div></div>
 
-<p><strong>Belangrijk</strong>:<br />
-a:hover <strong>MOET</strong> komen <strong>na</strong> a:link en a:visited om te werken! <em>(als je a:link en/of a:visited hebt gedefinieerd)</em> <br />
-a:active <strong>MOET</strong> komen <strong>na</strong> a:hover om te werken! <em>(als je a:hover hebt gedefinieerd)</em></p>
+<p>Over het algemeen gebruik je niveau 1 zo weinig mogelijk (meestal maar één keer), en gebruik je niveau 5 en 6 zelden.</p>
+
+<p>Tekst vet maken in een titel heeft vaak weinig zin (de meeste kopteksten zijn al bold), maar het is perfect mogelijk om een titel te voorzien van italic tekst.</p>
+
+<p>Bijvoorbeeld <code class="highlighter-rouge">### _Dit_ is de titel</code> wordt getoond als</p>
+
+<h3 id="dit-is-de-titel"><em><code class="highlighter-rouge">Dit</code></em><code class="highlighter-rouge"> is de titel</code></h3>
+
+<h3 id="hyperlinks">Hyperlinks</h3>
+
+<p>Een hyperlink, vaak ook afgekort tot ‘link’, is een stukje tekst waarop geklikt kan worden, waarna de gebruiker ergens anders naartoe wordt gebracht. Bijvoorbeeld de link <a href="www.google.com">Google</a> brengt je naar de zoekpagina van Google.</p>
+
+<p>Om een link te maken met Markdown plaats je <strong>de tekst die je wilt tonen</strong> tussen <strong>vierkante haakjes</strong>. De pagina waar je naartoe wilt gaan zet je daarachter tussen gewone haakjes.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p><code class="highlighter-rouge">de link </code> <code class="highlighter-rouge">[Google](www.google.com)</code> <code class="highlighter-rouge">brengt je naar de zoekpagina van Google.</code> 
+<br />wordt getoond als<br />
+<code class="highlighter-rouge">de link </code> <a href="`www.google.com`">Google</a> <code class="highlighter-rouge">brengt je naar de zoekpagina van Google.</code></p>
+
+<p>Het is ook perfect mogelijk om de tekst van een link bold of italic te maken.</p>
+
+<p><code class="highlighter-rouge">[xkcd is een **heel erg grappige** website!](www.xkcd.com)</code>
+<br />wordt getoond als<br />
+<a href="www.xkcd.com">xkcd is een <strong>heel erg grappige</strong> website!</a></p>
+
+<h3 id="afbeeldingen">Afbeeldingen</h3>
+
+<p>Afbeeldingen werken heel gelijkaardig als hyperlinks: Je geeft een alternatieve tekst tussen vierkante haakjes (die wordt getoond als de afbeelding niet meer werkt of gebruikt door slechtzienden) en een link naar de afbeelding tussen gewone haakjes.</p>
+
+<p>Om aan te duiden dat dit een afbeelding is, en geen hyperlink, plaats je aan het begin een uitroepteken (<code class="highlighter-rouge">!</code>).</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p><code class="highlighter-rouge">![Een tijger](https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg)</code>
+<br />wordt getoond als<br />
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg" alt="Een tijger" /></p>
+
+<h3 id="lijsten">Lijsten</h3>
+
+<p>Er bestaan twee soorten lijsten: genummerde en ongenummerde lijsten. Of nog simpeler, lijsten met getallen en lijsten met bullet points.</p>
+
+<p>Om een ongenummerde lijst te maken, is het voldoende om elk item in de lijst op een eigen lijn te zetten en te laten beginnen met een sterretje (<code class="highlighter-rouge">*</code>) of streepje (<code class="highlighter-rouge">-</code>).</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> - eieren
+ - kaas
+ - tomaten
+</code></pre></div></div>
+<p>wordt getoond als</p>
+<ul>
+  <li>eieren</li>
+  <li>kaas</li>
+  <li>tomaten</li>
+</ul>
+
+<p>Om een genummerde lijst te maken, plaats je een getal gevolgd door een punt aan het begin van elk item.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 1. kluts de eieren
+ 2. voeg de kaas toe
+ 3. snij de tomaten in blokjes
+ 4. voeg de tomatenblokjes toe
+ 5. bak in de pan
+</code></pre></div></div>
+<p>wordt getoond als</p>
+<ol>
+  <li>kluts de eieren</li>
+  <li>voeg de kaas toe</li>
+  <li>snij de tomaten in blokjes</li>
+  <li>voeg de tomatenblokjes toe</li>
+  <li>bak in de pan</li>
+</ol>
+
+<p>Je kan zelfs lijsten in lijsten steken, waarbij je verschillende soorten lijsten door elkaar gebruikt.</p>
+
+<p><strong>Belangrijk</strong>: zorg ervoor dat het lijst-teken van de tweede lijst op dezelfde hoogte staat als de eerste letter van de eerste lijst. Zo staat in het voorbeeld hieronder het sterretje van <code class="highlighter-rouge">* A reporter</code> op dezelfde hoogte als de <strong>T</strong> van <code class="highlighter-rouge">1. Tintin</code>. Gebruik hiervoor extra spaties.</p>
+
+<p>En zoals altijd, kan je ook hier tekst vet of italic maken.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Tintin
+   * A reporter
+   * Has **_poofy orange hair_**
+   * Friends with the world's most awesome dog
+2. Haddock
+   * A **sea captain**
+   * Has a fantastic **beard**
+   * Loves whiskey
+     * Possibly also scotch?
+</code></pre></div></div>
+<p>wordt getoond als</p>
+<ol>
+  <li>Tintin
+    <ul>
+      <li>A reporter</li>
+      <li>Has <strong><em>poofy orange hair</em></strong></li>
+      <li>Friends with the world’s most awesome dog</li>
+    </ul>
+  </li>
+  <li>Haddock
+    <ul>
+      <li>A <strong>sea captain</strong></li>
+      <li>Has a fantastic <strong>beard</strong></li>
+      <li>Loves whiskey
+        <ul>
+          <li>Possibly also scotch?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
 
 
     </section>
@@ -508,23 +634,46 @@ a:active <strong>MOET</strong> komen <strong>na</strong> a:hover om te werken! <
 
 <div id="pageActions">
 
-    <a href="/_t-inf-lms/courses/webontwikkeling/css/#state-selectors"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <a href="/_t-inf-lms/courses/webontwikkeling/html/#markup-languages"><span class="material-icons">assignment</span> Oefen theorie</a>
     <hr>
     <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
     <a href="https://github.com/T-INFORMATICA/_cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
-    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/css/state-selectors.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/html/markup-languages.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
 
     
 </div>
 <hr>
 <div id="toc">
 <ul>
-  <li><a href="#state-selectors">State Selectors</a>
+  <li><a href="#structuur-vs-opmaak">Structuur vs. opmaak</a></li>
+  <li><a href="#markup">Markup</a></li>
+  <li><a href="#markdown">Markdown</a>
     <ul>
-      <li><a href="#state-selectors-gebruiken">State selectors gebruiken</a></li>
-      <li><a href="#andere-state-selectors">Andere State Selectors</a></li>
-      <li><a href="#state-selector-voorbeelden">State selector voorbeelden</a></li>
+      <li><a href="#schuine-tekst">Schuine Tekst</a></li>
+      <li><a href="#vette-tekst">Vette Tekst</a></li>
+      <li><a href="#schuine-vette-tekst">Schuine Vette Tekst</a></li>
+      <li><a href="#kopteksten">Kopteksten</a></li>
+    </ul>
+  </li>
+  <li><a href="#koptekst-2">koptekst 2</a>
+    <ul>
+      <li><a href="#koptekst-3">koptekst 3</a>
+        <ul>
+          <li><a href="#koptekst-4">koptekst 4</a>
+            <ul>
+              <li><a href="#koptekst-5">koptekst 5</a>
+                <ul>
+                  <li><a href="#koptekst-6">koptekst 6</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#dit-is-de-titel"><em><code class="highlighter-rouge">Dit</code></em><code class="highlighter-rouge"> is de titel</code></a></li>
       <li><a href="#hyperlinks">Hyperlinks</a></li>
+      <li><a href="#afbeeldingen">Afbeeldingen</a></li>
+      <li><a href="#lijsten">Lijsten</a></li>
     </ul>
   </li>
 </ul>
