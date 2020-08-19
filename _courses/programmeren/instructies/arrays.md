@@ -18,6 +18,8 @@ description: Lijsten gebruiken en aanpassen.
 
 Als je een lijst van waardes wilt opslaan (bv. Een lijst met merken van auto’s), zou dit er als volgt kunnen uitzien:
 
+<script src="https://gist.github.com/teacher-svb/064b4f1701711340337de37e183de029.js"></script>
+
 ```javascript
 var auto1 = "Volvo";
 var auto2 = "BMW";
