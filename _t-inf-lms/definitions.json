@@ -373,7 +373,27 @@
                         },
                                 
                         {
-                            "name": "Elementen",
+                            "name": "Markup",
+                            "definitions": [
+                                {
+                                    "name": "",
+                                    "definition": ""
+                                }
+                            ]
+                        },
+                                
+                        {
+                            "name": "Markup met Markdown",
+                            "definitions": [
+                                {
+                                    "name": "",
+                                    "definition": ""
+                                }
+                            ]
+                        },
+                                
+                        {
+                            "name": "Markup met HTML",
                             "definitions": [
                                 {
                                     "name": "tag",

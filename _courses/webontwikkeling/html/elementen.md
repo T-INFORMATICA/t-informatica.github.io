@@ -1,5 +1,5 @@
 ---
-title: Elementen
+title: Markup met HTML
 tags: 
  - instructie
  - commentaar
@@ -28,7 +28,7 @@ description: Een website bestaat vaak uit verschillende onderdelen. Met HTML wor
 
 ## HTML tags
 
-Een webpagina dient om inhoud te laten zien aan een bezoeker. HTML dient om die inhoud aan te duiden als tekst, titel, lijst, link, … Tags zijn de codewoorden die HTML gebruikt om aan te duiden waar elk deel van de inhoud voor dient.
+Een webpagina dient om inhoud te laten zien aan een bezoeker. Om te zorgen dat de computer begrijpt wat voor inhoud de website bevat wordt een markup taal gebruikt, in dit geval HTML (**H**yper**T**ext **M**arkup **L**anguage). HTML dient dus om die inhoud aan te duiden als tekst, titel, lijst, link, … Hiervoor worden **tags** gebruikt. Tags zijn de codewoorden die HTML gebruikt om aan te duiden waar elk deel van de inhoud voor dient.
 
 Een tag is een **codewoord tussen een kleiner dan (`<`) en groter dan (`>`) teken.**
 
@@ -46,7 +46,7 @@ Er bestaan 2 soorten tags:
 
 
 1. Openingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) begint
-2. Sluitingstags:		**`<h1>`**		Duidt aan waar de inhoud (koptekst) eindigt
+2. Sluitingstags:		**`</h1>`**		Duidt aan waar de inhoud (koptekst) eindigt
 
 ``` html
 <p>dit is een paragraaf</p> en dit niet meer	→ duidt een paragraaf aan

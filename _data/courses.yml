@@ -64,7 +64,13 @@
         - name: Websites Maken
           link: "/courses/webontwikkeling/html/websites-maken.html"
           doel: "structuur"
-        - name: Elementen
+        - name: Markup
+          link: "/courses/webontwikkeling/html/markup-languages.html"
+          doel: "structuur"
+        - name: Markup met Markdown
+          link: "/courses/webontwikkeling/html/markdown.html"
+          doel: "structuur"
+        - name: Markup met HTML
           link: "/courses/webontwikkeling/html/elementen.html"
           doel: "structuur"
         - name: Attributen
