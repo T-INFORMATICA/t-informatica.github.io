@@ -1,6 +1,43 @@
 {
     "courses": [
         {
+            "name": "basis",
+            "subjects": [
+                
+                {
+                    "name": "basiskennis",
+                    "chapters": [
+                        {
+                            "name": "Code Editors",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
+                            "name": "Source Control",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
+                            "name": "FTP",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
+                            "name": "Talstelsels",
+                            "definitions": [
+                            ]
+                        }
+                                
+                    ]
+                }
+                
+            ]
+        },
+    
+        {
             "name": "programmeren",
             "subjects": [
                 

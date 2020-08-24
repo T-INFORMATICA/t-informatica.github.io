@@ -13,3 +13,11 @@ Gekende voorbeelden zijn _notepad_ (Microsoft Windows) of _text editor_ (Mac OSX
 ### Tekstverwerkers
 
 Een tekstverwerker is een uitgebreide tekst editor waarin je opmaak kunt toevoegen aan een tekst. 
+
+Gekende voorbeelden zijn _Microsoft Word_ of _Google Docs_.
+
+### Code Editors
+
+Een code editor is een tekst editor waarmee je gemakkelijk code kunt schrijven. Je kan zelf geen opmaak toevoegen, maar een goede code editor zal jouw code automatisch van opmaak voorzien om de code meer leesbaar te maken.
+
+Gekende voorbeelden zijn _Visual Studio Code_, _Notepad++_, _Sublime_ en _atom_.

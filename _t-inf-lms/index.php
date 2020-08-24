@@ -35,6 +35,25 @@
   <div class="layout">
       
       <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/basis/">basis</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/basis/basiskennis/">basiskennis</a></h2>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/code-editors.html">code editors</a>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/source-control.html">source control</a>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/ftp.html">ftp</a>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/talstelsels.html">talstelsels</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
         <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
           
           
