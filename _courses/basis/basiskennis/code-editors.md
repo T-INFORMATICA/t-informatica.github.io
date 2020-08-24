@@ -1,5 +1,11 @@
 ---
 title: Code Editors
+tags: 
+ - 
+definitions:
+ - name: 
+   definition: 
+description: 
 ---
 
 ## Tekst Editors
