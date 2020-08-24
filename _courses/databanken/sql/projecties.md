@@ -132,9 +132,9 @@ Resultaat:
    </tr>
    <tr>
       <td>4</td>
-      <td>Air pour</td>
+      <td>Air pour charmer</td>
       <td>heeft als niveau</td>
-      <td>charmer B</td>
+      <td>B</td>
    </tr>
    <tr>
       <td>5</td>
