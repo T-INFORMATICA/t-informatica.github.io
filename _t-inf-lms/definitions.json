@@ -763,6 +763,18 @@
                                     "definition": "Een naam en waarde die je meegeeft via het adres van de webpagina."
                                 }
                             ]
+                        },
+                                
+                        {
+                            "name": "XML",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
+                            "name": "AJAX",
+                            "definitions": [
+                            ]
                         }
                                 
                     ]

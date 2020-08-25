@@ -1,0 +1,745 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script> 
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/_t-inf-lms/assets/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav id="mainNavigation">
+  <!-- COURSE DROPDOWN -->
+  <span class="dropdownButton">
+    cursussen
+    <span class="material-icons">
+      expand_more
+    </span>
+    <div class="dropdown">
+      
+  <div class="layout">
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/basis/">basis</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/basis/basiskennis/">basiskennis</a></h2>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/code-editors.html">code editors</a>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/source-control.html">source control</a>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/ftp.html">ftp</a>
+            
+            <a href="/_t-inf-lms/courses/basis/basiskennis/talstelsels.html">talstelsels</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/programmeren/">programmeren</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
+            
+            <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/programmeren/software-ontwikkeling/">Software Ontwikkeling</a></h2>
+            
+            <a href="/_t-inf-lms/courses/programmeren/software-ontwikkeling/domeinmodel.html">Domeinmodel</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/webontwikkeling/">webontwikkeling</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/markup-languages.html">Markup</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/markdown.html">Markup met Markdown</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Markup met HTML</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/responsive-webdesign.html">Responsive Webdesign</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html">CSS Grid</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/statische-websites">Statische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/icons.html">Icons</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/menu.html">Menu</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/popup.html">Popup</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/modal-popup.html">Modal Popup</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a></h2>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/xml.html">XML</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax.html">AJAX</a>
+            
+          </div>
+          
+        </div>
+      
+      <div class="courseNav">
+        <h1><a href="/_t-inf-lms/courses/databanken/">databanken</a></h1>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
+            
+          </div>
+          
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/databanken/sql">SQL</a></h2>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
+            
+            <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
+            
+          </div>
+          
+        </div>
+      
+      </div>
+    </div>
+  </span>
+  <!-- PROFILE DROPDOWN -->
+  <a href="/_t-inf-lms/" class="material-icons profileButton">person</a>
+  <!-- SEARCH BUTTON -->
+  <span  class="searchButton" id="searchButton">
+    <a href="#searchButton" class="material-icons">search</a>
+    <div class="searchBar">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <a href="#close" class="closeBackground">&nbsp;</a>
+          <input type="text" id="search-input" placeholder="search...">
+          <hr>
+          <ul id="results-container"></ul>
+      </div>
+      
+      <!-- Script pointing to search-script.js -->
+      <script src="/_t-inf-lms/assets/js/search.js" type="text/javascript"></script>
+      
+    </div>
+  </span>
+</nav>
+    </header>
+    <div id="mainLayoutGridContainer">
+        <section id="courseContent">
+    <nav id="courseNavigation">
+        
+        
+      <h1>Webontwikkeling</h1>
+      
+        
+
+    
+        
+
+    
+        
+
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/html">Html</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites maken</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/markup-languages.html">Markup</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/markdown.html">Markup met markdown</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Markup met html</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en inline</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/css">Css</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">Css</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box model</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/responsive-webdesign.html">Responsive webdesign</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html">Css grid</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid basisbegrippen</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid implementatie</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/statische-websites">Statische websites</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/icons.html">Icons</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/menu.html">Menu</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/popup.html">Popup</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/modal-popup.html">Modal popup</a>
+              
+
+              
+            
+          </div>
+          
+
+          
+          <div class="subjectNav">
+            <h2><a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische websites</a></h2>
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">Url parameters</a>
+              
+
+              
+            
+              
+              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/xml.html">Xml</a>
+              
+
+              
+            
+              
+                <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax.html"><u>Ajax</u></a>
+              
+
+              
+            
+          </div>
+          
+        
+
+    
+        
+
+     
+    </nav>
+
+    <section id="chapterContent">
+        
+        <h1>Ajax</h1>
+
+        <div id="chapterTags">
+            
+        </div>
+
+        <h2 id="van-server-naar-client">Van Server Naar Client</h2>
+
+<p>Een <strong>server</strong> is een computer waar alle code en bestanden van een website zijn opgeslagen. Elke server heeft zijn eigen, unieke internet-adres. Als je een website wilt bezoeken, heb je het adres van deze server nodig. Een <strong>client</strong> is de computer van een gebruiker die surft naar een website. Als jij bijvoorbeeld surft naar <a href="http://www.google.be">www.google.be</a>, dan ben jij op dat moment de client van een google-server. De client vraagt dus aan de server of hij de HTML-pagina die daar staat opgeslagen mag gebruiken en weergeven in de browser.</p>
+
+<p>Een website bezoeken gebeurt dus meestal met een paar tussenstappen.</p>
+
+<ol>
+  <li><strong>Actie</strong>: Je klikt op een knop naar een website of typt het adres van een website in de adresbalk.</li>
+  <li><strong>Request maken</strong>: De client (jouw computer) maakt een vraag (<strong>request</strong>) om naar de server te sturen. In die vraag zit bijvoorbeeld welke pagina je wilt bekijken.</li>
+  <li><strong>Request sturen</strong>: De client (jouw computer) verstuurt een vraag (<strong>request</strong>) naar de server van de website.</li>
+  <li><strong>Process request</strong>: De server bekijkt de request en zoekt de juiste HTML-pagina op.</li>
+  <li><strong>Server response</strong>: De server stuurt een antwoord (<strong>response</strong>) naar de client, met daarin de HTML-pagina van de website.</li>
+  <li><strong>Reactie</strong>: De client leest de response en toont de website.</li>
+</ol>
+
+<p>De client kan ook andere dingen dan een HTML-pagina aan de server vragen om te gebruiken. Dit moeten dus niet per sé HTML of CSS pagina’s zijn die de browser gebruikt om een website weer te geven.</p>
+
+<h2 id="van-server-naar-client-met-ajax">Van Server Naar Client (met AJAX)</h2>
+
+<p>AJAX staat voor <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML.</p>
+
+<ul>
+  <li>Asynchronous: je kan vragen stellen aan de server zonder dat je de pagina moet herladen.</li>
+  <li>JavaScript: AJAX is géén programmeertaal. Het is een manier om data aan een server op te vragen met behulp van Javascript.</li>
+  <li>XML: De data die wordt gevraagd aan de server moet in de vorm van XML-data zijn.</li>
+</ul>
+
+<p>AJAX werkt heel gelijkaardig als het bezoeken van een website.</p>
+
+<ol>
+  <li><strong>Actie</strong>: Er gebeurt iets op de website (je klikt op een knop, de pagina wordt geladen, …)</li>
+  <li><strong>Request maken</strong>: Je maakt een <strong>request</strong> object aan met Javascript. Dit object is van het datatype XMLHttpRequest.</li>
+  <li><strong>Request sturen</strong>: Je stuurt de <strong>request</strong> naar de server.</li>
+  <li><strong>Process request</strong>: De server bekijkt de request en zoekt de juiste XML-data op.</li>
+  <li><strong>Server response</strong>: De server stuurt een antwoord (<strong>response</strong>) naar de client, met daarin de XML-data van de website.</li>
+  <li><strong>Reactie</strong>: Je leest de response met Javascript en doet er iets mee (bijvoorbeeld: je toont de data op je website)</li>
+</ol>
+
+<h2 id="xml-data">XML Data</h2>
+
+<p>De <strong>X</strong> in AJAX staat voor <strong>XML</strong>. Om AJAX te gebruiken moet er dus XML-data zijn opgeslagen op de server van je website.</p>
+
+<p><strong>Opgelet</strong>: Om veiligheidsredenen staan moderne browsers niet toe dat je een bestand kan gebruiken dat is opgeslagen op een andere server. Dit betekent dat zowel de HTML-pagina als het XML-bestand zich op dezelfde server moeten bevinden.</p>
+
+<h2 id="ajax-voorbeeld">AJAX Voorbeeld</h2>
+
+<p>In dit voorbeeld wordt <a href="https://www.w3schools.com/js/cd_catalog.xml">dit XML-bestand gebruikt</a>. Je kan dit kopiëren en opslaan op je eigen server om het voorbeeld te volgen.</p>
+
+<p>De stappen hieronder tonen de code</p>
+
+<h3 id="stap-1-actie">Stap 1: Actie</h3>
+
+<p>Als eerste heb je een website nodig waar je een actie op kan doen. In het voorbeeld hieronder wordt een knop gemaakt (<code class="highlighter-rouge">&lt;button&gt;</code>)</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"voorbeeld"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h2&gt;</span>AJAX Voorbeeld<span class="nt">&lt;/h2&gt;</span>
+            <span class="c">&lt;!-- een knop waar je op kan klikken --&gt;</span>
+            <span class="nt">&lt;button&gt;</span>Klik hier!<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Je hebt ook een functie nodig die wordt uitgevoerd wanneer de gebruiker klikt op de knop.</p>
+
+<p>Hier worden 2 zaken toegevoegd aan de code:</p>
+<ul>
+  <li>een <code class="highlighter-rouge">onclick</code> attribute aan de <code class="highlighter-rouge">&lt;button&gt;</code></li>
+  <li>een <code class="highlighter-rouge">script</code> tag met daarin de javascript functie</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"voorbeeld"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h2&gt;</span>AJAX Voorbeeld<span class="nt">&lt;/h2&gt;</span>
+            <span class="c">&lt;!-- Wanneer je klikt op deze knop wordt nu de functie TestAjax() uitgevoerd --&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"TestAjax()"</span><span class="nt">&gt;</span>Klik hier!<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;script&gt;</span>
+<span class="c1">// De functie TestAjax() is leeg, en doet dus voorlopig niets...</span>
+<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
+
+<span class="p">}</span>
+        <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="stap-2-een-ajax-request-maken">Stap 2: Een AJAX Request maken</h3>
+
+<p>Nu moet de javascript functie ingevuld worden. De HTML code wordt vanaf nu niet meer getoond, omdat die niet meer verandert.</p>
+
+<p>Als eerste moet er een Request-variabele worden gemaakt. Dit is een variabele van het datatype XMLHttpRequest.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="stap-3-de-ajax-request-versturen">Stap 3: De AJAX Request versturen</h3>
+
+<p>De volgende stap is het versturen van de request naar de server. De request heeft minstens 2 dingen nodig voor je hem verstuurt:</p>
+<ul>
+  <li>de manier waarop je de data verstuurt</li>
+  <li>welke data je wilt opvragen</li>
+</ul>
+
+<p>Deze dingen worden toegevoegd aan de request met de functie <code class="highlighter-rouge">open()</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/*
+    De request heeft minstens 2 dingen nodig voor je hem verstuurt:
+     - de manier waarop je de data verstuurt
+     - welke data je wilt opvragen
+    */</span>
+    <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cd_catalog.xml</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="stap-4-process-request-op-de-server">Stap 4: Process Request op de Server</h3>
+
+<p>Wanneer de server jouw request ontvangt, moet hij allerlei dingen doen:</p>
+<ul>
+  <li>De verbinding tussen de client en de server bevestigen</li>
+  <li>Je request in detail bekijken</li>
+  <li>De data opzoeken die je hebt gevraagd</li>
+  <li>Een response samenstellen</li>
+</ul>
+
+<p>Wanneer de server klaar is om een response te geven, laat hij je dit weten met behulp van het <code class="highlighter-rouge">load</code> event. Je hoeft hier zelf niets voor te doen, dus er moet niets gewijzigd worden aan de huidige code.</p>
+
+<blockquote>
+  <p>Als je wilt weten in welke stap de server zich momenteel bevindt, kan je in de <code class="highlighter-rouge">XMLHttpRequest</code> kijken naar de variabele <code class="highlighter-rouge">readyState</code>. Hierin bevindt zich een waarde van 0 tot en met 4:</p>
+  <ul>
+    <li><strong>0</strong>: geen request ontvangen</li>
+    <li><strong>1</strong>: er is een verbinding tussen client en server</li>
+    <li><strong>2</strong>: de server heeft een request ontvangen</li>
+    <li><strong>3</strong>: de server is de request aan het bekijken</li>
+    <li><strong>4</strong>: de server heeft een response klaar</li>
+  </ul>
+</blockquote>
+
+<h3 id="stap-5-server-response-ophalen">Stap 5: Server Response ophalen</h3>
+
+<p>Wanneer de server klaar is om een response te geven laat hij je dit weten met behulp van het <code class="highlighter-rouge">load</code> event.</p>
+
+<p>Een event is een signaal dat je kan vasthangen aan een functie. Wanneer dat signaal afgaat, wordt ook automatisch die functie aangeroepen.</p>
+
+<p><strong>Opgelet</strong>: De functie vasthangen aan het event doe je best voordat je de request verstuurt. Anders zou het kunnen gebeuren dat je server je te snel af is, en dat je het event dus nooit opvangt.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cd_catalog.xml</span><span class="dl">"</span><span class="p">);</span>
+
+    <span class="c1">// hang de functie 'VeranderTekst' vast aan het LOAD event</span>
+    <span class="nx">request</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="nx">DoeIetsMetResponse</span><span class="p">);</span>
+
+    <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="cm">/* Deze functie zal worden aangeroepen als de server het LOAD event laat afgaan. */</span>
+<span class="kd">function</span> <span class="nx">DoeIetsMetResponse</span><span class="p">()</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="stap-6-reactie">Stap 6: Reactie</h3>
+
+<p>De laatste stap is het invullen van de functie <code class="highlighter-rouge">DoeIetsMetResponse()</code>.</p>
+
+<p>In dit voorbeeld ga je de tekst in het HTML-element met id “voorbeeld” veranderen naar de data die je terugkreeg van de server.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">DoeIetsMetResponse</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">voorbeeld</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="voorbeeld-code">Voorbeeld code</h3>
+
+<p>Hieronder kan je alle code nog eens volledig terugvinden.</p>
+
+<p>Zoals je ziet is er niet veel code nodig om XML data op te vragen van een server.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"voorbeeld"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h2&gt;</span>AJAX Voorbeeld<span class="nt">&lt;/h2&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"TestAjax()"</span><span class="nt">&gt;</span>Klik hier!<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cd_catalog.xml</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">request</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="nx">DoeIetsMetResponse</span><span class="p">);</span>
+    <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">DoeIetsMetResponse</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">voorbeeld</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
+<span class="p">}</span>
+        <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+
+    </section>
+
+
+    <section id="pageNavigation">
+        
+
+<div id="pageActions">
+
+    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/#ajax"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <hr>
+    <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
+    <a href="https://github.com/T-INFORMATICA/_cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
+    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/dynamische-websites/ajax.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+
+    
+</div>
+<hr>
+<div id="toc">
+<ul>
+  <li><a href="#van-server-naar-client">Van Server Naar Client</a></li>
+  <li><a href="#van-server-naar-client-met-ajax">Van Server Naar Client (met AJAX)</a></li>
+  <li><a href="#xml-data">XML Data</a></li>
+  <li><a href="#ajax-voorbeeld">AJAX Voorbeeld</a>
+    <ul>
+      <li><a href="#stap-1-actie">Stap 1: Actie</a></li>
+      <li><a href="#stap-2-een-ajax-request-maken">Stap 2: Een AJAX Request maken</a></li>
+      <li><a href="#stap-3-de-ajax-request-versturen">Stap 3: De AJAX Request versturen</a></li>
+      <li><a href="#stap-4-process-request-op-de-server">Stap 4: Process Request op de Server</a></li>
+      <li><a href="#stap-5-server-response-ophalen">Stap 5: Server Response ophalen</a></li>
+      <li><a href="#stap-6-reactie">Stap 6: Reactie</a></li>
+      <li><a href="#voorbeeld-code">Voorbeeld code</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+    </section>
+</section>
+      <footer>
+        
+      </footer>
+    </div>
+  </body>
+  <!-- Configuration -->
+  <script>
+      SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/_t-inf-lms/search.json'
+      })
+  </script>
+</html>

@@ -187,6 +187,10 @@
             
             <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
             
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/xml.html">XML</a>
+            
+            <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax.html">AJAX</a>
+            
           </div>
           
         </div>

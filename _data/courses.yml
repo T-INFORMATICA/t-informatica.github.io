@@ -166,6 +166,12 @@
         - name: URL Parameters
           link: "/courses/webontwikkeling/dynamische-websites/url-parameters.html"
           doel: "dynamische websites"
+        - name: XML
+          link: "/courses/webontwikkeling/dynamische-websites/xml.html"
+          doel: "dynamische websites"
+        - name: AJAX
+          link: "/courses/webontwikkeling/dynamische-websites/ajax.html"
+          doel: "dynamische websites"
 #        - name: Formulieren
 #          link: "/courses/webontwikkeling/dynamische-websites/formulieren.html"
 #          doel: "dynamische websites"
