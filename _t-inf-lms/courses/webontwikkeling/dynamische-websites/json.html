@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid</title>
+    <title>JSON</title>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script> 
@@ -453,7 +453,7 @@
               
             
               
-              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/json.html">Json</a>
+                <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/json.html"><u>Json</u></a>
               
 
               
@@ -476,66 +476,45 @@
 
     <section id="chapterContent">
         
-        <h1>Css grid</h1>
+        <h1>Json</h1>
 
         <div id="chapterTags">
             
         </div>
 
-        <h2>Inhoud van de cursus</h2>
+        <h2 id="wat-is-json">Wat is JSON?</h2>
 
-<h3>LEERDOELEN</h3>
+<p>JSON (<strong>J</strong>avaScript <strong>O</strong>bject <strong>N</strong>otation) is, net zoals XML, een manier om data op te slaan en transporteren.</p>
 
+<p>JSON heeft echter één groot voordeel ten opzichte van XML: je kan JSON data rechtstreeks omzetten naar een Javascript object/variabele. ‘Omzetten’ is daarbij een belangrijk woord: wanneer je data verstuurt van een server naar de browser (of omgekeerd) kan je enkel text gebruiken. JSON is dus gewoon tekst, tot je het terug omzet naar een object.</p>
 
+<h2 id="javascript-objecten">Javascript Objecten</h2>
 
+<p>In het voorbeeld hieronder wordt een object <code class="highlighter-rouge">email</code> aangemaakt. Het object <code class="highlighter-rouge">email</code> met al zijn eigenschappen (from, to, title, body) kan dan gebruikt worden in Javascript.</p>
 
-<h3>OPBOUW VAN DE CURSUS</h3><h4>Responsive Webdesign</h4>
-                                <p></p><h4>CSS Grid Inleiding</h4>
-                                <p></p><h4>CSS Grid Basisbegrippen</h4>
-                                <p></p><h4>CSS Grid Implementatie</h4>
-                                <p></p><h4>CSS Grid Uitbreiding</h4>
-                                <p></p>
-            <h3>BELANGRIJKE TERMEN</h3><table class='styledTable'><thead>
-                            <tr>
-                                <th colspan="2">
-                                    <div style="position: relative;"><span id="responsive-webdesign" style="position: absolute; top:-75px;"></span></div>
-                                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/responsive-webdesign.html">Responsive Webdesign</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody><thead>
-                            <tr>
-                                <th colspan="2">
-                                    <div style="position: relative;"><span id="css-grid" style="position: absolute; top:-75px;"></span></div>
-                                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html">CSS Grid</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody><thead>
-                            <tr>
-                                <th colspan="2">
-                                    <div style="position: relative;"><span id="grid-basisbegrippen" style="position: absolute; top:-75px;"></span></div>
-                                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody><thead>
-                            <tr>
-                                <th colspan="2">
-                                    <div style="position: relative;"><span id="grid-implementatie" style="position: absolute; top:-75px;"></span></div>
-                                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody><thead>
-                            <tr>
-                                <th colspan="2">
-                                    <div style="position: relative;"><span id="uitbreiding" style="position: absolute; top:-75px;"></span></div>
-                                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody></table>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">email</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">from</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">joske@vermeulen.be</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">to</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ailin@martinez.be</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">hallo</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">body</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Dit is een mail van Joske naar Ailin.</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="c1">// het object gebruiken in Javascript</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">email</span><span class="p">.</span><span class="k">from</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Met <strong>J</strong>avaScript <strong>O</strong>bject <strong>N</strong>otation wordt alle code-tekst bedoelt die gebruikt wordt om het object aan te maken. In het voorbeeld hierboven is dat:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"joske@vermeulen.be"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ailin@martinez.be"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hallo"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dit is een mail van Joske naar Ailin."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Dit stuk code wordt vervolgens opgeslagen als een bestand: <code class="highlighter-rouge">email.json</code>. Met Javascript kan dit bestand terug naar een object worden omgezet en opgeslagen in een variabele.</p>
+
 
     </section>
 
@@ -545,32 +524,19 @@
 
 <div id="pageActions">
 
-    <a href="/_t-inf-lms/courses/webontwikkeling/layout/#index"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/#json"><span class="material-icons">assignment</span> Oefen theorie</a>
     <hr>
     <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
     <a href="https://github.com/T-INFORMATICA/_cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
-    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/layout/index.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/dynamische-websites/json.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
 
     
 </div>
 <hr>
 <div id="toc">
 <ul>
-  <li>Inhoud van de cursus
-    <ul>
-      <li>LEERDOELEN</li>
-      <li>OPBOUW VAN DE CURSUS
-        <ul>
-          <li>Responsive Webdesign</li>
-          <li>CSS Grid Inleiding</li>
-          <li>CSS Grid Basisbegrippen</li>
-          <li>CSS Grid Implementatie</li>
-          <li>CSS Grid Uitbreiding</li>
-        </ul>
-      </li>
-      <li>BELANGRIJKE TERMEN</li>
-    </ul>
-  </li>
+  <li><a href="#wat-is-json">Wat is JSON?</a></li>
+  <li><a href="#javascript-objecten">Javascript Objecten</a></li>
 </ul>
 </div>
     </section>

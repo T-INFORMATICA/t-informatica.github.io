@@ -772,6 +772,12 @@
                         },
                                 
                         {
+                            "name": "JSON",
+                            "definitions": [
+                            ]
+                        },
+                                
+                        {
                             "name": "AJAX",
                             "definitions": [
                             ]

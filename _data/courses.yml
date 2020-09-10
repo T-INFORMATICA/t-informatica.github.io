@@ -169,6 +169,9 @@
         - name: XML
           link: "/courses/webontwikkeling/dynamische-websites/xml.html"
           doel: "dynamische websites"
+        - name: JSON
+          link: "/courses/webontwikkeling/dynamische-websites/json.html"
+          doel: "dynamische websites"
         - name: AJAX
           link: "/courses/webontwikkeling/dynamische-websites/ajax.html"
           doel: "dynamische websites"
