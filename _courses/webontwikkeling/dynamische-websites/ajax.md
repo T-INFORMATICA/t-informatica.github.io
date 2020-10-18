@@ -33,7 +33,7 @@ AJAX werkt heel gelijkaardig als het bezoeken van een website.
  1. **Actie**: Er gebeurt iets op de website (je klikt op een knop, de pagina wordt geladen, ...)
  2. **Request maken**: Je maakt een **request** object aan met Javascript. Dit object is van het datatype XMLHttpRequest.
  3. **Request sturen**: Je stuurt de **request** naar de server.
- 4. **Process request**: De server bekijkt de request en zoekt de juiste XML-data op.
+ 4. **Process request**: De server bekijkt de request en zoekt de juiste (XML-)data op.
  5. **Server response**: De server stuurt een antwoord (**response**) naar de client, met daarin de XML-data van de website.
  6. **Reactie**: Je leest de response met Javascript en doet er iets mee (bijvoorbeeld: je toont de data op je website)
 
@@ -99,7 +99,7 @@ Nu moet de javascript functie ingevuld worden. De HTML code wordt vanaf nu niet 
 Als eerste moet er een Request-variabele worden gemaakt. Dit is een variabele van het datatype XMLHttpRequest.
 
 ```javascript
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 
 function TestAjax() {
 }
@@ -114,7 +114,7 @@ De volgende stap is het versturen van de request naar de server. De request heef
 Deze dingen worden toegevoegd aan de request met de functie `open()`.
 
 ```javascript
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 
 function TestAjax() {
     /*
@@ -154,7 +154,7 @@ Een event is een signaal dat je kan vasthangen aan een functie. Wanneer dat sign
 
 
 ```javascript
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 
 function TestAjax() {
     request.open("GET", "cd_catalog.xml");
@@ -202,7 +202,7 @@ Zoals je ziet is er niet veel code nodig om XML data op te vragen van een server
         </div>
 
         <script>
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 
 function TestAjax() {
     request.open("GET", "cd_catalog.xml");
