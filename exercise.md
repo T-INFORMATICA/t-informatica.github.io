@@ -17,7 +17,7 @@ title: Exercises
                     {%- endfor %}
                     </ul>
                 </div>
-            {% endfor %}
+            {% endfor %} 
     </div>
 {% endfor -%}
     </section>
