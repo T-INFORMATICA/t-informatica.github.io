@@ -1,11 +1,20 @@
-{% for course in site.data.courses %}
-    {% if course == include.course %}
-        <a href="{{site.baseurl}}{{ course.link }}">{{ course.name }}</a>
-        {% for subject in course.subjects %}
-            <a href="{{site.baseurl}}{{ subject.link }}">{{ subject.name }}</a>
-            {% for chapter in subject.chapters %}
-                <a href="{{site.baseurl}}{{ chapter.link }}">{{ chapter.name }}</a>
-            {% endfor %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
+<div>
+{%- for course in site.data.courses -%}
+    {%- if course.name == include.course -%}
+        {%- for subject in course.subjects -%}
+        <fieldset>
+            <legend>
+                <a href="{{site.baseurl}}{{ subject.link }}">{{ subject.name }}</a>
+            </legend>
+            <ul>
+            {%- for chapter in subject.chapters -%}
+                <li>
+                    <a href="{{site.baseurl}}{{ chapter.link }}">{{ chapter.name }}</a>
+                </li>
+            {%- endfor -%}
+            </ul>
+        </fieldset>
+        {%- endfor -%}
+    {%- endif -%}
+{%- endfor -%}
+</div>

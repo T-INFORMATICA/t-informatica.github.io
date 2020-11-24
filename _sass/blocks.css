@@ -1,0 +1,24 @@
+
+/***** TOP NAVIGATION *****/
+
+nav#topMenu {
+    box-shadow: 0 0 5px black;
+}
+
+.menuItem-btn-dropdown+.menuItem-dropdown {
+    display: none;
+}
+
+.menuItem-btn-dropdown:hover+.menuItem-dropdown,
+.menuItem-btn-dropdown+.menuItem-dropdown:hover {
+    display: block;
+}
+
+.menuItem-dropdown {
+    background-color: #ccc;
+    overflow-y: auto;
+}
+
+nav#topMenu ul {
+    list-style-type: none;
+}

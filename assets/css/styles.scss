@@ -1,15 +1,8 @@
 ---
 ---
-@import "main";
-@import "courseStyling";
-@import "chapterContent";
-@import "pageNavigation";
-@import "mainNavigation";
-@import "courseNavigation";
-@import "studentNavigation";
-@import "grades";
-@import "studentLayout";
-@import "courseLayout";
-@import "mainLayout";
-@import "evaluatiesTimeline";
+@import "default";
+@import "composition";
+@import "utilities";
+@import "blocks";
+@import "exceptions";
 @import "syntax-highlighting";
