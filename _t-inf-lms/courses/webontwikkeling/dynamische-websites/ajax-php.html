@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJAX</title>
+    <title>PHP</title>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="/_t-inf-lms/assets/js/encodeHTML.js"></script> 
@@ -459,7 +459,7 @@
               
             
               
-                <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax.html"><u>Ajax</u></a>
+              <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax.html">Ajax</a>
               
 
               
@@ -476,7 +476,7 @@
 
     <section id="chapterContent">
         
-        <h1>Ajax</h1>
+        <h1>Php</h1>
 
         <div id="chapterTags">
             
@@ -484,220 +484,104 @@
 
         <h2 id="van-server-naar-client">Van Server Naar Client</h2>
 
-<p>Een <strong>server</strong> is een computer waar alle code en bestanden van een website zijn opgeslagen. Elke server heeft zijn eigen, unieke internet-adres. Als je een website wilt bezoeken, heb je het adres van deze server nodig. Een <strong>client</strong> is de computer van een gebruiker die surft naar een website. Als jij bijvoorbeeld surft naar <a href="http://www.google.be">www.google.be</a>, dan ben jij op dat moment de client van een google-server. De client vraagt dus aan de server of hij de HTML-pagina die daar staat opgeslagen mag gebruiken en weergeven in de browser.</p>
-
-<p>Een website bezoeken gebeurt dus meestal met een paar tussenstappen.</p>
-
-<ol>
-  <li><strong>Actie</strong>: Je klikt op een knop naar een website of typt het adres van een website in de adresbalk.</li>
-  <li><strong>Request maken</strong>: De client (jouw computer) maakt een vraag (<strong>request</strong>) om naar de server te sturen. In die vraag zit bijvoorbeeld welke pagina je wilt bekijken.</li>
-  <li><strong>Request sturen</strong>: De client (jouw computer) verstuurt een vraag (<strong>request</strong>) naar de server van de website.</li>
-  <li><strong>Process request</strong>: De server bekijkt de request en zoekt de juiste HTML-pagina op.</li>
-  <li><strong>Server response</strong>: De server stuurt een antwoord (<strong>response</strong>) naar de client, met daarin de HTML-pagina van de website.</li>
-  <li><strong>Reactie</strong>: De client leest de response en toont de website.</li>
-</ol>
-
-<p>De client kan ook andere dingen dan een HTML-pagina aan de server vragen om te gebruiken. Dit moeten dus niet per sé HTML of CSS pagina’s zijn die de browser gebruikt om een website weer te geven.</p>
-
-<h2 id="van-server-naar-client-met-ajax">Van Server Naar Client (met AJAX)</h2>
-
-<p>AJAX staat voor <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML.</p>
-
-<ul>
-  <li>Asynchronous: je kan vragen stellen aan de server zonder dat je de pagina moet herladen.</li>
-  <li>JavaScript: AJAX is géén programmeertaal. Het is een manier om data aan een server op te vragen met behulp van Javascript.</li>
-  <li>XML: De data die wordt gevraagd aan de server moet in de vorm van XML-data zijn.</li>
-</ul>
-
-<p>AJAX werkt heel gelijkaardig als het bezoeken van een website.</p>
+<p>AJAX (<strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML) wordt gebruikt om data op te vragen van een server, zonder dat de pagina daarbij moet herladen. Dit gebeurt in 6 stappen:</p>
 
 <ol>
   <li><strong>Actie</strong>: Er gebeurt iets op de website (je klikt op een knop, de pagina wordt geladen, …)</li>
   <li><strong>Request maken</strong>: Je maakt een <strong>request</strong> object aan met Javascript. Dit object is van het datatype XMLHttpRequest.</li>
   <li><strong>Request sturen</strong>: Je stuurt de <strong>request</strong> naar de server.</li>
-  <li><strong>Process request</strong>: De server bekijkt de request en zoekt de juiste (XML-)data op.</li>
+  <li><strong>Process request</strong>: De server bekijkt de request en zoekt de juiste data op.</li>
   <li><strong>Server response</strong>: De server stuurt een antwoord (<strong>response</strong>) naar de client, met daarin de XML-data van de website.</li>
   <li><strong>Reactie</strong>: Je leest de response met Javascript en doet er iets mee (bijvoorbeeld: je toont de data op je website)</li>
 </ol>
 
-<h2 id="xml-data">XML Data</h2>
+<p>De meeste servers kunnen stap 4 uitvoeren, zolang er enkel gevraagd wordt om een bestand in zijn geheel terug te sturen naar de client.</p>
 
-<p>De <strong>X</strong> in AJAX staat voor <strong>XML</strong>. Om AJAX te gebruiken moet er dus XML-data zijn opgeslagen op de server van je website.</p>
+<p>Er zijn echter heel wat situaties waarbij een website vraagt aan de server om data samen te stellen:</p>
 
-<p><strong>Opgelet</strong>: Om veiligheidsredenen staan moderne browsers niet toe dat je een bestand kan gebruiken dat is opgeslagen op een andere server. Dit betekent dat zowel de HTML-pagina als het XML-bestand zich op dezelfde server moeten bevinden.</p>
-
-<h2 id="ajax-voorbeeld">AJAX Voorbeeld</h2>
-
-<p>In dit voorbeeld wordt <a href="https://www.w3schools.com/js/cd_catalog.xml">dit XML-bestand gebruikt</a>. Je kan dit kopiëren en opslaan op je eigen server om het voorbeeld te volgen.</p>
-
-<p>De stappen hieronder tonen de code</p>
-
-<h3 id="stap-1-actie">Stap 1: Actie</h3>
-
-<p>Als eerste heb je een website nodig waar je een actie op kan doen. In het voorbeeld hieronder wordt een knop gemaakt (<code class="highlighter-rouge">&lt;button&gt;</code>)</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-    <span class="nt">&lt;body&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"voorbeeld"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2&gt;</span>AJAX Voorbeeld<span class="nt">&lt;/h2&gt;</span>
-            <span class="c">&lt;!-- een knop waar je op kan klikken --&gt;</span>
-            <span class="nt">&lt;button&gt;</span>Klik hier!<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
-
-<p>Je hebt ook een functie nodig die wordt uitgevoerd wanneer de gebruiker klikt op de knop.</p>
-
-<p>Hier worden 2 zaken toegevoegd aan de code:</p>
 <ul>
-  <li>een <code class="highlighter-rouge">onclick</code> attribute aan de <code class="highlighter-rouge">&lt;button&gt;</code></li>
-  <li>een <code class="highlighter-rouge">script</code> tag met daarin de javascript functie</li>
+  <li>data uit een bestand filteren (bv. uit een lijst met landen enkel de landen met een ‘b’ tonen)</li>
+  <li>data uit een bestand omzetten of omrekenen (bv. voor de meest recente posts op een forum ‘x uur geleden’ tonen in plaats van de datum en het uur)</li>
+  <li>data opvragen uit een databank</li>
 </ul>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-    <span class="nt">&lt;body&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"voorbeeld"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2&gt;</span>AJAX Voorbeeld<span class="nt">&lt;/h2&gt;</span>
-            <span class="c">&lt;!-- Wanneer je klikt op deze knop wordt nu de functie TestAjax() uitgevoerd --&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"TestAjax()"</span><span class="nt">&gt;</span>Klik hier!<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;script&gt;</span>
-<span class="c1">// De functie TestAjax() is leeg, en doet dus voorlopig niets...</span>
-<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
+<p>Voor elk van deze situaties moet er code geschreven worden die tijdens stap 4 wordt uitgevoerd. Deze code wordt <strong>niet op de client</strong> uitgevoerd, maar op de server. Programmeertalen die hiervoor gebruikt kunnen worden heten <strong>server-side programmeertalen</strong>.</p>
 
-<span class="p">}</span>
-        <span class="nt">&lt;/script&gt;</span>
-    <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<h2 id="php">PHP</h2>
+
+<p>Eén van de meest gebruikte server-side talen is <strong>PHP</strong> (<strong>P</strong>HP: <strong>H</strong>ypertext <strong>P</strong>reprocessor). Met deze programmeertaal kan je dus programma’s schrijven die op de server wordt uitgevoerd.</p>
+
+<p>Zo kan PHP gebruikt worden om tekst te genereren. Het programma <code class="highlighter-rouge">hello.php</code> bevat bijvoorbeeld volgende code:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$test</span> <span class="o">=</span> <span class="s2">"Hello World!"</span>
+<span class="k">echo</span> <span class="nv">$test</span><span class="p">;</span>
 </code></pre></div></div>
 
-<h3 id="stap-2-een-ajax-request-maken">Stap 2: Een AJAX Request maken</h3>
+<p>De server zal deze code uitvoeren en de volgende tekst genereren:</p>
 
-<p>Nu moet de javascript functie ingevuld worden. De HTML code wordt vanaf nu niet meer getoond, omdat die niet meer verandert.</p>
-
-<p>Als eerste moet er een Request-variabele worden gemaakt. Dit is een variabele van het datatype XMLHttpRequest.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-
-<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
-<span class="p">}</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World!
 </code></pre></div></div>
 
-<h3 id="stap-3-de-ajax-request-versturen">Stap 3: De AJAX Request versturen</h3>
+<p>Voor de <strong>client</strong> <em>lijkt</em> het dan alsof <code class="highlighter-rouge">hello.php</code> enkel de tekst <code class="highlighter-rouge">Hello World!</code> bevat. Uiteraard is dit voorbeeld nogal onzinnig. Het zou veel gemakkelijker, korter en sneller zijn om gewoon de tekst <code class="highlighter-rouge">Hello World!</code> in een tekst-bestand op te slaan.</p>
 
-<p>De volgende stap is het versturen van de request naar de server. De request heeft minstens 2 dingen nodig voor je hem verstuurt:</p>
-<ul>
-  <li>de manier waarop je de data verstuurt</li>
-  <li>welke data je wilt opvragen</li>
-</ul>
+<h2 id="van-json-naar-php-en-terug">Van JSON naar PHP (en terug)</h2>
 
-<p>Deze dingen worden toegevoegd aan de request met de functie <code class="highlighter-rouge">open()</code>.</p>
+<p>Met PHP kan een programma geschreven worden dat op de server wordt uitgevoerd. De uitvoer van dit programma kan je met <code class="highlighter-rouge">echo</code> naar de client sturen.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<p>Eén voorbeeld waarbij PHP gebruikt kan worden is het filteren van een lijst. Hieronder vind je de lijst van enkele Europese landen:</p>
 
-<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
-    <span class="cm">/*
-    De request heeft minstens 2 dingen nodig voor je hem verstuurt:
-     - de manier waarop je de data verstuurt
-     - welke data je wilt opvragen
-    */</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cd_catalog.xml</span><span class="dl">"</span><span class="p">);</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="stap-4-process-request-op-de-server">Stap 4: Process Request op de Server</h3>
-
-<p>Wanneer de server jouw request ontvangt, moet hij allerlei dingen doen:</p>
-<ul>
-  <li>De verbinding tussen de client en de server bevestigen</li>
-  <li>Je request in detail bekijken</li>
-  <li>De data opzoeken die je hebt gevraagd</li>
-  <li>Een response samenstellen</li>
-</ul>
-
-<p>Wanneer de server klaar is om een response te geven, laat hij je dit weten met behulp van het <code class="highlighter-rouge">load</code> event. Je hoeft hier zelf niets voor te doen, dus er moet niets gewijzigd worden aan de huidige code.</p>
-
-<blockquote>
-  <p>Als je wilt weten in welke stap de server zich momenteel bevindt, kan je in de <code class="highlighter-rouge">XMLHttpRequest</code> kijken naar de variabele <code class="highlighter-rouge">readyState</code>. Hierin bevindt zich een waarde van 0 tot en met 4:</p>
-  <ul>
-    <li><strong>0</strong>: geen request ontvangen</li>
-    <li><strong>1</strong>: er is een verbinding tussen client en server</li>
-    <li><strong>2</strong>: de server heeft een request ontvangen</li>
-    <li><strong>3</strong>: de server is de request aan het bekijken</li>
-    <li><strong>4</strong>: de server heeft een response klaar</li>
-  </ul>
-</blockquote>
-
-<h3 id="stap-5-server-response-ophalen">Stap 5: Server Response ophalen</h3>
-
-<p>Wanneer de server klaar is om een response te geven laat hij je dit weten met behulp van het <code class="highlighter-rouge">load</code> event.</p>
-
-<p>Een event is een signaal dat je kan vasthangen aan een functie. Wanneer dat signaal afgaat, wordt ook automatisch die functie aangeroepen.</p>
-
-<p><strong>Opgelet</strong>: De functie vasthangen aan het event doe je best voordat je de request verstuurt. Anders zou het kunnen gebeuren dat je server je te snel af is, en dat je het event dus nooit opvangt.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-
-<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cd_catalog.xml</span><span class="dl">"</span><span class="p">);</span>
-
-    <span class="c1">// hang de functie 'VeranderTekst' vast aan het LOAD event</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="nx">DoeIetsMetResponse</span><span class="p">);</span>
-
-    <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="cm">/* Deze functie zal worden aangeroepen als de server het LOAD event laat afgaan. */</span>
-<span class="kd">function</span> <span class="nx">DoeIetsMetResponse</span><span class="p">()</span> <span class="p">{</span>
-
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="stap-6-reactie">Stap 6: Reactie</h3>
-
-<p>De laatste stap is het invullen van de functie <code class="highlighter-rouge">DoeIetsMetResponse()</code>.</p>
-
-<p>In dit voorbeeld ga je de tekst in het HTML-element met id “voorbeeld” veranderen naar de data die je terugkreeg van de server.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">DoeIetsMetResponse</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">voorbeeld</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="voorbeeld-code">Voorbeeld code</h3>
-
-<p>Hieronder kan je alle code nog eens volledig terugvinden.</p>
-
-<p>Zoals je ziet is er niet veel code nodig om XML data op te vragen van een server.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-    <span class="nt">&lt;body&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"voorbeeld"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2&gt;</span>AJAX Voorbeeld<span class="nt">&lt;/h2&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"TestAjax()"</span><span class="nt">&gt;</span>Klik hier!<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-
-        <span class="nt">&lt;script&gt;</span>
-<span class="kd">let</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-
-<span class="kd">function</span> <span class="nx">TestAjax</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cd_catalog.xml</span><span class="dl">"</span><span class="p">);</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="nx">DoeIetsMetResponse</span><span class="p">);</span>
-    <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">DoeIetsMetResponse</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">voorbeeld</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">response</span><span class="p">;</span>
-<span class="p">}</span>
-        <span class="nt">&lt;/script&gt;</span>
-    <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="s2">"Andorra"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Albania"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Austria"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Åland Islands"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Bosnia"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Belgium"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Bulgaria"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Belarus"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Cyprus"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Czech Republic"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Germany"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Denmark"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Estonia"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Spain"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Finland"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Faroe Islands"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"France"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"United Kingdon"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Guernsey"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Greece"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Croatia"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Hungary"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Ireland"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Isle of Man"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Iceland"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Italy"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Jersey"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Liechtenstein"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Lithuania"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Luxembourg"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Latvia"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Monaco"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Moldova"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Macedonia"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Malta"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Netherlands"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Norway"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Poland"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Portugal"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Romania"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Russian Federation"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Sweden"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Slovenia"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Svalbard and Jan Mayen"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Slovakia"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"San Marino"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Ukraine"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Vatican City"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 
     </section>
@@ -708,11 +592,11 @@
 
 <div id="pageActions">
 
-    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/#ajax"><span class="material-icons">assignment</span> Oefen theorie</a>
+    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/#ajax-php"><span class="material-icons">assignment</span> Oefen theorie</a>
     <hr>
     <a href="javascript:window.print()"><span class="material-icons">print</span> Print deze pagina</a>
     <a href="https://github.com/T-INFORMATICA/_cursus/issues/new" target="_blank"><span class="material-icons">bug_report</span> Meld een fout</a> 
-    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/dynamische-websites/ajax.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
+    <a href="https://github.com/T-INFORMATICA/_cursus/edit/development/_courses/webontwikkeling/dynamische-websites/ajax-php.md" target="_blank"><span class="material-icons">create</span> Bewerk deze pagina</a> 
 
     
 </div>
@@ -720,19 +604,8 @@
 <div id="toc">
 <ul>
   <li><a href="#van-server-naar-client">Van Server Naar Client</a></li>
-  <li><a href="#van-server-naar-client-met-ajax">Van Server Naar Client (met AJAX)</a></li>
-  <li><a href="#xml-data">XML Data</a></li>
-  <li><a href="#ajax-voorbeeld">AJAX Voorbeeld</a>
-    <ul>
-      <li><a href="#stap-1-actie">Stap 1: Actie</a></li>
-      <li><a href="#stap-2-een-ajax-request-maken">Stap 2: Een AJAX Request maken</a></li>
-      <li><a href="#stap-3-de-ajax-request-versturen">Stap 3: De AJAX Request versturen</a></li>
-      <li><a href="#stap-4-process-request-op-de-server">Stap 4: Process Request op de Server</a></li>
-      <li><a href="#stap-5-server-response-ophalen">Stap 5: Server Response ophalen</a></li>
-      <li><a href="#stap-6-reactie">Stap 6: Reactie</a></li>
-      <li><a href="#voorbeeld-code">Voorbeeld code</a></li>
-    </ul>
-  </li>
+  <li><a href="#php">PHP</a></li>
+  <li><a href="#van-json-naar-php-en-terug">Van JSON naar PHP (en terug)</a></li>
 </ul>
 </div>
     </section>
