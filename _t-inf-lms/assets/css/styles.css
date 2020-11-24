@@ -25,13 +25,18 @@ h3 { font-size: 20px; }
 
 .material-icons { vertical-align: middle; font-size: inherit; line-height: inherit; }
 
+/***** MAIN LAYOUT ********/
+@media only screen and (min-width: 600px) { body { display: grid; grid-template: 40px 1fr auto /  auto 1fr auto; grid-template-areas: "header header header" "aside main main" "footer footer footer"; }
+  header { grid-area: header; }
+  aside { grid-area: aside; } }
+
 /***** SIDE NAVIGATION ****/
 aside { display: none; }
 
 @media only screen and (min-width: 600px) { aside { display: unset; } }
 
 /***** TOP NAVIGATION *****/
-nav#topMenu { position: relative; }
+nav#topMenu { position: fixed; left: 0; right: 0; top: 0; z-index: 1; }
 
 .menuItem > .menuItem-btn { display: block; padding: 8px; }
 
@@ -44,7 +49,7 @@ nav#topMenu { position: relative; }
 @media only screen and (min-width: 600px) { nav#topMenu > ul { display: flex; } }
 
 /***** TOP NAVIGATION *****/
-nav#topMenu { box-shadow: 0 0 5px black; }
+nav#topMenu { box-shadow: 0 0 5px black; background-color: white; }
 
 .menuItem-btn-dropdown + .menuItem-dropdown { display: none; }
 

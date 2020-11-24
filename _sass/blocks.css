@@ -3,6 +3,7 @@
 
 nav#topMenu {
     box-shadow: 0 0 5px black;
+    background-color: white;
 }
 
 .menuItem-btn-dropdown+.menuItem-dropdown {

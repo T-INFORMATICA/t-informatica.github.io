@@ -1,5 +1,27 @@
 
 
+/***** MAIN LAYOUT ********/
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: grid;
+        grid-template: 40px 1fr auto / 
+                       auto 1fr auto;
+        grid-template-areas: "header header header"
+                             "aside main main"
+                             "footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+}
+
+
 /***** SIDE NAVIGATION ****/
 
 aside {
@@ -15,7 +37,11 @@ aside {
 /***** TOP NAVIGATION *****/
 
 nav#topMenu {
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .menuItem>.menuItem-btn {
