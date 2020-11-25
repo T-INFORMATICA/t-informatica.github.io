@@ -9,9 +9,9 @@ function addUserToMenu(uid, user) {
     }
 
     let tmpl = `
-            <h2 id="${uid}"><a href="{{baseurl}}/profiel.html?leerling=${uid}">${user.naam}</a></h2>
-            <a href="{{baseurl}}/rapport.html?leerling=${uid}">Rapport</a>
-            <a href="{{baseurl}}/evaluaties.html?leerling=${uid}">Evaluaties</a>
+            <h2 id="${uid}"><a href="./profiel.html?leerling=${uid}">${user.naam}</a></h2>
+            <a href="./rapport.html?leerling=${uid}">Rapport</a>
+            <a href="./evaluaties.html?leerling=${uid}">Evaluaties</a>
     `;
 
     document.querySelector('#leftMenu>hr').insertAdjacentHTML('beforebegin', tmpl);
