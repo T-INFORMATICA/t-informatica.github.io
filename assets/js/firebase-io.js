@@ -31,5 +31,7 @@ function adminReadUsers() {
             userdata = childSnapshot;
             addUserToMenu(userdata.key, userdata.val());
         });
+
+        addAdmincontrolsToMenu();
     });
 }
