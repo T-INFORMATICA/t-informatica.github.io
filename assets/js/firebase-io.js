@@ -16,7 +16,7 @@ function readUser(uid) {
 
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('leerling');
-        console.log(userdata);
+        console.log(userdata.key);
 
         leerlingen = {...leerlingen, ...userdata};
         if (userdata.val().admin) {
