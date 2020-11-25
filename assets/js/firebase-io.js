@@ -12,7 +12,9 @@ function saveToFirebase(userid, userdata) {
 
 function readUserDataFromFirebase(uid) {
     return firebase.database().ref(`users/${uid}`).once('value').then(function(snapshot) {
-        users = snapshot;
+        userdata = snapshot;
+
+        console.log(userdata);
 
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('select');
