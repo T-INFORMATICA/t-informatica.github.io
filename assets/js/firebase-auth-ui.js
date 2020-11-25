@@ -8,9 +8,12 @@ ui.start('#firebaseui-auth-container', {
     // Other config options...
 });*/
 
+var _user;
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log(user);
+        _user = user;
         document.getElementById('loader').style.display = 'none';
     } else {
 
