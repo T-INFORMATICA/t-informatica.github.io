@@ -10,8 +10,8 @@ function saveToFirebase(userid, userdata) {
         });
 }
 
-function readUserDataFromFirebase() {
-    return firebase.database().ref('users/VPjXPzjhUte95bdGWRVL06aSyeX2').once('value').then(function(snapshot) {
+function readUserDataFromFirebase(uid) {
+    return firebase.database().ref(`users/${uid}`).once('value').then(function(snapshot) {
         users = snapshot;
 
         const urlParams = new URLSearchParams(window.location.search);
