@@ -3,6 +3,7 @@ function initialize(user) {
 }
 
 function addUserToMenu(user) {
+    console.log(user);
     if (document.querySelector(`#${user.uid}`)) {
         return;
     }
