@@ -1,6 +1,5 @@
 function initialize(user) {
     readUser(user.uid);
-
 }
 
 function addUserToMenu(user) {
