@@ -10,7 +10,7 @@ ui.start('#firebaseui-auth-container', {
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        console.log("succes");
+        console.log(user);
         document.getElementById('loader').style.display = 'none';
     } else {
 
