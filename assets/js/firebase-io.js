@@ -35,7 +35,7 @@ function adminReadUsers() {
         let recipeId = urlParams.get('select');
 
         let valueFound = snapshot.forEach(function (childSnapshot) {
-            userdata = childSnapshot.val();
+            userdata = childSnapshot;
             leerlingen.push(userdata.val());
         });
     });
