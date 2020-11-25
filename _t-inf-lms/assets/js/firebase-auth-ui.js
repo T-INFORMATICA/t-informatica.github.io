@@ -12,9 +12,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log("succes");
         document.getElementById('loader').style.display = 'none';
-        document.querySelector("header>h1").style.display = 'none';
-        document.querySelector("header>h2").style.display = 'none';
-        document.querySelector("header>form#editRecipe").style.display = 'block';
     } else {
 
         var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
@@ -26,9 +23,6 @@ firebase.auth().onAuthStateChanged(function(user) {
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
                     console.log("succes");
-                    document.querySelector("header>h1").style.display = 'none';
-                    document.querySelector("header>h2").style.display = 'none';
-                    document.querySelector("header>form#editRecipe").style.display = 'block';
                     return false;
                 },
                 uiShown: function() {

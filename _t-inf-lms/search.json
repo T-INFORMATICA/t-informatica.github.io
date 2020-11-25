@@ -5,7 +5,7 @@
 
       "title"       :   "Code Editors",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/basis/basiskennis/code-editors.html",
       "description" :   "",
       "course"      :   "basis"
@@ -16,7 +16,7 @@
 
       "title"       :   "FTP",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/basis/basiskennis/ftp.html",
       "description" :   "",
       "course"      :   "basis"
@@ -27,7 +27,7 @@
 
       "title"       :   "Basiskennis",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/basis/basiskennis/index.html",
       "description" :   "",
       "course"      :   "basis"
@@ -38,7 +38,7 @@
 
       "title"       :   "Source Control",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/basis/basiskennis/source-control.html",
       "description" :   "",
       "course"      :   "basis"
@@ -49,7 +49,7 @@
 
       "title"       :   "Talstelsels",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/basis/basiskennis/talstelsels.html",
       "description" :   "",
       "course"      :   "basis"
@@ -60,7 +60,7 @@
 
       "title"       :   "Basis",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/basis/index.html",
       "description" :   "",
       "course"      :   "basis"
@@ -71,7 +71,7 @@
 
       "title"       :   "Fouten in Relationele Databanken",
       "tags"        :   "redundantie, herhalende groep, niet-gestandaardiseerde waarde, samengestelde data, enkelvoudige data, cel, record, field",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html",
       "description" :   "Wanneer je niet gewend bent om te werken met relationele databanken zijn sommige fouten snel gemaakt. In dit hoofdstuk leer je die fouten te herkennen en vermijden.",
       "course"      :   "databanken"
@@ -82,7 +82,7 @@
 
       "title"       :   "Database Ontwerp",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/index.html",
       "description" :   "",
       "course"      :   "databanken"
@@ -93,7 +93,7 @@
 
       "title"       :   "Data",
       "tags"        :   "databank, relationele databank, data",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html",
       "description" :   "Om te kunnen werken met databanken, is het belangrijk om te weten wat data precies is. In dit deel krijg je duidelijk te zien wat data precies is en waar een databank voor dient.",
       "course"      :   "databanken"
@@ -104,7 +104,7 @@
 
       "title"       :   "Multipliciteit",
       "tags"        :   "optionaliteit, kardinaliteit, multipliciteit, relatie, kindtabel, oudertabel",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html",
       "description" :   "Een relatie toont dat een oudertabel en kindtabel zijn verbonden met elkaar. Het is vaak belangrijk te weten op welke manier deze verbonden zijn. De multipliciteit in een relatie is daarbij heel belangrijk.",
       "course"      :   "databanken"
@@ -115,7 +115,7 @@
 
       "title"       :   "Normalisatie en Standaardisatie",
       "tags"        :   "normaliseren, NF1, NF2, NF3, normaalvorm, standaardisatie, functionele afhankelijkheid, partiële afhankelijkheid",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html",
       "description" :   "Een relationele databank bestaat uit tabellen. Maar hoe maak je nu een goede databank?",
       "course"      :   "databanken"
@@ -126,7 +126,7 @@
 
       "title"       :   "Sleutels",
       "tags"        :   "primaire sleutel, kandidaatsleutel, alternatieve sleutel, refererende sleutel, relatie, kindtabel, oudertabel",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html",
       "description" :   "Een relationele databank bestaat uit tabellen. Maar hoe zijn die tabellen met elkaar verbonden? In dit hoofdstuk wordt uitgelegd hoe sleutels hier een sleutelrol in spelen.",
       "course"      :   "databanken"
@@ -137,7 +137,7 @@
 
       "title"       :   "Tabellen",
       "tags"        :   "field, record, populatie",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html",
       "description" :   "Elke relationele databank bestaat uit tabellen (ook wel relaties genoemd). Elke tabel moet voldoen aan enkele voorwaarden, zodat je een optimale databank kunt ontwerpen.",
       "course"      :   "databanken"
@@ -148,7 +148,7 @@
 
       "title"       :   "Voorbeeld Databank",
       "tags"        :   "databank, relationele databank",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html",
       "description" :   "Met dit voorbeeld kom je voor het eerst in aanraking met data. Bekijk dit voorbeeld goed, want met deze data zullen we proberen een goede databank in elkaar te steken.",
       "course"      :   "databanken"
@@ -159,7 +159,7 @@
 
       "title"       :   "Databanken",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/index.html",
       "description" :   "",
       "course"      :   "databanken"
@@ -170,7 +170,7 @@
 
       "title"       :   "Data Filteren",
       "tags"        :   "where, limit, offset, distinct, order by",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/data-filteren.html",
       "description" :   "",
       "course"      :   "databanken"
@@ -181,7 +181,7 @@
 
       "title"       :   "Data Opvragen",
       "tags"        :   "functie, selectie, iteratie",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/data-opvragen.html",
       "description" :   "",
       "course"      :   "databanken"
@@ -192,7 +192,7 @@
 
       "title"       :   "SQL",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/index.html",
       "description" :   "",
       "course"      :   "databanken"
@@ -203,7 +203,7 @@
 
       "title"       :   "Codeblokken",
       "tags"        :   "functie, selectie, iteratie",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/inhoud-wijzigen.html",
       "description" :   "Wat zijn codeblokken?",
       "course"      :   "databanken"
@@ -214,7 +214,7 @@
 
       "title"       :   "Inleiding SQL",
       "tags"        :   "SQL, keyword, identifier, relationele databank, tabel, record, field, cel, atomair",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/inleiding.html",
       "description" :   "Net zoals een programmeertaal wordt gebruikt om te communiceren met een computer, wordt een databanktaal gebruikt om met een databank te communiceren. Een databanktaal maakt gebruik van opdrachten om te communiceren met de databank. SQL is één van de meest gebruikte databanktalen ter wereld.",
       "course"      :   "databanken"
@@ -225,7 +225,7 @@
 
       "title"       :   "Joins",
       "tags"        :   "inner join, full outer join, left outer join",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html",
       "description" :   "Meestal komt de data die je opvraagt uit een databank niet uit één tabel, maar uit verschillende tabellen die onderling verbonden zijn. In dit hoofdstuk leer je hoe je die verschillende tabellen kunt gebruiken om één resultaat tabel te maken.",
       "course"      :   "databanken"
@@ -236,7 +236,7 @@
 
       "title"       :   "Ordening",
       "tags"        :   "ordening, sorteren, ascending, descending, order by",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/ordening.html",
       "description" :   "Een resultaattabel mag sommige voorwaarden van een relationele tabel schenden. Zo mag je bijvoorbeeld bepalen dat de volgorde van rijen wel belangrijk is. In dit hoofdstuk leer je om die volgorde te bepalen.",
       "course"      :   "databanken"
@@ -247,7 +247,7 @@
 
       "title"       :   "Projecties",
       "tags"        :   "select, projectie, constante, alias",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/projecties.html",
       "description" :   "SQL wordt gebruikt om informatie op te vragen uit een databank. Die informatie krijg je terug in de vorm van een tabel. Deze tabel wordt ook wel eens de projectie genoemd.",
       "course"      :   "databanken"
@@ -258,7 +258,7 @@
 
       "title"       :   "Projecties",
       "tags"        :   "where, between, in, like",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/selecties.html",
       "description" :   "De selectie bepaalt welke records er in de resultaat-tabel van een query worden meegenomen. Hier zijn een heleboel verschillende methodes voor.",
       "course"      :   "databanken"
@@ -269,7 +269,7 @@
 
       "title"       :   "SQL Functies",
       "tags"        :   "functie, SUM, MIN, MAX, COUNT, AVG",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/statistische-informatie.html",
       "description" :   "",
       "course"      :   "databanken"
@@ -280,7 +280,7 @@
 
       "title"       :   "Codeblokken",
       "tags"        :   "functie, selectie, iteratie",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/subselects.html",
       "description" :   "Wat zijn codeblokken?",
       "course"      :   "databanken"
@@ -291,7 +291,7 @@
 
       "title"       :   "Muziek Database",
       "tags"        :   "populatie, voorbeeldpopulatie, illustratieve populatie, primaire sleutel, alternatieve sleutel",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/databanken/sql/voorbeeld.html",
       "description" :   "Met dit voorbeeld wordt een volledig uitgewerkte tabel aangereikt, waarmee je aan de slag kunt gaan om SQL te oefenen.",
       "course"      :   "databanken"
@@ -302,7 +302,7 @@
 
       "title"       :   "Courses",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/index.html",
       "description" :   "",
       "course"      :   ""
@@ -313,7 +313,7 @@
 
       "title"       :   "Codeblokken",
       "tags"        :   "functie, selectie, iteratie",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html",
       "description" :   "Wat zijn codeblokken?",
       "course"      :   "programmeren"
@@ -324,7 +324,7 @@
 
       "title"       :   "Functies",
       "tags"        :   "functie, signature, return, return value, parameter, void",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/codeblokken/functies.html",
       "description" :   "Functies zijn één van de belangrijkste codeblokken om te leren gebruiken. Ze worden gebruikt om je code beter te verdelen en structureren.",
       "course"      :   "programmeren"
@@ -335,7 +335,7 @@
 
       "title"       :   "Codeblokken",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/codeblokken/index.html",
       "description" :   "",
       "course"      :   "programmeren"
@@ -346,7 +346,7 @@
 
       "title"       :   "Iteratie",
       "tags"        :   "iteratie, for, while, array, itereren",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html",
       "description" :   "",
       "course"      :   "programmeren"
@@ -357,7 +357,7 @@
 
       "title"       :   "Selectie",
       "tags"        :   "selectie, sequentie, if, else if, else",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/codeblokken/selectie.html",
       "description" :   "",
       "course"      :   "programmeren"
@@ -368,7 +368,7 @@
 
       "title"       :   "Access Modifiers",
       "tags"        :   "public, private, protected, set, setter, get, getter",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html",
       "description" :   "Ook programmeurs maken vaak fouten. Access modifiers zijn een manier om veelgemaakte fouten te voorkomen.",
       "course"      :   "programmeren"
@@ -379,7 +379,7 @@
 
       "title"       :   "Datastructuren",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/datastructuren/index.html",
       "description" :   "",
       "course"      :   "programmeren"
@@ -390,7 +390,7 @@
 
       "title"       :   "Inheritance",
       "tags"        :   "klasse, class, superklasse, subklasse, parent, child",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html",
       "description" :   "Wanneer verschillende klassen een aantal fields of methods delen die semantisch hetzelfde zijn, wordt het DRY principe geschonden. Op verschillende plaatsen in de code kunnen methods en fields die hetzelfde doen teruggevonden worden. Met behulp van inheritance kan dit voorkomen worden.",
       "course"      :   "programmeren"
@@ -401,7 +401,7 @@
 
       "title"       :   "Klassen",
       "tags"        :   "klasse, class, constructor, field, method, klassediagram",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/datastructuren/klassen.html",
       "description" :   "Een klasse is een groep variabelen en functies die bij elkaar horen waar je een naam aan geeft. Klassen zijn, nog veel meer dan functies, hèt middel bij uitstek om ons aan het DRY principe te houden.",
       "course"      :   "programmeren"
@@ -412,7 +412,7 @@
 
       "title"       :   "Objecten",
       "tags"        :   "complex, simpel, primitive, object, instantie, constructor, new",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/datastructuren/objecten.html",
       "description" :   "Een datatype bepaalt welke soort waarde je kan opslaan in een variabele. Tot nu toe werden er enkel simpele datatypes voor variabelen behandelt - datatypes waarin slechts één waarde kon worden opgeslagen. Objecten zijn een manier om meerdere waardes die bij elkaar horen in één variabele te steken.",
       "course"      :   "programmeren"
@@ -423,7 +423,7 @@
 
       "title"       :   "Relaties",
       "tags"        :   "associatie, compositie, overerving, inheritance, relatie, klasse",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/datastructuren/relaties.html",
       "description" :   "Wanneer een klasse een variabele bevat, is er een relatie tussen die klasse en het datatype van de variabele. Ook wanneer een klasse een method bevat met een parameter van een datatype, is er een relatie tussen die klasse en het datatype van die parameter.",
       "course"      :   "programmeren"
@@ -434,7 +434,7 @@
 
       "title"       :   "Programmeren",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/index.html",
       "description" :   "",
       "course"      :   "programmeren"
@@ -445,7 +445,7 @@
 
       "title"       :   "Arrays",
       "tags"        :   "index, indexed array, associative array",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/instructies/arrays.html",
       "description" :   "Lijsten gebruiken en aanpassen.",
       "course"      :   "programmeren"
@@ -456,7 +456,7 @@
 
       "title"       :   "Expressies",
       "tags"        :   "expressie, rekenkundige operatie, logische operatie, operatie, voorwaarde, operator, vergelijking",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/instructies/expressies.html",
       "description" :   "Elk programma maakt bewerkingen met data. In dit hoofdstuk leer je de meest gekende bewerkingen toepassen binnen een programmeertaal.",
       "course"      :   "programmeren"
@@ -467,7 +467,7 @@
 
       "title"       :   "Instructies",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/instructies/index.html",
       "description" :   "",
       "course"      :   "programmeren"
@@ -478,7 +478,7 @@
 
       "title"       :   "Instructies",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/instructies/instructies.html",
       "description" :   "Programmeren is niet meer dan het geven van bevelen aan een computer. Zo'n bevel heet een instructie.",
       "course"      :   "programmeren"
@@ -489,7 +489,7 @@
 
       "title"       :   "Variabelen",
       "tags"        :   "variabele, datatype, declaratie, initialiseren, waarde",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/instructies/variabelen.html",
       "description" :   "Hoe maak je een variabele aan?",
       "course"      :   "programmeren"
@@ -500,7 +500,7 @@
 
       "title"       :   "Domeinmodel",
       "tags"        :   "gemeenschappelijke taal, probleembeschrijving, kapstok klasse, entiteit, regel, rule, actie, action, state",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/software-ontwikkeling/domeinmodel.html",
       "description" :   "Een programma bestaat uit een heleboel verschillende klassen die allemaal samen moeten werken. In dit hoofdstuk leer je zelf te bepalen welke klassen en relaties daartussen je best kan aanmaken.",
       "course"      :   "programmeren"
@@ -511,7 +511,7 @@
 
       "title"       :   "Software Ontwikkeling",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/programmeren/software-ontwikkeling/index.html",
       "description" :   "",
       "course"      :   "programmeren"
@@ -522,7 +522,7 @@
 
       "title"       :   "Box Model",
       "tags"        :   "box model, padding, margin, border, box-sizing",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/css/box-model.html",
       "description" :   "Bij opmaak zijn de twee meest bepalende factoren kleur en grootte. In dit hoofdstuk wordt getoond hoe je de ruimte kan bepalen die elk element inneemt.",
       "course"      :   "webontwikkeling"
@@ -533,7 +533,7 @@
 
       "title"       :   "CSS",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/css/css.html",
       "description" :   "Opmaak is een belangrijk onderdeel van elke website. Hoe laat je een element er goed uitzien? In dit hoofdstuk wordt een algemene inleiding gegeven over de rol van CSS in webontwikkeling.",
       "course"      :   "webontwikkeling"
@@ -544,7 +544,7 @@
 
       "title"       :   "CSS",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/css/index.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -555,7 +555,7 @@
 
       "title"       :   "Kleuren",
       "tags"        :   "hexadecimale waarde, kleurnaam, rgb waarde",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/css/kleuren.html",
       "description" :   "Bij opmaak spelen kleuren een belangrijke rol. In CSS zijn er verschillende manieren om een kleur te bepalen. In dit hoofdstuk krijg je de drie belangrijkste aangeleerd.",
       "course"      :   "webontwikkeling"
@@ -566,7 +566,7 @@
 
       "title"       :   "Selectors",
       "tags"        :   "voorrang, conflicterende stijlregels",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/css/selectors.html",
       "description" :   "Bij het opmaken van een website wil je vaak dezelfde stijlregels toepassen op veel verschillende elementen. Selectors geven CSS de mogelijkheid om bijvoorbeeld alle h1 elementen er hetzelfde te laten uitzien.",
       "course"      :   "webontwikkeling"
@@ -577,7 +577,7 @@
 
       "title"       :   "Tekst en Lettertypes",
       "tags"        :   "font, generic family, font family, serif, sans-serif, monospace, em",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/css/tekst.html",
       "description" :   "Een lettertype kan veel vertellen over de inhoud, toon en het doel van een webpagina. In dit hoofdstuk wordt dieper ingegaan op de verschillende manieren waarop je met CSS lettertypes kunt manipuleren.",
       "course"      :   "webontwikkeling"
@@ -588,7 +588,7 @@
 
       "title"       :   "PHP",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax-php.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -599,7 +599,7 @@
 
       "title"       :   "AJAX",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -610,7 +610,7 @@
 
       "title"       :   "Formulieren",
       "tags"        :   "POST, form, input",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/formulieren.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -621,7 +621,7 @@
 
       "title"       :   "Dynamische Websites",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/index.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -632,7 +632,7 @@
 
       "title"       :   "JSON",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/json.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -643,7 +643,7 @@
 
       "title"       :   "SQL Database Connection",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/sql-database-connection.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -654,7 +654,7 @@
 
       "title"       :   "URL Parameters",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -665,7 +665,7 @@
 
       "title"       :   "XML",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/dynamische-websites/xml.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -676,7 +676,7 @@
 
       "title"       :   "Attributes",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/attributen.html",
       "description" :   "Sommige onderdelen op een website hebben meer informatie nodig. HTML gebruikt attributes om deze extra informatie aan te duiden. In dit hoofdstuk leer je werken met attributes.",
       "course"      :   "webontwikkeling"
@@ -687,7 +687,7 @@
 
       "title"       :   "Block en Inline",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html",
       "description" :   "Elke website heeft grote en kleine onderdelen. Sommigen nemen veel ruimte in beslag, anderen kan je toevoegen in het midden van een zin. Het verschil tussen deze twee soorten onderdelen wordt in dit hoofdstuk verder toegelicht.",
       "course"      :   "webontwikkeling"
@@ -698,7 +698,7 @@
 
       "title"       :   "Markup met HTML",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/elementen.html",
       "description" :   "Een website bestaat vaak uit verschillende onderdelen. Met HTML worden die onderdelen door jou, de ontwikkelaar, correct aangeduid. In dit hoofdstuk wordt uitgelegd hoe HTML jou daartoe in staat stelt.",
       "course"      :   "webontwikkeling"
@@ -709,7 +709,7 @@
 
       "title"       :   "HTML",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/index.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -720,7 +720,7 @@
 
       "title"       :   "Markup met Markdown",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/markdown.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -731,7 +731,7 @@
 
       "title"       :   "Markup",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/markup-languages.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -742,7 +742,7 @@
 
       "title"       :   "Semantiek",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/semantiek.html",
       "description" :   "Een website bestaat uit veel verschillende onderdelen. HTML voorziet heel veel mogelijkheden om die onderdelen correct aan te duiden, maar vaak is er maar één optie de meest correcte. In dit hoofdstuk wordt verder uitgelegd welke onderdelen je best op een bepaalde manier aanduidt.",
       "course"      :   "webontwikkeling"
@@ -753,7 +753,7 @@
 
       "title"       :   "Structuur",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/structuur.html",
       "description" :   "Websites veranderen vaak. Het is dus belangrijk dat je je code zo opbouwt dat die veranderingen gemakkelijk te maken zijn, zonder dat je daar als ontwikkelaar veel werk aan hebt. Een goede structuur is daarbij enorm belangrijk. In dit hoofdstuk wordt verder uitgelegd hoe je zo'n structuur kunt opbouwen.",
       "course"      :   "webontwikkeling"
@@ -764,7 +764,7 @@
 
       "title"       :   "Websites Maken",
       "tags"        :   "HTML, CSS",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html",
       "description" :   "Wanneer je begint met webontwikkeling, is het belangrijk om het verschil te kennen tussen structuur en opmaak. Ook de termen server, client en browser mogen je niet vreemd zijn. In dit hoofdstuk wordt dus een algemene inleiding gegeven hoe websites worden ontwikkeld, en wat je hiervoor allemaal nodig hebt.",
       "course"      :   "webontwikkeling"
@@ -775,7 +775,7 @@
 
       "title"       :   "Webontwikkeling",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/index.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -786,7 +786,7 @@
 
       "title"       :   "CSS Grid Inleiding",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -797,7 +797,7 @@
 
       "title"       :   "CSS Grid Basisbegrippen",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -808,7 +808,7 @@
 
       "title"       :   "CSS Grid Implementatie",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -819,7 +819,7 @@
 
       "title"       :   "CSS Grid",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/layout/index.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -830,7 +830,7 @@
 
       "title"       :   "Responsive Webdesign",
       "tags"        :   "media query, viewport, mobile first",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/layout/responsive-webdesign.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -841,7 +841,7 @@
 
       "title"       :   "CSS Grid Uitbreiding",
       "tags"        :   "instructie, commentaar",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -852,7 +852,7 @@
 
       "title"       :   "Icons",
       "tags"        :   "icon, rasterized image, vectorized image, icon library",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/statische-websites/icons.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -863,7 +863,7 @@
 
       "title"       :   "Programmeren",
       "tags"        :   "",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/statische-websites/index.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -874,7 +874,7 @@
 
       "title"       :   "Menu",
       "tags"        :   "verticaal menu, horizontaal menu",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/statische-websites/menu.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -885,7 +885,7 @@
 
       "title"       :   "Modal Popup Window",
       "tags"        :   "modal, popup, window, target",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/statische-websites/modal-popup.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
@@ -896,7 +896,7 @@
 
       "title"       :   "Popup",
       "tags"        :   "popup, target",
-      "date"        :   "2020-11-25 16:43:45 +0100",
+      "date"        :   "2020-11-25 16:47:16 +0100",
       "url"         :   "/_t-inf-lms/courses/webontwikkeling/statische-websites/popup.html",
       "description" :   "",
       "course"      :   "webontwikkeling"
