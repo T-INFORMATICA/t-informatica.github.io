@@ -10,7 +10,7 @@ function saveToFirebase(userid, userdata) {
 
 var leerlingen = {};
 
-function readUser(uid) {
+async function readUser(uid) {
     return firebase.database().ref(`users/${uid}`).once('value').then(function (snapshot) {
         userdata = snapshot;
 
@@ -19,14 +19,14 @@ function readUser(uid) {
 
         leerlingen[userdata.key] = userdata.val();
         if (userdata.val().admin) {
-            adminReadUsers();
+            leerlingen = await adminReadUsers();
         }
         console.log(leerlingen);
         return leerlingen;
     });
 }
 
-function adminReadUsers() {
+async function adminReadUsers() {
     return firebase.database().ref(`users`).once('value').then(function (snapshot) {
         userdata = snapshot;
 
