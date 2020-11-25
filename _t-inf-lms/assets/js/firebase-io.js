@@ -11,7 +11,7 @@ function saveToFirebase(userid, userdata) {
 }
 
 function readUserDataFromFirebase() {
-    return firebase.database().ref('users').once('value').then(function(snapshot) {
+    return firebase.database().ref('users/VPjXPzjhUte95bdGWRVL06aSyeX2').once('value').then(function(snapshot) {
         users = snapshot;
 
         const urlParams = new URLSearchParams(window.location.search);
