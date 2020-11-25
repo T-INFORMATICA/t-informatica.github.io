@@ -1,0 +1,135 @@
+
+/***** MAIN TEXT COMPOSITION ********/
+
+#chapterTags .tag {
+    background-color: #30638e;
+    color: white;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 0px 8px;
+    font-size: 14px;
+}
+
+/***** BODY LAYOUT ********/
+
+footer {
+    background-color: #403f4c;
+}
+
+aside:first-of-type {
+    background-color: #fafafa;
+}
+
+
+/***** RIGHT SIDE NAVIGATION ****/
+
+#rightMenu {
+    border-left: 1px solid #dedede;
+}
+
+#rightMenu a {
+    color: #888;
+}
+
+#rightMenu a:hover {
+    color: #3176d9;
+}
+
+#rightMenu hr {
+    border: none;
+    border-top: 1px solid #dedede;
+}
+
+#pageActions a {
+    color: #3176d9;
+    font-weight: bold;
+}
+
+#pageActions a:hover {
+    color: #30638e;
+}
+
+
+/***** LEFT SIDE NAVIGATION ****/
+
+#leftMenu {
+    background-color: #fafafa;
+    border-right: 1px solid #dedede;
+    overflow-y: auto;
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#leftMenu::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+#leftMenu h1 {
+    font-size: 24px;
+}
+
+#leftMenu h1, h2, h3 {
+    line-height: 0.9;
+    letter-spacing: 3px;
+}
+
+#leftMenu a:hover {
+    color: #3176d9;
+}
+
+/***** TOP NAVIGATION *****/
+
+nav#topMenu {
+    box-shadow: 0 0 5px black;
+    background-color: #30638e;
+    color: #cbd8e3;
+    font-size: 18px;
+}
+
+#topMenu fieldset {
+    border: 1px solid #8c8c8c;
+    background-color: #fafafa;
+    color: black;
+}
+
+#topMenu fieldset legend {
+    background-color: #8c8c8c;
+    color: #fafafa;
+}
+
+.menuItem-btn-dropdown+.menuItem-dropdown {
+    display: none;
+}
+
+.menuItem:hover {
+    background-color: white;
+    color: black;
+}
+
+.menuItem-btn-dropdown:hover+.menuItem-dropdown,
+.menuItem-btn-dropdown+.menuItem-dropdown:hover {
+    display: block;
+}
+
+.menuItem-dropdown {
+    background-color: white;
+    overflow-y: auto;
+    box-shadow: 0 10px 5px -10px black;
+}
+
+nav#topMenu ul {
+    list-style-type: none;
+}
+
+/****** CODE BLOCKS **********/
+
+pre {
+    color: #ddd;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 16px;
+    font-family: monospace;
+}

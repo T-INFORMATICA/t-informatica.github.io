@@ -1,43 +1,49 @@
-{% if page.name == "index.php" %} 
-<!-- application page -->
-<?php
-  session_start();
-?>
-{% endif %}
 
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="{{site.baseurl}}/assets/js/encodeHTML.js"></script> 
-
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toegepaste Informatica</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css">
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      {% include mainNavigation.html %}
+        <nav id="topMenu">
+            <ul>
+                <li class="menuItem" data-state="hamburger" id="hamburger">
+                    <a href="#hamburger" class="menuItem-btn material-icons hamburger-open">menu</a>
+                    <a href="#hamburger-close" class="menuItem-btn material-icons hamburger-close">close</a>
+                </li>
+                {% for course in site.data.courses %}
+                <li class="menuItem">
+                    <a class="menuItem-btn menuItem-btn-dropdown">
+                        {{ course.name }}
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </a>
+                    <div class="menuItem-dropdown">
+                        {% include navigationlist.html course=course.name %}
+                    </div>
+                </li>
+                {% endfor %}
+                <li class="menuItem" data-state="right-aligned">
+                    <a href="" class="menuItem-btn material-icons">person</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div id="mainLayoutGridContainer">
-        {{ content }}
-      <footer>
-        
-      </footer>
-    </div>
-  </body>
-  <!-- Configuration -->
-  <script>
-      SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '{{site.baseurl}}/search.json'
-      })
-  </script>
+
+
+{{ content }}
+
+    <footer>
+        created by Sam Van Battel
+    </footer>
+</body>
 </html>
