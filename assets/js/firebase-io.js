@@ -8,6 +8,8 @@ function saveToFirebase(userid, userdata) {
         });
 }
 
+var leerlingen = [];
+
 function readUser(uid) {
     return firebase.database().ref(`users/${uid}`).once('value').then(function (snapshot) {
         userdata = snapshot;
@@ -15,9 +17,11 @@ function readUser(uid) {
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('leerling');
 
+        leerlingen.push(userdata.val());
         if (userdata.val().admin) {
             adminReadUsers();
         }
+        console.log(leerlingen);
     });
 }
 
@@ -31,8 +35,8 @@ function adminReadUsers() {
         let recipeId = urlParams.get('select');
 
         let valueFound = snapshot.forEach(function (childSnapshot) {
-            user = childSnapshot.val();
-            console.log(user);
+            userdata = childSnapshot.val();
+            leerlingen.push(userdata.val());
         });
     });
 }
