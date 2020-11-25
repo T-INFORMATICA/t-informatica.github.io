@@ -1,9 +1,69 @@
 
+/***** MAIN TEXT COMPOSITION ********/
+
+#chapterTags .tag {
+    background-color: #30638e;
+    color: white;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 0px 8px;
+    font-size: 14px;
+}
+
+/***** BODY LAYOUT ********/
+
+footer {
+    background-color: #403f4c;
+}
+
+aside:first-of-type {
+    background-color: #fafafa;
+}
+
+
+/***** RIGHT SIDE NAVIGATION ****/
+
+#rightMenu {
+    border-left: 1px solid #dedede;
+}
+
+#rightMenu a {
+    color: #888;
+}
+
+#rightMenu a:hover {
+    color: #3176d9;
+}
+
+#rightMenu hr {
+    border: none;
+    border-top: 1px solid #dedede;
+}
+
+#pageActions a {
+    color: #3176d9;
+    font-weight: bold;
+}
+
+#pageActions a:hover {
+    color: #30638e;
+}
+
+
 /***** LEFT SIDE NAVIGATION ****/
 
 #leftMenu {
     background-color: #fafafa;
     border-right: 1px solid #dedede;
+    overflow-y: auto;
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#leftMenu::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 #leftMenu h1 {
@@ -32,12 +92,10 @@ nav#topMenu {
     border: 1px solid #8c8c8c;
     background-color: #fafafa;
     color: black;
-    margin: 8px;
 }
 
 #topMenu fieldset legend {
     background-color: #8c8c8c;
-    padding: 2px 4px;
     color: #fafafa;
 }
 
@@ -73,4 +131,5 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     padding: 16px;
+    font-family: monospace;
 }
