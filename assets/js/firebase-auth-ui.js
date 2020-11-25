@@ -12,9 +12,10 @@ var _user;
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        console.log(user);
+        console.log('succes');
         _user = user;
         document.getElementById('loader').style.display = 'none';
+        initialize(user);
     } else {
 
         var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
@@ -26,6 +27,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
                     console.log("succes");
+                    initialize(user);
                     return false;
                 },
                 uiShown: function() {
