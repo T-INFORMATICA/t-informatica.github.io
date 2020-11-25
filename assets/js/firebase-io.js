@@ -31,6 +31,5 @@ function adminReadUsers() {
             userdata = childSnapshot;
             addUserToMenu(userdata.val());
         });
-        return leerlingen;
     });
 }
