@@ -4,7 +4,7 @@ function initialize(user) {
 
 function addUserToMenu(uid, user) {
     console.log(user);
-    if (document.querySelector(`#${uid}`)) {
+    if (user.admin || document.querySelector(`#${uid}`)) {
         return;
     }
 
