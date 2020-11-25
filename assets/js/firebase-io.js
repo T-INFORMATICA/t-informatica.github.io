@@ -8,31 +8,28 @@ function saveToFirebase(userid, userdata) {
         });
 }
 
-var leerlingen = {};
 
-async function readUser(uid) {
+function readUser(uid) {
     return firebase.database().ref(`users/${uid}`).once('value').then(function (snapshot) {
-        userdata = snapshot;
 
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('leerling');
 
-        leerlingen[userdata.key] = userdata.val();
+        userdata = snapshot;
+        addUserToMenu(userdata.val());
         if (userdata.val().admin) {
-            leerlingen = await adminReadUsers();
+            adminReadUsers();
         }
-        console.log(leerlingen);
-        return leerlingen;
     });
 }
 
-async function adminReadUsers() {
+function adminReadUsers() {
     return firebase.database().ref(`users`).once('value').then(function (snapshot) {
         userdata = snapshot;
 
         let valueFound = snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
-            leerlingen[userdata.key] = userdata.val();
+            addUserToMenu(userdata.val());
         });
         return leerlingen;
     });
