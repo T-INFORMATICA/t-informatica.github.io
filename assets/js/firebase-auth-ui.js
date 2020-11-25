@@ -12,7 +12,7 @@ var _user;
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        console.log('succes');
+        console.log('succes - already logged in');
         _user = user;
         document.getElementById('loader').style.display = 'none';
         initialize(user);
@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     // User successfully signed in.
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
-                    console.log("succes");
+                    console.log("succes - logged in");
                     initialize(user);
                     return false;
                 },
