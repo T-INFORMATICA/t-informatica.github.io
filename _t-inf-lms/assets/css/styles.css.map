@@ -3,11 +3,11 @@
 	"file": "styles.css",
 	"sources": [
 		"styles.scss",
-		"_sass/default.css",
-		"_sass/composition.css",
-		"_sass/utilities.css",
-		"_sass/blocks.css",
-		"_sass/exceptions.css",
+		"_sass/default.scss",
+		"_sass/composition.scss",
+		"_sass/utilities.scss",
+		"_sass/blocks.scss",
+		"_sass/exceptions.scss",
 		"_sass/syntax-highlighting.scss"
 	],
 	"sourcesContent": [
