@@ -104,7 +104,7 @@ aside:first-of-type { background-color: #fafafa; }
 
 #rightMenu a:hover { color: #3176d9; }
 
-#rightMenu hr { border: none; border-top: 1px solid #dedede; }
+hr { border: none; border-top: 1px solid #dedede; }
 
 #pageActions a { color: #3176d9; font-weight: bold; }
 

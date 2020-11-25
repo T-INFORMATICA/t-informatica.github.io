@@ -1,8 +1,7 @@
 {
     "users": {
-        "1": {
+        "VPjXPzjhUte95bdGWRVL06aSyeX2": {
             "naam": "Joske Vermeulen",
-            "email": "soms.goeiemorgen@gmail.com",
             "username": "bin20",
             "url": "bin20.piustien.net",
             "password": "4!951&5",
@@ -11,7 +10,7 @@
     },
 
     "resultaten": {
-        "1": [
+        "VPjXPzjhUte95bdGWRVL06aSyeX2": [
             {
                 "subject": "variabelen",
                 "result": "A",
@@ -34,7 +33,7 @@
     },
 
     "evaluaties": {
-        "1": {
+        "VPjXPzjhUte95bdGWRVL06aSyeX2": {
             "test1": {
                 "name": "test1",
                 "date": "2020-11-20"
