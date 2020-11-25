@@ -16,6 +16,7 @@ function readUser(uid) {
 
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('leerling');
+        console.log(userdata);
 
         leerlingen = {...leerlingen, ...userdata};
         if (userdata.val().admin) {
@@ -30,13 +31,9 @@ function adminReadUsers() {
         userdata = snapshot;
 
         console.log(userdata.val());
+        leerlingen = {...leerlingen, ...userdata.val()};
 
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('select');
-
-        let valueFound = snapshot.forEach(function (childSnapshot) {
-            userdata = childSnapshot;
-            leerlingen = {...leerlingen, ...userdata};
-        });
     });
 }
