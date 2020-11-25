@@ -14,9 +14,18 @@
     <header>
         <nav id="topMenu">
             <ul>
+                <li class="menuItem" data-state="hamburger" id="hamburger">
+                    <a href="#hamburger" class="menuItem-btn material-icons hamburger-open">menu</a>
+                    <a href="#hamburger-close" class="menuItem-btn material-icons hamburger-close">close</a>
+                </li>
                 {% for course in site.data.courses %}
                 <li class="menuItem">
-                    <a class="menuItem-btn menuItem-btn-dropdown">{{ course.name }}</a>
+                    <a class="menuItem-btn menuItem-btn-dropdown">
+                        {{ course.name }}
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </a>
                     <div class="menuItem-dropdown">
                         {% include navigationlist.html course=course.name %}
                     </div>
@@ -29,19 +38,11 @@
         </nav>
     </header>
 
-    <aside>
-        <nav id="leftMenu">
-            {% for course in site.data.courses %}
-                {% include navigationlist.html course=course.name %}
-            {% endfor %}
-        </nav>
-    </aside>
-    <main>
+
 {{ content }}
-    </main>
 
     <footer>
-
+        created by Sam Van Battel
     </footer>
 </body>
 </html>

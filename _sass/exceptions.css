@@ -1,3 +1,30 @@
 .menuItem[data-state='right-aligned'] {
     margin-left: auto;
 }
+
+/***** hamburger menu *********/
+
+.menuItem[data-state='hamburger']>.hamburger-close {
+    display: none;
+}
+.menuItem[data-state='hamburger']:target>.hamburger-close {
+    display: block;
+}
+.menuItem[data-state='hamburger']:target>.hamburger-open {
+    display: none;
+}
+.menuItem[data-state='hamburger']~* {
+    display: none;
+}
+.menuItem[data-state='hamburger']:target~* {
+    display: initial;
+}
+
+@media only screen and (min-width: 600px) {
+    .menuItem[data-state='hamburger'] {
+        display: none;
+    }
+    .menuItem[data-state='hamburger']~* {
+        display: initial;
+    }
+}

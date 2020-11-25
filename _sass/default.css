@@ -16,22 +16,31 @@
     font-family: inherit;
     font-size: inherit;
     line-height: 1.5;
+    font-size: inherit;
+}
+
+ol, ul {
+    list-style-type: none;
 }
 
 u {
     text-decoration: underline;
 }
 
+em,
 i {
     font-style: italic;
 }
 
+strong,
 b {
     font-weight: bold;
 }
 
 img {
-    width: 100%;
+    /*width: 100%;*/
+    height: auto;
+    max-width: 100%;
 }
 
 /* de waardes hieronder kunnen verschillen van website tot website. */
@@ -40,8 +49,8 @@ html {
     font-family: sans-serif;
 }
 
-p {
-    font-size: 18px;
+body {
+    min-height: 100%;
 }
 
 h1, h2, h3 {

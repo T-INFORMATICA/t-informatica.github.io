@@ -14,9 +14,18 @@
     <header>
         <nav id="topMenu">
             <ul>
+                <li class="menuItem" data-state="hamburger" id="hamburger">
+                    <a href="#hamburger" class="menuItem-btn material-icons hamburger-open">menu</a>
+                    <a href="#hamburger-close" class="menuItem-btn material-icons hamburger-close">close</a>
+                </li>
                 
                 <li class="menuItem">
-                    <a class="menuItem-btn menuItem-btn-dropdown">basis</a>
+                    <a class="menuItem-btn menuItem-btn-dropdown">
+                        basis
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </a>
                     <div class="menuItem-dropdown">
                         <div><fieldset>
             <legend>
@@ -36,7 +45,12 @@
                 </li>
                 
                 <li class="menuItem">
-                    <a class="menuItem-btn menuItem-btn-dropdown">programmeren</a>
+                    <a class="menuItem-btn menuItem-btn-dropdown">
+                        programmeren
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </a>
                     <div class="menuItem-dropdown">
                         <div><fieldset>
             <legend>
@@ -91,7 +105,12 @@
                 </li>
                 
                 <li class="menuItem">
-                    <a class="menuItem-btn menuItem-btn-dropdown">webontwikkeling</a>
+                    <a class="menuItem-btn menuItem-btn-dropdown">
+                        webontwikkeling
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </a>
                     <div class="menuItem-dropdown">
                         <div><fieldset>
             <legend>
@@ -175,7 +194,12 @@
                 </li>
                 
                 <li class="menuItem">
-                    <a class="menuItem-btn menuItem-btn-dropdown">databanken</a>
+                    <a class="menuItem-btn menuItem-btn-dropdown">
+                        databanken
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </a>
                     <div class="menuItem-dropdown">
                         <div><fieldset>
             <legend>
@@ -224,197 +248,9 @@
         </nav>
     </header>
 
-    <aside>
-        <nav id="leftMenu">
-            
-                <div><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/basis/basiskennis/">basiskennis</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/basis/basiskennis/code-editors.html">code editors</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/basis/basiskennis/source-control.html">source control</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/basis/basiskennis/ftp.html">ftp</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/basis/basiskennis/talstelsels.html">talstelsels</a>
-                </li></ul>
-        </fieldset></div>
-            
-                <div><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/programmeren/instructies/">Instructies</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/programmeren/instructies/variabelen.html">Variabelen</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/instructies/expressies.html">Expressies</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/instructies/arrays.html">Arrays</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/instructies/instructies.html">Instructies</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/programmeren/codeblokken/">Codeblokken</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/programmeren/codeblokken/codeblokken.html">Codeblokken</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/codeblokken/functies.html">Functies</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/codeblokken/selectie.html">Selectie</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/codeblokken/iteratie.html">Iteratie</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/programmeren/datastructuren/">Datastructuren</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/programmeren/datastructuren/objecten.html">Objecten</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/datastructuren/klassen.html">Klassen</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/datastructuren/inheritance.html">Inheritance</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/datastructuren/access-modifiers.html">Access Modifiers</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/programmeren/datastructuren/relaties.html">Relaties</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/programmeren/software-ontwikkeling/">Software Ontwikkeling</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/programmeren/software-ontwikkeling/domeinmodel.html">Domeinmodel</a>
-                </li></ul>
-        </fieldset></div>
-            
-                <div><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/webontwikkeling/html">HTML</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/websites-maken.html">Websites Maken</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/markup-languages.html">Markup</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/markdown.html">Markup met Markdown</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/elementen.html">Markup met HTML</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/attributen.html">Attributen</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/block-en-inline.html">Block en Inline</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/structuur.html">Structuur</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/html/semantiek.html">Semantiek</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/webontwikkeling/css">CSS</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/css/css.html">CSS</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/css/selectors.html">Selectors</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/css/kleuren.html">Kleuren</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/css/tekst.html">Tekst</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/css/box-model.html">Box Model</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/webontwikkeling/layout">Layout</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/responsive-webdesign.html">Responsive Webdesign</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/css-grid.html">CSS Grid</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-basisbegrippen.html">Grid Basisbegrippen</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/grid-implementatie.html">Grid Implementatie</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/layout/uitbreiding.html">Uitbreiding</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites">Statische Websites</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/icons.html">Icons</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/menu.html">Menu</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/popup.html">Popup</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/statische-websites/modal-popup.html">Modal Popup</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites">Dynamische Websites</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/url-parameters.html">URL Parameters</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/xml.html">XML</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/json.html">JSON</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/webontwikkeling/dynamische-websites/ajax.html">AJAX</a>
-                </li></ul>
-        </fieldset></div>
-            
-                <div><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/databanken/database-ontwerp">Database Ontwerp</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/inleiding.html">Inleiding</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/voorbeeld.html">Désirée's Dessertenboek</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/fouten.html">Fouten</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/tabellen.html">Tabellen</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/sleutels.html">Sleutels</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/multipliciteit.html">Multipliciteit</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/database-ontwerp/normalisatie.html">Normalisatie</a>
-                </li></ul>
-        </fieldset><fieldset>
-            <legend>
-                <a href="/_t-inf-lms/courses/databanken/sql">SQL</a>
-            </legend>
-            <ul><li>
-                    <a href="/_t-inf-lms/courses/databanken/sql/inleiding.html">Inleiding</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/sql/voorbeeld.html">Muziek Database</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/sql/projecties.html">Projecties</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/sql/selecties.html">Selecties</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/sql/ordening.html">Ordening</a>
-                </li><li>
-                    <a href="/_t-inf-lms/courses/databanken/sql/meerdere-tabellen.html">Joins</a>
-                </li></ul>
-        </fieldset></div>
-            
-        </nav>
-    </aside>
-    <main>
-<section id="courseContent">
-    <nav id="courseNavigation">
-        
+
+<aside>
+    <nav id="leftMenu">
         
       <h1>Webontwikkeling</h1>
       
@@ -625,20 +461,20 @@
 
      
     </nav>
+</aside>
 
-    <section id="chapterContent">
+<main>
+    <h1>Css grid basisbegrippen</h1>
+
+    <div id="chapterTags">
         
-        <h1>Css grid basisbegrippen</h1>
+            <a href="#" class="tag">instructie</a>
+        
+            <a href="#" class="tag">commentaar</a>
+        
+    </div>
 
-        <div id="chapterTags">
-            
-                <a href="#" class="tag">instructie</a>
-            
-                <a href="#" class="tag">commentaar</a>
-            
-        </div>
-
-        <h1 id="basisbegrippen">Basisbegrippen</h1>
+    <h1 id="basisbegrippen">Basisbegrippen</h1>
 
 <h2 id="belangrijke-termen">Belangrijke termen</h2>
 
@@ -705,11 +541,10 @@
 <p><img src="/_t-inf-lms/assets/img/css-grid-9.png" alt="" style="height: auto; max-width: 100%" /></p>
 
 
+</main>
 
-    </section>
-
-
-    <section id="pageNavigation">
+<aside>
+    <nav id="rightMenu">
         
 
 <div id="pageActions">
@@ -741,12 +576,11 @@
   </li>
 </ul>
 </div>
-    </section>
-</section>
-    </main>
+    </nav>
+</aside>
 
     <footer>
-
+        created by Sam Van Battel
     </footer>
 </body>
 </html>

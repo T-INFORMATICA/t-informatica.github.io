@@ -1,28 +1,35 @@
-$(function(){
-  var lang =  localStorage.getItem( 'lang' );
+var ready = (callback) => {
+    if (document.readyState != "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+}
+
+ready(function () {
+    var lang = localStorage.getItem('lang');
     //var lang = getCookie("lang");
+    console.log(lang);
     if (lang) {
-        $(`option.${lang}`).attr("selected", "selected");
+        document.querySelector(`option.${lang}`).setAttribute("selected", "selected");
         showCode(lang);
     }
     else {
-      let id = $('select.lang-select').val();
-      localStorage.setItem( 'lang', id );
-      showCode(id);
+        let id = document.querySelector('select.lang-select').value;
+        localStorage.setItem('lang', id);
+        showCode(id);
     }
 });
 
 
-$('select.lang-select').change(function() {
-    let id = $(this).val();
-    localStorage.setItem( 'lang', id );
+document.querySelector('select.lang-select').addEventListener("change", (e) => {
+    console.log(e.target.value);
+    let id = e.target.value;
+    localStorage.setItem('lang', id);
     //setCookie("lang", id, 900);
     showCode(id);
 });
 
 function showCode(lang) {
-    $(`div.highlighter-rouge:not(.${lang})`).css("display", "none");
-    $(`div.highlighter-rouge.${lang}`).css("display", "");
+    document.querySelectorAll(`div.highlighter-rouge:not(.${lang})`).forEach(box => { box.style.display = "none"; });
+    document.querySelectorAll(`div.highlighter-rouge.${lang}`).forEach(box => { box.style.display = ""; });
 }
 /*
 function setCookie(cname, cvalue, exdays) {
