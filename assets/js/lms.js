@@ -5,7 +5,7 @@ function initialize(user) {
 function addAdmincontrolsToMenu() {
 
     let tmpl = `
-            <h2>Admin Controls</h2>
+            <h2>Admin</h2>
             <a href="./nieuweEval.html">Nieuwe Evaluatie</a>
             <hr>
     `;

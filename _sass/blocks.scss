@@ -70,7 +70,10 @@ hr {
     font-size: 24px;
 }
 
-#leftMenu h1, h2, h3 {
+#leftMenu h1, 
+#leftMenu h2,
+#leftMenu h1 *, 
+#leftMenu h2 * {
     line-height: 0.9;
     letter-spacing: 3px;
 }
