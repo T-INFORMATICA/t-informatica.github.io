@@ -2,16 +2,16 @@ function initialize(user) {
     readUser(user.uid);
 }
 
-function addUserToMenu(user) {
+function addUserToMenu(uid, user) {
     console.log(user);
-    if (document.querySelector(`#${user.uid}`)) {
+    if (document.querySelector(`#${uid}`)) {
         return;
     }
 
     let tmpl = `
-            <h2 id="${user.uid}"><a href="{{baseurl}}/profiel.html?leerling=${user.uid}">${user.naam}</a></h2>
-            <a href="{{baseurl}}/rapport.html?leerling=${user.uid}">Rapport</a>
-            <a href="{{baseurl}}/evaluaties.html?leerling=${user.uid}">Evaluaties</a>
+            <h2 id="${uid}"><a href="{{baseurl}}/profiel.html?leerling=${uid}">${user.naam}</a></h2>
+            <a href="{{baseurl}}/rapport.html?leerling=${uid}">Rapport</a>
+            <a href="{{baseurl}}/evaluaties.html?leerling=${uid}">Evaluaties</a>
     `;
 
     document.querySelector('#leftMenu>hr').insertAdjacentHTML('beforebegin', tmpl);

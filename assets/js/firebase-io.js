@@ -16,7 +16,7 @@ function readUser(uid) {
         let recipeId = urlParams.get('leerling');
 
         userdata = snapshot;
-        addUserToMenu(userdata.val());
+        addUserToMenu(userdata.key, userdata.val());
         if (userdata.val().admin) {
             adminReadUsers();
         }
@@ -29,7 +29,7 @@ function adminReadUsers() {
 
         let valueFound = snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
-            addUserToMenu(userdata.val());
+            addUserToMenu(userdata.key, userdata.val());
         });
     });
 }
