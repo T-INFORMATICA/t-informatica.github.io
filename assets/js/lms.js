@@ -4,7 +4,7 @@ function initialize(user) {
 
 function addUserToMenu(user) {
     let tmpl = `
-            <h2><a href="{{baseurl}}/profiel.html?leerling=${user.uid}">Profiel</a></h2>
+            <h2><a href="{{baseurl}}/profiel.html?leerling=${user.uid}">${user.naam}</a></h2>
             <a href="{{baseurl}}/rapport.html?leerling=${user.uid}">Rapport</a>
             <a href="{{baseurl}}/evaluaties.html?leerling=${user.uid}">Evaluaties</a>
     `;
