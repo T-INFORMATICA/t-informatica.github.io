@@ -8,7 +8,7 @@ function saveToFirebase(userid, userdata) {
         });
 }
 
-var leerlingen = [];
+var leerlingen = {};
 
 function readUser(uid) {
     return firebase.database().ref(`users/${uid}`).once('value').then(function (snapshot) {
@@ -17,7 +17,7 @@ function readUser(uid) {
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('leerling');
 
-        leerlingen.push(userdata.val());
+        leerlingen = {...leerlingen, ...userdata};
         if (userdata.val().admin) {
             adminReadUsers();
         }
@@ -36,7 +36,7 @@ function adminReadUsers() {
 
         let valueFound = snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
-            leerlingen.push(userdata.val());
+            leerlingen = {...leerlingen, ...userdata};
         });
     });
 }
