@@ -16,9 +16,8 @@ function readUser(uid) {
 
         const urlParams = new URLSearchParams(window.location.search);
         let recipeId = urlParams.get('leerling');
-        console.log(userdata.key);
 
-        leerlingen = {...leerlingen, ...userdata};
+        leerlingen[userdata.key] = userdata.val();
         if (userdata.val().admin) {
             adminReadUsers();
         }
@@ -30,10 +29,9 @@ function adminReadUsers() {
     return firebase.database().ref(`users`).once('value').then(function (snapshot) {
         userdata = snapshot;
 
-        console.log(userdata.val());
-        leerlingen = {...leerlingen, ...userdata.val()};
-
-        const urlParams = new URLSearchParams(window.location.search);
-        let recipeId = urlParams.get('select');
+        let valueFound = snapshot.forEach(function (childSnapshot) {
+            userdata = childSnapshot;
+            leerlingen[userdata.key] = userdata.val();
+        });
     });
 }
