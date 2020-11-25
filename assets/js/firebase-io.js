@@ -22,6 +22,7 @@ function readUser(uid) {
             adminReadUsers();
         }
         console.log(leerlingen);
+        return leerlingen;
     });
 }
 
@@ -33,5 +34,6 @@ function adminReadUsers() {
             userdata = childSnapshot;
             leerlingen[userdata.key] = userdata.val();
         });
+        return leerlingen;
     });
 }
