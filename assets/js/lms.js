@@ -3,7 +3,6 @@ function initialize(user) {
 }
 
 function addUserToMenu(user) {
-    let user = users[i];
     let tmpl = `
             <h2><a href="{{baseurl}}/profiel.html?leerling=${user.uid}">Profiel</a></h2>
             <a href="{{baseurl}}/rapport.html?leerling=${user.uid}">Rapport</a>
