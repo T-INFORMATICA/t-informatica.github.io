@@ -78,6 +78,12 @@ hr {
     letter-spacing: 3px;
 }
 
+#leftMenu a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 #leftMenu a:hover {
     color: #3176d9;
 }
