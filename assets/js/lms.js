@@ -1,3 +1,5 @@
+
+
 function addAdmincontrolsToMenu() {
     let tmpl = `
             <h2>Admin</h2>
