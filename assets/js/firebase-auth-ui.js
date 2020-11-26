@@ -1,11 +1,9 @@
-var _user = firebase.auth().currentUser;
-
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log('succes - already logged in');
         _user = user;
         document.getElementById('loader').style.display = 'none';
-        initialize(user);
+        initialize();
     } else {
 
         var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
@@ -17,7 +15,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
                     console.log("succes - logged in");
-                    initialize(user);
+                    initialize();
                     return false;
                 },
                 uiShown: function() {

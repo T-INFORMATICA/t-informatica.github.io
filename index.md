@@ -4,7 +4,8 @@ layout: lms
 
 <script>
 
-function initialize(user) {
+function initialize() {
+    var user = firebase.auth().currentUser;
     readUser(user.uid);
 }
 
