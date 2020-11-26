@@ -1,4 +1,4 @@
-baseurl: "/cursus" 
+baseurl: "/_cursus" 
 
 repo: "https://github.com/T-INFORMATICA/_cursus" 
 github_user: "T-INFORMATICA"
