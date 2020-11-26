@@ -1,0 +1,35 @@
+baseurl: "/cursus" 
+
+repo: "https://github.com/T-INFORMATICA/_cursus" 
+github_user: "T-INFORMATICA"
+github_repo: "_cursus"
+
+collections:
+  courses:
+    output: true
+
+defaults:
+  - scope:
+      path: "_courses/programmeren"
+    values:
+      course: "programmeren"
+      layout: "course"
+  - scope:
+      path: "_courses/webontwikkeling"
+    values:
+      course: "webontwikkeling"
+      layout: "course"
+  - scope:
+      path: "_courses/databanken"
+    values:
+      course: "databanken"
+      layout: "course"
+  - scope:
+      path: "_courses/basis"
+    values:
+      course: "basis"
+      layout: "course"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
