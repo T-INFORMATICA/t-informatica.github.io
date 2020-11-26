@@ -27,7 +27,7 @@ function addCurrentUserToMenu() {
         userdata = snapshot.val();
 
         let tmpl = `
-            <h2 id="${user.uid}"><a href="./?leerling=${user.uid}#profiel">${userdata.naam}</a></h2>
+            <h3 id="${user.uid}"><a href="./?leerling=${user.uid}#profiel">${userdata.naam}</a></h3>
             <a href="./?leerling=${user.uid}#rapport">Rapport</a>
             <a href="./?leerling=${user.uid}#evaluaties">Evaluaties</a>
         `;
@@ -40,7 +40,7 @@ function addOtherUsersToMenu() {
     return firebase.database().ref(`users`).once('value').then(function (snapshot) {
         let tmpl = `
             <hr>
-            <h3>Manage Users</h3>
+            <h2>Manage Users</h2>
         `;
         document.querySelector('#leftMenu-logout').insertAdjacentHTML('afterend', tmpl);
 
@@ -52,7 +52,7 @@ function addOtherUsersToMenu() {
             uid = childSnapshot.key;
 
             let tmpl = `
-                <h2><a href="./?leerling=${uid}#profiel">${userdata.val().naam}</a></h2>
+                <h3><a href="./?leerling=${uid}#profiel">${userdata.val().naam}</a></h3>
                 <a href="./?leerling=${uid}#rapport">Rapport</a>
                 <a href="./?leerling=${uid}#evaluaties">Evaluaties</a>
             `;
