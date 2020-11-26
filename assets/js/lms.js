@@ -43,7 +43,7 @@ function addOtherUsersToMenu() {
             userdata = childSnapshot;
 
             let tmpl = `
-                <h2 id="${uid}"><a href="./?leerling=${uid}#profiel">${userdata.naam}</a></h2>
+                <h2><a href="./?leerling=${uid}#profiel">${userdata.naam}</a></h2>
                 <a href="./?leerling=${user.uid}#rapport">Rapport</a>
                 <a href="./?leerling=${user.uid}#evaluaties">Evaluaties</a>
             `;

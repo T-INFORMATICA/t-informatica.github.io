@@ -10,7 +10,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     createProfile();
     createResults();
     createEvals();
-    readUser(user.uid);
 });
 
 </script>
