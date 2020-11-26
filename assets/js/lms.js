@@ -10,11 +10,12 @@ function addAdmincontrolsToMenu() {
         }
 
         let tmpl = `
+                <hr>
                 <h2>Admin</h2>
                 <a href="./nieuweEval.html">Nieuwe Evaluatie</a>
                 <hr>
         `;
-        document.querySelector('#leftMenu>h1').insertAdjacentHTML('afterend', tmpl);
+        document.querySelector('#leftMenu>#leftMenu-logout').insertAdjacentHTML('afterend', tmpl);
 
         addOtherUsersToMenu();
     });
@@ -31,7 +32,7 @@ function addCurrentUserToMenu() {
             <a href="./?leerling=${user.uid}#evaluaties">Evaluaties</a>
         `;
 
-        document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('beforebegin', tmpl);
+        document.querySelector('#leftMenu>h1').insertAdjacentHTML('afterend', tmpl);
     });
 }
 
@@ -56,7 +57,7 @@ function addOtherUsersToMenu() {
                 <a href="./?leerling=${uid}#evaluaties">Evaluaties</a>
             `;
     
-            document.querySelector('#leftMenu-logout+hr').insertAdjacentHTML('afterend', tmpl);
+            document.querySelector('#leftMenu-logout+hr+h3').insertAdjacentHTML('afterend', tmpl);
         });
     });
 }
