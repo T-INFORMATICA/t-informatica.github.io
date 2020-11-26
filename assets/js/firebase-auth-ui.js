@@ -4,7 +4,7 @@ function test() {
             console.log('succes - already logged in');
             _user = user;
             document.getElementById('loader').style.display = 'none';
-            initialize();
+            //initialize();
         } else {
 
             var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
@@ -16,7 +16,7 @@ function test() {
                         // Return type determines whether we continue the redirect automatically
                         // or whether we leave that to developer to handle.
                         console.log("succes - logged in");
-                        initialize();
+                        //initialize();
                         return false;
                     },
                     uiShown: function () {
