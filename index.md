@@ -24,8 +24,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 </ul>
 
 {% for collection in site.collections %}
-    <section>
-        <h1><a href="{{ collection.directory }}">{{ collection.title }}</a></h1>
-        Label: {{ collection.label }}
-    </section>
+<section>
+    <h1><a href="{{ collection.directory }}">{{ collection.title }}</a></h1>
+    Label: {{ collection.label }}
+</section>
 {% endfor %}
