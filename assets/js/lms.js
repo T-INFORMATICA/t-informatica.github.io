@@ -57,7 +57,7 @@ function addOtherUsersToMenu() {
                 <a href="./?leerling=${uid}#evaluaties">Evaluaties</a>
             `;
     
-            document.querySelector('#leftMenu-logout+hr+h3').insertAdjacentHTML('afterend', tmpl);
+            document.querySelector('#leftMenu').innerHTML += tmpl;
         });
     });
 }
