@@ -14,5 +14,4 @@ ready(() => {
   readUser(_user.uid);
 });
 
-window.onload = readUser()
 </script>
