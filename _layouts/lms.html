@@ -2,13 +2,6 @@
 layout: default
 ---
 
-<aside>
-    <nav id="leftMenu">
-        <h1>LMS</h1>
-        <hr>
-        <a href="{{baseurl}}" id="leftMenu-logout">Logout</a>
-    </nav>
-</aside>
 
 
 
@@ -27,9 +20,25 @@ layout: default
 <script src="assets/js/firebase-io.js"></script>
 <script src="assets/js/firebase-auth-ui.js"></script>
 
+<script src="assets/js/lms.js"></script>
+
+<aside>
+    <nav id="leftMenu">
+        <h1>LMS</h1>
+        <hr>
+        <a href="{{baseurl}}" id="leftMenu-logout">Logout</a>
+    </nav>
+</aside>
+
+
 <main>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
+
+    <div id="profiel"></div>
+    <div id="rapport"></div>
+    <div id="evaluaties"></div>
+    
     {{ content }}
 </main>
 
