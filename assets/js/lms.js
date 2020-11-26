@@ -41,6 +41,9 @@ function addOtherUsersToMenu() {
 
         snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
+            if (userdata.val().admin) {
+                return;
+            }
             uid = childSnapshot.key;
 
             let tmpl = `
