@@ -1,7 +1,3 @@
-function initialize(user) {
-    
-}
-
 function addAdmincontrolsToMenu() {
     let tmpl = `
             <h2>Admin</h2>

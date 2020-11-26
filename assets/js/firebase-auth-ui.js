@@ -5,7 +5,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log('succes - already logged in');
         _user = user;
         document.getElementById('loader').style.display = 'none';
-        //initialize(user);
+        initialize(user);
     } else {
 
         var ui = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(firebase.auth());
@@ -17,8 +17,8 @@ firebase.auth().onAuthStateChanged(function(user) {
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
                     console.log("succes - logged in");
-                    //initialize(user);
-                    return true;
+                    initialize(user);
+                    return false;
                 },
                 uiShown: function() {
                 // The widget is rendered. Hide the loader.
@@ -27,7 +27,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: './',
+            signInSuccessUrl: '<url-to-redirect-to-on-success>',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID
