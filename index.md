@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     <script>
       (async () => {
-        const response = await fetch('https://api.github.com/repos/:user/:repo/contents/');
+        const response = await fetch('https://api.github.com/repos/t-informatica/_cursus/contents/');
         const data = await response.json();
         let htmlString = '<ul>';
         for (let file of data) {
