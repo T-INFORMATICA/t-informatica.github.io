@@ -14,15 +14,11 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 </script>
 
-<script>
-    (async () => {
-    const response = await fetch('https://api.github.com/repos/t-informatica/_cursus/contents/');
-    const data = await response.json();
-    let htmlString = '<ul>';
-    for (let file of data) {
-        htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-    }
-    htmlString += '</ul>';
-    document.getElementsByTagName('body')[0].innerHTML = htmlString;
-    })()
-</script>
+{% assign doclist = site.pages | sort: 'url'  %}
+<ul>
+    {% for doc in doclist %}
+        {% if doc.name contains '.md' or doc.name contains '.html' %}
+            <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
