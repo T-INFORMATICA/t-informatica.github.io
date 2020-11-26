@@ -37,6 +37,10 @@ function addCurrentUserToMenu() {
 
 function addOtherUsersToMenu() {
     return firebase.database().ref(`users`).once('value').then(function (snapshot) {
+        let tmpl = `
+            <hr>
+            <h3>Manage Users</h3>
+        `;
         document.querySelector('#leftMenu-logout').insertAdjacentHTML('afterend', '<hr>');
 
         snapshot.forEach(function (childSnapshot) {
@@ -60,8 +64,8 @@ function addOtherUsersToMenu() {
 
 
 function createMenu() {
-    addAdmincontrolsToMenu();
     addCurrentUserToMenu();
+    addAdmincontrolsToMenu();
 }
 
 function createProfile() {
