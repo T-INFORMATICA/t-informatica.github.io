@@ -11,6 +11,8 @@ var ready = (callback) => {
 }
 
 ready(() => { 
-  readUser(user.uid);
+  readUser(_user.uid);
 });
+
+window.onload = readUser()
 </script>
