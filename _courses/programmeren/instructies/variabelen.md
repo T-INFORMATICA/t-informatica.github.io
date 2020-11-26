@@ -24,7 +24,7 @@ description: Hoe maak je een variabele aan?
 ## Variabelen
 
 Stel: je bent thuis en besluit je kamer op te ruimen. Alle spullen moeten netjes in dozen worden gestoken en bewaard worden. Boeken gaan in de doos met boeken, dvds in de doos met dvds, pennen in de pennenzak, enzovoorts.
-
+ 
 Als je zo een doos vervolgens wilt bewaren in de kelder, geef je de doos eerst een naam. Uiteraard geef je deze doos een duidelijke naam, want als je een tijdje later terugkomt in de kelder op zoek naar een specifieke doos wil je die ook snel terugvinden. Geef daarom niet de naam "Doos A", "Doos B", enz. maar eerder "Strips A-Z" of "Games".
 
 In principe is dat wat variabelen zijn: dozen met een naam waar je iets kunt insteken.
