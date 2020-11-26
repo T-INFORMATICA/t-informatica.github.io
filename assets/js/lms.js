@@ -26,7 +26,7 @@ function addCurrentUserToMenu() {
         userdata = snapshot.val();
 
         let tmpl = `
-            <h2 id="${uid}"><a href="./?leerling=${uid}#profiel">${userdata.naam}</a></h2>
+            <h2 id="${user.uid}"><a href="./?leerling=${user.uid}#profiel">${userdata.naam}</a></h2>
             <a href="./?leerling=${user.uid}#rapport">Rapport</a>
             <a href="./?leerling=${user.uid}#evaluaties">Evaluaties</a>
         `;
@@ -41,11 +41,12 @@ function addOtherUsersToMenu() {
 
         snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
+            uid = childSnapshot.key;
 
             let tmpl = `
                 <h2><a href="./?leerling=${uid}#profiel">${userdata.naam}</a></h2>
-                <a href="./?leerling=${user.uid}#rapport">Rapport</a>
-                <a href="./?leerling=${user.uid}#evaluaties">Evaluaties</a>
+                <a href="./?leerling=${uid}#rapport">Rapport</a>
+                <a href="./?leerling=${uid}#evaluaties">Evaluaties</a>
             `;
     
             document.querySelector('#leftMenu-logout+hr').insertAdjacentHTML('afterend', tmpl);
