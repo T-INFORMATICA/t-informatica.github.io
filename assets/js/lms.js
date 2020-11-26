@@ -41,7 +41,7 @@ function addOtherUsersToMenu() {
             <hr>
             <h3>Manage Users</h3>
         `;
-        document.querySelector('#leftMenu-logout').insertAdjacentHTML('afterend', '<hr>');
+        document.querySelector('#leftMenu-logout').insertAdjacentHTML('afterend', tmpl);
 
         snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
