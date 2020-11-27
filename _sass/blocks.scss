@@ -154,13 +154,12 @@ pre {
 }
 
 #evaluatiesTimeline ul li .result {
-	content: "+";
 	position: absolute;
 	left: 0;
 }
 
 #evaluatiesTimeline .timeline-item {
-	padding: 3em 32px 32px;
+	padding: 48px 32px 32px;
 	position: relative;
 	border-left: 1px solid #666;
 }
@@ -168,8 +167,8 @@ pre {
 #evaluatiesTimeline .timeline-item::before {
 	content: attr(data-date);
 	position: absolute;
-	left: 2em;
-	top: 1em;
+	left: 32px;
+	top: 16px;
 	display: block;
 }
 
@@ -177,7 +176,7 @@ pre {
 	width: 10px;
 	height: 10px;
 	display: block;
-	top: 1em;
+	top: 16px;
 	position: absolute;
 	left: -7px;
 	border-radius: 100%;
