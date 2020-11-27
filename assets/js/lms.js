@@ -80,16 +80,16 @@ function createProfile() {
             userdata = childSnapshot;
             switch (userdata.key) {
                 case "username": 
-                    document.querySelector('profileUsername').innerHTML += userdata.val();
+                    document.querySelector('#profileUsername').innerHTML += userdata.val();
                     break;
                 case "naam":
-                    document.querySelector('profileName').innerHTML += userdata.val();
+                    document.querySelector('#profileName').innerHTML += userdata.val();
                     break;
                 case "password":
-                    document.querySelector('profilePassword').innerHTML += userdata.val();
+                    document.querySelector('#profilePassword').innerHTML += userdata.val();
                     break;
                 case "url":
-                    document.querySelector('profileUrl').innerHTML += userdata.val();
+                    document.querySelector('#profileUrl').innerHTML += userdata.val();
                     break;
             }
         });
