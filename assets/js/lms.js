@@ -27,10 +27,14 @@ function addCurrentUserToMenu() {
         userdata = snapshot.val();
 
         let tmpl = `
-            <h3 id="${user.uid}"><a href="./?leerling=${user.uid}#profiel">${userdata.naam}</a></h3>
-            <a href="./?leerling=${user.uid}#rapport">Rapport</a>
-            <a href="./?leerling=${user.uid}#evaluaties">Evaluaties</a>
+            <h3 id="${user.uid}"><a href="./index.html?user=${user.uid}#profiel">${userdata.naam}</a></h3>
         `;
+        if (user.admin) {
+            tmpl += `
+                <a href="./?user=${user.uid}#rapport">Rapport</a>
+                <a href="./?user=${user.uid}#evaluaties">Evaluaties</a>
+            `;
+        }
 
         document.querySelector('#leftMenu>h1').insertAdjacentHTML('afterend', tmpl);
     });
