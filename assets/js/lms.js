@@ -128,8 +128,8 @@ function createEvals(userId) {
 function createEvalResult(eval, subject, result, comment) {
     let tmpl = `
         <tr>
-        <td>${eval}</td>
-        <td>${subject}</td>
+            <td>${eval}</td>
+            <td>${subject}</td>
             <td>${result}</td>
             <td>${comment}</td>
         </tr>
