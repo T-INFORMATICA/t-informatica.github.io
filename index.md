@@ -2,6 +2,27 @@
 layout: lms
 ---
 
+<table>
+    <tbody>
+        <tr>
+            <td>naam</td>
+            <td id="profileName"></td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td id="profileUrl"></td>
+        </tr>
+        <tr>
+            <td>username</td>
+            <td id="profileUsername"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td id="profilePassword"></td>
+        </tr>
+    </tbody>
+</table>
+
 <script>
 
 firebase.auth().onAuthStateChanged(function(user) {
