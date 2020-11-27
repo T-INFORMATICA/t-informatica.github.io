@@ -114,10 +114,10 @@ function createManagedUserEvals() {
 }
 
 function createEvals(userId) {
-    let evaluaties = firebase.database().ref(`evaluaties/${userId}`).orderByChild("date");
+    let results = firebase.database().ref(`resultaten/${userId}`).orderByChild("evaluatie");
 
-    return evaluaties.on('child_added', snap => {
-        let resultaten = firebase.database().ref(`resultaten/${userId}`).where("evaluatie", "==", snap.key);
+    return results.on('child_added', snap => {
+        let resultaten = firebase.database().child(`evaluaties/${userId}/${snap.key}`);
         console.log(resultaten);
     });
 }
