@@ -60,7 +60,7 @@ function addOtherUsersToMenu() {
                 <a href="./?leerling=${uid}#rapport">Rapport</a>
                 <a href="./?leerling=${uid}#evaluaties">Evaluaties</a>
             `;
-    
+
             document.querySelector('#leftMenu').innerHTML += tmpl;
         });
     });
@@ -74,7 +74,26 @@ function createMenu() {
 }
 
 function createProfile() {
-
+    let user = firebase.auth().currentUser;
+    return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {
+        let tmpl = `<table>`;
+        snapshot.forEach(function (childSnapshot) {
+            userdata = childSnapshot;
+            tmpl += `
+                <tr>
+                    <td>
+                        ${userdata.key}
+                    </td>
+                    <td>
+                        ${userdata.val()}
+                    </td>
+                </tr>
+            `;
+        });
+        
+        tmpl += `</table>`;
+        document.querySelector('main').innerHTML += tmpl;
+    });
 }
 
 function createResults() {
