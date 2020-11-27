@@ -76,23 +76,25 @@ function createMenu() {
 function createProfile() {
     let user = firebase.auth().currentUser;
     return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {
-        let tmpl = `<table>`;
         snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
-            tmpl += `
-                <tr>
-                    <td>
-                        ${userdata.key}
-                    </td>
-                    <td>
-                        ${userdata.val()}
-                    </td>
-                </tr>
-            `;
+            switch (userdata.key) {
+                case "username": 
+                    document.querySelector('profileUsername').innerHTML += userdata.val();
+                    break;
+                case "naam":
+                    document.querySelector('profileName').innerHTML += userdata.val();
+                    break;
+                case "password":
+                    document.querySelector('profilePassword').innerHTML += userdata.val();
+                    break;
+                case "url":
+                    document.querySelector('profileUrl').innerHTML += userdata.val();
+                    break;
+            }
+            document.querySelector('main').innerHTML += tmpl;
         });
         
-        tmpl += `</table>`;
-        document.querySelector('main').innerHTML += tmpl;
     });
 }
 
