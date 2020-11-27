@@ -146,25 +146,26 @@ pre {
 /*********** TIMELINE **************/
 
 
-.evaluatiesTimeline ul {
+#evaluatiesTimeline ul {
 	position: relative;
 	list-style: none;
 	margin-left: 0;
 	padding-left: 1.2em;
 }
 
-.evaluatiesTimeline ul li .result {
+#evaluatiesTimeline ul li .result {
 	content: "+";
 	position: absolute;
 	left: 0;
 }
 
-.evaluatiesTimeline .timeline-item {
+#evaluatiesTimeline .timeline-item {
 	padding: 3em 32px 32px;
 	position: relative;
 	border-left: 1px solid #666;
 }
-.evaluatiesTimeline .timeline-item::before {
+
+#evaluatiesTimeline .timeline-item::before {
 	content: attr(data-date);
 	position: absolute;
 	left: 2em;
@@ -172,7 +173,7 @@ pre {
 	display: block;
 }
 
-.evaluatiesTimeline .timeline-item::after {
+#evaluatiesTimeline .timeline-item::after {
 	width: 10px;
 	height: 10px;
 	display: block;
