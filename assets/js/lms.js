@@ -117,8 +117,10 @@ function createEvals(userId) {
     let db = firebase.database().ref();
     let results = db.child(`resultaten/${userId}`);
 
-    return results.on('child_added', snap => {
+    results.on('child_added', snap => {
         let resultaten = db.child(`evaluaties/${userId}/${snap.key}`);
-        console.log(resultaten.val());
+        resultaten.once('value').then(snapshot => {
+            console.log(snapshot.val());
+        });
     });
 }
