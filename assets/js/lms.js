@@ -27,7 +27,7 @@ function addCurrentUserToMenu() {
         userdata = snapshot.val();
 
         let tmpl = `
-            <h3 id="${user.uid}"><a href="./index.html?user=${user.uid}#profiel">${userdata.naam}</a></h3>
+            <h3 id="${user.uid}"><a href="./index.html">${userdata.naam}</a></h3>
         `;
         if (!userdata.admin) {
             tmpl += `
