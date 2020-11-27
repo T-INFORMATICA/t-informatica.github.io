@@ -17,7 +17,7 @@ function addAdmincontrolsToMenu() {
         `;
         document.querySelector('#leftMenu>#leftMenu-logout').insertAdjacentHTML('afterend', tmpl);
 
-        addOtherUsersToMenu();
+        addManagedUsersToMenu();
     });
 }
 
@@ -40,7 +40,7 @@ function addCurrentUserToMenu() {
     });
 }
 
-function addOtherUsersToMenu() {
+function addManagedUsersToMenu() {
     return firebase.database().ref(`users`).once('value').then(function (snapshot) {
         let tmpl = `
             <hr>
@@ -56,9 +56,9 @@ function addOtherUsersToMenu() {
             uid = childSnapshot.key;
 
             let tmpl = `
-                <h3><a href="./?leerling=${uid}#profiel">${userdata.val().naam}</a></h3>
-                <a href="./?leerling=${uid}#rapport">Rapport</a>
-                <a href="./?leerling=${uid}#evaluaties">Evaluaties</a>
+                <h3><a href="./userprofile.html?userid=${uid}">${userdata.val().naam}</a></h3>
+                <a href="./rapport.html?userid=${uid}">Rapport</a>
+                <a href="./eval.html?userid=${uid}">Evaluaties</a>
             `;
 
             document.querySelector('#leftMenu').innerHTML += tmpl;
@@ -73,8 +73,7 @@ function createMenu() {
     addAdmincontrolsToMenu();
 }
 
-function createProfile() {
-    let user = firebase.auth().currentUser;
+function createProfile(user) {
     return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
@@ -97,10 +96,16 @@ function createProfile() {
     });
 }
 
-function createResults() {
+function createManagedUserProfile() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let userId = urlParams.get('userid');
+    createProfile(userId);
+}
+
+function createResults(user) {
 
 }
 
-function createEvals() {
+function createEvals(user) {
 
 }

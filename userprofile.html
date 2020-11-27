@@ -28,9 +28,8 @@ layout: lms
 firebase.auth().onAuthStateChanged(function(user) {
     authUser(user);
     createMenu();
+    createManagedUserProfile();
     createProfile(user);
-    createResults(user);
-    createEvals(user);
 });
 
 </script>
