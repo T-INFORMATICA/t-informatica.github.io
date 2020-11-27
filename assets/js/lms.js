@@ -120,13 +120,13 @@ function createEvals(userId) {
 
     
     evaluaties.on('child_added', snap => {
-        document.querySelector("main").innerHTML += `
+        document.querySelector("main").innerHTML = `
             <div class="timeline-item" id="${snap.key}" data-date="${snap.val().date}">
                 <h3>${snap.val().name}</h3>
                 <ul>
                 </ul>
             </div>
-        `;
+        ` + document.querySelector("main").innerHTML;
     });
 
     results.on('child_added', snap => {
