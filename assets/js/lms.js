@@ -118,17 +118,18 @@ function createEvals(userId) {
     let results = db.child(`resultaten/${userId}`);
     let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
 
-    
+    // first create a container for each evaluation
     evaluaties.on('child_added', snap => {
         document.querySelector("main").innerHTML = `
-            <div class="timeline-item" id="${snap.key}" data-date="${snap.val().date}">
-                <h3>${snap.val().name}</h3>
+            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}">
+                <summary><h3>${snap.val().name}</h3></summary>
                 <ul>
                 </ul>
-            </div>
+            </details>
         ` + document.querySelector("main").innerHTML;
     });
 
+    // then fill each container with results
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
