@@ -119,7 +119,7 @@ function createEvals(userId) {
     let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
 
     
-    results.on('child_added', snap => {
+    evaluaties.on('child_added', snap => {
         document.querySelector("main").innerHTML += `
             <div class="timeline-item" id="${snap.key}" data-date="${snap.val().date}">
                 <h3>${snap.val().name}</h3>
@@ -134,12 +134,12 @@ function createEvals(userId) {
         evaluaties.once('value').then(snapshot => {
             let tmpl = `
                 <li>
-                    <b class="result">${snapshot.val().result}</b>
-                    ${snapshot.val().subject}<br>
-                    ${snapshot.val().commentaar}
+                    <b class="result">${snap.val().result}</b>
+                    ${snap.val().subject}<br>
+                    ${snap.val().commentaar}
                 </li>
             `;
-            document.querySelector(`#${evaluid}>ul`).innerHTML += tmpl;
+            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
         });
     });
 }
