@@ -120,7 +120,7 @@ function createEvals(userId) {
     results.on('child_added', snap => {
         let resultaten = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         resultaten.once('value').then(snapshot => {
-            console.log(snapshot);
+            console.log(snapshot.val());
         });
     });
 }
