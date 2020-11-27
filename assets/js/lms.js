@@ -92,7 +92,6 @@ function createProfile() {
                     document.querySelector('profileUrl').innerHTML += userdata.val();
                     break;
             }
-            document.querySelector('main').innerHTML += tmpl;
         });
         
     });
