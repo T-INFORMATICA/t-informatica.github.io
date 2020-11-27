@@ -120,20 +120,29 @@ function createEvals(userId) {
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
-            createEvalResult(`${snapshot.key}-${snapshot.val().date}`, snap.val().subject, snap.val().result, snap.val().commentaar);
+            createEvalResult(snapshot.key, snapshot.val().name, snapshot.val().date, snap.val().subject, snap.val().result, snap.val().commentaar);
         });
     });
 }
 
-function createEvalResult(eval, subject, result, comment) {
-    let tmpl = `
-        <tr>
-            <td>${eval}</td>
-            <td>${subject}</td>
-            <td>${result}</td>
-            <td>${comment}</td>
-        </tr>
-    `;
+function createEvalResult(evaluid, evalname, evaldate, subject, result, comment) {
+    let parent = document.querySelector(`#${evaluid}`);
+    if (parent === null) {
+        document.querySelector("main").innerHTML += `
+            <div class="timeline-item" id="${evaluid}" data-date="${evaldate}">
+                <h3>${evalname}</h3>
+                <ul>
+                </ul>
+            </div>
+        `;
+    }
 
-    document.querySelector('#evalTable').innerHTML += tmpl;
+    let tmpl = `
+        <li>
+            <b class="result">${result}</b>
+            ${subject}<br>
+            ${comment}
+        </li>
+    `;
+    document.querySelector(`#${evaluid}>ul`).innerHTML += tmpl;
 }
