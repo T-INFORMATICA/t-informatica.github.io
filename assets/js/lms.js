@@ -110,15 +110,17 @@ function createResults(userId) {
 function createManagedUserEvals() {
     const urlParams = new URLSearchParams(window.location.search);
     let userId = urlParams.get('userid');
-    createResults(userId);
+    createEvals(userId);
 }
 
 function createEvals(userId) {
     return firebase.database().ref(`evaluaties/${userId}`).orderByChild("date").once('value').then(function (snapshot) {
-        console.log(snapshot.val());
+        
         snapshot.forEach(function (childSnapshot) {
             testData = childSnapshot;
             testName = childSnapshot.key;
+
+            console.log(childSnapshot.val());
             
             document.querySelector('main').innerHTML += testName;
         });
