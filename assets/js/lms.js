@@ -56,9 +56,9 @@ function addManagedUsersToMenu() {
             uid = childSnapshot.key;
 
             let tmpl = `
-                <h3><a href="./managedprofile.html?userid=${uid}">${userdata.val().naam}</a></h3>
-                <a href="./managedrapport.html?userid=${uid}">Rapport</a>
-                <a href="./managedeval.html?userid=${uid}">Evaluaties</a>
+                <h3><a href="./profile.html?userid=${uid}">${userdata.val().naam}</a></h3>
+                <a href="./rapport.html?userid=${uid}">Rapport</a>
+                <a href="./eval.html?userid=${uid}">Evaluaties</a>
             `;
 
             document.querySelector('#leftMenu').innerHTML += tmpl;
@@ -71,12 +71,6 @@ function addManagedUsersToMenu() {
 function createMenu() {
     addCurrentUserToMenu();
     addAdmincontrolsToMenu();
-}
-
-function createManagedUserProfile() {
-    const urlParams = new URLSearchParams(window.location.search);
-    let userId = urlParams.get('userid');
-    createProfile(userId);
 }
 
 function createProfile(userId) {
@@ -105,12 +99,6 @@ function createProfile(userId) {
 function createResults(userId) {
     return firebase.database().ref(`resultaten/${userId}`).once('value').then(function (snapshot) {
     });
-}
-
-function createManagedUserEvals() {
-    const urlParams = new URLSearchParams(window.location.search);
-    let userId = urlParams.get('userid');
-    createEvals(userId);
 }
 
 function createEvals(userId) {

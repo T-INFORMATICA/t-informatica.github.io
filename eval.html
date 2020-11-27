@@ -8,7 +8,13 @@ layout: lms
 firebase.auth().onAuthStateChanged(function(user) {
     authUser(user);
     createMenu();
-    createEvals(user.uid);
+    let uid = new URLSearchParams(window.location.search).get('userid');
+    uid = uid === null ? user.uid : uid;
+    createEvals(uid);
 });
 
 </script>
+
+<div id="evaluatiesTimeline">
+
+</div>
