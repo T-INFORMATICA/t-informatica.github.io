@@ -121,7 +121,7 @@ function createEvals(userId) {
     // first create a container for each evaluation
     evaluaties.on('child_added', snap => {
         document.querySelector("#evaluatiesTimeline").innerHTML = `
-            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}">
+            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}" open>
                 <summary>${snap.val().name}</summary>
                 <ul>
                 </ul>
