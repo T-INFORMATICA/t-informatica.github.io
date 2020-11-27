@@ -122,6 +122,6 @@ function createEvals(userId) {
         evaluaties.once('value').then(snapshot => {
             console.log(snapshot.val());
         });
-        console.log("test");
     });
+    console.log("test");
 }
