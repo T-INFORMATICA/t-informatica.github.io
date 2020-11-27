@@ -114,15 +114,10 @@ function createManagedUserEvals() {
 }
 
 function createEvals(userId) {
-    return firebase.database().ref(`evaluaties/${userId}`).orderByChild("date").once('value').then(function (snapshot) {
-        
-        snapshot.forEach(function (childSnapshot) {
-            testData = childSnapshot;
-            testName = childSnapshot.key;
+    let evaluaties = firebase.database().ref(`evaluaties/${userId}`).orderByChild("date");
 
-            console.log(childSnapshot.val());
-            
-            document.querySelector('main').innerHTML += testName;
-        });
+    return evaluaties.on('child_added', snap => {
+        let resultaten = firebase.database().collection(`resultaten/${userId}`).where("evaluatie", "==", snap.key);
+        console.log(resultaten);
     });
 }
