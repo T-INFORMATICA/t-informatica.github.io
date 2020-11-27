@@ -116,12 +116,13 @@ function createManagedUserEvals() {
 function createEvals(userId) {
     let db = firebase.database().ref();
     let results = db.child(`resultaten/${userId}`);
+    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
 
     
-    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date").once('value').then(snapshot => {
+    results.on('child_added', snap => {
         document.querySelector("main").innerHTML += `
-            <div class="timeline-item" id="${evaluid}" data-date="${evaldate}">
-                <h3>${evalname}</h3>
+            <div class="timeline-item" id="${snap.key}" data-date="${snap.val().date}">
+                <h3>${snap.val().name}</h3>
                 <ul>
                 </ul>
             </div>
@@ -133,9 +134,9 @@ function createEvals(userId) {
         evaluaties.once('value').then(snapshot => {
             let tmpl = `
                 <li>
-                    <b class="result">${result}</b>
-                    ${subject}<br>
-                    ${comment}
+                    <b class="result">${snapshot.val().result}</b>
+                    ${snapshot.val().subject}<br>
+                    ${snapshot.val().commentaar}
                 </li>
             `;
             document.querySelector(`#${evaluid}>ul`).innerHTML += tmpl;
