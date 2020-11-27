@@ -116,7 +116,7 @@ function createManagedUserEvals() {
 function createEvals(userId) {
     let db = firebase.database().ref();
     let results = db.child(`resultaten/${userId}`);
-    let evaluaties = firebase.database().ref(`evaluaties/${userId}`).orderByChild("date");
+    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
 
     
     evaluaties.on('child_added', snap => {
