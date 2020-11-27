@@ -123,6 +123,12 @@ function createEvals(userId) {
         evaluaties.once('value').then(snapshot => {
             console.log(snapshot.val());
             console.log(snap.val());
+            evalElements[snapshot.key] += `
+                <tr>
+                    <td>${snap.val().subject}</td>
+                    <td>${snap.val().result}</td>
+                </tr>
+            `;
         });
     });
 }
