@@ -117,7 +117,7 @@ function createEvals(userId) {
     let evaluaties = firebase.database().ref(`evaluaties/${userId}`).orderByChild("date");
 
     return evaluaties.on('child_added', snap => {
-        let resultaten = firebase.database().collection(`resultaten/${userId}`).where("evaluatie", "==", snap.key);
+        let resultaten = firebase.database().ref(`resultaten/${userId}`).where("evaluatie", "==", snap.key);
         console.log(resultaten);
     });
 }
