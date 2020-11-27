@@ -119,6 +119,6 @@ function createEvals(userId) {
 
     return results.on('child_added', snap => {
         let resultaten = db.child(`evaluaties/${userId}/${snap.key}`);
-        console.log(resultaten);
+        console.log(resultaten.val());
     });
 }
