@@ -117,19 +117,22 @@ function createEvals(userId) {
     let db = firebase.database().ref();
     let results = db.child(`resultaten/${userId}`);
 
-    let evalElements = {};
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
-            console.log(snapshot.val());
-            console.log(snap.val());
-            evalElements[snapshot.key] += `
-                <tr>
-                    <td>${snap.val().subject}</td>
-                    <td>${snap.val().result}</td>
-                </tr>
-            `;
-            console.log(evalElements);
+            createEvalResult(snapshot.key, snap.val().subject, snap.val().result, snap.val().commentaar);
         });
     });
+}
+
+function createEvalResult(eval, subject, result, comment) {
+    let tmpl = `
+        <tr>
+            <td>${subject}</td>
+            <td>${result}</td>
+            <td>${comment}</td>
+        </tr>
+    `;
+
+    document.querySelector('#evalTable').innerHTML += tmpl;
 }
