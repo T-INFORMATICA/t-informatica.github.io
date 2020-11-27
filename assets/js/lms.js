@@ -115,7 +115,7 @@ function createManagedUserEvals() {
 
 function createEvals(userId) {
     return firebase.database().ref(`evaluaties/${userId}`).orderByChild("date").once('value').then(function (snapshot) {
-        
+        console.log(snapshot.val());
         snapshot.forEach(function (childSnapshot) {
             testData = childSnapshot;
             testName = childSnapshot.key;
