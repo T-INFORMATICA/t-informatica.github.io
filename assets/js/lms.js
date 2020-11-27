@@ -117,17 +117,8 @@ function createEvals(userId) {
     let db = firebase.database().ref();
     let results = db.child(`resultaten/${userId}`);
 
-    results.on('child_added', snap => {
-        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
-        evaluaties.once('value').then(snapshot => {
-            createEvalResult(snapshot.key, snapshot.val().name, snapshot.val().date, snap.val().subject, snap.val().result, snap.val().commentaar);
-        });
-    });
-}
-
-function createEvalResult(evaluid, evalname, evaldate, subject, result, comment) {
-    let parent = document.querySelector(`#${evaluid}`);
-    if (parent === null) {
+    
+    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date").once('value').then(snapshot => {
         document.querySelector("main").innerHTML += `
             <div class="timeline-item" id="${evaluid}" data-date="${evaldate}">
                 <h3>${evalname}</h3>
@@ -135,14 +126,19 @@ function createEvalResult(evaluid, evalname, evaldate, subject, result, comment)
                 </ul>
             </div>
         `;
-    }
+    });
 
-    let tmpl = `
-        <li>
-            <b class="result">${result}</b>
-            ${subject}<br>
-            ${comment}
-        </li>
-    `;
-    document.querySelector(`#${evaluid}>ul`).innerHTML += tmpl;
+    results.on('child_added', snap => {
+        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
+        evaluaties.once('value').then(snapshot => {
+            let tmpl = `
+                <li>
+                    <b class="result">${result}</b>
+                    ${subject}<br>
+                    ${comment}
+                </li>
+            `;
+            document.querySelector(`#${evaluid}>ul`).innerHTML += tmpl;
+        });
+    });
 }
