@@ -129,6 +129,7 @@ function createEvals(userId) {
                     <td>${snap.val().result}</td>
                 </tr>
             `;
+            console.log(evalElements);
         });
     });
 }
