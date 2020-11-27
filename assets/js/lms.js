@@ -73,6 +73,12 @@ function createMenu() {
     addAdmincontrolsToMenu();
 }
 
+function createManagedUserProfile() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let userId = urlParams.get('userid');
+    createProfile(userId);
+}
+
 function createProfile(userId) {
     return firebase.database().ref(`users/${userId}`).once('value').then(function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
@@ -96,16 +102,19 @@ function createProfile(userId) {
     });
 }
 
-function createManagedUserProfile() {
-    const urlParams = new URLSearchParams(window.location.search);
-    let userId = urlParams.get('userid');
-    createProfile(userId);
-}
-
 function createResults(userId) {
-
+    return firebase.database().ref(`resultaten/${userId}`).once('value').then(function (snapshot) {
+    });
 }
 
 function createEvals(userId) {
-
+    return firebase.database().ref(`evaluaties/${userId}`).orderByChild("date").once('value').then(function (snapshot) {
+        
+        snapshot.forEach(function (childSnapshot) {
+            testData = childSnapshot;
+            testName = childSnapshot.key;
+            
+            document.querySelector('main').innerHTML += testName;
+        });
+    });
 }
