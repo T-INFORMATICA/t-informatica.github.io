@@ -73,8 +73,8 @@ function createMenu() {
     addAdmincontrolsToMenu();
 }
 
-function createProfile(user) {
-    return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {
+function createProfile(userId) {
+    return firebase.database().ref(`users/${userId}`).once('value').then(function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
             switch (userdata.key) {
@@ -102,10 +102,10 @@ function createManagedUserProfile() {
     createProfile(userId);
 }
 
-function createResults(user) {
+function createResults(userId) {
 
 }
 
-function createEvals(user) {
+function createEvals(userId) {
 
 }
