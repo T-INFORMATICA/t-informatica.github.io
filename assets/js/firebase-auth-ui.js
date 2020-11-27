@@ -43,6 +43,7 @@ function authUser(user) {
 function signOut() {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
+        window.location.href = './';
       }).catch(function(error) {
         // An error happened.
       });
