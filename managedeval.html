@@ -1,0 +1,14 @@
+---
+layout: lms
+---
+
+
+<script>
+
+firebase.auth().onAuthStateChanged(function(user) {
+    authUser(user);
+    createMenu();
+    createManagedUserEvals();
+});
+
+</script>
