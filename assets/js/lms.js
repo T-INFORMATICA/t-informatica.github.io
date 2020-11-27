@@ -118,9 +118,10 @@ function createEvals(userId) {
     let results = db.child(`resultaten/${userId}`);
 
     results.on('child_added', snap => {
-        let resultaten = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
-        resultaten.once('value').then(snapshot => {
+        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
+        evaluaties.once('value').then(snapshot => {
             console.log(snapshot.val());
         });
+        console.log("test");
     });
 }
