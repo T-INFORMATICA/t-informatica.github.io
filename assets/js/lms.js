@@ -27,7 +27,8 @@ function addCurrentUserToMenu() {
         userdata = snapshot.val();
 
         let tmpl = `
-            <h3 id="${user.uid}"><a href="./index.html">${userdata.naam}</a></h3>
+            <h2>Profiel</h2>
+            <a href="./index.html" id="${user.uid}">${userdata.naam}</a>
         `;
         if (!userdata.admin) {
             tmpl += `
@@ -43,7 +44,6 @@ function addCurrentUserToMenu() {
 function addManagedUsersToMenu() {
     return firebase.database().ref(`users`).once('value').then(function (snapshot) {
         let tmpl = `
-            <hr>
             <h2>Manage Users</h2>
         `;
         document.querySelector('#leftMenu').innerHTML += tmpl;
@@ -56,7 +56,7 @@ function addManagedUsersToMenu() {
             uid = childSnapshot.key;
 
             let tmpl = `
-                <h3><a href="./profile.html?userid=${uid}">${userdata.val().naam}</a></h3>
+                <a href="./profile.html?userid=${uid}">${userdata.val().naam}</a>
                 <a href="./rapport.html?userid=${uid}">Rapport</a>
                 <a href="./eval.html?userid=${uid}">Evaluaties</a>
             `;
