@@ -32,8 +32,8 @@ function addCurrentUserToMenu() {
         `;
         if (!userdata.admin) {
             tmpl += `
-                <a href="./?user=${user.uid}#rapport">Rapport</a>
-                <a href="./?user=${user.uid}#evaluaties">Evaluaties</a>
+            <a href="./rapport.html">Rapport</a>
+            <a href="./eval.html">Evaluaties</a>
             `;
         }
 
