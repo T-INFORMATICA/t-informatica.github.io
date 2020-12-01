@@ -1,5 +1,3 @@
-
-
 function addAdmincontrolsToMenu() {
     let user = firebase.auth().currentUser;
     return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {

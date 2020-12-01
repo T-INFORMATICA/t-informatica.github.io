@@ -199,3 +199,30 @@ pre {
 	border: 1px solid #666;
 	background: #3176d9;
 }
+
+/****** TABLES ************/
+
+table.styledTable {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+  
+  table.styledTable tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  table.styledTable td,
+  table.styledTable th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  table.styledTable td {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
