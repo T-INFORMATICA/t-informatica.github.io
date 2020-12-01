@@ -6,7 +6,7 @@
 
           
           <div class="subjectNav">
-            <h2><a href="{{site.baseurl}}{{ subject.link }}">{{ subject.name | capitalize }}</a></h2>
+            <h2><a href="{{site.baseurl}}{{ subject.link }}" title="{{ subject.name | capitalize }}">{{ subject.name | capitalize }}</a></h2>
             {% for chapter in subject.chapters %}
               {% if page.url contains chapter.link %}
                 <a href="{{site.baseurl}}{{ chapter.link }}"><u>{{ chapter.name | capitalize }}</u></a>
