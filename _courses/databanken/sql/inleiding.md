@@ -20,7 +20,7 @@ definitions:
 description: Net zoals een programmeertaal wordt gebruikt om te communiceren met een computer, wordt een databanktaal gebruikt om met een databank te communiceren. Een databanktaal maakt gebruik van opdrachten om te communiceren met de databank. SQL is één van de meest gebruikte databanktalen ter wereld.
 ---
 
-# INLEIDING
+# Inleiding
 
 ## Wat is SQL?
 
