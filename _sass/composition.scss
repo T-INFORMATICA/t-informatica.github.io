@@ -189,8 +189,7 @@ nav#topMenu {
     }
 
     .menuItem-dropdown {
-        max-height: 50vh;
-        max-height: calc(max(50vh, 100vh + ( ( 100vw - 600px ) * -1 )));
+        height: auto;
     }
 }
 
