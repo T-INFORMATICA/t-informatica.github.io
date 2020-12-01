@@ -18,6 +18,7 @@ footer {
 
 aside:first-of-type {
     background-color: #fafafa;
+    border-right: 1px solid #dedede;
 }
 
 
@@ -53,8 +54,6 @@ hr {
 /***** LEFT SIDE NAVIGATION ****/
 
 #leftMenu {
-    background-color: #fafafa;
-    border-right: 1px solid #dedede;
     overflow-y: auto;
 
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -98,9 +97,10 @@ nav#topMenu {
 }
 
 #topMenu fieldset {
-    border: 1px solid #8c8c8c;
     background-color: #fafafa;
     color: black;
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px #8c8c8c; /* hack for border in column layout*/
 }
 
 #topMenu fieldset legend {

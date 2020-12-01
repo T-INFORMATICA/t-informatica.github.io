@@ -63,12 +63,16 @@ footer {
         grid-area: header;
     }
 
-    aside:first-child {
+    aside:first-of-type {
         grid-area: left;
     }
 
-    aside:last-child {
+    aside:last-of-type {
         grid-area: right;
+    }
+
+    main {
+        grid-area: main;
     }
 
     footer {
@@ -125,7 +129,7 @@ footer {
     padding: 4px 16px;
 } 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
     aside {
         display: unset;
     }
@@ -158,24 +162,28 @@ nav#topMenu {
 
 .menuItem-dropdown>div {
     width: 100%;
-    columns: 200px 3;
+    column-gap: 10px;
+    columns: 200px 12;
     margin-right: auto;
     max-width: 1200px;
     padding: 16px 32px 16px 16px;
 }
 
 .menuItem-dropdown fieldset {
-    display: inline-block;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 8px;
+    
+    display: block;
+    break-inside: avoid;
     width: 100%;
-    padding: 8px 16px;
-    margin: 8px;
 }
 
 #topMenu fieldset legend {
     padding: 2px 4px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
     nav#topMenu>ul {
         display: flex; 
     }
