@@ -79,7 +79,8 @@ hr {
     letter-spacing: 3px;
 }
 
-#leftMenu a {
+#leftMenu a, 
+#leftMenu h1 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
