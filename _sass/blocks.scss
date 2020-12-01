@@ -87,6 +87,10 @@ hr {
     background: transparent;
 }
 
+#leftMenu h2>a {
+    padding-left: 0;
+}
+
 #leftMenu a:hover {
     color: #3176d9;
 }
