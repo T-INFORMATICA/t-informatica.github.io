@@ -1,11 +1,3 @@
-.gradeCategory {
-    display: flex;
-
-    align-items:flex-start;
-    align-content:flex-start;
-    gap: 32px;
-}
-
 .gradeCategory h3 {
     width: 200px;
     text-overflow: ellipsis;
@@ -76,4 +68,14 @@
     text-align: center;
     width: 100%;
     color: white;
+}
+
+@media only screen and (min-width: 900px) {
+    .gradeCategory {
+        display: flex;
+
+        align-items:flex-start;
+        align-content:flex-start;
+        gap: 32px;
+    }
 }
