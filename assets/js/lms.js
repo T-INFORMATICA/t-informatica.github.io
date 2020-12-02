@@ -109,8 +109,6 @@ function createResults(userId) {
             let category = childSnapshot.val();
             let categoryId = toCssSafeId(category);
             let categoryEl = document.querySelector(`#${categoryId}`);
-            console.log(childSnapshot.val());
-            console.log(categoryEl);
 
             if (categoryEl === null) {
                 let tmpl = `
@@ -122,8 +120,12 @@ function createResults(userId) {
             }
 
             categoryEl = document.querySelector(`#${categoryId}`);
-
-
+            let tmpl = `
+                <div>
+                    ${subject}
+                </div>
+            `;
+            categoryEl.innerHTML += tmpl;
         });
     });
 }
