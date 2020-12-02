@@ -30,6 +30,17 @@
     width: 200px;
 }
 
+.grades>div>ul li.selected {
+    background-color: #30638e;
+    color: white;
+}
+
+.grades>div>ul li {
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+}
+
 .grades>div>ul {
     list-style-type: none;
     display: flex;
