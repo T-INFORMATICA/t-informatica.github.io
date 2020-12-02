@@ -127,6 +127,7 @@ function createResults(userId) {
                     </ul>
                 </div>
             `;
+            document.querySelector(`#${subjectId}`).style.opacity = "0.5";
             categoryEl.innerHTML += tmpl;
         });
 
@@ -135,6 +136,7 @@ function createResults(userId) {
             let subject = snap.val().subject;
             let subjectId = toCssSafeId(subject);
             let subjectEl = document.querySelector(`#${subjectId}`);
+            subjectEl.style.opacity = "1";
             let tmpl = `
                 <li>
                     <b class="result">${snap.val().result}</b>
