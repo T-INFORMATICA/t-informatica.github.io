@@ -110,6 +110,7 @@ function createResults(userId) {
             let categoryId = toCssSafeId(category);
             let categoryEl = document.querySelector(`#${categoryId}`);
             console.log(childSnapshot.val());
+            console.log(categoryEl);
 
             if (categoryEl !== null) {
                 let tmpl = `
