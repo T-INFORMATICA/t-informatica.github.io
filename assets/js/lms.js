@@ -117,6 +117,8 @@ function createResults(userId) {
                             <h4>Resultaat</h4>
                             <h4>Theorie</h4>
                         </div>
+                        <div class="grades">
+                        </div>
                     </div>
                 `;
                 document.querySelector("main").innerHTML += tmpl;
@@ -125,7 +127,7 @@ function createResults(userId) {
             categoryEl = document.querySelector(`#${categoryId}`);
             categoryEl.style.display = "none";
             let tmpl = `
-            <div id="${subjectId}" class="grades" style="opacity: 0.2;">
+            <div id="${subjectId}" style="opacity: 0.2;">
                 <h3>${subject}</h3>
                 <ul>
                     <li class="A">A</li>
@@ -140,8 +142,7 @@ function createResults(userId) {
                 </div>
             </div>
             `;
-            categoryEl.innerHTML += tmpl;
-            document.querySelector(`#${subjectId}`).style.opacity = "0.5";
+            categoryEl.querySelector(".grades").innerHTML += tmpl;
         });
 
         
