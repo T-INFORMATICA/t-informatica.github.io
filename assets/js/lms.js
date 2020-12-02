@@ -107,9 +107,9 @@ function createResults(userId) {
             let category = childSnapshot.val();
             let categoryId = toCssSafeId(category);
             let categoryEl = document.querySelector(`#${categoryId}`);
+            console.log('test');
 
             if (categoryEl !== null) {
-                console.log('test');
                 let tmpl = `
                     <div id="${categoryId}">
                         ${category}
