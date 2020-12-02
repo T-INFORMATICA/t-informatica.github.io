@@ -153,7 +153,7 @@ function createResults(userId) {
             subjectEl.style.opacity = "1";
             let result = snap.val().result;
             subjectEl.querySelector(`.${result}`).className += " selected";
-            subjectEl.parentElement.style.display = "";
+            subjectEl.parentElement.parentElement.style.display = "";
         });
     });
 }
