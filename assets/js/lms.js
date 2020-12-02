@@ -112,7 +112,7 @@ function createResults(userId) {
             console.log(childSnapshot.val());
             console.log(categoryEl);
 
-            if (categoryEl !== null) {
+            if (categoryEl === null) {
                 let tmpl = `
                     <div id="${categoryId}">
                         ${category}
