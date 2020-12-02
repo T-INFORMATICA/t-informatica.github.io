@@ -1,4 +1,7 @@
-
+function toCssSafeId(text) {
+    text = text.replace(/[!\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
+    return text;
+}
 
 function addAdmincontrolsToMenu() {
     let user = firebase.auth().currentUser;
@@ -97,7 +100,27 @@ function createProfile(userId) {
 }
 
 function createResults(userId) {
-    return firebase.database().ref(`resultaten/${userId}`).once('value').then(function (snapshot) {
+    return firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+            let subject = childSnapshot.key;
+
+            let categoryId = toCssSafeId(category);
+            let categoryEl = document.querySelector(`#${categoryId}`);
+
+            if (categoryEl !== null) {
+                let category = childSnapshot.val();
+                let tmpl = `
+                    <div id="${categoryId}">
+                        ${category}
+                    </div>
+                `;
+                document.querySelector("main").innerHTML += tmpl;
+            }
+            
+            let categoryEl = document.querySelector(`#${categoryId}`);
+
+
+        });
     });
 }
 
