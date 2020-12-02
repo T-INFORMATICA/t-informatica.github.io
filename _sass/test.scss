@@ -33,23 +33,26 @@
 .grades>div>ul li.selected {
     background-color: #30638e;
     color: white;
+    border-radius: 9999px;
 }
 
 .grades>div>ul li {
     width: 32px;
     height: 32px;
     padding: 5px;
+    text-align: center;
 }
 
 .grades>div>ul {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    margin: 0;
+    margin: 8px 0;
 }
 
 .gradeCategory h4 {
     text-align: right;
+    margin: 11px 0;
 }
 
 .progressbar-bg {
