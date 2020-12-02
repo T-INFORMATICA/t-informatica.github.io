@@ -134,14 +134,14 @@ function createResults(userId) {
         firebase.database().ref(`resultaten/${userId}`).on('child_added', snap => {
             let subject = snap.val().subject;
             let subjectId = toCssSafeId(subject);
-            let subjectEl = document.querySelector(`#${subjectId}>ul`);
+            let subjectEl = document.querySelector(`#${subjectId}`);
             let tmpl = `
                 <li>
                     <b class="result">${snap.val().result}</b>
                     ${snap.val().commentaar}
                 </li>
             `;
-            subjectEl.innerHTML += tmpl;
+            subjectEl.querySelector("ul").innerHTML += tmpl;
             subjectEl.parentElement.style.display = "";
         });
     });
