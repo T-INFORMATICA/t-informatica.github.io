@@ -101,13 +101,15 @@ function createProfile(userId) {
 
 function createResults(userId) {
     return firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
+        console.log(snapshot.val());
+
         snapshot.forEach(function (childSnapshot) {
             let subject = childSnapshot.key;
 
             let category = childSnapshot.val();
             let categoryId = toCssSafeId(category);
             let categoryEl = document.querySelector(`#${categoryId}`);
-            console.log('test');
+            console.log(childSnapshot.val());
 
             if (categoryEl !== null) {
                 let tmpl = `
