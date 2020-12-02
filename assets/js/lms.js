@@ -104,11 +104,11 @@ function createResults(userId) {
         snapshot.forEach(function (childSnapshot) {
             let subject = childSnapshot.key;
 
+            let category = childSnapshot.val();
             let categoryId = toCssSafeId(category);
             let categoryEl = document.querySelector(`#${categoryId}`);
 
             if (categoryEl !== null) {
-                let category = childSnapshot.val();
                 let tmpl = `
                     <div id="${categoryId}">
                         ${category}
