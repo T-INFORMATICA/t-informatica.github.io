@@ -116,7 +116,7 @@ function createResults(userId) {
                 `;
                 document.querySelector("main").innerHTML += tmpl;
             }
-            
+
             let categoryEl = document.querySelector(`#${categoryId}`);
 
 

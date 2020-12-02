@@ -14,10 +14,13 @@
 
 footer {
     background-color: #403f4c;
+    color: #fafafa;
+    text-align: center;
 }
 
 aside:first-of-type {
     background-color: #fafafa;
+    border-right: 1px solid #dedede;
 }
 
 
@@ -53,8 +56,8 @@ hr {
 /***** LEFT SIDE NAVIGATION ****/
 
 #leftMenu {
-    background-color: #fafafa;
-    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    
     overflow-y: auto;
 
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -78,10 +81,16 @@ hr {
     letter-spacing: 3px;
 }
 
-#leftMenu a {
+#leftMenu a, 
+#leftMenu h1 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    height: 28px;
+}
+
+#leftMenu h2>a {
+    padding-left: 0;
 }
 
 #leftMenu a:hover {
@@ -98,9 +107,10 @@ nav#topMenu {
 }
 
 #topMenu fieldset {
-    border: 1px solid #8c8c8c;
     background-color: #fafafa;
     color: black;
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px #8c8c8c; /* hack for border in column layout*/
 }
 
 #topMenu fieldset legend {
@@ -191,3 +201,30 @@ pre {
 	border: 1px solid #666;
 	background: #3176d9;
 }
+
+/****** TABLES ************/
+
+table.styledTable {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+  
+  table.styledTable tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  table.styledTable td,
+  table.styledTable th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .75rem;
+    vertical-align: top;
+  }
+  
+  table.styledTable tr {
+    border-top: 1px solid #dee2e6;
+  }
