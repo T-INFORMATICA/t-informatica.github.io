@@ -100,11 +100,12 @@ function createProfile(userId) {
 }
 
 function createResults(userId) {
-    return firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
+    firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
         console.log(snapshot.val());
 
         snapshot.forEach(function (childSnapshot) {
             let subject = childSnapshot.key;
+            let subjectId = toCssSafeId(subject);
 
             let category = childSnapshot.val();
             let categoryId = toCssSafeId(category);
@@ -121,11 +122,28 @@ function createResults(userId) {
 
             categoryEl = document.querySelector(`#${categoryId}`);
             let tmpl = `
-                <div>
+                <div id="${subjectId}">
                     ${subject}
+                    <ul>
+                    </ul>
                 </div>
             `;
             categoryEl.innerHTML += tmpl;
+        });
+
+        
+        firebase.database().ref(`resultaten/${userId}`).on('child_added', snap => {
+            let subject = snap.val().subject;
+            let subjectId = toCssSafeId(subject);
+            let subjectEl = document.querySelector(`#${subjectId}>ul`);
+            let tmpl = `
+                <li>
+                    <b class="result">${snap.val().result}</b>
+                    ${snap.val().subject}<br>
+                    ${snap.val().commentaar}
+                </li>
+            `;
+            subjectEl.innerHTML += tmpl;
         });
     });
 }
