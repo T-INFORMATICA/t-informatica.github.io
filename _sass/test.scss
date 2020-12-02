@@ -1,8 +1,8 @@
 .gradeCategory h3 {
-    width: 200px;
+    width: 100%;
+    min-width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
-    min-width: 200px;
     white-space: nowrap;
     text-align: center;
     border-top: 1px solid black;
@@ -84,7 +84,7 @@
     }
 
     .gradeCategory h3 {
-        width: 100%;
-        min-width: 100%;
+        width: 200px;
+        min-width: 200px;
     }
 }
