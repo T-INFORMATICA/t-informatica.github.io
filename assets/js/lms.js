@@ -109,6 +109,7 @@ function createResults(userId) {
             let categoryEl = document.querySelector(`#${categoryId}`);
 
             if (categoryEl !== null) {
+                console.log('test');
                 let tmpl = `
                     <div id="${categoryId}">
                         ${category}
