@@ -1,0 +1,65 @@
+.gradeCategory {
+    display: flex;
+
+    align-items:flex-start;
+    align-content:flex-start;
+    gap: 32px;
+}
+
+.gradeCategory h3 {
+    width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 200px;
+    white-space: nowrap;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+    letter-spacing: unset;
+}
+
+.grades {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.grades>div {
+    width: 200px;
+}
+
+.grades>div>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.gradeCategory h4 {
+    text-align: right;
+}
+
+.progressbar-bg {
+    height: 24px;
+    border: 1px solid #a1a1a1;
+    position: relative;
+    background-color: #cbd8e3;
+}
+
+.progressbar-progress {
+    background-color: #30638e;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, #658096, #658096 5px, #30638e 5px, #30638e 10px);
+}
+
+.progressbar-label {
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}

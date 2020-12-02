@@ -121,11 +121,20 @@ function createResults(userId) {
             categoryEl = document.querySelector(`#${categoryId}`);
             categoryEl.style.display = "none";
             let tmpl = `
-                <div id="${subjectId}">
-                    ${subject}
-                    <ul>
-                    </ul>
+            <div id="${subjectId}" style="opacity: 0.2;">
+                <h3>${subject}</h3>
+                <ul>
+                    <li class="A">A</li>
+                    <li class="B">B</li>
+                    <li class="C">C</li>
+                    <li class="D">D</li>
+                    <li class="E">E</li>
+                </ul>
+                <div class="progressbar-bg">
+                    <div class="progressbar-progress" style="width: 0%"></div>
+                    <p class="progressbar-label">0 / 0</p>
                 </div>
+            </div>
             `;
             categoryEl.innerHTML += tmpl;
             document.querySelector(`#${subjectId}`).style.opacity = "0.5";
@@ -137,13 +146,8 @@ function createResults(userId) {
             let subjectId = toCssSafeId(subject);
             let subjectEl = document.querySelector(`#${subjectId}`);
             subjectEl.style.opacity = "1";
-            let tmpl = `
-                <li>
-                    <b class="result">${snap.val().result}</b>
-                    ${snap.val().commentaar}
-                </li>
-            `;
-            subjectEl.querySelector("ul").innerHTML += tmpl;
+            let result = snap.val().result;
+            subjectEl.querySelector(`.${result}`).className += " selected";
             subjectEl.parentElement.style.display = "";
         });
     });
