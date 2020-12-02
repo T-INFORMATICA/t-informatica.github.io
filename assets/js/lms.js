@@ -127,8 +127,8 @@ function createResults(userId) {
                     </ul>
                 </div>
             `;
-            document.querySelector(`#${subjectId}`).style.opacity = "0.5";
             categoryEl.innerHTML += tmpl;
+            document.querySelector(`#${subjectId}`).style.opacity = "0.5";
         });
 
         
