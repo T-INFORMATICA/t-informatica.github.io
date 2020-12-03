@@ -127,7 +127,7 @@ function createResults(userId) {
             categoryEl = document.querySelector(`#${categoryId}`);
             categoryEl.style.display = "none";
             let tmpl = `
-            <div id="${subjectId}" style="opacity: 0.2;">
+            <div id="${subjectId}" data-results="" style="opacity: 0.2;">
                 <h3>${subject}</h3>
                 <ul>
                     <li class="A">A</li>
