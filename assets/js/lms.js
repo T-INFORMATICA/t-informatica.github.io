@@ -234,7 +234,7 @@ function testFunction(userId) {
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
-            evalsJSON[snapshot.key]['results'].push(snap.val().evaluatie);
+            evalsJSON[snapshot.key]['results'].push(snap.val().result);
             console.log(evalsJSON);
         });
     });
