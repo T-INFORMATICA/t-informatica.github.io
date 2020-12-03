@@ -165,7 +165,6 @@ function createResults(userId) {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
             evalsJSON[snapshot.key]['results'].push(snap.toJSON());
-            console.log(evalsJSON);
         });
     });
 
