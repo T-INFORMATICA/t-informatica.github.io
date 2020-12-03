@@ -130,15 +130,10 @@ function calculateResults(resultsArr) {
         let behaaldeLetter = resultsArr[i];
         let resultDelta = evalProgress[resultLetter][behaaldeLetter];
 
-        console.log(result);
-
         resultNumber += resultDelta;
-
-        console.log(`(${resultNumber-resultDelta}) becomes ` + letters[Math.round(resultNumber+2)] + ` (from ${behaaldeLetter}, delta ${resultDelta})`);
     }
     
     let resultLetter = letters[Math.round(resultNumber+2)];
-    console.log("---");
     return resultLetter;
 //    return resultsArr[0];
 }
