@@ -99,6 +99,10 @@ function createProfile(userId) {
     });
 }
 
+function calculateResults(resultsArr) {
+    return resultsArr[0];
+}
+
 function createResults(userId) {
     firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
@@ -153,9 +157,9 @@ function createResults(userId) {
             subjectEl.style.opacity = "1";
             if (snap.val().result != null && snap.val().result != undefined) {
                 subjectEl.dataset.results += snap.val().result + ";";
-
+                let resultsArr = subjectEl.dataset.results.split(";");
                 // TODO: calculate final result and display it
-                let result = snap.val().result;
+                let result = calculateResults(resultsArr);
 
                 subjectEl.querySelector(`.${result}`).className += " selected";
                 subjectEl.parentElement.parentElement.style.display = "";
