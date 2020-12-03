@@ -100,6 +100,7 @@ function createProfile(userId) {
 }
 
 function calculateResults(resultsArr) {
+    console.log(resultsArr);
     return resultsArr[0];
 }
 
@@ -156,8 +157,9 @@ function createResults(userId) {
             let subjectEl = document.querySelector(`#${subjectId}`);
             subjectEl.style.opacity = "1";
             if (snap.val().result != null && snap.val().result != undefined) {
-                subjectEl.dataset.results += snap.val().result + ";";
                 let resultsArr = subjectEl.dataset.results.split(";");
+                resultsArr.push(snap.val().result);
+                subjectEl.dataset.results = resultsArr.join(";");
                 // TODO: calculate final result and display it
                 let result = calculateResults(resultsArr);
 
