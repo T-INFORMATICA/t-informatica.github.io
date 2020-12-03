@@ -227,8 +227,8 @@ function testFunction(userId) {
     // first create a container for each evaluation
     evaluaties.on('child_added', snap => {
         evalsJSON = resultsJSON.push(snap.toJSON());
+        console.log(evalsJSON);
     });
-    console.log(evalsJSON);
 /*
     // then fill each container with results
     results.on('child_added', snap => {
