@@ -111,13 +111,14 @@ function calculateResults(resultsArr) {
         // convert letter to number
         result = resultsArr[i];
         let number = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
-        
+
     }
 
     return resultsArr[0];
 }
 
 function createResults(userId) {
+    testFunction(userId);
     firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
             let subject = childSnapshot.key;
@@ -188,8 +189,8 @@ function createResults(userId) {
 
 function createEvals(userId) {
     let db = firebase.database().ref();
-    let results = db.child(`resultaten/${userId}`);
     let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
+    let results = db.child(`resultaten/${userId}`);
 
     // first create a container for each evaluation
     evaluaties.on('child_added', snap => {
@@ -201,6 +202,35 @@ function createEvals(userId) {
             </details>
         ` + document.querySelector("#evaluatiesTimeline").innerHTML;
     });
+
+    // then fill each container with results
+    results.on('child_added', snap => {
+        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
+        evaluaties.once('value').then(snapshot => {
+            let tmpl = `
+                <li>
+                    <b class="result">${snap.val().result}</b>
+                    ${snap.val().subject}<br>
+                    ${snap.val().commentaar}
+                </li>
+            `;
+            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
+        });
+    });
+}
+
+function testFunction(userId) {
+    let db = firebase.database().ref();
+    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
+    let results = db.child(`resultaten/${userId}`);
+
+    let evalsJSON = [];
+    let resultsJSON = [];
+    // first create a container for each evaluation
+    evaluaties.on('child_added', snap => {
+        evalsJSON = resultsJSON.push(snap.toJSON());
+    });
+    console.log(evalsJSON);
 
     // then fill each container with results
     results.on('child_added', snap => {
