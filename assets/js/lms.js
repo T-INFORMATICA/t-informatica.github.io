@@ -128,7 +128,7 @@ function calculateResults(resultsArr) {
     for (let i = 1; i < resultsArr.length; ++i) {
 
 //        $resultLetter = $this->_CijferNaarLetter($resultCijfer);
-        let resultLetter = letters[Math.round(resultNumber)];
+        let resultLetter = letters[Math.round(resultNumber+2)];
 //        $behaaldeLetter = $eval->GetWaarde();
         let behaaldeLetter = resultsArr[i];
 //        $resultDelta = $evalProgress[$resultLetter][$behaaldeLetter];
@@ -139,7 +139,7 @@ function calculateResults(resultsArr) {
     }
 
     
-    let resultLetter = letters[Math.round(resultNumber)];
+    let resultLetter = letters[Math.round(resultNumber+2)];
     console.log("should be ABCDE:");
     console.log(resultLetter);
     console.log(resultNumber);
