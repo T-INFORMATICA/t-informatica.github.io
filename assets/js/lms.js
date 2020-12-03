@@ -229,7 +229,7 @@ function testFunction(userId) {
         evalsJSON = resultsJSON.push(snap.toJSON());
     });
     console.log(evalsJSON);
-
+/*
     // then fill each container with results
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
@@ -243,5 +243,5 @@ function testFunction(userId) {
             `;
             document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
         });
-    });
+    });*/
 }
