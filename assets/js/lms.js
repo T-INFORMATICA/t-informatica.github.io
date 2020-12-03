@@ -101,6 +101,19 @@ function createProfile(userId) {
 
 function calculateResults(resultsArr) {
     console.log(resultsArr);
+
+    // convert letter to number
+    let result = resultsArr[0];
+    let resultNumber = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
+
+    let letters = ["A", "B", "C", "D", "E"];
+    for (let i = 1; i < resultsArr.length; ++i) {
+        // convert letter to number
+        result = resultsArr[i];
+        let number = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
+        
+    }
+
     return resultsArr[0];
 }
 
