@@ -100,19 +100,48 @@ function createProfile(userId) {
 }
 
 function calculateResults(resultsArr) {
+    let evalProgress = {
+        "A": {
+            "A": 0, "B": -0.5, "C": -1.5, "D": -1.5, "E": -1.5
+        },
+        "B": {
+            "A": 1, "B": 0, "C": -1, "D": -1.5, "E": -1.5
+        },
+        "C": {
+            "A": 1.5, "B": 0.5, "C": 0, "D": -1, "E": -1.5
+        },
+        "D": {
+            "A": 2, "B": 1, "C": 0.5, "D": 0, "E": -1.5
+        },
+        "E": {
+            "A": 2, "B": 1.5, "C": 1, "D": 0, "E": 0
+        },
+    }
+
+    
+
     // convert letter to number
     let letters = ["A", "B", "C", "D", "E"];
     let result = resultsArr[0];
     let resultNumber = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
 
     for (let i = 1; i < resultsArr.length; ++i) {
-        // convert letter to number
-        result = resultsArr[i];
-        let number = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
 
+//        $resultLetter = $this->_CijferNaarLetter($resultCijfer);
+        let resultLetter = letters[Math.round(resultNumber)];
+//        $behaaldeLetter = $eval->GetWaarde();
+        let behaaldeLetter = resultsArr[i];
+//        $resultDelta = $evalProgress[$resultLetter][$behaaldeLetter];
+        let resultDelta = evalProgress[resultLetter][behaaldeLetter];
+
+//        $resultCijfer += $resultDelta;
+        resultNumber += resultDelta;
     }
 
-    return resultsArr[0];
+    
+    let resultLetter = letters[Math.round(resultNumber)];
+    return resultLetter;
+//    return resultsArr[0];
 }
 
 function createEvals(userId) {
@@ -230,7 +259,6 @@ function createResults(userId) {
                         return value != "";
                     });
                     subjectEl.dataset.results = resultsArr.join(";");
-                    console.log(evalsJSON);
                     subjectEl.dataset.resultdates += evalsJSON[eval]['date'] + ";";
                     let result = calculateResults(resultsArr);
 
@@ -244,76 +272,3 @@ function createResults(userId) {
         }
     });
 }
-
-
-
-/*
-function createResults(userId) {
-    testFunction(userId);
-    firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-            let subject = childSnapshot.key;
-            let subjectId = toCssSafeId(subject);
-
-            let category = childSnapshot.val();
-            let categoryId = toCssSafeId(category);
-            let categoryEl = document.querySelector(`#${categoryId}`);
-
-            if (categoryEl === null) {
-                let tmpl = `
-                    <div id="${categoryId}" class="gradeCategory">
-                        <div>
-                            <h3>${category}</h3>
-                            <h4>Resultaat</h4>
-                            <h4>Theorie</h4>
-                        </div>
-                        <div class="grades">
-                        </div>
-                    </div>
-                `;
-                document.querySelector("main").innerHTML += tmpl;
-            }
-
-            categoryEl = document.querySelector(`#${categoryId}`);
-            categoryEl.style.display = "none";
-            let tmpl = `
-            <div id="${subjectId}" data-results="" style="opacity: 0.2;">
-                <h3>${subject}</h3>
-                <ul>
-                    <li class="A">A</li>
-                    <li class="B">B</li>
-                    <li class="C">C</li>
-                    <li class="D">D</li>
-                    <li class="E">E</li>
-                </ul>
-                <div class="progressbar-bg">
-                    <div class="progressbar-progress" style="width: 0%"></div>
-                    <p class="progressbar-label">0 / 0</p>
-                </div>
-            </div>
-            `;
-            categoryEl.querySelector(".grades").innerHTML += tmpl;
-        });
-
-        
-        firebase.database().ref(`resultaten/${userId}`).on('child_added', snap => {
-            let subject = snap.val().subject;
-            let subjectId = toCssSafeId(subject);
-            let subjectEl = document.querySelector(`#${subjectId}`);
-            subjectEl.style.opacity = "1";
-            if (snap.val().result != null && snap.val().result != undefined) {
-                let resultsArr = subjectEl.dataset.results.split(";");
-                resultsArr.push(snap.val().result);
-                resultsArr = resultsArr.filter(function(value, index, arr){ 
-                    return value != "";
-                });
-                subjectEl.dataset.results = resultsArr.join(";");
-                // TODO: calculate final result and display it
-                let result = calculateResults(resultsArr);
-
-                subjectEl.querySelector(`.${result}`).className += " selected";
-                subjectEl.parentElement.parentElement.style.display = "";
-            }
-        });
-    });
-}*/
