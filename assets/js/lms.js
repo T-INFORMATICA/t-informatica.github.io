@@ -222,17 +222,20 @@ function createResults(userId) {
             let subjectId = toCssSafeId(subject);
             let subjectEl = document.querySelector(`#${subjectId}`);
 
-            let resultsArr = subjectEl.dataset.results.split(";");
-            resultsArr.push(resultObj['result']);
-            resultsArr = resultsArr.filter(function(value, index, arr){ 
-                return value != "";
-            });
-            subjectEl.dataset.results = resultsArr.join(";");
-            let result = calculateResults(resultsArr);
+            if (resultObj['result'] != undefined && resultObj['result'] != undefined) {
+                let resultsArr = subjectEl.dataset.results.split(";");
+                resultsArr.push(resultObj['result']);
+                resultsArr = resultsArr.filter(function(value, index, arr){ 
+                    return value != "";
+                });
+                subjectEl.dataset.results = resultsArr.join(";");
+                let result = calculateResults(resultsArr);
 
-            subjectEl.querySelector(`.${result}`).className += " selected";
-            subjectEl.style.opacity = "1";
-            subjectEl.parentElement.parentElement.style.display = "";
+                subjectEl.querySelector(`.${result}`).className += " selected";
+                subjectEl.style.opacity = "1";
+                subjectEl.parentElement.parentElement.style.display = "";
+            }
+
 
         }
     });
