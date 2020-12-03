@@ -214,7 +214,6 @@ function createResults(userId) {
         });
 
         for (let eval in evalsJSON) {
-            console.log(evalsJSON[eval]['results']);
             let results = evalsJSON[eval]['results'];
 
             for (let i = 0; i < results.length; ++i) {
@@ -231,6 +230,7 @@ function createResults(userId) {
                         return value != "";
                     });
                     subjectEl.dataset.results = resultsArr.join(";");
+                    console.log(eval);
                     subjectEl.dataset.resultdates += eval['date'] + ";";
                     let result = calculateResults(resultsArr);
 
