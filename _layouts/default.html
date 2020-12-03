@@ -35,8 +35,10 @@
                 </li>
                 {% endfor %}
                 <li class="menuItem" data-state="right-aligned">
-                    <input type="text" id="search-input" placeholder="search...">
-                    <ul id="results-container"></ul>
+                    <div id="search-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
                 </li>
                 <li class="menuItem">
                     <a href="{{site.baseurl}}" class="menuItem-btn material-icons">person</a>
