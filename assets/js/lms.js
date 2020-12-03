@@ -216,14 +216,14 @@ function createResults(userId) {
 
         for (let eval in evalsJSON) {
             console.log(evalsJSON[eval]['results']);
-            let result = evalsJSON[eval]['results'];
+            let resultObj = evalsJSON[eval]['results'];
 
-            let subject = result['subject'];
+            let subject = resultObj['subject'];
             let subjectId = toCssSafeId(subject);
             let subjectEl = document.querySelector(`#${subjectId}`);
 
             let resultsArr = subjectEl.dataset.results.split(";");
-            resultsArr.push(result['result']);
+            resultsArr.push(resultObj['result']);
             resultsArr = resultsArr.filter(function(value, index, arr){ 
                 return value != "";
             });
