@@ -140,6 +140,8 @@ function calculateResults(resultsArr) {
 
     
     let resultLetter = letters[Math.round(resultNumber)];
+    console.log("should be ABCDE:");
+    console.log(resultLetter);
     return resultLetter;
 //    return resultsArr[0];
 }
