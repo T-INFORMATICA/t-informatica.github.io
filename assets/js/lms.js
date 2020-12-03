@@ -227,21 +227,15 @@ function testFunction(userId) {
     // first create a container for each evaluation
     evaluaties.on('child_added', snap => {
         evalsJSON[snap.key] = snap.toJSON();
-        console.log(evalsJSON);
+        evalsJSON[snap.key]['results'] = [];
     });
-    /*
+    
     // then fill each container with results
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
-            let tmpl = `
-                <li>
-                    <b class="result">${snap.val().result}</b>
-                    ${snap.val().subject}<br>
-                    ${snap.val().commentaar}
-                </li>
-            `;
-            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
+            evalsJSON[snapshot.key]['results'].push(snap.val().evaluatie);
+            console.log(evalsJSON);
         });
-    });*/
+    });
 }
