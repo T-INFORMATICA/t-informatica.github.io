@@ -119,7 +119,7 @@ function calculateResults(resultsArr) {
     }
 
     // convert letter to number
-    let letters = ["A", "B", "C", "D", "E"];
+    let letters = ["E", "D", "C", "B", "A"];
     let result = resultsArr[0];
     let resultNumber = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
 
@@ -132,7 +132,7 @@ function calculateResults(resultsArr) {
 
         console.log(result);
 
-        resultNumber -= resultDelta;
+        resultNumber += resultDelta;
 
         console.log(`(${resultNumber}) becomes ` + letters[Math.round(resultNumber+2)] + ` (from ${behaaldeLetter}, delta ${resultDelta})`);
     }
