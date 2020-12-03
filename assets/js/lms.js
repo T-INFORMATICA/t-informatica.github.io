@@ -134,7 +134,7 @@ function calculateResults(resultsArr) {
 
         resultNumber += resultDelta;
 
-        console.log(`(${resultNumber}) becomes ` + letters[Math.round(resultNumber+2)] + ` (from ${behaaldeLetter}, delta ${resultDelta})`);
+        console.log(`(${resultNumber-resultDelta}) becomes ` + letters[Math.round(resultNumber+2)] + ` (from ${behaaldeLetter}, delta ${resultDelta})`);
     }
     
     let resultLetter = letters[Math.round(resultNumber+2)];
