@@ -115,9 +115,61 @@ function calculateResults(resultsArr) {
     return resultsArr[0];
 }
 
+function createEvals(userId) {
+    let db = firebase.database().ref();
+    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
+    let results = db.child(`resultaten/${userId}`);
+
+    // first create a container for each evaluation
+    evaluaties.on('child_added', snap => {
+        document.querySelector("#evaluatiesTimeline").innerHTML = `
+            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}" open>
+                <summary>${snap.val().name}</summary>
+                <ul>
+                </ul>
+            </details>
+        ` + document.querySelector("#evaluatiesTimeline").innerHTML;
+    });
+
+    // then fill each container with results
+    results.on('child_added', snap => {
+        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
+        evaluaties.once('value').then(snapshot => {
+            let tmpl = `
+                <li>
+                    <b class="result">${snap.val().result}</b>
+                    ${snap.val().subject}<br>
+                    ${snap.val().commentaar}
+                </li>
+            `;
+            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
+        });
+    });
+}
+
 function createResults(userId) {
-    testFunction(userId);
-    firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
+    let db = firebase.database().ref();
+
+    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
+    let results = db.child(`resultaten/${userId}`);
+    let subjectCategories = db.child(`subjectCategories`);
+
+    let evalsJSON = {};
+
+    evaluaties.on('child_added', snap => {
+        evalsJSON[snap.key] = snap.toJSON();
+        evalsJSON[snap.key]['results'] = [];
+    });
+    
+    results.on('child_added', snap => {
+        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
+        evaluaties.once('value').then(snapshot => {
+            evalsJSON[snapshot.key]['results'].push(snap.val().result);
+            console.log(evalsJSON);
+        });
+    });
+
+    subjectCategories.once('value').then(snapshot => {
         snapshot.forEach(function (childSnapshot) {
             let subject = childSnapshot.key;
             let subjectId = toCssSafeId(subject);
@@ -162,80 +214,8 @@ function createResults(userId) {
             categoryEl.querySelector(".grades").innerHTML += tmpl;
         });
 
-        
-        firebase.database().ref(`resultaten/${userId}`).on('child_added', snap => {
-            let subject = snap.val().subject;
-            let subjectId = toCssSafeId(subject);
-            let subjectEl = document.querySelector(`#${subjectId}`);
-            subjectEl.style.opacity = "1";
-            if (snap.val().result != null && snap.val().result != undefined) {
-                let resultsArr = subjectEl.dataset.results.split(";");
-                resultsArr.push(snap.val().result);
-                resultsArr = resultsArr.filter(function(value, index, arr){ 
-                    return value != "";
-                });
-                subjectEl.dataset.results = resultsArr.join(";");
-                // TODO: calculate final result and display it
-                let result = calculateResults(resultsArr);
-
-                subjectEl.querySelector(`.${result}`).className += " selected";
-                subjectEl.parentElement.parentElement.style.display = "";
-            }
-        });
-    });
-}
-
-function createEvals(userId) {
-    let db = firebase.database().ref();
-    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
-    let results = db.child(`resultaten/${userId}`);
-
-    // first create a container for each evaluation
-    evaluaties.on('child_added', snap => {
-        document.querySelector("#evaluatiesTimeline").innerHTML = `
-            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}" open>
-                <summary>${snap.val().name}</summary>
-                <ul>
-                </ul>
-            </details>
-        ` + document.querySelector("#evaluatiesTimeline").innerHTML;
-    });
-
-    // then fill each container with results
-    results.on('child_added', snap => {
-        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
-        evaluaties.once('value').then(snapshot => {
-            let tmpl = `
-                <li>
-                    <b class="result">${snap.val().result}</b>
-                    ${snap.val().subject}<br>
-                    ${snap.val().commentaar}
-                </li>
-            `;
-            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
-        });
-    });
-}
-
-function testFunction(userId) {
-    let db = firebase.database().ref();
-    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
-    let results = db.child(`resultaten/${userId}`);
-
-    let evalsJSON = {};
-    let resultsJSON = [];
-    // first create a container for each evaluation
-    evaluaties.on('child_added', snap => {
-        evalsJSON[snap.key] = snap.toJSON();
-        evalsJSON[snap.key]['results'] = [];
-    });
-    
-    // then fill each container with results
-    results.on('child_added', snap => {
-        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
-        evaluaties.once('value').then(snapshot => {
-            evalsJSON[snapshot.key]['results'].push(snap.val().result);
-            console.log(evalsJSON);
-        });
+        for (let eval in evalsJSON) {
+            console.log(evalsJSON[eval]['results']);
+        }
     });
 }
