@@ -160,7 +160,7 @@ function createResults(userId) {
                 let resultsArr = subjectEl.dataset.results.split(";");
                 resultsArr.push(snap.val().result);
                 resultsArr = resultsArr.filter(function(value, index, arr){ 
-                    return value == "";
+                    return value != "";
                 });
                 subjectEl.dataset.results = resultsArr.join(";");
                 // TODO: calculate final result and display it
