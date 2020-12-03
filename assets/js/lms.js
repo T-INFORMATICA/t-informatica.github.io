@@ -195,7 +195,7 @@ function createResults(userId) {
             categoryEl = document.querySelector(`#${categoryId}`);
             categoryEl.style.display = "none";
             let tmpl = `
-            <div id="${subjectId}" data-results="" style="opacity: 0.2;">
+            <div id="${subjectId}" data-results="" data-resultdates="" style="opacity: 0.2;">
                 <h3>${subject}</h3>
                 <ul>
                     <li class="A">A</li>
@@ -231,6 +231,7 @@ function createResults(userId) {
                         return value != "";
                     });
                     subjectEl.dataset.results = resultsArr.join(";");
+                    subjectEl.dataset.resultdates += eval['date'] + ";";
                     let result = calculateResults(resultsArr);
 
                     subjectEl.querySelector(`.${result}`).className += " selected";
