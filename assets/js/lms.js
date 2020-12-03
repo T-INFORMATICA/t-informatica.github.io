@@ -3,6 +3,43 @@ function toCssSafeId(text) {
     return text;
 }
 
+function calculateResults(resultsArr) {
+    let evalProgress = {
+        "A": {
+            "A": 0, "B": -0.5, "C": -1.5, "D": -1.5, "E": -1.5
+        },
+        "B": {
+            "A": 1, "B": 0, "C": -1, "D": -1.5, "E": -1.5
+        },
+        "C": {
+            "A": 1.5, "B": 0.5, "C": 0, "D": -1, "E": -1.5
+        },
+        "D": {
+            "A": 2, "B": 1, "C": 0.5, "D": 0, "E": -1.5
+        },
+        "E": {
+            "A": 2, "B": 1.5, "C": 1, "D": 0, "E": 0
+        },
+    }
+
+    // convert letter to number
+    let letters = ["E", "D", "C", "B", "A"];
+    let result = resultsArr[0];
+    let resultNumber = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
+
+    for (let i = 1; i < resultsArr.length; ++i) {
+
+        let resultLetter = letters[Math.round(resultNumber+2)];
+        let behaaldeLetter = resultsArr[i];
+        let resultDelta = evalProgress[resultLetter][behaaldeLetter];
+
+        resultNumber += resultDelta;
+    }
+    
+    let resultLetter = letters[Math.round(resultNumber+2)];
+    return resultLetter;
+}
+
 function addAdmincontrolsToMenu() {
     let user = firebase.auth().currentUser;
     return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {
@@ -97,45 +134,6 @@ function createProfile(userId) {
         });
         
     });
-}
-
-function calculateResults(resultsArr) {
-    let evalProgress = {
-        "A": {
-            "A": 0, "B": -0.5, "C": -1.5, "D": -1.5, "E": -1.5
-        },
-        "B": {
-            "A": 1, "B": 0, "C": -1, "D": -1.5, "E": -1.5
-        },
-        "C": {
-            "A": 1.5, "B": 0.5, "C": 0, "D": -1, "E": -1.5
-        },
-        "D": {
-            "A": 2, "B": 1, "C": 0.5, "D": 0, "E": -1.5
-        },
-        "E": {
-            "A": 2, "B": 1.5, "C": 1, "D": 0, "E": 0
-        },
-    }
-
-    // convert letter to number
-    let letters = ["E", "D", "C", "B", "A"];
-    let result = resultsArr[0];
-    let resultNumber = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
-
-    console.log(result);
-    for (let i = 1; i < resultsArr.length; ++i) {
-
-        let resultLetter = letters[Math.round(resultNumber+2)];
-        let behaaldeLetter = resultsArr[i];
-        let resultDelta = evalProgress[resultLetter][behaaldeLetter];
-
-        resultNumber += resultDelta;
-    }
-    
-    let resultLetter = letters[Math.round(resultNumber+2)];
-    return resultLetter;
-//    return resultsArr[0];
 }
 
 function createEvals(userId) {
@@ -255,6 +253,12 @@ function createResults(userId) {
                     subjectEl.dataset.results = resultsArr.join(";");
                     subjectEl.dataset.resultdates += evalsJSON[eval]['date'] + ";";
                     let result = calculateResults(resultsArr);
+
+                    subjectEl.querySelectorAll(`.selected`).forEach(element => {
+                        let classnames = element.className;
+                        classnames = classnames.replace("selected", "");
+                        element.className = classnames;
+                    });
 
                     subjectEl.querySelector(`.${result}`).className += " selected";
                     subjectEl.style.opacity = "1";
