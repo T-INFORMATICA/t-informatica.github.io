@@ -151,11 +151,15 @@ function createResults(userId) {
             let subjectId = toCssSafeId(subject);
             let subjectEl = document.querySelector(`#${subjectId}`);
             subjectEl.style.opacity = "1";
-            subjectEl.dataset.results += snap.val().result;
-            // TODO: calculate final result and display it
-            let result = snap.val().result;
-            subjectEl.querySelector(`.${result}`).className += " selected";
-            subjectEl.parentElement.parentElement.style.display = "";
+            if (snap.val().result != null) {
+                subjectEl.dataset.results += snap.val().result + ";";
+                
+                // TODO: calculate final result and display it
+                let result = snap.val().result;
+
+                subjectEl.querySelector(`.${result}`).className += " selected";
+                subjectEl.parentElement.parentElement.style.display = "";
+            }
         });
     });
 }
