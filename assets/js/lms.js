@@ -222,11 +222,11 @@ function testFunction(userId) {
     let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
     let results = db.child(`resultaten/${userId}`);
 
-    let evalsJSON = [];
+    let evalsJSON = {};
     let resultsJSON = [];
     // first create a container for each evaluation
     evaluaties.on('child_added', snap => {
-        evalsJSON.push(snap.toJSON());
+        evalsJSON[snap.key] = snap.toJSON();
         console.log(evalsJSON);
     });
     /*
