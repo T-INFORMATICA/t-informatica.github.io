@@ -132,9 +132,9 @@ function calculateResults(resultsArr) {
 
         console.log(result);
 
-        resultNumber += resultDelta;
+        resultNumber -= resultDelta;
 
-        console.log("becomes " + letters[Math.round(resultNumber+2)]);
+        console.log("becomes " + letters[Math.round(resultNumber+2)] + ` (from ${behaaldeLetter}, delta ${resultDelta})`);
     }
     
     let resultLetter = letters[Math.round(resultNumber+2)];
