@@ -216,26 +216,25 @@ function createResults(userId) {
 
         for (let eval in evalsJSON) {
             console.log(evalsJSON[eval]['results']);
+            let result = evalsJSON[eval]['results'];
 
-
-            /*
-            let subject = snap.val().subject;
+            let subject = result['subject'];
             let subjectId = toCssSafeId(subject);
             let subjectEl = document.querySelector(`#${subjectId}`);
             subjectEl.style.opacity = "1";
-            if (snap.val().result != null && snap.val().result != undefined) {
-                let resultsArr = subjectEl.dataset.results.split(";");
-                resultsArr.push(snap.val().result);
-                resultsArr = resultsArr.filter(function(value, index, arr){ 
-                    return value != "";
-                });
-                subjectEl.dataset.results = resultsArr.join(";");
-                // TODO: calculate final result and display it
-                let result = calculateResults(resultsArr);
 
-                subjectEl.querySelector(`.${result}`).className += " selected";
-                subjectEl.parentElement.parentElement.style.display = "";
-            }*/
+            let resultsArr = subjectEl.dataset.results.split(";");
+            resultsArr.push(result['result']);
+            resultsArr = resultsArr.filter(function(value, index, arr){ 
+                return value != "";
+            });
+            subjectEl.dataset.results = resultsArr.join(";");
+            // TODO: calculate final result and display it
+            let result = calculateResults(resultsArr);
+
+            subjectEl.querySelector(`.${result}`).className += " selected";
+            subjectEl.parentElement.parentElement.style.display = "";
+
         }
     });
 }
