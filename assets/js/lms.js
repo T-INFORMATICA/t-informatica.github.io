@@ -231,7 +231,7 @@ function createResults(userId) {
                     });
                     subjectEl.dataset.results = resultsArr.join(";");
                     console.log(evalsJSON);
-                    subjectEl.dataset.resultdates += evalsJSON['date'] + ";";
+                    subjectEl.dataset.resultdates += evalsJSON[eval]['date'] + ";";
                     let result = calculateResults(resultsArr);
 
                     subjectEl.querySelector(`.${result}`).className += " selected";
