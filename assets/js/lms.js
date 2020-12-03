@@ -221,7 +221,6 @@ function createResults(userId) {
             let subject = result['subject'];
             let subjectId = toCssSafeId(subject);
             let subjectEl = document.querySelector(`#${subjectId}`);
-            subjectEl.style.opacity = "1";
 
             let resultsArr = subjectEl.dataset.results.split(";");
             resultsArr.push(result['result']);
@@ -229,10 +228,10 @@ function createResults(userId) {
                 return value != "";
             });
             subjectEl.dataset.results = resultsArr.join(";");
-            // TODO: calculate final result and display it
             let result = calculateResults(resultsArr);
 
             subjectEl.querySelector(`.${result}`).className += " selected";
+            subjectEl.style.opacity = "1";
             subjectEl.parentElement.parentElement.style.display = "";
 
         }
