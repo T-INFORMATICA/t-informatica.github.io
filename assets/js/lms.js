@@ -215,24 +215,28 @@ function createResults(userId) {
 
         for (let eval in evalsJSON) {
             console.log(evalsJSON[eval]['results']);
-            let resultObj = evalsJSON[eval]['results'];
+            let results = evalsJSON[eval]['results'];
 
-            let subject = resultObj['subject'];
-            let subjectId = toCssSafeId(subject);
-            let subjectEl = document.querySelector(`#${subjectId}`);
+            for (let i = 0; i < results.length; ++i) {
+                let resultObj = results[i];
 
-            if (resultObj['result'] != undefined && resultObj['result'] != undefined) {
-                let resultsArr = subjectEl.dataset.results.split(";");
-                resultsArr.push(resultObj['result']);
-                resultsArr = resultsArr.filter(function(value, index, arr){ 
-                    return value != "";
-                });
-                subjectEl.dataset.results = resultsArr.join(";");
-                let result = calculateResults(resultsArr);
+                let subject = resultObj['subject'];
+                let subjectId = toCssSafeId(subject);
+                let subjectEl = document.querySelector(`#${subjectId}`);
 
-                subjectEl.querySelector(`.${result}`).className += " selected";
-                subjectEl.style.opacity = "1";
-                subjectEl.parentElement.parentElement.style.display = "";
+                if (resultObj['result'] != undefined && resultObj['result'] != undefined) {
+                    let resultsArr = subjectEl.dataset.results.split(";");
+                    resultsArr.push(resultObj['result']);
+                    resultsArr = resultsArr.filter(function(value, index, arr){ 
+                        return value != "";
+                    });
+                    subjectEl.dataset.results = resultsArr.join(";");
+                    let result = calculateResults(resultsArr);
+
+                    subjectEl.querySelector(`.${result}`).className += " selected";
+                    subjectEl.style.opacity = "1";
+                    subjectEl.parentElement.parentElement.style.display = "";
+                }
             }
 
 
