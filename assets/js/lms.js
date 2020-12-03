@@ -159,6 +159,9 @@ function createResults(userId) {
             if (snap.val().result != null && snap.val().result != undefined) {
                 let resultsArr = subjectEl.dataset.results.split(";");
                 resultsArr.push(snap.val().result);
+                resultsArr = resultsArr.filter(function(value, index, arr){ 
+                    return value == "";
+                });
                 subjectEl.dataset.results = resultsArr.join(";");
                 // TODO: calculate final result and display it
                 let result = calculateResults(resultsArr);
