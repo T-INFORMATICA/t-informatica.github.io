@@ -230,8 +230,8 @@ function createResults(userId) {
                         return value != "";
                     });
                     subjectEl.dataset.results = resultsArr.join(";");
-                    console.log(eval);
-                    subjectEl.dataset.resultdates += eval['date'] + ";";
+                    console.log(evalsJSON);
+                    subjectEl.dataset.resultdates += evalsJSON['date'] + ";";
                     let result = calculateResults(resultsArr);
 
                     subjectEl.querySelector(`.${result}`).className += " selected";
