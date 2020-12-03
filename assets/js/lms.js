@@ -118,31 +118,27 @@ function calculateResults(resultsArr) {
         },
     }
 
-    
-
     // convert letter to number
     let letters = ["A", "B", "C", "D", "E"];
     let result = resultsArr[0];
     let resultNumber = letters.indexOf(result) - 2; // -2 to offset the index between -2 and 2, instead of 0 and 5
 
+    console.log(result);
     for (let i = 1; i < resultsArr.length; ++i) {
 
-//        $resultLetter = $this->_CijferNaarLetter($resultCijfer);
         let resultLetter = letters[Math.round(resultNumber+2)];
-//        $behaaldeLetter = $eval->GetWaarde();
         let behaaldeLetter = resultsArr[i];
-//        $resultDelta = $evalProgress[$resultLetter][$behaaldeLetter];
         let resultDelta = evalProgress[resultLetter][behaaldeLetter];
 
-//        $resultCijfer += $resultDelta;
-        resultNumber += resultDelta;
-    }
+        console.log(result);
 
+        resultNumber += resultDelta;
+
+        console.log("becomes " + letters[Math.round(resultNumber+2)]);
+    }
     
     let resultLetter = letters[Math.round(resultNumber+2)];
-    console.log("should be ABCDE:");
-    console.log(resultLetter);
-    console.log(resultNumber);
+    console.log("---");
     return resultLetter;
 //    return resultsArr[0];
 }
