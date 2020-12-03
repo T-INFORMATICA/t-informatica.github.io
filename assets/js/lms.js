@@ -164,7 +164,7 @@ function createResults(userId) {
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
-            evalsJSON[snapshot.key]['results'].push(snap.val().result);
+            evalsJSON[snapshot.key]['results'].push(snap.toJSON());
             console.log(evalsJSON);
         });
     });
@@ -216,6 +216,99 @@ function createResults(userId) {
 
         for (let eval in evalsJSON) {
             console.log(evalsJSON[eval]['results']);
+
+
+            /*
+            let subject = snap.val().subject;
+            let subjectId = toCssSafeId(subject);
+            let subjectEl = document.querySelector(`#${subjectId}`);
+            subjectEl.style.opacity = "1";
+            if (snap.val().result != null && snap.val().result != undefined) {
+                let resultsArr = subjectEl.dataset.results.split(";");
+                resultsArr.push(snap.val().result);
+                resultsArr = resultsArr.filter(function(value, index, arr){ 
+                    return value != "";
+                });
+                subjectEl.dataset.results = resultsArr.join(";");
+                // TODO: calculate final result and display it
+                let result = calculateResults(resultsArr);
+
+                subjectEl.querySelector(`.${result}`).className += " selected";
+                subjectEl.parentElement.parentElement.style.display = "";
+            }*/
         }
     });
 }
+
+
+
+/*
+function createResults(userId) {
+    testFunction(userId);
+    firebase.database().ref(`subjectCategories`).once('value').then(function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+            let subject = childSnapshot.key;
+            let subjectId = toCssSafeId(subject);
+
+            let category = childSnapshot.val();
+            let categoryId = toCssSafeId(category);
+            let categoryEl = document.querySelector(`#${categoryId}`);
+
+            if (categoryEl === null) {
+                let tmpl = `
+                    <div id="${categoryId}" class="gradeCategory">
+                        <div>
+                            <h3>${category}</h3>
+                            <h4>Resultaat</h4>
+                            <h4>Theorie</h4>
+                        </div>
+                        <div class="grades">
+                        </div>
+                    </div>
+                `;
+                document.querySelector("main").innerHTML += tmpl;
+            }
+
+            categoryEl = document.querySelector(`#${categoryId}`);
+            categoryEl.style.display = "none";
+            let tmpl = `
+            <div id="${subjectId}" data-results="" style="opacity: 0.2;">
+                <h3>${subject}</h3>
+                <ul>
+                    <li class="A">A</li>
+                    <li class="B">B</li>
+                    <li class="C">C</li>
+                    <li class="D">D</li>
+                    <li class="E">E</li>
+                </ul>
+                <div class="progressbar-bg">
+                    <div class="progressbar-progress" style="width: 0%"></div>
+                    <p class="progressbar-label">0 / 0</p>
+                </div>
+            </div>
+            `;
+            categoryEl.querySelector(".grades").innerHTML += tmpl;
+        });
+
+        
+        firebase.database().ref(`resultaten/${userId}`).on('child_added', snap => {
+            let subject = snap.val().subject;
+            let subjectId = toCssSafeId(subject);
+            let subjectEl = document.querySelector(`#${subjectId}`);
+            subjectEl.style.opacity = "1";
+            if (snap.val().result != null && snap.val().result != undefined) {
+                let resultsArr = subjectEl.dataset.results.split(";");
+                resultsArr.push(snap.val().result);
+                resultsArr = resultsArr.filter(function(value, index, arr){ 
+                    return value != "";
+                });
+                subjectEl.dataset.results = resultsArr.join(";");
+                // TODO: calculate final result and display it
+                let result = calculateResults(resultsArr);
+
+                subjectEl.querySelector(`.${result}`).className += " selected";
+                subjectEl.parentElement.parentElement.style.display = "";
+            }
+        });
+    });
+}*/
