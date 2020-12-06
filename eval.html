@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     let uid = new URLSearchParams(window.location.search).get('userid');
     uid = uid === null ? user.uid : uid;
     createEvals(uid);
-});
+}); 
 
 </script>
 
