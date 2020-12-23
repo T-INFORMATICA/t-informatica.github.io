@@ -57,7 +57,7 @@ function addUserEvalsToPage(userid) {
     });
 }*/
 
-function addUserdataToProfileTable(userId) {
+function addUserdataToProfileTable(userid) {
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
 
