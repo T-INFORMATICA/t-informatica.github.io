@@ -13,14 +13,16 @@ function addUsersToMenu(userid) {
 }
 
 function addFirebaseUserdataToMenu(userid, userdata) {
+    if (firebase.auth().currentUser.uid === userid)
+        return;
     let tmpl = `<a href="?userid=${userid}">${userdata.naam}</a>`;
     document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
 }
 
 function addUserEvalsToPage(userid) {
     let database = firebase.database();
-    let evalsref = database.child(`evaluaties/${userId}`).orderByChild("date");
-    let resultsref = database.child(`resultaten/${userId}`);
+    let evalsref = database.child(`evaluaties/${userid}`).orderByChild("date");
+    let resultsref = database.child(`resultaten/${userid}`);
 
     evalsref.once('value').then(snapshot => console.log(snapshot.val()));
 }
