@@ -25,7 +25,7 @@ function addUserEvalsToPage(userid) {
     let resultsref = database.ref(`resultaten/${userid}`);
 
     evalsref.once('value')
-        .then(snapshot => snapshot.forEach(evalsnapshot => console.log(evalsnapshot)));
+        .then(snapshot => snapshot.forEach(evalsnapshot => addEvalToTimeline(evalsnapshot.key, evalsnapshot.val())));
 
     resultsref.once('value')
         .then(snapshot => console.log(snapshot.val()));
