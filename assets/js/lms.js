@@ -7,7 +7,7 @@ function addUsersToMenu(userid) {
         .then(snapshot => snapshot.forEach(snapshot => addFirebaseUserdataToMenu(snapshot.key, snapshot.val())))
         .catch(err => {
             userref.once('value')
-                .then(snapshot => addFirebaseUserdataToMenu(snapshot.val()))
+                .then(snapshot => addFirebaseUserdataToMenu(snapshot.key, snapshot.val()))
                 .catch(err => console.log(err));
         });
 }
