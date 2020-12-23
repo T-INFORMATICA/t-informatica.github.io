@@ -32,6 +32,7 @@ function addUserEvalsToPage(userid) {
 }
 
 function addEvalToTimeline(evalid, evaldata) {
+    console.log(evaldata);
     let tmpl = `
         <details class="timeline-item" id="${evalid}" data-date="${evaldata.date}" open>
             <summary>${evaldata.name}</summary>
