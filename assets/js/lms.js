@@ -4,7 +4,7 @@ function getManagedUsers(userid) {
     var managedUsersref = database.ref(`users`);
     
     managedUsersref.once('value')
-        .then(snapshot => snapshot.forEach(snapshot => addFirebaseUserdataToMenu(snapshot.val())))
+        .then(snapshot => snapshot.forEach(snapshot => addFirebaseUserdataToMenu(snapshot.key, snapshot.val())))
         .catch(err => {
             userref.once('value')
                 .then(snapshot => addFirebaseUserdataToMenu(snapshot.val()))
@@ -12,10 +12,10 @@ function getManagedUsers(userid) {
         });
 }
 
-function addFirebaseUserdataToMenu(userdata) {
+function addFirebaseUserdataToMenu(userid, userdata) {
     console.log(userdata);
     let tmpl = `
-            <a href="?userid=${uid}" id="${user.uid}">${userdata.naam}</a>
+            <a href="?userid=${userid}" id="${userid}">${userdata.naam}</a>
     `;
     
     document.querySelector('#userSelect').innerHTML += tmpl;
