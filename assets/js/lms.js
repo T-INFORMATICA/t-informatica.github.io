@@ -21,8 +21,8 @@ function addFirebaseUserdataToMenu(userid, userdata) {
 
 function addUserEvalsToPage(userid) {
     let database = firebase.database();
-    let evalsref = database.child(`evaluaties/${userid}`).orderByChild("date");
-    let resultsref = database.child(`resultaten/${userid}`);
+    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+    let resultsref = database.ref(`resultaten/${userid}`);
 
     evalsref.once('value').then(snapshot => console.log(snapshot.val()));
 }
