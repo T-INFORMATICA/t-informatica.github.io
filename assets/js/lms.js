@@ -24,7 +24,11 @@ function addUserEvalsToPage(userid) {
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
     let resultsref = database.ref(`resultaten/${userid}`);
 
-    evalsref.once('value').then(snapshot => console.log(snapshot.val()));
+    evalsref.once('child_added')
+        .then(snapshot => console.log(snapshot.val()));
+
+    resultsref.once('value')
+        .then(snapshot => console.log(snapshot.val()));
 }
 
 /*function createEvals(userId) {
