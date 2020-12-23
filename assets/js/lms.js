@@ -1,4 +1,5 @@
 function getManagedUsers(userid) {
+    var database = firebase.database();
     var userref = database.ref(`users/${userid}`);
     var managedUsersref = database.ref(`users`);
     
