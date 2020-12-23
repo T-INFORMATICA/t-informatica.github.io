@@ -39,7 +39,7 @@ function addEvalToTimeline(evalid, evaldata) {
             <ul>
             </ul>
         </details>`;
-    document.querySelector("#evaluatiesTimeline").prepend(tmpl);
+    document.querySelector("#evaluatiesTimeline").innerHTML = tmpl + document.querySelector("#evaluatiesTimeline").innerHTML;
 }
 
 /*function createEvals(userId) {
