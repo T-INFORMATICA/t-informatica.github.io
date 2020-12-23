@@ -18,7 +18,7 @@ function addFirebaseUserdataToMenu(userid, userdata) {
             <a href="?userid=${userid}" id="${userid}">${userdata.naam}</a>
     `;
     
-    document.querySelector('#leftMenu>hr').insertAdjacentHTML('afterend', tmpl);
+    document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
 }
 
 
