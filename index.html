@@ -27,9 +27,15 @@ layout: lms
 
 firebase.auth().onAuthStateChanged(function(user) {
     authUser(user);
-    createMenu();
-    createProfile(user.uid);
-    createResults(user.uid);
+
+    let uid = new URLSearchParams(window.location.search).get('userid');
+    uid = uid === null ? user.uid : uid;
+
+    addUsersToMenu(uid);
+    addUserdataToProfileTable(uid);
+    //createMenu();
+    //createProfile(user.uid);
+    //createResults(user.uid);
 });
 
 </script>

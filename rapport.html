@@ -2,14 +2,17 @@
 layout: lms
 ---
 
+
 <script>
 
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged(function(user) {
         authUser(user);
-        createMenu();
+    
         let uid = new URLSearchParams(window.location.search).get('userid');
         uid = uid === null ? user.uid : uid;
+    
+        addUsersToMenu(uid);
         createResults(uid);
     });
-
+    
 </script>
