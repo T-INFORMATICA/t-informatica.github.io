@@ -24,11 +24,21 @@ function addUserEvalsToPage(userid) {
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
     let resultsref = database.ref(`resultaten/${userid}`);
 
-    evalsref.once('child_added')
-        .then(snapshot => console.log(snapshot.val()));
+    evalsref.once('value')
+        .then(snapshot => snapshot.forEach(evalsnapshot => addEvalToTimeline(evalsnapshot.key, evalsnapshot.val())));
 
     resultsref.once('value')
         .then(snapshot => console.log(snapshot.val()));
+}
+
+function addEvalToTimeline(evalid, evaldata) {
+    let tmpl = `
+        <details class="timeline-item" id="${evalid}" data-date="${evaldata.date}" open>
+            <summary>${evaldata.name}</summary>
+            <ul>
+            </ul>
+        </details>`;
+    document.querySelector("#evaluatiesTimeline").prepend(tmpl);
 }
 
 /*function createEvals(userId) {
