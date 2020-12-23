@@ -1,7 +1,7 @@
 function addUsersToMenu(userid) {
-    var database = firebase.database();
-    var userref = database.ref(`users/${userid}`);
-    var managedUsersref = database.ref(`users`);
+    let database = firebase.database();
+    let userref = database.ref(`users/${userid}`);
+    let managedUsersref = database.ref(`users`);
     
     managedUsersref.once('value')
         .then(snapshot => snapshot.forEach(snapshot => addFirebaseUserdataToMenu(snapshot.key, snapshot.val())))
@@ -17,9 +17,49 @@ function addFirebaseUserdataToMenu(userid, userdata) {
     document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
 }
 
+function addUserEvalsToPage(userid) {
+    let database = firebase.database();
+    let evalsref = db.child(`evaluaties/${userId}`).orderByChild("date");
+    let resultsref = db.child(`resultaten/${userId}`);
+
+    evalsref.once('value').then(snapshot => console.log(snapshot.val()));
+}
+
+/*function createEvals(userId) {
+    let db = firebase.database().ref();
+    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
+    let results = db.child(`resultaten/${userId}`);
+
+    // first create a container for each evaluation
+    evaluaties.on('child_added', snap => {
+        document.querySelector("#evaluatiesTimeline").innerHTML = `
+            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}" open>
+                <summary>${snap.val().name}</summary>
+                <ul>
+                </ul>
+            </details>
+        ` + document.querySelector("#evaluatiesTimeline").innerHTML;
+    });
+
+    // then fill each container with results
+    results.on('child_added', snap => {
+        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
+        evaluaties.once('value').then(snapshot => {
+            let tmpl = `
+                <li>
+                    <b class="result">${snap.val().result}</b>
+                    ${snap.val().subject}<br>
+                    ${snap.val().commentaar}
+                </li>
+            `;
+            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
+        });
+    });
+}*/
+
 function addUserdataToProfileTable(userId) {
-    var database = firebase.database();
-    var userref = database.ref(`users/${userid}`);
+    let database = firebase.database();
+    let userref = database.ref(`users/${userid}`);
 
     userref.once('value').then(snapshot => 
         snapshot.forEach(userdata => {
