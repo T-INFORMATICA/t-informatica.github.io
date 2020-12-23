@@ -13,6 +13,7 @@ function getManagedUsers(userid) {
 }
 
 function addFirebaseUserdataToMenu(userdata) {
+    console.log(userdata);
     let tmpl = `
             <a href="?userid=${uid}" id="${user.uid}">${userdata.naam}</a>
     `;
