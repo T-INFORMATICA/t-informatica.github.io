@@ -1,3 +1,23 @@
+function getManagedUsers(userid) {
+    var userref = database.ref(`users/${userid}`);
+    var managedUsersref = database.ref(`users`);
+    
+    userref.once('value')
+        .then(snapshot => addFirebaseUserdataToMenu(snapshot.val()))
+        .catch(err => console.log(err));
+
+    managedUsersref.once('value')
+        .then(snapshot => snapshot)
+        .foreach(snapshot => addFirebaseUserdataToMenu(snapshot.val()))
+        .catch(err => console.log(err));
+}
+
+function addFirebaseUserdataToMenu(userdata) {
+    console.log(userdata);
+}
+
+
+
 function toCssSafeId(text) {
     text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
     return text;
