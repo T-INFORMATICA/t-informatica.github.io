@@ -28,7 +28,7 @@ function addUserEvalsToPage(userid) {
         .then(snapshot => snapshot.forEach(evalsnapshot => addEvalToTimeline(evalsnapshot.key, evalsnapshot.val())));
 
     resultsref.once('value')
-        .then(snapshot => console.log(snapshot.val()));
+        .then(snapshot => snapshot.forEach(resultsnapshot => console.log(resultsnapshot)));
 }
 
 function addEvalToTimeline(evalid, evaldata) {
