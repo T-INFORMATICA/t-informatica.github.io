@@ -1,4 +1,4 @@
-function getManagedUsers(userid) {
+function addUsersToMenu(userid) {
     var database = firebase.database();
     var userref = database.ref(`users/${userid}`);
     var managedUsersref = database.ref(`users`);
@@ -13,12 +13,32 @@ function getManagedUsers(userid) {
 }
 
 function addFirebaseUserdataToMenu(userid, userdata) {
-    console.log(userdata);
-    let tmpl = `
-            <a href="?userid=${userid}" id="${userid}">${userdata.naam}</a>
-    `;
-    
+    let tmpl = `<a href="?userid=${userid}">${userdata.naam}</a>`;
     document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
+}
+
+function addUserdataToProfileTable(userId) {
+    var database = firebase.database();
+    var userref = database.ref(`users/${userid}`);
+
+    userref.once('value').then(snapshot => 
+        snapshot.forEach(userdata => {
+            switch (userdata.key) {
+                case "username": 
+                    document.querySelector('#profileUsername').innerHTML = userdata.val();
+                    break;
+                case "naam":
+                    document.querySelector('#profileName').innerHTML = userdata.val();
+                    break;
+                case "password":
+                    document.querySelector('#profilePassword').innerHTML = userdata.val();
+                    break;
+                case "url":
+                    document.querySelector('#profileUrl').innerHTML = userdata.val();
+                    break;
+            }
+        })
+    );
 }
 
 
