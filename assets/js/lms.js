@@ -8,7 +8,7 @@ function getManagedUsers(userid) {
         .catch(err => console.log(err));
 
     managedUsersref.once('value')
-        .then(snapshot => snapshot.foreach(snapshot => addFirebaseUserdataToMenu(snapshot.val())))
+        .then(snapshot => snapshot.forEach(snapshot => addFirebaseUserdataToMenu(snapshot.val())))
         .catch(err => console.log(err));
 }
 
