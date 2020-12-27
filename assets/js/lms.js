@@ -31,7 +31,9 @@ function addUserEvalsToPage(userid) {
             resultsref
                 .once('value')
                 .then(snapshot => snapshot.forEach(resultsnapshot => {
-                    addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
+                    if (resultsnapshot.evaluatie === evalsnapshot.key) {
+                        addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
+                    }
                 }));
         }));
 }
