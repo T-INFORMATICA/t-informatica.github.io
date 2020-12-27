@@ -31,9 +31,7 @@ function addUserEvalsToPage(userid) {
             resultsref
                 .once('value')
                 .then(snapshot => snapshot.forEach(resultsnapshot => {
-                    console.log(evalsnapshot.key);
-                    console.log(resultsnapshot.val());
-                    if (resultsnapshot.val().evaluatie == evalsnapshot.key) {
+                    if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
                         addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
                     }
                 }));
@@ -62,38 +60,6 @@ function addEvalResultToTimeline(evalid, resultdata) {
     document.querySelector(`#${evalid}>ul`).innerHTML += tmpl;
 }
 
-/*function createEvals(userId) {
-    let db = firebase.database().ref();
-    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
-    let results = db.child(`resultaten/${userId}`);
-
-    // first create a container for each evaluation
-    evaluaties.on('child_added', snap => {
-        document.querySelector("#evaluatiesTimeline").innerHTML = `
-            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}" open>
-                <summary>${snap.val().name}</summary>
-                <ul>
-                </ul>
-            </details>
-        ` + document.querySelector("#evaluatiesTimeline").innerHTML;
-    });
-
-    // then fill each container with results
-    results.on('child_added', snap => {
-        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
-        evaluaties.once('value').then(snapshot => {
-            let tmpl = `
-                <li>
-                    <b class="result">${snap.val().result}</b>
-                    ${snap.val().subject}<br>
-                    ${snap.val().commentaar}
-                </li>
-            `;
-            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
-        });
-    });
-}*/
-
 function addUserdataToProfileTable(userid) {
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
@@ -118,7 +84,7 @@ function addUserdataToProfileTable(userid) {
     );
 }
 
-
+/////////////////////////////
 
 function toCssSafeId(text) {
     text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
@@ -161,7 +127,7 @@ function calculateResults(resultsArr) {
     let resultLetter = letters[Math.round(resultNumber + 2)];
     return resultLetter;
 }
-
+/*
 function addAdmincontrolsToMenu() {
     let user = firebase.auth().currentUser;
     return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {
@@ -182,7 +148,7 @@ function addAdmincontrolsToMenu() {
         addManagedUsersToMenu();
     });
 }
-
+/*
 function addCurrentUserToMenu() {
     let user = firebase.auth().currentUser;
     return firebase.database().ref(`users/${user.uid}`).once('value').then(function (snapshot) {
@@ -229,7 +195,7 @@ function addManagedUsersToMenu() {
 }
 
 
-
+/*
 function createMenu() {
     addCurrentUserToMenu();
     addAdmincontrolsToMenu();
@@ -256,39 +222,7 @@ function createProfile(userId) {
         });
 
     });
-}
-
-function createEvals(userId) {
-    let db = firebase.database().ref();
-    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
-    let results = db.child(`resultaten/${userId}`);
-
-    // first create a container for each evaluation
-    evaluaties.on('child_added', snap => {
-        document.querySelector("#evaluatiesTimeline").innerHTML = `
-            <details class="timeline-item" id="${snap.key}" data-date="${snap.val().date}" open>
-                <summary>${snap.val().name}</summary>
-                <ul>
-                </ul>
-            </details>
-        ` + document.querySelector("#evaluatiesTimeline").innerHTML;
-    });
-
-    // then fill each container with results
-    results.on('child_added', snap => {
-        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
-        evaluaties.once('value').then(snapshot => {
-            let tmpl = `
-                <li>
-                    <b class="result">${snap.val().result}</b>
-                    ${snap.val().subject}<br>
-                    ${snap.val().commentaar}
-                </li>
-            `;
-            document.querySelector(`#${snapshot.key}>ul`).innerHTML += tmpl;
-        });
-    });
-}
+}*/
 
 function createResults(userId) {
     let db = firebase.database().ref();
