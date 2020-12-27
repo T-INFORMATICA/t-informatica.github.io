@@ -31,6 +31,8 @@ function addUserEvalsToPage(userid) {
             resultsref
                 .once('value')
                 .then(snapshot => snapshot.forEach(resultsnapshot => {
+                    console.log(evalsnapshot.key);
+                    console.log(resultsnapshot.val());
                     if (resultsnapshot.evaluatie === evalsnapshot.key) {
                         addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
                     }
