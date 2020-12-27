@@ -2,7 +2,7 @@ function addUsersToMenu(userid) {
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
     let managedUsersref = database.ref(`users`);
-    
+
     managedUsersref.once('value')
         .then(snapshot => snapshot.forEach(snapshot => addFirebaseUserdataToMenu(snapshot.key, snapshot.val())))
         .catch(err => {
@@ -24,11 +24,16 @@ function addUserEvalsToPage(userid) {
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
     let resultsref = database.ref(`resultaten/${userid}`);
 
-    evalsref.once('value')
-        .then(snapshot => snapshot.forEach(evalsnapshot => addEvalToTimeline(evalsnapshot.key, evalsnapshot.val())));
-
-    resultsref.once('value')
-        .then(snapshot => snapshot.forEach(resultsnapshot => console.log(resultsnapshot.val())));
+    evalsref
+        .once('value')
+        .then(snapshot => snapshot.forEach(evalsnapshot => {
+            addEvalToTimeline(evalsnapshot.key, evalsnapshot.val());
+            resultsref
+                .once('value')
+                .then(snapshot => snapshot.forEach(resultsnapshot => {
+                    addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
+                }));
+        }));
 }
 
 function addEvalToTimeline(evalid, evaldata) {
@@ -40,6 +45,17 @@ function addEvalToTimeline(evalid, evaldata) {
             </ul>
         </details>`;
     document.querySelector("#evaluatiesTimeline").innerHTML = tmpl + document.querySelector("#evaluatiesTimeline").innerHTML;
+}
+
+function addEvalResultToTimeline(evalid, resultdata) {
+    let tmpl = `
+        <li>
+            <b class="result">${resultdata.result}</b>
+            ${resultdata.subject}<br>
+            ${resultdata.commentaar}
+        </li>
+    `;
+    document.querySelector(`#${evalid}>ul`).innerHTML += tmpl;
 }
 
 /*function createEvals(userId) {
@@ -78,10 +94,10 @@ function addUserdataToProfileTable(userid) {
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
 
-    userref.once('value').then(snapshot => 
+    userref.once('value').then(snapshot =>
         snapshot.forEach(userdata => {
             switch (userdata.key) {
-                case "username": 
+                case "username":
                     document.querySelector('#profileUsername').innerHTML = userdata.val();
                     break;
                 case "naam":
@@ -131,14 +147,14 @@ function calculateResults(resultsArr) {
 
     for (let i = 1; i < resultsArr.length; ++i) {
 
-        let resultLetter = letters[Math.round(resultNumber+2)];
+        let resultLetter = letters[Math.round(resultNumber + 2)];
         let behaaldeLetter = resultsArr[i];
         let resultDelta = evalProgress[resultLetter][behaaldeLetter];
 
         resultNumber += resultDelta;
     }
-    
-    let resultLetter = letters[Math.round(resultNumber+2)];
+
+    let resultLetter = letters[Math.round(resultNumber + 2)];
     return resultLetter;
 }
 
@@ -220,7 +236,7 @@ function createProfile(userId) {
         snapshot.forEach(function (childSnapshot) {
             userdata = childSnapshot;
             switch (userdata.key) {
-                case "username": 
+                case "username":
                     document.querySelector('#profileUsername').innerHTML += userdata.val();
                     break;
                 case "naam":
@@ -234,7 +250,7 @@ function createProfile(userId) {
                     break;
             }
         });
-        
+
     });
 }
 
@@ -283,7 +299,7 @@ function createResults(userId) {
         evalsJSON[snap.key] = snap.toJSON();
         evalsJSON[snap.key]['results'] = [];
     });
-    
+
     results.on('child_added', snap => {
         let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
         evaluaties.once('value').then(snapshot => {
@@ -349,7 +365,7 @@ function createResults(userId) {
                 if (resultObj['result'] != undefined && resultObj['result'] != undefined) {
                     let resultsArr = subjectEl.dataset.results.split(";");
                     resultsArr.push(resultObj['result']);
-                    resultsArr = resultsArr.filter(function(value, index, arr){ 
+                    resultsArr = resultsArr.filter(function (value, index, arr) {
                         return value != "";
                     });
                     subjectEl.dataset.results = resultsArr.join(";");
