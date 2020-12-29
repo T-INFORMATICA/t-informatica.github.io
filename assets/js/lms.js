@@ -191,6 +191,8 @@ function showResultInSubjectElement(subject, result) {
     let subjectEl = document.querySelector(`#${subjectId}`);
     subjectEl.style.display = "";
     subjectEl.parentElement.parentElement.style.display = "";
+
+    subjectEl.querySelector(`.${result}`).className += " selected";
 }
 
 function addCategoryElement(category) {
