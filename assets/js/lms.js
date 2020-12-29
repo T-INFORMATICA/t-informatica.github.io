@@ -129,11 +129,6 @@ function addUserdataToProfileTable(userid) {
     );
 }
 
-//////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
-//////// TODO - REWORK FUNCTION
-
 function addResultsToPage(userid) {
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
@@ -241,105 +236,4 @@ function addSubjectElementToCategoryElement(subject, category) {
     </div>
     `;
     categoryEl.querySelector(".grades").innerHTML += tmpl;
-}
-
-function createResults(userId) {
-    let db = firebase.database().ref();
-
-    let evaluaties = db.child(`evaluaties/${userId}`).orderByChild("date");
-    let results = db.child(`resultaten/${userId}`);
-    let subjectCategories = db.child(`subjectCategories`);
-
-    let evalsJSON = {};
-
-    evaluaties.on('child_added', snap => {
-        evalsJSON[snap.key] = snap.toJSON();
-        evalsJSON[snap.key]['results'] = [];
-    });
-
-    results.on('child_added', snap => {
-        let evaluaties = db.child(`evaluaties/${userId}/${snap.val().evaluatie}`);
-        evaluaties.once('value').then(snapshot => {
-            evalsJSON[snapshot.key]['results'].push(snap.toJSON());
-        });
-    });
-
-    subjectCategories.once('value').then(snapshot => {
-        snapshot.forEach(function (childSnapshot) {
-            let subject = childSnapshot.key;
-            let subjectId = toCssSafeId(subject);
-
-            let category = childSnapshot.val();
-            let categoryId = toCssSafeId(category);
-            let categoryEl = document.querySelector(`#${categoryId}`);
-
-            if (categoryEl === null) {
-                let tmpl = `
-                    <div id="${categoryId}" class="gradeCategory">
-                        <div>
-                            <h3>${category}</h3>
-                            <h4>Resultaat</h4>
-                            <h4>Theorie</h4>
-                        </div>
-                        <div class="grades">
-                        </div>
-                    </div>
-                `;
-                document.querySelector("main").innerHTML += tmpl;
-            }
-
-            categoryEl = document.querySelector(`#${categoryId}`);
-            categoryEl.style.display = "none";
-            let tmpl = `
-            <div id="${subjectId}" data-results="" data-resultdates="" style="opacity: 0.2;">
-                <h3>${subject}</h3>
-                <ul>
-                    <li class="A">A</li>
-                    <li class="B">B</li>
-                    <li class="C">C</li>
-                    <li class="D">D</li>
-                    <li class="E">E</li>
-                </ul>
-                <div class="progressbar-bg">
-                    <div class="progressbar-progress" style="width: 0%"></div>
-                    <p class="progressbar-label">0 / 0</p>
-                </div>
-            </div>
-            `;
-            categoryEl.querySelector(".grades").innerHTML += tmpl;
-        });
-
-        for (let eval in evalsJSON) {
-            let results = evalsJSON[eval]['results'];
-
-            for (let i = 0; i < results.length; ++i) {
-                let resultObj = results[i];
-
-                let subject = resultObj['subject'];
-                let subjectId = toCssSafeId(subject);
-                let subjectEl = document.querySelector(`#${subjectId}`);
-
-                if (resultObj['result'] != undefined && resultObj['result'] != undefined) {
-                    let resultsArr = subjectEl.dataset.results.split(";");
-                    resultsArr.push(resultObj['result']);
-                    resultsArr = resultsArr.filter(function (value, index, arr) {
-                        return value != "";
-                    });
-                    subjectEl.dataset.results = resultsArr.join(";");
-                    subjectEl.dataset.resultdates += evalsJSON[eval]['date'] + ";";
-                    let result = calculateResult(resultsArr);
-
-                    subjectEl.querySelectorAll(`.selected`).forEach(element => {
-                        let classnames = element.className;
-                        classnames = classnames.replace("selected", "");
-                        element.className = classnames;
-                    });
-
-                    subjectEl.querySelector(`.${result}`).className += " selected";
-                    subjectEl.style.opacity = "1";
-                    subjectEl.parentElement.parentElement.style.display = "";
-                }
-            }
-        }
-    });
 }
