@@ -159,6 +159,7 @@ function addResultsToPage(userid) {
                     let subjectResults = {};
 
                     resultssnapshot.forEach(resultsnapshot => {
+                        let result = resultsnapshot.toJSON();
                         evalssnapshot.forEach(evalsnapshot => {
                             if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
                                 if (result.subject in subjectResults === false) {
