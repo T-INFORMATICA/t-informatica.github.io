@@ -174,7 +174,10 @@ function addResultsToPage(userid) {
                     results.sort((a, b) => a.date - b.date);
 
                     let subjectResults = {};
-                    categoriessnapshot.forEach(snapshot => subjectResults[snapshot.key] = []);
+                    categoriessnapshot.forEach(snapshot => {
+                        subjectResults[snapshot.key] = [];
+                        console.log(snapshot.key);
+                    });
                     console.log(categoriessnapshot);
                     console.log(subjectResults);
 
