@@ -181,7 +181,6 @@ function addResultsToPage(userid) {
                     console.log(subjectResults);
 
                     results.forEach(result => {
-                        console.log(result);
                         subjectResults[result.subject].push(result.result);
                     });
 
