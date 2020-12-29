@@ -177,8 +177,6 @@ function addResultsToPage(userid) {
                     categoriessnapshot.forEach(snapshot => {
                         subjectResults[snapshot.key] = [];
                     });
-                    console.log(categoriessnapshot);
-                    console.log(subjectResults);
 
                     results.forEach(result => {
                         subjectResults[result.subject].push(result.result);
