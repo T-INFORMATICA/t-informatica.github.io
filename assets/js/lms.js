@@ -3,7 +3,7 @@ function toCssSafeId(text) {
     return text;
 }
 
-function calculateResults(resultsArr) {
+function calculateResult(resultsArr) {
     let evalProgress = {
         "A": {
             "A": 0, "B": -0.5, "C": -1.5, "D": -1.5, "E": -1.5
@@ -175,10 +175,22 @@ function addResultsToPage(userid) {
                         });
                     });
 
-                    console.log(subjectResults);
+                    for (subject in subjectResults) {
+                        let results = subjectResults[subject].map(x => x.result);
+                        let result = calculateResult(results);
+                        showResultInSubjectElement(subject, result);
+                    }
                 });
             });
         });
+}
+
+function showResultInSubjectElement(subject, result) {
+    let subjectId = toCssSafeId(subject);
+
+    let subjectEl = document.querySelector(`#${subjectId}`);
+    subjectEl.style.display = "";
+    subjectEl.parentElement.parentElement.style.display = "";
 }
 
 function addCategoryElement(category) {
@@ -311,7 +323,7 @@ function createResults(userId) {
                     });
                     subjectEl.dataset.results = resultsArr.join(";");
                     subjectEl.dataset.resultdates += evalsJSON[eval]['date'] + ";";
-                    let result = calculateResults(resultsArr);
+                    let result = calculateResult(resultsArr);
 
                     subjectEl.querySelectorAll(`.selected`).forEach(element => {
                         let classnames = element.className;
