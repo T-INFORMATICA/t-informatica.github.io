@@ -106,7 +106,9 @@ Onderstaand voorbeeld maakt dus 3 kolommen, met de eerste en laatste kolom 25 pi
 
 
 ```css
-grid-template-columns: 25px 50px 25px;
+.site {
+	grid-template-columns: 25px 50px 25px;
+}
 ```
 
 
@@ -125,7 +127,9 @@ Je mag deze waardes door elkaar gebruiken. In onderstaand voorbeeld is de eerste
 
 
 ```css
-grid-template-columns: 50% 50px 25px;
+.site {
+	grid-template-columns: 50% 50px 25px;
+}
 ```
 
 
