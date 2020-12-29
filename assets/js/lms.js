@@ -191,10 +191,10 @@ function showResultInSubjectElement(subject, result) {
     let subjectEl = document.querySelector(`#${subjectId}`);
     subjectEl.style.display = "";
     subjectEl.parentElement.parentElement.style.display = "";
+    subjectEl.style.opacity = "1";
 
     let letterEl = subjectEl.querySelector(`.${result}`);
     letterEl.className += " selected";
-    letterEl.style.opacity = "1";
 }
 
 function addCategoryElement(category) {
