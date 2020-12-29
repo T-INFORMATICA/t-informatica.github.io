@@ -156,34 +156,23 @@ function addResultsToPage(userid) {
 
             resultsref.once('value').then(resultssnapshot => {
                 evalsref.once('value').then(evalssnapshot => {
-                    let results = [];
+                    let subjectResults = {};
 
                     resultssnapshot.forEach(resultsnapshot => {
-                        let result = resultsnapshot.toJSON();
-                        result["date"] = "";
-
                         evalssnapshot.forEach(evalsnapshot => {
                             if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
-                                result["date"] = new Date(evalsnapshot.val().date);
-                                return;
+                                if (result.subject in subjectResults === false) {
+                                    subjectResults[result.subject] = [];
+                                }
+                                subjectResult = {
+                                    date: new Date(evalsnapshot.val().date), 
+                                    result: result.result
+                                };
+                                subjectResults[result.subject].push(subjectResult);
+                                subjectResults[result.subject].sort((a, b) => a.date - b.date);
                             }
                         });
-                        results.push(result);
                     });
-
-                    results.sort((a, b) => a.date - b.date);
-
-                    let subjectResults = {};
-                    categoriessnapshot.forEach(snapshot => {
-                        subjectResults[snapshot.key] = [];
-                    });
-
-                    results.forEach(result => {
-                        subjectResults[result.subject].push(result.result);
-                    });
-
-                    console.log(results);
-                    console.log(subjectResults);
                 });
             });
         });
