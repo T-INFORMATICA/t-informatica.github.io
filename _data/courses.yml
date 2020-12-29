@@ -136,7 +136,7 @@
 #        - name: Grid Basisbegrippen
 #          link: "/courses/webontwikkeling/layout/grid-basisbegrippen.html"
 #          doel: "layout"
-        - name: Grid Voorbeeld
+        - name: CSS Grid Voorbeeld
           link: "/courses/webontwikkeling/layout/grid-implementatie.html"
           doel: "layout"
 #        - name: Uitbreiding
