@@ -154,8 +154,8 @@ function addResultsToPage(userid) {
                 }
             );
 
-            resultsref.once('once').then(resultssnapshot => {
-                evalsref.once('once').then(evalssnapshot => {
+            resultsref.once('value').then(resultssnapshot => {
+                evalsref.once('value').then(evalssnapshot => {
                     let results = [];
 
                     resultssnapshot.forEach(resultsnapshot => {
