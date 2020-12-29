@@ -173,6 +173,8 @@ function addResultsToPage(userid) {
                             }
                         });
                     });
+
+                    console.log(subjectResults);
                 });
             });
         });
