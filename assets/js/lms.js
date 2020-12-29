@@ -134,6 +134,105 @@ function addUserdataToProfileTable(userid) {
 //////////////////////////////////////////////////////////////////////////////////////
 //////// TODO - REWORK FUNCTION
 
+function addResultsToPage(userid) {
+    let database = firebase.database();
+    let userref = database.ref(`users/${userid}`);
+    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+    let resultsref = database.ref(`resultaten/${userid}`);
+    let categoriesref = database.ref(`subjectCategories`);
+
+
+    categoriesref.once('value')
+        .then(categoriessnapshot => {
+            categoriessnapshot.forEach(
+                categorysnapshot => {
+                    let subject = categorysnapshot.key;
+                    let category = categorysnapshot.val();
+
+                    addCategoryElement(category);
+                    addSubjectElementToCategoryElement(subject, category);
+                }
+            );
+
+            resultsref.once('once').then(resultssnapshot => {
+                evalsref.once('once').then(evalssnapshot => {
+                    let results = [];
+
+                    resultssnapshot.forEach(resultsnapshot => {
+                        let result = resultsnapshot.toJSON();
+                        result["date"] = "";
+
+                        evalssnapshot.forEach(evalsnapshot => {
+                            if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
+                                result["date"] = new Date(evalsnapshot.val().date);
+                                return;
+                            }
+                        });
+                        results.push(result);
+                    });
+
+                    results.sort((a, b) => a.date - b.date);
+
+                    let subjectResults = {};
+                    categoriessnapshot.forEach(snapshot => subjectResults[snapshot.key] = []);
+
+                    results.forEach(result => {
+                        subjectResults[result.subject].push(result.result);
+                    });
+
+                    console.log(results);
+                    console.log(subjectResults);
+                });
+            });
+        });
+}
+
+function addCategoryElement(category) {
+    let categoryId = toCssSafeId(category);
+    let categoryEl = document.querySelector(`#${categoryId}`);
+
+    if (categoryEl === null) {
+        let tmpl = `
+            <div id="${categoryId}" class="gradeCategory">
+                <div>
+                    <h3>${category}</h3>
+                    <h4>Resultaat</h4>
+                    <h4>Theorie</h4>
+                </div>
+                <div class="grades">
+                </div>
+            </div>
+        `;
+        document.querySelector("main").innerHTML += tmpl;
+    }
+}
+
+function addSubjectElementToCategoryElement(subject, category) {
+    let categoryId = toCssSafeId(category);
+    let subjectId = toCssSafeId(subject);
+
+    categoryEl = document.querySelector(`#${categoryId}`);
+    categoryEl.style.display = "none";
+
+    let tmpl = `
+    <div id="${subjectId}" data-results="" data-resultdates="" style="opacity: 0.2;">
+        <h3>${subject}</h3>
+        <ul>
+            <li class="A">A</li>
+            <li class="B">B</li>
+            <li class="C">C</li>
+            <li class="D">D</li>
+            <li class="E">E</li>
+        </ul>
+        <div class="progressbar-bg">
+            <div class="progressbar-progress" style="width: 0%"></div>
+            <p class="progressbar-label">0 / 0</p>
+        </div>
+    </div>
+    `;
+    categoryEl.querySelector(".grades").innerHTML += tmpl;
+}
+
 function createResults(userId) {
     let db = firebase.database().ref();
 
@@ -231,8 +330,6 @@ function createResults(userId) {
                     subjectEl.parentElement.parentElement.style.display = "";
                 }
             }
-
-
         }
     });
 }
