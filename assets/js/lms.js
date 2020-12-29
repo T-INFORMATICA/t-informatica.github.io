@@ -176,7 +176,6 @@ function addResultsToPage(userid) {
                     let subjectResults = {};
                     categoriessnapshot.forEach(snapshot => {
                         subjectResults[snapshot.key] = [];
-                        console.log(snapshot.key);
                     });
                     console.log(categoriessnapshot);
                     console.log(subjectResults);
