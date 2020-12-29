@@ -67,12 +67,12 @@
         - name: "Relaties"
           link: "/courses/programmeren/datastructuren/relaties.html"
           doel: "OO programmeren"
-    - name: "Software Ontwikkeling"
-      link: "/courses/programmeren/software-ontwikkeling/"
-      chapters:
-        - name: "Domeinmodel"
-          link: "/courses/programmeren/software-ontwikkeling/domeinmodel.html"
-          doel: "OO ontwerp"
+#    - name: "Software Ontwikkeling"
+#      link: "/courses/programmeren/software-ontwikkeling/"
+#      chapters:
+#        - name: "Domeinmodel"
+#          link: "/courses/programmeren/software-ontwikkeling/domeinmodel.html"
+#          doel: "OO ontwerp"
 - name: "webontwikkeling"
   link: /courses/webontwikkeling/
   subjects:
