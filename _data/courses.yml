@@ -133,9 +133,9 @@
         - name: CSS Grid
           link: "/courses/webontwikkeling/layout/css-grid.html"
           doel: "layout"
-        - name: Grid Basisbegrippen
-          link: "/courses/webontwikkeling/layout/grid-basisbegrippen.html"
-          doel: "layout"
+#        - name: Grid Basisbegrippen
+#          link: "/courses/webontwikkeling/layout/grid-basisbegrippen.html"
+#          doel: "layout"
         - name: Grid Implementatie
           link: "/courses/webontwikkeling/layout/grid-implementatie.html"
           doel: "layout"
