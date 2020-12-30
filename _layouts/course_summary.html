@@ -17,7 +17,7 @@ layout: course
                         {%- for course in site.courses -%}
                             {%- assign courseUrl = course.url -%}
                             {%- if courseUrl == chapter.link -%}
-                                <h4>{{course.title}}</h4>
+                                <h4 id="{{course.title}}">{{course.title}}</h4>
                                 <p>{{course.description}}</p>
                             {%- endif -%}
                         {%- endfor -%}
@@ -42,7 +42,7 @@ layout: course
                             <tr>
                                 <th colspan="2">
                                     <div style="position: relative;"><span id="{{chapter.name | downcase | replace: " ", "-"}}" style="position: absolute; top:-75px;"></span></div>
-                                    <h4><a href="{{site.baseurl}}{{chapter.link}}">{{chapter.name}}</a></h4>
+                                    <h4 id="{{chapter.name}}"><a href="{{site.baseurl}}{{chapter.link}}">{{chapter.name}}</a></h4>
                                 </th>
                             </tr>
                         </thead>
