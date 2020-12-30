@@ -94,9 +94,12 @@ footer {
     padding-top: 32px;
 }
 
-#rightMenu a {
-    display: block;
-    padding: 4px 16px;
+#rightMenu ul>ul {
+    padding-left: 8px;
+}
+
+#rightMenu ul>li {
+    padding-top: 8px;
 }
 
 
