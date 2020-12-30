@@ -9,7 +9,7 @@ tags:
 definitions: 
  - name: itereren
    definition: Het herhaaldelijk uitvoeren van code zo lang een voorwaarde waar is. 
-description: 
+description: Met een iteratie kan een programma een stuk code verschillende keren na elkaar uitvoeren tot een voorwaarde waar is.
 ---
 
 

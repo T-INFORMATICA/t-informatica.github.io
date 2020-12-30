@@ -11,7 +11,7 @@ definitions:
    definition: Het uitvoeren van instructies in de volgorde dat ze geschreven zijn.
  - name: selectie
    definition: Het eenmalig uitvoeren van code wanneer een voorwaarde waar is. 
-description: 
+description: Met een selectie kiest een programma welke code er uitgevoerd moet worden op basis van een voorwaarde.
 ---
 
 
