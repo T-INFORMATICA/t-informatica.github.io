@@ -2,13 +2,13 @@
 layout: course
 ---
 
-<h2>Inhoud van de cursus</h2>
+<h2 id="inhoud">Inhoud van de cursus</h2>
 
-<h3>LEERDOELEN</h3>
+<h3 id="leerdoelen">LEERDOELEN</h3>
 
 {{content}}
 
-<h3>OPBOUW VAN DE CURSUS</h3>
+<h3 id="opbouw">OPBOUW VAN DE CURSUS</h3>
 
 {%- for course in site.data.courses -%}
     {%- for subject in course.subjects -%}
@@ -27,7 +27,7 @@ layout: course
     {%- endfor -%}
 {%- endfor -%}
 
-<h3>BELANGRIJKE TERMEN</h3>
+<h3 id="termen">BELANGRIJKE TERMEN</h3>
 
 {%- for course in site.data.courses -%}
     {%- for subject in course.subjects -%}
