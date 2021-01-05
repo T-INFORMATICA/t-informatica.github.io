@@ -9,14 +9,10 @@ tags:
 definitions: 
  - name: variabele
    definition: Een opslagplaats met een naam, waarin je een waarde kunt opslaan.
- - name: datatype
-   definition: De soort, type of categorie van een waarde.
  - name: declaratie
    definition: Het aanmaken van een variabele.
  - name: initialiseren
    definition: Het geven van een eerste waarde aan een variabele, wanneer die voor het eerst wordt aangemaakt.
- - name: waarde
-   definition: Eender wat door een computer kan worden opgeslagen.
 description: Hoe maak je een variabele aan?
 ---
 
