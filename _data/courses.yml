@@ -22,6 +22,9 @@
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
       chapters:
+        - name: Waardes
+          link: "/courses/programmeren/instructies/waardes.html"
+          doel: "instructies"
         - name: Variabelen
           link: "/courses/programmeren/instructies/variabelen.html"
           doel: "instructies"
