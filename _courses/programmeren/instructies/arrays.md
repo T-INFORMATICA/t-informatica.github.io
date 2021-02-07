@@ -5,6 +5,8 @@ tags:
  - indexed array
  - associative array
 definitions:
+ - name: array
+   definition: Een variabele die een lijst van waardes kan opslaan (in plaats van één waarde)
  - name: index
    definition: Een getal of andere waarde die aanduidt op welke plaats een waarde zich bevindt in de lijst.
  - name: indexed array
