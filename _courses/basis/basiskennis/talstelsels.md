@@ -57,6 +57,7 @@ Een getal met 6 cijfers heeft dus als éérste getal een honderdduizendtal. Zoal
 
 De tabel hierboven kan je ook korter schrijven:
 
+<div class="highlight">
 <pre class="highlight"><code>(eenheden)             1      = 10<sup>0</sup>
 (tientallen)           10     = 10<sup>1</sup>
 (honderdtallen)        100    = 10<sup>2</sup>
@@ -64,11 +65,15 @@ De tabel hierboven kan je ook korter schrijven:
 (tienduizendtallen)    10000  = 10<sup>4</sup>
 (honderdduizendtallen) 100000 = 10<sup>5</sup>
 </code></pre>
+</div>
+
 Let eens goed op de machten van `10`! Die beginnen met tellen bij `0` en gaan zo telkens één stapje hoger!
 
 **Het `10`-tallig stelsel gebruikt de machten van `10`.**
 
 ## Optellen in het Decimaal Talstelsel
+
+Optellen in het decimaal stelsel is
 
 <img src="{{ site.baseurl }}/assets/img/basis-talstelsels-1.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
 
