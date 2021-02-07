@@ -57,7 +57,7 @@ Een getal met 6 cijfers heeft dus als éérste getal een honderdduizendtal. Zoal
 
 De tabel hierboven kan je ook korter schrijven:
 
-<pre><code>(eenheden)             1      = 10<sup>0</sup>
+<pre class="highlight"><code>(eenheden)             1      = 10<sup>0</sup>
 (tientallen)           10     = 10<sup>1</sup>
 (honderdtallen)        100    = 10<sup>2</sup>
 (duizendtallen)        1000   = 10<sup>3</sup>
