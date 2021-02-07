@@ -30,7 +30,7 @@ Hoewel we maar 10 cijfers hebben, zijn we toch in staat om véél grotere waarde
 
 Hoewel we dus géén cijfer hebben om de waarde van `723` weer te geven, kunnen we meerdere cijfers na elkaar schrijven en zo heel grote (en heel kleine) getallen samen te stellen.
 
-## Hoe Werken Talstelsels?
+## Hoe Werkt het Decimaal Talstelsel?
 
 Maar hoe weten we nu eigenlijk wat het getal `723` voorstelt? We kunnen niet zomaar de cijfers `7`, `2` en `3` optellen bij elkaar: `723` is véél groter dan `7 + 2 + 3`. 
 
@@ -68,5 +68,10 @@ De tabel hierboven kan je ook korter schrijven:
 
 Let eens goed op de machten van `10`! Die beginnen met tellen bij `0` en gaan zo telkens één stapje hoger!
 
-## Optellen in Talstelsels
+**Het `10`-tallig stelsel gebruikt de machten van `10`.**
 
+## Optellen in het Decimaal Talstelsel
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-1.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-2.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
