@@ -26,10 +26,10 @@ Net zoals andere talen bestaat een programmeertaal uit een aantal bouwstenen. In
 
  - Een **booleaanse waarde** is een waarde die 'waar' of 'niet waar' bevat(`true` of `false`). Voor ons mensen is dit een belangrijk en gemakkelijk te begrijpen idee (is de lucht blauw? Is mijn naam Sam? ...). Een booleaanse waarde is ook héél gemakkelijk om te zetten in binaire code: Hierbij zeggen we dat 0 gelijk is aan `false` en 1 gelijk is aan `true`. 
  - Een **integer waarde** is een geheel, decimaal getal (0, 8, -723, ...). Decimale getallen kunnen we dan weer gemakkelijk weergeven als een binaire code door meerdere `0`-en en `1`-en achter elkaar te plaatsen.
- - Een **decimale waarde** is een decimaal komma-getal. Door het komma-getal (waar wij mensen graag mee werken) achter de schermen om te zetten naar een wetenschappelijke notatie (bv. 7x10<sup>-6</sup>) kunnen we een kommagetal gemakkelijk opslaan als een reeks van binaire cijfers. In de praktijk gebruiken we een binaire, wetenschappelijke notatie, maar het is vooral belangrijk om te onthouden dat je ook komma-getallen kunt omzetten naar binaire code.
- - Een **string waarde** is een stukje tekst. Door met alle programmeurs onderling af te spreken dat we elke letter een bepaald binair getal toewijzen, kan een tekst worden vertaald door een reeks van binaire getallen.
+ - Een **decimale waarde** is een decimaal komma-getal. Door het komma-getal (1.6, 3.141592, -19.807, ...) achter de schermen om te zetten naar een wetenschappelijke notatie (bv. 7x10<sup>-6</sup>) kunnen we een kommagetal gemakkelijk opslaan als een reeks van binaire cijfers. In de praktijk gebruiken we een binaire, wetenschappelijke notatie, maar het is vooral belangrijk om te onthouden dat je ook komma-getallen kunt omzetten naar binaire code.
+ - Een **string waarde** is een stukje tekst. Door met alle programmeurs onderling af te spreken dat we elke letter een bepaald binair getal toewijzen, kan een tekst worden vertaald naar een reeks van binaire getallen.
 
- ## Datatypes
+## Datatypes
 
 Deze vier soorten data, die we als programmeur datatypes noemen, zijn de 4 datatypes die we zullen gebruiken om elk programma te schrijven. Elk spel dat je speelt, elke tekstverwerker die je gebruikt, elk tekenprogramma waar je mee tekent zal enkel en alleen bestaan uit deze 4 data types. De vier datatypes zijn dus: booleaanse waardes, integers, decimals en strings. 
 
