@@ -73,8 +73,27 @@ Let eens goed op de machten van `10`! Die beginnen met tellen bij `0` en gaan zo
 
 ## Optellen in het Decimaal Talstelsel
 
-Optellen in het decimaal stelsel is
+Wanneer we optellen in het decimaal talstelsel, gebruiken we het rijtje van 10 cijfers:
 
-<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-1.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+```
+0 1 2 3 4 5 6 7 8 9
+```
 
-<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-2.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+Wanneer we optellen gaan we dus gewoon het rijtje af. Kom je aan het einde van de rij, dan ga je terug naar het begin.
+
+ 1. Begin bij het getal `00`
+ 2. Ga naar het volgende cijfer (`1`) en zet het op de laatste plaats (`01`)
+ 3. Ga naar het volgende cijfer (`2`) en zet het op de laatste plaats (`02`)
+ 4. ...
+ 5. Blijf dit doen tot je aan het einde van de rij komt (`09`)
+ 6. Ga terug naar het eerste cijfer (`0`) en ga bij het volgende cijfer ééntje verder in de rij (`10`)
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-3-decimaal.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+## Andere Talstelsels
+
+
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-4-hex.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-5-binair.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
