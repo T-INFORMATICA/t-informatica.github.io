@@ -245,9 +245,23 @@ Het getal 3DF7<sub>2</sub>:
 ### Decimaal naar Binair
 
 
+Het getal 27<sub>10</sub>:
+
+|2<sup>5</sup>|2<sup>4</sup>|2<sup>3</sup>|2<sup>2</sup>|2<sup>1</sup>|2<sup>0</sup>| |
+|--|--|--|--|--|--|--|
+| 0 | 1x16 | 1x8 | 0 | 1x2 | 1x1 | |
+| 0 | 1 | 1 | 0 | 1 | 1 | = 11011 |
+
 
 
 ### Decimaal naar Hexadecimaal
+
+Het getal 143<sub>10</sub>:
+
+|16<sup>5</sup>|16<sup>4</sup>|16<sup>3</sup>|16<sup>2</sup>|16<sup>1</sup>|16<sup>0</sup>| |
+|--|--|--|--|--|--|--|
+| 0 | 0 | 0 | 0 | 8x16 | 15x1 | |
+| 0 | 0 | 0 | 0 | 8 | F | = 8F |{: .styledTable}
 
 
 ### Binair naar Hexadecimaal
