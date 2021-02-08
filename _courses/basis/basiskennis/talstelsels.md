@@ -239,7 +239,8 @@ Het getal 3DF7<sub>2</sub>:
 |16<sup>5</sup>|16<sup>4</sup>|16<sup>3</sup>|16<sup>2</sup>|16<sup>1</sup>|16<sup>0</sup>| |
 |--|--|--|--|--|--|--|
 | 0 | 0 | 3 | D | F | 7 | |
-| 0 | 0 | 3x4096 | 13x256 | 15x16 | 7x1 | = 15863 |{: .styledTable}
+| 0 | 0 | 3x4096 | 13x256 | 15x16 | 7x1 | = 15863 |
+{: .styledTable}
 
 
 ### Decimaal naar Binair
@@ -261,7 +262,8 @@ Het getal 143<sub>10</sub>:
 |16<sup>5</sup>|16<sup>4</sup>|16<sup>3</sup>|16<sup>2</sup>|16<sup>1</sup>|16<sup>0</sup>| |
 |--|--|--|--|--|--|--|
 | 0 | 0 | 0 | 0 | 8x16 | 15x1 | |
-| 0 | 0 | 0 | 0 | 8 | F | = 8F |{: .styledTable}
+| 0 | 0 | 0 | 0 | 8 | F | = 8F |
+{: .styledTable}
 
 
 ### Binair naar Hexadecimaal
