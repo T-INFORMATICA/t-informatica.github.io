@@ -239,10 +239,12 @@ Het getal 3DF7<sub>2</sub>:
 |16<sup>5</sup>|16<sup>4</sup>|16<sup>3</sup>|16<sup>2</sup>|16<sup>1</sup>|16<sup>0</sup>| |
 |--|--|--|--|--|--|--|
 | 0 | 0 | 3 | D | F | 7 | |
-| 0 | 0 | 3x4096 | 13x256 | 15x16 | 7x1 | = 15863 |
+| 0 | 0 | 3x4096 | 13x256 | 15x16 | 7x1 | = 15863 |{: .styledTable}
 
 
 ### Decimaal naar Binair
+
+
 
 
 ### Decimaal naar Hexadecimaal
@@ -261,6 +263,8 @@ Bijvoorbeeld:
 > Elk groepje in hexadecimaal omgezet: `2 7`
 > 
 > Resultaat: **`27`**
+
+**Dit is de reden waarom programmeertalen vaak gebruik maken van hexadecimale getallen: het is gemakkelijk om te zetten naar binair, maar het is véél korter om te schrijven.**
 
 ### Hexadecimaal naar Binair
 
