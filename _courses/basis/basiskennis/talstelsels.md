@@ -132,7 +132,7 @@ Het 8-tallig stelsel gebruikt dus ook andere machten:
 </code></pre>
 </div>
 
-## Het Binaire Talstelsel
+### Het Binaire Talstelsel
 
 Opnieuw de vraag: **Wat Als?** Wat als wij geëvolueerd waren met slechts 2 vingers in plaats van 10?
 
@@ -174,7 +174,7 @@ Het binaire stelsel gebruikt dus ook andere machten:
 
 
 
-## Het Hexadecimale Talstelsel
+### Het Hexadecimale Talstelsel
 
 Opnieuw de vraag: **Wat Als?** Wat als wij geëvolueerd waren met **16** vingers in plaats van 10?
 
@@ -211,3 +211,9 @@ Het hexadecimale stelsel gebruikt dus ook andere machten:
 (honderdduizendtallen) 100000 = 16<sup>5</sup>
 </code></pre>
 </div>
+
+## Omzetten naar Decimaal en Terug
+
+De 3 talstelsels die je het meest moet kennen zijn:
+ - het decimale stelsel (waar je dus altijd mee hebt gewerkt)
+ - 
