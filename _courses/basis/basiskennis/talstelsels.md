@@ -120,6 +120,18 @@ Eigenlijk werkt dit exact hetzelfde als bij ons 10-tallig stelsel! Begin bij het
 
 Kom je bij het laatste cijfer (`7`), dan ga je gewoon terug naar het begin van de rij (`0`), en je verhoogt het cijfer dat links staat met `1`. **Dus: na `7` volgt `10`, en na `77` volgt `100`.
 
+Het 8-tallig stelsel gebruikt dus ook andere machten:
+
+<div class="highlight">
+<pre class="highlight"><code>(eenheden)             1      = 8<sup>0</sup>
+(tientallen)           10     = 8<sup>1</sup>
+(honderdtallen)        100    = 8<sup>2</sup>
+(duizendtallen)        1000   = 8<sup>3</sup>
+(tienduizendtallen)    10000  = 8<sup>4</sup>
+(honderdduizendtallen) 100000 = 8<sup>5</sup>
+</code></pre>
+</div>
+
 ## Het Binaire Talstelsel
 
 Opnieuw de vraag: **Wat Als?** Wat als wij geëvolueerd waren met slechts 2 vingers in plaats van 10?
@@ -148,6 +160,20 @@ Kom je bij het laatste cijfer (`1`), dan ga je gewoon terug naar het begin van d
 
 
 
+Het binaire stelsel gebruikt dus ook andere machten:
+
+<div class="highlight">
+<pre class="highlight"><code>(eenheden)             1      = 2<sup>0</sup>
+(tientallen)           10     = 2<sup>1</sup>
+(honderdtallen)        100    = 2<sup>2</sup>
+(duizendtallen)        1000   = 2<sup>3</sup>
+(tienduizendtallen)    10000  = 2<sup>4</sup>
+(honderdduizendtallen) 100000 = 2<sup>5</sup>
+</code></pre>
+</div>
+
+
+
 ## Het Hexadecimale Talstelsel
 
 Opnieuw de vraag: **Wat Als?** Wat als wij geëvolueerd waren met **16** vingers in plaats van 10?
@@ -173,3 +199,15 @@ Eigenlijk werkt dit exact hetzelfde als bij ons 10-tallig stelsel! Begin bij het
 Kom je bij het laatste cijfer (`F`), dan ga je gewoon terug naar het begin van de rij (`0`), en je verhoogt het cijfer dat links staat met `1`. **Dus: na `F` volgt `10`, en na `FF` volgt `100`.
 
 <img src="{{ site.baseurl }}/assets/img/basis-talstelsels-4-hex.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+Het hexadecimale stelsel gebruikt dus ook andere machten:
+
+<div class="highlight">
+<pre class="highlight"><code>(eenheden)             1      = 16<sup>0</sup>
+(tientallen)           10     = 16<sup>1</sup>
+(honderdtallen)        100    = 16<sup>2</sup>
+(duizendtallen)        1000   = 16<sup>3</sup>
+(tienduizendtallen)    10000  = 16<sup>4</sup>
+(honderdduizendtallen) 100000 = 16<sup>5</sup>
+</code></pre>
+</div>
