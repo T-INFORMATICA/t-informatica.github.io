@@ -24,7 +24,7 @@ Het grote nadeel is dat een computer heel moeilijk is om mee te werken: hoe ga j
 
 Een programmeertaal is dus een taal die je schrijft met letters, cijfers en leestekens (zoals Engels, Frans of Nederlands), met de speciale eigenschap dat deze gemakkelijk kan worden omgezet in binaire code. **Een programmeertaal is dus gemaakt voor mensen, zodat onze ideeën omgezet kunnen worden in `0`-en en `1`-en**. Een speciaal programma, **de compiler**, zet deze programmeertaal vervolgens om in binaire code. 
 
-Net zoals andere talen bestaat een programmeertaal uit een aantal bouwstenen. In het Nederlands gebruiken we onderwerpen, werkwoorden, lidwoorden, enz. als de bouwstenen om onze ideeën te kunnen uitspreken tegen een andere persoon. Een programmeertaal heeft ook zo'n bouwstenen, maar deze zijn anders dan degene die je gewend bent. Deze bouwstenen gebruiken we om onze ideeën te kunnen uitspreken tegen een computer. 
+Net zoals andere talen bestaat een programmeertaal uit een aantal bouwstenen. In het Nederlands gebruiken we onderwerpen, werkwoorden, lidwoorden, enz. als de bouwstenen om onze ideeën te kunnen uitspreken tegen een andere persoon. Een programmeertaal heeft ook zo'n bouwstenen, maar deze zijn anders dan degene die je gewend bent. Hieronder kan je de belangrijkste bouwstenen zien. Deze bouwstenen gebruiken we om onze ideeën te kunnen uitspreken tegen een computer. 
 
 
 <img src="{{ site.baseurl }}/assets/img/waardes-1.svg" alt="voorbeeld" style="height: auto; max-width: 100%">
