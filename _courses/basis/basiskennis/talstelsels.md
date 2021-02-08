@@ -94,6 +94,7 @@ Wanneer we optellen gaan we dus gewoon het rijtje af. Kom je aan het einde van d
 
 
 
+
 <img src="{{ site.baseurl }}/assets/img/basis-talstelsels-4-hex.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
 
 <img src="{{ site.baseurl }}/assets/img/basis-talstelsels-5-binair.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
