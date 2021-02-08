@@ -73,28 +73,103 @@ Let eens goed op de machten van `10`! Die beginnen met tellen bij `0` en gaan zo
 
 ## Optellen in het Decimaal Talstelsel
 
-Wanneer we optellen in het decimaal talstelsel, gebruiken we het rijtje van 10 cijfers:
+Begin bij het getal `000`. Het meest rechtse cijfer in het getal verhoog je telkens met één. Zo ga je eigenlijk gewoon het rijtje van cijfers af:
 
 ```
-0 1 2 3 4 5 6 7 8 9
+0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 ```
 
-Wanneer we optellen gaan we dus gewoon het rijtje af. Kom je aan het einde van de rij, dan ga je terug naar het begin.
+Kom je bij het laatste cijfer (`9`), dan ga je gewoon terug naar het begin van de rij (`0`), en je verhoogt het cijfer dat links staat met één.
 
- 1. Begin bij het getal `00`
- 2. Ga naar het volgende cijfer (`1`) en zet het op de laatste plaats (`01`)
- 3. Ga naar het volgende cijfer (`2`) en zet het op de laatste plaats (`02`)
- 4. ...
- 5. Blijf dit doen tot je aan het einde van de rij komt (`09`)
- 6. Ga terug naar het eerste cijfer (`0`) en ga bij het volgende cijfer ééntje verder in de rij (`10`)
+Dit is duidelijker met een animatie:
 
 <img src="{{ site.baseurl }}/assets/img/basis-talstelsels-3-decimaal.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
 
+**Het is belangrijk om te onthouden dat we in het 10-tallig stelsel de 10 cijfers gebruiken om op te tellen.**
+
 ## Andere Talstelsels
 
+Er is een simpele reden dat wij werken met een 10-tallig stelsel: wij gebruiken al duizenden jaren onze 10 vingers om te tellen. Dit is echter niet bij iedereen zo:
+ - 5000 jaar geleden gebruikten we een **60-tallig** stelsel (sexagesimaal). Dit is later door de Arabieren overgenomen geweest, en zo zijn we uiteindelijk uitgekomen op een klok met 60 minuten en 60 seconden. 
+ - De Mesopotamiërs gebruikten een **12-tallig** stelsel: zij telden niet op hun vingers, maar op de vingerkootjes van één hand. De duim werd niet gezien als een 'volwaardige' vinger, dus had je 12 vingerkootjes. Ook dit zie je nog terugkomen in ons dagelijkse leven: 12 uren in een dag of nacht, 12 maanden op een jaar, 12 sterrentekens in de dierenriem, ... Dit verklaart ook waarom alle getallen tot en met 12 een unieke naam hebben, ook al hebben we maar 10 cijfers!
+ - In sommige streken van Frankrijk telden ze lang geleden niet alleen met hun handen, maar ook met hun voeten. Dit gaf de mensen een **20-tallig** stelsel (vigesimaal). Je kan dit nog altijd terugvinden in de Franse taal: quatre-vingts is letterlijk vertaald `4 x 20`.
 
+Je kan dus tellen en rekenen in allerlei talstelsels, niet alleen in het onze!
 
+Nu komt dus de grote vraag: **Wat Als?** Wat als wij geëvolueerd waren met 8 vingers in plaats van 10, zoals in het geval van The Simpsons?
 
-<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-4-hex.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-7.jpg" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+Ons rijtje met cijfers had er in elk geval heel anders uit gezien. De cijfers `8` en `9` zouden we niet kennen:
+
+```
+0 1 2 3 4 5 6 7
+```
+
+Het getal `98` zou dus niet bestaan, want het cijfer `8` of `9` kennen we niet!
+
+Optellen zou er ook anders uitzien. Kijk eens naar de animatie hieronder, en probeer te voorspellen wanneer je het getal `10` of `100` te zien gaat krijgen:
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-6-octaal.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+Eigenlijk werkt dit exact hetzelfde als bij ons 10-tallig stelsel! Begin bij het getal `000`. Het meest rechtse cijfer in het getal verhoog je telkens met één. Zo ga je eigenlijk gewoon het rijtje van cijfers af. Ons rijtje is nu gewoon een beetje korter:
+
+```
+0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
+```
+
+Kom je bij het laatste cijfer (`7`), dan ga je gewoon terug naar het begin van de rij (`0`), en je verhoogt het cijfer dat links staat met `1`. **Dus: na `7` volgt `10`, en na `77` volgt `100`.
+
+## Het Binaire Talstelsel
+
+Opnieuw de vraag: **Wat Als?** Wat als wij geëvolueerd waren met slechts 2 vingers in plaats van 10?
+
+Ons rijtje met cijfers had er ook hier heel anders uit gezien. De cijfers `2` tot en met `9` zouden we niet kennen:
+
+```
+0 1
+```
+
+Het getal `27` zou dus niet bestaan, want het cijfer `2` of `7` kennen we niet!
+
+Optellen zou er ook anders uitzien. Kijk eens naar de animatie hieronder, en probeer te voorspellen wanneer je het getal `10` of `100` te zien gaat krijgen:
 
 <img src="{{ site.baseurl }}/assets/img/basis-talstelsels-5-binair.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+Eigenlijk werkt dit exact hetzelfde als bij ons 10-tallig stelsel! Begin bij het getal `000`. Het meest rechtse cijfer in het getal verhoog je telkens met één. Zo ga je eigenlijk gewoon het rijtje van cijfers af. Ons rijtje is nu gewoon een beetje korter:
+
+```
+0 -> 1
+```
+
+Kom je bij het laatste cijfer (`1`), dan ga je gewoon terug naar het begin van de rij (`0`), en je verhoogt het cijfer dat links staat met `1`. **Dus: na `1` volgt `10`, en na `11` volgt `100`.
+
+**Dit is het Binaire stelsel (2-tallig), het kleinste talstelsel dat mogelijk is.** Het is met dit talstelsel dat een computer rekent.
+
+
+
+## Het Hexadecimale Talstelsel
+
+Opnieuw de vraag: **Wat Als?** Wat als wij geëvolueerd waren met **16** vingers in plaats van 10?
+
+Ons rijtje met cijfers had er weeral heel anders uit gezien. In dit geval moeten we zelfs cijfers gaan bij verzinnen! Voor het 16-tallig stelsel gebruiken we vaak de letters van het alfabet om de cijfers voor `10`, `11`, enz. aan te duiden:
+
+```
+0 1 2 3 4 5 6 7 8 9 A B C D E F
+```
+
+Het getal `FD3` zou dus perfect mogelijk zijn!
+
+Optellen zou er ook anders uitzien. Kijk eens naar de animatie hieronder, en probeer te voorspellen wanneer je het getal `10` of `100` te zien gaat krijgen:
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-5-binair.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+
+Eigenlijk werkt dit exact hetzelfde als bij ons 10-tallig stelsel! Begin bij het getal `000`. Het meest rechtse cijfer in het getal verhoog je telkens met één. Zo ga je eigenlijk gewoon het rijtje van cijfers af. Ons rijtje is nu gewoon een beetje korter:
+
+```
+0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> A -> B -> C -> D -> E -> F
+```
+
+Kom je bij het laatste cijfer (`F`), dan ga je gewoon terug naar het begin van de rij (`0`), en je verhoogt het cijfer dat links staat met `1`. **Dus: na `F` volgt `10`, en na `FF` volgt `100`.
+
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-4-hex.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
