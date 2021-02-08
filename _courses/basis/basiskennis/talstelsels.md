@@ -212,8 +212,66 @@ Het hexadecimale stelsel gebruikt dus ook andere machten:
 </code></pre>
 </div>
 
+
 ## Omzetten naar Decimaal en Terug
 
 De 3 talstelsels die je het meest moet kennen zijn:
  - het decimale stelsel (waar je dus altijd mee hebt gewerkt)
- - 
+ - het binaire stelsel (dat gebruikt wordt door computers)
+ - het hexadecimale stelsel (dat veel gebruikt wordt in programmeertalen)
+
+### Binair naar Decimaal
+
+
+Het getal 101100<sub>2</sub>:
+
+|2<sup>5</sup>|2<sup>4</sup>|2<sup>3</sup>|2<sup>2</sup>|2<sup>1</sup>|2<sup>0</sup>| |
+|--|--|--|--|--|--|--|
+| 1 | 0 | 1 | 1 | 0 | 0 | |
+| 1x32 | 0 | 1x8 | 1x4 | 0 | 0 | = 44 |
+
+
+
+### Hexadecimaal naar Decimaal
+
+Het getal 3DF7<sub>2</sub>:
+
+|16<sup>5</sup>|16<sup>4</sup>|16<sup>3</sup>|16<sup>2</sup>|16<sup>1</sup>|16<sup>0</sup>| |
+|--|--|--|--|--|--|--|
+| 0 | 0 | 3 | D | F | 7 | |
+| 0 | 0 | 3x4096 | 13x256 | 15x16 | 7x1 | = 15863 |
+
+
+### Decimaal naar Binair
+
+
+### Decimaal naar Hexadecimaal
+
+
+### Binair naar Hexadecimaal
+
+Binair en Hexadecimaal zijn héél erg gelijk aan elkaar. Dit is omdat het binaire getal `1111` (het hoogste getal met 4 cijfers) gelijk is aan het hexadecimale getal `F` (het hoogste getal met 1 cijfer). Om Binair om te zetten naar Hexadecimaal moet je gewoon elke 4 binaire cijfers omzetten naar een hexadecimaal cijfer.
+
+Bijvoorbeeld:
+
+> Binair getal: `100111`
+> 
+> In groepjes van 4 cijfers: `0010 0111`
+> 
+> Elk groepje in hexadecimaal omgezet: `2 7`
+> 
+> Resultaat: **`27`**
+
+### Hexadecimaal naar Binair
+
+Hetzelfde werkt ook in omgekeerde richting. Om Hexadecimaal om te zetten naar Binair moet je gewoon elk hexadecimaal cijfer omzetten naar binaire cijfers.
+
+Bijvoorbeeld:
+
+> Binair getal: `F7`
+> 
+> Elk cijfer apart: `F 7`
+> 
+> Elk cijfer omgezet in binair: `1111 0111`
+> 
+> Resultaat: **`11110111`**
