@@ -185,7 +185,7 @@ Het getal `FD3` zou dus perfect mogelijk zijn!
 
 Optellen zou er ook anders uitzien. Kijk eens naar de animatie hieronder, en probeer te voorspellen wanneer je het getal `10` of `100` te zien gaat krijgen:
 
-<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-5-binair.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
+<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-4-hex.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
 
 Eigenlijk werkt dit exact hetzelfde als bij ons 10-tallig stelsel! Begin bij het getal `000`. Het meest rechtse cijfer in het getal verhoog je telkens met één. Zo ga je eigenlijk gewoon het rijtje van cijfers af. Ons rijtje is nu gewoon een beetje korter:
 
@@ -194,8 +194,6 @@ Eigenlijk werkt dit exact hetzelfde als bij ons 10-tallig stelsel! Begin bij het
 ```
 
 Kom je bij het laatste cijfer (`F`), dan ga je gewoon terug naar het begin van de rij (`0`), en je verhoogt het cijfer dat links staat met `1`. \*\*Dus: na `F` volgt `10`, en na `FF` volgt `100`.
-
-<img src="{{ site.baseurl }}/assets/img/basis-talstelsels-4-hex.gif" alt="voorbeeld" style="height: auto; max-width: 100%">
 
 Het hexadecimale stelsel gebruikt dus ook andere machten:
 
