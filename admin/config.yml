@@ -18,7 +18,7 @@ collections:
       fields: # The fields for each document, usually in front matter
           - { label: "title", name: "title", widget: "string" }
           - { label: "tags", name: "tags", widget: "list" }
-          - { label: "definitions", name: "definitions", widget: "map" }
+          - { label: "definitions", name: "definitions", widget: "list" }
           - { label: "Body", name: "body", widget: "markdown" }
     - name: "database-ontwerp" # Used in routes, e.g.,/admin/collections/blog
       label: "database-ontwerp" # Used in the UI
@@ -28,5 +28,5 @@ collections:
       fields: # The fields for each document, usually in front matter
           - { label: "title", name: "title", widget: "string" }
           - { label: "tags", name: "tags", widget: "list" }
-          - { label: "definitions", name: "definitions", widget: "map" }
+          - { label: "definitions", name: "definitions", widget: "list" }
           - { label: "Body", name: "body", widget: "markdown" }
