@@ -4,7 +4,7 @@ backend:
     base_url: https://api.netlify.com
     repo: t-informatica/t-informatica.github.io
     branch: website
-    site_domain: ecstatic-lichterman-2a079b
+    site_domain: ecstatic-lichterman-2a079b.netlify.com
     auth_endpoint: auth
 
 media_folder: "assets/img"
