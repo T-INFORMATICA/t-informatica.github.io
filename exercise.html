@@ -1,0 +1,33 @@
+---
+layout: undistracted
+---
+
+
+<form method="get" id="exercise">
+    <h2>QUESTION 1</h2>
+    <h1>%QUESTION%</h1>
+    <input type="hidden" name="question" value="%QUESTION%">
+    <input type="hidden" name="questioncount" value="1">
+    
+    <input type="radio" name="answer" id="answer1" value="%ANSWER 1%">
+    <input type="radio" name="answer" id="answer2" value="%ANSWER 2%">
+    <input type="radio" name="answer" id="answer3" value="%ANSWER 3%">
+    <input type="radio" name="answer" id="answer4" value="%ANSWER 4%">
+
+    <div id="exerciseAnswers">
+        <label for="answer1">%ANSWER 1%</label>
+        <label for="answer2">%ANSWER 2%</label>
+        <label for="answer3">%ANSWER 3%</label>
+        <label for="answer4">%ANSWER 4%</label>
+    </div>
+</form>
+
+<script>
+
+firebase.auth().onAuthStateChanged(function(user) {
+    authUser(user);
+});
+
+</script>
+
+<script src="assets/js/exercise.js"></script>
