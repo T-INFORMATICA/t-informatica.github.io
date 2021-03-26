@@ -13,7 +13,7 @@ description: null
 ---
 ## Het Decimaal Stelsel
 
-Wij mensen rekenen tegenwoordig met het Decimale Talstelsel. Dit wilt zeggen dat we een combinatie van 10 tekens gebruiken om de waarde van iets weer te geven. Deze tekens, ook wel **cijfers** genoemd, zijn: 
+Wij mensen rekenen tegenwoordig met het Decimale Talstelsel. Dit wilt zeggen dat we een combinatie van 10 tekens gebruiken om de waarde van iets weer te geven. Deze tekens, ook wel **CIJFERS** genoemd, zijn: 
 
 ```
 0 1 2 3 4 5 6 7 8 9
