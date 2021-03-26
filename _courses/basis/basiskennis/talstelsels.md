@@ -265,13 +265,17 @@ Binair en Hexadecimaal zijn héél erg gelijk aan elkaar. Dit is omdat het binai
 
 Bijvoorbeeld:
 
-> Binair getal: `100111`
+> Binair getal: \
+> `100111`
 >
-> In groepjes van 4 cijfers: `0010 0111`
+> In groepjes van 4 cijfers: \
+> `0010 0111`
 >
-> Elk groepje in hexadecimaal omgezet: `2 7`
+> Elk groepje in hexadecimaal omgezet: \
+> `2 7`
 >
-> Resultaat: **`27`**
+> Resultaat: \
+> **`27`**
 
 **Dit is de reden waarom programmeertalen vaak gebruik maken van hexadecimale getallen: het is gemakkelijk om te zetten naar binair, maar het is véél korter om te schrijven.**
 
@@ -281,10 +285,14 @@ Hetzelfde werkt ook in omgekeerde richting. Om Hexadecimaal om te zetten naar Bi
 
 Bijvoorbeeld:
 
-> Binair getal: `F7`
+> Binair getal: \
+> `F7`
 >
-> Elk cijfer apart: `F 7`
+> Elk cijfer apart: \
+> `F 7`
 >
-> Elk cijfer omgezet in binair: `1111 0111`
+> Elk cijfer omgezet in binair: \
+> `1111 0111`
 >
-> Resultaat: **`11110111`**
+> Resultaat: \
+> **`11110111`**
