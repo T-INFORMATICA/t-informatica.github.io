@@ -1,7 +1,7 @@
 backend:
     name: github
     repo: t-informatica/t-informatica.github.io
-    branch: master
+    branch: website
     site_domain: ecstatic-lichterman-2a079b
 
 media_folder: "images/uploads"
