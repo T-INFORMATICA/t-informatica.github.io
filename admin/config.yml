@@ -1,8 +1,11 @@
 backend:
     name: github
+    api_root: https://api.github.com
+    base_url: https://api.netlify.com
     repo: t-informatica/t-informatica.github.io
     branch: website
     site_domain: ecstatic-lichterman-2a079b
+    auth_endpoint: auth
 
 media_folder: "assets/img"
 
