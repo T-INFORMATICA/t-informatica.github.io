@@ -4,7 +4,7 @@ backend:
     branch: website
     site_domain: ecstatic-lichterman-2a079b
 
-media_folder: "images/uploads"
+media_folder: "assets/img"
 
 collections:
     - name: "courses" # Used in routes, e.g.,/admin/collections/blog
