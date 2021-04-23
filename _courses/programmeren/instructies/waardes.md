@@ -20,7 +20,7 @@ description: Hoe kijkt een computer naar de wereld?
 
 Computers zijn binaire machines: het enige dat ze kennen (en nodig hebben) zijn `0` en `1`! Dit is een groot voordeel, want dit maakt het idee achter een computer heel erg simpel: je slaat een hoop `0` en `1`-tjes op in het computergeheugen, voert enkele bewerkingen uit en  je krijgt een heleboel nieuwe `0`-en en `1`-en. 
 
-Het grote nadeel is dat een computer heel moeilijk is om mee te werken: hoe ga je alles dat een mens wilt doen met een computer omzetten naar `0` en `1`-tjes? Hiervoor dienen **programmeertalen**. 
+Het grote nadeel is dat een computer heel moeilijk is om mee te werken: hoe ga je alle ideeën van een mens omzetten naar `0` en `1`-tjes? Hiervoor dienen **programmeertalen**. 
 Net zoals 'gewone' talen (zoals Engels, Frans of Nederlands) dienen om ideeën te communiceren naar andere mensen, gebruik je programmeertalen om ideeën te communiceren naar een computer.
 
 Een programmeertaal is dus een taal die je schrijft met letters, cijfers en leestekens (net zoals Engels, Frans of Nederlands), met de speciale eigenschap dat deze gemakkelijk kan worden omgezet in binaire code. **Een programmeertaal is dus gemaakt voor mensen, zodat onze ideeën omgezet kunnen worden in `0` en `1`-tjes**. Een speciaal programma, zoals een **compiler** of een **interpreter**, zet deze programmeertaal vervolgens om in binaire code. 
