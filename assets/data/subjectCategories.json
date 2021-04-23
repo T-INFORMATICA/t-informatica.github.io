@@ -15,5 +15,5 @@ layout: null
                         {%- endfor -%}
                 {% endfor %}
             {%- unless forloop.last %},{% endunless -%}
-    {% endfor -%}
+    {% endfor %}
 }
