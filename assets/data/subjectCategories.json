@@ -8,7 +8,7 @@ layout: null
                         {%- for chapter in subject.chapters -%}
                             {%- for course in site.courses -%}
                                 {%- if course.url == chapter.link %}
-    "{{course.title}}": "{{coursedata.name}}"
+    "{{course.title}}": "{{chapter.name}}"
                                 {%- endif -%}
                             {%- endfor -%}
                     {%- unless forloop.last %},{% endunless -%}
