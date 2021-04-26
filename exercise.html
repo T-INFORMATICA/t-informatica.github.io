@@ -30,14 +30,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     let uid = new URLSearchParams(window.location.search).get('userid');
     uid = uid === null ? user.uid : uid;
 
-    let exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
 
     // for testing
-    exerciseid = "qsfduhzfdopjipqs";
     uid = "VPjXPzjhUte95bdGWRVL06aSyeX2";
 
-    if (uid && exerciseid) {
-        generateExercise(uid, exerciseid);
+    if (uid) {
+        generateExercise(uid);
     }
 });
 

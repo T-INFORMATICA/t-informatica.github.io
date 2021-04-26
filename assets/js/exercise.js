@@ -2,12 +2,21 @@ let form = document.querySelector("#exercise");
 form.addEventListener("submit", submitExercise);
 
 
-function generateExercise(exerciseid) {
+function generateExercise() {
     let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
     request.addEventListener("load", definitionsLoaded);
     request.send();
+}
 
+function definitionsLoaded(e) {
+    let response = JSON.parse(e.currentTarget.response);
+    console.log(response);
+
+    let exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
+    exerciseid = "qsfduhzfdopjipqs";
+
+    let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref
         .once('value')
@@ -16,12 +25,6 @@ function generateExercise(exerciseid) {
                 let exercise = snapshot.val();
                 let subject = exercise.subject;
             });
-}
-
-function definitionsLoaded(e) {
-    console.log(e.currentTarget);
-    let response = JSON.parse(e.currentTarget.response);
-    console.log(response);
 }
 /*
 function submitExercise() { 
