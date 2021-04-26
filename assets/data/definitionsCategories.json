@@ -12,13 +12,13 @@ layout: null
                     {%- if course.url == chapter.link %}
                         {%- assign courseDefs = false -%}
                         {%- for definition in course.definitions %}
+                            {%- unless forloop.first or course.definitions == empty %},{% endunless -%}
                             {%- assign siteDefs = true -%}
                             {%- assign courseDefs = true %}
         {
             "term": "{{definition.name}}",
             "definition": "{{definition.definition}}"
         }
-                            {%- unless forloop.last or course.definitions == empty %},{% endunless -%}
                         {%- endfor -%}
                     {%- endif -%}
                 {%- endfor -%}
