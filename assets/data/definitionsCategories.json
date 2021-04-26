@@ -5,6 +5,7 @@ layout: null
 {
 {%- for coursedata in site.data.courses %}
     {% for subject in coursedata.subjects %}
+            {%- unless forloop.first %},{% endunless -%}
     "{{subject.name}}": [
             {%- assign chapterDefs = false -%}
             {%- for chapter in subject.chapters -%}
@@ -25,7 +26,6 @@ layout: null
                 {%- endfor -%}
             {%- endfor %}
     ]
-            {%- unless forloop.last %},{% endunless -%}
         {%- endfor -%}
     {%- unless forloop.last %},{% endunless -%}
 {% endfor %}
