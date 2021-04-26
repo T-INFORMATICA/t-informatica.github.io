@@ -17,7 +17,9 @@ function submitExercise(submitEvent) {
 
 function generateExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
-    document.querySelector(`[name="answer"]:checked`).checked = false;
+    if (document.querySelector(`[name="answer"]:checked`)) {
+        document.querySelector(`[name="answer"]:checked`).checked = false;
+    }
 
     let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
