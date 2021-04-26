@@ -8,7 +8,6 @@ layout: null
     {% for subject in coursedata.subjects %}
 
     "{{subject.name}}": [
-
             {%- for chapter in subject.chapters -%}
                 {% assign siteDefs = false %}
                 {%- for course in site.courses -%}
@@ -17,21 +16,17 @@ layout: null
                         {%- for definition in course.definitions %}
                             {% assign siteDefs = true %}
                             {% assign courseDefs = true %}
-
         {
             "term": "{{definition.name}}",
             "definition": "{{definition.definition}}"
         }
-
                             {%- unless forloop.last or course.definitions == empty %},{% endunless -%}
                         {% endfor %}
                     {%- endif -%}
                 {%- endfor -%}
                 {%- unless forloop.last or courseDefs == false %},{% endunless -%}
             {%- endfor %}
-
     ]
-
             {%- unless forloop.last %},{% endunless -%}
         {% endfor %}
     {%- unless forloop.last %},{% endunless -%}
