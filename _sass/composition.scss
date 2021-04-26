@@ -34,8 +34,16 @@ main ul {
 
 /***** EXERCISE LAYOUT ********/
 
-#exerciseAnswers>* {
+#exerciseAnswers>label {
     display: block;
+}
+
+#exerciseAnswers>input[type="radio"] {
+    display: none;
+}
+
+#exerciseAnswers>input[type="radio"]:checked+label {
+    background-color: green;
 }
 
 
