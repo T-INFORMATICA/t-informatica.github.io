@@ -36,17 +36,17 @@ function definitionsLoaded(e) {
         .then(
             snapshot => {
                 let exercise = snapshot.val();
-                
+
                 let definitions = response[exercise.subject]
                     .map((a) => ({ sort: Math.random(), value: a }))
                     .sort((a, b) => a.sort - b.sort)
                     .map((a) => a.value)
                     .slice(0, 4);
-                let question = definitions[Math.floor(Math.random() * definitions.length)];
-                let numQuestions = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
+                let randomQuestion = definitions[Math.floor(Math.random() * definitions.length)];
+                let numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
 
-                ShowQuestion(definitions, question, numQuestions);
-                questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(question).key;
+                ShowQuestion(definitions, randomQuestion, numQuestionsInExercise);
+                questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(randomQuestion).key;
             });
 }
 
