@@ -42,7 +42,7 @@ function definitionsLoaded(e) {
                     .map((a) => a.value);
                 definitions = shuffledDefinitions.slice(0, 4);
                 let question = definitions[Math.floor(Math.random() * definitions.length)];
-                ShowQuestion(definitions, question, Object.keys(exercise.questions).length);
+                ShowQuestion(definitions, question, exercise.questions ? Object.keys(exercise.questions).length : 1);
                 questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(question).key;
             });
 }
