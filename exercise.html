@@ -4,8 +4,8 @@ layout: lms
 
 
 <form method="get" id="exercise">
-    <h2>QUESTION 1</h2>
-    <h1>%QUESTION%</h1>
+    <h3>QUESTION 1</h3>
+    <h2 id="question">%QUESTION%</h2>
     <input type="hidden" name="question" value="%QUESTION%">
     <input type="hidden" name="questioncount" value="1">
 
@@ -30,12 +30,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     let uid = new URLSearchParams(window.location.search).get('userid');
     uid = uid === null ? user.uid : uid;
 
-
-    // for testing
-    uid = "VPjXPzjhUte95bdGWRVL06aSyeX2";
-
     if (uid) {
-        generateExercise(uid);
+        generateExercise();
     }
 });
 

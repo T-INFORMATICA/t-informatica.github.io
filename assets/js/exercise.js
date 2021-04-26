@@ -23,17 +23,29 @@ function definitionsLoaded(e) {
             snapshot => {
                 let exercise = snapshot.val();
                 let subject = exercise.subject;
-                let possibleQuestions = response[subject];
-                let shuffledQuestions = possibleQuestions
+                let definitions = response[subject];
+                let shuffledDefinitions = definitions
                     .map((a) => ({ sort: Math.random(), value: a }))
                     .sort((a, b) => a.sort - b.sort)
                     .map((a) => a.value);
-                for (let i = 0; i < shuffledQuestions.length; ++i) {
-                    if (i > 3)
-                        break;
-                    console.log(shuffledQuestions[i]);
-                }
+                definitions = shuffledDefinitions.slice(0, 4);
+                ShowQuestion(definitions);
             });
+}
+
+function ShowQuestion(definitions) {
+    let random = Math.random();
+    let questionKey = random < .5 ? "term" : "definition";
+    let answerKey = random < .5 ? "definition" : "term";
+    let randomId = Math.round(Math.random() * definitions.length);
+
+    document.querySelector("#question").innerHTML = definitions[randomId][questionKey];
+
+    for (let i = 0; i < definitions.length; i++) {
+        document.querySelector(`#answer${i + 1}`).value = definitions[0][answerKey];
+        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = definitions[0][answerKey];
+    }
+
 }
 /*
 function submitExercise() { 
