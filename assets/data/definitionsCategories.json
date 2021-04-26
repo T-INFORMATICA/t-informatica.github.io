@@ -13,7 +13,7 @@ layout: null
         {
             "term": "{{definition.name}}",
             "definition": "{{definition.definition}}"
-        }{% unless forloop.last %},{% endunless -%}
+        }{% unless forloop.last or course.definitions == empty %},{% endunless -%}
                                 {% endfor %}
                                 {%- endif -%}
                             {%- endfor -%}
