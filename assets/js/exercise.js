@@ -2,10 +2,11 @@ let form = document.querySelector("#exercise");
 form.addEventListener("submit", submitExercise);
 
 let request = new XMLHttpRequest();
+
 function generateExercise(exerciseid) {
-    request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
     request.addEventListener("load", definitionsLoaded);
+    request.send();
 
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref
@@ -14,11 +15,11 @@ function generateExercise(exerciseid) {
             snapshot => {
                 let exercise = snapshot.val();
                 let subject = exercise.subject;
-                
             });
 }
 
-function definitionsLoaded() {
+function definitionsLoaded(e) {
+    console.log(e);
     let response = JSON.parse(request.response);
     console.log(response);
 }
