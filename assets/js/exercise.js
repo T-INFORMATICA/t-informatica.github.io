@@ -23,6 +23,7 @@ function definitionsLoaded(e) {
         .then(
             snapshot => {
                 let exercise = snapshot.val();
+                console.log(exercise);
                 let subject = exercise.subject;
             });
 }
