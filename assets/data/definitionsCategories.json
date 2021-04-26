@@ -12,7 +12,7 @@ layout: null
                     {%- if course.url == chapter.link %}
                         {%- assign courseDefs = false -%}
                         {%- for definition in course.definitions %}
-                            {%- unless forloop.first or course.definitions == empty %},{% endunless -%}
+                            {%- unless forloop.first or courseDefs == true %},{% endunless -%}
                             {%- assign siteDefs = true -%}
                             {%- assign courseDefs = true %}
         {
