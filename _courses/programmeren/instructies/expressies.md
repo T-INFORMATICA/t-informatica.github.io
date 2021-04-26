@@ -12,9 +12,9 @@ definitions:
  - name: expressie
    definition: Een bewerking met als resultaat een waarde.
  - name: rekenkundige operatie
-   definition: Een wiskundige bewerking tussen twee getallen.
+   definition: Een bewerking tussen twee getallen met als resultaat een getal.
  - name: logische operatie
-   definition: Een logische bewerking tussen twee waardes.
+   definition: Een bewerking tussen twee waardes met als resultaat een booleaanse waarde.
  - name: operatie
    definition: De verschillende soorten bewerkingen die een programmeur kan gebruiken. 
  - name: voorwaarde
