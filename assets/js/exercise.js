@@ -7,6 +7,7 @@ let exerciseid;
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
 
+
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
     database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
@@ -16,6 +17,7 @@ function submitExercise(submitEvent) {
 
 function generateExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
+    document.querySelector(`[name="answer"]:checked`).checked = false;
 
     let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
