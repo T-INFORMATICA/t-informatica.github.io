@@ -44,8 +44,8 @@ function ShowQuestion(definitions) {
     document.querySelector("#question").innerHTML = definitions[randomId][questionKey];
 
     for (let i = 0; i < definitions.length; i++) {
-        document.querySelector(`#answer${i + 1}`).value = definitions[0][answerKey];
-        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = definitions[0][answerKey];
+        document.querySelector(`#answer${i + 1}`).value = definitions[i][answerKey];
+        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = definitions[i][answerKey];
     }
 
 }
