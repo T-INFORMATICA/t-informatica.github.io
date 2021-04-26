@@ -3,6 +3,9 @@ form.addEventListener("submit", submitExercise);
 
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
+
+    let answer = document.querySelector(`[name="answer"]:checked`).value;
+    console.log(answer);
 }
 
 function generateExercise() {
