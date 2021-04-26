@@ -34,13 +34,11 @@ function definitionsLoaded(e) {
         .then(
             snapshot => {
                 let exercise = snapshot.val();
-                let subject = exercise.subject;
-                let definitions = response[subject];
-                let shuffledDefinitions = definitions
+                let shuffledDefinitions = response[exercise.subject]
                     .map((a) => ({ sort: Math.random(), value: a }))
                     .sort((a, b) => a.sort - b.sort)
                     .map((a) => a.value);
-                definitions = shuffledDefinitions.slice(0, 4);
+                let definitions = shuffledDefinitions.slice(0, 4);
                 let question = definitions[Math.floor(Math.random() * definitions.length)];
                 ShowQuestion(definitions, question, exercise.questions ? Object.keys(exercise.questions).length : 1);
                 questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(question).key;
