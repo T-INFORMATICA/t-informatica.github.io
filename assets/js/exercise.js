@@ -1,6 +1,9 @@
 let form = document.querySelector("#exercise");
 form.addEventListener("submit", submitExercise);
 
+function submitExercise(submitEvent) {
+    submitEvent.preventDefault();
+}
 
 function generateExercise() {
     let request = new XMLHttpRequest();
