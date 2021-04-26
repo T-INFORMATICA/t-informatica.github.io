@@ -5,6 +5,11 @@ let questionKey;
 let exerciseid;
 let numQuestionsInExercise;
 
+window.onbeforeunload = confirmExit;
+function confirmExit() {
+    return "You have attempted to leave this page. Are you sure?";
+}
+
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
 
@@ -14,6 +19,9 @@ function submitExercise(submitEvent) {
 
     if (numQuestionsInExercise < 10) {
         generateExercise();
+    }
+    else {
+        // SUBMIT EXERCISE
     }
 }
 
