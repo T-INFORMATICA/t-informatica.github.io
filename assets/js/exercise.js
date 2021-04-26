@@ -11,7 +11,6 @@ function generateExercise() {
 
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
-    console.log(response);
 
     let exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
     exerciseid = "qsfduhzfdopjipqs";
@@ -23,10 +22,17 @@ function definitionsLoaded(e) {
         .then(
             snapshot => {
                 let exercise = snapshot.val();
-                console.log(exercise);
                 let subject = exercise.subject;
                 let possibleQuestions = response[subject];
-                console.log(possibleQuestions);
+                let shuffledQuestions = possibleQuestions
+                    .map((a) => ({ sort: Math.random(), value: a }))
+                    .sort((a, b) => a.sort - b.sort)
+                    .map((a) => a.value);
+                for (let i = 0; i < shuffledQuestions.length; ++i) {
+                    if (i > 3)
+                        break;
+                    console.log(shuffledQuestions[i]);
+                }
             });
 }
 /*
