@@ -23,9 +23,10 @@ function definitionsLoaded(e) {
         .then(
             snapshot => {
                 let exercise = snapshot.val();
-                console.log(`exercises/${_user.uid}/${exerciseid}`);
                 console.log(exercise);
                 let subject = exercise.subject;
+                let possibleQuestions = response[subject];
+                console.log(possibleQuestions);
             });
 }
 /*
