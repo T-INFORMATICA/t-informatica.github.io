@@ -38,6 +38,8 @@ main ul {
     display: block;
     margin: 8px;
     padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
 }
 
 #exerciseAnswers>input[type="radio"] {
