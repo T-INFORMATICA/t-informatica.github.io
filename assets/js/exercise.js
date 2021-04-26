@@ -1,11 +1,14 @@
 let form = document.querySelector("#exercise");
 form.addEventListener("submit", submitExercise);
 
+let questionKey;
+
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
 
     let answer = document.querySelector(`[name="answer"]:checked`).value;
-    console.log(answer);
+    let database = firebase.database();
+    database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
 }
 
 function generateExercise() {
@@ -37,7 +40,7 @@ function definitionsLoaded(e) {
                 definitions = shuffledDefinitions.slice(0, 4);
                 let question = definitions[Math.floor(Math.random() * definitions.length)];
                 ShowQuestion(definitions, question);
-                database.ref(`exercises/${_user.uid}/${exerciseid}/questions/1`).set(question);
+                questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(question).key;
             });
 }
 
