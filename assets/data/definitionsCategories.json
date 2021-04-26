@@ -7,7 +7,7 @@ layout: null
     {% for subject in coursedata.subjects %}
     "{{subject.name}}": [
             {%- for chapter in subject.chapters -%}
-                {%- unless forloop.first or siteDefs == false %},{% endunless -%}
+                {% comment %}{%- unless forloop.first or siteDefs == false %},{% endunless -%}{% endcomment %}
                 {%- assign siteDefs = false -%}
                 {%- for course in site.courses -%}
                     {%- if course.url == chapter.link %}
