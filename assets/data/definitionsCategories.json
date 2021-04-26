@@ -5,13 +5,13 @@ layout: null
 {
 {%- for coursedata in site.data.courses %}
     {% for subject in coursedata.subjects %}
+        {%- assign siteDefs = false -%}
     "{{subject.name}}": [
             {%- for chapter in subject.chapters -%}
                 {% comment %}{%- unless forloop.first or siteDefs == false %},{% endunless -%}{% endcomment %}
-                {%- assign siteDefs = false -%}
+                {%- assign courseDefs = false -%}
                 {%- for course in site.courses -%}
                     {%- if course.url == chapter.link %}
-                        {%- assign courseDefs = false -%}
                         {%- for definition in course.definitions %}
                             {%- if courseDefs == true or siteDefs == true %}, {% endif -%}
                             {% comment %}{%- unless forloop.first or courseDefs == false or siteDefs == false %},{% endunless -%}{% endcomment %}
