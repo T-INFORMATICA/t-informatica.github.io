@@ -3,6 +3,7 @@ form.addEventListener("submit", submitExercise);
 
 let questionKey;
 let exerciseid;
+let numQuestionsInExercise;
 
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
@@ -11,7 +12,9 @@ function submitExercise(submitEvent) {
     let database = firebase.database();
     database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
 
-    generateExercise();
+    if (numQuestionsInExercise < 10) {
+        generateExercise();
+    }
 }
 
 function generateExercise() {
@@ -43,7 +46,7 @@ function definitionsLoaded(e) {
                     .map((a) => a.value)
                     .slice(0, 4);
                 let randomQuestion = definitions[Math.floor(Math.random() * definitions.length)];
-                let numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
+                numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
 
                 ShowQuestion(definitions, randomQuestion, numQuestionsInExercise);
                 questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(randomQuestion).key;
