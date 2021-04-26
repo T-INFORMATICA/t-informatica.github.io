@@ -3,10 +3,8 @@ layout: null
 ---
 
 {
-
 {%- for coursedata in site.data.courses %}
     {% for subject in coursedata.subjects %}
-
     "{{subject.name}}": [
             {%- for chapter in subject.chapters -%}
                 {% assign siteDefs = false %}
@@ -31,5 +29,4 @@ layout: null
         {% endfor %}
     {%- unless forloop.last %},{% endunless -%}
 {% endfor %}
-
 }
