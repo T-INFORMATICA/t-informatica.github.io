@@ -42,16 +42,17 @@ function definitionsLoaded(e) {
                     .map((a) => a.value);
                 definitions = shuffledDefinitions.slice(0, 4);
                 let question = definitions[Math.floor(Math.random() * definitions.length)];
-                ShowQuestion(definitions, question);
+                ShowQuestion(definitions, question, Object.keys(exercise.questions).length);
                 questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(question).key;
             });
 }
 
-function ShowQuestion(definitions, question) {
+function ShowQuestion(definitions, question, questionNumber) {
     let random = Math.random();
     let questionKey = random < .5 ? "term" : "definition";
     let answerKey = random < .5 ? "definition" : "term";
 
+    document.querySelector("#questionTitle").innerHTML = questionNumber;
     document.querySelector("#question").innerHTML = question[questionKey];
 
     for (let i = 0; i < definitions.length; i++) {
@@ -60,25 +61,3 @@ function ShowQuestion(definitions, question) {
     }
 
 }
-/*
-function submitExercise() { 
-    let question = form.elements["question"].value;
-    let answer = form.elements["answer"].value;
-    let questioncount = form.elements["questioncount"].value;
-
-    
-    let database = firebase.database();
-    let exerciseref = database.ref(`exercises/${_user.uid}`);
-    let definitionref = database.ref(`definitions/${question}/correct`);
-    definitionref
-        .once('value')
-        .then(snapshot => {
-            let correctAnswer = snapshot.val();
-            exerciseref
-                .set({
-                    myAnswer: answer,
-                    correctAnswer: correctAnswer,
-                    index: questioncount + 1
-                }); // set the current exercice values
-        });
-}*/
