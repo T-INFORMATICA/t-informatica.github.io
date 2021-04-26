@@ -32,6 +32,20 @@ main ul {
     list-style-type: disc;
 }
 
+/***** EXERCISE LAYOUT ********/
+
+#exerciseAnswers>* {
+    display: block;
+}
+
+
+@media only screen and (min-width: 900px) {
+    #exerciseAnswers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /***** BODY LAYOUT ********/
 
 body>* {

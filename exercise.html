@@ -20,11 +20,11 @@ layout: lms
         <label for="answer3">%ANSWER 3%</label>
         <label for="answer4">%ANSWER 4%</label>
     </div>
+    <input type="submit" value="VERSTUREN">
 </form>
 
 <script src="{{site.baseurl}}/assets/js/exercise.js"></script>
 <script>
-
 firebase.auth().onAuthStateChanged(function(user) {
     authUser(user);
     let uid = new URLSearchParams(window.location.search).get('userid');
@@ -34,5 +34,4 @@ firebase.auth().onAuthStateChanged(function(user) {
         generateExercise();
     }
 });
-
 </script>
