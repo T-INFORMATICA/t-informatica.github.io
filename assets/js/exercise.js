@@ -50,7 +50,7 @@ function ShowQuestion(definitions, question, questionNumber) {
     let questionKey = random < .5 ? "term" : "definition";
     let answerKey = random < .5 ? "definition" : "term";
 
-    document.querySelector("#questionTitle").innerHTML = `Vraag ${questionNumber + 1}`;
+    document.querySelector("#questionTitle").innerHTML = `Vraag ${questionNumber}`;
     document.querySelector("#question").innerHTML = question[questionKey];
 
     for (let i = 0; i < definitions.length; i++) {
