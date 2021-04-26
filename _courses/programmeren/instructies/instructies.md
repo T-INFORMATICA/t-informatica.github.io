@@ -7,7 +7,7 @@ definitions:
  - name: instructie
    definition: Een bevel aan een computer dat meestal bestaat uit het opslaan of aanpassen van data.
  - name: commentaar
-   definition: stukken tekst die je toevoegen aan je code die genegeerd wordt door de computer. Dit kan gebruikt worden om wat extra uitleg te geven aan moeilijke code.
+   definition: Tekst die je kan toevoegen aan je code, die wordt genegeerd door de computer. Dit kan gebruikt worden om wat extra uitleg te geven aan moeilijke code.
 description: Programmeren is niet meer dan het geven van bevelen aan een computer. Zo'n bevel heet een instructie.
 ---
 
