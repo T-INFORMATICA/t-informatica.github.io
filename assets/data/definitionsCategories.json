@@ -6,23 +6,23 @@ layout: null
 {%- for coursedata in site.data.courses %}
     {% for subject in coursedata.subjects %}
     "{{subject.name}}": [
+            {%- assign chapterDefs = false -%}
             {%- for chapter in subject.chapters -%}
-                {%- assign siteDefs = false -%}
+                {%- unless forloop.first or chapterDefs == false %},{% endunless -%}
                 {%- for course in site.courses -%}
                     {%- if course.url == chapter.link %}
                         {%- assign courseDefs = false -%}
                         {%- for definition in course.definitions %}
+                            {%- unless forloop.first or course.definitions == empty %},{% endunless -%}
                             {%- assign siteDefs = true -%}
                             {%- assign courseDefs = true %}
         {
             "term": "{{definition.name}}",
             "definition": "{{definition.definition}}"
         }
-                            {%- unless forloop.last or course.definitions == empty %},{% endunless -%}
                         {%- endfor -%}
                     {%- endif -%}
                 {%- endfor -%}
-                {%- unless forloop.last or courseDefs == false %},{% endunless -%}
             {%- endfor %}
     ]
             {%- unless forloop.last %},{% endunless -%}
