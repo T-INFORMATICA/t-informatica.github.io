@@ -37,8 +37,10 @@ function ShowQuestion(definitions) {
     let random = Math.random();
     let questionKey = random < .5 ? "term" : "definition";
     let answerKey = random < .5 ? "definition" : "term";
-    let randomId = Math.round(Math.random() * definitions.length);
+    let randomId = Math.floor(Math.random() * definitions.length);
 
+    console.log(randomId);
+    console.log(definitions);
     document.querySelector("#question").innerHTML = definitions[randomId][questionKey];
 
     for (let i = 0; i < definitions.length; i++) {
