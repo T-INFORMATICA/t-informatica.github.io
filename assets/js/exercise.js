@@ -17,7 +17,7 @@ function definitionsLoaded(e) {
     exerciseid = "qsfduhzfdopjipqs";
 
     let database = firebase.database();
-    let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
+    let exerciseref = database.ref(`exercises/VPjXPzjhUte95bdGWRVL06aSyeX2/${exerciseid}`);
     exerciseref
         .once('value')
         .then(
