@@ -3,7 +3,7 @@ form.addEventListener("submit", submitExercise);
 
 let request = new XMLHttpRequest();
 function generateExercise(exerciseid) {
-
+    request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
     request.addEventListener("load", definitionsLoaded);
 
