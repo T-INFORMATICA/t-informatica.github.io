@@ -1,9 +1,9 @@
 let form = document.querySelector("#exercise");
 form.addEventListener("submit", submitExercise);
 
-let request = new XMLHttpRequest();
 
 function generateExercise(exerciseid) {
+    let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
     request.addEventListener("load", definitionsLoaded);
     request.send();
@@ -19,8 +19,8 @@ function generateExercise(exerciseid) {
 }
 
 function definitionsLoaded(e) {
-    console.log(e);
-    let response = JSON.parse(request.response);
+    console.log(e.currentTarget);
+    let response = JSON.parse(e.currentTarget.response);
     console.log(response);
 }
 /*
