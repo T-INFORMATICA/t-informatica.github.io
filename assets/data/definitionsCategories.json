@@ -13,12 +13,12 @@ layout: null
                         {%- assign courseDefs = false -%}
                         {%- for definition in course.definitions %}
                             {%- assign siteDefs = true -%}
-                            {%- assign courseDefs = true -%}
+                            {%- assign courseDefs = true %}
         {
             "term": "{{definition.name}}",
             "definition": "{{definition.definition}}"
         }
-                            {%- unless forloop.last or course.definitions == empty %},{% endunless -%}
+                            {% unless forloop.last or course.definitions == empty %},{% endunless -%}
                         {%- endfor -%}
                     {%- endif -%}
                 {%- endfor -%}
