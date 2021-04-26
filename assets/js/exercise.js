@@ -2,19 +2,21 @@ let form = document.querySelector("#exercise");
 form.addEventListener("submit", submitExercise);
 
 let questionKey;
+let exerciseid;
 
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
-    
-    let exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
-    exerciseid = "qsfduhzfdopjipqs";
 
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
     database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
+
+    generateExercise();
 }
 
 function generateExercise() {
+    exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
+
     let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
     request.addEventListener("load", definitionsLoaded);
@@ -24,8 +26,6 @@ function generateExercise() {
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
-    let exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
-    exerciseid = "qsfduhzfdopjipqs";
 
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
