@@ -7,7 +7,6 @@ let exerciseid;
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
 
-
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
     database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
@@ -30,7 +29,6 @@ function generateExercise() {
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
-
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref
@@ -44,22 +42,21 @@ function definitionsLoaded(e) {
                     .map((a) => a.value);
                 let definitions = shuffledDefinitions.slice(0, 4);
                 let question = definitions[Math.floor(Math.random() * definitions.length)];
-                questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(question).key;
                 ShowQuestion(definitions, question, exercise.questions ? Object.keys(exercise.questions).length : 1);
+                questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(question).key;
             });
 }
 
 function ShowQuestion(definitions, question, questionNumber) {
     let random = Math.random();
-    let questionKey = random < .5 ? "term" : "definition";
-    let answerKey = random < .5 ? "definition" : "term";
+    let questionType = random < .5 ? "term" : "definition";
+    let answerType = random < .5 ? "definition" : "term";
 
     document.querySelector("#questionTitle").innerHTML = `Vraag ${questionNumber}`;
-    document.querySelector("#question").innerHTML = question[questionKey];
+    document.querySelector("#question").innerHTML = question[questionType];
 
     for (let i = 0; i < definitions.length; i++) {
-        document.querySelector(`#answer${i + 1}`).value = definitions[i][answerKey];
-        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = definitions[i][answerKey];
+        document.querySelector(`#answer${i + 1}`).value = definitions[i][answerType];
+        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = definitions[i][answerType];
     }
-
 }
