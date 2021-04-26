@@ -5,6 +5,9 @@ let questionKey;
 
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
+    
+    let exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
+    exerciseid = "qsfduhzfdopjipqs";
 
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
