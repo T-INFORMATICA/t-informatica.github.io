@@ -29,17 +29,18 @@ function definitionsLoaded(e) {
                     .sort((a, b) => a.sort - b.sort)
                     .map((a) => a.value);
                 definitions = shuffledDefinitions.slice(0, 4);
-                ShowQuestion(definitions);
+                let question = definitions[Math.floor(Math.random() * definitions.length)];
+                ShowQuestion(definitions, question);
+                database.ref(`exercises/${_user.uid}/${exerciseid}/questions/1`).set(question);
             });
 }
 
-function ShowQuestion(definitions) {
+function ShowQuestion(definitions, question) {
     let random = Math.random();
     let questionKey = random < .5 ? "term" : "definition";
     let answerKey = random < .5 ? "definition" : "term";
-    let randomId = Math.floor(Math.random() * definitions.length);
 
-    document.querySelector("#question").innerHTML = definitions[randomId][questionKey];
+    document.querySelector("#question").innerHTML = question[questionKey];
 
     for (let i = 0; i < definitions.length; i++) {
         document.querySelector(`#answer${i + 1}`).value = definitions[i][answerKey];
