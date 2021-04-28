@@ -24,8 +24,8 @@ function submitExercise(submitEvent) {
 
 function EvaluateExercise() {
     let database = firebase.database();
-    let exerciseref = database.child(`exercises/${_user.uid}/${exerciseid}/finished`);
-    exerciseref.set(true);
+    let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
+    exerciseref.child("finished").set(true);
 }
 
 function generateExercise() {
