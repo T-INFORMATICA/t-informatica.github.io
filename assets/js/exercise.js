@@ -42,6 +42,7 @@ function generateExercise() {
 
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
+    console.log(response);
 
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
