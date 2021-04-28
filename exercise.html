@@ -3,7 +3,15 @@ layout: lms
 ---
 
 <div id="exerciseSelection" style="display: none">
-    <button onclick="CreateNewExercise('Instructies')">create new exercise</button>
+    <ul>
+        {%- for coursedata in site.data.courses %}
+        {% for subject in coursedata.subjects %}
+        <li>
+            <button onclick="CreateNewExercise('{{subject.name}}')">{{subject.name}} exercises</button>
+        </li>
+        {%- endfor -%}
+        {% endfor %}
+    </ul>
 </div>
 
 <form method="get" id="exercise" style="display: none">
