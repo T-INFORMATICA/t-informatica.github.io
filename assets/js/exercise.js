@@ -30,16 +30,38 @@ function EvaluateExercise() {
     window.location.href = 'https://t-informatica.github.io/exercise.html';
 }
 
+function CreateNewExercise(subject) {
+    let database = firebase.database();
+
+    let newExerciseData = {
+        "subject": subject,
+        "owner": _user.uid
+    };
+
+    let exerciseId = database.ref(`exercises/${_user.uid}`).push(newExerciseData);
+    
+    let url = `https://t-informatica.github.io/exercise.html?exerciseid=${exerciseId}`;
+    window.location.href = url;
+}
+
 function generateExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
-    if (document.querySelector(`[name="answer"]:checked`)) {
-        document.querySelector(`[name="answer"]:checked`).checked = false;
+    if (exerciseid == false) {
+
+    }
+    else {
+        document.querySelector("#exercise").style.display = "";
+        if (document.querySelector(`[name="answer"]:checked`)) {
+            document.querySelector(`[name="answer"]:checked`).checked = false;
+        }
+    
+        let request = new XMLHttpRequest();
+        request.open("GET", "/assets/data/definitionsCategories.json");
+        request.addEventListener("load", definitionsLoaded);
+        request.send();
     }
 
-    let request = new XMLHttpRequest();
-    request.open("GET", "/assets/data/definitionsCategories.json");
-    request.addEventListener("load", definitionsLoaded);
-    request.send();
+
 }
 
 function definitionsLoaded(e) {
