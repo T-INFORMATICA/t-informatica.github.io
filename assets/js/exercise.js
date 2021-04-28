@@ -37,8 +37,8 @@ function CreateNewExercise(subject) {
         "owner": _user.uid
     };
 
-    let exerciseId = database.ref(`exercises/${_user.uid}`).push(newExerciseData).key;
-    console.log(exerciseid);
+    let exerciseKey = database.ref(`exercises/${_user.uid}`).push(newExerciseData).key;
+    console.log(exerciseKey);
 
     let url = `https://t-informatica.github.io/exercise.html?exerciseid=${exerciseId}`;
     // window.location.href = url;
