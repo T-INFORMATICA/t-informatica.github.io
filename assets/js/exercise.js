@@ -26,7 +26,7 @@ function EvaluateExercise() {
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child("finished").set(true);
 
-    window.location.href = 'https://t-informatica.github.io/exercise.html';
+    window.location.replace('https://t-informatica.github.io/exercise.html');
 }
 
 function CreateNewExercise(subject) {
@@ -40,15 +40,13 @@ function CreateNewExercise(subject) {
     let exerciseKey = database.ref(`exercises/${_user.uid}`).push(newExerciseData).then(
         snapshot => {
             let url = `https://t-informatica.github.io/exercise.html?exerciseid=${snapshot.key}`;
-            console.log(url);
-            window.location.href = url;
+            window.location.replace(url);
         }
     );
 }
 
 function generateExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
-    console.log(exerciseid);
     if (exerciseid == null) {
         document.querySelector("#exerciseSelection").style.display = "";
     }
@@ -71,7 +69,6 @@ function generateExercise() {
 
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
-    console.log(response);
 
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
