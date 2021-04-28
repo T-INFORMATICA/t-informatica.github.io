@@ -15,14 +15,17 @@ function submitExercise(submitEvent) {
 
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
-    database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
+    let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
+    exerciseref.ref(`questions/${questionKey}/answer`).set(answer);
+    // database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
 
-    if (numQuestionsInExercise < 10) {
-        generateExercise();
-    }
-    else {
-        // SUBMIT EXERCISE
-    }
+    generateExercise();
+}
+
+function EvaluateExercise() {
+    let database = firebase.database();
+    let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
+    exerciseref.set(true);
 }
 
 function generateExercise() {
@@ -55,6 +58,12 @@ function definitionsLoaded(e) {
                     .slice(0, 4);
                 let randomQuestion = definitions[Math.floor(Math.random() * definitions.length)];
                 numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
+                
+                if (numQuestionsInExercise > 10) {
+                    // EVALUATE EXERCISE
+                    EvaluateExercise();
+                    return;
+                }
 
                 ShowQuestion(definitions, randomQuestion, numQuestionsInExercise);
                 questionKey = database.ref(`exercises/${_user.uid}/${exerciseid}/questions`).push(randomQuestion).key;
