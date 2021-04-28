@@ -24,7 +24,7 @@ function submitExercise(submitEvent) {
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child(`questions/${questionKey}/answer`).set(answer);
 
-    generateExercise();
+    loadExercise();
 }
 
 function EvaluateExercise() {
