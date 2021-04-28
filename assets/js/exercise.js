@@ -41,7 +41,7 @@ function CreateNewExercise(subject) {
         snapshot => {
             let url = `https://t-informatica.github.io/exercise.html?exerciseid=${snapshot.key}`;
             console.log(url);
-            // window.location.href = url;
+            window.location.href = url;
         }
     );
 }
