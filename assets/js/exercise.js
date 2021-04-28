@@ -26,6 +26,8 @@ function EvaluateExercise() {
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child("finished").set(true);
+
+    window.location.href = 'https://t-informatica.github.io/exercise.html';
 }
 
 function generateExercise() {
