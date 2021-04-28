@@ -39,15 +39,16 @@ function CreateNewExercise(subject) {
     };
 
     let exerciseId = database.ref(`exercises/${_user.uid}`).push(newExerciseData);
-    
+
     let url = `https://t-informatica.github.io/exercise.html?exerciseid=${exerciseId}`;
     window.location.href = url;
 }
 
 function generateExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
+    console.log(exerciseid);
     if (exerciseid == false) {
-
+        document.querySelector("#exerciseSelection").style.display = "";
     }
     else {
         document.querySelector("#exercise").style.display = "";
