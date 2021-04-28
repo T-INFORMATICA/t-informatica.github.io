@@ -37,9 +37,13 @@ function CreateNewExercise(subject) {
         "owner": _user.uid
     };
 
-    let exerciseKey = database.ref(`exercises/${_user.uid}`).push(newExerciseData).key;
-    let url = `https://t-informatica.github.io/exercise.html?exerciseid=${exerciseKey}`;
-    window.location.href = url;
+    let exerciseKey = database.ref(`exercises/${_user.uid}`).push(newExerciseData).then(
+        snapshot => {
+            let url = `https://t-informatica.github.io/exercise.html?exerciseid=${snapshot.key}`;
+            console.log(url);
+            // window.location.href = url;
+        }
+    );
 }
 
 function generateExercise() {
