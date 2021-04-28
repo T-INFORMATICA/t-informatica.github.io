@@ -41,7 +41,7 @@ function CreateNewExercise(subject) {
     console.log(exerciseid);
 
     let url = `https://t-informatica.github.io/exercise.html?exerciseid=${exerciseId}`;
-    window.location.href = url;
+    // window.location.href = url;
 }
 
 function generateExercise() {
