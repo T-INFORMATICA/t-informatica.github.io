@@ -39,8 +39,7 @@ function CreateNewExercise(subject) {
     let database = firebase.database();
 
     let newExerciseData = {
-        "subject": subject,
-        "owner": _user.uid
+        "subject": subject
     };
 
     database.ref(`exercises/${_user.uid}`)
