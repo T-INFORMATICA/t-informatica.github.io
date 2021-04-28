@@ -16,7 +16,7 @@ function submitExercise(submitEvent) {
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
-    exerciseref.ref(`questions/${questionKey}/answer`).set(answer);
+    exerciseref.child(`questions/${questionKey}/answer`).set(answer);
     // database.ref(`exercises/${_user.uid}/${exerciseid}/questions/${questionKey}/answer`).set(answer);
 
     generateExercise();
