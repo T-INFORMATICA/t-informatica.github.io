@@ -15,6 +15,12 @@ function authUser(user) {
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
                     console.log("succes - logged in");
+                    let database = firebase.database();
+                    let newUsersRef = database.ref(`newUsers/${user.uid}`);
+                    newUserData = {
+                        email: user.email
+                    };
+                    newUsersRef.set(newUserData);
                     return false;
                 },
                 uiShown: function () {
