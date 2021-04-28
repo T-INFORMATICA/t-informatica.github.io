@@ -47,7 +47,7 @@ function CreateNewExercise(subject) {
 function generateExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
     console.log(exerciseid);
-    if (exerciseid == false) {
+    if (exerciseid == null) {
         document.querySelector("#exerciseSelection").style.display = "";
     }
     else {
