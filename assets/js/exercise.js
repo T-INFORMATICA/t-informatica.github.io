@@ -5,7 +5,6 @@ let questionKey;
 let exerciseid;
 let numQuestionsInExercise;
 
-window.onbeforeunload = confirmExit;
 function confirmExit() {
     return "You have attempted to leave this page. Are you sure?";
 }
@@ -40,7 +39,7 @@ function CreateNewExercise(subject) {
 
     let exerciseId = database.ref(`exercises/${_user.uid}`).push(newExerciseData);
     console.log(exerciseid);
-    
+
     let url = `https://t-informatica.github.io/exercise.html?exerciseid=${exerciseId}`;
     window.location.href = url;
 }
@@ -52,6 +51,8 @@ function generateExercise() {
         document.querySelector("#exerciseSelection").style.display = "";
     }
     else {
+        window.onbeforeunload = confirmExit;
+
         document.querySelector("#exercise").style.display = "";
         if (document.querySelector(`[name="answer"]:checked`)) {
             document.querySelector(`[name="answer"]:checked`).checked = false;
