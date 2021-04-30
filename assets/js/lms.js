@@ -5,6 +5,15 @@ function changeUser() {
     window.location.replace(url);
 }
 
+function selectUser() {
+    let userid = new URLSearchParams(window.location.search).get('userid');
+    if (userid == null) {
+        return;
+    }
+
+    document.querySelector("#userSelect>select").value = userid;
+}
+
 function toCssSafeId(text) {
     text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
     return text;
