@@ -15,10 +15,10 @@ layout: lms
     
         let uid = new URLSearchParams(window.location.search).get('userid');
         uid = uid === null ? user.uid : uid;
-    
-        addUsersToMenu(uid);
+
         //createEvals(uid);
         addUserEvalsToPage(uid);
+        addUsersToMenu(uid);
     });
     
 </script>
