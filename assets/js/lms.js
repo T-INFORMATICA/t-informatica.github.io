@@ -63,7 +63,9 @@ function addFirebaseUserdataToMenu(userid, userdata) {
         return;
     let tmpl = `<a href="?userid=${userid}">${userdata.naam}</a>`;
     document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
-    document.querySelector('#userSelect').innerHTML += tmpl;
+
+    tmpl = `<option value="${userid}">${userdata.naam}</option>`;
+    document.querySelector('#userSelect>select').innerHTML += tmpl;
 }
 
 function addUserEvalsToPage(userid) {
