@@ -85,8 +85,8 @@ function addUsersToMenu(userid) {
 function addFirebaseUserdataToMenu(userid, userdata) {
     if (firebase.auth().currentUser.uid === userid)
         return;
-    let tmpl = `<a href="?userid=${userid}">${userdata.naam}</a>`;
-    document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
+    // let tmpl = `<a href="?userid=${userid}">${userdata.naam}</a>`;
+    // document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
 
     tmpl = `<option value="${userid}">${userdata.naam}</option>`;
     document.querySelector('#userSelect>select').innerHTML += tmpl;
