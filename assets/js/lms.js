@@ -63,6 +63,7 @@ function addFirebaseUserdataToMenu(userid, userdata) {
         return;
     let tmpl = `<a href="?userid=${userid}">${userdata.naam}</a>`;
     document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
+    document.querySelector('#userSelect').innerHTML += tmpl;
 }
 
 function addUserEvalsToPage(userid) {
@@ -161,7 +162,7 @@ function addResultsToPage(userid) {
                                     subjectResults[result.subject] = [];
                                 }
                                 subjectResult = {
-                                    date: new Date(evalsnapshot.val().date), 
+                                    date: new Date(evalsnapshot.val().date),
                                     result: result.result
                                 };
                                 subjectResults[result.subject].push(subjectResult);
