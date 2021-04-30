@@ -70,7 +70,6 @@ function addUsersToMenu(userid) {
             snapshot.forEach(snapshot => {
                 addFirebaseUserdataToMenu(snapshot.key, snapshot.val())
             })
-            selectUser();
         });
     // .catch(err => {
     //     userref.once('value')
@@ -89,6 +88,7 @@ function addFirebaseUserdataToMenu(userid, userdata) {
 
     tmpl = `<option value="${userid}">${userdata.naam}</option>`;
     document.querySelector('#userSelect>select').innerHTML += tmpl;
+    selectUser();
 }
 
 function addUserEvalsToPage(userid) {
