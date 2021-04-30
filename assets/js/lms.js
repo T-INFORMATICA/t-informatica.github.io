@@ -67,12 +67,19 @@ function addUsersToMenu(userid) {
     let managedUsersref = database.ref(`users`);
 
     managedUsersref.once('value')
-        .then(snapshot => snapshot.forEach(snapshot => addFirebaseUserdataToMenu(snapshot.key, snapshot.val())))
-        .catch(err => {
-            userref.once('value')
-                .then(snapshot => addFirebaseUserdataToMenu(snapshot.key, snapshot.val()))
-                .catch(err => console.log(err));
+        .then(snapshot => {
+            snapshot.forEach(snapshot => {
+                addFirebaseUserdataToMenu(snapshot.key, snapshot.val())
+            })
+            selectUser();
         });
+    // .catch(err => {
+    //     userref.once('value')
+    //         .then(snapshot => {
+    //             addFirebaseUserdataToMenu(snapshot.key, snapshot.val())
+    //         })
+    //         .catch(err => console.log(err));
+    // });
 }
 
 function addFirebaseUserdataToMenu(userid, userdata) {
