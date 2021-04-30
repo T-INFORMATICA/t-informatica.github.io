@@ -37,9 +37,10 @@ layout: default
 
 <main>
     <div id="userSelect">
-        <select onchange="changeUser()" onload="selectUser()">
+        <select onchange="changeUser()">
             <option value="" selected disabled hidden>Leerlingen...</option>
         </select>
+        <script onload="selectUser()"></script>
     </div>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
