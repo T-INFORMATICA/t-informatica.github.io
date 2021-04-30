@@ -40,7 +40,15 @@ layout: default
         <select onchange="changeUser()">
             <option value="" selected disabled hidden>Leerlingen...</option>
         </select>
-        <script onload="selectUser()"></script>
+        <script>
+            let userid = new URLSearchParams(window.location.search).get('userid');
+            console.log(userid);
+            if (userid == null) {
+                return;
+            }
+
+            document.querySelector("#userSelect>select").value = userid;
+        </script>
     </div>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
