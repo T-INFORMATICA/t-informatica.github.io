@@ -70,9 +70,9 @@ function addUsersToMenu(userid) {
             document.querySelector('#userSelect').style.display = "";
             snapshot.forEach(snapshot => {
                 addFirebaseUserdataToMenu(snapshot.key, snapshot.val())
-            })
-            selectUser();
-        });
+            });
+        })
+        .then(() => selectUser());
     // .catch(err => {
     //     userref.once('value')
     //         .then(snapshot => {
