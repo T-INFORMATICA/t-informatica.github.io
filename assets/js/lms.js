@@ -7,6 +7,7 @@ function changeUser() {
 
 function selectUser() {
     let userid = new URLSearchParams(window.location.search).get('userid');
+    console.log(userid);
     if (userid == null) {
         return;
     }
