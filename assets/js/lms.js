@@ -1,3 +1,10 @@
+function changeUser() {
+    let userid = document.querySelector("#userSelect>select").value;
+
+    let url = `?userid=${userid}`;
+    window.location.replace(url);
+}
+
 function toCssSafeId(text) {
     text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
     return text;
