@@ -1,6 +1,8 @@
 function changeUser() {
     let userid = document.querySelector("#userSelect>select").value;
 
+    console.log(userid);
+
     let url = `?userid=${userid}`;
     window.location.replace(url);
 }
