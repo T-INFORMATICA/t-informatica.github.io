@@ -7,7 +7,7 @@ function changeUser() {
 
 function selectUser() {
     let userid = new URLSearchParams(window.location.search).get('userid');
-    console.log(userid);
+    userid = userid === null ? user.uid : userid;
     if (userid == null) {
         return;
     }
@@ -68,6 +68,7 @@ function addUsersToMenu(userid) {
 
     managedUsersref.once('value')
         .then(snapshot => {
+            document.querySelector('#userSelect').style.display = "";
             snapshot.forEach(snapshot => {
                 addFirebaseUserdataToMenu(snapshot.key, snapshot.val())
             })
@@ -90,7 +91,6 @@ function addFirebaseUserdataToMenu(userid, userdata) {
 
     tmpl = `<option value="${userid}">${userdata.naam}</option>`;
     document.querySelector('#userSelect>select').innerHTML += tmpl;
-    document.querySelector('#userSelect').style.display = "";
 }
 
 function addUserEvalsToPage(userid) {
