@@ -8,9 +8,7 @@ function changeUser() {
 function selectUser() {
     let userid = new URLSearchParams(window.location.search).get('userid');
     userid = userid === null ? user.uid : userid;
-    if (userid == null) {
-        return;
-    }
+    console.log(userid);
 
     document.querySelector("#userSelect>select").value = userid;
 }
