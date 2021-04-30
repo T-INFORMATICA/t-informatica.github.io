@@ -63,7 +63,7 @@ function calculateResult(resultsArr) {
 
 function addUsersToMenu(userid) {
     let database = firebase.database();
-    let userref = database.ref(`users/${userid}`);
+    // let userref = database.ref(`users/${userid}`);
     let managedUsersref = database.ref(`users`);
 
     managedUsersref.once('value')
@@ -90,6 +90,7 @@ function addFirebaseUserdataToMenu(userid, userdata) {
 
     tmpl = `<option value="${userid}">${userdata.naam}</option>`;
     document.querySelector('#userSelect>select').innerHTML += tmpl;
+    document.querySelector('#userSelect').style.display = "";
 }
 
 function addUserEvalsToPage(userid) {
