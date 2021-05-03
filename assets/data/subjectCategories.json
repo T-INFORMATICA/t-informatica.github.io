@@ -4,11 +4,8 @@ layout: null
 
 {
     {%- for coursedata in site.data.courses %}
-                {% for subject in coursedata.subjects -%}
-                        {%- for chapter in subject.chapters %}
-    "{{chapter.doel}}": "{{coursedata.name}}"
-                            {%- unless forloop.last %},{% endunless -%}
-                        {%- endfor -%}
+                {% for subject in coursedata.subjects %}
+    "{{subject.name}}": "{{coursedata.name}}"
                         {%- unless forloop.last %},{% endunless -%}
                 {% endfor %}
                 {%- unless forloop.last %},{% endunless -%}
