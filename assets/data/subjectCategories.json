@@ -5,9 +5,9 @@ layout: null
 {
     {%- for coursedata in site.data.courses %}
                 {% for subject in coursedata.subjects %}
-                        {%- for chapter in subject.chapters -%}
+                        {%- for chapter in subject.chapters %}
                         "{{chapter.doel}}": "{{coursedata.name}}"
-                            {%- for course in site.courses -%}
+                            {% for course in site.courses -%}
                                 {%- if course.url == chapter.link %}
                                 {%- endif -%}
                             {%- endfor -%}
