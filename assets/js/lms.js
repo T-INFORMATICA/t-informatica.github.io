@@ -156,7 +156,7 @@ function addUserdataToProfileTable(userid) {
 
 function addResultsToPage2() {
     let request = new XMLHttpRequest();
-    request.open("GET", "/assets/data/definitionsCategories.json");
+    request.open("GET", "/assets/data/subjectCategories.json");
     request.addEventListener("load", resultCategoriesLoaded);
     request.send();
 }
