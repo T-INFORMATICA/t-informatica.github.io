@@ -154,6 +154,23 @@ function addUserdataToProfileTable(userid) {
     );
 }
 
+function addResultsToPage2() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "/assets/data/definitionsCategories.json");
+    request.addEventListener("load", resultCategoriesLoaded);
+    request.send();
+}
+
+function resultCategoriesLoaded() {
+    let response = JSON.parse(e.currentTarget.response);
+
+    for (const [subject, category] of Object.entries(response)) {
+        console.log(`${subject}: ${category}`);
+        // addCategoryElement(category);
+        // addSubjectElementToCategoryElement(subject, category);
+    }
+}
+
 function addResultsToPage(userid) {
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
