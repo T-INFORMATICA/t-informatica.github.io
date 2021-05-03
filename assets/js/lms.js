@@ -161,7 +161,7 @@ function addResultsToPage2() {
     request.send();
 }
 
-function resultCategoriesLoaded() {
+function resultCategoriesLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
     for (const [subject, category] of Object.entries(response)) {
