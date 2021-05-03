@@ -6,13 +6,6 @@ layout: null
     {%- for coursedata in site.data.courses %}
                 {% for subject in coursedata.subjects %}
                 "{{subject.name}}": "{{coursedata.name}}"
-                        {%- for chapter in subject.chapters -%}
-                            {%- for course in site.courses -%}
-                                {%- if course.url == chapter.link %}
-                                {%- endif -%}
-                            {%- endfor -%}
-                    {%- unless forloop.last %},{% endunless -%}
-                        {%- endfor -%}
                         {%- unless forloop.last %},{% endunless -%}
                 {% endfor %}
                 {%- unless forloop.last %},{% endunless -%}
