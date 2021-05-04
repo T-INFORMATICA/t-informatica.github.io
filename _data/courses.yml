@@ -82,9 +82,6 @@
     - name: "HTML"
       link: "/courses/webontwikkeling/html"
       chapters:
-        - name: Websites Maken
-          link: "/courses/webontwikkeling/html/websites-maken.html"
-          doel: "structuur"
         - name: Markup
           link: "/courses/webontwikkeling/html/markup-languages.html"
           doel: "structuur"

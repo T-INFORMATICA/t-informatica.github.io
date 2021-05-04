@@ -1,18 +1,46 @@
 ---
 title: Markup
 tags: 
- - 
+ - HTML
+ - CSS
 definitions:
- - name: 
-   definition: 
-description: 
+ - name: HTML
+   definition: Een taal die gebruikt wordt om de structuur van een website te bepalen.
+ - name: CSS
+   definition: Een taal die gebruikt wordt om de opmaak van een website te bepalen.
+ - name: commentaar
+   definition: Een stuk tekst in de code dat genegeerd wordt door de computer. Dit kan gebruikt worden om extra uitleg bij code te geven.
+ - name: server
+   definition: Een computer met een eigen, uniek internet-adres waar alle code en bestanden van een website zijn opgeslagen.
+ - name: browser
+   definition: Het programma waarmee je een website kunt bezoeken.
+ - name: viewport
+   definition: De ruimte in de browser waarin een website getoond wordt.
+ - name: client
+   definition: De computer van een gebruiker die surft naar een website.
+ - name: "*.html"
+   definition: Met deze bestands-extensie worden pagina's van een website opgeslagen als document.
+ - name: index.html
+   definition: De standaard startpagina van een website. Als je geen pagina meegeeft aan het adres van de website, wordt deze pagina automatisch geladen.
+description: Wanneer je begint met webontwikkeling, is het belangrijk om het verschil te kennen tussen structuur en opmaak. Ook de termen server, client en browser mogen je niet vreemd zijn. In dit hoofdstuk wordt dus een algemene inleiding gegeven hoe websites worden ontwikkeld, en wat je hiervoor allemaal nodig hebt.
 ---
+
+
+## Talen van het web
+
+Elke website ter wereld maakt gebruikt van (minstens) 2 talen:
+
+*   **HTML**: **H**yper**T**ext **M**arkup **L**anguage
+*   **CSS**: **C**ascading **S**tyle **S**heets
+
+Deze 2 talen vullen elkaar zodanig aan, dat je snel en gemakkelijk een website kunt maken.
+
 
 ## Structuur vs. opmaak
 
-**Markup duidt aan waar inhoud voor dient**. Het bepaalt **de structuur** van je website. Markup duidt aan wat een titel is, wat een lijst is, wat een link is, wat gewone tekst is, ...
+**HTML is de taal die aanduid waar inhoud voor dient**. Het bepaalt **de structuur** van je website. HTML duidt aan wat een titel is, wat een lijst is, wat een link is, wat gewone tekst is, enz...
 
-**Opmaak zegt hoe de inhoud eruit ziet**. Het bepaalt dus **de opmaak** van je website. Opmaak zegt hoe een titel, lijst, link, tekst, … eruit ziet. 
+**CSS is de taal die zegt hoe de inhoud eruit ziet**. CSS bepaalt dus **de opmaak** van je website. CSS zegt hoe een titel, lijst, link, tekst, … eruit ziet. 
 
 <table class="styledTable">
     <tr>
@@ -29,9 +57,16 @@ description:
     </tr>
     <tr>
         <td>De websites links en recht hebben dezelfde inhoud.</td>
-        <td>De structuur is hetzelfde. De markup code is dus identiek. De opmaak is anders. </td>
+        <td>De structuur is hetzelfde. De HTML code is dus identiek. De opmaak is anders. De CSS code is dus verschillend.</td>
     </tr>
 </table>
+
+
+
+In de volgende hoofdstukken zal je markup leren schrijven met verschillende talen. Het is vooral belangrijk om te onthouden dat je beide talen nodig hebt om websites te maken:
+
+*   HTML om de inhoud aan te duiden als tekst, titel, lijst, link, …
+*   CSS om te zeggen hoe een tekst, lijst, link, … eruit zullen zien.
 
 ## Markup
 
