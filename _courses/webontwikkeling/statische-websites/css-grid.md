@@ -6,11 +6,7 @@ description:
 
 ## Inleiding
 
-CSS Grid is een systeem in CSS dat gemaakt is om de manier waarop een website van layout wordt voorzien te veranderen. CSS is altijd de taal geweest om layout aan een website te geven, maar dit was nog nooit zo gemakkelijk.
-
-Terugkijkend naar het verleden HTML en CSS zijn er al veel manieren geprobeerd om layout aan websites te geven. Eerst werden tabellen gebruikt, vervolgens floats, positionering en inline-block. Al deze methoden waren in feite hacks en waren vaak heel beperkt in hun mogelijkheden. 
-
-Grid is de allereerste CSS module die speciaal is gecreëerd om deze lay-out problemen op te lossen.
+CSS Grid is een systeem dat een website voorziet van een twee-dimensionale layout (horizontaal én verticaal). CSS is altijd al de taal geweest om layout aan een website te geven, maar dankzij CSS Grid was nog nooit zo gemakkelijk.
 
 
 ### Rasters
@@ -20,7 +16,7 @@ Een raster is niet meer dan een structuur met kolommen en rijen. Een gekend voor
 Een raster bestaat steeds uit kolommen, rijen en cellen. Het is belangrijk om te weten wat deze drie termen precies willen zeggen.
 
 
-<!--<img src="{{ site.baseurl }}/assets/img/css-grid-1.png" alt="" style="height: auto; max-width: 100%">-->
+<!-- <img src="{{ site.baseurl }}/assets/img/css-grid-1.png" alt="" style="height: auto; max-width: 100%"> -->
 
 
 #### Kolommen
