@@ -260,7 +260,7 @@ function addSubjectElementToCategoryElement(subject, category) {
     let subjectId = toCssSafeId(subject);
 
     categoryEl = document.querySelector(`#${categoryId}`);
-    categoryEl.style.display = "none";
+    // categoryEl.style.display = "none";
 
     let tmpl = `
     <div id="${subjectId}" data-results="" data-resultdates="" style="opacity: 0.2;">
