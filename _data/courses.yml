@@ -79,7 +79,7 @@
 - name: "webontwikkeling"
   link: /courses/webontwikkeling/
   subjects:
-    - name: "HTML"
+    - name: "Markup"
       link: "/courses/webontwikkeling/html"
       chapters:
         - name: Markup
