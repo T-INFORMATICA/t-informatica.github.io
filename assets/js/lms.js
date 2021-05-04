@@ -166,12 +166,13 @@ function resultCategoriesLoaded(e) {
 
     for (const [subject, category] of Object.entries(response)) {
         console.log(`${subject}: ${category}`);
-        // addCategoryElement(category);
-        // addSubjectElementToCategoryElement(subject, category);
+        addCategoryElement(category);
+        addSubjectElementToCategoryElement(subject, category);
     }
 }
 
 function addResultsToPage(userid) {
+    return;
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
