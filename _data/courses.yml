@@ -103,7 +103,7 @@
         - name: Semantiek
           link: "/courses/webontwikkeling/html/semantiek.html"
           doel: "structuur"
-    - name: "CSS"
+    - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
       chapters:
         - name: CSS
