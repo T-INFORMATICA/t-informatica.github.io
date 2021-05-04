@@ -20,7 +20,7 @@ Een raster is niet meer dan een structuur met kolommen en rijen. Een gekend voor
 Een raster bestaat steeds uit kolommen, rijen en cellen. Het is belangrijk om te weten wat deze drie termen precies willen zeggen.
 
 
-<img src="{{ site.baseurl }}/assets/img/css-grid-1.png" alt="" style="height: auto; max-width: 100%">
+<!--<img src="{{ site.baseurl }}/assets/img/css-grid-1.png" alt="" style="height: auto; max-width: 100%">-->
 
 
 #### Kolommen
@@ -43,7 +43,9 @@ De cel in het voorbeeld hieronder bevindt zich op positie A1.
 
 <img src="{{ site.baseurl }}/assets/img/css-grid-4.png" alt="" style="height: auto; max-width: 100%">
 
-Cellen kunnen meerdere rijen en/of kolommen overspannen, om zo meer plaats in te nemen op het raster. Ook in het voorbeeld hiernaast bevindt de cel waarin “Hallo” staat geschreven zich op positie A1, maar is ditmaal 2 kolommen breed en 2 rijen hoog.
+#### Vlakken
+
+Vlakken zijn cellen die meerdere rijen en/of kolommen overspannen. In het voorbeeld bevindt het vlak waarin “Hallo” staat geschreven zich op positie A1, en is 2 kolommen breed en 2 rijen hoog.
 
 <img src="{{ site.baseurl }}/assets/img/css-grid-5.png" alt="" style="height: auto; max-width: 100%">
 
