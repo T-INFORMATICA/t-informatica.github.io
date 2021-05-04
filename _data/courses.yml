@@ -145,21 +145,21 @@
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
       chapters:
-        - name: Icons
-          link: "/courses/webontwikkeling/statische-websites/icons.html"
+        - name: "C.U.B.E."
+          link: "/courses/webontwikkeling/statische-websites/cube.html"
           doel: "opmaak"
-        - name: Menu
-          link: "/courses/webontwikkeling/statische-websites/menu.html"
+        - name: "C: Composition"
+          link: "/courses/webontwikkeling/statische-websites/composition.html"
           doel: "opmaak"
-        - name: Popup
-          link: "/courses/webontwikkeling/statische-websites/popup.html"
+        - name: "U: Utilities"
+          link: "/courses/webontwikkeling/statische-websites/utilities.html"
           doel: "opmaak"
-        - name: Modal Popup
-          link: "/courses/webontwikkeling/statische-websites/modal-popup.html"
+        - name: "B: Blocks"
+          link: "/courses/webontwikkeling/statische-websites/blocks.html"
           doel: "opmaak"
-#        - name: Responsive Menu
-#          link: "/courses/webontwikkeling/statische-websites/responsive-menu.html"
-#          doel: "responsive websites"
+        - name: "E: Exceptions"
+          link: "/courses/webontwikkeling/statische-websites/exceptions.html"
+          doel: "responsive websites"
     - name: "Dynamische Websites"
       link: "/courses/webontwikkeling/dynamische-websites"
       chapters:
