@@ -11,9 +11,7 @@ CSS Grid is een systeem dat een website voorziet van een twee-dimensionale layou
 
 ### Rasters
 
-Een raster is niet meer dan een structuur met kolommen en rijen. Een gekend voorbeeld van een raster is bijvoorbeeld het werkblad in Google Sheets. 
-
-Een raster bestaat steeds uit kolommen, rijen en cellen. Het is belangrijk om te weten wat deze drie termen precies willen zeggen.
+Een raster is niet meer dan een structuur met kolommen en rijen. Een gekend voorbeeld van een raster is bijvoorbeeld het werkblad in Google Sheets. **Een raster bestaat uit kolommen, rijen en cellen.** Het is belangrijk om te weten wat deze drie termen precies willen zeggen.
 
 
 <!-- <img src="{{ site.baseurl }}/assets/img/css-grid-1.png" alt="" style="height: auto; max-width: 100%"> -->
@@ -21,19 +19,19 @@ Een raster bestaat steeds uit kolommen, rijen en cellen. Het is belangrijk om te
 
 #### Kolommen
 
-Een kolom is een verticale reeks cellen in een raster. In het voorbeeld hieronder is de kolom A aangeduid.
+**Een kolom is een verticale reeks cellen** in een raster. In het voorbeeld hieronder is de kolom A aangeduid.
 
 <img src="{{ site.baseurl }}/assets/img/css-grid-2.png" alt="" style="height: auto; max-width: 100%">
 
 #### Rijen
 
-Een rij is een horizontale reeks cellen in een raster. In het voorbeeld hieronder is rij 1 aangeduid.
+**Een rij is een horizontale reeks cellen** in een raster. In het voorbeeld hieronder is rij 1 aangeduid.
 
 <img src="{{ site.baseurl }}/assets/img/css-grid-3.png" alt="" style="height: auto; max-width: 100%">
 
 #### Cellen
 
-Een cel is een plaats in het raster waarin data (meestal tekst) kan geplaatst worden, waarvan de naam wordt bepaald door de kolom en de rij waarop de cel zich zich bevindt. 
+**Een cel is één enkele plaats in het raster** waarin data (meestal tekst) kan geplaatst worden, waarvan de naam wordt bepaald door de kolom en de rij waarop de cel zich zich bevindt. 
 
 De cel in het voorbeeld hieronder bevindt zich op positie A1.
 
@@ -41,7 +39,7 @@ De cel in het voorbeeld hieronder bevindt zich op positie A1.
 
 #### Vlakken
 
-Vlakken zijn cellen die meerdere rijen en/of kolommen overspannen. In het voorbeeld bevindt het vlak waarin “Hallo” staat geschreven zich op positie A1, en is 2 kolommen breed en 2 rijen hoog.
+**Vlakken zijn cellen die meerdere rijen en/of kolommen overspannen.** In het voorbeeld bevindt het vlak waarin “Hallo” staat geschreven zich op positie A1, en is 2 kolommen breed en 2 rijen hoog.
 
 <img src="{{ site.baseurl }}/assets/img/css-grid-5.png" alt="" style="height: auto; max-width: 100%">
 
