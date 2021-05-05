@@ -142,7 +142,7 @@
 # #        - name: Uitbreiding
 # #          link: "/courses/webontwikkeling/layout/uitbreiding.html"
 # #          doel: "layout"
-    - name: "* Statische Websites"
+    - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
       chapters:
         - name: "Responsive Webdesign"

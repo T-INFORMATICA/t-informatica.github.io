@@ -169,6 +169,37 @@ function resultCategoriesLoaded(e) {
         addCategoryElement(category);
         addSubjectElementToCategoryElement(subject, category);
     }
+
+    let resultsref = database.ref(`resultaten/${userid}`);
+    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+    resultsref.once('value').then(resultssnapshot => {
+        evalsref.once('value').then(evalssnapshot => {
+            let subjectResults = {};
+
+            resultssnapshot.forEach(resultsnapshot => {
+                let result = resultsnapshot.toJSON();
+                evalssnapshot.forEach(evalsnapshot => {
+                    if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
+                        if (result.subject in subjectResults === false) {
+                            subjectResults[result.subject] = [];
+                        }
+                        subjectResult = {
+                            date: new Date(evalsnapshot.val().date),
+                            result: result.result
+                        };
+                        subjectResults[result.subject].push(subjectResult);
+                        subjectResults[result.subject].sort((a, b) => a.date - b.date);
+                    }
+                });
+            });
+
+            for (subject in subjectResults) {
+                let results = subjectResults[subject].map(x => x.result);
+                let result = calculateResult(results);
+                showResultInSubjectElement(subject, result);
+            }
+        });
+    });
 }
 
 function addResultsToPage(userid) {
