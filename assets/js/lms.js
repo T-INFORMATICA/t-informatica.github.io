@@ -198,8 +198,8 @@ function resultCategoriesLoaded(e) {
                     }
                 }
             }
+            console.log(evals);
         });
-    console.log(evals);
     return;
 
     resultsref.once('value').then(resultssnapshot => {
