@@ -189,6 +189,7 @@ function resultCategoriesLoaded(e) {
                 .then(snapshot => evals = snapshot.toJSON())
         })
         .then(() => {
+            // add the results to the evaluations
             for (const [evalName, evalData] of Object.entries(evals)) {
                 evalData["results"] = [];
                 for (const [resultId, resultData] of Object.entries(results)) {
@@ -198,7 +199,9 @@ function resultCategoriesLoaded(e) {
                     }
                 }
             }
-            console.log(evals);
+
+            console.log(Object.values(evals));
+            // convert the evaluations to
         });
     return;
 
