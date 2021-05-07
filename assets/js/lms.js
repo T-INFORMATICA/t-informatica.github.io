@@ -194,7 +194,6 @@ function resultCategoriesLoaded(e) {
                 for (const [resultId, resultData] of Object.entries(results)) {
                     if (resultData.evaluatie == evalName) {
                         evalData.results.push(resultData);
-                        break;
                     }
                 }
             }
