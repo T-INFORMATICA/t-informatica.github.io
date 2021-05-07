@@ -170,6 +170,7 @@ function resultCategoriesLoaded(e) {
         addSubjectElementToCategoryElement(subject, category);
     }
 
+    let database = firebase.database();
     let resultsref = database.ref(`resultaten/${userid}`);
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
 
