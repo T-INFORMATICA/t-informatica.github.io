@@ -170,6 +170,9 @@ function resultCategoriesLoaded(e) {
         addSubjectElementToCategoryElement(subject, category);
     }
 
+    let userid = new URLSearchParams(window.location.search).get('userid');
+    userid = userid === null ? _user.uid : userid;
+
     let database = firebase.database();
     let resultsref = database.ref(`resultaten/${userid}`);
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
