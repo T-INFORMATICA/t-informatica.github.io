@@ -172,6 +172,32 @@ function resultCategoriesLoaded(e) {
 
     let resultsref = database.ref(`resultaten/${userid}`);
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+
+    let results;
+    let evals;
+
+    let subjectResults = {};
+
+    resultsref.once('value')
+        .then(snapshot => results = snapshot.toJSON())
+        .then(() => {
+            evalsref.once('value')
+                .then(snapshot => evals = snapshot.toJSON())
+        })
+        .then(() => {
+            for (const [evalName, evalData] of Object.entries(evals)) {
+                evalData["results"] = [];
+                for (const [resultId, resultData] of Object.entries(results)) {
+                    if (resultData.evaluatie == evalName) {
+                        evalData.results.push(resultData);
+                        break;
+                    }
+                }
+            }
+        });
+    console.log(evals);
+    return;
+
     resultsref.once('value').then(resultssnapshot => {
         evalsref.once('value').then(evalssnapshot => {
             let subjectResults = {};
@@ -192,7 +218,7 @@ function resultCategoriesLoaded(e) {
                     }
                 });
             });
-
+            console.log(subjectResults.length);
             for (subject in subjectResults) {
                 let results = subjectResults[subject].map(x => x.result);
                 let result = calculateResult(results);
