@@ -201,7 +201,7 @@ function resultCategoriesLoaded(e) {
             }
 
             console.log(Object.values(evals));
-            // convert the evaluations to
+            // convert the evaluations to results by subject
         });
     return;
 
