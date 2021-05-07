@@ -185,7 +185,7 @@ function resultCategoriesLoaded(e) {
     resultsref.once('value')
         .then(snapshot => results = snapshot.toJSON())
         .then(() => {
-            evalsref.once('value')
+            return evalsref.once('value')
                 .then(snapshot => evals = snapshot.toJSON())
         })
         .then(() => {
