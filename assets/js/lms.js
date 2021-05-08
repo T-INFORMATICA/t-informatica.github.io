@@ -202,7 +202,7 @@ function resultCategoriesLoaded(e) {
             }
 
             console.log(Object.values(evals));
-            // convert the evaluations (with their results) to results by subjects
+            // convert the evaluations (ordered by date) to results (ordered by date) by subjects
         });
     return;
 
