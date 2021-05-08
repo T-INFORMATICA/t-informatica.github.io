@@ -223,7 +223,7 @@ function resultCategoriesLoaded(e) {
             for (const [sub, results] of Object.entries(subjects)) {
                 let result = calculateResult(results);
                 showResultInSubjectElement(sub, result);
-            });
+            }
         });
     return;
 
