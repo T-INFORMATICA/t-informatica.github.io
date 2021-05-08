@@ -200,8 +200,7 @@ function resultCategoriesLoaded(e) {
                     }
                 }
             }
-            evals = Object.values(evals);
-            evals = evals.sort((a, b) => a.date - b.date);
+            evals = Object.values(evals).sort((a, b) => new Date(a.date) - new Date(b.date));
             console.log(evals);
             // convert the evaluations (ordered by date) to results (ordered by date) by subjects
         });
