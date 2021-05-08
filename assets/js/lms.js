@@ -220,7 +220,7 @@ function resultCategoriesLoaded(e) {
             console.log(subjects);
 
             // calculate the current result for each subject and show it on the page
-            subjects.forEach(sub => {
+            for (const [sub, results] of Object.entries(subjects)) {
                 let result = calculateResult(results);
                 showResultInSubjectElement(sub, result);
             });
