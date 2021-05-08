@@ -221,8 +221,7 @@ function resultCategoriesLoaded(e) {
 
             // calculate the current result for each subject and show it on the page
             for (const [sub, results] of Object.entries(subjects)) {
-                let results = results.map(x => x.result);
-                let result = calculateResult(results);
+                let result = calculateResult(results.map(x => x.result));
                 showResultInSubjectElement(sub, result);
             }
         });
