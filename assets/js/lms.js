@@ -192,6 +192,7 @@ function resultCategoriesLoaded(e) {
             // add the results to the evaluations
             for (const [evalName, evalData] of Object.entries(evals)) {
                 evalData["results"] = [];
+                evalData["name"] = evalName;
                 for (const [resultId, resultData] of Object.entries(results)) {
                     if (resultData.evaluatie == evalName) {
                         evalData.results.push(resultData);
@@ -201,7 +202,7 @@ function resultCategoriesLoaded(e) {
             }
 
             console.log(Object.values(evals));
-            // convert the evaluations to results by subjects
+            // convert the evaluations (with their results) to results by subjects
         });
     return;
 
