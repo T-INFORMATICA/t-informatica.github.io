@@ -203,6 +203,19 @@ function resultCategoriesLoaded(e) {
             evals = Object.values(evals).sort((a, b) => new Date(a.date) - new Date(b.date));
             console.log(evals);
             // convert the evaluations (ordered by date) to results (ordered by date) by subjects
+
+            subjects = {};
+            evals.forEach(eval => {
+                eval.results.forEach(res => {
+                    // create an entry for the subject if it doesn't exist yet
+                    subjects[res.subject] = res.subject in subjects ? subjects[res.subject] : [];
+                    subjects[res.subject].push({
+                        date: new Date(eval.date),
+                        result: res.result
+                    });
+                });
+            });
+            console.log(subjects);
         });
     return;
 
