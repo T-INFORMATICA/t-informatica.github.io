@@ -312,6 +312,7 @@ function addResultsToPage(userid) {
 function showResultInSubjectElement(subject, result) {
     let subjectId = toCssSafeId(subject);
     console.log(subject);
+    console.log(result);
     console.log(subjectId);
 
     let subjectEl = document.querySelector(`#${subjectId}`);
