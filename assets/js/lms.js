@@ -161,7 +161,6 @@ function addResultsToPage2() {
     request.send();
 }
 
-let evals;
 function resultCategoriesLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
@@ -179,15 +178,17 @@ function resultCategoriesLoaded(e) {
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
 
     let results;
+    let evals;
 
-    let subjectResults = {};
-
+    // 1: load the results
     resultsref.once('value')
         .then(snapshot => results = snapshot.toJSON())
+        // 2: load the evaluations
         .then(() => {
             return evalsref.once('value')
                 .then(snapshot => evals = snapshot.toJSON())
         })
+        // 3: combine results and evaluations
         .then(() => {
             // add the results to the evaluations
             for (const [evalName, evalData] of Object.entries(evals)) {
@@ -200,9 +201,9 @@ function resultCategoriesLoaded(e) {
                     }
                 }
             }
+
             // sort the evaluations by evaluation date
             evals = Object.values(evals).sort((a, b) => new Date(a.date) - new Date(b.date));
-            console.log(evals);
 
             // convert the evaluations (ordered by date) to results (ordered by date) by subjects
             subjects = {};
@@ -217,7 +218,6 @@ function resultCategoriesLoaded(e) {
                     });
                 });
             });
-            console.log(subjects);
 
             // calculate the current result for each subject and show it on the page
             for (const [sub, results] of Object.entries(subjects)) {
@@ -225,36 +225,6 @@ function resultCategoriesLoaded(e) {
                 showResultInSubjectElement(sub, result);
             }
         });
-    return;
-
-    resultsref.once('value').then(resultssnapshot => {
-        evalsref.once('value').then(evalssnapshot => {
-            let subjectResults = {};
-
-            resultssnapshot.forEach(resultsnapshot => {
-                let result = resultsnapshot.toJSON();
-                evalssnapshot.forEach(evalsnapshot => {
-                    if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
-                        if (result.subject in subjectResults === false) {
-                            subjectResults[result.subject] = [];
-                        }
-                        subjectResult = {
-                            date: new Date(evalsnapshot.val().date),
-                            result: result.result
-                        };
-                        subjectResults[result.subject].push(subjectResult);
-                        subjectResults[result.subject].sort((a, b) => a.date - b.date);
-                    }
-                });
-            });
-            console.log(subjectResults.length);
-            for (subject in subjectResults) {
-                let results = subjectResults[subject].map(x => x.result);
-                let result = calculateResult(results);
-                showResultInSubjectElement(subject, result);
-            }
-        });
-    });
 }
 
 function addResultsToPage(userid) {
@@ -311,9 +281,6 @@ function addResultsToPage(userid) {
 
 function showResultInSubjectElement(subject, result) {
     let subjectId = toCssSafeId(subject);
-    console.log(subject);
-    console.log(result);
-    console.log(subjectId);
 
     let subjectEl = document.querySelector(`#${subjectId}`);
     subjectEl.style.display = "";
@@ -349,7 +316,7 @@ function addSubjectElementToCategoryElement(subject, category) {
     let subjectId = toCssSafeId(subject);
 
     categoryEl = document.querySelector(`#${categoryId}`);
-    // categoryEl.style.display = "none";
+    categoryEl.style.display = "none";
 
     let tmpl = `
     <div id="${subjectId}" data-results="" data-resultdates="" style="opacity: 0.2;">
