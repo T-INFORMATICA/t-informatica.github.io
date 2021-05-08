@@ -161,6 +161,7 @@ function addResultsToPage2() {
     request.send();
 }
 
+let evals;
 function resultCategoriesLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
@@ -178,7 +179,6 @@ function resultCategoriesLoaded(e) {
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
 
     let results;
-    let evals;
 
     let subjectResults = {};
 
