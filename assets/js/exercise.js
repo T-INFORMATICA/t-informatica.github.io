@@ -50,10 +50,12 @@ function EvaluateExercise() {
                 terms[question.term] += result;
             }
 
+            questions = Object.entries(questions);
             console.log(terms);
+            console.log(questions);
 
             for (const [term, currentResult] of Object.entries(terms)) {
-                let termCount = Object.entries(questions)
+                let termCount = entries
                     .reduce((i, it) => {
                         it[1].term === term ? ++i : i;
                         console.log(it[1].term);
