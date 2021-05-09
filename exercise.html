@@ -37,10 +37,8 @@ layout: lms
 <script>
     firebase.auth().onAuthStateChanged(function (user) {
         authUser(user);
-        let uid = new URLSearchParams(window.location.search).get('userid');
-        uid = uid === null ? user.uid : uid;
 
-        addUsersToMenu(uid);
+        addUsersToMenu();
         loadExercise();
     });
 </script>

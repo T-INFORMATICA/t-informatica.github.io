@@ -8,11 +8,8 @@ layout: lms
     firebase.auth().onAuthStateChanged(function (user) {
         authUser(user);
 
-        let uid = new URLSearchParams(window.location.search).get('userid');
-        uid = uid === null ? user.uid : uid;
-
         addResultsToPage();
-        addUsersToMenu(uid);
+        addUsersToMenu();
     });
 
 </script>
