@@ -32,11 +32,13 @@ layout: default
         <a href="./index.html">Gegevens</a>
         <hr>
         <a href="#" onclick="signOut()" id="leftMenu-logout">Logout</a>
+        <hr class="forAdmin">
+        <a href="./grading.html" class="forAdmin">Nieuwe Evaluatie</a>
     </nav>
 </aside>
 
 <main>
-    <div id="userSelect" style="display: none;">
+    <div id="userSelect" class="forAdmin" style="display: none;">
         <select onchange="changeUser()">
             <option value="" selected disabled>Leerlingen...</option>
         </select>

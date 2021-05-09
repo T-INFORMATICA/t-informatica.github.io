@@ -69,7 +69,8 @@ function addUsersToMenu() {
 
     managedUsersref.once('value')
         .then(snapshot => {
-            document.querySelector('#userSelect').style.display = "";
+            // document.querySelector('#userSelect').style.display = "";
+            document.querySelectorAll('.forAdmin').forEach(el => el.style.display = "");
             snapshot.forEach(snapshot => {
                 addFirebaseUserdataToMenu(snapshot.key, snapshot.val());
             });
