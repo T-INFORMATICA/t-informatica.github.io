@@ -32,7 +32,6 @@ function EvaluateExercise() {
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child("finished").set(true);
 
-    window.location.replace('https://t-informatica.github.io/exercise.html');
 
 
     let userref = database.ref(`users/${userid}`);
@@ -55,7 +54,13 @@ function EvaluateExercise() {
             for (const [term, currentResult] of Object.entries(terms)) {
                 termCount = questions.reduce((i, it) => it.term === term ? ++i : i, 0);
 
-                userref.child(`knownTerms/${term}/${timestamp}`).set(currentResult / termCount);
+                userref
+                    .child(`knownTerms/${term}/${timestamp}`)
+                    .set(currentResult / termCount)
+                    .then(
+                        () => {
+                            window.location.replace('https://t-informatica.github.io/exercise.html');
+                        });
             }
         });
 }
