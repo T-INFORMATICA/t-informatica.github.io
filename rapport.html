@@ -5,15 +5,14 @@ layout: lms
 
 <script>
 
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
         authUser(user);
-    
+
         let uid = new URLSearchParams(window.location.search).get('userid');
         uid = uid === null ? user.uid : uid;
 
-        addResultsToPage(uid);
-        addResultsToPage2();
+        addResultsToPage();
         addUsersToMenu(uid);
     });
-    
+
 </script>

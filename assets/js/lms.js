@@ -5,9 +5,14 @@ function changeUser() {
     window.location.replace(url);
 }
 
-function selectUser() {
+function getUserId() {
     let userid = new URLSearchParams(window.location.search).get('userid');
     userid = userid === null ? _user.uid : userid;
+    return userid;
+}
+
+function selectUser() {
+    let userid = getUserId();
 
     document.querySelector("#userSelect>select").value = userid;
 }
@@ -58,9 +63,8 @@ function calculateResult(resultsArr) {
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
-function addUsersToMenu(userid) {
+function addUsersToMenu() {
     let database = firebase.database();
-    // let userref = database.ref(`users/${userid}`);
     let managedUsersref = database.ref(`users`);
 
     managedUsersref.once('value')
@@ -71,20 +75,11 @@ function addUsersToMenu(userid) {
             });
         })
         .then(() => selectUser());
-    // .catch(err => {
-    //     userref.once('value')
-    //         .then(snapshot => {
-    //             addFirebaseUserdataToMenu(snapshot.key, snapshot.val())
-    //         })
-    //         .catch(err => console.log(err));
-    // });
 }
 
 function addFirebaseUserdataToMenu(userid, userdata) {
     if (firebase.auth().currentUser.uid === userid)
         return;
-    // let tmpl = `<a href="?userid=${userid}">${userdata.naam}</a>`;
-    // document.querySelector('#leftMenu>hr:last-of-type').insertAdjacentHTML('afterend', tmpl);
 
     tmpl = `<option value="${userid}">${userdata.naam}</option>`;
     document.querySelector('#userSelect>select').innerHTML += tmpl;
@@ -130,7 +125,8 @@ function addEvalResultToTimeline(evalid, resultdata) {
     document.querySelector(`#${evalid}>ul`).innerHTML += tmpl;
 }
 
-function addUserdataToProfileTable(userid) {
+function addUserdataToProfileTable() {
+    let userid = getUserId();
     let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
 
@@ -154,7 +150,7 @@ function addUserdataToProfileTable(userid) {
     );
 }
 
-function addResultsToPage2() {
+function addResultsToPage() {
     let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/subjectCategories.json");
     request.addEventListener("load", resultCategoriesLoaded);
@@ -170,8 +166,7 @@ function resultCategoriesLoaded(e) {
         addSubjectElementToCategoryElement(subject, category);
     }
 
-    let userid = new URLSearchParams(window.location.search).get('userid');
-    userid = userid === null ? _user.uid : userid;
+    let userid = getUserId();
 
     let database = firebase.database();
     let resultsref = database.ref(`resultaten/${userid}`);
@@ -224,58 +219,6 @@ function resultCategoriesLoaded(e) {
                 let result = calculateResult(results.map(x => x.result));
                 showResultInSubjectElement(sub, result);
             }
-        });
-}
-
-function addResultsToPage(userid) {
-    return;
-    let database = firebase.database();
-    let userref = database.ref(`users/${userid}`);
-    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
-    let resultsref = database.ref(`resultaten/${userid}`);
-    let categoriesref = database.ref(`subjectCategories`);
-
-
-    categoriesref.once('value')
-        .then(categoriessnapshot => {
-            categoriessnapshot.forEach(
-                categorysnapshot => {
-                    let subject = categorysnapshot.key;
-                    let category = categorysnapshot.val();
-
-                    addCategoryElement(category);
-                    addSubjectElementToCategoryElement(subject, category);
-                }
-            );
-
-            resultsref.once('value').then(resultssnapshot => {
-                evalsref.once('value').then(evalssnapshot => {
-                    let subjectResults = {};
-
-                    resultssnapshot.forEach(resultsnapshot => {
-                        let result = resultsnapshot.toJSON();
-                        evalssnapshot.forEach(evalsnapshot => {
-                            if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
-                                if (result.subject in subjectResults === false) {
-                                    subjectResults[result.subject] = [];
-                                }
-                                subjectResult = {
-                                    date: new Date(evalsnapshot.val().date),
-                                    result: result.result
-                                };
-                                subjectResults[result.subject].push(subjectResult);
-                                subjectResults[result.subject].sort((a, b) => a.date - b.date);
-                            }
-                        });
-                    });
-
-                    for (subject in subjectResults) {
-                        let results = subjectResults[subject].map(x => x.result);
-                        let result = calculateResult(results);
-                        showResultInSubjectElement(subject, result);
-                    }
-                });
-            });
         });
 }
 

@@ -32,7 +32,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     uid = uid === null ? user.uid : uid;
 
     addUsersToMenu(uid);
-    addUserdataToProfileTable(uid);
+    addUserdataToProfileTable();
     //createMenu();
     //createProfile(user.uid);
     //createResults(user.uid);
