@@ -52,7 +52,7 @@ function EvaluateExercise() {
 
             questions = Object.entries(questions);
             console.log(terms);
-            console.log(questions);
+            console.log(JSON.stringify(questions));
 
             for (const [term, currentResult] of Object.entries(terms)) {
                 let termCount = entries
