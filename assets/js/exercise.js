@@ -44,7 +44,7 @@ function EvaluateExercise() {
         .then(questions => {
 
             for (const [id, question] of Object.entries(questions.val())) {
-                terms[question.term] = question.term in terms ? terms[question.terms] : 0;
+                terms[question.term] = question.term in terms ? terms[question.term] : 0;
 
                 result = question.answer == question.term || question.answer == question.definition;
                 console.log(id);
