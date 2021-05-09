@@ -33,7 +33,7 @@ function EvaluateExercise() {
     exerciseref.child("finished").set(true);
 
 
-
+    userid = getUserId();
     let userref = database.ref(`users/${userid}`);
 
     let terms = {};
