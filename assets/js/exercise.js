@@ -41,9 +41,9 @@ function EvaluateExercise() {
     exerciseref
         .child("questions")
         .once("value")
-        .then(questions => {
-
-            for (const [id, question] of Object.entries(questions.val())) {
+        .then(snapshot => {
+            questions = snapshot.val();
+            for (const [id, question] of Object.entries(questions)) {
                 terms[question.term] = question.term in terms ? terms[question.term] : 0;
 
                 result = question.answer == question.term || question.answer == question.definition;
@@ -53,7 +53,7 @@ function EvaluateExercise() {
             console.log(terms);
 
             for (const [term, currentResult] of Object.entries(terms)) {
-                termCount = Object.entries(questions.val())
+                let termCount = Object.entries(questions)
                     .reduce((i, it) => {
                         it[1].term === term ? ++i : i;
                         console.log(it[1].term);
