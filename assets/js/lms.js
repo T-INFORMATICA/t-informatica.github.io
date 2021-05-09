@@ -105,23 +105,12 @@ function addUserEvalsToPage(userid) {
 }
 
 function addEvalToTimeline(evalid, evaldata) {
-    let tmpl = `
-        <details class="timeline-item" id="${evalid}" data-date="${evaldata.date}" open>
-            <summary>${evaldata.name}</summary>
-            <ul>
-            </ul>
-        </details>`;
+    let tmpl = tmpl_timelineItem(evalid, evaldata.date, evaldata.name);
     document.querySelector("#evaluatiesTimeline").innerHTML = tmpl + document.querySelector("#evaluatiesTimeline").innerHTML;
 }
 
 function addEvalResultToTimeline(evalid, resultdata) {
-    let tmpl = `
-        <li>
-            <b class="result">${resultdata.result}</b>
-            ${resultdata.subject}<br>
-            ${resultdata.commentaar}
-        </li>
-    `;
+    let tmpl = tmpl_timelineResult(resultdata.result, resultdata.subject, resultdata.commentaar);
     document.querySelector(`#${evalid}>ul`).innerHTML += tmpl;
 }
 
@@ -239,17 +228,7 @@ function addCategoryElement(category) {
     let categoryEl = document.querySelector(`#${categoryId}`);
 
     if (categoryEl === null) {
-        let tmpl = `
-            <div id="${categoryId}" class="gradeCategory">
-                <div>
-                    <h3>${category}</h3>
-                    <h4>Resultaat</h4>
-                    <h4>Theorie</h4>
-                </div>
-                <div class="grades">
-                </div>
-            </div>
-        `;
+        let tmpl = tmpl_rapportCategory(categoryId, category);
         document.querySelector("main").innerHTML += tmpl;
     }
 }
@@ -261,21 +240,6 @@ function addSubjectElementToCategoryElement(subject, category) {
     categoryEl = document.querySelector(`#${categoryId}`);
     categoryEl.style.display = "none";
 
-    let tmpl = `
-    <div id="${subjectId}" data-results="" data-resultdates="" style="opacity: 0.2;">
-        <h3>${subject}</h3>
-        <ul>
-            <li class="A">A</li>
-            <li class="B">B</li>
-            <li class="C">C</li>
-            <li class="D">D</li>
-            <li class="E">E</li>
-        </ul>
-        <div class="progressbar-bg">
-            <div class="progressbar-progress" style="width: 0%"></div>
-            <p class="progressbar-label">0 / 0</p>
-        </div>
-    </div>
-    `;
+    let tmpl = tmpl_rapportSubject(subjectId, subject);
     categoryEl.querySelector(".grades").innerHTML += tmpl;
 }
