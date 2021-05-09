@@ -47,12 +47,7 @@ function EvaluateExercise() {
                 terms[question.term] = question.term in terms ? terms[question.term] : 0;
 
                 result = question.answer == question.term || question.answer == question.definition;
-                console.log(id);
-                console.log(question);
-                console.log(terms[question.term]);
-                console.log(result);
                 terms[question.term] += result;
-                console.log(terms[question.term]);
             }
 
             console.log(terms);
@@ -60,13 +55,13 @@ function EvaluateExercise() {
             for (const [term, currentResult] of Object.entries(terms)) {
                 termCount = Object.entries(questions.val()).reduce((i, it) => it.term === term ? ++i : i, 0);
                 console.log(termCount);
-                // userref
-                //     .child(`knownTerms/${term}/${timestamp}`)
-                //     .set(currentResult / termCount)
-                //     .then(
-                //         () => {
-                //             window.location.replace('https://t-informatica.github.io/exercise.html');
-                //         });
+                userref
+                    .child(`knownTerms/${term}/${timestamp}`)
+                    .set(currentResult / termCount)
+                    .then(
+                        () => {
+                            window.location.replace('https://t-informatica.github.io/exercise.html');
+                        });
             }
         });
 }
