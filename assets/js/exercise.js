@@ -43,15 +43,17 @@ function EvaluateExercise() {
         .once("value")
         .then(questions => {
 
-            for (const [id, question] of Object.entries(questions)) {
+            for (const [id, question] of Object.entries(questions.val())) {
                 terms[question.term] = question.term in terms ? terms[question.terms] : 0;
 
                 result = question.answer == question.term || question.answer == question.definition;
                 terms[question.term] += result;
             }
 
+            console.log(terms);
+
             for (const [term, currentResult] of Object.entries(terms)) {
-                termCount = Object.entries(questions).reduce((i, it) => it.term === term ? ++i : i, 0);
+                termCount = Object.entries(questions.val()).reduce((i, it) => it.term === term ? ++i : i, 0);
                 console.log(termCount);
                 // userref
                 //     .child(`knownTerms/${term}/${timestamp}`)
