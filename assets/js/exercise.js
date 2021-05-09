@@ -35,7 +35,6 @@ function EvaluateExercise() {
     window.location.replace('https://t-informatica.github.io/exercise.html');
 
 
-    let database = firebase.database();
     let userref = database.ref(`users/${userid}`);
 
     let terms = {};
