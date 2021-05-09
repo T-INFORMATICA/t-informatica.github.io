@@ -30,7 +30,6 @@ function submitExercise(submitEvent) {
 function EvaluateExercise() {
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
-    exerciseref.child("finished").set(true);
 
 
     let userref = database.ref(`users/${_user.uid}`);
@@ -61,10 +60,8 @@ function EvaluateExercise() {
                 userref
                     .child(`knownTerms/${term}/${timestamp}`)
                     .set(currentResult / termCount)
-                    .then(
-                        () => {
-                            window.location.replace('https://t-informatica.github.io/exercise.html');
-                        });
+                    .then(() => exerciseref.child("finished").set(true))
+                    .then(() => window.location.replace('https://t-informatica.github.io/exercise.html'));
             }
         });
 }
