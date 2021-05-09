@@ -71,7 +71,7 @@ function addUsersToMenu() {
         .then(snapshot => {
             document.querySelector('#userSelect').style.display = "";
             snapshot.forEach(snapshot => {
-                addFirebaseUserdataToMenu(snapshot.key, snapshot.val())
+                addFirebaseUserdataToMenu(snapshot.key, snapshot.val());
             });
         })
         .then(() => selectUser());
@@ -150,7 +150,6 @@ function resultCategoriesLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
     for (const [subject, category] of Object.entries(response)) {
-        console.log(`${subject}: ${category}`);
         addCategoryElement(category);
         addSubjectElementToCategoryElement(subject, category);
     }
