@@ -47,6 +47,7 @@ function EvaluateExercise() {
                 terms[question.term] = question.term in terms ? terms[question.terms] : 0;
 
                 result = question.answer == question.term || question.answer == question.definition;
+                console.log(result);
                 terms[question.term] += result;
             }
 
