@@ -33,8 +33,7 @@ function EvaluateExercise() {
     exerciseref.child("finished").set(true);
 
 
-    userid = getUserId();
-    let userref = database.ref(`users/${userid}`);
+    let userref = database.ref(`users/${_user.uid}`);
 
     let terms = {};
     timestamp = (new Date()).getTime();
