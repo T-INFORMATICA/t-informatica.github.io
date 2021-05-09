@@ -53,7 +53,11 @@ function EvaluateExercise() {
             console.log(terms);
 
             for (const [term, currentResult] of Object.entries(terms)) {
-                termCount = Object.entries(questions.val()).reduce((i, it) => it.term === term ? ++i : i, 0);
+                termCount = Object.entries(questions.val())
+                    .reduce((i, it) => {
+                        it.term === term ? ++i : i;
+                        console.log(it);
+                    }, 0);
                 console.log(termCount);
                 userref
                     .child(`knownTerms/${term}/${timestamp}`)
