@@ -56,7 +56,8 @@ function EvaluateExercise() {
                 termCount = Object.entries(questions.val())
                     .reduce((i, it) => {
                         it[1].term === term ? ++i : i;
-                        console.log(it[1]);
+                        console.log(it[1].term);
+                        console.log(term);
                     }, 0);
                 console.log(termCount);
                 userref
