@@ -52,6 +52,7 @@ function EvaluateExercise() {
                 console.log(terms[question.term]);
                 console.log(result);
                 terms[question.term] += result;
+                console.log(terms[question.term]);
             }
 
             console.log(terms);
