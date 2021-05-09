@@ -31,7 +31,7 @@ function tmpl_rapportCategory(id, category) {
     `;
 }
 
-function tmpl_rapportSubject(id, subject) {
+function tmpl_rapportSubject(id, subject, progress, progressTotal) {
     return `
         <div id="${id}" data-results="" data-resultdates="" style="opacity: 0.2;">
             <h3>${subject}</h3>
@@ -44,7 +44,7 @@ function tmpl_rapportSubject(id, subject) {
             </ul>
             <div class="progressbar-bg">
                 <div class="progressbar-progress" style="width: 0%"></div>
-                <p class="progressbar-label">0 / 0</p>
+                <p class="progressbar-label">${progress} / ${progressTotal}</p>
             </div>
         </div>
     `;

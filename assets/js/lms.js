@@ -243,6 +243,6 @@ function addSubjectElementToCategoryElement(subject, category) {
     categoryEl = document.querySelector(`#${categoryId}`);
     categoryEl.style.display = "none";
 
-    let tmpl = tmpl_rapportSubject(subjectId, subject);
+    let tmpl = tmpl_rapportSubject(subjectId, subject, 0, 0);
     categoryEl.querySelector(".grades").innerHTML += tmpl;
 }
