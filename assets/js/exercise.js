@@ -49,6 +49,7 @@ function EvaluateExercise() {
                 result = question.answer == question.term || question.answer == question.definition;
                 console.log(id);
                 console.log(question);
+                console.log(terms[question.term]);
                 console.log(result);
                 terms[question.term] += result;
             }
