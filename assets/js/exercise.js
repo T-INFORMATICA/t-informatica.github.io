@@ -35,24 +35,30 @@ function EvaluateExercise() {
     window.location.replace('https://t-informatica.github.io/exercise.html');
 
 
-    // let database = firebase.database();
-    // let userref = database.ref(`users/${userid}`);
+    let database = firebase.database();
+    let userref = database.ref(`users/${userid}`);
 
-    // terms = {}
-    // timestamp = (new Date()).getTime();
+    let terms = {};
+    timestamp = (new Date()).getTime();
 
-    // for each question in questions {
-    //     terms[question.term] = question.term in terms ? terms[question.terms] : 0;
+    exerciseref
+        .child("questions")
+        .once("value")
+        .then(questions => {
 
-    // 	   result = question.answer == question.term || question.answer == question.definition;
-    // 	   terms[question.term] += result;
-    // }
+            for (const [id, question] of Object.entries(questions)) {
+                terms[question.term] = question.term in terms ? terms[question.terms] : 0;
 
-    // for (const [term, currentResult] of Object.entries(response)) {
-    // 	   termCount = questions.reduce((i, it) => it.term === term ? ++i : i, 0);
+                result = question.answer == question.term || question.answer == question.definition;
+                terms[question.term] += result;
+            }
 
-    // 	   userref.child(`knownTerms/${term}/${timestamp}`).set(currentResult / termCount);
-    // }
+            for (const [term, currentResult] of Object.entries(terms)) {
+                termCount = questions.reduce((i, it) => it.term === term ? ++i : i, 0);
+
+                userref.child(`knownTerms/${term}/${timestamp}`).set(currentResult / termCount);
+            }
+        });
 }
 
 function CreateNewExercise(subject) {
