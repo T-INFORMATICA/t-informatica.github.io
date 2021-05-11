@@ -3,6 +3,7 @@ function authUser(user) {
         console.log('succes - already logged in');
         _user = user;
         document.getElementById('loader').style.display = 'none';
+        document.querySelector('#usermenu>nav').style.display = '';
         //initialize();
     } else {
 
@@ -54,6 +55,6 @@ function signOut() {
             window.location.reload();
         })
         .catch(function (error) {
-        // An error happened.
+            // An error happened.
         });
 }

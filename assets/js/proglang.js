@@ -6,7 +6,7 @@ var ready = (callback) => {
 ready(function () {
     var lang = localStorage.getItem('lang');
     //var lang = getCookie("lang");
-    console.log(lang);
+    // console.log(lang);
     if (lang) {
         document.querySelector(`option.${lang}`).setAttribute("selected", "selected");
         showCode(lang);
@@ -20,7 +20,7 @@ ready(function () {
 
 
 document.querySelector('select.lang-select').addEventListener("change", (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     let id = e.target.value;
     localStorage.setItem('lang', id);
     //setCookie("lang", id, 900);

@@ -1,4 +1,4 @@
 ---
 title: Software Ontwikkeling
-layout: course_summary
+# layout: course_summary
 ---

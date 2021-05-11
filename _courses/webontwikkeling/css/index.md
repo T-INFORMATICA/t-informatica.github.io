@@ -1,6 +1,6 @@
 ---
 title: CSS
-layout: course_summary
+# layout: course_summary
 ---
 
  - De termen opmaak, stylesheet kunnen benoemen en definieren
