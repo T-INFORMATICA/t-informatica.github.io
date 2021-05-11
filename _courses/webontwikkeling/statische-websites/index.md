@@ -1,4 +1,4 @@
 ---
 title: Programmeren
-layout: course_summary
+# layout: course_summary
 ---

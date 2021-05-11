@@ -1,35 +1,5 @@
 ---
-layout: lms
+layout: contentCentered
 ---
 
-<table class="styledTable">
-    <tbody>
-        <tr>
-            <th width="150px">naam</th>
-            <td id="profileName"></td>
-        </tr>
-        <tr>
-            <th>url</th>
-            <td id="profileUrl"></td>
-        </tr>
-        <tr>
-            <th>username</th>
-            <td id="profileUsername"></td>
-        </tr>
-        <tr>
-            <th>password</th>
-            <td id="profilePassword"></td>
-        </tr>
-    </tbody>
-</table>
-
-<script>
-
-firebase.auth().onAuthStateChanged(function(user) {
-    authUser(user);
-
-    addUsersToMenu();
-    addUserdataToProfileTable();
-});
-
-</script>
+<h1>Welkom</h1>

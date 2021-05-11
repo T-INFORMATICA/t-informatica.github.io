@@ -1,4 +1,4 @@
 ---
 title: Dynamische Websites
-layout: course_summary
+# layout: course_summary
 ---
