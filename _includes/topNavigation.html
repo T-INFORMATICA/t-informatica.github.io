@@ -11,22 +11,28 @@
         <li class="navButton dropdownContainer">
             <span class="iconButton dropdownText | material-icons">person</span>
             <div id="usermenu" class="dropdownWindow dropdownWindowRight | bg-darkest glow-pink">
-                <ul>
-                    <li><a href="/lms-profile.html">Profiel</a></li>
-                    <li><a href="/lms-reportcard.html">Rapport</a></li>
-                    <li><a href="/lms-evaluations.html">Puntenboek</a></li>
-                </ul>
-                <hr>
-                <ul>
-                    <li><a href="">Uitloggen</a></li>
-                </ul>
-                <div id="adminmenu" style="display: none">
+
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+
+                <nav style="display: none">
+                    <ul>
+                        <li><a href="/lms-profile.html">Profiel</a></li>
+                        <li><a href="/lms-reportcard.html">Rapport</a></li>
+                        <li><a href="/lms-evaluations.html">Puntenboek</a></li>
+                    </ul>
                     <hr>
                     <ul>
-                        <li><a href="/admin-grade.html">Nieuwe evaluatie</a></li>
-                        <li><a href="/admin-manageusers.html">Manage users</a></li>
+                        <li><a href="">Uitloggen</a></li>
                     </ul>
-                </div>
+                    <div id="adminmenu" style="display: none">
+                        <hr>
+                        <ul>
+                            <li><a href="/admin-grade.html">Nieuwe evaluatie</a></li>
+                            <li><a href="/admin-manageusers.html">Manage users</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
             </div>
         </li>
