@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,24 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/utilities.css">
-    <link rel="stylesheet" href="/css/blocks.css">
-    <link rel="stylesheet" href="/css/composition.css">
+    <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/blocks.css">
+    <link rel="stylesheet" href="/assets/css/composition.css">
+    <link rel="stylesheet" href="/assets/css/exceptions.css">
 
     <title>Home</title>
 </head>
+
 <body class="bg-dark text-light">
     <header class="bg-dark glow-pink">
-        
         <nav>
-            <ul class="home">
-                <li class="navButton">
-                    <span class="material-icons-outlined">lightbulb</span>
-                </li>
-            </ul>
-            <ul class="courses">
-                
+    <ul class="home">
+        <li class="navButton">
+            <span class="material-icons-outlined">lightbulb</span>
+        </li>
+    </ul>
+    <ul class="courses">
+        
                 <li class="navButton dropdownContainer">
                     <span class="dropdownText">
                         Basis
@@ -458,24 +460,32 @@
                     </div>
                 </li>
 
-            </ul>
-            <ul class="user">
-                <li class="navButton dropdownContainer">
-                    <span class="iconButton dropdownText | material-icons">person</span>
-                    <div class="dropdownWindow dropdownWindowRight | bg-darkest glow-pink">
-                        <ul>
-                            <li><a href="">Profiel</a></li>
-                            <li><a href="">Rapport</a></li>
-                            <li><a href="">Puntenboek</a></li>
-                            <li><hr></li>
-                            <li><a href="">Uitloggen</a></li>
-                        </ul>
-                        
-                        
-                    </div>
-                </li>
-            </ul>
-        </nav>
+    </ul>
+    <ul class="user">
+        <li class="navButton dropdownContainer">
+            <span class="iconButton dropdownText | material-icons">person</span>
+            <div id="usermenu" class="dropdownWindow dropdownWindowRight | bg-darkest glow-pink">
+                <ul>
+                    <li><a href="">Profiel</a></li>
+                    <li><a href="">Rapport</a></li>
+                    <li><a href="">Puntenboek</a></li>
+                </ul>
+                <hr>
+                <ul>
+                    <li><a href="">Uitloggen</a></li>
+                </ul>
+                <div id="adminmenu" style="display: none">
+                    <hr>
+                    <ul>
+                        <li><a href="admin-grade.html">Nieuwe evaluatie</a></li>
+                        <li><a href="admin-manageusers.html">Manage users</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+</nav>
     </header>
     <main>
         <aside></aside>
@@ -845,38 +855,38 @@
 
 </article>
 <aside id="pageManagement">
-    
     <div id="searchbar">
-        <input class="bg-darkest text-light border-pink" placeholder="Zoeken..." type="text" name="" id="searchbarInput">
-        <div id="searchbarOutput"></div>
-    </div>
-    <div id="pageActions">
-        <ul>
-            <li><a href="">
+    <input class="bg-darkest text-light border-pink" placeholder="Zoeken..." type="text" name="" id="searchbarInput">
+    <div id="searchbarOutput"></div>
+</div>
+<div id="pageActions">
+    <ul>
+        <li><a href="">
                 <span class="material-icons">
                     build
                 </span>
                 Oefen theorie
             </a></li>
-            <li><a href="">
+        <li><a href="">
                 <span class="material-icons">
                     print
                 </span>
                 Print pagina
             </a></li>
-        </ul>
-    </div>
-    <hr>
-    <nav id="pageNavigation">
-        <ul>
-            <li><a href="#overnuleneen">Over 0 en 1</a></li>
-            <li><a href="#datatypes">Datatypes</a></li>
-        </ul>
-    </nav>
+    </ul>
+</div>
+<hr>
+<nav id="pageNavigation">
+    <ul>
+        <li><a href="#overnuleneen">Over 0 en 1</a></li>
+        <li><a href="#datatypes">Datatypes</a></li>
+    </ul>
+</nav>
 </aside>
     </main>
     <footer class="bg-darkest text-lighter">
         created by Sam Van Battel
     </footer>
 </body>
+
 </html>
