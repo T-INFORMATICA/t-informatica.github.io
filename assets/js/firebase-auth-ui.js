@@ -3,6 +3,7 @@ function authUser(user) {
         console.log('succes - already logged in');
         _user = user;
         document.getElementById('loader').style.display = 'none';
+        document.querySelector('#firebaseui-auth-container').style.display = 'none';
         document.querySelector('#usermenu>nav').style.display = '';
         //initialize();
     } else {
