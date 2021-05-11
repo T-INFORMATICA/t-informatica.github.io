@@ -18,6 +18,8 @@ layout: contentCentered
                     </a>
                 {% endif %}
             </div>
+
+
             <div>
                 {% if forloop.last == false %}
                     {% assign next_i = forloop.index0 | plus: 1 %}
@@ -35,4 +37,17 @@ layout: contentCentered
     {% endfor %}
 {% endfor %}
 </nav>
+
+<h1>{{page.title}}</h1>
+{% if page.course == "programmeren" %}
+<div>
+    <select name="" class="lang-select">
+        <option value="language-javascript" class="language-javascript">JS</option>
+        <option value="language-php" class="language-php">PHP</option>
+        <option value="language-csharp" class="language-csharp">C</option>
+    </select>
+    <script src="/assets/js/proglang.js"></script>
+</div>
+{% endif %}
+
 {{content}}

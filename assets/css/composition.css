@@ -93,6 +93,21 @@ header>nav .iconButton {
     font-size: 1.2rem;
 }
 
+#usermenu {
+    padding: 16px;
+    min-width: 200px;
+}
+
+#usermenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#usermenu ul a {
+    display: block;
+}
+
 /*  ///////////////*/
 /* //CENTER AREA//*/
 /*///////////////*/
@@ -110,11 +125,12 @@ main>* {
 main>aside {
     width: 200px;
     flex-shrink: 0;
+    display: none;
 }
 
-main>article {
+main>article#content {
     flex-grow: 1;
-    padding-top: 2rem;
+    padding: 2rem 2rem;
 }
 
 #content>nav {
@@ -122,12 +138,24 @@ main>article {
     justify-content: space-between;
 }
 
+@media only screen and (min-width: 600px) {
+    #pageManagement {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    main>aside {
+        display: block;
+    }
+}
+
 /*  //////////////*/
 /* //PAGE ASIDE//*/
 /*//////////////*/
 
 #pageManagement {
-    padding: 1.5rem .5rem .5rem 2rem;
+    padding: 1.5rem .5rem .5rem 0rem;
 }
 
 #pageManagement>* {
@@ -152,8 +180,6 @@ main>article {
     width: 100%;
     padding: 4px 8px;
 } 
-
-
 
 /*  ///////////////////*/
 /* //CONTENT SECTION//*/
