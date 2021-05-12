@@ -165,9 +165,19 @@ main>article#content {
     padding: .5rem;
 }
 
+#pageManagement ul a {
+    display: block;
+}
+
 #pageManagement ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
+}
+
+#pageManagement ul ul {
+    margin-top: .5rem;
+    margin-left: .5rem;
     padding: 0;
 }
 
