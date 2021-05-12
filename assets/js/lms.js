@@ -1,3 +1,8 @@
+var ready = (callback) => {
+    if (document.readyState != "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+}
+
 function changeUser() {
     let userid = document.querySelector("#userSelect>select").value;
 
