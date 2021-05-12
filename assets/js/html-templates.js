@@ -1,6 +1,6 @@
 function tmpl_timelineItem(id, date, name) {
     return `
-    <div>
+    <div class="timelineItem">
         <h2 id="eval-${id}">
             <span>${date}</span>
             ${name}
@@ -13,7 +13,7 @@ function tmpl_timelineItem(id, date, name) {
 
 function tmpl_timelineResult(result, subject, comment) {
     return `
-    <div class="subjectResultCard-v2" id="${toCssSafeId(subject)}">
+    <div class="subjectResultCard-v2 timelineItem-result" id="${toCssSafeId(subject)}">
     <div class="result result${result}" title="${subject}">
         <div class="grade">
             ${result}
