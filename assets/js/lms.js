@@ -31,7 +31,7 @@ function getResultLevelText(result) {
     switch (result) {
         case 'A': return "Expert";
         case 'B': return "Kenner";
-        case 'C': return "Gevorderde";
+        case 'C': return "Gevorderd";
         case 'D': return "Beginner";
         case 'E': return "Leek";
     }
