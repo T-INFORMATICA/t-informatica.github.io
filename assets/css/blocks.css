@@ -138,3 +138,26 @@ pre {
     border-radius: 9999px;
     font-size: 1.7rem;
 }
+
+.subjectResultCard-v2 .progressbar-bg {
+    height: 24px;
+    border: 1px solid #a1a1a1;
+    position: relative;
+    background-color: #cbd8e3;
+}
+
+.subjectResultCard-v2 .progressbar-progress {
+    background-color: #30638e;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, #658096, #658096 5px, #30638e 5px, #30638e 10px);
+}
+
+.subjectResultCard-v2 .progressbar-label {
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}

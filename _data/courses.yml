@@ -1,5 +1,11 @@
 - name: "basis"
   link: /courses/basis/
+  rubric:
+    - A: "Dit is een A"
+    - B: "Dit is een B"
+    - C: "Dit is een C"
+    - D: "Dit is een D"
+    - E: "Dit is een E"
   subjects:
     - name: "basiskennis"
       link: "/courses/basis/basiskennis/"
