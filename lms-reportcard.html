@@ -4,7 +4,8 @@ layout: lms
 
 {%- for coursedata in site.data.courses %}
     <h1>{{coursedata.name}}</h1>
-    <div class="courseResults">
+    {% assign courseid=coursedata.name | remove: " " | downcase %}
+    <div class="courseResults" id="{{courseid}}">
     {% for subjectdata in coursedata.subjects %}
         {% assign subjectid=subjectdata.name | remove: " " | downcase %}
         {% include reportcard-subject.html id=subjectid subject=subjectdata.name progress=0 progressTotal=0 %}
