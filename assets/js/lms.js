@@ -230,6 +230,14 @@ function showResultInSubjectElement(subject, result) {
     resultEl.classList.add(`result${result}`);
     resultEl.classList.remove("unknownGrade");
 
+    switch(result) {
+        case 'A': subjectEl.querySelector(`.subtitle`).innerHTML = "Expert"; break;
+        case 'B': subjectEl.querySelector(`.subtitle`).innerHTML = "Kenner"; break;
+        case 'C': subjectEl.querySelector(`.subtitle`).innerHTML = "Gevorderde"; break;
+        case 'D': subjectEl.querySelector(`.subtitle`).innerHTML = "Beginner"; break;
+        case 'E': subjectEl.querySelector(`.subtitle`).innerHTML = "Leek"; break;
+    }
+
     let letterEl = subjectEl.querySelector(`.grade`);
     letterEl.innerHTML = result;
 }
