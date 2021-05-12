@@ -103,6 +103,14 @@ pre {
     text-overflow: ellipsis;
     min-width: 0;
 }
+
+.unknownGrade {
+    opacity: .2;
+}
+
+.grade.gradeA {
+    
+}
 /* 
 .subjectResultCard {
     width: 200px;
