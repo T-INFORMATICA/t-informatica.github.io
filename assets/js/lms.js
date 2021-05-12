@@ -141,19 +141,20 @@ function addUserdataToProfileTable() {
 }
 
 function addResultsToPage() {
-    let request = new XMLHttpRequest();
-    request.open("GET", "/assets/data/subjectCategories.json");
-    request.addEventListener("load", resultCategoriesLoaded);
-    request.send();
+    // let request = new XMLHttpRequest();
+    // request.open("GET", "/assets/data/subjectCategories.json");
+    // request.addEventListener("load", resultCategoriesLoaded);
+    // request.send();
+    resultCategoriesLoaded();
 }
 
 function resultCategoriesLoaded(e) {
-    let response = JSON.parse(e.currentTarget.response);
+    // let response = JSON.parse(e.currentTarget.response);
 
-    for (const [subject, category] of Object.entries(response)) {
-        addCategoryElement(category);
-        addSubjectElementToCategoryElement(subject, category);
-    }
+    // for (const [subject, category] of Object.entries(response)) {
+    //     addCategoryElement(category);
+    //     addSubjectElementToCategoryElement(subject, category);
+    // }
 
     let userid = getUserId();
 
@@ -224,7 +225,7 @@ function showResultInSubjectElement(subject, result) {
 }
 
 function addCategoryElement(category) {
-    let categoryId = toCssSafeId(category);
+    let categoryId = toCssSafeId(category).toLowerCase();
     let categoryEl = document.querySelector(`#${categoryId}`);
 
     if (categoryEl === null) {
