@@ -6,10 +6,8 @@ function tmpl_timelineItem(id, date, name) {
                 schedule
             </span>
         </div>
-        <h2 id="eval-${id}">
-            <span>${date}</span>
-            ${name}
-        </h2>
+        <span class="subtitle">${date}</span>
+        <h2 class="title" id="eval-${id}">${name}</h2>
         <div class="courseResults" id="${id}">
         </div>
     </div>

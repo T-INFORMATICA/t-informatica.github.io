@@ -115,6 +115,10 @@ pre {
     position: relative;
 }
 
+.timelineItem .subtitle {
+    font-size: 1.5rem;
+}
+
 .timelineItem .marker {
     position: absolute;
     width: 24px;
