@@ -84,7 +84,8 @@ function addUsersToMenu() {
 }
 
 function addFirebaseUserdataToMenu(userid, userdata) {
-    if (firebase.auth().currentUser.uid === userid)
+    let userselect = document.querySelector('#userSelect>select');
+    if (firebase.auth().currentUser.uid === userid || userselect == null)
         return;
 
     tmpl = `<option value="${userid}">${userdata.naam}</option>`;
