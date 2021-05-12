@@ -227,7 +227,7 @@ function showResultInSubjectElement(subject, result) {
     subjectEl.style.opacity = "1";
 
     let resultEl = subjectEl.querySelector(`.result`);
-    resultEl.classList.add(`grade${result}`);
+    resultEl.classList.add(`result${result}`);
     resultEl.classList.remove("unknownGrade");
 
     let letterEl = subjectEl.querySelector(`.grade`);
