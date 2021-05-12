@@ -240,6 +240,9 @@ function showResultInSubjectElement(subject, result) {
 
     let letterEl = subjectEl.querySelector(`.grade`);
     letterEl.innerHTML = result;
+
+    let commentsEl = subjectEl.querySelector('.comments');
+    commentsEl.innerHTML = "";
 }
 
 function addCategoryElement(category) {
