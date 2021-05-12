@@ -109,3 +109,7 @@ pre {
     width: 100%;
     color: white;
 }
+
+.subjectResultCard .selected {
+    background-color: var(--color-accent-cyan);
+}
