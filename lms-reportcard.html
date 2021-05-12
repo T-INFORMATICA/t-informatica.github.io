@@ -3,7 +3,7 @@ layout: lms
 ---
 
 {%- for coursedata in site.data.courses %}
-    <h1>{{coursedata.name}}</h1>
+    <h1 id="course-{{courseid}}">{{coursedata.name}}</h1>
     {% assign courseid=coursedata.name | remove: " " | downcase %}
     <div class="courseResults" id="{{courseid}}">
     {% for subjectdata in coursedata.subjects %}
