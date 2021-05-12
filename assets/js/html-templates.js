@@ -12,7 +12,7 @@ function tmpl_timelineItem(id, date, name) {
 function tmpl_timelineResult(result, subject, comment) {
     return `
     <div class="subjectResultCard-v2" id="${toCssSafeId(subject)}">
-    <div class="result" title="${subject}">
+    <div class="result result${result}" title="${subject}">
         <div class="grade">
             ${result}
         </div>
