@@ -114,6 +114,7 @@ pre {
     border-bottom: 1px dashed var(--color-700);
     padding: 1rem;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .timelineItem .title {
@@ -132,7 +133,7 @@ pre {
     height: 24px;
     background-color: var(--color-800);
     left: -12px;
-    top: 36px;
+    top: 50px;
     border-radius: 9999px;
     font-size: 1.7rem;
 }
