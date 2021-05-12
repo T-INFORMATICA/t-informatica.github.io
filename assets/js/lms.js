@@ -226,8 +226,11 @@ function showResultInSubjectElement(subject, result) {
     subjectEl.parentElement.parentElement.style.display = "";
     subjectEl.style.opacity = "1";
 
-    let letterEl = subjectEl.querySelector(`.${result}`);
-    letterEl.className += " selected";
+    let resultEl = subjectEl.querySelector(`.result`);
+    resultEl.style.backgroundColor = "var(--color-accent-cyan)";
+
+    let letterEl = subjectEl.querySelector(`.grade`);
+    letterEl.innerHTML = result;
 }
 
 function addCategoryElement(category) {
