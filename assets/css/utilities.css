@@ -51,22 +51,22 @@
     display: block;
 }
 
-.result.resultA {
+.subjectResultCard-v2>.result.resultA {
     background-color: #03a9fc;
 }
 
-.result.resultB {
+.subjectResultCard-v2>.result.resultB {
     background-color: #03fc98;
 }
 
-.result.resultC {
+.subjectResultCard-v2>.result.resultC {
     background-color: #bafc03;
 }
 
-.result.resultD {
+.subjectResultCard-v2>.result.resultD {
     background-color: #fcba03;
 }
 
-.result.resultE {
+.subjectResultCard-v2>.result.resultE {
     background-color: #fc6b03;
 }
