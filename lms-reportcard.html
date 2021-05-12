@@ -11,3 +11,11 @@ layout: lms
     {%endfor%}
     </div>
 {% endfor %} 
+<script>
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        authUser(user);
+        addResultsToPage();
+    });
+
+</script>
