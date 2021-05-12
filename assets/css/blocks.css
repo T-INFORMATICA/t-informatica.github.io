@@ -3,6 +3,10 @@ a {
     color: var(--color-accent-cyan);
 }
 
+header {
+    z-index: 999;
+}
+
 a:hover {
     text-decoration: underline;
 }
@@ -68,7 +72,6 @@ pre {
 
 .subjectResultCard-v2 {
     width: 240px;
-    z-index: -1;
 }
 
 .subjectResultCard-v2>.result {
@@ -115,7 +118,6 @@ pre {
     border-bottom: 1px dashed var(--color-700);
     padding: 1rem;
     padding-bottom: 1rem;
-    z-index: -1;
 }
 
 .timelineItem .title {
