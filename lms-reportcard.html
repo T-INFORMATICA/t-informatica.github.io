@@ -8,7 +8,7 @@ layout: lms
     <div class="courseResults" id="{{courseid}}">
     {% for subjectdata in coursedata.subjects %}
         {% assign subjectid=subjectdata.name | remove: " " | downcase %}
-        {% include reportcard-subject.html id=subjectid subject=subjectdata.name progress=0 progressTotal=0 %}
+        {% include reportcard-subject-v2.html id=subjectid subject=subjectdata.name progress=0 progressTotal=0 %}
     {%endfor%}
     </div>
 {% endfor %} 
