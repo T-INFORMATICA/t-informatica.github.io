@@ -24,7 +24,7 @@ function selectUser() {
 
 function toCssSafeId(text) {
     text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
-    return text;
+    return text.toLowerCase();
 }
 
 function calculateResult(resultsArr) {
@@ -231,7 +231,7 @@ function showResultInSubjectElement(subject, result) {
 }
 
 function addCategoryElement(category) {
-    let categoryId = toCssSafeId(category).toLowerCase();
+    let categoryId = toCssSafeId(category);
     let categoryEl = document.querySelector(`#${categoryId}`);
 
     if (categoryEl === null) {
