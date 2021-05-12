@@ -62,6 +62,10 @@ pre {
     gap: 32px;
 }
 
+/*  //////////////////*/
+/* //CARDS&TIMELINE//*/
+/*//////////////////*/
+
 .subjectResultCard-v2 {
     width: 240px;
     z-index: -1;
@@ -103,10 +107,6 @@ pre {
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 0;
-}
-
-.unknownGrade {
-    opacity: .2;
 }
 
 .timelineItem {
