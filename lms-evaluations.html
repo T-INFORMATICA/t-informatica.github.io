@@ -4,3 +4,13 @@ layout: lms
 
 <h1>Tijdslijn</h1>
 
+<div id="evaluatiesTimeline"></div>
+
+<script>
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        authUser(user);
+        addUserEvalsToPage();
+    });
+
+</script>

@@ -27,6 +27,17 @@ function toCssSafeId(text) {
     return text.toLowerCase();
 }
 
+function getResultLevelText(result) {
+    switch (result) {
+        case 'A': return "Expert";
+        case 'B': return "Kenner";
+        case 'C': return "Gevorderde";
+        case 'D': return "Beginner";
+        case 'E': return "Leek";
+    }
+    return "";
+}
+
 function calculateResult(resultsArr) {
     let evalProgress = {
         "A": {
@@ -92,7 +103,8 @@ function addFirebaseUserdataToMenu(userid, userdata) {
     document.querySelector('#userSelect>select').innerHTML += tmpl;
 }
 
-function addUserEvalsToPage(userid) {
+function addUserEvalsToPage() {
+    let userid = getUserId();
     let database = firebase.database();
     let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
     let resultsref = database.ref(`resultaten/${userid}`);
@@ -118,7 +130,7 @@ function addEvalToTimeline(evalid, evaldata) {
 
 function addEvalResultToTimeline(evalid, resultdata) {
     let tmpl = tmpl_timelineResult(resultdata.result, resultdata.subject, resultdata.commentaar);
-    document.querySelector(`#${evalid}>ul`).innerHTML += tmpl;
+    document.querySelector(`#${evalid}`).innerHTML += tmpl;
 }
 
 function addUserdataToProfileTable() {
@@ -147,21 +159,6 @@ function addUserdataToProfileTable() {
 }
 
 function addResultsToPage() {
-    // let request = new XMLHttpRequest();
-    // request.open("GET", "/assets/data/subjectCategories.json");
-    // request.addEventListener("load", resultCategoriesLoaded);
-    // request.send();
-    resultCategoriesLoaded();
-}
-
-function resultCategoriesLoaded(e) {
-    // let response = JSON.parse(e.currentTarget.response);
-
-    // for (const [subject, category] of Object.entries(response)) {
-    //     addCategoryElement(category);
-    //     addSubjectElementToCategoryElement(subject, category);
-    // }
-
     let userid = getUserId();
 
     let database = firebase.database();
@@ -230,13 +227,7 @@ function showResultInSubjectElement(subject, result) {
     resultEl.classList.add(`result${result}`);
     resultEl.classList.remove("unknownGrade");
 
-    switch(result) {
-        case 'A': subjectEl.querySelector(`.subtitle`).innerHTML = "Expert"; break;
-        case 'B': subjectEl.querySelector(`.subtitle`).innerHTML = "Kenner"; break;
-        case 'C': subjectEl.querySelector(`.subtitle`).innerHTML = "Gevorderde"; break;
-        case 'D': subjectEl.querySelector(`.subtitle`).innerHTML = "Beginner"; break;
-        case 'E': subjectEl.querySelector(`.subtitle`).innerHTML = "Leek"; break;
-    }
+    subjectEl.querySelector(`.subtitle`).innerHTML = getResultLevelText(result);
 
     let letterEl = subjectEl.querySelector(`.grade`);
     letterEl.innerHTML = result;
