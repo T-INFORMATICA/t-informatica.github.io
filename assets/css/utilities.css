@@ -50,3 +50,23 @@
 .dropdownContainer:hover>.dropdownWindow {
     display: block;
 }
+
+.grade.gradeA {
+    background-color: #03a9fc;
+}
+
+.grade.gradeB {
+    background-color: #03fc98;
+}
+
+.grade.gradeC {
+    background-color: #bafc03;
+}
+
+.grade.gradeD {
+    background-color: #fcba03;
+}
+
+.grade.gradeE {
+    background-color: #fc6b03;
+}
