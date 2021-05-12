@@ -108,3 +108,19 @@ pre {
 .unknownGrade {
     opacity: .2;
 }
+
+.timelineItem {
+    border-left: 1px solid white;
+    padding: 1rem;
+    position: relative;
+}
+
+.timelineItem .marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: cyan;
+    left: -10px;
+    top: 40px;
+    border-radius: 9999px;
+}

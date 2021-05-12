@@ -1,6 +1,11 @@
 function tmpl_timelineItem(id, date, name) {
     return `
     <div class="timelineItem">
+        <div class="marker">
+            <span class="material-icons-outlined">
+                history
+            </span>
+        </div>
         <h2 id="eval-${id}">
             <span>${date}</span>
             ${name}
