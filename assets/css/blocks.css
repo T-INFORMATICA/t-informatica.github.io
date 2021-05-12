@@ -62,6 +62,48 @@ pre {
     gap: 32px;
 }
 
+.subjectResultCard-v2 {
+    width: 240px;
+    z-index: -1;
+}
+
+.subjectResultCard-v2>.result {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-accent-pink);
+}
+
+
+.subjectResultCard-v2>.result>.subject {
+    min-width: 0;
+}
+
+.subjectResultCard-v2>.result>.subject * {
+    margin: 0;
+    padding: 0;
+}
+
+.subjectResultCard-v2>.result>.grade {
+    font-size: 2rem;
+    padding: .25rem;
+    margin: .25rem;
+    background-color: var(--color-900);
+    width: 2.5rem;
+    text-align: center;
+}
+
+.subjectResultCard-v2>.result>.subject>.subtitle {
+    font-size: .75rem;
+}
+
+.subjectResultCard-v2>.result>.subject>.title {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+/* 
 .subjectResultCard {
     width: 200px;
 }
@@ -112,4 +154,4 @@ pre {
 
 .subjectResultCard .selected {
     background-color: var(--color-accent-pink);
-}
+} */
