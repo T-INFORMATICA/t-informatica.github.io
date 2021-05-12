@@ -81,6 +81,7 @@ pre {
 .subjectResultCard-v2>.result>.subject * {
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
 }
 
 .subjectResultCard-v2>.result>.grade {
