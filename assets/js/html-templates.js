@@ -3,7 +3,7 @@ function tmpl_timelineItem(id, date, name) {
     <div class="timelineItem">
         <div class="marker">
             <span class="material-icons-outlined">
-                history
+                schedule
             </span>
         </div>
         <h2 id="eval-${id}">
