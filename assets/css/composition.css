@@ -1,7 +1,7 @@
 :root {
     --footer-size: 4rem;
     --max-page-width: 1100px;
-    --header-size: 40px;
+    --header-size: 50px;
 
     --color-100: #fff;
     --color-200: #fafafa;
@@ -85,7 +85,7 @@ header>nav>ul>li {
 }
 
 header>nav .navButton {
-    padding: .5rem;
+    padding: 1rem .5rem;
     font-size: 1rem;
 }
 
