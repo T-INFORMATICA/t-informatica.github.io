@@ -6,6 +6,8 @@ function submitEvaluation(e) {
     e.preventDefault();
     const data = new FormData(e.target);
     console.log(data);
+    const value = data.get('email');
+    console.log(value);
 }
 
 function createNewEvalForm() {
