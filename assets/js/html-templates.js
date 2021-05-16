@@ -54,7 +54,7 @@ function tmpl_gradeForm_subject(studentId, subjectId, subject) {
 
 function tmpl_gradeForm_gradeOption(studentId, subjectId, grade, comment) {
     return `
-        <input type="radio" name="students[${studentId}][${subjectId}]" id="students-${studentId}-${subjectId}-grade-${grade}">
+        <input type="radio" value="${grade}" name="students[${studentId}][${subjectId}]" id="students-${studentId}-${subjectId}-grade-${grade}">
         <label for="students-${studentId}-${subjectId}-grade-${grade}" class="gradeform-subject-option">
             <h4 class="gradeform-subject-option-grade">${grade}</h4>
             <p contenteditable="true" class="gradeform-subject-option-comment">${comment}</p>
