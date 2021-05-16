@@ -6,7 +6,7 @@ function createNewEvalForm() {
 }
 
 function evalChangeStudent() {
-    let studentId = document.querySelector("#evalStudentSelection>select").value;
+    let studentId = document.querySelector("#evalStudentSelection").value;
     document.querySelectorAll(".evalStudentSection").forEach(el => el.style.display = "none");
     document.querySelector(`gradeform-${studentId}`).style.display = "";
 }
