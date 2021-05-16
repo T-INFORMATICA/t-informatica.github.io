@@ -94,12 +94,12 @@ function rubricsLoaded(e) {
     managedUsersref.once('value')
         .then(snapshot => {
             snapshot.forEach(snapshot => {
-                let studentId = toCssSafeId(snapshot.key);
+                let studentId = snapshot.key;
                 let studentData = snapshot.val();
                 let studentName = studentData.naam;
                 let studentKlas = studentData.klas;
 
-                students[snapshot.key] = studentName;
+                students[studentId] = studentName;
 
                 let tmpl_studentSection = tmpl_gradeForm_studentSection(studentId, studentName);
                 document.querySelector("#evalStudentSelection").innerHTML += `<option value=${studentId}>${studentKlas} - ${studentName}</option>`;
