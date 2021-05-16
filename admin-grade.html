@@ -7,16 +7,16 @@ layout: admin
 
 <form id="gradeform">
     <div>
-        <input type="text" name="evalName" id="evalName" placeholder="evaluation name">
+        <input type="text" name="evalName" id="evalName" placeholder="evaluation name" required>
     </div>
     <div>
-        <input type="date" name="evalDate" id="evalDate">
+        <input type="date" name="evalDate" id="evalDate" required>
     </div>
     <div>
-        <button><span class="material-icons">chevron_left</span></button>
+        <button onclick="evalChangeStudent(-1)"><span class="material-icons">chevron_left</span></button>
         <select name="" id="evalStudentSelection" onchange="evalChangeStudent()">
         </select>
-        <button><span class="material-icons">chevron_right</span></button>
+        <button onclick="evalChangeStudent(1)"><span class="material-icons">chevron_right</span></button>
     </div>
     <div id="gradeform-students">
     </div>
