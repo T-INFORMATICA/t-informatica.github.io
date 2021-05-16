@@ -45,14 +45,12 @@ function submitEvaluation(e) {
                     result: grade,
                     subject: subject
                 };
-                console.log(studentId);
-                console.log(resultaat);
                 database.ref(`resultaten/${studentId}`).push(resultaat);
             }
         }
     }
 
-    console.log(json);
+    form.reset();
 }
 
 function createNewEvalForm() {
