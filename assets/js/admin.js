@@ -1,3 +1,13 @@
+
+const form = document.querySelector('#gradeform');
+form.addEventListener('submit', submitEvaluation);
+
+function submitEvaluation(e) {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    console.log(data);
+}
+
 function createNewEvalForm() {
     let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/rubrics.json");
