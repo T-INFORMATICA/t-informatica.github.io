@@ -2,4 +2,32 @@
 layout: admin
 ---
 
-<h1>test</h1>
+<h1>Evaluatie</h1>
+
+
+<form id="gradeform">
+    <div>
+        <input type="text" name="evalName" id="evalName" placeholder="evaluation name">
+    </div>
+    <div>
+        <input type="date" name="evalDate" id="evalDate">
+    </div>
+    <div>
+        <button><span class="material-icons">chevron_left</span></button>
+        <select name="" id="evalStudentSelection" onchange="evalChangeStudent()">
+            <option value="xyz">Joske Vermeulen</option>
+            <option value="yzx">Sam Van Battel</option>
+            <option value="zxy">Mieke Verhaege</option>
+        </select>
+        <button><span class="material-icons">chevron_right</span></button>
+    </div>
+    <div id="gradeform-students">
+    </div>
+
+    <input type="submit" value="VERZENDEN">
+</form>
+
+<script src="/assets/js/admin.js"></script>
+<script>
+    documentReady(createNewEvalForm);
+</script>

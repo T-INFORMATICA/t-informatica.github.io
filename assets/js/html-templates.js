@@ -32,3 +32,32 @@ function tmpl_timelineResult(result, subject, comment) {
 </div>
     `;
 }
+
+function tmpl_gradeForm_studentSection(studentId, studentName) {
+    return `
+        <div id="gradeform-${studentId}" class="evalStudentSection" style="display: none;">
+            <h2>${studentName}</h2>
+        </div>
+    `;
+}
+
+function tmpl_gradeForm_subject(studentId, subjectId, subject) {
+    return `
+        <label for="students-${studentId}-${subjectId}-evalShowGrades-${subjectId}">
+            <h3 id="grades-${subjectId}">${subject}</h3>
+        </label>
+        <input type="checkbox" id="students-${studentId}-${subjectId}-evalShowGrades-${subjectId}" class="evalShowGrades">
+        <div class="gradeform-subject" id="students-${studentId}-${subjectId}">
+        </div>
+    `;
+}
+
+function tmpl_gradeForm_gradeOption(studentId, subjectId, grade, comment) {
+    return `
+        <input type="radio" name="students[${studentId}][${subjectId}]" id="students-${studentId}-${subjectId}-grade-${grade}">
+        <label for="students-${studentId}-${subjectId}-grade-${grade}" class="gradeform-subject-option">
+            <h4 class="gradeform-subject-option-grade">${grade}</h4>
+            <p contenteditable="true" class="gradeform-subject-option-comment">${comment}</p>
+        </label>
+    `;
+}

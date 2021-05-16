@@ -191,7 +191,43 @@ main>article#content {
     padding: 4px 8px;
 } 
 
-/*  ///////////////////*/
-/* //CONTENT SECTION//*/
-/*///////////////////*/
+/*  ////////////////////*/
+/* //ADMIN GRADE FORM//*/
+/*////////////////////*/
 
+#gradeform .evalShowGrades,
+#gradeform input[type="radio"] {
+    display: none;
+}
+
+.evalShowGrades+* {
+    display: none;
+}
+
+.evalShowGrades:checked+.gradeform-subject {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.gradeform-subject-option:hover {
+    outline: 2px solid var(--color-accent-pink);
+}
+
+.gradeform-subject-option {
+    padding: 4px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.gradeform-subject>input[type="radio"]:checked+.gradeform-subject-option {
+    background-color: var(--color-accent-pink);
+}
+
+.gradeform-subject-option-comment {
+    padding: 4px;
+    border: 1px solid black;
+    flex: 1;
+}
