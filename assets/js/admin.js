@@ -3,7 +3,7 @@ const form = document.querySelector('#gradeform');
 form.addEventListener('submit', submitEvaluation);
 
 let rubrics;
-let students;
+let students = {};
 
 function submitEvaluation(e) {
     e.preventDefault();
