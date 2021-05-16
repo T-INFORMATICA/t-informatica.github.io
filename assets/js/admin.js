@@ -22,8 +22,8 @@ function submitEvaluation(e) {
         for (const [subject, grades] of Object.entries(rubrics)) {
             let subjectId = toCssSafeId(subject);
             let grade1 = document.querySelector(`input[name="students[${studentId}][${subjectId}]"]`).value;
-            let grade2 = document.forms.gradeform[`${studentId}][${subjectId}]"]`].value;
             console.log(grade1);
+            let grade2 = document.forms.gradeform;
             console.log(grade2);
             let studentGradeData = data.getAll(`students[${studentId}][${subjectId}]`);
             if (studentId in json.students == false) {
