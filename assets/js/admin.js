@@ -15,13 +15,16 @@ function submitEvaluation(e) {
     let json = {
         name: data.get('evalName'),
         date: data.get('evalDate'),
-        students: []
+        students: {}
     };
 
     for (const [studentId, studentName] of Object.entries(students)) {
         for (const [subject, grades] of Object.entries(rubricsJson)) {
             let subjectId = toCssSafeId(subject);
             let studentGradeData = data.get(`students[${studentId}][${subjectId}]`);
+            if (studentId in json.students == false){
+                json.students[studentId] = {};
+            }
             json.students[studentId][subjectId] = studentGradeData;
         }
     }
