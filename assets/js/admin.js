@@ -7,7 +7,17 @@ function createNewEvalForm() {
 
 function evalChangeSelectedStudent(offset) {
     let currentIndex = parseInt(document.querySelector("#evalStudentSelection").selectedIndex, 10);
-    document.querySelector("#evalStudentSelection").selectedIndex = currentIndex + offset;
+    let max = document.querySelectorAll("#evalStudentSelection>option").length;
+    let newIndex = Math.min(max, Math.max(0, currentIndex));
+    document.querySelector("#evalStudentSelection").selectedIndex = newIndex;
+
+    if (newIndex === max) {
+        document.querySelector("#evalSelectNextStudent").disabled = true;
+    }
+    if (newIndex === 0) {
+        document.querySelector("#evalSelectPrevStudent").disabled = true;
+    }
+
     evalChangeStudent();
 }
 
