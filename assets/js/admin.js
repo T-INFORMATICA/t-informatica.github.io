@@ -6,7 +6,7 @@ function submitEvaluation(e) {
     e.preventDefault();
     const data = new FormData(e.target);
     console.log(data);
-    const value = data.get('email');
+    const value = data.get('evalName');
     console.log(value);
 }
 
