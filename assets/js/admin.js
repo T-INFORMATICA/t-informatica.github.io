@@ -8,15 +8,19 @@ let students = {};
 function submitEvaluation(e) {
     e.preventDefault();
     const data = new FormData(e.target);
-    // console.log(data);
-    // const value = Object.fromEntries(data.entries());
-    // console.log(value);
 
     let json = {
         name: data.get('evalName'),
         date: data.get('evalDate'),
         students: {}
     };
+
+    let evaluatie = {
+        name: data.get('evalName'),
+        date: data.get('evalDate')
+    };
+
+    evalKey = database.ref(`evaluaties/${_user.uid}/${exerciseid}/questions`).push(randomQuestion).key;
 
     for (const [studentId, studentName] of Object.entries(students)) {
         for (const [subject, grades] of Object.entries(rubrics)) {

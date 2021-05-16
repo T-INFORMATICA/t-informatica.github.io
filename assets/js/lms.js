@@ -106,7 +106,7 @@ function addFirebaseUserdataToMenu(userid, userdata) {
 function addUserEvalsToPage() {
     let userid = getUserId();
     let database = firebase.database();
-    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+    let evalsref = database.ref(`evaluaties`).orderByChild("date");
     let resultsref = database.ref(`resultaten/${userid}`);
 
     evalsref
@@ -163,7 +163,7 @@ function addResultsToPage() {
 
     let database = firebase.database();
     let resultsref = database.ref(`resultaten/${userid}`);
-    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+    let evalsref = database.ref(`evaluaties`).orderByChild("date");
 
     let results;
     let evals;
