@@ -22,7 +22,8 @@ function submitEvaluation(e) {
         for (const [subject, grades] of Object.entries(rubrics)) {
             let subjectId = toCssSafeId(subject);
             let grade = data.get(`students[${studentId}][${subjectId}]`);
-            let comment = document.querySelector(`input[name="students[${studentId}][${subjectId}]"]:checked+label>.gradeform-subject-option-comment`).innerHTML;
+            let commentEl = document.querySelector(`input[name="students[${studentId}][${subjectId}]"]:checked+label>.gradeform-subject-option-comment`);
+            let comment = commentEl ? commentEl.innerHTML : null;
             if (studentId in json.students == false) {
                 json.students[studentId] = {};
             }
