@@ -6,8 +6,8 @@ function createNewEvalForm() {
 }
 
 function evalChangeStudent(offset) {
-    let currentIndex = parseInt(document.getElementById("mySelect").selectedIndex, 10);
-    document.getElementById("mySelect").selectedIndex = currentIndex + offset;
+    let currentIndex = parseInt(document.getElementById("#evalStudentSelection").selectedIndex, 10);
+    document.getElementById("#evalStudentSelection").selectedIndex = currentIndex + offset;
 }
 
 function evalChangeStudent() {
