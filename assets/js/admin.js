@@ -31,7 +31,7 @@ function rubricsLoaded(e) {
                 let studentName = studentData.naam;
                 let studentKlas = studentData.klas;
                 let tmpl_studentSection = tmpl_gradeForm_studentSection(studentId, studentName);
-                document.querySelector("#evalStudentSelection").innerHTML += `<option value=$studentId}>${studentKlas} - ${studentName}</option>`;
+                document.querySelector("#evalStudentSelection").innerHTML += `<option value=${studentId}>${studentKlas} - ${studentName}</option>`;
                 document.querySelector("#gradeform-students").innerHTML += tmpl_studentSection;
 
                 for (const [subject, grades] of Object.entries(rubricsJson)) {
