@@ -20,10 +20,11 @@ function submitEvaluation(e) {
         date: data.get('evalDate')
     };
 
-    evalKey = database.ref(`evaluaties/${_user.uid}/${exerciseid}/questions`).push(randomQuestion).key;
+    evalKey = database.ref(`evaluaties`).push(evaluatie).key;
 
     for (const [studentId, studentName] of Object.entries(students)) {
         for (const [subject, grades] of Object.entries(rubrics)) {
+
             let subjectId = toCssSafeId(subject);
             let grade = data.get(`students[${studentId}][${subjectId}]`);
             if (grade) {
@@ -36,6 +37,14 @@ function submitEvaluation(e) {
                     grade: grade,
                     comment: comment
                 };
+
+                let resultaat = {
+                    commentaar: comment,
+                    evaluatie: evalKey,
+                    result: grade,
+                    subject: subject
+                };
+                database.ref(`resultaten/${studentId}`).push(resultaat);
             }
         }
     }
