@@ -20,6 +20,7 @@ function submitEvaluation(e) {
         date: data.get('evalDate')
     };
 
+    let database = firebase.database();
     evalKey = database.ref(`evaluaties`).push(evaluatie).key;
 
     for (const [studentId, studentName] of Object.entries(students)) {
