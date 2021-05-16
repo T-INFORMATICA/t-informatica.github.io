@@ -5,10 +5,10 @@ function createNewEvalForm() {
     request.send();
 }
 
-function evalChangeStudent(offset) {
+function evalChangeSelectedStudent(offset) {
     console.log(offset);
     let currentIndex = parseInt(document.querySelector("#evalStudentSelection").selectedIndex, 10);
-    document.querySelector("#evalStudentSelection").selectedIndex = currentIndex + offset;
+    document.querySelector("#evalStudentSelection").selectedIndex = currentIndex + 1;
     evalChangeStudent();
 }
 
