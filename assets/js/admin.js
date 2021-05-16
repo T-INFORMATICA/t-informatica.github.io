@@ -2,12 +2,31 @@
 const form = document.querySelector('#gradeform');
 form.addEventListener('submit', submitEvaluation);
 
+let rubrics;
+let students;
+
 function submitEvaluation(e) {
     e.preventDefault();
-    const data = new FormData(e.target);
-    console.log(data);
-    const value = Object.fromEntries(data.entries());
-    console.log(value);
+    // const data = new FormData(e.target);
+    // console.log(data);
+    // const value = Object.fromEntries(data.entries());
+    // console.log(value);
+
+    let json = {
+        name: data.get('evalName'),
+        date: data.get('evalDate'),
+        students: []
+    };
+
+    for (const [studentId, studentName] of Object.entries(students)) {
+        for (const [subject, grades] of Object.entries(rubricsJson)) {
+            let subjectId = toCssSafeId(subject);
+            let studentGradeData = data.get(`students[${studentId}][${subjectId}]`);
+            json.students[studentId][subjectId] = studentGradeData;
+        }
+    }
+
+    console.log(json);
 }
 
 function createNewEvalForm() {
@@ -41,7 +60,7 @@ function evalChangeStudent() {
 
 function rubricsLoaded(e) {
     let rubricsJson = JSON.parse(e.currentTarget.response);
-
+    rubrics = rubricsJson;
 
     let database = firebase.database();
     let managedUsersref = database.ref(`users`).orderByChild("klas");
@@ -53,6 +72,9 @@ function rubricsLoaded(e) {
                 let studentData = snapshot.val();
                 let studentName = studentData.naam;
                 let studentKlas = studentData.klas;
+
+                students[studentId] = studentName;
+
                 let tmpl_studentSection = tmpl_gradeForm_studentSection(studentId, studentName);
                 document.querySelector("#evalStudentSelection").innerHTML += `<option value=${studentId}>${studentKlas} - ${studentName}</option>`;
                 document.querySelector("#gradeform-students").innerHTML += tmpl_studentSection;
