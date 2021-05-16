@@ -97,7 +97,7 @@ function rubricsLoaded(e) {
                 let studentName = studentData.naam;
                 let studentKlas = studentData.klas;
 
-                students[studentId] = studentName;
+                students[snapshot.key] = studentName;
 
                 let tmpl_studentSection = tmpl_gradeForm_studentSection(studentId, studentName);
                 document.querySelector("#evalStudentSelection").innerHTML += `<option value=${studentId}>${studentKlas} - ${studentName}</option>`;
