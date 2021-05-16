@@ -22,15 +22,17 @@ function submitEvaluation(e) {
         for (const [subject, grades] of Object.entries(rubrics)) {
             let subjectId = toCssSafeId(subject);
             let grade = data.get(`students[${studentId}][${subjectId}]`);
-            let commentEl = document.querySelector(`input[name="students[${studentId}][${subjectId}]"]:checked+label>.gradeform-subject-option-comment`);
-            let comment = commentEl ? commentEl.innerHTML : null;
-            if (studentId in json.students == false) {
-                json.students[studentId] = {};
+            if (grade) {
+                let commentEl = document.querySelector(`input[name="students[${studentId}][${subjectId}]"]:checked+label>.gradeform-subject-option-comment`);
+                let comment = commentEl ? commentEl.innerHTML : null;
+                if (studentId in json.students == false) {
+                    json.students[studentId] = {};
+                }
+                json.students[studentId][subjectId] = {
+                    grade: grade,
+                    comment: comment
+                };
             }
-            json.students[studentId][subjectId] = {
-                grade: grade,
-                comment: comment
-            };
         }
     }
 
