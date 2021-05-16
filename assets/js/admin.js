@@ -11,6 +11,13 @@ function evalChangeSelectedStudent(offset) {
     let newIndex = Math.min(max, Math.max(0, currentIndex + offset));
     document.querySelector("#evalStudentSelection").selectedIndex = newIndex;
 
+    // if (newIndex === max) {
+    //     document.querySelector("#evalSelectNextStudent").disabled = true;
+    // }
+    // if (newIndex === 0) {
+    //     document.querySelector("#evalSelectPrevStudent").disabled = true;
+    // }
+
     evalChangeStudent();
 }
 
