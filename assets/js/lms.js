@@ -240,6 +240,8 @@ function showResultInSubjectElement(subject, result) {
 
     let commentsEl = subjectEl.querySelector('.comments');
     commentsEl.innerHTML = "";
+
+    subjectEl.querySelector(".numWordsLearned").innerHTML = 1;
 }
 
 function addCategoryElement(category) {
