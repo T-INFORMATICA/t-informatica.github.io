@@ -6,6 +6,11 @@ function loadExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
     if (exerciseid == null) {
         document.querySelector("#exerciseSelection").style.display = "";
+
+        subject = new URLSearchParams(window.location.search).get('subject');
+        if (subject) {
+            CreateNewExercise('subject');
+        }
     }
     else {
         generateQuestion();
