@@ -5,11 +5,13 @@ let numQuestionsInExercise;
 function loadExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
     if (exerciseid == null) {
-        document.querySelector("#exerciseSelection").style.display = "";
 
         let subject = new URLSearchParams(window.location.search).get('subject');
         if (subject) {
             CreateNewExercise(subject);
+        }
+        else {
+            document.querySelector("#exerciseSelection").style.display = "";
         }
     }
     else {
