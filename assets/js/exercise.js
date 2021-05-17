@@ -19,7 +19,7 @@ function confirmExit() {
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
 
-    document.querySelectorAll(`[name="answer"]:not(:checked)`).forEach(el => el.disabled = true);
+    document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = true);
 
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
