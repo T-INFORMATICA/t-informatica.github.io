@@ -175,6 +175,15 @@ pre {
     grid-template-columns: 1fr 1fr;
 }
 
+#exerciseAnswers label {
+    border: 1px solid var(--color-accent-cyan);
+}
+
 #exerciseAnswers input {
     display: none;
+}
+
+#exerciseAnswers input:checked+label {
+    background-color: var(--color-accent-cyan);
+    font-weight: bold;
 }
