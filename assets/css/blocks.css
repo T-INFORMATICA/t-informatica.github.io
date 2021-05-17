@@ -187,9 +187,9 @@ pre {
 }
 
 #exerciseAnswers input+label:hover {
-    outline: 2px solid var(--color-accent-cyan);
+    outline: .25rem solid var(--color-accent-cyan);
 }
 
 #exerciseAnswers input:checked+label {
-    outline: 4px solid var(--color-accent-cyan);
+    outline: .5rem solid var(--color-accent-cyan);
 }
