@@ -184,6 +184,7 @@ function definitionsLoaded(e) {
 
             for (const subject in definitions) {
                 console.log(knownSubjectWords);
+                console.log(subject);
                 let knownWords = knownSubjectWords[subject];
                 console.log(knownWords);
                 let wordsLearned = 0;
