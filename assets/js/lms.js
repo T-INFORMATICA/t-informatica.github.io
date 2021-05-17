@@ -201,6 +201,7 @@ function definitionsLoaded(e) {
                 let termdef = definitions[subject][index];
                 let term = termdef["term"];
                 let knownTermValue = knownTerms[term];
+                console.log(knownTermValue);
 
                 // Only count words that are known for 90% or more
                 wordsLearned += knownTermValue < .9 ? 0 : 1;
