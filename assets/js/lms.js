@@ -177,48 +177,39 @@ function definitionsLoaded(e) {
 
     let database = firebase.database();
     let termsref = database.ref(`knownTerms/${getUserId()}`);
+    termsref
+        .once('value')
+        .then(snapshot => {
+            let knownSubjectWords = snapshot.val();
 
-    termsref.once('value').then(snapshot => {
+            for (const subject in definitions) {
+                let knownWords = knownSubjectWords[subject];
+                let wordsLearned = 0;
 
-        let knownTerms = {};
-        console.log(snapshot.val());
-        snapshot.forEach(termsnapshot => {
-            let timestamps = termsnapshot.val();
+                for (const index in definitions[subject]) {
+                    let termdef = definitions[subject][index];
+                    let term = termdef["term"];
 
-            let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
+                    let timestamps = knownWords[term];
+                    let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
+                    let amount = parseFloat(Object.entries(timestamps).length);
+                    let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
 
-            let amount = parseFloat(Object.entries(timestamps).length);
-            // all values were between 0 and 1, so the average is also between 0 and 1
-            let avg = sum / amount;
-            // round it to 1 decimal
-            avg = Math.round(avg * 10) / 10.0;
-
-            knownTerms[termsnapshot.key] = avg;
-        });
-
-        let amountOfTermsPerSubject = {}
-        for (const subject in definitions) {
-            let wordsLearned = 0;
-            for (const index in definitions[subject]) {
-                let termdef = definitions[subject][index];
-                let term = termdef["term"];
-
-                if (term in knownTerms) {
-                    let knownTermValue = knownTerms[term];
-                    console.log(`${term}, ${subject}, ${knownTermValue}`);
-                    // Only count words that are known for 90% or more
-                    wordsLearned += knownTermValue < .9 ? 0 : 1;
+                    if (term in knownTerms) {
+                        console.log(`${term}, ${subject}, ${avg}`);
+                        // Only count words that are known for 90% or more
+                        wordsLearned += avg < .9 ? 0 : 1;
+                    }
                 }
-            }
 
-            let subjectId = toCssSafeId(subject);
-            let subjectEl = document.querySelector(`#${subjectId}`);
-            subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
-            let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
-            let progress = (wordsLearned / max) * 100;
-            subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
-        }
-    });
+                let subjectId = toCssSafeId(subject);
+                let subjectEl = document.querySelector(`#${subjectId}`);
+                subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
+                let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
+                let progress = (wordsLearned / max) * 100;
+                subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
+            }
+        });
 }
 
 function addResultsToPage() {
