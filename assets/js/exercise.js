@@ -9,7 +9,7 @@ function loadExercise() {
 
         let subject = new URLSearchParams(window.location.search).get('subject');
         if (subject) {
-            CreateNewExercise('subject');
+            CreateNewExercise(subject);
         }
     }
     else {
