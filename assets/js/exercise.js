@@ -56,13 +56,12 @@ function EvaluateExercise(subject) {
 
             for (const [term, currentResult] of Object.entries(terms)) {
                 let termCount = questions.reduce((i, it) => it[1].term === term ? ++i : i, 0);
-                console.log(termCount);
                 console.log(term);
                 termsref
                     .child(`${term}/${timestamp}/${subject}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
-                    // .then(() => window.location.replace('/lms-exercise.html'));
+                // .then(() => window.location.replace('/lms-exercise.html'));
             }
         });
 }
