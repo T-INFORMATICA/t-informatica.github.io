@@ -239,8 +239,12 @@ main>article#content {
 .student-management-form {
     display: grid;
     grid-template-columns: 100px auto;
-    margin: 8px 8px 32px 8px;
+    margin: 8px;
     grid-gap: 8px;
+}
+
+.student-management-collapse+label {
+    margin: 32px 8px 8px 8px;
 }
 
 .student-management-collapse,
