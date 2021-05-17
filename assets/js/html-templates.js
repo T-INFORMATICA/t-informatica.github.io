@@ -1,6 +1,6 @@
 function tmpl_timelineItem(id, date, name) {
     return `
-    <div class="timelineItem">
+    <div class="timelineItem" display="none">
         <div class="marker">
             <span class="material-icons-outlined">
                 schedule
