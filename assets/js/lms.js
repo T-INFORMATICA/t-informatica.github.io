@@ -177,7 +177,7 @@ function definitionsLoaded(e) {
     for (const subject in definitions) {
         console.log(subject);
         for (const termdef in subject) {
-            console.log(termdef);
+            console.log(subject[termdef]);
         }
     }
 
