@@ -244,6 +244,7 @@ main>article#content {
 }
 
 .student-management-collapse+label {
+    display: block;
     margin: 32px 8px 8px 8px;
 }
 
