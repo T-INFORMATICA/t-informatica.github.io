@@ -175,6 +175,7 @@ function definitionsLoaded(e) {
     let definitions = JSON.parse(e.currentTarget.response);
 
     for (const subject in definitions) {
+        console.log(subject);
         for (const termdef in subject) {
             console.log(termdef);
         }
