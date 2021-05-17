@@ -1,4 +1,4 @@
 ---
 title: SQL
-# layout: course_summary
+layout: course_summary
 ---
