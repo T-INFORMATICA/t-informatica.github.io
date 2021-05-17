@@ -182,13 +182,11 @@ function definitionsLoaded(e) {
         let knownTerms = {};
         snapshot.forEach(termsnapshot => {
             let timestamps = termsnapshot.val();
-            let sum = 0;
-            console.log(timestamps);
-            for (const [key, value] in Object.entries(timestamps)) {
-                sum += value;
-            }
+            let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
+
+            let amount = parseFloat(Object.entries(timestamps).length);
             // all values were between 0 and 1, so the average is also between 0 and 1
-            let avg = sum / Object.entries(timestamps).length;
+            let avg = sum / amount;
             // round it to 1 decimal
             avg = Math.round(avg * 10) / 10.0;
 
