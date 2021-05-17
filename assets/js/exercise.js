@@ -62,7 +62,7 @@ function EvaluateExercise() {
                     .child(`${term}/${timestamp}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
-                    .then(() => window.location.replace('https://t-informatica.github.io/exercise.html'));
+                    .then(() => window.location.replace('/lms-exercise.html'));
             }
         });
 }
@@ -78,7 +78,7 @@ function CreateNewExercise(subject) {
         .push(newExerciseData)
         .then(
             snapshot => {
-                let url = `https://t-informatica.github.io/exercise.html?exerciseid=${snapshot.key}`;
+                let url = `/lms-exercise.html?exerciseid=${snapshot.key}`;
                 window.location.replace(url);
             }
         );
