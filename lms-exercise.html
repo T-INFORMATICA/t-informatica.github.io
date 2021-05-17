@@ -21,13 +21,13 @@ layout: lms
     <input type="hidden" name="questioncount" value="1">
 
     <div id="exerciseAnswers">
-        <input type="radio" name="answer" id="answer1" value="%ANSWER 1%" onchange="this.form.submit(submitExercise(event));">
+        <input type="radio" name="answer" id="answer1" value="%ANSWER 1%" onchange="this.form.dispatchEvent(new Event('submit'));">
         <label for="answer1">Loading...</label>
-        <input type="radio" name="answer" id="answer2" value="%ANSWER 2%" onchange="this.form.submit(submitExercise(event));">
+        <input type="radio" name="answer" id="answer2" value="%ANSWER 2%" onchange="this.form.dispatchEvent(new Event('submit'));">
         <label for="answer2">Loading...</label>
-        <input type="radio" name="answer" id="answer3" value="%ANSWER 3%" onchange="this.form.submit(submitExercise(event));">
+        <input type="radio" name="answer" id="answer3" value="%ANSWER 3%" onchange="this.form.dispatchEvent(new Event('submit'));">
         <label for="answer3">Loading...</label>
-        <input type="radio" name="answer" id="answer4" value="%ANSWER 4%" onchange="this.form.submit(submitExercise(event));">
+        <input type="radio" name="answer" id="answer4" value="%ANSWER 4%" onchange="this.form.dispatchEvent(new Event('submit'));">
         <label for="answer4">Loading...</label>
     </div>
 </form>
