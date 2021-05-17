@@ -243,6 +243,7 @@ main>article#content {
     grid-gap: 8px;
 }
 
+.student-management-collapse,
 .student-management-collapse+form {
     display: none;
 }
