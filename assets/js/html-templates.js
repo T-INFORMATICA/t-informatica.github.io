@@ -64,9 +64,8 @@ function tmpl_gradeForm_gradeOption(studentId, subjectId, grade, comment) {
 
 function tmpl_managementForm_student(studentId, studentName, klas, username, password, url) {
     return `
-    <div>
-        <label for="student-${studentId}-collapse">${studentName}</label>
         <input type="checkbox" id="student-${studentId}-collapse" class="student-management-collapse">
+        <label for="student-${studentId}-collapse">${studentName}</label>
         <form class="student-management-form">
             <input type="hidden" name="student[${studentId}][id]" value="${studentId}">
             <label for="student-${studentId}-username">username</label><input type="text" name="students[${studentId}][username]" id="student-${studentId}-username" value="${username}">
@@ -76,6 +75,5 @@ function tmpl_managementForm_student(studentId, studentName, klas, username, pas
             <label for="student-${studentId}-naam">naam</label><input type="text" name="students[${studentId}][naam]" id="student-${studentId}-naam" value="${studentName}">
             <input type="submit" value="VERZENDEN">
         </form>
-    </div>
     `;
 }
