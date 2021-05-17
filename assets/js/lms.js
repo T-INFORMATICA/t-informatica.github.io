@@ -200,11 +200,13 @@ function definitionsLoaded(e) {
             for (const index in definitions[subject]) {
                 let termdef = definitions[subject][index];
                 let term = termdef["term"];
-                let knownTermValue = knownTerms[term];
-                console.log(knownTermValue);
 
-                // Only count words that are known for 90% or more
-                wordsLearned += knownTermValue < .9 ? 0 : 1;
+                if (term in knownTerms) {
+                    let knownTermValue = knownTerms[term];
+                    console.log(knownTermValue);
+                    // Only count words that are known for 90% or more
+                    wordsLearned += knownTermValue < .9 ? 0 : 1;
+                }
             }
 
             let subjectId = toCssSafeId(subject);
