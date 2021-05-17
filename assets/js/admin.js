@@ -129,5 +129,5 @@ function createUserManagementForms() {
 
 function manageStudent(e) {
     e.preventDefault();
-    console.log(e.submitter);
+    console.log(e.submitter.parentElement);
 }
