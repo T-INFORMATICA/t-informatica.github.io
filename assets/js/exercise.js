@@ -27,7 +27,7 @@ function submitExercise(submitEvent) {
     loadExercise();
 }
 
-function EvaluateExercise() {
+function EvaluateExercise(subject) {
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
 
@@ -59,7 +59,7 @@ function EvaluateExercise() {
                 console.log(termCount);
                 console.log(term);
                 termsref
-                    .child(`${term}/${timestamp}`)
+                    .child(`${term}/${timestamp}/${subject}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
                     .then(() => window.location.replace('/lms-exercise.html'));
@@ -115,7 +115,7 @@ function definitionsLoaded(e) {
                 numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
                 if (numQuestionsInExercise > 10) {
                     window.onbeforeunload = null;
-                    EvaluateExercise();
+                    EvaluateExercise(exercise.subject);
                     return;
                 }
 
