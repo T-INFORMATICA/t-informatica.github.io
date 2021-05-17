@@ -26,9 +26,9 @@ function submitExercise(submitEvent) {
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child(`questions/${questionKey}/answer`).set(answer);
 
-    setTimeout(() => { console.log("Generating new question..."); }, 2000);
+    setTimeout(() => { loadExercise(); }, 2000);
 
-    loadExercise();
+
 }
 
 function EvaluateExercise(subject) {
