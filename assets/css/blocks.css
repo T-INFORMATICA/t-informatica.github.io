@@ -191,6 +191,6 @@ pre {
     outline: .25rem solid var(--color-accent-cyan);
 }
 
-#exerciseAnswers input:checked+label {
+#exerciseAnswers input:not(disabled):checked+label {
     outline: .5rem solid var(--color-accent-cyan);
 }
