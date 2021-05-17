@@ -216,12 +216,12 @@ function addResultsToPage() {
             // calculate the current result for each subject and show it on the page
             for (const [sub, results] of Object.entries(subjects)) {
                 let result = calculateResult(results.map(x => x.result));
-                showResultInSubjectElement(sub, result);
+                showResultInSubjectElement(sub, result, 1);
             }
         });
 }
 
-function showResultInSubjectElement(subject, result) {
+function showResultInSubjectElement(subject, result, wordsLearned) {
     let subjectId = toCssSafeId(subject);
 
     let subjectEl = document.querySelector(`#${subjectId}`);
@@ -241,9 +241,9 @@ function showResultInSubjectElement(subject, result) {
     let commentsEl = subjectEl.querySelector('.comments');
     commentsEl.innerHTML = "";
 
-    subjectEl.querySelector(".numWordsLearned").innerHTML = 1;
+    subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
     let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
-    let progress = (1 / max) * 100;
+    let progress = (wordsLearned / max) * 100;
     subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
 }
 
