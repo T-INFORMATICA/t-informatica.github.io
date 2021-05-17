@@ -243,7 +243,8 @@ function showResultInSubjectElement(subject, result) {
 
     subjectEl.querySelector(".numWordsLearned").innerHTML = 1;
     let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
-    subjectEl.querySelector(".progressbar-progress").style.width = "" + (1 / max) + "%";
+    let progress = (1 / max) * 100;
+    subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
 }
 
 function addCategoryElement(category) {
