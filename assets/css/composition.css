@@ -244,10 +244,10 @@ main>article#content {
 }
 
 .student-management-collapse,
-.student-management-collapse+form {
+.student-management-collapse+label+form {
     display: none;
 }
 
-.student-management-collapse:checked+form {
+.student-management-collapse:checked+label+form {
     display: block;
 }
