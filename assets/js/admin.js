@@ -101,7 +101,8 @@ function rubricsLoaded(e) {
                         document.querySelector(`#gradeform-${studentId}>#students-${studentId}-${subjectId}`).innerHTML += tmpl_gradeOption;
                     }
                 }
+
+                evalChangeStudent(0);
             });
         });
-    evalChangeStudent(0);
 }
