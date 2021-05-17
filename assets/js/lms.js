@@ -19,7 +19,10 @@ function getUserId() {
 function selectUser() {
     let userid = getUserId();
 
-    document.querySelector("#userSelect>select").value = userid;
+    let userSelectEl = document.querySelector("#userSelect>select");
+    if (userSelectEl) {
+        userSelectEl.value = userid;
+    }
 }
 
 function toCssSafeId(text) {

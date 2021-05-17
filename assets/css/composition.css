@@ -231,3 +231,12 @@ main>article#content {
     border: 1px solid black;
     flex: 1;
 }
+
+/*  /////////////////////////*/
+/* //ADMIN MANAGEMENT FORM//*/
+/*/////////////////////////*/
+
+.student-management-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
