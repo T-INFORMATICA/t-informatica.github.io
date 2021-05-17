@@ -132,7 +132,7 @@ function addEvalToTimeline(evalid, evaldata) {
 
 function addEvalResultToTimeline(evalid, resultdata) {
     let tmpl = tmpl_timelineResult(resultdata.result, resultdata.subject, resultdata.commentaar);
-    document.querySelector(`#${evalid}`).style.display = "block";
+    document.querySelector(`#${evalid}`).parentElement.style.display = "block";
     document.querySelector(`#${evalid}`).innerHTML += tmpl;
 }
 
