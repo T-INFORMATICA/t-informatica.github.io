@@ -182,7 +182,7 @@ function definitionsLoaded(e) {
         .then(snapshot => {
             let knownSubjectWords = snapshot.val();
 
-            for (const subject in definitions) {
+            for (const [subject, words] of Object.entries(definitions)) {
                 console.log(knownSubjectWords);
                 console.log(subject);
                 let knownWords = knownSubjectWords[subject];
@@ -192,7 +192,7 @@ function definitionsLoaded(e) {
                 for (const index in definitions[subject]) {
                     let termdef = definitions[subject][index];
                     let term = termdef["term"];
-                    if (term in knownWords) {
+                    if (knownWords && term in knownWords) {
                         let timestamps = knownWords[term];
                         let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
                         let amount = parseFloat(Object.entries(timestamps).length);
