@@ -1,4 +1,3 @@
-
 let rubrics;
 let students = {};
 
@@ -100,6 +99,28 @@ function rubricsLoaded(e) {
                 }
 
                 evalChangeStudent(0);
+            });
+        });
+}
+
+function createUserManagementForms() {
+    let database = firebase.database();
+    let managedUsersref = database.ref(`users`).orderByChild("klas");
+
+    managedUsersref.once('value')
+        .then(snapshot => {
+            snapshot.forEach(snapshot => {
+                let studentId = snapshot.key;
+
+                let studentData = snapshot.val();
+                let studentName = studentData.naam;
+                let studentKlas = studentData.klas;
+                let studentUsername = studentData.username;
+                let studentUrl = studentData.url;
+                let studentPassword = studentData.password;
+
+                let tmpl = tmpl_managementForm_student(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
+                document.querySelector("#student-management-forms").innerHTML += tmpl;
             });
         });
 }
