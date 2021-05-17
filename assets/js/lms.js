@@ -183,6 +183,7 @@ function definitionsLoaded(e) {
         snapshot.forEach(termsnapshot => {
             let timestamps = termsnapshot.val();
             let sum = 0;
+            console.log(timestamps);
             for (const [key, value] in Object.entries(timestamps)) {
                 sum += value;
             }
