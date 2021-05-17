@@ -67,12 +67,12 @@ function tmpl_managementForm_student(studentId, studentName, klas, username, pas
         <input type="checkbox" id="student-${studentId}-collapse" class="student-management-collapse">
         <label for="student-${studentId}-collapse">${studentName}</label>
         <form class="student-management-form">
-            <input type="hidden" name="student[${studentId}][id]" value="${studentId}">
-            <label for="student-${studentId}-username">username</label><input type="text" name="students[${studentId}][username]" id="student-${studentId}-username" value="${username}">
-            <label for="student-${studentId}-password">password</label><input type="text" name="students[${studentId}][password]" id="student-${studentId}-password" value="${password}">
-            <label for="student-${studentId}-klas">klas</label><input type="text" name="students[${studentId}][klas]" id="student-${studentId}-klas" value="${klas}">
-            <label for="student-${studentId}-url">url</label><input type="text" name="students[${studentId}][url]" id="student-${studentId}-url" value="${url}">
-            <label for="student-${studentId}-naam">naam</label><input type="text" name="students[${studentId}][naam]" id="student-${studentId}-naam" value="${studentName}">
+            <input type="hidden" name="studentId" value="${studentId}">
+            <label for="student-${studentId}-username">username</label><input type="text" name="studentUsername" id="student-${studentId}-username" value="${username}">
+            <label for="student-${studentId}-password">password</label><input type="text" name="studentPassword" id="student-${studentId}-password" value="${password}">
+            <label for="student-${studentId}-klas">klas</label><input type="text" name="studentKlas" id="student-${studentId}-klas" value="${klas}">
+            <label for="student-${studentId}-url">url</label><input type="text" name="studentUrl" id="student-${studentId}-url" value="${url}">
+            <label for="student-${studentId}-naam">naam</label><input type="text" name="studentNaam" id="student-${studentId}-naam" value="${studentName}">
             <input type="submit" value="VERZENDEN">
         </form>
     `;

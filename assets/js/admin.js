@@ -122,12 +122,25 @@ function createUserManagementForms() {
                 let tmpl = tmpl_managementForm_student(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
                 document.querySelector("#student-management-forms").innerHTML += tmpl;
             });
-            console.log(document.querySelectorAll(".student-management-form"));
             document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("submit", manageStudent));
         });
 }
 
 function manageStudent(e) {
     e.preventDefault();
-    console.log(e.submitter.parentElement);
+    let form = e.submitter.parentElement;
+
+    let studentId = form.elements["studentId"].value;
+    let studentName = form.elements["studentNaam"].value;
+    let studentKlas = form.elements["studentKlas"].value;
+    let studentUsername = form.elements["studentUsername"].value;
+    let studentUrl = form.elements["studentUrl"].value;
+    let studentPassword = form.elements["studentPassword"].value;
+
+    let database = firebase.database();
+    database.ref(`users/${studentId}/klas`).set(studentKlas);
+    database.ref(`users/${studentId}/naam`).set(studentName);
+    database.ref(`users/${studentId}/username`).set(studentUsername);
+    database.ref(`users/${studentId}/password`).set(studentPassword);
+    database.ref(`users/${studentId}/url`).set(studentUrl);
 }
