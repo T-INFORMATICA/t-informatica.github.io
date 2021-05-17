@@ -252,7 +252,3 @@ main>article#content {
 .student-management-collapse+label+form {
     display: none;
 }
-
-.student-management-collapse:checked+label+form {
-    display: block;
-}
