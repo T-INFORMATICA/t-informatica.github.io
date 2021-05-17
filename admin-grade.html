@@ -28,8 +28,13 @@ layout: admin
 
 <script src="/assets/js/admin.js"></script>
 <script>
-    const form = document.querySelector('#gradeform');
-    form.addEventListener('submit', submitEvaluation);
-    
-    documentReady(createNewEvalForm);
+
+    // documentReady(createNewEvalForm);
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        const form = document.querySelector('#gradeform');
+        form.addEventListener('submit', submitEvaluation);
+        
+        createNewEvalForm();
+    });
 </script>

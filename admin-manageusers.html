@@ -17,3 +17,9 @@ layout: admin
         <input type="submit" value="VERZENDEN">
     </form> -->
 </div>
+
+<script>
+    firebase.auth().onAuthStateChanged(function (user) {
+        createUserManagementForms();
+    });
+</script>
