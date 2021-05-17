@@ -203,7 +203,7 @@ function definitionsLoaded(e) {
 
                 if (term in knownTerms) {
                     let knownTermValue = knownTerms[term];
-                    console.log(knownTermValue);
+                    console.log(`${term}, ${subject}, ${knownTermValue}`);
                     // Only count words that are known for 90% or more
                     wordsLearned += knownTermValue < .9 ? 0 : 1;
                 }
