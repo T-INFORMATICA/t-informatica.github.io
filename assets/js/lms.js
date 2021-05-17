@@ -112,14 +112,16 @@ function addUserEvalsToPage() {
     evalsref
         .once('value')
         .then(snapshot => snapshot.forEach(evalsnapshot => {
-            addEvalToTimeline(evalsnapshot.key, evalsnapshot.val());
             resultsref
                 .once('value')
-                .then(snapshot => snapshot.forEach(resultsnapshot => {
-                    if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
-                        addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
-                    }
-                }));
+                .then(snapshot => {
+                    addEvalToTimeline(evalsnapshot.key, evalsnapshot.val());
+                    snapshot.forEach(resultsnapshot => {
+                        if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
+                            addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
+                        }
+                    });
+                });
         }));
 }
 

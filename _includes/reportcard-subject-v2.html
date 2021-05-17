@@ -10,8 +10,8 @@
     </div>
     <div class="progressbar-bg">
         {% assign total = include.progressTotal | times: 1.0 %}
-        <div class="progressbar-progress" style="width: {{0 | divided_by: total | times: 100.0}}%"></div>
-        <a href="#" class="progressbar-label">0 / {{include.progressTotal}} woorden geleerd</a>
+        <div class="progressbar-progress" style="width: 0%"></div>
+        <a href="#" class="progressbar-label"><span class="numWordsLearned">0</span> / {{include.progressTotal}} woorden geleerd</a>
     </div>
     <div class="comments">
         Deze doelstelling werd nog niet geevalueerd.
