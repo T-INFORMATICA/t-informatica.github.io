@@ -54,12 +54,11 @@ function EvaluateExercise(subject) {
 
             for (const [term, currentResult] of Object.entries(terms)) {
                 let termCount = questions.reduce((i, it) => it[1].term === term ? ++i : i, 0);
-                console.log(subject);
                 termsref
                     .child(`${subject}/${term}/${timestamp}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
-                // .then(() => window.location.replace('/lms-exercise.html'));
+                    .then(() => window.location.replace('/lms-exercise.html'));
             }
         });
 }
@@ -112,7 +111,6 @@ function definitionsLoaded(e) {
                 numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
                 if (numQuestionsInExercise > 10) {
                     window.onbeforeunload = null;
-                    console.log(exercise.subject);
                     EvaluateExercise(exercise.subject);
                     return;
                 }
