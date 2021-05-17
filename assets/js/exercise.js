@@ -115,6 +115,7 @@ function definitionsLoaded(e) {
                 numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
                 if (numQuestionsInExercise > 10) {
                     window.onbeforeunload = null;
+                    console.log(exercise.subject);
                     EvaluateExercise(exercise.subject);
                     return;
                 }
