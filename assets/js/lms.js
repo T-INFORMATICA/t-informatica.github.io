@@ -182,6 +182,7 @@ function definitionsLoaded(e) {
         let knownTerms = {};
         snapshot.forEach(termsnapshot => {
             let timestamps = termsnapshot.val();
+
             let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
 
             let amount = parseFloat(Object.entries(timestamps).length);
@@ -192,20 +193,29 @@ function definitionsLoaded(e) {
 
             knownTerms[termsnapshot.key] = avg;
         });
-        console.log(knownTerms);
 
+        let amountOfTermsPerSubject = {}
         for (const subject in definitions) {
+            let wordsLearned = 0;
             for (const index in definitions[subject]) {
                 let termdef = definitions[subject][index];
+                let term = termdef["term"];
+                let knownTermValue = knownTerms[term];
+
+                // Only count words that are known for 90% or more
+                wordsLearned += knownTermValue < .9 ? 0 : 1;
             }
+
+            let subjectId = toCssSafeId(subject);
+            let subjectEl = document.querySelector(`#${subjectId}`);
+            subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
+            let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
+            let progress = (wordsLearned / max) * 100;
+            subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
         }
     });
 
-    // let subjectEl = document.querySelector(`#${subjectId}`);
-    // subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
-    // let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
-    // let progress = (wordsLearned / max) * 100;
-    // subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
+
 }
 
 function addResultsToPage() {
