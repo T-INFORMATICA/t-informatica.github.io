@@ -178,8 +178,12 @@ function definitionsLoaded(e) {
     let termsref = database.ref(`knownTerms/${getUserId()}`);
 
     termsref.once('value').then(snapshot => {
-        console.log(snapshot.val());
 
+        let knownTerms = {};
+        snapshot.forEach(termsnapshot => {
+            knownTerms[termsnapshot.key] = 1;
+        });
+        console.log(knownTerms);
 
         for (const subject in definitions) {
             for (const index in definitions[subject]) {
