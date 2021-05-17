@@ -60,23 +60,12 @@ function createNewEvalForm() {
     request.send();
 }
 
-function evalChangeSelectedStudent(offset) {
+function evalChangeStudent(offset) {
     let currentIndex = parseInt(document.querySelector("#evalStudentSelection").selectedIndex, 10);
     let max = document.querySelectorAll("#evalStudentSelection>option").length;
     let newIndex = Math.min(max, Math.max(0, currentIndex + offset));
     document.querySelector("#evalStudentSelection").selectedIndex = newIndex;
 
-    // if (newIndex === max) {
-    //     document.querySelector("#evalSelectNextStudent").disabled = true;
-    // }
-    // if (newIndex === 0) {
-    //     document.querySelector("#evalSelectPrevStudent").disabled = true;
-    // }
-
-    evalChangeStudent();
-}
-
-function evalChangeStudent() {
     let studentId = document.querySelector("#evalStudentSelection").value;
     document.querySelectorAll(".evalStudentSection").forEach(el => el.style.display = "none");
     document.querySelector(`#gradeform-${studentId}`).style.display = "";
@@ -114,5 +103,5 @@ function rubricsLoaded(e) {
                 }
             });
         });
-
+    evalChangeStudent(0);
 }

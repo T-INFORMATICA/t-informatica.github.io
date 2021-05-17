@@ -13,11 +13,11 @@ layout: admin
         <input type="date" name="evalDate" id="evalDate" required>
     </div>
     <div>
-        <button type="button" onclick="evalChangeSelectedStudent(-1)" id="evalSelecPrevStudent"><span
+        <button type="button" onclick="evalChangeStudent(-1)" id="evalSelecPrevStudent"><span
                 class="material-icons">chevron_left</span></button>
-        <select name="" id="evalStudentSelection" onchange="evalChangeStudent()">
+        <select name="" id="evalStudentSelection" onchange="evalChangeStudent(0)">
         </select>
-        <button type="button" onclick="evalChangeSelectedStudent(1)" id="evalSelectNextStudent"><span
+        <button type="button" onclick="evalChangeStudent(1)" id="evalSelectNextStudent"><span
                 class="material-icons">chevron_right</span></button>
     </div>
     <div id="gradeform-students">
