@@ -181,6 +181,7 @@ function definitionsLoaded(e) {
     termsref.once('value').then(snapshot => {
 
         let knownTerms = {};
+        console.log(snapshot.val());
         snapshot.forEach(termsnapshot => {
             let timestamps = termsnapshot.val();
 
@@ -218,8 +219,6 @@ function definitionsLoaded(e) {
             subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
         }
     });
-
-
 }
 
 function addResultsToPage() {
