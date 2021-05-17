@@ -163,3 +163,18 @@ pre {
     width: 100%;
     color: white;
 }
+
+
+
+/*  /////////////////*/
+/* //EXERCISE FORM//*/
+/*/////////////////*/
+
+#exerciseAnswers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#exerciseAnswers input {
+    display: none;
+}
