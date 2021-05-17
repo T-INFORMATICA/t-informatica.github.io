@@ -183,10 +183,7 @@ function definitionsLoaded(e) {
             let knownSubjectWords = snapshot.val();
 
             for (const [subject, words] of Object.entries(definitions)) {
-                console.log(knownSubjectWords);
-                console.log(subject);
                 let knownWords = knownSubjectWords[subject];
-                console.log(knownWords);
                 let wordsLearned = 0;
 
                 for (const index in definitions[subject]) {
@@ -198,7 +195,6 @@ function definitionsLoaded(e) {
                         let amount = parseFloat(Object.entries(timestamps).length);
                         let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
 
-                        console.log(`${term}, ${subject}, ${avg}`);
                         // Only count words that are known for 90% or more
                         wordsLearned += avg < .9 ? 0 : 1;
                     }
