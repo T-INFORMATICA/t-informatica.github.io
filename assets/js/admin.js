@@ -122,6 +122,7 @@ function createUserManagementForms() {
                 let tmpl = tmpl_managementForm_student(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
                 document.querySelector("#student-management-forms").innerHTML += tmpl;
             });
+            console.log(document.querySelectorAll(".student-management-form"));
             document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("formdata", manageStudent))
         });
 }
