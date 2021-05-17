@@ -33,6 +33,7 @@ function EvaluateExercise() {
 
 
     let userref = database.ref(`users/${_user.uid}`);
+    let termsref = database.ref(`knownTerms/${_user.uid}`);
 
     let terms = {};
     timestamp = (new Date()).getTime();
@@ -57,8 +58,8 @@ function EvaluateExercise() {
                 let termCount = questions.reduce((i, it) => it[1].term === term ? ++i : i, 0);
                 console.log(termCount);
                 console.log(term);
-                userref
-                    .child(`knownTerms/${term}/${timestamp}`)
+                termsref
+                    .child(`${term}/${timestamp}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
                     .then(() => window.location.replace('https://t-informatica.github.io/exercise.html'));
