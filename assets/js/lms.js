@@ -167,7 +167,7 @@ function addUserdataToProfileTable() {
 function addCounterForKnownTermsToPage() {
     let request = new XMLHttpRequest();
     request.open("GET", "/assets/data/definitionsCategories.json");
-    request.addEventListener("load", defnitionsLoaded);
+    request.addEventListener("load", definitionsLoaded);
     request.send();
 }
 
