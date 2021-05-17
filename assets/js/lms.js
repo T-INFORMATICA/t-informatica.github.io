@@ -189,13 +189,12 @@ function definitionsLoaded(e) {
                 for (const index in definitions[subject]) {
                     let termdef = definitions[subject][index];
                     let term = termdef["term"];
-
-                    let timestamps = knownWords[term];
-                    let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
-                    let amount = parseFloat(Object.entries(timestamps).length);
-                    let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
-
                     if (term in knownWords) {
+                        let timestamps = knownWords[term];
+                        let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
+                        let amount = parseFloat(Object.entries(timestamps).length);
+                        let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
+
                         console.log(`${term}, ${subject}, ${avg}`);
                         // Only count words that are known for 90% or more
                         wordsLearned += avg < .9 ? 0 : 1;
