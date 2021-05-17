@@ -26,7 +26,7 @@ function submitExercise(submitEvent) {
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child(`questions/${questionKey}/answer`).set(answer);
 
-    setTimeout(() => { loadExercise(); }, 2000);
+    setTimeout(() => loadExercise(), 2000);
 
 
 }
