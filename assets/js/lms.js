@@ -94,7 +94,8 @@ function addUsersToMenu() {
                 addFirebaseUserdataToMenu(snapshot.key, snapshot.val());
             });
         })
-        .then(() => selectUser());
+        .then(() => selectUser())
+        .catch(error => console.log(`Not logged in as Admin. ${error}`));
 }
 
 function addFirebaseUserdataToMenu(userid, userdata) {
