@@ -28,5 +28,8 @@ layout: admin
 
 <script src="/assets/js/admin.js"></script>
 <script>
+    const form = document.querySelector('#gradeform');
+    form.addEventListener('submit', submitEvaluation);
+    
     documentReady(createNewEvalForm);
 </script>
