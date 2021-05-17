@@ -21,16 +21,15 @@ layout: lms
     <input type="hidden" name="questioncount" value="1">
 
     <div id="exerciseAnswers">
-        <input type="radio" name="answer" id="answer1" value="%ANSWER 1%">
+        <input type="radio" name="answer" id="answer1" value="%ANSWER 1%" onchange="this.form.submit();">
         <label for="answer1">Loading...</label>
-        <input type="radio" name="answer" id="answer2" value="%ANSWER 2%">
+        <input type="radio" name="answer" id="answer2" value="%ANSWER 2%" onchange="this.form.submit();">
         <label for="answer2">Loading...</label>
-        <input type="radio" name="answer" id="answer3" value="%ANSWER 3%">
+        <input type="radio" name="answer" id="answer3" value="%ANSWER 3%" onchange="this.form.submit();">
         <label for="answer3">Loading...</label>
-        <input type="radio" name="answer" id="answer4" value="%ANSWER 4%">
+        <input type="radio" name="answer" id="answer4" value="%ANSWER 4%" onchange="this.form.submit();">
         <label for="answer4">Loading...</label>
     </div>
-    <input type="submit" value="VERSTUREN">
 </form>
 
 <script src="{{site.baseurl}}/assets/js/exercise.js"></script>

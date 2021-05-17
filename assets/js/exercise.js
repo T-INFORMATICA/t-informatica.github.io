@@ -19,10 +19,14 @@ function confirmExit() {
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
 
+    document.querySelectorAll(`[name="answer"]:not(:checked)`).forEach(el => el.disabled = true);
+
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child(`questions/${questionKey}/answer`).set(answer);
+
+    setTimeout(() => { console.log("Generating new question..."); }, 2000);
 
     loadExercise();
 }
@@ -30,9 +34,6 @@ function submitExercise(submitEvent) {
 function EvaluateExercise(subject) {
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
-
-
-    let userref = database.ref(`users/${_user.uid}`);
     let termsref = database.ref(`knownTerms/${_user.uid}`);
 
     let terms = {};
@@ -82,6 +83,8 @@ function CreateNewExercise(subject) {
 
 function generateQuestion() {
     window.onbeforeunload = confirmExit;
+
+    document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = false);
 
     let form = document.querySelector("#exercise");
     form.addEventListener("submit", submitExercise);
