@@ -7,7 +7,7 @@ function loadExercise() {
     if (exerciseid == null) {
         document.querySelector("#exerciseSelection").style.display = "";
 
-        subject = new URLSearchParams(window.location.search).get('subject');
+        let subject = new URLSearchParams(window.location.search).get('subject');
         if (subject) {
             CreateNewExercise('subject');
         }
