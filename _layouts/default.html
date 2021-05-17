@@ -37,6 +37,12 @@
 <body class="bg-dark text-light">
     <header class="bg-dark glow-pink">
         {% include topNavigation.html %}
+        <script>
+            firebase.auth().onAuthStateChanged(function (user) {
+                authUser(user);
+                addUsersToMenu();
+            });
+        </script>
     </header>
     <main>
         {{content}}
@@ -45,14 +51,6 @@
 
         created by Sam Van Battel
     </footer>
-
-
-    <script>
-        firebase.auth().onAuthStateChanged(function (user) {
-            authUser(user);
-            addUsersToMenu();
-        });
-    </script>
 </body>
 
 </html>
