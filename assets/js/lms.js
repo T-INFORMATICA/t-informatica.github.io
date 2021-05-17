@@ -195,7 +195,7 @@ function definitionsLoaded(e) {
                     let amount = parseFloat(Object.entries(timestamps).length);
                     let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
 
-                    if (term in knownTerms) {
+                    if (term in knownWords) {
                         console.log(`${term}, ${subject}, ${avg}`);
                         // Only count words that are known for 90% or more
                         wordsLearned += avg < .9 ? 0 : 1;
