@@ -123,7 +123,7 @@ function createUserManagementForms() {
                 document.querySelector("#student-management-forms").innerHTML += tmpl;
             });
             console.log(document.querySelectorAll(".student-management-form"));
-            document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("formdata", manageStudent))
+            document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("submit", manageStudent));
         });
 }
 
