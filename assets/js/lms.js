@@ -164,6 +164,29 @@ function addUserdataToProfileTable() {
     );
 }
 
+function addCounterForKnownTermsToPage() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "/assets/data/definitionsCategories.json");
+    request.addEventListener("load", defnitionsLoaded);
+    request.send();
+}
+
+function definitionsLoaded(e) {
+    let definitions = JSON.parse(e.currentTarget.response);
+
+    for (const subject in definitions) {
+        for (const termdef in subject) {
+            console.log(termdef);
+        }
+    }
+
+    // let subjectEl = document.querySelector(`#${subjectId}`);
+    // subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
+    // let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
+    // let progress = (wordsLearned / max) * 100;
+    // subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
+}
+
 function addResultsToPage() {
     let userid = getUserId();
 
@@ -216,12 +239,12 @@ function addResultsToPage() {
             // calculate the current result for each subject and show it on the page
             for (const [sub, results] of Object.entries(subjects)) {
                 let result = calculateResult(results.map(x => x.result));
-                showResultInSubjectElement(sub, result, 1);
+                showResultInSubjectElement(sub, result);
             }
         });
 }
 
-function showResultInSubjectElement(subject, result, wordsLearned) {
+function showResultInSubjectElement(subject, result) {
     let subjectId = toCssSafeId(subject);
 
     let subjectEl = document.querySelector(`#${subjectId}`);
@@ -240,11 +263,6 @@ function showResultInSubjectElement(subject, result, wordsLearned) {
 
     let commentsEl = subjectEl.querySelector('.comments');
     commentsEl.innerHTML = "";
-
-    subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
-    let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
-    let progress = (wordsLearned / max) * 100;
-    subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
 }
 
 function addCategoryElement(category) {
