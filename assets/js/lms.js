@@ -174,12 +174,19 @@ function addCounterForKnownTermsToPage() {
 function definitionsLoaded(e) {
     let definitions = JSON.parse(e.currentTarget.response);
 
-    for (const subject in definitions) {
-        console.log(subject);
-        for (const termdef in subject) {
-            console.log(subject[termdef]);
+    let database = firebase.database();
+    let termsref = database.ref(`knownTerms/${getUserId()}`);
+
+    termsref.once('value').then(snapshot => {
+        console.log(snapshot.val());
+
+
+        for (const subject in definitions) {
+            for (const index in definitions[subject]) {
+                let termdef = definitions[subject][index];
+            }
         }
-    }
+    });
 
     // let subjectEl = document.querySelector(`#${subjectId}`);
     // subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;

@@ -26,10 +26,9 @@ layout: lms
 
 <script>
 
-    firebase.auth().onAuthStateChanged(function (user) {
-        authUser(user);
-        addResultsToPage();
+        firebase.auth().onAuthStateChanged(function (user) {
         addCounterForKnownTermsToPage();
+        addResultsToPage();
     });
 
 </script>
