@@ -247,10 +247,6 @@ main>article#content {
 }
 
 .student-management-collapse:checked+label+form {
-    display: block;
-}
-
-.student-management-form {
     display: grid;
     grid-template-columns: 100px auto;
     margin: 8px;
