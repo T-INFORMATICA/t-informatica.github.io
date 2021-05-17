@@ -183,7 +183,9 @@ function definitionsLoaded(e) {
             let knownSubjectWords = snapshot.val();
 
             for (const subject in definitions) {
+                console.log(knownSubjectWords);
                 let knownWords = knownSubjectWords[subject];
+                console.log(knownWords);
                 let wordsLearned = 0;
 
                 for (const index in definitions[subject]) {
