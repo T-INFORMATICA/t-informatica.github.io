@@ -58,7 +58,7 @@ function EvaluateExercise(subject) {
                 let termCount = questions.reduce((i, it) => it[1].term === term ? ++i : i, 0);
                 console.log(subject);
                 termsref
-                    .child(`${term}/${timestamp}/${subject}`)
+                    .child(`${subject}/${term}/${timestamp}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
                 // .then(() => window.location.replace('/lms-exercise.html'));
