@@ -187,7 +187,7 @@ pre {
     display: none;
 }
 
-#exerciseAnswers input+label:hover {
+#exerciseAnswers input:not(disabled)+label:hover {
     outline: .25rem solid var(--color-accent-cyan);
 }
 
