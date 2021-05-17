@@ -238,5 +238,15 @@ main>article#content {
 
 .student-management-form {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 100px auto;
+    margin: 8px 8px 32px 8px;
+    grid-gap: 8px;
+}
+
+.student-management-collapse+form {
+    display: none;
+}
+
+.student-management-collapse:checked+form {
+    display: block;
 }
