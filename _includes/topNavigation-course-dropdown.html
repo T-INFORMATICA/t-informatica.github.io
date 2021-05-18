@@ -15,6 +15,21 @@
             </ul>
         </fieldset>
         {%endfor%}
+        
+        {% if coursedata.tutorials %}
+        <fieldset>
+            <legend>
+                <a href="{{ subjectdata.link }}">{{ subjectdata.name }}</a>
+            </legend>
+            <ul>
+            {% for tutorialdata in coursedata.tutorials %}
+                <li>
+                    <a href="{{tutorialdata.link}}">{{tutorialdata.name}}</a>
+                </li>
+            {%endfor%}
+            </ul>
+        </fieldset>
+        {% endif %}
     {% endif %}
 
 {% endfor %}

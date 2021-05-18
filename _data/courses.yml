@@ -26,9 +26,9 @@
   link: /courses/programmeren/
   tutorials:
     - name: "Bullet Hell met p5.js"
-      link: "/tutorials/programmeren/p5-bullet-hell"
+      link: "/tutorials/programmeren/p5-bullet-hell.html"
     - name: "Platformer met p5.js"
-      link: "/tutorials/programmeren/p5-platformer"
+      link: "/tutorials/programmeren/p5-platformer.html"
   subjects:
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
