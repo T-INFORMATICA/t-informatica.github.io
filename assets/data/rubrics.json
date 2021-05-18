@@ -1,0 +1,20 @@
+---
+layout: null
+---
+
+{
+    {%- for coursedata in site.data.courses %}
+                {% for subjectdata in coursedata.subjects %}
+                    {% assign rubric = subjectdata.rubric %}
+    "{{subjectdata.name}}": {
+        "A": "{{rubric.A}}",
+        "B": "{{rubric.B}}",
+        "C": "{{rubric.C}}",
+        "D": "{{rubric.D}}",
+        "E": "{{rubric.E}}"
+    }
+                    {%- unless forloop.last %},{% endunless -%}
+                {% endfor %}
+                {%- unless forloop.last %},{% endunless -%}
+    {% endfor %}
+}

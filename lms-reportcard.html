@@ -2,4 +2,33 @@
 layout: lms
 ---
 
-<h1>test</h1>
+{%- for coursedata in site.data.courses %}
+    <h2 id="course-{{courseid}}">{{coursedata.name}}</h2>
+    {% assign courseid=coursedata.name | remove: " " | downcase %}
+    <div class="courseResults" id="{{courseid}}">
+    {% for subjectdata in coursedata.subjects %}
+        {% assign numTerms = 0 %}
+        {%- for chapter in subjectdata.chapters -%}
+            {%- for course in site.courses -%}
+                {%- if course.url == chapter.link %}
+                    {%- for definition in course.definitions %}
+                        {%- assign numTerms = numTerms | plus: 1 -%}
+                    {%- endfor -%}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endfor %}
+        {% assign subjectid=subjectdata.name | remove: " " | downcase %}
+        {% include reportcard-subject-v2.html id=subjectid subject=subjectdata.name progress=0 progressTotal=numTerms %}
+    {%- endfor -%}
+    </div>
+{% endfor %}
+
+
+<script>
+
+        firebase.auth().onAuthStateChanged(function (user) {
+        addCounterForKnownTermsToPage();
+        addResultsToPage();
+    });
+
+</script>

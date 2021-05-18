@@ -1,0 +1,19 @@
+<div class="subjectResultCard-v2 unknownGrade" id="{{include.id}}">
+    <div class="result" title="{{include.subject}}">
+        <div class="grade">
+            ?
+        </div>
+        <div class="subject">
+            <span class="subtitle">Onbekend</span>
+            <h3 class="title" id="title-{{include.id}}">{{include.subject}}</h3>
+        </div>
+    </div>
+    <div class="progressbar-bg">
+        {% assign total = include.progressTotal | times: 1.0 %}
+        <div class="progressbar-progress" style="width: 0%"></div>
+        <a href="/lms-exercise.html?subject={{include.subject}}" class="progressbar-label"><span class="numWordsLearned">0</span> / <span class="maxWordsLearned">{{include.progressTotal}}</span> woorden geleerd</a>
+    </div>
+    <div class="comments">
+        Deze doelstelling werd nog niet geevalueerd.
+    </div>
+</div>

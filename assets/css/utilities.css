@@ -50,3 +50,35 @@
 .dropdownContainer:hover>.dropdownWindow {
     display: block;
 }
+
+/*  ////////////////////*/
+/* //EVALUATION CARDS//*/
+/*////////////////////*/
+
+.subjectResultCard-v2>.result.resultA {
+    background-color: #46b8e9;
+}
+
+.subjectResultCard-v2>.result.resultB {
+    background-color: #13d4b9;
+    /* 13d4b9 */
+    /* 3ee9d1 */
+}
+
+.subjectResultCard-v2>.result.resultC {
+    background-color: #82d02b;
+    /* 82d02b */
+    /* 99e93e */
+}
+
+.subjectResultCard-v2>.result.resultD {
+    background-color: #e0b53d;
+}
+
+.subjectResultCard-v2>.result.resultE {
+    background-color: #e9493e;
+}
+
+.unknownGrade {
+    opacity: .2;
+}

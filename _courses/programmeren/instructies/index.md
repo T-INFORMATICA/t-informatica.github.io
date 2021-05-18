@@ -1,6 +1,6 @@
 ---
 title: Instructies
-# layout: course_summary
+layout: course_summary
 ---
 
  - De verschillende datatypes (integer, boolean, string, decimal/float/double) in een programmeertaal kennen en gebruiken

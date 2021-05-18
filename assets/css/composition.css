@@ -1,14 +1,15 @@
 :root {
     --footer-size: 4rem;
     --max-page-width: 1100px;
-    --header-size: 40px;
+    --header-size: 50px;
 
     --color-100: #fff;
     --color-200: #fafafa;
     --color-300: ##dedede;
+    --color-700: #42444e;
     --color-800: #1d1f28ff;
     --color-900: #000;
-    --color-accent-pink: #ff4971ff;
+    --color-accent-pink: #ff4971;
     --color-accent-cyan: #18e3c8;
 }
 
@@ -84,7 +85,7 @@ header>nav>ul>li {
 }
 
 header>nav .navButton {
-    padding: .5rem;
+    padding: 1rem .5rem;
     font-size: 1rem;
 }
 
@@ -93,7 +94,7 @@ header>nav .iconButton {
     font-size: 1.2rem;
 }
 
-#usermenu {
+.dropdownContainer .dropdownWindow {
     padding: 16px;
 }
 
@@ -165,9 +166,19 @@ main>article#content {
     padding: .5rem;
 }
 
+#pageManagement ul a {
+    display: block;
+}
+
 #pageManagement ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
+}
+
+#pageManagement ul ul {
+    margin-top: .5rem;
+    margin-left: .5rem;
     padding: 0;
 }
 
@@ -180,7 +191,64 @@ main>article#content {
     padding: 4px 8px;
 } 
 
-/*  ///////////////////*/
-/* //CONTENT SECTION//*/
-/*///////////////////*/
+/*  ////////////////////*/
+/* //ADMIN GRADE FORM//*/
+/*////////////////////*/
 
+#gradeform .evalShowGrades,
+#gradeform input[type="radio"] {
+    display: none;
+}
+
+.evalShowGrades+* {
+    display: none;
+}
+
+.evalShowGrades:checked+.gradeform-subject {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.gradeform-subject-option:hover {
+    outline: 2px solid var(--color-accent-pink);
+}
+
+.gradeform-subject-option {
+    padding: 4px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.gradeform-subject>input[type="radio"]:checked+.gradeform-subject-option {
+    background-color: var(--color-accent-pink);
+}
+
+.gradeform-subject-option-comment {
+    padding: 4px;
+    border: 1px solid black;
+    flex: 1;
+}
+
+/*  /////////////////////////*/
+/* //ADMIN MANAGEMENT FORM//*/
+/*/////////////////////////*/
+
+.student-management-collapse+label {
+    display: block;
+    margin: 32px 8px 8px 8px;
+}
+
+.student-management-collapse,
+.student-management-collapse+label+form {
+    display: none;
+}
+
+.student-management-collapse:checked+label+form {
+    display: grid;
+    grid-template-columns: 100px auto;
+    margin: 8px;
+    grid-gap: 8px;
+}

@@ -3,6 +3,12 @@
   subjects:
     - name: "basiskennis"
       link: "/courses/basis/basiskennis/"
+      rubric:
+        "A": "Dit is een A"
+        "B": "Dit is een B"
+        "C": "Dit is een C"
+        "D": "Dit is een D"
+        "E": "Dit is een E"
       chapters:
         - name: "code editors"
           link: "/courses/basis/basiskennis/code-editors.html"
@@ -21,6 +27,12 @@
   subjects:
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
+      rubric:
+        "A": "Dit is een A"
+        "B": "Dit is een B"
+        "C": "Dit is een C"
+        "D": "Dit is een D"
+        "E": "Dit is een E"
       chapters:
         - name: Waardes
           link: "/courses/programmeren/instructies/waardes.html"
@@ -39,6 +51,12 @@
           doel: "instructies"
     - name: "Codeblokken"
       link: "/courses/programmeren/codeblokken/"
+      rubric:
+        "A": "Dit is een A"
+        "B": "Dit is een B"
+        "C": "Dit is een C"
+        "D": "Dit is een D"
+        "E": "Dit is een E"
       chapters:
         - name: Codeblokken
           link: "/courses/programmeren/codeblokken/codeblokken.html"
@@ -54,6 +72,12 @@
           doel: "Codeblokken (iteratie)"
     - name: "Datastructuren"
       link: "/courses/programmeren/datastructuren/"
+      rubric:
+        "A": "Dit is een A"
+        "B": "Dit is een B"
+        "C": "Dit is een C"
+        "D": "Dit is een D"
+        "E": "Dit is een E"
       chapters:
         - name: Objecten
           link: "/courses/programmeren/datastructuren/objecten.html"
@@ -81,6 +105,12 @@
   subjects:
     - name: "Markup"
       link: "/courses/webontwikkeling/html"
+      rubric:
+        "A": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, en er is gekozen voor een optimale oplossing."
+        "B": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, hoewel er oplossingen bestaan die korter of optimaler zijn."
+        "C": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. Elementen zijn niet voldoende onderverdeeld in grotere elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
+        "D": "Elementen worden correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
+        "E": "Elementen worden niet correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn niet of onduidelijk ingevuld waar nodig."
       chapters:
         - name: Markup
           link: "/courses/webontwikkeling/html/markup-languages.html"
@@ -105,6 +135,12 @@
           doel: "structuur"
     - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
+      rubric:
+        "A": "Dit is een A"
+        "B": "Dit is een B"
+        "C": "Dit is een C"
+        "D": "Dit is een D"
+        "E": "Dit is een E"
       chapters:
         - name: CSS
           link: "/courses/webontwikkeling/css/css.html"
@@ -144,6 +180,12 @@
 # #          doel: "layout"
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
+      rubric:
+        "A": "Dit is een A"
+        "B": "Dit is een B"
+        "C": "Dit is een C"
+        "D": "Dit is een D"
+        "E": "Dit is een E"
       chapters:
         - name: "Responsive Webdesign"
           link: "/courses/webontwikkeling/statische-websites/responsive-webdesign.html"
@@ -174,6 +216,12 @@
           doel: "opmaak"
     - name: "Dynamische Websites"
       link: "/courses/webontwikkeling/dynamische-websites"
+      rubric:
+        "A": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code."
+        "B": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code, hoewel er duidelijk oplossingen bestaan die korter of optimaler zijn."
+        "C": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
+        "D": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn niet correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
+        "E": "GET, POST en SESSION methodes werden niet correct gebruikt om data op te vangen en door te geven. "
       chapters:
         - name: URL Parameters
           link: "/courses/webontwikkeling/dynamische-websites/url-parameters.html"
@@ -198,6 +246,12 @@
   subjects:
     - name: "Database Ontwerp"
       link: "/courses/databanken/database-ontwerp"
+      rubric:
+        "A": "Databasefouten werden correct herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. "
+        "B": "Databasefouten werden correct herkend. Het strokendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. Het multipliciteitendiagram is onvoldoende uitgewerkt. "
+        "C": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Sleutels werden correct aangeduid. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. "
+        "D": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet correct aangeduid. "
+        "E": "Databasefouten werden niet goed herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet aangeduid. "
       chapters:
         - name: Inleiding
           link: "/courses/databanken/database-ontwerp/inleiding.html"
@@ -222,6 +276,12 @@
           doel: "database normalisatie"
     - name: "SQL"
       link: "/courses/databanken/sql"
+      rubric:
+        "A": "De projectie, brontabel en selectie is correct geimplementeerd voor de hoofd- en subqueries."
+        "B": "De projectie, brontabel en selectie is correct geimplementeerd. Er werd geen gebruik gemaakt van subqueries waar nodig."
+        "C": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit meerdere brontabellen. De selectie is niet correct geimplementeerd."
+        "D": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit één brontabel. De selectie is niet correct geimplementeerd."
+        "E": "De projectie, brontabel en selectie van queries zijn verkeerd geimplementeerd."
       chapters:
         - name: Inleiding
           link: "/courses/databanken/sql/inleiding.html"
