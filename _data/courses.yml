@@ -24,6 +24,11 @@
           doel:
 - name: "programmeren"
   link: /courses/programmeren/
+  tutorials:
+    - name: "Bullet Hell met p5.js"
+      link: "/tutorials/programmeren/p5-bullet-hell"
+    - name: "Platformer met p5.js"
+      link: "/tutorials/programmeren/p5-platformer"
   subjects:
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
