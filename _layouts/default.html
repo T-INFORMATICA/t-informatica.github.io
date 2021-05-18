@@ -19,6 +19,8 @@
 
     <script src="/assets/js/firebase-conf.js"></script>
     <script src="/assets/js/firebase-auth-ui.js"></script>
+    <script src="/assets/js/html-templates.js"></script>
+    <script src="/assets/js/lms.js"></script>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 
@@ -35,6 +37,12 @@
 <body class="bg-dark text-light">
     <header class="bg-dark glow-pink">
         {% include topNavigation.html %}
+        <script>
+            firebase.auth().onAuthStateChanged(function (user) {
+                authUser(user);
+                addUsersToMenu();
+            });
+        </script>
     </header>
     <main>
         {{content}}
@@ -43,13 +51,6 @@
 
         created by Sam Van Battel
     </footer>
-
-
-    <script>
-        firebase.auth().onAuthStateChanged(function (user) {
-            authUser(user);
-        });
-    </script>
 </body>
 
 </html>

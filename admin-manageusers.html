@@ -1,5 +1,23 @@
 ---
-layout: lms
+layout: admin
 ---
 
-<h1>test</h1>
+<h1>User Management</h1>
+
+<h2>Manage Current Users</h2>
+
+<div id="student-management-forms">
+</div>
+
+<h2>Manage New Users</h2>
+
+<div id="registration-approval-forms">
+</div>
+
+
+<script src="/assets/js/admin.js"></script>
+<script>
+    firebase.auth().onAuthStateChanged(function (user) {
+        createUserManagementForms();
+    });
+</script>

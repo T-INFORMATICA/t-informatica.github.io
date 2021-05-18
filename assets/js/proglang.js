@@ -1,9 +1,4 @@
-var ready = (callback) => {
-    if (document.readyState != "loading") callback();
-    else document.addEventListener("DOMContentLoaded", callback);
-}
-
-ready(function () {
+documentReady(function () {
     var lang = localStorage.getItem('lang');
     //var lang = getCookie("lang");
     // console.log(lang);

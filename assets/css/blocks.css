@@ -3,6 +3,10 @@ a {
     color: var(--color-accent-cyan);
 }
 
+header {
+    z-index: 999;
+}
+
 a:hover {
     text-decoration: underline;
 }
@@ -53,4 +57,140 @@ pre {
     background-size: 200px;
     background-attachment: fixed;
     z-index: -1;
-  }
+}
+
+.courseResults {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+/*  //////////////////*/
+/* //CARDS&TIMELINE//*/
+/*//////////////////*/
+
+.subjectResultCard-v2 {
+    width: 240px;
+}
+
+.subjectResultCard-v2>.result {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-accent-pink);
+}
+
+
+.subjectResultCard-v2>.result>.subject {
+    min-width: 0;
+}
+
+.subjectResultCard-v2>.result>.subject * {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.subjectResultCard-v2>.result>.grade {
+    font-size: 2rem;
+    padding: .25rem;
+    margin: .25rem;
+    background-color: var(--color-900);
+    width: 2.5rem;
+    text-align: center;
+}
+
+.subjectResultCard-v2>.result>.subject>.subtitle {
+    font-size: .75rem;
+}
+
+.subjectResultCard-v2>.result>.subject>.title {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.timelineItem {
+    position: relative;
+    border-left: 1px solid white;
+    border-bottom: 1px dashed var(--color-700);
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+.timelineItem .title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: .5rem;
+}
+
+.timelineItem .subtitle {
+    font-size: 1rem;
+}
+
+.timelineItem .marker {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-800);
+    left: -12px;
+    top: 36px;
+    border-radius: 9999px;
+    font-size: 1.7rem;
+}
+
+.subjectResultCard-v2 .progressbar-bg {
+    height: 24px;
+    border: 1px solid #a1a1a1;
+    position: relative;
+    background-color: #cbd8e3;
+}
+
+.subjectResultCard-v2 .progressbar-progress {
+    background-color: #30638e;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, #658096, #658096 5px, #30638e 5px, #30638e 10px);
+}
+
+.subjectResultCard-v2 .progressbar-label {
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+
+
+/*  /////////////////*/
+/* //EXERCISE FORM//*/
+/*/////////////////*/
+
+#exerciseAnswers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 2rem .5rem;
+}
+
+#exerciseAnswers label {
+    font-weight: bold;
+    background-color: var(--color-700);
+    padding: 1rem;
+}
+
+#exerciseAnswers input {
+    display: none;
+}
+
+#exerciseAnswers input:not(disabled)+label:hover {
+    outline: .25rem solid var(--color-accent-cyan);
+}
+
+#exerciseAnswers input:not(disabled):checked+label {
+    outline: .5rem solid var(--color-accent-cyan);
+}
