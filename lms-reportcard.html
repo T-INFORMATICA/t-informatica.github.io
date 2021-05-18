@@ -18,7 +18,7 @@ layout: lms
             {%- endfor -%}
         {%- endfor %}
         {% assign subjectid=subjectdata.name | remove: " " | downcase %}
-        {% include reportcard-subject-v2.html id=subjectid subject=subjectdata.name progress=0 progressTotal=numTerms %}
+        {% include reportcard-subject.html id=subjectid subject=subjectdata.name progress=0 progressTotal=numTerms %}
     {%- endfor -%}
     </div>
 {% endfor %}

@@ -1,6 +1,6 @@
 ---
 title: Datastructuren
-# layout: course_summary
+layout: course_summary
 ---
 
  - Objecten kunnen aanmaken en gebruiken

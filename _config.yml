@@ -12,6 +12,10 @@ collections:
 
 defaults:
     - scope:
+          path: "_tutorials"
+      values:
+          layout: "tutorial"
+    - scope:
           path: "_courses/programmeren"
       values:
           course: "programmeren"

@@ -1,6 +1,6 @@
 ---
 title: Codeblokken
-# layout: course_summary
+layout: course_summary
 ---
 
  - De termen nesten, indentatie en scope kennen

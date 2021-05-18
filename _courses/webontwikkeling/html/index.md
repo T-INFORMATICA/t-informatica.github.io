@@ -1,6 +1,6 @@
 ---
 title: HTML
-# layout: course_summary
+layout: course_summary
 ---
 
  - De termen server, client, browser, viewport kunnen benoemen en definieren

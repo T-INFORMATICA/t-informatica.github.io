@@ -1,0 +1,40 @@
+---
+layout: null
+---
+
+{
+    "courses": [
+    {%- for course in site.data.courses %}
+        {
+            "name": "{{course.name}}",
+            "subjects": [
+                {% for subject in course.subjects %}
+                {
+                    "name": "{{subject.name}}",
+                    "chapters": [
+                        {%- for chapter in subject.chapters -%}
+                            {%- for course in site.courses -%}
+                                {%- assign courseUrl = course.url -%}
+                                {%- if courseUrl == chapter.link %}
+                        {
+                            "name": "{{course.title}}",
+                            "definitions": [
+                                {%- for definition in course.definitions %}
+                                {
+                                    "name": "{{definition.name}}",
+                                    "definition": "{{definition.definition}}"
+                                }{% unless forloop.last %},{% endunless -%}
+                                {% endfor %}
+                            ]
+                        }{% unless subject.chapters.last.link == courseUrl %},{% endunless %}
+                                {% endif -%}
+                            {%- endfor -%}
+                        {%- endfor %}
+                    ]
+                }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]
+        }{% unless forloop.last %},{% endunless %}
+    {% endfor -%}
+    ]
+}
