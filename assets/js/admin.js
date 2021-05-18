@@ -144,3 +144,46 @@ function manageStudent(e) {
     database.ref(`users/${studentId}/password`).set(studentPassword);
     database.ref(`users/${studentId}/url`).set(studentUrl);
 }
+
+function createRegistrationApprovalForms() {
+
+    let database = firebase.database();
+    let newUsersRef = database.ref(`newUsers/${user.uid}`);
+
+
+    newUsersRef.once('value')
+        .then(snapshot => {
+            snapshot.forEach(snapshot => {
+                let studentId = snapshot.key;
+
+                let studentName = "tbt";
+                let studentKlas = "tbt";
+                let studentUsername = "tbt";
+                let studentUrl = "tbt";
+                let studentPassword = "tbt";
+
+                let tmpl = tmpl_registrationApprovalForm(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
+                document.querySelector("#registration-approval-forms").innerHTML += tmpl;
+            });
+            document.querySelectorAll(".registration-approval-form").forEach(form => form.addEventListener("submit", approveRegistration));
+        });
+}
+
+function approveRegistration(e) {
+    e.preventDefault();
+    let form = e.submitter.parentElement;
+
+    let studentId = form.elements["studentId"].value;
+    let studentName = form.elements["studentNaam"].value;
+    let studentKlas = form.elements["studentKlas"].value;
+    let studentUsername = form.elements["studentUsername"].value;
+    let studentUrl = form.elements["studentUrl"].value;
+    let studentPassword = form.elements["studentPassword"].value;
+
+    let database = firebase.database();
+    database.ref(`users/${studentId}/klas`).set(studentKlas);
+    database.ref(`users/${studentId}/naam`).set(studentName);
+    database.ref(`users/${studentId}/username`).set(studentUsername);
+    database.ref(`users/${studentId}/password`).set(studentPassword);
+    database.ref(`users/${studentId}/url`).set(studentUrl);
+}
