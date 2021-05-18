@@ -12,26 +12,25 @@ description:
 
 ## Wat is Responsive Web Design?
 
-Responsive Web Design is het schrijven van HTML en CSS code, die ervoor zorgt dat een website zich aanpast aan het apparaat waarop de website wordt bekeken.
+Websites kunnen bekeken worden op veel verschillende apparaten: computers, tablets, smartphones, …
 
-Responsive Web Design gebruikt **enkel** HTML en CSS.
-
-
-## Ontwerpen met de gebruiker in gedachten
-
-Websites kunnen bekeken worden op veel verschillende apparaten: computers, tables, smartphones, …
-
-Een website zou gemakkelijk te gebruiken moeten zijn en er goed moeten uitzien, ongeacht welk apparaat er gebruikt wordt om de website te bekijken.
-
-Websites mogen informatie niet weglaten om te kunnen passen op kleinere apparaten. In plaats daarvan zou de inhoud zich zo moeten aanpassen dat het leesbaar is op elk apparaat:
-
+Een website moet gemakkelijk te gebruiken zijn EN er goed uitzien, ongeacht welk apparaat er gebruikt wordt om de website te bekijken. Websites mogen ook geen informatie weglaten om te kunnen passen op kleinere apparaten. In plaats daarvan zou de inhoud zich zo moeten aanpassen dat het leesbaar is op elk apparaat:
 
 <img src="{{ site.baseurl }}/assets/img/layout-1.png" alt="" style="height: auto; max-width: 100%">
 
 We spreken over Responsive Web Design wanneer je CSS en HTML gebruikt om inhoud te vergroten, verkleinen, verbergen of verplaatsen zodat die inhoud er goed uitziet op elk scherm.
 
-**Belangrijk!** Bij het ontwikkelen van een Responsive Website ontwikkel je steeds **mobile first**. Mobile first wilt zeggen dat je je website eerst laat werken voor kleine apparaten (smartphones) en daarna CSS regels toevoegt om de website ook toonbaar te maken voor grotere schermen.
+Responsive Web Design gebruikt **enkel** HTML en CSS.
 
+## Mobile First, Desktop Later
+
+Bij het ontwikkelen van een Responsive Website ontwikkel je steeds **mobile first**. Mobile first wilt zeggen dat je je website eerst laat werken voor kleine apparaten (smartphones) en daarna CSS regels toevoegt om de website ook toonbaar te maken voor grotere schermen.
+
+Hoewel deze manier van werken op het eerste zicht de omgekeerde wereld lijkt (je schrijft en test je code waarschijnlijk niet op een smartphone), heeft deze manier van werken een heleboel voordelen:
+
+ - het omzetten van een desktop layout naar een mobile layout vereist veel meer code en werk
+ - je bent zeker dat je website zal werken op èlk apparaat, ook de apparaten die geen nieuwere layout-technieken ondersteunen.
+ - je leert bewuster nadenken over je HTML code, waardoor het schrijven van je CSS selectors gemakkelijker wordt
 
 ## Viewport
 
