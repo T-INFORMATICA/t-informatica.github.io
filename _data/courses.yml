@@ -22,6 +22,30 @@
         - name: "talstelsels"
           link: "/courses/basis/basiskennis/talstelsels.html"
           doel:
+    - name: "foutopsporing"
+      link: "/courses/basis/foutopsporing/"
+      rubric:
+        "A": "Dit is een A"
+        "B": "Dit is een B"
+        "C": "Dit is een C"
+        "D": "Dit is een D"
+        "E": "Dit is een E"
+      chapters:
+        - name: "Foutopsporing"
+          link: "/courses/basis/basiskennis/foutopsporing-algemeen.html"
+          doel:
+        - name: "HTML en CSS"
+          link: "/courses/basis/basiskennis/foutopsporing-html-css.html"
+          doel:
+        - name: "HTML en CSS"
+          link: "/courses/basis/basiskennis/foutopsporing-javascript.html"
+          doel:
+        - name: "HTML en CSS"
+          link: "/courses/basis/basiskennis/foutopsporing-php.html"
+          doel:
+        - name: "HTML en CSS"
+          link: "/courses/basis/basiskennis/foutopsporing-sql.html"
+          doel:
 - name: "programmeren"
   link: /courses/programmeren/
   tutorials:
@@ -165,24 +189,6 @@
 #        - name: State Selectors
 #          link: "/courses/webontwikkeling/css/state-selectors.html"
 #          doel: "opmaak"
-#     - name: "Layout"
-#       link: "/courses/webontwikkeling/layout"
-#       chapters:
-#         - name: Responsive Webdesign
-#           link: "/courses/webontwikkeling/layout/responsive-webdesign.html"
-#           doel: "responsive websites"
-#         - name: CSS Grid
-#           link: "/courses/webontwikkeling/layout/css-grid.html"
-#           doel: "layout"
-# #        - name: Grid Basisbegrippen
-# #          link: "/courses/webontwikkeling/layout/grid-basisbegrippen.html"
-# #          doel: "layout"
-#         - name: CSS Grid Voorbeeld
-#           link: "/courses/webontwikkeling/layout/grid-implementatie.html"
-#           doel: "layout"
-# #        - name: Uitbreiding
-# #          link: "/courses/webontwikkeling/layout/uitbreiding.html"
-# #          doel: "layout"
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
       rubric:
