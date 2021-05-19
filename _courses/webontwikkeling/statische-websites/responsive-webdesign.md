@@ -24,13 +24,19 @@ Responsive Web Design gebruikt **enkel** HTML en CSS.
 
 ## Mobile First, Desktop Later
 
-Bij het ontwikkelen van een Responsive Website ontwikkel je steeds **mobile first**. Mobile first wilt zeggen dat je je website eerst laat werken voor kleine apparaten (smartphones) en daarna CSS regels toevoegt om de website ook toonbaar te maken voor grotere schermen.
+Bij een Responsive website werk je met minstens 2 versies van je website:
+ - een simpele versie die (meestal) uit één kolom bestaat, om te tonen op een klein scherm (Smartphones etc.)
+ - een complexe versie die uit meerdere kolommen en rijen bestaat, om te tonen op een groot scherm (desktops, laptops, etc.)
 
-Hoewel deze manier van werken op het eerste zicht de omgekeerde wereld lijkt (je schrijft en test je code waarschijnlijk niet op een smartphone), heeft deze manier van werken een heleboel voordelen:
+Omdat beide versies sterk op elkaar lijken (ze delen dus heel wat stijlregels), zijn er 2 manieren om deze website te ontwikkelen:
+ 1. Het **Mobile First** principe: Vertrek vanuit de simpele versie, en voeg complexiteit toe.
+ 2. Het **Desktop First** principe: Vertrek vanuit de complexe versie, en neem complexiteit weg.
 
- - het omzetten van een desktop layout naar een mobile layout vereist veel meer code en werk
- - je bent zeker dat je website zal werken op èlk apparaat, ook de apparaten die geen nieuwere layout-technieken ondersteunen.
- - je leert bewuster nadenken over je HTML code, waardoor het schrijven van je CSS selectors gemakkelijker wordt
+Om complexiteit toe te voegen (het Mobile First principe), voeg je een nieuwe stijlregel toe aan je CSS document. Doe je dit binnen een Media Query die enkel geldt voor grotere schermen, dan zal die stijlregel enkel op grotere schermen worden toegepast.\
+Om complexiteit weg te nemen (het Desktop First principe), voeg je eerst een stijlregel toe om de complexiteit er in te steken, en ga je daarna een extra stijlregel toevoegen die de complexiteit terug wegneemt. Doe je dit binnen een Media Query die enkel geldt voor kleine schermen, dan zal die complexiteit enkel weggenomen worden op kleinere schermen.\
+Dit maakt duidelijk dat het Mobile First principe veel minder werk bevat, om tot hetzelfde resultaat te komen: Elke regel die je twee maal moet schrijven bij een Desktop First werkwijze (één maal voor de complexiteit, één maal voor de reset), moet je maar één keer schrijven bij een Mobile First aanpak.
+
+Bij het ontwikkelen van een Responsive Website ontwikkel je dus steeds **Mobile First**. 
 
 ## Viewport
 
@@ -47,9 +53,7 @@ Een **`<meta>`** tag dient om extra informatie te geven over de website. In dit 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
-
-
- \
+\
 Dankzij het `name`-attribute weet de browser dat deze meta-tag informatie bevat over de viewport. 
 
 Het `content`-attribute bepaald hoe de viewport zal worden weergegeven: in dit geval zal de breedte gelijk oplopen met de breedte van het apparaat, en wordt de initiele schaal van de website op 1.0 gezet (= 100%).
