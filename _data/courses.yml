@@ -1,8 +1,8 @@
 - name: "Informatica"
-  link: /courses/basis/
+  link: /courses/informatica/
   subjects:
     - name: "basiskennis"
-      link: "/courses/basis/basiskennis/"
+      link: "/courses/informatica/basiskennis/"
       rubric:
         "A": "Dit is een A"
         "B": "Dit is een B"
@@ -11,19 +11,19 @@
         "E": "Dit is een E"
       chapters:
         - name: "code editors"
-          link: "/courses/basis/basiskennis/code-editors.html"
+          link: "/courses/informatica/basiskennis/code-editors.html"
           doel:
         - name: "source control"
-          link: "/courses/basis/basiskennis/source-control.html"
+          link: "/courses/informatica/basiskennis/source-control.html"
           doel:
         # - name: "ftp"
-        #   link: "/courses/basis/basiskennis/ftp.html"
+        #   link: "/courses/informatica/basiskennis/ftp.html"
         #   doel:
         - name: "talstelsels"
-          link: "/courses/basis/basiskennis/talstelsels.html"
+          link: "/courses/informatica/basiskennis/talstelsels.html"
           doel:
     - name: "foutopsporing"
-      link: "/courses/basis/foutopsporing/"
+      link: "/courses/informatica/foutopsporing/"
       rubric:
         "A": "Dit is een A"
         "B": "Dit is een B"
@@ -32,19 +32,19 @@
         "E": "Dit is een E"
       chapters:
         - name: "Foutopsporing"
-          link: "/courses/basis/basiskennis/foutopsporing-algemeen.html"
+          link: "/courses/informatica/basiskennis/foutopsporing-algemeen.html"
           doel:
         - name: "Foutopsporing in HTML en CSS"
-          link: "/courses/basis/basiskennis/foutopsporing-html-css.html"
+          link: "/courses/informatica/basiskennis/foutopsporing-html-css.html"
           doel:
         - name: "Foutopsporing in Javascript"
-          link: "/courses/basis/basiskennis/foutopsporing-javascript.html"
+          link: "/courses/informatica/basiskennis/foutopsporing-javascript.html"
           doel:
         - name: "Foutopsporing in PHP"
-          link: "/courses/basis/basiskennis/foutopsporing-php.html"
+          link: "/courses/informatica/basiskennis/foutopsporing-php.html"
           doel:
         - name: "Foutopsporing in SQL"
-          link: "/courses/basis/basiskennis/foutopsporing-sql.html"
+          link: "/courses/informatica/basiskennis/foutopsporing-sql.html"
           doel:
 - name: "programmeren"
   link: /courses/programmeren/
