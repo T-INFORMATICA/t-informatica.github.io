@@ -1,5 +1,5 @@
 ---
-title: FTP
+title: Foutopsporing in Javascript
 tags: 
  - 
 description: 

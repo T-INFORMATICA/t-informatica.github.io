@@ -34,16 +34,16 @@
         - name: "Foutopsporing"
           link: "/courses/basis/basiskennis/foutopsporing-algemeen.html"
           doel:
-        - name: "HTML en CSS"
+        - name: "Foutopsporing in HTML en CSS"
           link: "/courses/basis/basiskennis/foutopsporing-html-css.html"
           doel:
-        - name: "HTML en CSS"
+        - name: "Foutopsporing in Javascript"
           link: "/courses/basis/basiskennis/foutopsporing-javascript.html"
           doel:
-        - name: "HTML en CSS"
+        - name: "Foutopsporing in PHP"
           link: "/courses/basis/basiskennis/foutopsporing-php.html"
           doel:
-        - name: "HTML en CSS"
+        - name: "Foutopsporing in SQL"
           link: "/courses/basis/basiskennis/foutopsporing-sql.html"
           doel:
 - name: "programmeren"
