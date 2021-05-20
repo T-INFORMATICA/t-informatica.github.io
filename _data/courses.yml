@@ -13,9 +13,9 @@
         - name: "code editors"
           link: "/courses/basis/basiskennis/code-editors.html"
           doel:
-        - name: "source control"
-          link: "/courses/basis/basiskennis/source-control.html"
-          doel:
+        # - name: "source control"
+        #   link: "/courses/basis/basiskennis/source-control.html"
+        #   doel:
         - name: "ftp"
           link: "/courses/basis/basiskennis/ftp.html"
           doel:
