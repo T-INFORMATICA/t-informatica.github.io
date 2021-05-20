@@ -172,14 +172,14 @@ $tweedeAuto = autos[1];
 Een andere manier om deze array te schrijven is als volgt:
 
 ```php
-$autos = array(0 =&gt; "Volvo", 1 =&gt; "BMW", 2 =&gt; "Toyota");
+$autos = array(0 => "Volvo", 1 => "BMW", 2 => "Toyota");
 $tweedeAuto = autos[1];
 ```
 
 Op deze manier kan je zelf de index kiezen die bij elke waarde hoort. Je kan zelfs een compleet andere index kiezen, en op dezelfde manier een waarde opvragen:
 
 ```php
-$autos = array (7 =&gt; "Volvo", 5 =&gt; "BMW", 13 =&gt; "Toyota");
+$autos = array (7 => "Volvo", 5 => "BMW", 13 => "Toyota");
 
 echo $autos[7]; 		// toont Volvo op het scherm
 echo $autos[5]; 		// toont BMW op het scherm
@@ -196,7 +196,7 @@ Een naam kan eender wat zijn, zo lang het uniek is:
 Het is dus mogelijk om in plaats een getal een woord te gebruiken. Zo kan je automerken bijvoorbeeld associëren met het land waar ze gemaakt worden.
 
 ```php
-$autos = array ("Zweeds" =&gt; "Volvo", "Duits" =&gt; "BMW", "Japans" =&gt; "Toyota");
+$autos = array ("Zweeds" => "Volvo", "Duits" => "BMW", "Japans" => "Toyota");
 
 echo $autos["Zweeds"]; 		// toont Volvo op het scherm
 echo $autos["Duits"]; 		// toont BMW op het scherm
