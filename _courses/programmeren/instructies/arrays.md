@@ -159,11 +159,9 @@ $aantal[] = "Renault";			// voegt een waarde toe aan het einde
 
 
 
-<div class="lang lang-PHP"> 
+## Associative Arrays
 
-<h2>Associative Arrays</h2>
-
-<p>Indexed arrays gebruiken een index om een waarde op te vragen.</p>
+Indexed arrays gebruiken een index om een waarde op te vragen.
 
 ```php
 // index:	  0	  1	    2
@@ -171,14 +169,14 @@ $autos = array("Volvo", "BMW", "Toyota");
 $tweedeAuto = autos[1];
 ```
 
-<p>Een andere manier om deze array te schrijven is als volgt:</p>
+Een andere manier om deze array te schrijven is als volgt:
 
 ```php
 $autos = array(0 =&gt; "Volvo", 1 =&gt; "BMW", 2 =&gt; "Toyota");
 $tweedeAuto = autos[1];
 ```
 
-<p>Op deze manier kan je zelf de index kiezen die bij elke waarde hoort. Je kan zelfs een compleet andere index kiezen, en op dezelfde manier een waarde opvragen:</p>
+Op deze manier kan je zelf de index kiezen die bij elke waarde hoort. Je kan zelfs een compleet andere index kiezen, en op dezelfde manier een waarde opvragen:
 
 ```php
 $autos = array (7 =&gt; "Volvo", 5 =&gt; "BMW", 13 =&gt; "Toyota");
@@ -188,16 +186,14 @@ echo $autos[5]; 		// toont BMW op het scherm
 echo $autos[13]; 		// toont Toyota op het scherm
 ```
 
-<p>Bovenstaande array wordt ook een <b>associative array</b> genoemd. Associative arrays zijn een uitbreiding op indexed arrays. Ze worden zo genoemd omdat in dit soort arrays de waarde wordt geassocieerd met een zelf gekozen index, meestal een naam of getal.<p>
+Bovenstaande array wordt ook een **associative array** genoemd. Associative arrays zijn een uitbreiding op indexed arrays. Ze worden zo genoemd omdat in dit soort arrays de waarde wordt geassocieerd met een zelf gekozen index, meestal een naam of getal.
 
-<p>Een naam kan eender wat zijn, zo lang het uniek is:</p>
-<ul>
-	<li>Een getal</li>
- <li>Een letter</li>
- <li>Een woord</li>
-</ul>
+Een naam kan eender wat zijn, zo lang het uniek is:
+ - Een getal
+ - Een letter
+ - Een woord
 
-<p>Het is dus mogelijk om in plaats een getal een woord te gebruiken. Zo kan je automerken bijvoorbeeld associëren met het land waar ze gemaakt worden.</p>
+Het is dus mogelijk om in plaats een getal een woord te gebruiken. Zo kan je automerken bijvoorbeeld associëren met het land waar ze gemaakt worden.
 
 ```php
 $autos = array ("Zweeds" =&gt; "Volvo", "Duits" =&gt; "BMW", "Japans" =&gt; "Toyota");
