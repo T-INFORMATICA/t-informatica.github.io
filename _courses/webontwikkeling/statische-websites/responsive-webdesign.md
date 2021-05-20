@@ -7,8 +7,6 @@ tags:
 description:
 ---
 
-# Responsive Webdesign
-
 
 ## Wat is Responsive Web Design?
 
