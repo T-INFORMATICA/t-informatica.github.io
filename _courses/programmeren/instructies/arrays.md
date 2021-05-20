@@ -160,8 +160,10 @@ $aantal[] = "Renault";			// voegt een waarde toe aan het einde
 
 
 ## Associative Arrays
+{: .language-php }
 
 Indexed arrays gebruiken een index om een waarde op te vragen.
+{: .language-php }
 
 ```php
 // index:	  0	  1	    2
@@ -170,6 +172,7 @@ $tweedeAuto = autos[1];
 ```
 
 Een andere manier om deze array te schrijven is als volgt:
+{: .language-php }
 
 ```php
 $autos = array(0 => "Volvo", 1 => "BMW", 2 => "Toyota");
@@ -177,6 +180,7 @@ $tweedeAuto = autos[1];
 ```
 
 Op deze manier kan je zelf de index kiezen die bij elke waarde hoort. Je kan zelfs een compleet andere index kiezen, en op dezelfde manier een waarde opvragen:
+{: .language-php }
 
 ```php
 $autos = array (7 => "Volvo", 5 => "BMW", 13 => "Toyota");
@@ -187,13 +191,17 @@ echo $autos[13]; 		// toont Toyota op het scherm
 ```
 
 Bovenstaande array wordt ook een **associative array** genoemd. Associative arrays zijn een uitbreiding op indexed arrays. Ze worden zo genoemd omdat in dit soort arrays de waarde wordt geassocieerd met een zelf gekozen index, meestal een naam of getal.
+{: .language-php }
 
 Een naam kan eender wat zijn, zo lang het uniek is:
+{: .language-php }
  - Een getal
  - Een letter
  - Een woord
+{: .language-php }
 
 Het is dus mogelijk om in plaats een getal een woord te gebruiken. Zo kan je automerken bijvoorbeeld associëren met het land waar ze gemaakt worden.
+{: .language-php }
 
 ```php
 $autos = array ("Zweeds" => "Volvo", "Duits" => "BMW", "Japans" => "Toyota");
