@@ -44,7 +44,7 @@
 .dropdownWindow.dropdownWindowFullscreen {
     left: 0;
     right: 0;
-    columns: 200px 12;
+    columns: 250px 12;
 }
 
 .dropdownContainer:hover>.dropdownWindow {
