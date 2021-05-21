@@ -25,4 +25,7 @@ document.querySelector('select.lang-select').addEventListener("change", (e) => {
 function showCode(lang) {
   document.querySelectorAll(`div.highlighter-rouge:not(.${lang})`).forEach(box => { box.style.display = "none"; });
   document.querySelectorAll(`div.highlighter-rouge.${lang}`).forEach(box => { box.style.display = ""; });
+  
+  document.querySelectorAll(`.languageSpecific:not(.${lang})`).forEach(box => { box.style.display = "none"; });
+  document.querySelectorAll(`.languageSpecific.${lang}`).forEach(box => { box.style.display = ""; });
 }
