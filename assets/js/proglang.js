@@ -23,6 +23,6 @@ document.querySelector('select.lang-select').addEventListener("change", (e) => {
 });
 
 function showCode(lang) {
-  document.querySelectorAll(`:not(.${lang})`).forEach(box => { box.style.display = "none"; });
-  document.querySelectorAll(`.${lang}`).forEach(box => { box.style.display = ""; });
+  document.querySelectorAll(`div.highlighter-rouge:not(.${lang})`).forEach(box => { box.style.display = "none"; });
+  document.querySelectorAll(`div.highlighter-rouge.${lang}`).forEach(box => { box.style.display = ""; });
 }
