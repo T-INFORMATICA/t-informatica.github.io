@@ -155,6 +155,7 @@ function createRegistrationApprovalForms() {
         .then(snapshot => {
             snapshot.forEach(snapshot => {
                 let studentId = snapshot.key;
+                let studentEmail = snapshot.val().email;
 
                 let studentName = "tbt";
                 let studentKlas = "tbt";
@@ -162,7 +163,7 @@ function createRegistrationApprovalForms() {
                 let studentUrl = "tbt";
                 let studentPassword = "tbt";
 
-                let tmpl = tmpl_registrationApprovalForm(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
+                let tmpl = tmpl_registrationApprovalForm(studentId, studentEmail, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
                 document.querySelector("#registration-approval-forms").innerHTML += tmpl;
             });
             document.querySelectorAll(".registration-approval-form").forEach(form => form.addEventListener("submit", approveRegistration));

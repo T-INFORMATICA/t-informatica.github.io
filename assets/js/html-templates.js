@@ -78,10 +78,10 @@ function tmpl_managementForm_student(studentId, studentName, klas, username, pas
     `;
 }
 
-function tmpl_registrationApprovalForm(studentId, studentName, klas, username, password, url) {
+function tmpl_registrationApprovalForm(studentId, studentEmail, studentName, klas, username, password, url) {
     return `
         <input type="checkbox" id="registration-${studentId}-collapse" class="registration-approval-collapse">
-        <label for="registration-${studentId}-collapse">${studentName}</label>
+        <label for="registration-${studentId}-collapse">${studentEmail}</label>
         <form class="registration-approval-form">
             <input type="hidden" name="studentId" value="${studentId}">
             <label for="student-${studentId}-username">username</label><input type="text" name="studentUsername" id="student-${studentId}-username" value="${username}">
