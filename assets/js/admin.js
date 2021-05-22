@@ -187,4 +187,6 @@ function approveRegistration(e) {
     database.ref(`users/${studentId}/username`).set(studentUsername);
     database.ref(`users/${studentId}/password`).set(studentPassword);
     database.ref(`users/${studentId}/url`).set(studentUrl);
+
+    database.ref(`newUsers/${studentId}`).remove();
 }
