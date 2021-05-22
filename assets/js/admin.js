@@ -153,9 +153,9 @@ function createRegistrationApprovalForms() {
 
     newUsersRef.once('value')
         .then(snapshot => {
-            snapshot.forEach(snapshot => {
-                let studentId = snapshot.key;
-                let studentEmail = snapshot.val().email;
+            snapshot.forEach(newUserSnapshot => {
+                let studentId = newUserSnapshot.key;
+                let studentEmail = newUserSnapshot.val().email;
 
                 let studentName = "tbt";
                 let studentKlas = "tbt";
