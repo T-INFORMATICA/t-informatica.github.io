@@ -251,9 +251,15 @@ main>article#content {
 /* //ADMIN MANAGEMENT FORM//*/
 /*/////////////////////////*/
 
+.student-management-collapse+label {
+    border: 1px solid transparent;
+    padding: 4px 8px;
+}
+
 .student-management-collapse+label:hover {
     text-decoration: underline;
     border: 1px solid #ccc;
+    padding: 4px 8px;
 }
 
 .student-management-collapse+label {
