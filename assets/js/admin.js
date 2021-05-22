@@ -108,12 +108,8 @@ function createUserManagementForms() {
     let managedUsersref = database.ref(`users`).orderByChild("klas");
 
     managedUsersref.on('value', snapshot => {
-        console.log("emptying forms");
-        let teller = 0;
-        document.querySelector("#student-management-forms").innerHTML += "";
+        document.querySelector("#student-management-forms").innerHTML = "";
         snapshot.forEach(snapshot => {
-            teller++;
-            console.log(`teller: ${teller}`);
             let studentId = snapshot.key;
 
             let studentData = snapshot.val();
