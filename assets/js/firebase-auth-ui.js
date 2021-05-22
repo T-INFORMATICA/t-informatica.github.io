@@ -22,8 +22,8 @@ function authUser(user) {
                     newUserData = {
                         email: user.email
                     };
-                    newUsersRef.set(newUserData);
-                    return false;
+                    newUsersRef.set(newUserData).then(() => {return false});
+                    // return false;
                 },
                 uiShown: function () {
                     // The widget is rendered. Hide the loader.
