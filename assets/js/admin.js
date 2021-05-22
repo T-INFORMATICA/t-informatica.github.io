@@ -148,7 +148,7 @@ function manageStudent(e) {
 function createRegistrationApprovalForms() {
 
     let database = firebase.database();
-    let newUsersRef = database.ref(`newUsers/${user.uid}`);
+    let newUsersRef = database.ref(`newUsers`);
 
 
     newUsersRef.once('value')
