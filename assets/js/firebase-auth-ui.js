@@ -43,7 +43,7 @@ function authUser(user) {
 
 firebase.auth().onAuthStateChanged(user => {
     let database = firebase.database();
-    let newUsersRef = database.ref(`newUsers/${_user.uid}`);
+    let newUsersRef = database.ref(`newUsers/${user.uid}`);
     newUserData = {
         email: user.email
     };
