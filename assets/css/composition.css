@@ -255,6 +255,7 @@ main>article#content {
     border: 1px solid transparent;
 }
 
+.student-management-collapse:checked+label,
 .student-management-collapse+label:hover {
     text-decoration: underline;
     border: 1px solid #ccc;
