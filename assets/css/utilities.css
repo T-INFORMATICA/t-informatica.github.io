@@ -56,27 +56,23 @@
 /*////////////////////*/
 
 .subjectResultCard-v2>.result.resultA {
-    background-color: #46b8e9;
+    background-color: #42BF0D;
 }
 
 .subjectResultCard-v2>.result.resultB {
-    background-color: #13d4b9;
-    /* 13d4b9 */
-    /* 3ee9d1 */
+    background-color: #6FBF0D;
 }
 
 .subjectResultCard-v2>.result.resultC {
-    background-color: #82d02b;
-    /* 82d02b */
-    /* 99e93e */
+    background-color: #98BF0D;
 }
 
 .subjectResultCard-v2>.result.resultD {
-    background-color: #e0b53d;
+    background-color: #D2A10F;
 }
 
 .subjectResultCard-v2>.result.resultE {
-    background-color: #e9493e;
+    background-color: #E9493E;
 }
 
 .unknownGrade {
