@@ -18,7 +18,7 @@ function authUser(user) {
                     // or whether we leave that to developer to handle.
                     console.log("succes - logged in");
                     let database = firebase.database();
-                    let newUsersRef = database.ref(`newUsers/${user.uid}`);
+                    let newUsersRef = database.ref(`newUsers/${_user.uid}`);
                     newUserData = {
                         email: user.email
                     };
