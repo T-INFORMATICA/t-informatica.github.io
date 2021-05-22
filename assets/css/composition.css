@@ -253,18 +253,17 @@ main>article#content {
 
 .student-management-collapse+label {
     border: 1px solid transparent;
-    padding: 4px 8px;
 }
 
 .student-management-collapse+label:hover {
     text-decoration: underline;
     border: 1px solid #ccc;
-    padding: 4px 8px;
 }
 
 .student-management-collapse+label {
     display: block;
     margin: 32px 8px 8px 8px;
+    padding: 4px 8px;
 }
 
 .student-management-collapse,
