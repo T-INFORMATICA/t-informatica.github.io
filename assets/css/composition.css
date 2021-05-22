@@ -113,6 +113,7 @@ header>nav .iconButton {
     padding: 16px;
 }
 
+.dropdownContainer .dropdownWindow ul,
 #usermenu ul {
     list-style-type: none;
     margin: 0;
