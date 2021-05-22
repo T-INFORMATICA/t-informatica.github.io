@@ -128,7 +128,7 @@ function createUserManagementForms() {
 
 function manageStudent(e) {
     e.preventDefault();
-    let form = e.submitter.parentElement;
+    let form = e.submitter.closest("form");
 
     let studentId = form.elements["studentId"].value;
     let studentName = form.elements["studentNaam"].value;
@@ -172,7 +172,7 @@ function createRegistrationApprovalForms() {
 
 function approveRegistration(e) {
     e.preventDefault();
-    let form = e.submitter.parentElement;
+    let form = e.submitter.closest("form");
 
     let studentId = form.elements["studentId"].value;
     let studentName = form.elements["studentNaam"].value;
