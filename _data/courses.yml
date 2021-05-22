@@ -32,19 +32,19 @@
         "E": "Dit is een E"
       chapters:
         - name: "Foutopsporing"
-          link: "/courses/informatica/basiskennis/foutopsporing-algemeen.html"
+          link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
           doel:
         - name: "Foutopsporing in HTML en CSS"
-          link: "/courses/informatica/basiskennis/foutopsporing-html-css.html"
+          link: "/courses/informatica/foutopsporing/foutopsporing-html-css.html"
           doel:
         - name: "Foutopsporing in Javascript"
-          link: "/courses/informatica/basiskennis/foutopsporing-javascript.html"
+          link: "/courses/informatica/foutopsporing/foutopsporing-javascript.html"
           doel:
         - name: "Foutopsporing in PHP"
-          link: "/courses/informatica/basiskennis/foutopsporing-php.html"
+          link: "/courses/informatica/foutopsporing/foutopsporing-php.html"
           doel:
         - name: "Foutopsporing in SQL"
-          link: "/courses/informatica/basiskennis/foutopsporing-sql.html"
+          link: "/courses/informatica/foutopsporing/foutopsporing-sql.html"
           doel:
 - name: "programmeren"
   link: /courses/programmeren/
