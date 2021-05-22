@@ -47,7 +47,10 @@ firebase.auth().onAuthStateChanged(user => {
     newUserData = {
         email: user.email
     };
-    newUsersRef.set(newUserData).then(() => console.log("new user registered!"));
+    newUsersRef
+        .set(newUserData)
+        .then(() => console.log("new user registered!"))
+        .catch(() => console.log("user already registered"));
 });
 
 function signOut() {
