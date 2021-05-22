@@ -108,21 +108,22 @@ function createUserManagementForms() {
     let managedUsersref = database.ref(`users`).orderByChild("klas");
 
     managedUsersref.on('value', snapshot => {
-            snapshot.forEach(snapshot => {
-                let studentId = snapshot.key;
+        document.querySelector("#student-management-forms").innerHTML += "";
+        snapshot.forEach(snapshot => {
+            let studentId = snapshot.key;
 
-                let studentData = snapshot.val();
-                let studentName = studentData.naam;
-                let studentKlas = studentData.klas;
-                let studentUsername = studentData.username;
-                let studentUrl = studentData.url;
-                let studentPassword = studentData.password;
+            let studentData = snapshot.val();
+            let studentName = studentData.naam;
+            let studentKlas = studentData.klas;
+            let studentUsername = studentData.username;
+            let studentUrl = studentData.url;
+            let studentPassword = studentData.password;
 
-                let tmpl = tmpl_managementForm_student(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
-                document.querySelector("#student-management-forms").innerHTML += tmpl;
-            });
-            document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("submit", manageStudent));
+            let tmpl = tmpl_managementForm_student(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
+            document.querySelector("#student-management-forms").innerHTML += tmpl;
         });
+        document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("submit", manageStudent));
+    });
 }
 
 function manageStudent(e) {
@@ -150,22 +151,23 @@ function createRegistrationApprovalForms() {
     let newUsersRef = database.ref(`newUsers`);
 
 
-    newUsersRef.once('value', snapshot => {
-            snapshot.forEach(newUserSnapshot => {
-                let studentId = newUserSnapshot.key;
-                let studentEmail = newUserSnapshot.val().email;
+    newUsersRef.on('value', snapshot => {
+        document.querySelector("#registration-approval-forms").innerHTML = "";
+        snapshot.forEach(newUserSnapshot => {
+            let studentId = newUserSnapshot.key;
+            let studentEmail = newUserSnapshot.val().email;
 
-                let studentName = "tbt";
-                let studentKlas = "tbt";
-                let studentUsername = "tbt";
-                let studentUrl = "tbt";
-                let studentPassword = "tbt";
+            let studentName = "tbt";
+            let studentKlas = "tbt";
+            let studentUsername = "tbt";
+            let studentUrl = "tbt";
+            let studentPassword = "tbt";
 
-                let tmpl = tmpl_registrationApprovalForm(studentId, studentEmail, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
-                document.querySelector("#registration-approval-forms").innerHTML += tmpl;
-            });
-            document.querySelectorAll(".registration-approval-form").forEach(form => form.addEventListener("submit", approveRegistration));
+            let tmpl = tmpl_registrationApprovalForm(studentId, studentEmail, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
+            document.querySelector("#registration-approval-forms").innerHTML += tmpl;
         });
+        document.querySelectorAll(".registration-approval-form").forEach(form => form.addEventListener("submit", approveRegistration));
+    });
 }
 
 function approveRegistration(e) {
