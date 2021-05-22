@@ -251,20 +251,20 @@ main>article#content {
 /* //ADMIN MANAGEMENT FORM//*/
 /*/////////////////////////*/
 
-.registration-approval-collapse+label,
+.student-management-collapse+label {
+    
+}
+
 .student-management-collapse+label {
     display: block;
     margin: 32px 8px 8px 8px;
 }
 
-.registration-approval-collapse,
-.registration-approval-collapse+label+form,
 .student-management-collapse,
 .student-management-collapse+label+form {
     display: none;
 }
 
-.registration-approval-collapse:checked+label+form,
 .student-management-collapse:checked+label+form {
     display: grid;
     grid-template-columns: 100px auto;
