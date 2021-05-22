@@ -103,7 +103,7 @@ function addFirebaseUserdataToMenu(userid, userdata) {
     if (firebase.auth().currentUser.uid === userid || userselect == null)
         return;
 
-    tmpl = `<option value="${userid}">${userdata.naam}</option>`;
+    tmpl = `<option value="${userid}">${userdata.naam} - ${userdata.klas}</option>`;
     document.querySelector('#userSelect>select').innerHTML += tmpl;
 }
 
