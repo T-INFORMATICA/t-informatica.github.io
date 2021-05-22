@@ -251,8 +251,9 @@ main>article#content {
 /* //ADMIN MANAGEMENT FORM//*/
 /*/////////////////////////*/
 
-.student-management-collapse+label {
-    
+.student-management-collapse+label:hover {
+    text-decoration: underline;
+    border: 1px solid #ccc;
 }
 
 .student-management-collapse+label {
