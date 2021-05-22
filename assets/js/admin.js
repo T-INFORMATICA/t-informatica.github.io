@@ -107,7 +107,7 @@ function createUserManagementForms() {
     let database = firebase.database();
     let managedUsersref = database.ref(`users`).orderByChild("klas");
 
-    managedUsersref.on('value')
+    managedUsersref.once('value')
         .then(snapshot => {
             snapshot.forEach(snapshot => {
                 let studentId = snapshot.key;
@@ -151,7 +151,7 @@ function createRegistrationApprovalForms() {
     let newUsersRef = database.ref(`newUsers`);
 
 
-    newUsersRef.on('value')
+    newUsersRef.once('value')
         .then(snapshot => {
             snapshot.forEach(newUserSnapshot => {
                 let studentId = newUserSnapshot.key;
