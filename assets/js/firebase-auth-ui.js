@@ -17,12 +17,6 @@ function authUser(user) {
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
                     console.log("succes - logged in");
-                    let database = firebase.database();
-                    let newUsersRef = database.ref(`newUsers/${_user.uid}`);
-                    newUserData = {
-                        email: user.email
-                    };
-                    newUsersRef.set(newUserData).then(() => console.log("new user registered!"));
                     return false;
                 },
                 uiShown: function () {
@@ -46,6 +40,15 @@ function authUser(user) {
         ui.start('#firebaseui-auth-container', uiConfig);
     }
 }
+
+firebase.auth().onAuthStateChanged(user => {
+    let database = firebase.database();
+    let newUsersRef = database.ref(`newUsers/${_user.uid}`);
+    newUserData = {
+        email: user.email
+    };
+    newUsersRef.set(newUserData).then(() => console.log("new user registered!"));
+});
 
 function signOut() {
     firebase.auth()
