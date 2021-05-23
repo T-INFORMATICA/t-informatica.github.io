@@ -25,7 +25,7 @@ De applicatie heeft ook enkele beperkingen:
  - De bereidingstijd voor een gerecht is een vaste waarde, ongeacht het aantal personen.
  
  
-<img src="{{ site.baseurl }}/assets/img/db-inleiding_1.png" alt="voorbeeld" style="height: auto; max-width: 100%">
+<img src="{{ site.baseurl }}/assets/img/db-inleiding_1.jpg" alt="voorbeeld" style="height: auto; max-width: 100%">
 
 ### Toelichting
 Het aantal personen kan door de gebruiker worden ingesteld; de initiële waarde is 4.
