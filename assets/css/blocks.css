@@ -213,7 +213,7 @@ table.styledTable {
   }
   
   table.styledTable tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: var(--color-900);
   }
   
   table.styledTable td,
