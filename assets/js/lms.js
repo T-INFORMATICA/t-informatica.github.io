@@ -191,9 +191,19 @@ function definitionsLoaded(e) {
                     let term = termdef["term"];
                     if (knownWords && term in knownWords) {
                         let timestamps = knownWords[term];
-                        console.log(timestamps);
-                        let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
-                        let amount = parseFloat(Object.entries(timestamps).length);
+
+                        // filter out all entries that were posted more than 2 weeks (14 days) ago
+                        let firstDate = new Date();
+                        firstDate.setDate(firstDate.getDate() - 14);
+                        const filteredTimestamps = Object.keys(timestamps)
+                            .filter(key => firstDate <= (new Date(key)))
+                            .reduce((obj, key) => {
+                                obj[key] = timestamps[key];
+                                return obj;
+                            }, {});
+
+                        let sum = Object.values(filteredTimestamps).reduce((a, b) => a + b, 0);
+                        let amount = parseFloat(Object.entries(filteredTimestamps).length);
                         let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
 
                         // Only count words that are known for 90% or more
