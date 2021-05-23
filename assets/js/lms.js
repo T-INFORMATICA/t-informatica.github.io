@@ -191,6 +191,7 @@ function definitionsLoaded(e) {
                     let term = termdef["term"];
                     if (knownWords && term in knownWords) {
                         let timestamps = knownWords[term];
+                        console.log(timestamps);
                         let sum = Object.values(timestamps).reduce((a, b) => a + b, 0);
                         let amount = parseFloat(Object.entries(timestamps).length);
                         let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
