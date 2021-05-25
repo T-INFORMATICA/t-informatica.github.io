@@ -207,6 +207,22 @@ main>article#content {
     padding: 4px 8px;
 } 
 
+#searchbar {
+    position: relative;
+}
+
+#searchbarOutput {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-900);
+}
+
+#searchbarOutput li {
+    padding: 0 .5rem;
+}
+
 /*  ////////////////////*/
 /* //ADMIN GRADE FORM//*/
 /*////////////////////*/
