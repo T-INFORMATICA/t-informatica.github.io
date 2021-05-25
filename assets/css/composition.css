@@ -60,27 +60,28 @@ footer {
 }
 
 main {
-    padding-top: var(--header-size);
     padding-bottom: var(--footer-size);
 
     max-width: var(--max-page-width);
     margin: 0 auto;
 }
 
+@media only screen and (min-width: 600px) {
+    main {
+        padding-top: var(--header-size);
+    }
+}
+
 /*  //////////////////*/
 /* //TOP NAVIGATION//*/
 /*//////////////////*/
 
+
 header {
-    height: var(--header-size);
-    position: fixed;
-    left: 0;
-    right: 0;
+    min-height: var(--header-size);
 }
 
 header>nav {
-    display: flex;
-    justify-content: space-between;
     height: 100%;
 
     max-width: var(--max-page-width);
@@ -89,15 +90,32 @@ header>nav {
     position: relative;
 }
 
-header>nav>ul {
+header>nav>ul.responsive{
     display: flex;
+    justify-content: space-between;
+}
+
+header>nav>ul.responsive .closeMenu {
+    display: none;
+}
+
+header>nav:target>ul.responsive .openMenu { 
+    display: none;
+}
+
+header>nav:target>ul.responsive .closeMenu,
+header>nav:target>ul.responsive~* {
+    display: block;
+}
+
+header>nav>ul {
+    display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 header>nav>ul>li {
-    /* display: inline-block; */
     height: 100%;
 }
 
@@ -124,6 +142,58 @@ header>nav .iconButton {
 
 #usermenu ul a {
     display: block;
+}
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        height: var(--header-size);
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+    
+    header>nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header>nav:target>ul.responsive~*, /* for when a user goes from mobile to desktop while having the menu targetted */
+    header>nav>ul {
+        display: flex;
+    }
+
+    header>nav>ul.responsive {
+        display: none;
+    }
+}
+
+/*  ///////////////////*/
+/* //DROPDOWN WINDOW//*/
+/*///////////////////*/
+
+.dropdownContainer:hover>.dropdownWindow {
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .dropdownWindow {
+        display: none;
+        position: absolute;
+        top: 100%;
+    }
+
+    .dropdownWindow.dropdownWindowRight {
+        right: 0;
+        width: 200px;
+    }
+
+    .dropdownWindow.dropdownWindowFullscreen {
+        left: 0;
+        right: 0;
+        columns: 250px 12;
+    }
 }
 
 /*  ///////////////*/
