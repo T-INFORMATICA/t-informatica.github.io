@@ -90,12 +90,14 @@ header>nav {
 }
 
 header>nav>ul {
+    display: flex;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 header>nav>ul>li {
-    display: inline-block;
+    /* display: inline-block; */
     height: 100%;
 }
 
