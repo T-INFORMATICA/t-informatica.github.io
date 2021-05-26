@@ -29,6 +29,14 @@
       chapters:
         - name: "Foutopsporing"
           link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
+        - name: "Programmeren - Instructies"
+          link: "/courses/programmeren/instructies/foutopsporing-instructies.html"
+        - name: "Webontwikkeling - HTML"
+          link: "/courses/webontwikkeling/html/foutopsporing-html.html"
+        - name: "Webontwikkeling - CSS"
+          link: "/courses/webontwikkeling/css/foutopsporing-css.html"
+        - name: "Databases - SQL"
+          link: "/courses/databanken/sql/foutopsporing-sql.html"
 - name: "programmeren"
   link: /courses/programmeren/
   tutorials:
