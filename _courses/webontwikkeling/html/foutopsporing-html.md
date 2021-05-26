@@ -1,7 +1,12 @@
 ---
 title: Foutopsporing in HTML en CSS
 tags: 
- - 
+
+definitions:
+ - name: w3c validation error
+   definitions: Dit is meestal een syntax fout in HTML, waarbij een tag-naam of attribute verkeerd is geschreven, of een element of attribute op een plaats staat waar deze niet thuishoort.
+ - name: w3c validation warning
+   definitions: Dit is meestal een poging om een runtime fout op te sporen in HTML. Wordt vaak getoond wanneer een attribute wordt aangeraden of een element leeg is.
 description: 
 ---
 

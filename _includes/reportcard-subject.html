@@ -13,6 +13,10 @@
         <div class="progressbar-progress" style="width: 0%"></div>
         <a href="/lms-exercise.html?subject={{include.subject}}" class="progressbar-label"><span class="numWordsLearned">0</span> / <span class="maxWordsLearned">{{include.progressTotal}}</span> woorden geleerd</a>
     </div>
+    {% else %}
+    <div class="progressbar-bg">
+        <a class="progressbar-label">Geen theorie te leren</a>
+    </div>
     {% endif %}
     <div class="comments">
         Deze doelstelling werd nog niet geevalueerd.
