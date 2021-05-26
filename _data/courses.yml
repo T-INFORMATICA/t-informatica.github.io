@@ -12,16 +12,12 @@
       chapters:
         - name: "code editors"
           link: "/courses/informatica/basiskennis/code-editors.html"
-          doel:
         - name: "source control"
           link: "/courses/informatica/basiskennis/source-control.html"
-          doel:
         # - name: "ftp"
         #   link: "/courses/informatica/basiskennis/ftp.html"
-        #   doel:
         - name: "talstelsels"
           link: "/courses/informatica/basiskennis/talstelsels.html"
-          doel:
     - name: "foutopsporing"
       link: "/courses/informatica/foutopsporing/"
       rubric:
@@ -31,21 +27,8 @@
         "D": "Dit is een D"
         "E": "Dit is een E"
       chapters:
-        # - name: "Foutopsporing"
-        #   link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
-        #   doel:
-        - name: "Foutopsporing in HTML en CSS"
-          link: "/courses/informatica/foutopsporing/foutopsporing-html-css.html"
-          doel:
-        - name: "Foutopsporing in Javascript"
-          link: "/courses/informatica/foutopsporing/foutopsporing-javascript.html"
-          doel:
-        - name: "Foutopsporing in PHP"
-          link: "/courses/informatica/foutopsporing/foutopsporing-php.html"
-          doel:
-        - name: "Foutopsporing in SQL"
-          link: "/courses/informatica/foutopsporing/foutopsporing-sql.html"
-          doel:
+        - name: "Foutopsporing"
+          link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
 - name: "programmeren"
   link: /courses/programmeren/
   tutorials:
@@ -65,19 +48,16 @@
       chapters:
         - name: Waardes
           link: "/courses/programmeren/instructies/waardes.html"
-          doel: "instructies"
         - name: Variabelen
           link: "/courses/programmeren/instructies/variabelen.html"
-          doel: "instructies"
         - name: Expressies
           link: "/courses/programmeren/instructies/expressies.html"
-          doel: "instructies"
         - name: Arrays
           link: "/courses/programmeren/instructies/arrays.html"
-          doel: "Arrays"
         - name: Instructies
           link: "/courses/programmeren/instructies/instructies.html"
-          doel: "instructies"
+        - name: Foutopsporing
+          link: "/courses/programmeren/instructies/foutopsporing-instructies.html"
     - name: "Codeblokken"
       link: "/courses/programmeren/codeblokken/"
       rubric:
@@ -89,16 +69,12 @@
       chapters:
         - name: Codeblokken
           link: "/courses/programmeren/codeblokken/codeblokken.html"
-          doel: "instructies"
         - name: Functies
           link: "/courses/programmeren/codeblokken/functies.html"
-          doel: "Codeblokken (functie)"
         - name: Selectie
           link: "/courses/programmeren/codeblokken/selectie.html"
-          doel: "Codeblokken (selectie)"
         - name: Iteratie
           link: "/courses/programmeren/codeblokken/iteratie.html"
-          doel: "Codeblokken (iteratie)"
     - name: "Datastructuren"
       link: "/courses/programmeren/datastructuren/"
       rubric:
@@ -110,25 +86,19 @@
       chapters:
         - name: Objecten
           link: "/courses/programmeren/datastructuren/objecten.html"
-          doel: "OO programmeren"
         - name: Klassen
           link: "/courses/programmeren/datastructuren/klassen.html"
-          doel: "OO programmeren"
         - name: Inheritance
           link: "/courses/programmeren/datastructuren/inheritance.html"
-          doel: "OO programmeren"
         - name: "Access Modifiers"
           link: "/courses/programmeren/datastructuren/access-modifiers.html"
-          doel: "OO programmeren"
         - name: "Relaties"
           link: "/courses/programmeren/datastructuren/relaties.html"
-          doel: "OO programmeren"
 #    - name: "Software Ontwikkeling"
 #      link: "/courses/programmeren/software-ontwikkeling/"
 #      chapters:
 #        - name: "Domeinmodel"
 #          link: "/courses/programmeren/software-ontwikkeling/domeinmodel.html"
-#          doel: "OO ontwerp"
 - name: "webontwikkeling"
   link: /courses/webontwikkeling/
   subjects:
@@ -143,25 +113,20 @@
       chapters:
         - name: Markup
           link: "/courses/webontwikkeling/html/markup-languages.html"
-          doel: "structuur"
         - name: Markup met Markdown
           link: "/courses/webontwikkeling/html/markdown.html"
-          doel: "structuur"
         - name: Markup met HTML
           link: "/courses/webontwikkeling/html/elementen.html"
-          doel: "structuur"
         - name: Attributen
           link: "/courses/webontwikkeling/html/attributen.html"
-          doel: "structuur"
         - name: Block en Inline
           link: "/courses/webontwikkeling/html/block-en-inline.html"
-          doel: "structuur"
         - name: Structuur
           link: "/courses/webontwikkeling/html/structuur.html"
-          doel: "structuur"
         - name: Semantiek
           link: "/courses/webontwikkeling/html/semantiek.html"
-          doel: "structuur"
+        - name: Foutopsporing
+          link: "/courses/webontwikkeling/html/foutopsporing-html.html"
     - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
       rubric:
@@ -173,22 +138,18 @@
       chapters:
         - name: CSS
           link: "/courses/webontwikkeling/css/css.html"
-          doel: "opmaak"
         - name: Selectors
           link: "/courses/webontwikkeling/css/selectors.html"
-          doel: "opmaak"
         - name: Kleuren
           link: "/courses/webontwikkeling/css/kleuren.html"
-          doel: "opmaak"
         - name: Tekst
           link: "/courses/webontwikkeling/css/tekst.html"
-          doel: "opmaak"
         - name: Box Model
           link: "/courses/webontwikkeling/css/box-model.html"
-          doel: "box model"
+        - name: Foutopsporing
+          link: "/courses/webontwikkeling/css/foutopsporing-css.html"
 #        - name: State Selectors
 #          link: "/courses/webontwikkeling/css/state-selectors.html"
-#          doel: "opmaak"
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
       rubric:
@@ -200,19 +161,14 @@
       chapters:
         - name: "Responsive Webdesign"
           link: "/courses/webontwikkeling/statische-websites/responsive-webdesign.html"
-          doel: "responsive websites"
         - name: "Layout"
           link: "/courses/webontwikkeling/statische-websites/layout.html"
-          doel: "responsive websites"
         # - name: "Layout met CSS Flexbox"
         #   link: "/courses/webontwikkeling/statische-websites/css-flexbox.html"
-        #   doel: "responsive websites"
         - name: "Layout met CSS Grid"
           link: "/courses/webontwikkeling/statische-websites/css-grid.html"
-          doel: "responsive websites"
         - name: "C.U.B.E."
           link: "/courses/webontwikkeling/statische-websites/cube.html"
-          doel: "opmaak"
     - name: "Dynamische Websites"
       link: "/courses/webontwikkeling/dynamische-websites"
       rubric:
@@ -224,22 +180,16 @@
       chapters:
         - name: URL Parameters
           link: "/courses/webontwikkeling/dynamische-websites/url-parameters.html"
-          doel: "dynamische websites"
         - name: XML
           link: "/courses/webontwikkeling/dynamische-websites/xml.html"
-          doel: "dynamische websites"
         - name: JSON
           link: "/courses/webontwikkeling/dynamische-websites/json.html"
-          doel: "dynamische websites"
         - name: AJAX
           link: "/courses/webontwikkeling/dynamische-websites/ajax.html"
-          doel: "dynamische websites"
 #        - name: Formulieren
 #          link: "/courses/webontwikkeling/dynamische-websites/formulieren.html"
-#          doel: "dynamische websites"
 #        - name: SQL Database Connection
 #          link: "/courses/webontwikkeling/dynamische-websites/sql-database-connection.html"
-#          doel: "dynamische websites"
 - name: "databanken"
   link: /courses/databanken/
   subjects:
@@ -254,25 +204,18 @@
       chapters:
         - name: Inleiding
           link: "/courses/databanken/database-ontwerp/inleiding.html"
-          doel: "database ontwerp"
         - name: Désirée's Dessertenboek
           link: "/courses/databanken/database-ontwerp/voorbeeld.html"
-          doel: "database ontwerp"
         - name: Fouten
           link: "/courses/databanken/database-ontwerp/fouten.html"
-          doel: "database ontwerp"
         - name: Tabellen
           link: "/courses/databanken/database-ontwerp/tabellen.html"
-          doel: "database ontwerp"
         - name: Sleutels
           link: "/courses/databanken/database-ontwerp/sleutels.html"
-          doel: "database normalisatie"
         - name: Multipliciteit
           link: "/courses/databanken/database-ontwerp/multipliciteit.html"
-          doel: "database ontwerp"
         - name: Normalisatie
           link: "/courses/databanken/database-ontwerp/normalisatie.html"
-          doel: "database normalisatie"
     - name: "SQL"
       link: "/courses/databanken/sql"
       rubric:
@@ -284,22 +227,18 @@
       chapters:
         - name: Inleiding
           link: "/courses/databanken/sql/inleiding.html"
-          doel: "Queries"
         - name: Muziek Database
           link: "/courses/databanken/sql/voorbeeld.html"
-          doel: "Queries"
         - name: Projecties
           link: "/courses/databanken/sql/projecties.html"
-          doel: "Queries"
         - name: Selecties
           link: "/courses/databanken/sql/selecties.html"
-          doel: "Queries"
         - name: Ordening
           link: "/courses/databanken/sql/ordening.html"
-          doel: "Queries"
         - name: Joins
           link: "/courses/databanken/sql/meerdere-tabellen.html"
-          doel: "Queries"
+        - name: Foutopsporing
+          link: "/courses/databanken/sql/foutopsporing-sql.html"
 #        - name: Statistische Informatie
 #          link: "/courses/databanken/sql/statische-informatie.html"
 #        - name: Subselects

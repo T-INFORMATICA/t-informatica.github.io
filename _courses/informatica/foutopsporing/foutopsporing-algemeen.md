@@ -1,5 +1,5 @@
 ---
-title: Foutopsporing in PHP
+title: Foutopsporing
 tags: 
  - 
 description: 
