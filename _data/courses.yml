@@ -31,6 +31,10 @@
           link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
         - name: "Programmeren - Instructies"
           link: "/courses/programmeren/instructies/foutopsporing-instructies.html"
+        - name: "Programmeren - Codeblokken"
+          link: "/courses/programmeren/codeblokken/foutopsporing-codeblokken.html"
+        - name: "Programmeren - Datastructuren"
+          link: "/courses/programmeren/datastructuren/foutopsporing-datastructuren.html"
         - name: "Webontwikkeling - HTML"
           link: "/courses/webontwikkeling/html/foutopsporing-html.html"
         - name: "Webontwikkeling - CSS"
@@ -83,6 +87,8 @@
           link: "/courses/programmeren/codeblokken/selectie.html"
         - name: Iteratie
           link: "/courses/programmeren/codeblokken/iteratie.html"
+        - name: "Foutopsporing"
+          link: "/courses/programmeren/codeblokken/foutopsporing-codeblokken.html"
     - name: "Datastructuren"
       link: "/courses/programmeren/datastructuren/"
       rubric:
@@ -102,6 +108,8 @@
           link: "/courses/programmeren/datastructuren/access-modifiers.html"
         - name: "Relaties"
           link: "/courses/programmeren/datastructuren/relaties.html"
+        - name: "Foutopsporing"
+          link: "/courses/programmeren/datastructuren/foutopsporing-datastructuren.html"
 #    - name: "Software Ontwikkeling"
 #      link: "/courses/programmeren/software-ontwikkeling/"
 #      chapters:
