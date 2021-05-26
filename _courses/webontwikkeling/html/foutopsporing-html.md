@@ -4,9 +4,9 @@ tags:
 
 definitions:
  - name: w3c validation error
-   definitions: Dit is meestal een syntax fout in HTML, waarbij een tag-naam of attribute verkeerd is geschreven of een element of attribute op een plaats staat waar deze niet thuishoort. Deze fouten moeten zo snel mogelijk opgelost worden.
+   definition: Dit is meestal een syntax fout in HTML, waarbij een tag-naam of attribute verkeerd is geschreven of een element of attribute op een plaats staat waar deze niet thuishoort. Deze fouten moeten zo snel mogelijk opgelost worden.
  - name: w3c validation warning
-   definitions: Dit is meestal een poging om een runtime fout op te sporen in HTML. Wordt vaak getoond wanneer een attribute wordt aangeraden of een element leeg is. Deze fouten moet je zelf inschatten of ze een probleem zijn of niet.
+   definition: Dit is meestal een poging om een runtime fout op te sporen in HTML. Wordt vaak getoond wanneer een attribute wordt aangeraden of een element leeg is. Deze fouten moet je zelf inschatten of ze een probleem zijn of niet.
 description: 
 ---
 
