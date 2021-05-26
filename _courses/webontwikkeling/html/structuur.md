@@ -6,6 +6,10 @@ tags:
 definitions:
  - name: structuur
    definition: De logische manier waarop de ontwikkelaar elementen heeft genest.
+ - name: block-level
+   definition: Een element dat altijd op een volgende lijn tekst wordt geplaatst en de volledige beschikbare breedte inneemt.
+ - name: inline
+   definition: Een element dat tussen tekst geplaatst kan worden en slechts zoveel ruimte inneemt als nodig is voor de inhoud weer te geven.
 description: Websites veranderen vaak. Het is dus belangrijk dat je je code zo opbouwt dat die veranderingen gemakkelijk te maken zijn, zonder dat je daar als ontwikkelaar veel werk aan hebt. Een goede structuur is daarbij enorm belangrijk. In dit hoofdstuk wordt verder uitgelegd hoe je zo'n structuur kunt opbouwen.
 ---
 
