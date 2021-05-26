@@ -196,3 +196,34 @@ pre {
 #exerciseAnswers input:not(disabled):checked+label {
     outline: .5rem solid var(--color-accent-cyan);
 }
+
+
+
+/*  //////////*/
+/* //TABLES//*/
+/*//////////*/
+
+table.styledTable {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+  
+  table.styledTable tr:nth-child(odd) {
+    background-color: var(--color-900);
+  }
+  
+  table.styledTable td,
+  table.styledTable th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .75rem;
+    vertical-align: top;
+  }
+  
+  table.styledTable tr {
+    border-top: 1px solid #dee2e6;
+  }

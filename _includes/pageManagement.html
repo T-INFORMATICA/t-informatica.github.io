@@ -1,7 +1,15 @@
 <div id="searchbar">
     <input class="bg-darkest text-light border-pink" placeholder="Zoeken..." type="text" name="" id="searchbarInput">
-    <div id="searchbarOutput"></div>
+    <ul id="searchbarOutput"></ul>
 </div>
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+    var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('searchbarInput'),
+        resultsContainer: document.getElementById('searchbarOutput'),
+        json: '/assets/data/search.json'
+    })
+</script>
 <div id="pageActions">
     <ul>
         <li><a href="">

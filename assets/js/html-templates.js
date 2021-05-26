@@ -73,23 +73,30 @@ function tmpl_managementForm_student(studentId, studentName, klas, username, pas
             <label for="student-${studentId}-klas">klas</label><input type="text" name="studentKlas" id="student-${studentId}-klas" value="${klas}">
             <label for="student-${studentId}-url">url</label><input type="text" name="studentUrl" id="student-${studentId}-url" value="${url}">
             <label for="student-${studentId}-naam">naam</label><input type="text" name="studentNaam" id="student-${studentId}-naam" value="${studentName}">
-            <input type="submit" value="VERZENDEN">
+            <span></span>
+            <div class="student-management-buttons">
+                <button class="material-icons" type="submit" name="studentSubmit" value="save">save</button>
+                <button class="material-icons" type="submit" name="studentSubmit" value="remove">person_remove</button>
+            </div>
         </form>
     `;
 }
 
-function tmpl_registrationApprovalForm(studentId, studentName, klas, username, password, url) {
+function tmpl_registrationApprovalForm(studentId, studentEmail, studentName, klas, username, password, url) {
     return `
-        <input type="checkbox" id="registration-${studentId}-collapse" class="registration-approval-collapse">
-        <label for="registration-${studentId}-collapse">${studentName}</label>
-        <form class="registration-approval-form">
+        <input type="checkbox" id="registration-${studentId}-collapse" class="student-management-collapse">
+        <label for="registration-${studentId}-collapse">${studentEmail}</label>
+        <form class="student-management-form">
             <input type="hidden" name="studentId" value="${studentId}">
             <label for="student-${studentId}-username">username</label><input type="text" name="studentUsername" id="student-${studentId}-username" value="${username}">
             <label for="student-${studentId}-password">password</label><input type="text" name="studentPassword" id="student-${studentId}-password" value="${password}">
             <label for="student-${studentId}-klas">klas</label><input type="text" name="studentKlas" id="student-${studentId}-klas" value="${klas}">
             <label for="student-${studentId}-url">url</label><input type="text" name="studentUrl" id="student-${studentId}-url" value="${url}">
             <label for="student-${studentId}-naam">naam</label><input type="text" name="studentNaam" id="student-${studentId}-naam" value="${studentName}">
-            <input type="submit" value="VERZENDEN">
+            <span></span>
+            <div class="student-management-buttons">
+                <button type="submit" class="material-icons" name="studentSubmit" value="save">person_add</button>
+            </div>
         </form>
     `;
 }

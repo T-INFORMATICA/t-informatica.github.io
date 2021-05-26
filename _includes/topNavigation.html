@@ -1,13 +1,25 @@
-<nav>
+<nav id="topNavigation">
     <ul class="home">
         <li class="navButton">
             <span class="material-icons-outlined">lightbulb</span>
+        </li>
+    </ul>
+    <ul class="responsive">
+        <li class="navButton">
+            <span class="material-icons-outlined">lightbulb</span>
+        </li>
+        <li class="navButton">
+            <a href="#topNavigation" class="material-icons-outlined openMenu">menu</a>
+            <a href="#closeMenu" class="material-icons-outlined closeMenu">close</a>
         </li>
     </ul>
     <ul class="courses">
         {% include topNavigation-courses.html %}
     </ul>
     <ul class="user">
+        <li class="navButton">
+            <a href="#" class="material-icons-outlined">rate_review</a>
+        </li>
         <li class="navButton dropdownContainer">
             <span class="iconButton dropdownText | material-icons">person</span>
             <div id="usermenu" class="dropdownWindow dropdownWindowRight | bg-darkest glow-pink">

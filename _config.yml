@@ -31,9 +31,9 @@ defaults:
           course: "databanken"
           layout: "course"
     - scope:
-          path: "_courses/basis"
+          path: "_courses/informatica"
       values:
-          course: "basis"
+          course: "informatica"
           layout: "course"
     - scope:
           path: ""

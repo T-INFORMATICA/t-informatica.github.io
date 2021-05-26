@@ -107,28 +107,28 @@ function createUserManagementForms() {
     let database = firebase.database();
     let managedUsersref = database.ref(`users`).orderByChild("klas");
 
-    managedUsersref.once('value')
-        .then(snapshot => {
-            snapshot.forEach(snapshot => {
-                let studentId = snapshot.key;
+    managedUsersref.on('value', snapshot => {
+        document.querySelector("#student-management-forms").innerHTML = "";
+        snapshot.forEach(snapshot => {
+            let studentId = snapshot.key;
 
-                let studentData = snapshot.val();
-                let studentName = studentData.naam;
-                let studentKlas = studentData.klas;
-                let studentUsername = studentData.username;
-                let studentUrl = studentData.url;
-                let studentPassword = studentData.password;
+            let studentData = snapshot.val();
+            let studentName = studentData.naam;
+            let studentKlas = studentData.klas;
+            let studentUsername = studentData.username;
+            let studentUrl = studentData.url;
+            let studentPassword = studentData.password;
 
-                let tmpl = tmpl_managementForm_student(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
-                document.querySelector("#student-management-forms").innerHTML += tmpl;
-            });
-            document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("submit", manageStudent));
+            let tmpl = tmpl_managementForm_student(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
+            document.querySelector("#student-management-forms").innerHTML += tmpl;
         });
+        document.querySelectorAll(".student-management-form").forEach(form => form.addEventListener("submit", manageStudent));
+    });
 }
 
 function manageStudent(e) {
     e.preventDefault();
-    let form = e.submitter.parentElement;
+    let form = e.submitter.closest("form");
 
     let studentId = form.elements["studentId"].value;
     let studentName = form.elements["studentNaam"].value;
@@ -148,30 +148,31 @@ function manageStudent(e) {
 function createRegistrationApprovalForms() {
 
     let database = firebase.database();
-    let newUsersRef = database.ref(`newUsers/${user.uid}`);
+    let newUsersRef = database.ref(`newUsers`);
 
 
-    newUsersRef.once('value')
-        .then(snapshot => {
-            snapshot.forEach(snapshot => {
-                let studentId = snapshot.key;
+    newUsersRef.on('value', snapshot => {
+        document.querySelector("#registration-approval-forms").innerHTML = "";
+        snapshot.forEach(newUserSnapshot => {
+            let studentId = newUserSnapshot.key;
+            let studentEmail = newUserSnapshot.val().email;
 
-                let studentName = "tbt";
-                let studentKlas = "tbt";
-                let studentUsername = "tbt";
-                let studentUrl = "tbt";
-                let studentPassword = "tbt";
+            let studentName = "tbt";
+            let studentKlas = "tbt";
+            let studentUsername = "tbt";
+            let studentUrl = "tbt";
+            let studentPassword = "tbt";
 
-                let tmpl = tmpl_registrationApprovalForm(studentId, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
-                document.querySelector("#registration-approval-forms").innerHTML += tmpl;
-            });
-            document.querySelectorAll(".registration-approval-form").forEach(form => form.addEventListener("submit", approveRegistration));
+            let tmpl = tmpl_registrationApprovalForm(studentId, studentEmail, studentName, studentKlas, studentUsername, studentPassword, studentUrl);
+            document.querySelector("#registration-approval-forms").innerHTML += tmpl;
         });
+        document.querySelectorAll(".registration-approval-form").forEach(form => form.addEventListener("submit", approveRegistration));
+    });
 }
 
 function approveRegistration(e) {
     e.preventDefault();
-    let form = e.submitter.parentElement;
+    let form = e.submitter.closest("form");
 
     let studentId = form.elements["studentId"].value;
     let studentName = form.elements["studentNaam"].value;
@@ -186,4 +187,6 @@ function approveRegistration(e) {
     database.ref(`users/${studentId}/username`).set(studentUsername);
     database.ref(`users/${studentId}/password`).set(studentPassword);
     database.ref(`users/${studentId}/url`).set(studentUrl);
+
+    database.ref(`newUsers/${studentId}`).remove();
 }

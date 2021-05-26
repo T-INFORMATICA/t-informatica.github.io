@@ -17,13 +17,7 @@ function authUser(user) {
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
                     console.log("succes - logged in");
-                    let database = firebase.database();
-                    let newUsersRef = database.ref(`newUsers/${user.uid}`);
-                    newUserData = {
-                        email: user.email
-                    };
-                    newUsersRef.set(newUserData);
-                    return false;
+                    return true;
                 },
                 uiShown: function () {
                     // The widget is rendered. Hide the loader.
@@ -32,7 +26,7 @@ function authUser(user) {
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: '<url-to-redirect-to-on-success>',
+            signInSuccessUrl: '/lms-registersucces.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID
@@ -46,6 +40,7 @@ function authUser(user) {
         ui.start('#firebaseui-auth-container', uiConfig);
     }
 }
+
 
 function signOut() {
     firebase.auth()
