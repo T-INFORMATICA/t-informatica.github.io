@@ -22,6 +22,26 @@ definitions:
    definition: Alles dat tussen de openingstag en sluitingstag van een element staat.
  - name: indentatie
    definition: Het aantal spaties voor elke lijn code, dat aanduidt in welk element die lijn code is genest.
+ - name: <html>
+   definition: Een element dat de basis van de volledige webpagina bepaalt.
+ - name: <head>
+   definition: Een element dat meta-informatie over de webpagina bevat.
+ - name: <body>
+   definition: Een element waarin alle zichtbare inhoud van de webpagina wordt geplaatst.
+ - name: <title>
+   definition: Een element dat de titel van de webpagina aanduidt. Dit element hoort thuis in het <head> element.
+ - name: <h1>-<h6>
+   definition: Een element dat een koptekst aanduidt.
+ - name: <p>
+   definition: Een element dat een alinea aanduidt.
+ - name: <img>
+   definition: Een element dat een afbeelding aanduidt. De attributes src en alt zijn verplicht voor dit element.
+ - name: <hr>
+   definition: Een element dat een horizontale lijn aanduidt.
+ - name: <br>
+   definition: Een element dat inhoud op de volgende tekst-lijn plaatst.
+ - name: <a>
+   definition: Een element dat een hyperlink aanduidt. Het attribute href is verplicht voor dit element.
 description: Een website bestaat vaak uit verschillende onderdelen. Met HTML worden die onderdelen door jou, de ontwikkelaar, correct aangeduid. In dit hoofdstuk wordt uitgelegd hoe HTML jou daartoe in staat stelt.
 ---
 

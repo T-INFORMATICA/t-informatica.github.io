@@ -6,19 +6,19 @@ tags:
 definitions:
  - name: semantiek
    definition: Het doel van een element, duidelijk gemaakt door de naam van het element.
- - name: div
+ - name: <div>
    definition: Een algemeen block-level element dat weinig semantische waarde heeft.
- - name: section
+ - name: <section>
    definition: Een block-level element dat een groot onderdeel van een document aanduidt.
- - name: header
+ - name: <header>
    definition: Een block-level element dat gebruikt wordt voor inleidende inhoud of navigatielinks.
- - name: footer
+ - name: <footer>
    definition: Een block-level element dat gebruikt wordt aan het einde van het document. Bevat vaak extra informatie over de auteur, copyright en contact-informatie.
- - name: main
+ - name: <main>
    definition: Een block-level element dat gebruikt wordt om de hoofdinhoud aan te duiden. Dit element komt maar één keer voor in het document.
- - name: aside
+ - name: <aside>
    definition: Een block-level element met extra inhoud, dat naast de inhoud wordt geplaatst waarin het element geplaatst is.
- - name: article
+ - name: <article>
    definition: Een block-level element met inhoud die onafhankelijk van de rest van de site verspreidt kan worden, zonder dat die inhoud onduidelijk wordt.
 description: Een website bestaat uit veel verschillende onderdelen. HTML voorziet heel veel mogelijkheden om die onderdelen correct aan te duiden, maar vaak is er maar één optie de meest correcte. In dit hoofdstuk wordt verder uitgelegd welke onderdelen je best op een bepaalde manier aanduidt.
 ---
