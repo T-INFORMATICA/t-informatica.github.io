@@ -10,6 +10,14 @@ definitions:
    definition: De naam van het attribute. Dit staat aan de linkerkant van het = teken.
  - name: attribute-value
    definition: De waarde van het attribute. Dit staat aan de rechterkant van het = teken.
+ - name: src attribute
+   definition: 
+ - name: alt attribute
+   definition: 
+ - name: href attribute
+   definition: 
+ - name: target attribute
+   definition: 
 description: Sommige onderdelen op een website hebben meer informatie nodig. HTML gebruikt attributes om deze extra informatie aan te duiden. In dit hoofdstuk leer je werken met attributes.
 ---
 
