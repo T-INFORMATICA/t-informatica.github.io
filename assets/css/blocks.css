@@ -68,6 +68,14 @@ pre {
     gap: 32px;
 }
 
+span.tag {
+    padding: 0 8px;
+    border-radius: 9999px;
+    margin: 0 2px;
+    color: var(--color-accent-pink);
+    border: 2px solid var(--color-accent-pink);
+}
+
 /*  //////////////////*/
 /* //CARDS&TIMELINE//*/
 /*//////////////////*/
