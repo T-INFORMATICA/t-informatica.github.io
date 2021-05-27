@@ -27,7 +27,9 @@ Een programmeertaal is dus een taal die je schrijft met letters, cijfers en lees
 
 Net zoals andere talen bestaat een programmeertaal uit een aantal bouwstenen. In het Nederlands gebruiken we bijvoorbeeld onderwerpen, werkwoorden en lidwoorden als de bouwstenen om onze ideeën te kunnen uitspreken tegen een andere persoon. Een programmeertaal heeft ook zo'n bouwstenen, je kan de belangrijkste hieronder bekijken. Deze bouwstenen gebruiken we om onze ideeën te kunnen uitspreken tegen een computer. 
 
-<img src="{{ site.baseurl }}/assets/img/waardes-1.svg" alt="voorbeeld" style="height: auto; max-width: 100%">
+## Wat is een waarde?
+
+<img src="{{ site.baseurl }}/assets/img/waardes-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%">
 
 De eerste, belangrijke bouwsteen zijn de waarden. **Waarden zijn de 'soorten dingen' die je kan opslaan op een computer.** Het idee achter deze waarden is heel simpel: welke dingen zijn (a) gemakkelijk om te begrijpen voor een mens en (b) gemakkelijk om te zetten naar `0` en `1`?
 
