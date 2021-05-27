@@ -16,6 +16,11 @@ defaults:
       values:
           layout: "tutorial"
     - scope:
+          path: "_posts"
+      values:
+          excerpt_separator: <!--more-->
+          layout: contentCentered
+    - scope:
           path: "_courses/programmeren"
       values:
           course: "programmeren"
