@@ -19,6 +19,8 @@ description: Hoe maak je een variabele aan?
 
 ## Variabelen
 
+Variabelen zijn de tweede bouwsteen van een programmeertaal. Zonder variabelen wordt het heel erg moeilijk om waardes op te slaan en op te vragen.
+
 <img src="{{ site.baseurl }}/assets/img/variabelen-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%">
 
 Een programma gebruikt en verandert waardes. Deze waardes worden opgeslagen in het **computergeheugen** (RAM). 
