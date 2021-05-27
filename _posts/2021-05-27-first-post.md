@@ -6,6 +6,8 @@ title:  "Welkom op de cursus!"
 
 Hallo iedereen!
 
+<!--more-->
+
 In mijn eerste jaar als leerkracht was ik op zoek naar cursussen over programmeren en databanken. Elke cursus die ik vond had een aantal problemen. 
 
  - Zo was elke cursus gebaseerd op een specifiek stuk software of technologie. Je had geen 'inleiding SQL', maar een 'Inleiding SQL met SQL server Express 2008 en Reporting Services'.
