@@ -31,17 +31,17 @@ Een attribute geeft extra informatie aan een element. Bijvoorbeeld:
 *   Het target attribute duidt aan of je de link opent op hetzelfde tabblad, of een nieuw tabblad.
 
 ``` html
-<a>						 duidt een link aan die niets doet
+<a>		<!-- duidt een link aan die niets doet -->
 dit is een link
 </a>
 
-<a href="https://www.google.be">	  	 duidt een link aan naar de website van 
-	dit is een link			  	 google
+<a href="https://www.google.be">    <!-- duidt een link aan naar de website van google -->
+	dit is een link			  	 
 </a>
 
-<a href="https://www.google.be" target="_blank">
-	dit is een link			 	 duidt een link aan naar de website van 
-</a>			  			 google, die in een nieuw tabblad wordt 
+<a href="https://www.google.be" target="_blank"> <!-- duidt een link aan naar de website van google, die in een nieuw tabblad wordt  -->
+	dit is een link			 	 
+</a>			  			 
 ```
 
 
