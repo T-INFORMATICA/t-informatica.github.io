@@ -3,6 +3,11 @@ title: Markup
 tags: 
  - HTML
  - CSS
+ - commentaar
+ - server
+ - browser
+ - viewport
+ - client
 definitions:
  - name: HTML
    definition: Een taal die gebruikt wordt om de structuur van een website te bepalen.

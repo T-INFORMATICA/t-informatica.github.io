@@ -1,8 +1,15 @@
 ---
 title: Markup met HTML
 tags: 
- - instructie
- - commentaar
+ - tag
+ - tagnaam
+ - openingstag
+ - sluitingstag
+ - zelfsluitend
+ - element
+ - nesten
+ - inhoud
+ - indentatie
 definitions: 
  - name: tag
    definition: Een kleiner dan (<) en groter dan (>) teken waartussen een codewoord staat.

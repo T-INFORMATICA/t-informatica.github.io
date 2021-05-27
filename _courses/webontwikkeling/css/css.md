@@ -1,8 +1,13 @@
 ---
 title: CSS
 tags: 
- - instructie
- - commentaar
+ - css
+ - selector
+ - declaratie
+ - opmaak
+ - property
+ - value
+ - stylesheet
 definitions: 
  - name: CSS
    definition: De taal die gebruikt wordt om een website van opmaak te voorzien.

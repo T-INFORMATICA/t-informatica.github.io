@@ -2,7 +2,7 @@
 title: Selectors
 tags: 
  - voorrang
- - conflicterende stijlregels
+ - stijlregels
 definitions:
  - name: selector
    definition: CSS-code die aanduidt welke HTML elementen aangepast zullen worden door de stijlregels.

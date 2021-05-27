@@ -1,8 +1,9 @@
 ---
 title: Attributes
 tags: 
- - instructie
- - commentaar
+ - attribute
+ - key
+ - value
 definitions:
  - name: attribute
    definition: Een deel van de openingstag dat meer informatie geeft over het element.

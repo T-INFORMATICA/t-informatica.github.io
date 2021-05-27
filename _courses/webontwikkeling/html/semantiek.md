@@ -1,8 +1,9 @@
 ---
 title: Semantiek
 tags: 
- - instructie
- - commentaar
+ - semantiek
+ - id
+ - class
 definitions:
  - name: semantiek
    definition: Het doel van een element, duidelijk gemaakt door de naam van het element.

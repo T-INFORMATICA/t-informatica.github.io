@@ -50,4 +50,10 @@ layout: contentCentered
 </div>
 {% endif %}
 
+<div id="tags">
+{% for tag in page.tags %}
+    <span class="tag">{{tag}}</span>
+{% endfor %}
+</div>
+
 {{content}}
