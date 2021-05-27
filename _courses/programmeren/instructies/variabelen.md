@@ -21,7 +21,9 @@ description: Hoe maak je een variabele aan?
 
 <img src="{{ site.baseurl }}/assets/img/variabelen-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%">
 
-Een programma gebruikt en verandert waardes. Deze waardes worden opgeslagen in het **computergeheugen** (RAM). Je kan het computergeheugen voorstellen als een gigantisch groot magazijn met rekken. Elk rek heeft genummerde plaatsen waarop iets kan bewaard worden. De eerste plaats die je tegenkomt krijg plaatsnummer 0, de volgende 1, enz.\
+Een programma gebruikt en verandert waardes. Deze waardes worden opgeslagen in het **computergeheugen** (RAM). 
+
+Je kan het computergeheugen voorstellen als een gigantisch groot magazijn met rekken. Elk rek heeft genummerde plaatsen waarop iets kan bewaard worden. De eerste plaats die je tegenkomt krijg plaatsnummer 0, de volgende 1, enz.\
 Wanneer je dus de naam `"Sam"` opslaat op plaats nummer 2398, dan kan je altijd teruggaan naar het computergeheugen en opvragen wat er precies opgeslagen ligt op die plaats. Je kan vervolgens de instructie geven om de inhoud van plaats 2398 te veranderen naar `"Joske"`.
 
 <img src="/assets/img/variabelen-2.jpg" alt="computergeheugen voorgesteld als een magazijn" style="height: auto; max-width: 100%">
