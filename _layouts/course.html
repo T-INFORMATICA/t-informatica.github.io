@@ -2,40 +2,40 @@
 layout: contentCentered
 ---
 <nav>
-    {% for coursedata in site.data.courses %}
+{% for coursedata in site.data.courses %}
     {% for subjectdata in coursedata.subjects %}
-    {% for chapterdata in subjectdata.chapters %}
-    {% if page.url == chapterdata.link %}
-    <div>
-        {% if forloop.first == false %}
-        {% assign prev_i = forloop.index0 | minus: 1 %}
-        {% assign prev_page = subjectdata.chapters[prev_i] %}
-        <a href="{{prev_page.link}}" id="previousPage">
-            <span class="material-icons">
-                chevron_left
-            </span>
-            {{prev_page.name}}
-        </a>
-        {% endif %}
-    </div>
+        {% for chapterdata in subjectdata.chapters %}
+            {% if page.url == chapterdata.link %}
+            <div>
+                {% if forloop.first == false %}
+                    {% assign prev_i = forloop.index0 | minus: 1 %}
+                    {% assign prev_page = subjectdata.chapters[prev_i] %}
+                    <a href="{{prev_page.link}}" id="previousPage">
+                        <span class="material-icons">
+                            chevron_left
+                        </span>
+                        {{prev_page.name}}
+                    </a>
+                {% endif %}
+            </div>
 
 
-    <div>
-        {% if forloop.last == false %}
-        {% assign next_i = forloop.index0 | plus: 1 %}
-        {% assign next_page = subjectdata.chapters[next_i] %}
-        <a href="{{next_page.link}}" id="nextPage">
-            {{next_page.name}}
-            <span class="material-icons">
-                chevron_right
-            </span>
-        </a>
-        {% endif %}
-    </div>
-    {% endif %}
+            <div>
+                {% if forloop.last == false %}
+                    {% assign next_i = forloop.index0 | plus: 1 %}
+                    {% assign next_page = subjectdata.chapters[next_i] %}
+                    <a href="{{next_page.link}}" id="nextPage">
+                        {{next_page.name}}
+                        <span class="material-icons">
+                            chevron_right
+                        </span>
+                    </a>
+                {% endif %}
+            </div>
+            {% endif %}
+        {% endfor %}
     {% endfor %}
-    {% endfor %}
-    {% endfor %}
+{% endfor %}
 </nav>
 
 <h1>{{page.title}}</h1>
@@ -52,9 +52,9 @@ layout: contentCentered
 {% endif %}
 
 <div id="tags">
-    {% for tag in page.tags %}
+{% for tag in page.tags %}
     <span class="tag">{{tag}}</span>
-    {% endfor %}
+{% endfor %}
 </div>
 
 {{content}}

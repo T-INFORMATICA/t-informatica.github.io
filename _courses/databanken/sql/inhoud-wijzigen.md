@@ -1,8 +1,6 @@
 ---
-title: Codeblokken
+title: 
 tags: 
- - functie
- - selectie
- - iteratie
-description: Wat zijn codeblokken?
+ - 
+description: 
 ---
