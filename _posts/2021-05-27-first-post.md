@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: contentCentered
 title:  "Welcome to Jekyll!"
 ---
 
