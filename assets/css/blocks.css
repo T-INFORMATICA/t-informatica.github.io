@@ -83,6 +83,7 @@ span.tag {
 
 .subjectResultCard-v2 {
     width: 240px;
+    display: block;
 }
 
 .subjectResultCard-v2>.result {
