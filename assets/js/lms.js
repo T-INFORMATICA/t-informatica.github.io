@@ -191,6 +191,7 @@ function definitionsLoaded(e) {
                     let term = termdef["term"];
                     if (knownWords && term in knownWords) {
                         let timestamps = knownWords[term];
+                        console.log(timestamps);
 
                         // filter out all entries that were posted more than 2 weeks (14 days) ago
                         let firstDate = new Date();
