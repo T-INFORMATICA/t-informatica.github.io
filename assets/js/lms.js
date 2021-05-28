@@ -187,6 +187,7 @@ function definitionsLoaded(e) {
             for (const [subject, words] of Object.entries(definitions)) {
                 let knownWords = knownSubjectWords[subject];
                 let wordsLearned = 0;
+                console.log(knownWords);
 
                 for (const index in definitions[subject]) {
                     let termdef = definitions[subject][index];
