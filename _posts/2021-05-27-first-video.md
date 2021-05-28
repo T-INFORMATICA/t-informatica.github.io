@@ -1,5 +1,6 @@
 ---
 title:  "Video Bullet Hell tutorial"
+video: true
 ---
 
 # Bullet Hell tutorial
