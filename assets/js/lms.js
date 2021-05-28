@@ -216,7 +216,7 @@ function definitionsLoaded(e) {
                 }
 
                 if (wordsLearned <= 0) {
-                    return;
+                    break;
                 }
                 console.log(subject);
                 console.log(subjectId);
@@ -226,7 +226,7 @@ function definitionsLoaded(e) {
                 let subjectId = toCssSafeId(subject);
                 let subjectEl = document.querySelector(`#${subjectId}`);
                 if (subjectEl.querySelector(".numWordsLearned") == null) {
-                    return;
+                    break;
                 }
                 subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
                 let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
