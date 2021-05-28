@@ -66,7 +66,7 @@ function EvaluateExercise(subject) {
                     .child(`${subject}/${term}/${timestamp}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
-                    .then(() => window.location.replace('/lms-exercise.html'));
+                    .then(() => window.location.replace('/lms-reportcard.html'));
             }
         });
 }
