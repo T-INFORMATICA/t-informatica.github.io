@@ -20,6 +20,7 @@ defaults:
       values:
           excerpt_separator: <!--more-->
           layout: contentCentered
+          video: false
     - scope:
           path: "_courses/programmeren"
       values:

@@ -21,7 +21,7 @@ layout: contentCentered
 <h2>Blog</h2>
 
 <ul>
-    {% for post in site.posts %}
+    {% for post in site.posts | where: "video", false %}
     <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
         {{ post.excerpt }}
