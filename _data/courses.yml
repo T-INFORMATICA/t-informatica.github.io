@@ -1,4 +1,4 @@
-- name: "programmeren"
+- name: "Programmeren"
   link: /courses/programmeren/
   tutorials:
     - name: "Bullet Hell met p5.js"
@@ -72,7 +72,7 @@
 #      chapters:
 #        - name: "Domeinmodel"
 #          link: "/courses/programmeren/software-ontwikkeling/domeinmodel.html"
-- name: "webontwikkeling"
+- name: "Webontwikkeling"
   link: /courses/webontwikkeling/
   subjects:
     - name: "Markup"
@@ -163,7 +163,7 @@
 #          link: "/courses/webontwikkeling/dynamische-websites/formulieren.html"
 #        - name: SQL Database Connection
 #          link: "/courses/webontwikkeling/dynamische-websites/sql-database-connection.html"
-- name: "databanken"
+- name: "Databanken"
   link: /courses/databanken/
   subjects:
     - name: "Database Ontwerp"
