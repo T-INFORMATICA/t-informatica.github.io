@@ -182,6 +182,7 @@ function definitionsLoaded(e) {
         .then(snapshot => {
             let knownSubjectWords = snapshot.val();
             console.log(knownSubjectWords);
+            console.log(definitions);
 
             for (const [subject, words] of Object.entries(definitions)) {
                 let knownWords = knownSubjectWords[subject];
