@@ -218,13 +218,13 @@ function definitionsLoaded(e) {
                 if (wordsLearned <= 0) {
                     continue;
                 }
+
+                let subjectId = toCssSafeId(subject);
+                let subjectEl = document.querySelector(`#${subjectId}`);
                 console.log(subject);
                 console.log(subjectId);
                 console.log(subjectEl);
                 console.log(wordsLearned);
-
-                let subjectId = toCssSafeId(subject);
-                let subjectEl = document.querySelector(`#${subjectId}`);
                 if (subjectEl.querySelector(".numWordsLearned") == null) {
                     continue;
                 }
