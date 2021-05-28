@@ -8,7 +8,15 @@ layout: contentCentered
 
 <h2>Videos</h2>
 
-
+{% assign videos = site.static_files | where: "video", true %}
+<ul>
+    {% for video in videos %}
+    <li>
+        <a href="{{ video.url }}">{{ video.title }}</a>
+        {{ video.excerpt }}
+    </li>
+    {% endfor %}
+</ul>
 
 <h2>Blog</h2>
 
