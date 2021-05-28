@@ -369,3 +369,9 @@ main>article#content {
     margin: 8px;
     grid-gap: 8px;
 }
+
+@media print { 
+    aside, header, footer, nav { 
+        display: none !important; 
+    } 
+}
