@@ -1,4 +1,4 @@
-<a href="#" class="subjectResultCard-v2 unknownGrade" id="{{include.id}}">
+<div class="subjectResultCard-v2 unknownGrade" id="{{include.id}}">
     <div class="result" title="{{include.subject}}">
         <div class="grade">
             ?
@@ -11,9 +11,7 @@
     {% if include.progressTotal > 0 %}
     <div class="progressbar-bg">
         <div class="progressbar-progress" style="width: 0%"></div>
-        <a href="/lms-exercise.html?subject={{include.subject}}" class="progressbar-label"><span
-                class="numWordsLearned">0</span> / <span class="maxWordsLearned">{{include.progressTotal}}</span>
-            woorden geleerd</a>
+        <a href="/lms-exercise.html?subject={{include.subject}}" class="progressbar-label"><span class="numWordsLearned">0</span> / <span class="maxWordsLearned">{{include.progressTotal}}</span> woorden geleerd</a>
     </div>
     {% else %}
     <div class="progressbar-bg">
@@ -23,4 +21,4 @@
     <div class="comments">
         Deze doelstelling werd nog niet geevalueerd.
     </div>
-</a>
+</div>
