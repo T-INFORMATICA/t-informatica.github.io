@@ -217,6 +217,7 @@ function definitionsLoaded(e) {
                     console.log(subject);
                     console.log(subjectId);
                     console.log(subjectEl);
+                    return;
                 }
                 subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
                 let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
