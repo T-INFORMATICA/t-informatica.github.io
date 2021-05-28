@@ -211,6 +211,10 @@ function definitionsLoaded(e) {
                     }
                 }
 
+                if (wordsLearned <= 0) {
+                    return;
+                }
+
                 let subjectId = toCssSafeId(subject);
                 let subjectEl = document.querySelector(`#${subjectId}`);
                 if (subjectEl.querySelector(".numWordsLearned") == null) {
