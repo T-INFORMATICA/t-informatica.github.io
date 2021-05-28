@@ -222,7 +222,7 @@ function definitionsLoaded(e) {
                 subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
                 let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
                 let progress = (wordsLearned / max) * 100;
-                subjectEl.querySelector(".progressbar-progress").style.width = "" + progress + "%";
+                subjectEl.querySelector(".progressbar-progress").style.width = `${progress}%`;
             }
         });
 }
