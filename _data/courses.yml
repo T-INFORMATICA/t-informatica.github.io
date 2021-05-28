@@ -9,11 +9,11 @@
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
       rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+        "A": "Variabelen worden correct geinitialiseerd en je maakt correct gebruik van de verschillende datatypes en operators."
+        "B": "Enkele variabelen worden nog niet juist geinitialiseerd. Je maakt wel correct gebruik van de verschillende datatypes en operators."
+        "C": "Je gebruik van de verschillende operators is correct. Je gebruikt de verschillende datatypes nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
+        "D": "Je gebruik van de verschillende datatypes is correct. Je gebruikt de verschillende operators nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
+        "E": "Variabelen worden niet goed geinitialiseerd, je maakt verkeerd gebruik van de verschillende datatypes en operators."
       chapters:
         - name: Waardes
           link: "/courses/programmeren/instructies/waardes.html"
@@ -49,11 +49,11 @@
     - name: "Datastructuren"
       link: "/courses/programmeren/datastructuren/"
       rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+        "A": "Objecten, klassen fields, en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd. "
+        "B": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd, maar er zijn oplossingen die veel korter of sneller zijn. "
+        "C": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn echter niet juist geimplementeerd. "
+        "D": "Objecten en klassen worden correct aangemaakt. Fields en methods zijn echter niet juist aangemaakt en geimplementeerd. Overerving en associatie worden niet correct toegepast."
+        "E": "Objecten, klassen, fields en methods worden op de verkeerde manier aangemaakt. Overerving en associatie worden niet correct toegepast."
       chapters:
         - name: Objecten
           link: "/courses/programmeren/datastructuren/objecten.html"
@@ -103,11 +103,11 @@
     - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
       rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+        "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors werden samengevoegd waar nodig."
+        "B": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden te weinig samengevoegd."
+        "C": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
+        "D": "Selectors zijn correct gedefinieerd, maar zijn vaak niet specifiek genoeg. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
+        "E": "Selectors zijn verkeerd of niet specifiek genoeg gedefinieerd. Selectors worden te weinig samengevoegd. Stijlregels, waardes en eenheden werden niet correct gebruikt. "
       chapters:
         - name: CSS
           link: "/courses/webontwikkeling/css/css.html"
@@ -126,11 +126,11 @@
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
       rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+        "A": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt relatieve eenheden (em, rem) en custom properties (variabelen) waar nodig."
+        "B": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt custom properties (variabelen) waar nodig."
+        "C": "De interactie op jouw website is onvoldoende geïmplementeerd. Layout en ruimte zijn correct. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets."
+        "D": "Ruimte en interactie zijn onvoldoende geïmplementeerd. De website is onvoldoende responsive. Je layout werkt en je hebt de website ontwikkeld volgens het Mobile First principe."
+        "E": "Layout, ruimte en interactie zijn onvoldoende geïmplementeerd. De website is niet responsive. Er werd niet gewerkt volgens het Mobile First principe."
       chapters:
         - name: "Responsive Webdesign"
           link: "/courses/webontwikkeling/statische-websites/responsive-webdesign.html"
@@ -241,11 +241,11 @@
     - name: "Foutopsporing"
       link: "/courses/informatica/foutopsporing/"
       rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+        "A": "Je hebt de meeste syntax- en runtimefouten gevonden en verklaard, en kan er ook een oplossing voor geven."
+        "B": "Je hebt de meeste runtime-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig syntax fouten gevonden."
+        "C": "Je hebt de meeste syntax-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig runtime fouten gevonden."
+        "D": "Je hebt weinig fouten gevonden. Je kan de fouten die je vond wel verklaren, maar je biedt weinig oplossingen hiervoor."
+        "E": "Je hebt weinig fouten gevonden. De fouten die je vond kan je niet verklaren of oplossen."
       chapters:
         - name: "Foutopsporing"
           link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
