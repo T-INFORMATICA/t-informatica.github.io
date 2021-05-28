@@ -213,6 +213,11 @@ function definitionsLoaded(e) {
 
                 let subjectId = toCssSafeId(subject);
                 let subjectEl = document.querySelector(`#${subjectId}`);
+                if (subjectEl.querySelector(".numWordsLearned") == null) {
+                    console.log(subject);
+                    console.log(subjectId);
+                    console.log(subjectEl);
+                }
                 subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
                 let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
                 let progress = (wordsLearned / max) * 100;
