@@ -181,8 +181,6 @@ function definitionsLoaded(e) {
         .once('value')
         .then(snapshot => {
             let knownSubjectWords = snapshot.val();
-            console.log(knownSubjectWords);
-            console.log(definitions);
 
             for (const [subject, words] of Object.entries(definitions)) {
                 let knownWords = knownSubjectWords[subject];
@@ -194,7 +192,6 @@ function definitionsLoaded(e) {
                     let term = termdef["term"];
                     if (knownWords && term in knownWords) {
                         let timestamps = knownWords[term];
-                        console.log(timestamps);
 
                         // filter out all entries that were posted more than 2 weeks (14 days) ago
                         let firstDate = new Date();
@@ -221,10 +218,6 @@ function definitionsLoaded(e) {
 
                 let subjectId = toCssSafeId(subject);
                 let subjectEl = document.querySelector(`#${subjectId}`);
-                console.log(subject);
-                console.log(subjectId);
-                console.log(subjectEl);
-                console.log(wordsLearned);
                 if (subjectEl.querySelector(".numWordsLearned") == null) {
                     continue;
                 }
