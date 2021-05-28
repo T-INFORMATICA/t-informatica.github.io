@@ -8,7 +8,7 @@ layout: contentCentered
 
 <h2>Videos</h2>
 
-{% assign videos = site.static_files | where: "video", true %}
+{% assign videos = site.posts | where: "video", true %}
 <ul>
     {% for video in videos %}
     <li>
