@@ -18,6 +18,10 @@ description: Lijsten gebruiken en aanpassen.
 
 ## Arrays
 
+Waar een variabele normaal gezien maar één waarde tegelijk kan opslaan, kan je met een array meerdere waardes opslaan.
+
+<img src="{{ site.baseurl }}/assets/img/arrays-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%">
+
 Als je een lijst van waardes wilt opslaan (bv. Een lijst met merken van auto’s), zou dit er als volgt kunnen uitzien:
 
 ```javascript
