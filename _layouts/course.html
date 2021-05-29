@@ -2,10 +2,12 @@
 layout: contentCentered
 ---
 <nav>
+{% assign pageFound = false %}
 {% for coursedata in site.data.courses %}
     {% for subjectdata in coursedata.subjects %}
         {% for chapterdata in subjectdata.chapters %}
             {% if page.url == chapterdata.link %}
+            {% assign pageFound = true %}
             <div>
                 {% if forloop.first == false %}
                     {% assign prev_i = forloop.index0 | minus: 1 %}
@@ -33,8 +35,11 @@ layout: contentCentered
                 {% endif %}
             </div>
             {% endif %}
+            {% if pageFound == true %}{% break %}{% endif %}
         {% endfor %}
+        {% if pageFound == true %}{% break %}{% endif %}
     {% endfor %}
+    {% if pageFound == true %}{% break %}{% endif %}
 {% endfor %}
 </nav>
 
