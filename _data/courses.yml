@@ -19,10 +19,10 @@
           link: "/courses/programmeren/instructies/waardes.html"
         - name: Variabelen
           link: "/courses/programmeren/instructies/variabelen.html"
-        - name: Expressies
-          link: "/courses/programmeren/instructies/expressies.html"
         - name: Arrays
           link: "/courses/programmeren/instructies/arrays.html"
+        - name: Expressies
+          link: "/courses/programmeren/instructies/expressies.html"
         - name: Instructies
           link: "/courses/programmeren/instructies/instructies.html"
         - name: Foutopsporing
