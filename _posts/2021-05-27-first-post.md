@@ -4,7 +4,7 @@ title:  "Welkom op de cursus!"
 
 # Welkom
 
-Hallo iedereen!
+Hallo iedereen! Met deze post gaat de beta-versie van de website online. Voorlopig onder een andere URL, maar vanaf 1 september staat de nieuwe website op hetzelfde adres als voordien.
 
 <!--more-->
 
