@@ -2,11 +2,11 @@
 layout: contentCentered
 ---
 
-<h1>Welkom</h1>
+<h1>Cursus Informatica</h1>
 
 <h2>Nieuws</h2>
 
-<h2>Videos</h2>
+<h2>Recente Videos</h2>
 
 {% assign videos = site.posts | where: "video", true %}
 <ul>
@@ -18,7 +18,7 @@ layout: contentCentered
     {% endfor %}
 </ul>
 
-<h2>Blog</h2>
+<h2>Recente Blogposts</h2>
 
 {% assign blogposts = site.posts | where: "video", false %}
 <ul>
