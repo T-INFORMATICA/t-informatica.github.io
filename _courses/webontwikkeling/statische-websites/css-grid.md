@@ -148,7 +148,7 @@ Om een CSS Grid te kunnen gebruiken is het belangrijk om op voorhand, op papier,
 
 ### Stap 1: Definieer elementen
 
-Definieer de belangrijkste elementen in het ontwerp. Hierbij kan gebruik gemaakt worden van alle block-level elementen zoals **`header`**, **`footer`**, **`aside`**, enz. Om het simpel te houden kies ik hier voor **`div`** elementen.
+Definieer de belangrijkste elementen in het ontwerp. Hierbij kan gebruik gemaakt worden van alle block-level elementen zoals **`header`**, **`footer`**, **`aside`**, enz. Kies altijd voor de **semantisch correcte elementen!**
 
 Omdat het voor CSS Grid niet langer een verschil maakt in welke volgorde HTML elementen worden geplaatst, kies je best voor de **meest logische **volgorde. Je moet hiervoor niet langer kijken naar je ontwerp!
 
@@ -158,20 +158,20 @@ Deze elementen zullen de Grid Items in de CSS Grid layout worden.
 
 
 ```html
-<div class="header">
+<header>
+</header>
+
+<div id="title">
 </div>
 
-<h1 class="title">
-</h1>
+<nav>
+</nav>
 
-<div class="menu">
-</div>
+<article>
+</article>
 
-<div class="main">
-</div>
-
-<div class="footer">
-</div>
+<footer>
+</footer>
 ```
 
 
@@ -182,21 +182,21 @@ Maak nu een Grid Container die al deze elementen omvat. Meestal wordt hier een *
 
 
 ```html
-<div class="site">
-	<div class="header">
+<div id="site-container">
+	<header>
+	</header>
+
+	<div id="title">
 	</div>
 
-	<h1 class="title">
-	</h1>
+	<nav>
+	</nav>
 
-	<div class="main">
-	</div>
+	<article>
+	</article>
 
-	<div class="menu">
-	</div>
-
-	<div class="footer">
-	</div>
+	<footer>
+	</footer>
 </div>
 ```
 
@@ -206,7 +206,7 @@ Vervolgens gebruik je CSS om hier **`display: grid;`** op toe te passen.
 
 
 ```css
-.site {
+#site-container {
 	display: grid;
 }
 ```
@@ -229,7 +229,7 @@ Onderstaand voorbeeld maakt dus 3 kolommen, met de eerste en laatste kolom 25 pi
 
 
 ```css
-.site {
+#site-container {
 	grid-template-columns: 25px 50px 25px;
 }
 ```
@@ -250,7 +250,7 @@ Je mag deze waardes door elkaar gebruiken. In onderstaand voorbeeld is de eerste
 
 
 ```css
-.site {
+#site-container {
 	grid-template-columns: 50% 50px 25px;
 }
 ```
@@ -271,21 +271,21 @@ Op dit moment ziet de HTML code er nog steeds als volgt uit:
 
 
 ```html
-<div class="site">
-	<div class="header">
+<div id="site-container">
+	<header>
+	</header>
+
+	<div id="title">
 	</div>
 
-	<h1 class="title">
-	</h1>
+	<nav>
+	</nav>
 
-	<div class="main">
-	</div>
+	<article>
+	</article>
 
-	<div class="menu">
-	</div>
-
-	<div class="footer">
-	</div>
+	<footer>
+	</footer>
 </div>
 ```
 
@@ -294,7 +294,7 @@ En de CSS code ziet er als volgt uit:
 
 
 ```css
-.site {
+#site-container {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
 	grid-template-rows: auto 1fr 3fr;
@@ -322,7 +322,7 @@ Zo worden ook de Grid Areas “main”, “header”, “menu” en “footer”
 
 
 ```css
-.site {
+#site-container {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
 	grid-template-rows: auto 1fr 3fr;
@@ -344,7 +344,7 @@ Bijvoorbeeld:
 
 
 ```css
-.site {
+#site-container {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
 	grid-template-rows: auto 1fr 3fr;
@@ -354,27 +354,27 @@ Bijvoorbeeld:
 		"main menu footer";
 }
 
-.header {
+#site-container>header {
 	grid-area: header;
 	background-color: magenta;
 }
 
-.title {
+#title {
 	grid-area: title;
 	background-color: blue;
 }
 
-.menu {
+#site-container>nav {
 	grid-area: menu;
 	background-color: orange;
 }
 
-.main {
+#site-container>article {
 	grid-area: main;
 	background-color: green;
 }
 
-.footer {
+#site-container>footer {
 	grid-area: footer;
 	background-color: red;
 }
