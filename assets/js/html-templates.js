@@ -96,6 +96,7 @@ function tmpl_registrationApprovalForm(studentId, studentEmail, studentName, kla
             <span></span>
             <div class="student-management-buttons">
                 <button type="submit" class="material-icons" name="studentSubmit" value="save">person_add</button>
+                <button type="submit" class="material-icons" name="studentSubmit" value="remove">person_remove</button>
             </div>
         </form>
     `;
