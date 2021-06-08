@@ -34,8 +34,8 @@
     <title>Home</title>
 </head>
 
-<body class="bg-dark text-light">
-    <header class="bg-dark glow-pink">
+<body>
+    <header class="glow">
         {% include topNavigation.html %}
         <script>
             firebase.auth().onAuthStateChanged(function (user) {
@@ -47,7 +47,7 @@
     <main>
         {{content}}
     </main>
-    <footer class="bg-darkest text-lighter">
+    <footer class="bg-alt-color text-main-color">
 
         created by Sam Van Battel
     </footer>
