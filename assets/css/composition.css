@@ -31,6 +31,7 @@
     --alt-background-color: var(--color-200);
     --text-color: var(--color-800);
     --link-color: var(--color-secondary);
+    --link-alt-color: var(--color-100);
     --button-color: var(--color-primary);
     --border-color: var(--color-primary);
     --glow-color: var(--color-primary);
