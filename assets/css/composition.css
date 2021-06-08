@@ -386,7 +386,7 @@ main>article#content {
 
 .student-management-buttons {
     display: flex;
-    
+    justify-content: space-between;
 }
 
 @media print { 
