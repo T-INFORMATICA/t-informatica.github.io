@@ -14,6 +14,10 @@ header {
     z-index: 999;
 }
 
+header a {
+    color: var(--link-alt-color);
+}
+
 a:hover {
     text-decoration: underline;
 }
