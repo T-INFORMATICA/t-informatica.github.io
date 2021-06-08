@@ -384,6 +384,11 @@ main>article#content {
     grid-gap: 8px;
 }
 
+.student-management-buttons {
+    display: flex;
+    
+}
+
 @media print { 
     aside, header, footer, nav { 
         display: none !important; 
