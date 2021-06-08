@@ -75,8 +75,12 @@ function tmpl_managementForm_student(studentId, studentName, klas, username, pas
             <label for="student-${studentId}-naam">naam</label><input type="text" name="studentNaam" id="student-${studentId}-naam" value="${studentName}">
             <span></span>
             <div class="student-management-buttons">
-                <button class="material-icons" type="submit" name="studentSubmit" value="save">save</button>
-                <button class="material-icons" type="submit" name="studentSubmit" value="remove">person_remove</button>
+            <div class="normal-actions">
+                    <button class="material-icons" type="submit" name="studentSubmit" value="save">save</button>
+                </div>
+                <div class="dangerous-actions">
+                    <button class="material-icons" type="submit" name="studentSubmit" value="remove">person_remove</button>
+                </div>
             </div>
         </form>
     `;
@@ -95,8 +99,12 @@ function tmpl_registrationApprovalForm(studentId, studentEmail, studentName, kla
             <label for="student-${studentId}-naam">naam</label><input type="text" name="studentNaam" id="student-${studentId}-naam" value="${studentName}">
             <span></span>
             <div class="student-management-buttons">
-                <button type="submit" class="material-icons" name="studentSubmit" value="save">person_add</button>
-                <button type="submit" class="material-icons" name="studentSubmit" value="remove">person_remove</button>
+                <div class="normal-actions">
+                    <button type="submit" class="material-icons" name="studentSubmit" value="save">person_add</button>
+                </div>
+                <div class="dangerous-actions">
+                    <button type="submit" class="material-icons" name="studentSubmit" value="remove">person_remove</button>
+                </div>
             </div>
         </form>
     `;
