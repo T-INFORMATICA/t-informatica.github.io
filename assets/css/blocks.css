@@ -66,8 +66,8 @@ pre {
     background-image: url('/assets/img/logo-TnT-a20.png');
     background-repeat: no-repeat;
     background-position: calc(50% + min(100vw, var(--max-page-width)) / 2 - 100px) 
-                         calc(100vh - var(--footer-size) - 250px);
-    background-size: 200px;
+                         calc(100vh - var(--footer-size) - 200px);
+    background-size: 175px;
     background-attachment: fixed;
     z-index: -1;
 }
