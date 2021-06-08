@@ -7,14 +7,12 @@ description:
 
 ## Fouten in HTML en CSS
 
-Om fouten op te sporen, is het belangrijk om te weten welke fouten er kunnen voorkomen. 
+Het belangrijk om te weten dat HTML en CSS andere talen zijn: ze worden anders geschreven, hebben een ander doel en zullen dus ook andere soorten fouten kunnen bevatten.
 
-Allereerst is het belangrijk om te weten dat HTML en CSS andere talen zijn: ze worden anders geschreven, hebben een ander doel en zullen dus ook andere soorten fouten kunnen bevatten.
-
-Toch is het belangrijk om de twee talen samen te bekijken. HTML en CSS worden steeds samen gebruikt, waardoor het vaak moeilijk is om de fouten in de ene taal volledig los te zien van fouten in de andere. Is je HTML-structuur niet in orde, dan zijn je CSS selectors waarschijnlijk complexer dan nodig. Zijn je CSS selectors heel rigide opgesteld, dan wordt het moeilijk om je HTML-structuur aan te passen of uit te breiden.
+Toch moet je deze twee talen samen te bekijken: HTML en CSS worden steeds samen gebruikt, waardoor het vaak moeilijk is om de fouten in de ene taal volledig los te zien van fouten in de andere. Is je HTML-structuur niet in orde, dan zijn je CSS selectors waarschijnlijk complexer dan nodig.
 
 Bij het schrijven van HTML en CSS code wordt aangeraden om [de browser Firefox](https://www.mozilla.org/en-US/firefox/new/) te gebruiken. Deze browser biedt de meeste mogelijkheden aan om fouten in HTML en CSS terug te vinden. [Google Chrome](https://www.google.com/chrome/) kan je ook gebruiken, en biedt ook een uitgebreid gamma aan hulpmiddelen aan, maar Firefox is op dit moment iets uitgebreider.\
-We raden ook aan om de [W3C Validator plugin](https://addons.mozilla.org/nl/firefox/addon/html-validator/) te installeren in Firefox. Deze plugin is trouwens [ook beschikbaar voor Google Chrome](https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk).
+Het is ook aangeraden om de [W3C Validator plugin](https://addons.mozilla.org/nl/firefox/addon/html-validator/) te installeren in Firefox. Deze plugin is trouwens [ook beschikbaar voor Google Chrome](https://chrome.google.com/webstore/detail/html-validator/mpbelhhnfhfjnaehkcnnaknldmnocglk).
 
 ## Syntax Fouten
 
@@ -23,18 +21,6 @@ Ook bij CSS kan je Syntax-fouten maken: Schrijf je bijvoorbeeld de stijlregel `b
 Door gebruik te maken van de juiste hulpmiddelen zal je heel snel deze Syntax-fouten kunnen opsporen en oplossen.
 
 ### Voorbeeld
-
-In HTML:
- - De footer moet de tagnaam `footer` krijgen
- - Het correcte attribute is `src`, niet `scr`
-
-```html
-<foter>
-    Dit is mijn footer!
-</foter>
-
-<img scr="afbeelding.png">
-```
 
 In CSS:
  - De juiste stijlregel is `background-color`
