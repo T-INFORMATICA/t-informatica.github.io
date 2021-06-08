@@ -190,21 +190,19 @@ header>nav .iconButton {
 /* //DROPDOWN WINDOW//*/
 /*///////////////////*/
 
-.dropdownContainer:hover>.dropdownWindow {
-    display: block;
-}
-
 @media only screen and (min-width: 600px) {
 
     .dropdownWindow {
         display: none;
         position: absolute;
         top: 100%;
-        max-height: 0;
+        transform: scaleY(0);
+        transform-origin: top;
     }
     .dropdownContainer:hover>.dropdownWindow {
-        max-height: 500px;
-        transition: max-height 5s ease-in;
+        display: block;
+        transform: scaleY(1);
+        transition: transform 5s ease-in;
     }
 
     .dropdownWindow.dropdownWindowRight {
