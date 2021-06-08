@@ -200,6 +200,12 @@ header>nav .iconButton {
         display: none;
         position: absolute;
         top: 100%;
+        max-height: 0;
+    }
+    .dropdownContainer:hover>.dropdownWindow {
+        max-height: 100vh;
+        transition: max-height 0.25s ease-in;
+    
     }
 
     .dropdownWindow.dropdownWindowRight {
