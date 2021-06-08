@@ -16,7 +16,7 @@
     --alt-background-color: var(--color-900);
     --text-color: var(--color-200);
     --link-color: var(--color-secondary);
-    --link-alt-color: var(--color-200);
+    --link-alt-color: var(--color-secondary);
     --button-color: var(--color-primary);
     --border-color: var(--color-primary);
     --glow-color: var(--color-primary);
