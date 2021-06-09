@@ -401,3 +401,11 @@ main>article#content {
         display: none !important; 
     } 
 }
+
+#blog-content ul {
+    list-style: none;
+}
+
+#blog-content ul ul {
+    list-style: initial;
+}
