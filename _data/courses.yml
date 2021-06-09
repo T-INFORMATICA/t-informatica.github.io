@@ -89,8 +89,10 @@
         - name: Markup met Markdown
           link: "/courses/webontwikkeling/html/markdown.html"
         - name: Markup met HTML
+          link: "/courses/webontwikkeling/html/html.html"
+        - name: HTML Elementen
           link: "/courses/webontwikkeling/html/elementen.html"
-        - name: Attributen
+        - name: HTML Attributen
           link: "/courses/webontwikkeling/html/attributen.html"
         - name: Block en Inline
           link: "/courses/webontwikkeling/html/block-en-inline.html"
