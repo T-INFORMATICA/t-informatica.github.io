@@ -58,7 +58,7 @@ layout: contentCentered
 
 <div id="tags">
 {% for tag in page.tags %}
-    <span class="tag">{{tag}}</span>
+    <span class="tag">{{tag | escape}}</span>
 {% endfor %}
 </div>
 
