@@ -51,14 +51,16 @@ layout: contentCentered
                             {%- assign courseUrl = course.url -%}
                             {%- if courseUrl == chapter.link -%}
                                 {%- for definition in course.definitions -%}
+                                {%raw%}
                                 <tr>
                                     <td>
-                                    {{{definition.name}}}
+                                    {{definition.name}}
                                     </td>
                                     <td>
-                                    {{{definition.definition}}}
+                                    {{definition.definition}}
                                     </td>
                                 </tr>
+                                {%endraw%}
                                 {%- endfor -%}
                             {%- endif -%}
                         {%- endfor -%}
