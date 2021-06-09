@@ -18,6 +18,10 @@ header a {
     color: var(--link-alt-color);
 }
 
+header .dropdownWindow a {
+    color: var(--link-color);
+}
+
 a:hover {
     text-decoration: underline;
 }
