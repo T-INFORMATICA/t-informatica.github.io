@@ -404,8 +404,12 @@ main>article#content {
 
 #blog-content ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #blog-content ul ul {
     list-style: initial;
+    margin: initial;
+    padding: initial;
 }
