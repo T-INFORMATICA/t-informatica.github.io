@@ -442,6 +442,17 @@ main>article#content {
 }
 
 @media print { 
+
+    header,
+    #tags,
+    nav {
+        display: none !important;
+    }
+
+    main {
+        padding: 0;
+    }
+
     #closeReaderMode, aside, header, footer, nav { 
         display: none !important; 
     } 
