@@ -22,7 +22,8 @@
     --glow-color: var(--color-primary);
 }
 
-.light-theme {
+.light-theme,
+.reader-mode {
     --color-primary: #30638e;
     --color-secondary: #0e78d2;
 
