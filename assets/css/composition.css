@@ -395,13 +395,6 @@ main>article#content {
     display: flex;
     justify-content: space-between;
 }
-
-@media print { 
-    aside, header, footer, nav { 
-        display: none !important; 
-    } 
-}
-
 #blog-content ul {
     list-style: none;
     margin: 0;
@@ -412,4 +405,21 @@ main>article#content {
     list-style: initial;
     margin: initial;
     padding: initial;
+}
+
+
+
+
+
+.reader-mode aside,
+.reader-mode header,
+.reader-mode footer,
+.reader-mode nav {
+    visibility: none;
+}
+
+@media print { 
+    aside, header, footer, nav { 
+        display: none !important; 
+    } 
 }
