@@ -1,3 +1,4 @@
+
 <div id="searchbar">
     <input class="bg-alt-color text-main-color border" placeholder="Zoeken..." type="text" name="" id="searchbarInput">
     <ul id="searchbarOutput"></ul>
@@ -13,12 +14,25 @@
 <div id="pageActions">
     <ul>
         <li>
-            <a href="">
+{% assign pageFound = false %}
+{% for coursedata in site.data.courses %}
+    {% for subjectdata in coursedata.subjects %}
+        {% for chapterdata in subjectdata.chapters %}
+            {% if page.url == chapterdata.link %}
+            {% assign pageFound = true %}
+            <a href="{{chapterdata.link}}">
                 <span class="material-icons">
                     build
                 </span>
                 Oefen theorie
             </a>
+            {% endif %}
+            {% if pageFound == true %}{% break %}{% endif %}
+        {% endfor %}
+        {% if pageFound == true %}{% break %}{% endif %}
+    {% endfor %}
+    {% if pageFound == true %}{% break %}{% endif %}
+{% endfor %}
             </li>
             <li>
                 <a href="javascript:window.print()">
