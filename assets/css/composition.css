@@ -415,7 +415,7 @@ main>article#content {
 .reader-mode header,
 .reader-mode footer,
 .reader-mode nav {
-    visibility: none !important;
+    visibility: hidden !important;
 }
 
 @media print { 
