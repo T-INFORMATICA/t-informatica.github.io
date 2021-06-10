@@ -60,7 +60,7 @@ body {
 
 #closeReaderMode {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 2rem;
     font-size: 2rem;
