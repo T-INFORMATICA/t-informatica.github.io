@@ -20,12 +20,13 @@
         {% for chapterdata in subjectdata.chapters %}
             {% if page.url == chapterdata.link %}
             {% assign pageFound = true %}
-            <a href="{{chapterdata.link}}">
+            <a href="#" onclick="CreateNewExercise('{{subject.name}}')">
                 <span class="material-icons">
                     build
                 </span>
                 Oefen theorie
             </a>
+            <script src="/assets/js/exercise.js"></script>
             {% endif %}
             {% if pageFound == true %}{% break %}{% endif %}
         {% endfor %}
