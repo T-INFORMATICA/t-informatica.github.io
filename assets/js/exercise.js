@@ -10,9 +10,9 @@ function loadExercise() {
         if (subject) {
             CreateNewExercise(subject);
         }
-        else {
-            document.querySelector("#exerciseSelection").style.display = "";
-        }
+        // else {
+        //     document.querySelector("#exerciseSelection").style.display = "";
+        // }
     }
     else {
         generateQuestion();
