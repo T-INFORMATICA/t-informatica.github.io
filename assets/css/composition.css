@@ -58,6 +58,18 @@ body {
     position: relative;
 }
 
+#closeReaderMode {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+}
+
+.reader-mode #closeReaderMode {
+    display: block;
+}
+
 iframe {
     max-width: 100%;
 }
