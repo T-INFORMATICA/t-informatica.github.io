@@ -432,6 +432,7 @@ main>article#content {
 }
 
 .reader-mode header,
+.reader-mode #tags,
 .reader-mode nav {
     display: none !important;
 }
