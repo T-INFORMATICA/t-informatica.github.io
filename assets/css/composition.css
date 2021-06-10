@@ -442,7 +442,7 @@ main>article#content {
 }
 
 @media print { 
-    aside, header, footer, nav { 
+    #closeReaderMode, aside, header, footer, nav { 
         display: none !important; 
     } 
 }
