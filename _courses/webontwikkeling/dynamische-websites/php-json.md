@@ -238,7 +238,9 @@ Als de client het bestand `landenMetB.php` gebruikt, krijgen ze enkel de landen 
 
 ## AJAX, PHP en JSON
 
-Omdat het voor de client lijkt alsof `landenMetB.php` alleen maar JSON code bevat, kan je dit bestand gewoon gebruiken bij een AJAX request.
+Omdat het voor de client lijkt alsof `landenMetB.php` alleen maar JSON code bevat, kan je dit bestand gewoon gebruiken bij een AJAX request. 
+
+De code hieronder leest dus de JSON code van `landenMetB.php` in, en toont die JSON code vervolgens in het element met ID `voorbeeld`.
 
 ```html
 <!DOCTYPE html>
