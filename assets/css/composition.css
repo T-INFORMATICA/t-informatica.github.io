@@ -425,8 +425,9 @@ main>article#content p {
 }
 
 
-
-
+/*  ////////////////////////////*/
+/* //READER MODE & PRINT MODE//*/
+/*////////////////////////////*/
 
 .reader-mode aside,
 .reader-mode header,
