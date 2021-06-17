@@ -235,3 +235,32 @@ Dit programma:
 
 Als de client dus het bestand `europa.php` gebruikt, krijgen ze de volledige lijst met landen als JSON te zien.\
 Als de client het bestand `landenMetB.php` gebruikt, krijgen ze enkel de landen die beginnen met een 'B' te zien.
+
+## AJAX, PHP en JSON
+
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="voorbeeld">
+            <h2>AJAX Voorbeeld</h2>
+            <button onclick="TestAjax()">Klik hier!</button>
+        </div>
+
+        <script>
+let request = new XMLHttpRequest();
+
+function TestAjax() {
+    request.open("GET", "landenMetB.php");
+    request.addEventListener("load", DoeIetsMetResponse);
+    request.send();
+}
+
+function DoeIetsMetResponse(event) {
+    event.preventDefault();
+    document.getElementById("voorbeeld").innerHTML = request.response;
+}
+        </script>
+    </body>
+</html>
+```
