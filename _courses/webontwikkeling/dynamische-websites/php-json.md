@@ -195,6 +195,7 @@ Met PHP kan het bestand `europa.json` worden ingeladen als een tekst (string) me
 Daarna wordt de functie `json_decode` gebruikt om deze string om te zetten naar een PHP Array.\
 Met behulp van een for-loop kunnen we dan alle landen selecteren die beginnen met de letter 'B'.
 
+`landenMetB.php`
 ```php
 $bestand = file_get_contents("europa.json");
 
