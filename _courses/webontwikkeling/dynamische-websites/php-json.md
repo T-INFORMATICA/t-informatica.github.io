@@ -250,14 +250,14 @@ Als de client het bestand `landenMetB.php` gebruikt, krijgen ze enkel de landen 
         <script>
 let request = new XMLHttpRequest();
 
-function TestAjax() {
+function TestAjax(event) {
+    event.preventDefault();
     request.open("GET", "landenMetB.php");
     request.addEventListener("load", DoeIetsMetResponse);
     request.send();
 }
 
-function DoeIetsMetResponse(event) {
-    event.preventDefault();
+function DoeIetsMetResponse() {
     document.getElementById("voorbeeld").innerHTML = request.response;
 }
         </script>
