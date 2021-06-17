@@ -161,6 +161,8 @@
           link: "/courses/webontwikkeling/dynamische-websites/json.html"
         - name: AJAX
           link: "/courses/webontwikkeling/dynamische-websites/ajax.html"
+        - name: PHP en JSON
+          link: "/courses/webontwikkeling/dynamische-websites/php-json.html"
 #        - name: Formulieren
 #          link: "/courses/webontwikkeling/dynamische-websites/formulieren.html"
 #        - name: SQL Database Connection
