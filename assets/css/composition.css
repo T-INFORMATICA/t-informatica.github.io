@@ -255,6 +255,10 @@ main>article#content {
     padding: 2rem 2rem;
 }
 
+main>article#content p {
+    line-height: 1.6;
+}
+
 #content>nav {
     display: flex;
     justify-content: space-between;
@@ -442,7 +446,6 @@ main>article#content {
 }
 
 @media print { 
-
     header,
     #tags,
     nav {
