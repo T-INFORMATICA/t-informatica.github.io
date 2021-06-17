@@ -1,5 +1,5 @@
 ---
-title: AJAX en PHP
+title: PHP en JSON
 tags: 
  - 
 description:
@@ -136,6 +136,7 @@ Met PHP kan een programma geschreven worden dat op de server wordt uitgevoerd. D
 
 Eén voorbeeld waarbij PHP gebruikt kan worden is het filteren van een lijst. Hieronder vind je de lijst van enkele Europese landen:
 
+`europa.json`
 ```json
 [
   "Andorra",
@@ -189,3 +190,48 @@ Eén voorbeeld waarbij PHP gebruikt kan worden is het filteren van een lijst. Hi
   "Vatican City"
 ]
 ```
+
+Met PHP kan het bestand `europa.json` worden ingeladen als een tekst (string) met behulp van de functie `file_get_contents`.\
+Daarna wordt de functie `json_decode` gebruikt om deze string om te zetten naar een PHP Array.\
+Met behulp van een for-loop kunnen we dan alle landen selecteren die beginnen met de letter 'B'.
+
+```php
+$bestand = file_get_contents("europa.json");
+
+$landenArray = json_decode($bestand);
+
+// itereer over alle landen in de lijst
+for ($i = 0; $i < count($landenArray); ++$i) {
+    // selecteer een land
+    $land = $landenArray[$i];
+
+    // kijk na of het land begint met een B. OPGELET: HOOFDLETTERGEVOELIG!!!
+    $landBegintMetB = str_starts_with($land, 'B');
+
+    // als die letter geen B is, verwijder dan dat land uit de array met de functie unset
+    if ($landBegintMetB == false) {
+        unset($landenArray[$i]);
+    }
+}
+
+// unset zorgt ervoor dat de indexen niet meer op elkaar volgen
+// met array_values fixen we dit probleem
+$landenArray = array_values($landenArray);
+
+// zet om naar JSON
+$landenInJSON = json_encode($landenArray);
+
+// toon de JSON op het scherm
+echo $landenInJSON;
+```
+
+Dit programma:
+
+ 1. leest een json bestand in (`europa.json`)
+ 2. zet de json om in een PHP Array
+ 3. kijkt elk land in de array na, en verwijdert degenen die **niet** met de letter B beginnen
+ 4. zet de array terug om in JSON
+ 5. toont de JSON op het scherm
+
+Als de client dus het bestand `europa.php` gebruikt, krijgen ze de volledige lijst met landen als JSON te zien.\
+Als de client het bestand `landenMetB.php` gebruikt, krijgen ze enkel de landen die beginnen met een 'B' te zien.
