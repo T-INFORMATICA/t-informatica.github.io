@@ -204,7 +204,8 @@ Zoals je ziet is er niet veel code nodig om XML data op te vragen van een server
         <script>
 let request = new XMLHttpRequest();
 
-function TestAjax() {
+function TestAjax(event) {
+    event.preventDefault();
     request.open("GET", "cd_catalog.xml");
     request.addEventListener("load", DoeIetsMetResponse);
     request.send();
