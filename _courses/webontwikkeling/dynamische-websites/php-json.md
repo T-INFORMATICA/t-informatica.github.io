@@ -65,10 +65,10 @@ Dit PHP programma zal dus letterlijk de volgende tekst genereren:
 
 ```json
 {
-    'from': 'joske@vermeulen.be',
-    'to': 'ailin@martinez.be',
-    'title': 'hallo',
-    'body': 'Dit is een mail van Joske naar Ailin.'
+    "from": "joske@vermeulen.be",
+    "to": "ailin@martinez.be",
+    "title": "hallo",
+    "body": "Dit is een mail van Joske naar Ailin."
 }
 ```
 
