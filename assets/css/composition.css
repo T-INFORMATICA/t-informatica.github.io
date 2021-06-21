@@ -255,6 +255,10 @@ main>article#content {
     padding: 2rem 2rem;
 }
 
+main>article#content p {
+    line-height: 1.6;
+}
+
 #content>nav {
     display: flex;
     justify-content: space-between;
@@ -421,8 +425,9 @@ main>article#content {
 }
 
 
-
-
+/*  ////////////////////////////*/
+/* //READER MODE & PRINT MODE//*/
+/*////////////////////////////*/
 
 .reader-mode aside,
 .reader-mode header,
@@ -442,7 +447,17 @@ main>article#content {
 }
 
 @media print { 
-    aside, header, footer, nav { 
+    header,
+    #tags,
+    nav {
+        display: none !important;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    #closeReaderMode, aside, header, footer, nav { 
         display: none !important; 
     } 
 }
