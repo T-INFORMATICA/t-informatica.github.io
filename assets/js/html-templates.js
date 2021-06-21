@@ -18,12 +18,12 @@ function tmpl_timelineResult(result, subject, comment) {
     return `
     <div class="subjectResultCard-v2 timelineItem-result" id="${toCssSafeId(subject)}">
     <div class="result result${result}" title="${subject}">
-        <div class="grade">
-            ${result}
-        </div>
         <div class="subject">
             <span class="subtitle">${getResultLevelText(result)}</span>
             <h3 class="title" id="title-${toCssSafeId(subject)}">${subject}</h3>
+        </div>
+        <div class="grade">
+            ${result}
         </div>
     </div>
     <div class="comments">
