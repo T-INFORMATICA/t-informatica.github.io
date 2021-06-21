@@ -104,6 +104,8 @@ span.tag {
 .subjectResultCard-v2>.result {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     background-color: var(--color-primary);
 }
 
