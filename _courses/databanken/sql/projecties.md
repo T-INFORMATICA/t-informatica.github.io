@@ -290,4 +290,6 @@ Resultaat:
    </tr>
 </table>
 
-**Opgelet!** `Distinct` werkt op de **volledige projectie**, en niet op één enkele kolom.
+
+{:.warning}
+> **Opgelet!** `Distinct` werkt op de **volledige projectie**, en niet op één enkele kolom.
