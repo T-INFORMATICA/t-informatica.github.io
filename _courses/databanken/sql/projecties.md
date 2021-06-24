@@ -30,68 +30,21 @@ from Stuk;
 
 Resultaat:
 
-<table class="styledTable">
-   <tr>
-      <td>COMPONIST</td>
-      <td>TITEL</td>
-      <td>NIVEAU</td>
-   </tr>
-   <tr>
-      <td>1</td>
-      <td>Blue bird</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>2</td>
-      <td>Blue bird</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>4</td>
-      <td>Air pour</td>
-      <td>charmer B</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>Lina</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>8</td>
-      <td>Berceuse</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>2</td>
-      <td>Cradle song</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>8</td>
-      <td>Non piu andrai</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>9</td>
-      <td>I'll never go</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>Swinging Lina</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>Little Lina</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>Blue sky</td>
-      <td>A</td>
-   </tr>
-</table>
+{.styledTable}
+| COMPONIST | TITEL          | NIVEAU    |
+| --------- | -------------- | --------- |
+| 1         | Blue bird      | <null>    |
+| 2         | Blue bird      | B         |
+| 4         | Air pour       | charmer B |
+| 5         | Lina           | B         |
+| 8         | Berceuse       | <null>    |
+| 2         | Cradle song    | B         |
+| 8         | Non piu andrai | <null>    |
+| 9         | I'll never go  | A         |
+| 10        | Swinging Lina  | B         |
+| 5         | Little Lina    | A         |
+| 10        | Blue sky       | A         |
+
 
 Een projectie op alle kolommen kan ook. De afkorting hiervoor is een asterisk (`*`).
 
