@@ -275,9 +275,9 @@ blockquote.warning p {
 }
 
 blockquote.warning::before {
-    content: '';
+    content: '\e0f0';
     position: absolute;
-    background-image: url(/assets/img/logo-TnT-a20-h64.png);
+    /* background-image: url(/assets/img/logo-TnT-a20-h64.png); */
     width: 3rem;
     height: 3rem;
     background-size: 60%;
