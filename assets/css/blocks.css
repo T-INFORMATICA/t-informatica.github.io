@@ -276,20 +276,17 @@ blockquote.warning p {
 
 blockquote.warning::before {
     position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    width: 3rem;
+    height: 3rem;
 
     font-family: 'Material Icons';
     font-size: 2rem;
     text-align: center;
     line-height: 2.8rem;
     content: '\e0f0';
-    /* background-image: url(/assets/img/logo-TnT-a20-h64.png); */
-    width: 3rem;
-    height: 3rem;
-    background-size: 60%;
-    top: -1.5rem;
-    left: -1.5rem;
-    background-repeat: no-repeat;
-    background-position: center;
+
     border-radius: 9999px;
     background-color: var(--color-800);
     border: .25rem solid var(--color-primary);
