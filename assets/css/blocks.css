@@ -276,4 +276,6 @@ blockquote.warning::before {
     height: 50px;
     background-size: contain;
     left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
 }
