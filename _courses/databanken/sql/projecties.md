@@ -30,7 +30,7 @@ from Stuk;
 
 Resultaat:
 
-{.styledTable}
+{:.styledTable}
 | COMPONIST | TITEL          | NIVEAU    |
 | --------- | -------------- | --------- |
 | 1         | Blue bird      | <null>    |
