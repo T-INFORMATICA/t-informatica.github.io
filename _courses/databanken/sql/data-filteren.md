@@ -173,7 +173,7 @@ De logische operatoren hieronder kunnen gebruikt worden voor data die een tekstw
    </tr>
 </table>
 
-{.warning}
+{:.warning}
 > Opgelet! Zorg ervoor dat alle tekst waardes tussen dubbele aanhalingstekens staan. 
 
 ## Filteren met DISTINCT
