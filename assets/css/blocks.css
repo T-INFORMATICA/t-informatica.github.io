@@ -286,6 +286,7 @@ blockquote.warning::before {
     text-align: center;
     line-height: 2.8rem;
     content: '\e0f0';
+    color: var(--color-primary);
 
     border-radius: 9999px;
     background-color: var(--color-800);
