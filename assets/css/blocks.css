@@ -263,9 +263,14 @@ table.styledTable {
 
 blockquote.warning {
     position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
     padding-left: 60px;
     background-color: var(--color-primary);
-    margin: 2rem 0;
+}
+
+blockquote.warning p {
+    margin: 0;
 }
 
 blockquote.warning::before {
