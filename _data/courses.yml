@@ -8,12 +8,12 @@
   subjects:
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
-      rubric:
-        "A": "Variabelen worden correct geinitialiseerd en je maakt correct gebruik van de verschillende datatypes en operators."
-        "B": "Enkele variabelen worden nog niet juist geinitialiseerd. Je maakt wel correct gebruik van de verschillende datatypes en operators."
-        "C": "Je gebruik van de verschillende operators is correct. Je gebruikt de verschillende datatypes nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
-        "D": "Je gebruik van de verschillende datatypes is correct. Je gebruikt de verschillende operators nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
-        "E": "Variabelen worden niet goed geinitialiseerd, je maakt verkeerd gebruik van de verschillende datatypes en operators."
+      rubrics:
+        - "A": "Variabelen worden correct geinitialiseerd en je maakt correct gebruik van de verschillende datatypes en operators."
+          "B": "Enkele variabelen worden nog niet juist geinitialiseerd. Je maakt wel correct gebruik van de verschillende datatypes en operators."
+          "C": "Je gebruik van de verschillende operators is correct. Je gebruikt de verschillende datatypes nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
+          "D": "Je gebruik van de verschillende datatypes is correct. Je gebruikt de verschillende operators nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
+          "E": "Variabelen worden niet goed geinitialiseerd, je maakt verkeerd gebruik van de verschillende datatypes en operators."
       chapters:
         - name: Waardes
           link: "/courses/programmeren/instructies/waardes.html"
@@ -40,13 +40,6 @@
           "C": "test"
           "D": "test"
           "E": "test"
-      
-      rubric:
-        "A": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden gebruikt. Het DRY principe wordt zo goed mogelijk toegepast door te kiezen voor de juiste codeblokken."
-        "B": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden gebruikt. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
-        "C": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden niet gebruikt. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
-        "D": "Iteraties en selecties maken gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
-        "E": "Iteraties en selecties maken geen gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
       chapters:
         - name: Codeblokken
           link: "/courses/programmeren/codeblokken/codeblokken.html"
@@ -60,12 +53,6 @@
           link: "/courses/programmeren/codeblokken/foutopsporing-codeblokken.html"
     - name: "Datastructuren"
       link: "/courses/programmeren/datastructuren/"
-      rubric:
-        "A": "Objecten, klassen fields, en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd. "
-        "B": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd, maar er zijn oplossingen die veel korter of sneller zijn. "
-        "C": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn echter niet juist geimplementeerd. "
-        "D": "Objecten en klassen worden correct aangemaakt. Fields en methods zijn echter niet juist aangemaakt en geimplementeerd. Overerving en associatie worden niet correct toegepast."
-        "E": "Objecten, klassen, fields en methods worden op de verkeerde manier aangemaakt. Overerving en associatie worden niet correct toegepast."
       rubrics:
         - "A": "Objecten, klassen fields, en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd. "
           "B": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd, maar er zijn oplossingen die veel korter of sneller zijn. "
@@ -95,12 +82,12 @@
   subjects:
     - name: "Markup"
       link: "/courses/webontwikkeling/html"
-      rubric:
-        "A": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, en er is gekozen voor een optimale oplossing."
-        "B": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, hoewel er oplossingen bestaan die korter of optimaler zijn."
-        "C": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. Elementen zijn niet voldoende onderverdeeld in grotere elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
-        "D": "Elementen worden correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
-        "E": "Elementen worden niet correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn niet of onduidelijk ingevuld waar nodig."
+      rubrics:
+        - "A": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, en er is gekozen voor een optimale oplossing."
+          "B": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, hoewel er oplossingen bestaan die korter of optimaler zijn."
+          "C": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. Elementen zijn niet voldoende onderverdeeld in grotere elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
+          "D": "Elementen worden correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
+          "E": "Elementen worden niet correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn niet of onduidelijk ingevuld waar nodig."
       chapters:
         - name: Markup
           link: "/courses/webontwikkeling/html/markup-languages.html"
@@ -122,12 +109,12 @@
           link: "/courses/webontwikkeling/html/foutopsporing-html.html"
     - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
-      rubric:
-        "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors werden samengevoegd waar nodig."
-        "B": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden te weinig samengevoegd."
-        "C": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
-        "D": "Selectors zijn correct gedefinieerd, maar zijn vaak niet specifiek genoeg. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
-        "E": "Selectors zijn verkeerd of niet specifiek genoeg gedefinieerd. Selectors worden te weinig samengevoegd. Stijlregels, waardes en eenheden werden niet correct gebruikt. "
+      rubrics:
+        - "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors werden samengevoegd waar nodig."
+          "B": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden te weinig samengevoegd."
+          "C": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
+          "D": "Selectors zijn correct gedefinieerd, maar zijn vaak niet specifiek genoeg. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
+          "E": "Selectors zijn verkeerd of niet specifiek genoeg gedefinieerd. Selectors worden te weinig samengevoegd. Stijlregels, waardes en eenheden werden niet correct gebruikt. "
       chapters:
         - name: CSS
           link: "/courses/webontwikkeling/css/css.html"
@@ -145,12 +132,12 @@
 #          link: "/courses/webontwikkeling/css/state-selectors.html"
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
-      rubric:
-        "A": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt relatieve eenheden (em, rem) en custom properties (variabelen) waar nodig."
-        "B": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt custom properties (variabelen) waar nodig."
-        "C": "De interactie op jouw website is onvoldoende geïmplementeerd. Layout en ruimte zijn correct. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets."
-        "D": "Ruimte en interactie zijn onvoldoende geïmplementeerd. De website is onvoldoende responsive. Je layout werkt en je hebt de website ontwikkeld volgens het Mobile First principe."
-        "E": "Layout, ruimte en interactie zijn onvoldoende geïmplementeerd. De website is niet responsive. Er werd niet gewerkt volgens het Mobile First principe."
+      rubrics:
+        - "A": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt relatieve eenheden (em, rem) en custom properties (variabelen) waar nodig."
+          "B": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt custom properties (variabelen) waar nodig."
+          "C": "De interactie op jouw website is onvoldoende geïmplementeerd. Layout en ruimte zijn correct. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets."
+          "D": "Ruimte en interactie zijn onvoldoende geïmplementeerd. De website is onvoldoende responsive. Je layout werkt en je hebt de website ontwikkeld volgens het Mobile First principe."
+          "E": "Layout, ruimte en interactie zijn onvoldoende geïmplementeerd. De website is niet responsive. Er werd niet gewerkt volgens het Mobile First principe."
       chapters:
         - name: "Responsive Webdesign"
           link: "/courses/webontwikkeling/statische-websites/responsive-webdesign.html"
@@ -164,12 +151,12 @@
           link: "/courses/webontwikkeling/statische-websites/cube.html"
     - name: "Dynamische Websites"
       link: "/courses/webontwikkeling/dynamische-websites"
-      rubric:
-        "A": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code."
-        "B": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code, hoewel er duidelijk oplossingen bestaan die korter of optimaler zijn."
-        "C": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
-        "D": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn niet correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
-        "E": "GET, POST en SESSION methodes werden niet correct gebruikt om data op te vangen en door te geven. "
+      rubrics:
+        - "A": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code."
+          "B": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code, hoewel er duidelijk oplossingen bestaan die korter of optimaler zijn."
+          "C": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
+          "D": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn niet correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
+          "E": "GET, POST en SESSION methodes werden niet correct gebruikt om data op te vangen en door te geven. "
       chapters:
         - name: URL Parameters
           link: "/courses/webontwikkeling/dynamische-websites/url-parameters.html"
@@ -190,12 +177,12 @@
   subjects:
     - name: "Database Ontwerp"
       link: "/courses/databanken/database-ontwerp"
-      rubric:
-        "A": "Databasefouten werden correct herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. "
-        "B": "Databasefouten werden correct herkend. Het strokendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. Het multipliciteitendiagram is onvoldoende uitgewerkt. "
-        "C": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Sleutels werden correct aangeduid. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. "
-        "D": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet correct aangeduid. "
-        "E": "Databasefouten werden niet goed herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet aangeduid. "
+      rubrics:
+        - "A": "Databasefouten werden correct herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. "
+          "B": "Databasefouten werden correct herkend. Het strokendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. Het multipliciteitendiagram is onvoldoende uitgewerkt. "
+          "C": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Sleutels werden correct aangeduid. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. "
+          "D": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet correct aangeduid. "
+          "E": "Databasefouten werden niet goed herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet aangeduid. "
       chapters:
         - name: Inleiding
           link: "/courses/databanken/database-ontwerp/inleiding.html"
@@ -213,12 +200,12 @@
           link: "/courses/databanken/database-ontwerp/normalisatie.html"
     - name: "SQL"
       link: "/courses/databanken/sql"
-      rubric:
-        "A": "De projectie, brontabel en selectie is correct geimplementeerd voor de hoofd- en subqueries."
-        "B": "De projectie, brontabel en selectie is correct geimplementeerd. Er werd geen gebruik gemaakt van subqueries waar nodig."
-        "C": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit meerdere brontabellen. De selectie is niet correct geimplementeerd."
-        "D": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit één brontabel. De selectie is niet correct geimplementeerd."
-        "E": "De projectie, brontabel en selectie van queries zijn verkeerd geimplementeerd."
+      rubrics:
+        - "A": "De projectie, brontabel en selectie is correct geimplementeerd voor de hoofd- en subqueries."
+          "B": "De projectie, brontabel en selectie is correct geimplementeerd. Er werd geen gebruik gemaakt van subqueries waar nodig."
+          "C": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit meerdere brontabellen. De selectie is niet correct geimplementeerd."
+          "D": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit één brontabel. De selectie is niet correct geimplementeerd."
+          "E": "De projectie, brontabel en selectie van queries zijn verkeerd geimplementeerd."
       chapters:
         - name: Inleiding
           link: "/courses/databanken/sql/inleiding.html"
@@ -245,12 +232,12 @@
   subjects:
     - name: "Basiskennis"
       link: "/courses/informatica/basiskennis/"
-      rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+      rubrics:
+        - "A": "Dit is een A"
+          "B": "Dit is een B"
+          "C": "Dit is een C"
+          "D": "Dit is een D"
+          "E": "Dit is een E"
       chapters:
         - name: "code editors"
           link: "/courses/informatica/basiskennis/code-editors.html"
@@ -262,12 +249,12 @@
           link: "/courses/informatica/basiskennis/talstelsels.html"
     - name: "Foutopsporing"
       link: "/courses/informatica/foutopsporing/"
-      rubric:
-        "A": "Je hebt de meeste syntax- en runtimefouten gevonden en verklaard, en kan er ook een oplossing voor geven."
-        "B": "Je hebt de meeste runtime-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig syntax fouten gevonden."
-        "C": "Je hebt de meeste syntax-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig runtime fouten gevonden."
-        "D": "Je hebt weinig fouten gevonden. Je kan de fouten die je vond wel verklaren, maar je biedt weinig oplossingen hiervoor."
-        "E": "Je hebt weinig fouten gevonden. De fouten die je vond kan je niet verklaren of oplossen."
+      rubrics:
+        - "A": "Je hebt de meeste syntax- en runtimefouten gevonden en verklaard, en kan er ook een oplossing voor geven."
+          "B": "Je hebt de meeste runtime-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig syntax fouten gevonden."
+          "C": "Je hebt de meeste syntax-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig runtime fouten gevonden."
+          "D": "Je hebt weinig fouten gevonden. Je kan de fouten die je vond wel verklaren, maar je biedt weinig oplossingen hiervoor."
+          "E": "Je hebt weinig fouten gevonden. De fouten die je vond kan je niet verklaren of oplossen."
       chapters:
         - name: "Foutopsporing"
           link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
