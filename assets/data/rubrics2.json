@@ -13,7 +13,7 @@ layout: null
                 {% if rubricFoundInCourse or rubricFoundInSubject %},{%endif%}
                 {% assign rubricFoundInCourse = true %}
                 {% assign rubricFoundInSubject = true %}
-    "{{subjectdata.name}} ({{ forloop.index }})": {
+    "{{subjectdata.name}}{% if forloop.length > 1 %} ({{ forloop.index }}){%endif%}": {
         "A": "{{rubric.A}}",
         "B": "{{rubric.B}}",
         "C": "{{rubric.C}}",
