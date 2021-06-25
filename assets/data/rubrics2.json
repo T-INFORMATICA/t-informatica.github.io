@@ -6,12 +6,11 @@ layout: null
 
 {
     {%- for coursedata in site.data.courses %}
-        {% if rubricFoundInCourse == true %},{% endif %}
         {% assign rubricFoundInCourse = false %}
         {% for subjectdata in coursedata.subjects %}
-            {% if rubricFoundInSubject == true %},{% endif %}
             {% assign rubricFoundInSubject = false %}
             {% for rubric in subjectdata.rubrics %}
+                {% if rubricFoundInCrouse or rubricFoundInSubject %},{%endif%}
                 {% assign rubricFoundInCourse = true %}
                 {% assign rubricFoundInSubject = true %}
     "{{subjectdata.name}}": {
