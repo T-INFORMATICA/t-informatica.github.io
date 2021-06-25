@@ -1,6 +1,8 @@
 ---
 layout: null
 ---
+{% assign rubricFoundInCourse = false %}
+{% assign rubricFoundInSubject = false %}
 
 {
     {%- for coursedata in site.data.courses %}
