@@ -318,7 +318,8 @@ Hiervoor wordt gebruik gemaakt van de volgende CSS property:
 In onderstaand voorbeeld kan je zien dat de bovenste 3 Grid Cells de naam “title” krijgen. Deze 3 cellen vormen dus één Grid Area genaamd “title”.  \
 Zo worden ook de Grid Areas “main”, “header”, “menu” en “footer” gedefinieerd.
 
-**opgelet!** Soms wil je een cel leeg laten. Gebruik hiervoor een **punt**. Een punt duidt aan dat een bepaalde cel niet gebruikt zal worden in een area.
+{:.warning}
+> **opgelet!** Soms wil je een cel leeg laten. Gebruik hiervoor een **punt**. Een punt duidt aan dat een bepaalde cel niet gebruikt zal worden in een area.
 
 
 ```css

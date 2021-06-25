@@ -52,7 +52,8 @@ Leerling voorbeeldLeerling = new Leerling();	// OBJECT
 
 In dit voorbeeld wordt dus een variabele gemaakt met de naam `voorbeeldLeerling`. In die variabele wordt een waarde (object) bewaard van het datatype Leerling door `new Leerling()` aan te roepen.
 
-**Opgelet!** Uiteraard is een lege klasse `Leerling` nogal zinloos. De bedoeling is dat de klasse wordt gevuld met functies en variabelen die bij een leerling horen.
+{:.warning}
+> **Opgelet!** Uiteraard is een lege klasse `Leerling` nogal zinloos. De bedoeling is dat de klasse wordt gevuld met functies en variabelen die bij een leerling horen.
 
 ## Fields
 

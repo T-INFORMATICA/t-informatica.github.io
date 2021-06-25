@@ -95,7 +95,9 @@ void Explodeer()  	// de signature
 
 Het gedeelte `function Explodeer()` heet de **signature** van de functie. Deze signature moet **uniek** zijn in de scope van de functie. De signature geeft aan dat dit de enige functie Explodeer is binnen de scope.
 
-**Opgelet!** Een declaratie is **GEEN instructie**! Aan het einde volgt er dus **GEEN puntkomma**.
+
+{:.warning}
+> **Opgelet!** Een declaratie is **GEEN instructie**! Aan het einde volgt er dus **GEEN puntkomma**.
 
 ## Een functie gebruiken
 
@@ -143,7 +145,8 @@ Explodeer();
 Explodeer();
 ```
 
-**Opgelet!** Een functie aanroep is **WEL een instructie!** Aan het einde volgt er dus **WEL een puntkomma**.
+{:.warning}
+> **Opgelet!** Een functie aanroep is **WEL een instructie!** Aan het einde volgt er dus **WEL een puntkomma**.
 
 
 ## Parameters

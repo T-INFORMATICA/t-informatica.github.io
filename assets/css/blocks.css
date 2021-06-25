@@ -254,3 +254,41 @@ table.styledTable {
   table.styledTable tr {
     border-top: 1px solid #dee2e6;
   }
+
+
+
+/*  ///////////////////////*/
+/* //WARNING BLOCKQUOTES//*/
+/*///////////////////////*/
+
+blockquote.warning {
+    position: relative;
+    margin: 2rem 0;
+    padding: .5rem 0;
+    padding-left: 4rem;
+    margin-left: 1.5rem;
+    background-color: var(--color-primary);
+}
+
+blockquote.warning p {
+    margin: 0;
+}
+
+blockquote.warning::before {
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+
+    font-family: 'Material Icons';
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.8rem;
+    content: '\e0f0';
+    color: var(--color-secondary);
+
+    border-radius: 9999px;
+    background-color: var(--color-800);
+    border: .25rem solid var(--color-primary);
+}

@@ -41,7 +41,8 @@ AJAX werkt heel gelijkaardig als het bezoeken van een website.
 
 De **X** in AJAX staat voor **XML**. Om AJAX te gebruiken moet er dus XML-data zijn opgeslagen op de server van je website.
 
-**Opgelet**: Om veiligheidsredenen staan moderne browsers niet toe dat je een bestand kan gebruiken dat is opgeslagen op een andere server. Dit betekent dat zowel de HTML-pagina als het XML-bestand zich op dezelfde server moeten bevinden. 
+{:.warning}
+> **Opgelet**: Om veiligheidsredenen staan moderne browsers niet toe dat je een bestand kan gebruiken dat is opgeslagen op een andere server. Dit betekent dat zowel de HTML-pagina als het XML-bestand zich op dezelfde server moeten bevinden. 
 
 ## AJAX Voorbeeld
 
@@ -150,7 +151,8 @@ Wanneer de server klaar is om een response te geven laat hij je dit weten met be
 
 Een event is een signaal dat je kan vasthangen aan een functie. Wanneer dat signaal afgaat, wordt ook automatisch die functie aangeroepen.
 
-**Opgelet**: De functie vasthangen aan het event doe je best voordat je de request verstuurt. Anders zou het kunnen gebeuren dat je server je te snel af is, en dat je het event dus nooit opvangt.
+{:.warning}
+> **Opgelet**: De functie vasthangen aan het event doe je best voordat je de request verstuurt. Anders zou het kunnen gebeuren dat je server je te snel af is, en dat je het event dus nooit opvangt.
 
 
 ```javascript
