@@ -19,8 +19,7 @@ layout: null
         "E": "{{rubric.E}}"
     }
             {% endfor %}
-            {% assign rubricFoundInSubject = false %}
         {% endfor %}
-        {% assign rubricFoundInCourse = false %}
+        {% assign rubricFoundInSubject = false %}
     {% endfor %}
 }
