@@ -10,7 +10,7 @@ layout: null
         {% for subjectdata in coursedata.subjects %}
             {% assign rubricFoundInSubject = false %}
             {% for rubric in subjectdata.rubrics %}
-                {% if rubricFoundInCrouse or rubricFoundInSubject %},{%endif%}
+                {% if rubricFoundInCourse or rubricFoundInSubject %},{%endif%}
                 {% assign rubricFoundInCourse = true %}
                 {% assign rubricFoundInSubject = true %}
     "{{subjectdata.name}}": {
