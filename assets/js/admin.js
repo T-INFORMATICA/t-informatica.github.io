@@ -51,7 +51,7 @@ function submitEvaluation(e) {
 
 function createNewEvalForm() {
     let request = new XMLHttpRequest();
-    request.open("GET", "/assets/data/rubrics.json");
+    request.open("GET", "/assets/data/rubrics2.json");
     request.addEventListener("load", rubricsLoaded);
     request.send();
 }
