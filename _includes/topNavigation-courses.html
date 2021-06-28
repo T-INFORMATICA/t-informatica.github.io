@@ -1,0 +1,13 @@
+{% for coursedata in site.data.courses %}
+                <li class="navButton dropdownContainer">
+                    <span class="dropdownText">
+                        {{coursedata.name | capitalize}}
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </span>
+                    <div class="dropdownWindow dropdownWindowFullscreen | bg-main-color glow">
+                        {% include topNavigation-course-dropdown.html coursename=coursedata.name %}
+                    </div>
+                </li>
+{% endfor %}

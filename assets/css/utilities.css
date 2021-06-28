@@ -1,0 +1,47 @@
+.bg-main-color {
+    background-color: var(--main-background-color);
+}
+
+.bg-alt-color {
+    background-color: var(--alt-background-color);
+}
+
+.glow {
+    box-shadow: 0 4px 8px -4px var(--glow-color);
+}
+
+.border {
+    border: 1px solid var(--border-color);
+}
+
+.text-main-color {
+    color: var(--text-color);
+}
+
+/*  ////////////////////*/
+/* //EVALUATION CARDS//*/
+/*////////////////////*/
+
+.subjectResultCard-v2>.result.resultA {
+    background-color: #42BF0D;
+}
+
+.subjectResultCard-v2>.result.resultB {
+    background-color: #6FBF0D;
+}
+
+.subjectResultCard-v2>.result.resultC {
+    background-color: #98BF0D;
+}
+
+.subjectResultCard-v2>.result.resultD {
+    background-color: #D2A10F;
+}
+
+.subjectResultCard-v2>.result.resultE {
+    background-color: #E9493E;
+}
+
+.unknownGrade {
+    opacity: .2;
+}

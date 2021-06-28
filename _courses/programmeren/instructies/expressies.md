@@ -27,6 +27,10 @@ description: Elk programma maakt bewerkingen met data. In dit hoofdstuk leer je 
 
 ## Expressie
 
+Expressies zorgen ervoor dat een programmeur de waardes in een variabele kan veranderen.
+
+<img src="{{ site.baseurl }}/assets/img/expressies-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%">
+
 Een expressie is een bewerking met als resultaat een waarde. Bijvoorbeeld:
 
 ```javascript

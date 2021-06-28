@@ -1,0 +1,463 @@
+:root {
+    --footer-size: 4rem;
+    --max-page-width: 1100px;
+    --header-size: 50px;
+
+    --color-100: #fff;
+    --color-200: #ddd;
+    --color-700: #42444e;
+    --color-800: #1d1f28ff;
+    --color-900: #000;
+    --color-primary: #ff4971;
+    --color-secondary: #18e3c8;
+
+    --main-background-color: var(--color-800);
+    --header-background-color: var(--color-800);
+    --alt-background-color: var(--color-900);
+    --text-color: var(--color-200);
+    --link-color: var(--color-secondary);
+    --link-alt-color: var(--color-secondary);
+    --button-color: var(--color-primary);
+    --border-color: var(--color-primary);
+    --glow-color: var(--color-primary);
+}
+
+.light-theme,
+.reader-mode {
+    --color-primary: #30638e;
+    --color-secondary: #0e78d2;
+
+    --main-background-color: var(--color-100);
+    --header-background-color: var(--color-primary);
+    --alt-background-color: var(--color-200);
+    --text-color: var(--color-800);
+    --link-color: var(--color-secondary);
+    --link-alt-color: var(--color-100);
+    --button-color: var(--color-primary);
+    --border-color: var(--color-primary);
+    --glow-color: var(--color-primary);
+}
+
+.material-icons {
+    vertical-align: middle;
+    font-size: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+#closeReaderMode {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+}
+
+.reader-mode #closeReaderMode {
+    display: block;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: var(--footer-size);
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding-bottom: var(--footer-size);
+
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        padding-top: var(--header-size);
+    }
+}
+
+/*  //////////////////*/
+/* //TOP NAVIGATION//*/
+/*//////////////////*/
+
+
+header {
+    min-height: var(--header-size);
+}
+
+header>nav {
+    height: 100%;
+
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+
+    position: relative;
+}
+
+header>nav>ul.responsive{
+    display: flex;
+    justify-content: space-between;
+}
+
+header>nav>ul.responsive .closeMenu {
+    display: none;
+}
+
+header>nav:target>ul.responsive .openMenu { 
+    display: none;
+}
+
+header>nav:target>ul.responsive .closeMenu,
+header>nav:target>ul.responsive~* {
+    display: block;
+}
+
+header>nav>ul {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header>nav>ul>li {
+    height: 100%;
+}
+
+header>nav .navButton {
+    padding: 1rem .5rem;
+    font-size: 1rem;
+}
+
+header>nav .iconButton {
+    padding: 2px;
+    font-size: 1.2rem;
+}
+
+.dropdownContainer .dropdownWindow {
+    padding: 16px;
+}
+
+.dropdownContainer .dropdownWindow ul,
+#usermenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#usermenu ul a {
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+
+    header {
+        height: var(--header-size);
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+    
+    header>nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header>nav:target>ul.responsive~*, /* for when a user goes from mobile to desktop while having the menu targetted */
+    header>nav>ul {
+        display: flex;
+    }
+
+    header>nav>ul.responsive {
+        display: none;
+    }
+}
+
+/*  ///////////////////*/
+/* //DROPDOWN WINDOW//*/
+/*///////////////////*/
+
+@media only screen and (min-width: 600px) {
+
+    .dropdownWindow {
+        display: none;
+        position: absolute;
+        top: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    .dropdownContainer:hover>.dropdownWindow {
+        display: block;
+        transform: scaleY(1);
+        transition: transform 5s ease-in;
+    }
+
+    .dropdownWindow.dropdownWindowRight {
+        right: 0;
+        width: 200px;
+    }
+
+    .dropdownWindow.dropdownWindowFullscreen {
+        left: 0;
+        right: 0;
+        columns: 250px 12;
+    }
+}
+
+/*  ///////////////*/
+/* //CENTER AREA//*/
+/*///////////////*/
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-content: stretch;
+}
+
+main>* {
+    height: 100%;
+}
+
+main>aside {
+    width: 200px;
+    flex-shrink: 0;
+    display: none;
+}
+
+main>article#content {
+    flex-grow: 1;
+    padding: 2rem 2rem;
+}
+
+main>article#content p {
+    line-height: 1.6;
+}
+
+#content>nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 600px) {
+    #pageManagement {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    main>aside {
+        display: block;
+    }
+}
+
+/*  //////////////*/
+/* //PAGE ASIDE//*/
+/*//////////////*/
+
+#pageManagement {
+    padding: 1.5rem .5rem .5rem 0rem;
+}
+
+#pageManagement>* {
+    margin-bottom: 1rem;
+}
+
+#pageActions {
+    padding: .5rem;
+}
+
+#pageManagement ul a {
+    display: block;
+}
+
+#pageManagement ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#pageManagement ul ul {
+    margin-top: .5rem;
+    margin-left: .5rem;
+    padding: 0;
+}
+
+#pageManagement ul>li {
+    margin-bottom: .5rem;
+}
+
+#searchbarInput {
+    width: 100%;
+    padding: 4px 8px;
+} 
+
+#searchbar {
+    position: relative;
+}
+
+#searchbarOutput {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-900);
+}
+
+#searchbarOutput li {
+    padding: 0 .5rem;
+}
+
+/*  ////////////////////*/
+/* //ADMIN GRADE FORM//*/
+/*////////////////////*/
+
+#gradeform .evalShowGrades,
+#gradeform input[type="radio"] {
+    display: none;
+}
+
+.evalShowGrades+* {
+    display: none;
+}
+
+.evalShowGrades:checked+.gradeform-subject {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.gradeform-subject-option:hover {
+    outline: 2px solid var(--color-primary);
+}
+
+.gradeform-subject-option {
+    padding: 4px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.gradeform-subject>input[type="radio"]:checked+.gradeform-subject-option {
+    background-color: var(--color-primary);
+}
+
+.gradeform-subject-option-comment {
+    padding: 4px;
+    border: 1px solid black;
+    flex: 1;
+}
+
+/*  /////////////////////////*/
+/* //ADMIN MANAGEMENT FORM//*/
+/*/////////////////////////*/
+
+.student-management-collapse+label {
+    border: 1px solid transparent;
+}
+
+.student-management-collapse:checked+label,
+.student-management-collapse+label:hover {
+    border: 1px solid #ccc;
+}
+
+.student-management-collapse+label:hover {
+    text-decoration: underline;
+}
+
+.student-management-collapse+label {
+    display: block;
+    padding: 4px 8px;
+}
+
+.student-management-collapse,
+.student-management-collapse+label+form {
+    display: none;
+}
+
+.student-management-collapse:checked+label+form {
+    display: grid;
+    grid-template-columns: 100px auto;
+    margin: 8px;
+    grid-gap: 8px;
+}
+
+.student-management-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+#blog-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#blog-content ul ul {
+    list-style: initial;
+    margin: initial;
+    padding: initial;
+}
+
+
+/*  ////////////////////////////*/
+/* //READER MODE & PRINT MODE//*/
+/*////////////////////////////*/
+
+.reader-mode aside,
+.reader-mode header,
+.reader-mode footer,
+.reader-mode nav {
+    visibility: hidden !important;
+}
+
+.reader-mode header,
+.reader-mode #tags,
+.reader-mode nav {
+    display: none !important;
+}
+
+.reader-mode main {
+    padding: 0;
+}
+
+@media print { 
+    header,
+    #tags,
+    nav {
+        display: none !important;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    #closeReaderMode, aside, header, footer, nav { 
+        display: none !important; 
+    } 
+}

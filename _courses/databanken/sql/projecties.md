@@ -30,68 +30,21 @@ from Stuk;
 
 Resultaat:
 
-<table class="styledTable">
-   <tr>
-      <td>COMPONIST</td>
-      <td>TITEL</td>
-      <td>NIVEAU</td>
-   </tr>
-   <tr>
-      <td>1</td>
-      <td>Blue bird</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>2</td>
-      <td>Blue bird</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>4</td>
-      <td>Air pour</td>
-      <td>charmer B</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>Lina</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>8</td>
-      <td>Berceuse</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>2</td>
-      <td>Cradle song</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>8</td>
-      <td>Non piu andrai</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>9</td>
-      <td>I'll never go</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>Swinging Lina</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>Little Lina</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>Blue sky</td>
-      <td>A</td>
-   </tr>
-</table>
+{:.styledTable}
+| COMPONIST | TITEL          | NIVEAU       |
+| --------- | -------------- | ------------ |
+| 1         | Blue bird      | &lt;null&gt; |
+| 2         | Blue bird      | B            |
+| 4         | Air pour       | charmer B    |
+| 5         | Lina           | B            |
+| 8         | Berceuse       | &lt;null&gt; |
+| 2         | Cradle song    | B            |
+| 8         | Non piu andrai | &lt;null&gt; |
+| 9         | I'll never go  | A            |
+| 10        | Swinging Lina  | B            |
+| 5         | Little Lina    | A            |
+| 10        | Blue sky       | A            |
+
 
 Een projectie op alle kolommen kan ook. De afkorting hiervoor is een asterisk (`*`).
 
@@ -111,80 +64,22 @@ from Stuk;
 
 Resultaat:
 
-<table class="styledTable">
-   <tr>
-      <td>COMPONIST</td>
-      <td>TITEL</td>
-      <td>heeft als niveau</td>
-      <td>NIVEAU</td>
-   </tr>
-   <tr>
-      <td>1</td>
-      <td>Blue bird</td>
-      <td>heeft als niveau</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>2</td>
-      <td>Blue bird</td>
-      <td>heeft als niveau</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>4</td>
-      <td>Air pour charmer</td>
-      <td>heeft als niveau</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>Lina</td>
-      <td>heeft als niveau</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>8</td>
-      <td>Berceuse</td>
-      <td>heeft als niveau</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>2</td>
-      <td>Cradle song</td>
-      <td>heeft als niveau</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>8</td>
-      <td>Non piu andrai</td>
-      <td>heeft als niveau</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>9</td>
-      <td>I'll never go</td>
-      <td>heeft als niveau</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>Swinging Lina</td>
-      <td>heeft als niveau</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>5</td>
-      <td>Little Lina</td>
-      <td>heeft als niveau</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>10</td>
-      <td>Blue sky</td>
-      <td>heeft als niveau</td>
-      <td>A</td>
-   </tr>
-</table>
+
+{:.styledTable}
+| COMPONIST | TITEL            | heeft als niveau | NIVEAU       |
+| --------- | ---------------- | ---------------- | ------------ |
+| 1         | Blue bird        | heeft als niveau | &lt;null&gt; |
+| 2         | Blue bird        | heeft als niveau | B            |
+| 4         | Air pour charmer | heeft als niveau | B            |
+| 5         | Lina             | heeft als niveau | B            |
+| 8         | Berceuse         | heeft als niveau | &lt;null&gt; |
+| 2         | Cradle song      | heeft als niveau | B            |
+| 8         | Non piu andrai   | heeft als niveau | &lt;null&gt; |
+| 9         | I'll never go    | heeft als niveau | A            |
+| 10        | Swinging Lina    | heeft als niveau | B            |
+| 5         | Little Lina      | heeft als niveau | A            |
+| 10        | Blue sky         | heeft als niveau | A            |
+
 
 <!--
 ## Expressies in Select Queries
@@ -239,56 +134,21 @@ from Stuk;
 
 Resultaat:
 
-<table class="styledTable">
-   <tr>
-      <th>GENRE</th>
-      <th>NIVEAU</th>
-   </tr>
-   <tr>
-      <td>jazz</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>jazz</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>pop</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>jazz</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>jazz</td>
-      <td>A</td>
-   </tr>
-</table>
+{:.styledTable}
+| GENRE    | NIVEAU       |
+| -------- | ------------ |
+| jazz     | &lt;null&gt; |
+| jazz     | B            |
+| klassiek | B            |
+| klassiek | B            |
+| klassiek | &lt;null&gt; |
+| klassiek | B            |
+| klassiek | &lt;null&gt; |
+| pop      | A            |
+| jazz     | B            |
+| klassiek | A            |
+| jazz     | A            |
+
 
 In deze projectie staan 11 rijen, waarvan enkele meerdere keren voorkomen. Dit kan soms handig zijn, maar vaak ook niet. Moest de projectie een èchte relationele tabel zijn, dan zouden er maar 7 rijen staan. 
 
@@ -301,40 +161,18 @@ from Stuk;
 
 Resultaat:
 
+{:.styledTable}
+| GENRE    | NIVEAU       |
+| -------- | ------------ |
+| jazz     | &lt;null&gt; |
+| jazz     | A            |
+| jazz     | B            |
+| klassiek | &lt;null&gt; |
+| klassiek | A            |
+| klassiek | B            |
+| pop      | A            |
 
-<table class="styledTable">
-   <tr>
-      <th>GENRE</th>
-      <th>NIVEAU</th>
-   </tr>
-   <tr>
-      <td>jazz</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>jazz</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>jazz</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>&lt;null&gt;</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>A</td>
-   </tr>
-   <tr>
-      <td>klassiek</td>
-      <td>B</td>
-   </tr>
-   <tr>
-      <td>pop</td>
-      <td>A</td>
-   </tr>
-</table>
 
-**Opgelet!** `Distinct` werkt op de **volledige projectie**, en niet op één enkele kolom.
+
+{:.warning}
+> **Opgelet!** `Distinct` werkt op de **volledige projectie**, en niet op één enkele kolom.

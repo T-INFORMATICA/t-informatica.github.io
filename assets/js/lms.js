@@ -1,3 +1,8 @@
+function documentReady(callback) {
+    if (document.readyState != "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+}
+
 function changeUser() {
     let userid = document.querySelector("#userSelect>select").value;
 
@@ -14,12 +19,26 @@ function getUserId() {
 function selectUser() {
     let userid = getUserId();
 
-    document.querySelector("#userSelect>select").value = userid;
+    let userSelectEl = document.querySelector("#userSelect>select");
+    if (userSelectEl) {
+        userSelectEl.value = userid;
+    }
 }
 
 function toCssSafeId(text) {
     text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
-    return text;
+    return text.toLowerCase();
+}
+
+function getResultLevelText(result) {
+    switch (result) {
+        case 'A': return "Expert";
+        case 'B': return "Kenner";
+        case 'C': return "Gevorderd";
+        case 'D': return "Beginner";
+        case 'E': return "Leek";
+    }
+    return "";
 }
 
 function calculateResult(resultsArr) {
@@ -75,20 +94,23 @@ function addUsersToMenu() {
                 addFirebaseUserdataToMenu(snapshot.key, snapshot.val());
             });
         })
-        .then(() => selectUser());
+        .then(() => selectUser())
+        .catch(error => console.log(`Not logged in as Admin. ${error}`));
 }
 
 function addFirebaseUserdataToMenu(userid, userdata) {
-    if (firebase.auth().currentUser.uid === userid)
+    let userselect = document.querySelector('#userSelect>select');
+    if (firebase.auth().currentUser.uid === userid || userselect == null)
         return;
 
-    tmpl = `<option value="${userid}">${userdata.naam}</option>`;
+    tmpl = `<option value="${userid}">${userdata.naam} - ${userdata.klas}</option>`;
     document.querySelector('#userSelect>select').innerHTML += tmpl;
 }
 
-function addUserEvalsToPage(userid) {
+function addUserEvalsToPage() {
+    let userid = getUserId();
     let database = firebase.database();
-    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+    let evalsref = database.ref(`evaluaties`).orderByChild("date");
     let resultsref = database.ref(`resultaten/${userid}`);
 
     evalsref
@@ -97,11 +119,13 @@ function addUserEvalsToPage(userid) {
             addEvalToTimeline(evalsnapshot.key, evalsnapshot.val());
             resultsref
                 .once('value')
-                .then(snapshot => snapshot.forEach(resultsnapshot => {
-                    if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
-                        addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
-                    }
-                }));
+                .then(snapshot => {
+                    snapshot.forEach(resultsnapshot => {
+                        if (resultsnapshot.val().evaluatie === evalsnapshot.key) {
+                            addEvalResultToTimeline(evalsnapshot.key, resultsnapshot.val());
+                        }
+                    });
+                });
         }));
 }
 
@@ -112,7 +136,8 @@ function addEvalToTimeline(evalid, evaldata) {
 
 function addEvalResultToTimeline(evalid, resultdata) {
     let tmpl = tmpl_timelineResult(resultdata.result, resultdata.subject, resultdata.commentaar);
-    document.querySelector(`#${evalid}>ul`).innerHTML += tmpl;
+    document.querySelector(`#${evalid}`).parentElement.style.display = "";
+    document.querySelector(`#${evalid}`).innerHTML += tmpl;
 }
 
 function addUserdataToProfileTable() {
@@ -140,26 +165,75 @@ function addUserdataToProfileTable() {
     );
 }
 
-function addResultsToPage() {
+function addCounterForKnownTermsToPage() {
     let request = new XMLHttpRequest();
-    request.open("GET", "/assets/data/subjectCategories.json");
-    request.addEventListener("load", resultCategoriesLoaded);
+    request.open("GET", "/assets/data/definitionsCategories.json");
+    request.addEventListener("load", definitionsLoaded);
     request.send();
 }
 
-function resultCategoriesLoaded(e) {
-    let response = JSON.parse(e.currentTarget.response);
+function definitionsLoaded(e) {
+    let definitions = JSON.parse(e.currentTarget.response);
 
-    for (const [subject, category] of Object.entries(response)) {
-        addCategoryElement(category);
-        addSubjectElementToCategoryElement(subject, category);
-    }
+    let database = firebase.database();
+    let termsref = database.ref(`knownTerms/${getUserId()}`);
+    termsref
+        .once('value')
+        .then(snapshot => {
+            let knownSubjectWords = snapshot.val();
 
+            for (const [subject, words] of Object.entries(definitions)) {
+                let knownWords = knownSubjectWords[subject];
+                let wordsLearned = 0;
+
+                for (const index in definitions[subject]) {
+                    let termdef = definitions[subject][index];
+                    let term = termdef["term"];
+                    if (knownWords && term in knownWords) {
+                        let timestamps = knownWords[term];
+
+                        // filter out all entries that were posted more than 2 weeks (14 days) ago
+                        let firstDate = new Date();
+                        firstDate.setDate(firstDate.getDate() - 14);
+                        const filteredTimestamps = Object.keys(timestamps)
+                            .filter(key => firstDate <= (new Date(key)))
+                            .reduce((obj, key) => {
+                                obj[key] = timestamps[key];
+                                return obj;
+                            }, {});
+
+                        let sum = Object.values(filteredTimestamps).reduce((a, b) => a + b, 0);
+                        let amount = parseFloat(Object.entries(filteredTimestamps).length);
+                        let avg = Math.round(10 * sum / amount) / 10.0; // round it to 1 decimal
+
+                        // Only count words that are known for 90% or more
+                        wordsLearned += avg < .9 ? 0 : 1;
+                    }
+                }
+
+                if (wordsLearned <= 0) {
+                    continue;
+                }
+
+                let subjectId = toCssSafeId(subject);
+                let subjectEl = document.querySelector(`#${subjectId}`);
+                if (subjectEl.querySelector(".numWordsLearned") == null) {
+                    continue;
+                }
+                subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
+                let max = parseFloat(subjectEl.querySelector(".maxWordsLearned").innerHTML);
+                let progress = (wordsLearned / max) * 100;
+                subjectEl.querySelector(".progressbar-progress").style.width = `${progress}%`;
+            }
+        });
+}
+
+function addResultsToPage() {
     let userid = getUserId();
 
     let database = firebase.database();
     let resultsref = database.ref(`resultaten/${userid}`);
-    let evalsref = database.ref(`evaluaties/${userid}`).orderByChild("date");
+    let evalsref = database.ref(`evaluaties`).orderByChild("date");
 
     let results;
     let evals;
@@ -219,8 +293,17 @@ function showResultInSubjectElement(subject, result) {
     subjectEl.parentElement.parentElement.style.display = "";
     subjectEl.style.opacity = "1";
 
-    let letterEl = subjectEl.querySelector(`.${result}`);
-    letterEl.className += " selected";
+    let resultEl = subjectEl.querySelector(`.result`);
+    resultEl.classList.add(`result${result}`);
+    resultEl.classList.remove("unknownGrade");
+
+    subjectEl.querySelector(`.subtitle`).innerHTML = getResultLevelText(result);
+
+    let letterEl = subjectEl.querySelector(`.grade`);
+    letterEl.innerHTML = result;
+
+    let commentsEl = subjectEl.querySelector('.comments');
+    commentsEl.innerHTML = "";
 }
 
 function addCategoryElement(category) {

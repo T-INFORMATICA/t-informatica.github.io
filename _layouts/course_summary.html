@@ -1,5 +1,5 @@
 ---
-layout: course
+layout: contentCentered
 ---
 
 <h2 id="inhoud">Inhoud van de cursus</h2>
@@ -53,10 +53,10 @@ layout: course
                                 {%- for definition in course.definitions -%}
                                 <tr>
                                     <td>
-                                    {{definition.name}}
+                                    {{definition.name | escape}}
                                     </td>
                                     <td>
-                                    {{definition.definition}}
+                                    {{definition.definition | escape}}
                                     </td>
                                 </tr>
                                 {%- endfor -%}

@@ -1,11 +1,13 @@
 ---
 title: Markup met Markdown
 tags: 
- - 
+ - markup
+ - vet
+ - schuin
+ - lijst
+ - koptekst
 definitions:
- - name: 
-   definition: 
-description: 
+description: Markdown is een simpele Markup-Language waarmee je documenten kan maken in een Code Editor. Je kan titels, alinea's, vette tekst, schuine tekst, lijsten, ... aanmaken met behulp van duidelijke annotaties.
 ---
 
 

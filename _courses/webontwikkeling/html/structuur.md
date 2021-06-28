@@ -1,8 +1,10 @@
 ---
 title: Structuur
 tags: 
- - instructie
- - commentaar
+ - structuur
+ - block
+ - hoofdstructuur
+ - substructuur
 definitions:
  - name: structuur
    definition: De logische manier waarop de ontwikkelaar elementen heeft genest.

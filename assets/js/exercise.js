@@ -5,7 +5,14 @@ let numQuestionsInExercise;
 function loadExercise() {
     exerciseid = new URLSearchParams(window.location.search).get('exerciseid');
     if (exerciseid == null) {
-        document.querySelector("#exerciseSelection").style.display = "";
+
+        let subject = new URLSearchParams(window.location.search).get('subject');
+        if (subject) {
+            CreateNewExercise(subject);
+        }
+        // else {
+        //     document.querySelector("#exerciseSelection").style.display = "";
+        // }
     }
     else {
         generateQuestion();
@@ -19,20 +26,22 @@ function confirmExit() {
 function submitExercise(submitEvent) {
     submitEvent.preventDefault();
 
+    document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = true);
+
     let answer = document.querySelector(`[name="answer"]:checked`).value;
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref.child(`questions/${questionKey}/answer`).set(answer);
 
-    loadExercise();
+    setTimeout(() => loadExercise(), 1000);
+
+
 }
 
-function EvaluateExercise() {
+function EvaluateExercise(subject) {
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
-
-
-    let userref = database.ref(`users/${_user.uid}`);
+    let termsref = database.ref(`knownTerms/${_user.uid}`);
 
     let terms = {};
     timestamp = (new Date()).getTime();
@@ -50,18 +59,14 @@ function EvaluateExercise() {
             }
 
             questions = Object.entries(questions);
-            console.log(terms);
-            console.log(JSON.stringify(questions));
 
             for (const [term, currentResult] of Object.entries(terms)) {
                 let termCount = questions.reduce((i, it) => it[1].term === term ? ++i : i, 0);
-                console.log(termCount);
-                console.log(term);
-                userref
-                    .child(`knownTerms/${term}/${timestamp}`)
+                termsref
+                    .child(`${subject}/${term}/${timestamp}`)
                     .set(currentResult / termCount)
                     .then(() => exerciseref.child("finished").set(true))
-                    .then(() => window.location.replace('https://t-informatica.github.io/exercise.html'));
+                    .then(() => window.location.replace('/lms-reportcard.html'));
             }
         });
 }
@@ -77,7 +82,7 @@ function CreateNewExercise(subject) {
         .push(newExerciseData)
         .then(
             snapshot => {
-                let url = `https://t-informatica.github.io/exercise.html?exerciseid=${snapshot.key}`;
+                let url = `/lms-exercise.html?exerciseid=${snapshot.key}`;
                 window.location.replace(url);
             }
         );
@@ -85,6 +90,8 @@ function CreateNewExercise(subject) {
 
 function generateQuestion() {
     window.onbeforeunload = confirmExit;
+
+    document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = false);
 
     let form = document.querySelector("#exercise");
     form.addEventListener("submit", submitExercise);
@@ -114,7 +121,7 @@ function definitionsLoaded(e) {
                 numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
                 if (numQuestionsInExercise > 10) {
                     window.onbeforeunload = null;
-                    EvaluateExercise();
+                    EvaluateExercise(exercise.subject);
                     return;
                 }
 

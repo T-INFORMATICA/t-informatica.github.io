@@ -384,7 +384,7 @@ Het strokendiagram ziet er dan als volgt uit:
 
 Nauw verbonden met normaliseren is het standaardiseren van bepaalde gegevens.
 
-In het voorbeeld wordt standaardisatie van de namen van eenheden door de huidige structuur niet wordt afgedwongen. Niets verbiedt de gebruiker om 'slagroom' te meten in 'deciliter' en zure room in 'dl', hoewel dat dezelfde eenheid is. Een relationele structuur biedt een eenvoudige manier om standaardisatie van gegevens af te dwingen: 
+In het voorbeeld zijn de namen van eenheden (bv. 'deciliter', 'dl', 'kilogram', 'kg', ...) niet gestandaardiseerd. Erger nog, die standaardisatie is zelfs niet verplicht! Niets verbiedt de gebruiker om 'slagroom' te meten in 'deciliter' en zure room in 'dl', hoewel dat dezelfde eenheid is. Een relationele structuur biedt een eenvoudige manier om standaardisatie van gegevens af te dwingen: 
 
  - **Maak een nieuwe tabel** aan genaamd "Eenheid" en plaats daar alle unieke (gestandaardiseerde) waarden in.
  - **Voeg een referentie toe** in de oorspronkelijke tabel.

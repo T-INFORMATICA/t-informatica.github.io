@@ -1,0 +1,54 @@
+<nav id="topNavigation">
+    <ul class="home">
+        <li class="navButton">
+            <a href="/" class="material-icons-outlined">
+                lightbulb
+            </a>
+        </li>
+    </ul>
+    <ul class="responsive">
+        <li class="navButton">
+            <span class="material-icons-outlined">lightbulb</span>
+        </li>
+        <li class="navButton">
+            <a href="#topNavigation" class="material-icons-outlined openMenu">menu</a>
+            <a href="#closeMenu" class="material-icons-outlined closeMenu">close</a>
+        </li>
+    </ul>
+    <ul class="courses">
+        {% include topNavigation-courses.html %}
+    </ul>
+    <ul class="user">
+        <li class="navButton">
+            <a href="/blog.html" class="material-icons-outlined">rate_review</a>
+        </li>
+        <li class="navButton dropdownContainer">
+            <span class="iconButton dropdownText | material-icons">person</span>
+            <div id="usermenu" class="dropdownWindow dropdownWindowRight | bg-main-color glow">
+
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+
+                <nav style="display: none">
+                    <ul>
+                        <li><a href="/lms-profile.html">Profiel</a></li>
+                        <li><a href="/lms-reportcard.html">Rapport</a></li>
+                        <li><a href="/lms-evaluations.html">Tijdslijn</a></li>
+                    </ul>
+                    <hr>
+                    <ul>
+                        <li><a href="#" onclick="signOut()">Uitloggen</a></li>
+                    </ul>
+                    <div id="adminmenu" class="forAdmin" style="display: none">
+                        <hr>
+                        <ul>
+                            <li><a href="/admin-grade.html">Nieuwe evaluatie</a></li>
+                            <li><a href="/admin-manageusers.html">Manage users</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </li>
+    </ul>
+</nav>

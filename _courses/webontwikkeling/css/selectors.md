@@ -1,8 +1,17 @@
 ---
 title: Selectors
+sources: 
+ - url: https://www.w3schools.com/css/css_selectors.asp
+   description: CSS Selectors op W3Schools
+ - ur: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+   description: CSS Selectors op MDN
+ - url: https://flukeout.github.io/
+   description: Oefen je CSS Selectors
+ - url: https://www.w3schools.com/cssref/trysel.asp
+   description: Een tool waar je selectors kunt aanklikken
 tags: 
  - voorrang
- - conflicterende stijlregels
+ - stijlregels
 definitions:
  - name: selector
    definition: CSS-code die aanduidt welke HTML elementen aangepast zullen worden door de stijlregels.

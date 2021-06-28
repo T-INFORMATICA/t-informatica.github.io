@@ -1,35 +1,31 @@
 ---
-layout: lms
+layout: blog
 ---
 
-<table class="styledTable">
-    <tbody>
-        <tr>
-            <th width="150px">naam</th>
-            <td id="profileName"></td>
-        </tr>
-        <tr>
-            <th>url</th>
-            <td id="profileUrl"></td>
-        </tr>
-        <tr>
-            <th>username</th>
-            <td id="profileUsername"></td>
-        </tr>
-        <tr>
-            <th>password</th>
-            <td id="profilePassword"></td>
-        </tr>
-    </tbody>
-</table>
+<h1>Cursus Informatica</h1>
 
-<script>
+<h2>Nieuws</h2>
 
-firebase.auth().onAuthStateChanged(function(user) {
-    authUser(user);
+<h2>Recente Videos</h2>
 
-    addUsersToMenu();
-    addUserdataToProfileTable();
-});
+{% assign videos = site.posts | where: "video", true %}
+<ul>
+    {% for video in videos %}
+    <li>
+        <a href="{{ video.url }}">{{ video.title }}</a>
+        {{ video.excerpt }}
+    </li>
+    {% endfor %}
+</ul>
 
-</script>
+<h2>Recente Blogposts</h2>
+
+{% assign blogposts = site.posts | where: "video", false %}
+<ul>
+    {% for post in blogposts %}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+    </li>
+    {% endfor %}
+</ul>

@@ -1,10 +1,10 @@
 ---
 title: Block en Inline
 tags: 
- - instructie
- - commentaar
+ - block-level
+ - inline
 definitions:
- - name: block
+ - name: block-level
    definition: Een type element dat steeds op de volgende lijn start en de volledige breedte in beslag neemt.
  - name: inline
    definition: Een type element dat slechts zoveel breedte inneemt als het nodig heeft en tussen andere inhoud geplaatst kan worden.

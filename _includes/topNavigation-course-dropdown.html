@@ -1,0 +1,35 @@
+{% for coursedata in site.data.courses %}
+
+    {% if coursedata.name == include.coursename %}
+        {% for subjectdata in coursedata.subjects %}
+        <fieldset>
+            <legend>
+                <a href="{{ subjectdata.link }}">{{ subjectdata.name }}</a>
+            </legend>
+            <ul>
+            {% for chapterdata in subjectdata.chapters %}
+                <li>
+                    <a href="{{chapterdata.link}}">{{chapterdata.name}}</a>
+                </li>
+            {%endfor%}
+            </ul>
+        </fieldset>
+        {%endfor%}
+        
+        {% if coursedata.tutorials %}
+        <fieldset>
+            <legend>
+                <a href="#">Tutorials</a>
+            </legend>
+            <ul>
+            {% for tutorialdata in coursedata.tutorials %}
+                <li>
+                    <a href="{{tutorialdata.link}}">{{tutorialdata.name}}</a>
+                </li>
+            {%endfor%}
+            </ul>
+        </fieldset>
+        {% endif %}
+    {% endif %}
+
+{% endfor %}

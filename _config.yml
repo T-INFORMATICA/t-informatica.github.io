@@ -12,6 +12,16 @@ collections:
 
 defaults:
     - scope:
+          path: "_tutorials"
+      values:
+          layout: "tutorial"
+    - scope:
+          path: "_posts"
+      values:
+          excerpt_separator: <!--more-->
+          layout: contentCentered
+          video: false
+    - scope:
           path: "_courses/programmeren"
       values:
           course: "programmeren"
@@ -27,9 +37,9 @@ defaults:
           course: "databanken"
           layout: "course"
     - scope:
-          path: "_courses/basis"
+          path: "_courses/informatica"
       values:
-          course: "basis"
+          course: "informatica"
           layout: "course"
     - scope:
           path: ""

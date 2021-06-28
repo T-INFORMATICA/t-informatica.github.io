@@ -1,39 +1,65 @@
 ---
-layout: default
+layout: contentCentered
 ---
+<nav>
+{% assign pageFound = false %}
+{% for coursedata in site.data.courses %}
+    {% for subjectdata in coursedata.subjects %}
+        {% for chapterdata in subjectdata.chapters %}
+            {% if page.url == chapterdata.link %}
+            {% assign pageFound = true %}
+            <div>
+                {% if forloop.first == false %}
+                    {% assign prev_i = forloop.index0 | minus: 1 %}
+                    {% assign prev_page = subjectdata.chapters[prev_i] %}
+                    <a href="{{prev_page.link}}" id="previousPage">
+                        <span class="material-icons">
+                            chevron_left
+                        </span>
+                        {{prev_page.name}}
+                    </a>
+                {% endif %}
+            </div>
 
 
-<aside>
-    <nav id="leftMenu">
-        {% if page.course == "programmeren" %}
-        <script ></script>
-        <div class="select nav-link">
-            <select name="slct" class="lang-select" id="slct">
-            <option value="language-javascript" class="language-javascript">JS</option>
-            <option value="language-php" class="language-php">PHP</option>
-            <option value="language-csharp" class="language-csharp">C&#35;</option>
-            </select>
-        </div>
-        <script src="{{site.baseurl}}/assets/js/proglang.js"></script>
-        {% endif %}
-    {% include courseNavigation.html %}
-    </nav>
-</aside>
-
-<main>
-    <h1>{{ page.title | capitalize }}</h1>
-
-    <div id="chapterTags">
-        {% for tag in page.tags %}
-            <a href="#" class="tag">{{tag}}</a>
+            <div>
+                {% if forloop.last == false %}
+                    {% assign next_i = forloop.index0 | plus: 1 %}
+                    {% assign next_page = subjectdata.chapters[next_i] %}
+                    <a href="{{next_page.link}}" id="nextPage">
+                        {{next_page.name}}
+                        <span class="material-icons">
+                            chevron_right
+                        </span>
+                    </a>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% if pageFound == true %}{% break %}{% endif %}
         {% endfor %}
-    </div>
+        {% if pageFound == true %}{% break %}{% endif %}
+    {% endfor %}
+    {% if pageFound == true %}{% break %}{% endif %}
+{% endfor %}
+</nav>
 
-    {{ content }}
-</main>
+<h1>{{page.title}}</h1>
+{% if page.course == "programmeren" %}
+<div>
+    <select name="" class="lang-select">
+        <option value="language-javascript" class="language-javascript">JS</option>
+        <option value="language-php" class="language-php">PHP</option>
+        <option value="language-csharp" class="language-csharp">C</option>
+    </select>
+    <script src="/assets/js/proglang.js"></script>
+</div>
+<br>
+{% endif %}
 
-<aside>
-    <nav id="rightMenu">
-        {% include pageNavigation.html %}
-    </nav>
-</aside>
+<div id="tags">
+{% for tag in page.tags %}
+    <span class="tag">{{tag | escape}}</span>
+{% endfor %}
+</div>
+
+{{content}}

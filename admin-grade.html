@@ -1,0 +1,40 @@
+---
+layout: admin
+---
+
+<h1>Evaluatie</h1>
+
+
+<form id="gradeform">
+    <div>
+        <input type="text" name="evalName" id="evalName" placeholder="evaluation name" required>
+    </div>
+    <div>
+        <input type="date" name="evalDate" id="evalDate" required>
+    </div>
+    <div>
+        <button type="button" onclick="evalChangeStudent(-1)" id="evalSelecPrevStudent"><span
+                class="material-icons">chevron_left</span></button>
+        <select name="" id="evalStudentSelection" onchange="evalChangeStudent(0)">
+        </select>
+        <button type="button" onclick="evalChangeStudent(1)" id="evalSelectNextStudent"><span
+                class="material-icons">chevron_right</span></button>
+    </div>
+    <div id="gradeform-students">
+    </div>
+
+    <input type="submit" value="VERZENDEN">
+</form>
+
+<script src="/assets/js/admin.js"></script>
+<script>
+
+    // documentReady(createNewEvalForm);
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        const form = document.querySelector('#gradeform');
+        form.addEventListener('submit', submitEvaluation);
+        
+        createNewEvalForm();
+    });
+</script>

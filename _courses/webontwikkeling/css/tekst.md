@@ -8,6 +8,7 @@ tags:
  - sans-serif
  - monospace
  - em
+ - rem
 definitions:
  - name: font
    definition: De manier waarop letters, leestekens en cijfers worden weergegeven.

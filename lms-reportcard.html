@@ -1,0 +1,70 @@
+---
+layout: lms
+---
+
+<h1>Rapport</h1>
+
+{%- for coursedata in site.data.courses %}
+<h2 id="course-{{courseid}}">{{coursedata.name}}</h2>
+{% assign courseid=coursedata.name | remove: " " | downcase %}
+<div class="courseResults" id="{{courseid}}">
+    {% for subjectdata in coursedata.subjects %}
+    {% assign numTerms = 0 %}
+    {%- for chapter in subjectdata.chapters -%}
+    {%- for course in site.courses -%}
+    {%- if course.url == chapter.link %}
+    {%- for definition in course.definitions %}
+    {%- assign numTerms = numTerms | plus: 1 -%}
+    {%- endfor -%}
+    {%- endif -%}
+    {%- endfor -%}
+    {%- endfor %}
+    {% assign subjectid=subjectdata.name | remove: " " | downcase %}
+    {% include reportcard-subject.html id=subjectid subject=subjectdata.name progress=0 progressTotal=numTerms %}
+    {%- endfor -%}
+</div>
+{% endfor %}
+
+<h1 id="toelichting-rapport">Toelichting bij het Rapport</h1>
+<ul>
+    <li>
+        De resultaten die je hier ziet staan, zijn de resultaten die je nu zou krijgen, moest er een rapport uitgedeeld
+        worden op school.
+    </li>
+    <li>
+        De evaluatie van Toegepaste Informatica is doorlopend. Met andere woorden, het resultaat op een rapport houdt
+        rekening met de vooruitgang gedurende het volledige schooljaar tot dat moment.
+    </li>
+    <li>
+        Een evaluatie geeft weer in welke mate je de leerstof beheerst. Dit gebeurt bij Toegepaste Informatica
+        volgens het lettersysteem. In het schoolreglement kan je deze opdeling terugvinden als volgt:
+        <ul>
+            <li><strong>A</strong> = de leerling beheerst de kennis en vaardigheden uitstekend;</li>
+            <li><strong>B</strong> = de leerling beheerst de kennis en vaardigheden goed tot zeer goed;</li>
+            <li><strong>C</strong> = de leerling beheerst de kennis en vaardigheden matig tot goed, al kunnen er enkele
+                tekorten
+                zijn;</li>
+            <li><strong>D</strong> = de leerling beheerst de kennis en vaardigheden net voldoende; er zijn ernstige
+                tekorten die
+                bijgewerkt moeten worden;</li>
+            <li><strong>E</strong> = de leerling beheerst de kennis en vaardigheden onvoldoende.</li>
+        </ul>
+    </li>
+    <li>
+        <a href="lms-evaluations.html">Op je tijdslijn</a> kan je alle opdrachten, taken en toetsen van dit schooljaar
+        terugvinden.
+        Je vindt hier ook gedetailleerde commentaar terug.
+        Elke opdracht, taak of toets wordt beoordeeld op basis van één of meerdere doelstellingen, waarbij elke
+        doelstelling apart wordt
+        geevalueerd. Het is dus mogelijk dat een toets of taak meerdere evaluaties toont, één voor elke doelstelling.
+    </li>
+</ul>
+
+<script>
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        addCounterForKnownTermsToPage();
+        addResultsToPage();
+    });
+
+</script>
