@@ -1,52 +1,4 @@
-- name: "basis"
-  link: /courses/basis/
-  subjects:
-    - name: "basiskennis"
-      link: "/courses/basis/basiskennis/"
-      rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
-      chapters:
-        - name: "code editors"
-          link: "/courses/basis/basiskennis/code-editors.html"
-          doel:
-        - name: "source control"
-          link: "/courses/basis/basiskennis/source-control.html"
-          doel:
-        - name: "ftp"
-          link: "/courses/basis/basiskennis/ftp.html"
-          doel:
-        - name: "talstelsels"
-          link: "/courses/basis/basiskennis/talstelsels.html"
-          doel:
-    # - name: "foutopsporing"
-    #   link: "/courses/basis/foutopsporing/"
-    #   rubric:
-    #     "A": "Dit is een A"
-    #     "B": "Dit is een B"
-    #     "C": "Dit is een C"
-    #     "D": "Dit is een D"
-    #     "E": "Dit is een E"
-    #   chapters:
-    #     - name: "Foutopsporing"
-    #       link: "/courses/basis/basiskennis/foutopsporing-algemeen.html"
-    #       doel:
-    #     - name: "HTML en CSS"
-    #       link: "/courses/basis/basiskennis/foutopsporing-html-css.html"
-    #       doel:
-    #     - name: "HTML en CSS"
-    #       link: "/courses/basis/basiskennis/foutopsporing-javascript.html"
-    #       doel:
-    #     - name: "HTML en CSS"
-    #       link: "/courses/basis/basiskennis/foutopsporing-php.html"
-    #       doel:
-    #     - name: "HTML en CSS"
-    #       link: "/courses/basis/basiskennis/foutopsporing-sql.html"
-    #       doel:
-- name: "programmeren"
+- name: "Programmeren"
   link: /courses/programmeren/
   tutorials:
     - name: "Bullet Hell met p5.js"
@@ -56,253 +8,265 @@
   subjects:
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
-      rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+      rubrics:
+        - "A": "Variabelen worden correct geinitialiseerd en je maakt correct gebruik van de verschillende datatypes en operators."
+          "B": "Enkele variabelen worden nog niet juist geinitialiseerd. Je maakt wel correct gebruik van de verschillende datatypes en operators."
+          "C": "Je gebruik van de verschillende operators is correct. Je gebruikt de verschillende datatypes nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
+          "D": "Je gebruik van de verschillende datatypes is correct. Je gebruikt de verschillende operators nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
+          "E": "Variabelen worden niet goed geinitialiseerd, je maakt verkeerd gebruik van de verschillende datatypes en operators."
       chapters:
         - name: Waardes
           link: "/courses/programmeren/instructies/waardes.html"
-          doel: "instructies"
         - name: Variabelen
           link: "/courses/programmeren/instructies/variabelen.html"
-          doel: "instructies"
-        - name: Expressies
-          link: "/courses/programmeren/instructies/expressies.html"
-          doel: "instructies"
         - name: Arrays
           link: "/courses/programmeren/instructies/arrays.html"
-          doel: "Arrays"
+        - name: Expressies
+          link: "/courses/programmeren/instructies/expressies.html"
         - name: Instructies
           link: "/courses/programmeren/instructies/instructies.html"
-          doel: "instructies"
+        - name: Foutopsporing
+          link: "/courses/programmeren/instructies/foutopsporing-instructies.html"
     - name: "Codeblokken"
       link: "/courses/programmeren/codeblokken/"
-      rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+      rubrics:
+        - "A": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden gebruikt. Het DRY principe wordt zo goed mogelijk toegepast door te kiezen voor de juiste codeblokken."
+          "B": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden gebruikt. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
+          "C": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden niet gebruikt. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
+          "D": "Iteraties en selecties maken gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
+          "E": "Iteraties en selecties maken geen gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
+        - "A": "test"
+          "B": "test"
+          "C": "test"
+          "D": "test"
+          "E": "test"
       chapters:
         - name: Codeblokken
           link: "/courses/programmeren/codeblokken/codeblokken.html"
-          doel: "instructies"
         - name: Functies
           link: "/courses/programmeren/codeblokken/functies.html"
-          doel: "Codeblokken (functie)"
         - name: Selectie
           link: "/courses/programmeren/codeblokken/selectie.html"
-          doel: "Codeblokken (selectie)"
         - name: Iteratie
           link: "/courses/programmeren/codeblokken/iteratie.html"
-          doel: "Codeblokken (iteratie)"
+        - name: "Foutopsporing"
+          link: "/courses/programmeren/codeblokken/foutopsporing-codeblokken.html"
     - name: "Datastructuren"
       link: "/courses/programmeren/datastructuren/"
-      rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+      rubrics:
+        - "A": "Objecten, klassen fields, en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd. "
+          "B": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd, maar er zijn oplossingen die veel korter of sneller zijn. "
+          "C": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn echter niet juist geimplementeerd. "
+          "D": "Objecten en klassen worden correct aangemaakt. Fields en methods zijn echter niet juist aangemaakt en geimplementeerd. Overerving en associatie worden niet correct toegepast."
+          "E": "Objecten, klassen, fields en methods worden op de verkeerde manier aangemaakt. Overerving en associatie worden niet correct toegepast."
       chapters:
         - name: Objecten
           link: "/courses/programmeren/datastructuren/objecten.html"
-          doel: "OO programmeren"
         - name: Klassen
           link: "/courses/programmeren/datastructuren/klassen.html"
-          doel: "OO programmeren"
         - name: Inheritance
           link: "/courses/programmeren/datastructuren/inheritance.html"
-          doel: "OO programmeren"
         - name: "Access Modifiers"
           link: "/courses/programmeren/datastructuren/access-modifiers.html"
-          doel: "OO programmeren"
         - name: "Relaties"
           link: "/courses/programmeren/datastructuren/relaties.html"
-          doel: "OO programmeren"
+        - name: "Foutopsporing"
+          link: "/courses/programmeren/datastructuren/foutopsporing-datastructuren.html"
 #    - name: "Software Ontwikkeling"
 #      link: "/courses/programmeren/software-ontwikkeling/"
 #      chapters:
 #        - name: "Domeinmodel"
 #          link: "/courses/programmeren/software-ontwikkeling/domeinmodel.html"
-#          doel: "OO ontwerp"
-- name: "webontwikkeling"
+- name: "Webontwikkeling"
   link: /courses/webontwikkeling/
   subjects:
     - name: "Markup"
       link: "/courses/webontwikkeling/html"
-      rubric:
-        "A": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, en er is gekozen voor een optimale oplossing."
-        "B": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, hoewel er oplossingen bestaan die korter of optimaler zijn."
-        "C": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. Elementen zijn niet voldoende onderverdeeld in grotere elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
-        "D": "Elementen worden correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
-        "E": "Elementen worden niet correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn niet of onduidelijk ingevuld waar nodig."
+      rubrics:
+        - "A": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, en er is gekozen voor een optimale oplossing."
+          "B": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving. Elementen zijn onderverdeeld in grotere elementen, hoewel er oplossingen bestaan die korter of optimaler zijn."
+          "C": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. Elementen zijn niet voldoende onderverdeeld in grotere elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
+          "D": "Elementen worden correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
+          "E": "Elementen worden niet correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn niet of onduidelijk ingevuld waar nodig."
       chapters:
         - name: Markup
           link: "/courses/webontwikkeling/html/markup-languages.html"
-          doel: "structuur"
         - name: Markup met Markdown
           link: "/courses/webontwikkeling/html/markdown.html"
-          doel: "structuur"
         - name: Markup met HTML
+          link: "/courses/webontwikkeling/html/html.html"
+        - name: HTML Elementen
           link: "/courses/webontwikkeling/html/elementen.html"
-          doel: "structuur"
-        - name: Attributen
+        - name: HTML Attributen
           link: "/courses/webontwikkeling/html/attributen.html"
-          doel: "structuur"
         - name: Block en Inline
           link: "/courses/webontwikkeling/html/block-en-inline.html"
-          doel: "structuur"
         - name: Structuur
           link: "/courses/webontwikkeling/html/structuur.html"
-          doel: "structuur"
         - name: Semantiek
           link: "/courses/webontwikkeling/html/semantiek.html"
-          doel: "structuur"
+        - name: Foutopsporing
+          link: "/courses/webontwikkeling/html/foutopsporing-html.html"
     - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
-      rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+      rubrics:
+        - "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors werden samengevoegd waar nodig."
+          "B": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden te weinig samengevoegd."
+          "C": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
+          "D": "Selectors zijn correct gedefinieerd, maar zijn vaak niet specifiek genoeg. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
+          "E": "Selectors zijn verkeerd of niet specifiek genoeg gedefinieerd. Selectors worden te weinig samengevoegd. Stijlregels, waardes en eenheden werden niet correct gebruikt. "
       chapters:
         - name: CSS
           link: "/courses/webontwikkeling/css/css.html"
-          doel: "opmaak"
         - name: Selectors
           link: "/courses/webontwikkeling/css/selectors.html"
-          doel: "opmaak"
         - name: Kleuren
           link: "/courses/webontwikkeling/css/kleuren.html"
-          doel: "opmaak"
         - name: Tekst
           link: "/courses/webontwikkeling/css/tekst.html"
-          doel: "opmaak"
         - name: Box Model
           link: "/courses/webontwikkeling/css/box-model.html"
-          doel: "box model"
+        - name: Foutopsporing
+          link: "/courses/webontwikkeling/css/foutopsporing-css.html"
 #        - name: State Selectors
 #          link: "/courses/webontwikkeling/css/state-selectors.html"
-#          doel: "opmaak"
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
-      rubric:
-        "A": "Dit is een A"
-        "B": "Dit is een B"
-        "C": "Dit is een C"
-        "D": "Dit is een D"
-        "E": "Dit is een E"
+      rubrics:
+        - "A": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt relatieve eenheden (em, rem) en custom properties (variabelen) waar nodig."
+          "B": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt custom properties (variabelen) waar nodig."
+          "C": "De interactie op jouw website is onvoldoende geïmplementeerd. Layout en ruimte zijn correct. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets."
+          "D": "Ruimte en interactie zijn onvoldoende geïmplementeerd. De website is onvoldoende responsive. Je layout werkt en je hebt de website ontwikkeld volgens het Mobile First principe."
+          "E": "Layout, ruimte en interactie zijn onvoldoende geïmplementeerd. De website is niet responsive. Er werd niet gewerkt volgens het Mobile First principe."
       chapters:
         - name: "Responsive Webdesign"
           link: "/courses/webontwikkeling/statische-websites/responsive-webdesign.html"
-          doel: "responsive websites"
         - name: "Layout"
           link: "/courses/webontwikkeling/statische-websites/layout.html"
-          doel: "responsive websites"
         # - name: "Layout met CSS Flexbox"
         #   link: "/courses/webontwikkeling/statische-websites/css-flexbox.html"
-        #   doel: "responsive websites"
         - name: "Layout met CSS Grid"
           link: "/courses/webontwikkeling/statische-websites/css-grid.html"
-          doel: "responsive websites"
         - name: "C.U.B.E."
           link: "/courses/webontwikkeling/statische-websites/cube.html"
-          doel: "opmaak"
     - name: "Dynamische Websites"
       link: "/courses/webontwikkeling/dynamische-websites"
-      rubric:
-        "A": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code."
-        "B": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code, hoewel er duidelijk oplossingen bestaan die korter of optimaler zijn."
-        "C": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
-        "D": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn niet correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
-        "E": "GET, POST en SESSION methodes werden niet correct gebruikt om data op te vangen en door te geven. "
+      rubrics:
+        - "A": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code."
+          "B": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is een duidelijk onderscheid tussen client-side en server-side code, hoewel er duidelijk oplossingen bestaan die korter of optimaler zijn."
+          "C": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
+          "D": "GET, POST en SESSION methodes werden correct gebruikt om data op te vangen en door te geven. Formulieren en hun input elementen zijn niet correct geïmplementeerd. Er is geen duidelijk onderscheid tussen client-side en server-side code."
+          "E": "GET, POST en SESSION methodes werden niet correct gebruikt om data op te vangen en door te geven. "
       chapters:
         - name: URL Parameters
           link: "/courses/webontwikkeling/dynamische-websites/url-parameters.html"
-          doel: "dynamische websites"
         - name: XML
           link: "/courses/webontwikkeling/dynamische-websites/xml.html"
-          doel: "dynamische websites"
         - name: JSON
           link: "/courses/webontwikkeling/dynamische-websites/json.html"
-          doel: "dynamische websites"
         - name: AJAX
           link: "/courses/webontwikkeling/dynamische-websites/ajax.html"
-          doel: "dynamische websites"
+        - name: PHP en JSON
+          link: "/courses/webontwikkeling/dynamische-websites/php-json.html"
 #        - name: Formulieren
 #          link: "/courses/webontwikkeling/dynamische-websites/formulieren.html"
-#          doel: "dynamische websites"
 #        - name: SQL Database Connection
 #          link: "/courses/webontwikkeling/dynamische-websites/sql-database-connection.html"
-#          doel: "dynamische websites"
-- name: "databanken"
+- name: "Databanken"
   link: /courses/databanken/
   subjects:
     - name: "Database Ontwerp"
       link: "/courses/databanken/database-ontwerp"
-      rubric:
-        "A": "Databasefouten werden correct herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. "
-        "B": "Databasefouten werden correct herkend. Het strokendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. Het multipliciteitendiagram is onvoldoende uitgewerkt. "
-        "C": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Sleutels werden correct aangeduid. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. "
-        "D": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet correct aangeduid. "
-        "E": "Databasefouten werden niet goed herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet aangeduid. "
+      rubrics:
+        - "A": "Databasefouten werden correct herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. "
+          "B": "Databasefouten werden correct herkend. Het strokendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. Het multipliciteitendiagram is onvoldoende uitgewerkt. "
+          "C": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Sleutels werden correct aangeduid. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. "
+          "D": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet correct aangeduid. "
+          "E": "Databasefouten werden niet goed herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet aangeduid. "
       chapters:
         - name: Inleiding
           link: "/courses/databanken/database-ontwerp/inleiding.html"
-          doel: "database ontwerp"
         - name: Désirée's Dessertenboek
           link: "/courses/databanken/database-ontwerp/voorbeeld.html"
-          doel: "database ontwerp"
         - name: Fouten
           link: "/courses/databanken/database-ontwerp/fouten.html"
-          doel: "database ontwerp"
         - name: Tabellen
           link: "/courses/databanken/database-ontwerp/tabellen.html"
-          doel: "database ontwerp"
         - name: Sleutels
           link: "/courses/databanken/database-ontwerp/sleutels.html"
-          doel: "database normalisatie"
         - name: Multipliciteit
           link: "/courses/databanken/database-ontwerp/multipliciteit.html"
-          doel: "database ontwerp"
         - name: Normalisatie
           link: "/courses/databanken/database-ontwerp/normalisatie.html"
-          doel: "database normalisatie"
     - name: "SQL"
       link: "/courses/databanken/sql"
-      rubric:
-        "A": "De projectie, brontabel en selectie is correct geimplementeerd voor de hoofd- en subqueries."
-        "B": "De projectie, brontabel en selectie is correct geimplementeerd. Er werd geen gebruik gemaakt van subqueries waar nodig."
-        "C": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit meerdere brontabellen. De selectie is niet correct geimplementeerd."
-        "D": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit één brontabel. De selectie is niet correct geimplementeerd."
-        "E": "De projectie, brontabel en selectie van queries zijn verkeerd geimplementeerd."
+      rubrics:
+        - "A": "De projectie, brontabel en selectie is correct geimplementeerd voor de hoofd- en subqueries."
+          "B": "De projectie, brontabel en selectie is correct geimplementeerd. Er werd geen gebruik gemaakt van subqueries waar nodig."
+          "C": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit meerdere brontabellen. De selectie is niet correct geimplementeerd."
+          "D": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit één brontabel. De selectie is niet correct geimplementeerd."
+          "E": "De projectie, brontabel en selectie van queries zijn verkeerd geimplementeerd."
       chapters:
         - name: Inleiding
           link: "/courses/databanken/sql/inleiding.html"
-          doel: "Queries"
         - name: Muziek Database
           link: "/courses/databanken/sql/voorbeeld.html"
-          doel: "Queries"
         - name: Projecties
           link: "/courses/databanken/sql/projecties.html"
-          doel: "Queries"
         - name: Selecties
           link: "/courses/databanken/sql/selecties.html"
-          doel: "Queries"
         - name: Ordening
           link: "/courses/databanken/sql/ordening.html"
-          doel: "Queries"
         - name: Joins
           link: "/courses/databanken/sql/meerdere-tabellen.html"
-          doel: "Queries"
+        - name: Foutopsporing
+          link: "/courses/databanken/sql/foutopsporing-sql.html"
 #        - name: Statistische Informatie
 #          link: "/courses/databanken/sql/statische-informatie.html"
 #        - name: Subselects
 #          link: "/courses/databanken/sql/subselects.html"
 #        - name: Inhoud Wijzigen
 #          link: "/courses/databanken/sql/inhoud-wijzigen.html"
+- name: "Extra"
+  link: /courses/informatica/
+  subjects:
+    - name: "Basiskennis"
+      link: "/courses/informatica/basiskennis/"
+      rubrics:
+        - "A": "Dit is een A"
+          "B": "Dit is een B"
+          "C": "Dit is een C"
+          "D": "Dit is een D"
+          "E": "Dit is een E"
+      chapters:
+        - name: "code editors"
+          link: "/courses/informatica/basiskennis/code-editors.html"
+        - name: "source control"
+          link: "/courses/informatica/basiskennis/source-control.html"
+        # - name: "ftp"
+        #   link: "/courses/informatica/basiskennis/ftp.html"
+        - name: "talstelsels"
+          link: "/courses/informatica/basiskennis/talstelsels.html"
+    - name: "Foutopsporing"
+      link: "/courses/informatica/foutopsporing/"
+      rubrics:
+        - "A": "Je hebt de meeste syntax- en runtimefouten gevonden en verklaard, en kan er ook een oplossing voor geven."
+          "B": "Je hebt de meeste runtime-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig syntax fouten gevonden."
+          "C": "Je hebt de meeste syntax-fouten gevonden en verklaard, en kan er ook een oplossing voor geven. Je hebt slechts weinig runtime fouten gevonden."
+          "D": "Je hebt weinig fouten gevonden. Je kan de fouten die je vond wel verklaren, maar je biedt weinig oplossingen hiervoor."
+          "E": "Je hebt weinig fouten gevonden. De fouten die je vond kan je niet verklaren of oplossen."
+      chapters:
+        - name: "Foutopsporing"
+          link: "/courses/informatica/foutopsporing/foutopsporing-algemeen.html"
+        - name: "Programmeren - Instructies"
+          link: "/courses/programmeren/instructies/foutopsporing-instructies.html"
+        - name: "Programmeren - Codeblokken"
+          link: "/courses/programmeren/codeblokken/foutopsporing-codeblokken.html"
+        - name: "Programmeren - Datastructuren"
+          link: "/courses/programmeren/datastructuren/foutopsporing-datastructuren.html"
+        - name: "Webontwikkeling - HTML"
+          link: "/courses/webontwikkeling/html/foutopsporing-html.html"
+        - name: "Webontwikkeling - CSS"
+          link: "/courses/webontwikkeling/css/foutopsporing-css.html"
+        - name: "Databases - SQL"
+          link: "/courses/databanken/sql/foutopsporing-sql.html"
