@@ -2,6 +2,9 @@
 title: XML
 tags: 
  - 
+definitions:
+ - name: XML
+   definiton: Een markup taal, waarbij je door middel van zelfgekozen tags data kunt aanduiden en organiseren. Bestanden in deze taal doen op zichzelf niets, maar hebben een programma nodig dat deze bestanden inleest.
 description:
 ---
 

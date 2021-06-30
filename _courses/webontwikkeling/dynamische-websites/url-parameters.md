@@ -7,6 +7,8 @@ definitions:
    definiton: Het adres van een website.
  - name: url parameter
    definition: Een naam en waarde die je meegeeft via het adres van de webpagina.
+ - name: php GET
+   definition: De plaats waarin PHP alle url parameters verzamelt in de vorm van een Associative Array.
 description: 
 ---
 

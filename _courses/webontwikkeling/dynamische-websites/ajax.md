@@ -2,6 +2,9 @@
 title: AJAX
 tags: 
  - 
+definitions:
+ - name: ajax
+   definiton: Een techniek waarbij javascript gebruikt wordt om requests te sturen naar een server, zonder dat daarbij de pagina moet worden herladen. De requests vragen meestal om data, zoals XML of JSON data.
 description:
 ---
 
