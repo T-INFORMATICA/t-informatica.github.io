@@ -1,4 +1,4 @@
-- name: "Programmeren"
+- name: "Programmeren" 
   link: /courses/programmeren/
   tutorials:
     - name: "Bullet Hell met p5.js"
