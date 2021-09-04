@@ -90,7 +90,7 @@ function tmpl_registrationApprovalForm(studentId, studentEmail, studentName, kla
     return `
         <input type="checkbox" id="registration-${studentId}-collapse" class="student-management-collapse">
         <label for="registration-${studentId}-collapse">${studentEmail}</label>
-        <form class="student-management-form">
+        <form class="registration-approval-form">
             <input type="hidden" name="studentId" value="${studentId}">
             <label for="student-${studentId}-username">username</label><input type="text" name="studentUsername" id="student-${studentId}-username" value="${username}">
             <label for="student-${studentId}-password">password</label><input type="text" name="studentPassword" id="student-${studentId}-password" value="${password}">
