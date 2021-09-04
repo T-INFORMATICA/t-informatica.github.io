@@ -51,6 +51,14 @@ hr {
     overflow: hidden;
 }
 
+
+
+@-moz-document url-prefix() {
+    .dropdownWindow>fieldset {
+        display: inline-block;
+    }
+}
+
 pre {
     color: #ddd;
     overflow-x: auto;
