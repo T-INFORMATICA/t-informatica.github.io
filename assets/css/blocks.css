@@ -10,7 +10,7 @@ body {
 
 header {
     background-color: var(--header-background-color);
-    color: var(--text-color);
+    color: var(--header-text-color);
     z-index: 999;
 }
 
