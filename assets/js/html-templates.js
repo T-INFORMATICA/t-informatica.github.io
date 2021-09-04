@@ -79,7 +79,7 @@ function tmpl_managementForm_student(studentId, studentName, klas, username, pas
                     <button class="material-icons" type="submit" name="studentSubmit" value="save">save</button>
                 </div>
                 <div class="dangerous-actions">
-                    <button class="material-icons" type="submit" name="studentSubmit" value="remove">person_remove</button>
+                    <button class="material-icons" type="button" name="studentSubmit" value="remove">person_remove</button>
                 </div>
             </div>
         </form>
@@ -103,7 +103,7 @@ function tmpl_registrationApprovalForm(studentId, studentEmail, studentName, kla
                     <button type="submit" class="material-icons" name="studentSubmit" value="save">person_add</button>
                 </div>
                 <div class="dangerous-actions">
-                    <button type="submit" class="material-icons" name="studentSubmit" value="remove">person_remove</button>
+                    <button type="button" class="material-icons" name="studentSubmit" value="remove">person_remove</button>
                 </div>
             </div>
         </form>
