@@ -24,7 +24,6 @@ function confirmExit() {
 }
 
 function submitExercise(event) {
-    event.preventDefault();
 
     document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = true);
 
@@ -35,6 +34,7 @@ function submitExercise(event) {
 
     setTimeout(() => loadExercise(), 1000);
 
+    event.preventDefault();
 }
 
 function EvaluateExercise(subject) {
