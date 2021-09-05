@@ -89,7 +89,7 @@ function CreateNewExercise(subject) {
 }
 
 function generateQuestion() {
-    window.onbeforeunload = confirmExit;
+    // window.onbeforeunload = confirmExit;
 
     document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = false);
 
