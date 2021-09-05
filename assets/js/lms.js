@@ -84,7 +84,7 @@ function calculateResult(resultsArr) {
 
 function addUsersToMenu() {
     let database = firebase.database();
-    let managedUsersref = database.ref(`users`);
+    let managedUsersref = database.ref(`users`).orderByChild(`klas`);
 
     managedUsersref.once('value')
         .then(snapshot => {
