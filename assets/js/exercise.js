@@ -23,8 +23,7 @@ function confirmExit() {
     return "You have attempted to leave this page. Are you sure?";
 }
 
-function submitExercise(submitEvent) {
-    submitEvent.preventDefault();
+function submitExercise(event) {
 
     document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = true);
 
@@ -35,7 +34,7 @@ function submitExercise(submitEvent) {
 
     setTimeout(() => loadExercise(), 1000);
 
-    return false;
+    event.preventDefault();
 }
 
 function EvaluateExercise(subject) {
