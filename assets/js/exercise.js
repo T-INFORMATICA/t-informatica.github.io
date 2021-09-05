@@ -148,6 +148,7 @@ function ShowQuestion(definitions, question, questionNumber) {
 
     for (let i = 0; i < definitions.length; i++) {
         document.querySelector(`#answer${i + 1}`).value = definitions[i][answerType];
-        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = definitions[i][answerType];
+        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = "";
+        document.querySelector(`[for="answer${i + 1}"]`).appendChild(document.createTextNode(definitions[i][answerType]));
     }
 }
