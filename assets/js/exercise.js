@@ -35,7 +35,7 @@ function submitExercise(submitEvent) {
 
     setTimeout(() => loadExercise(), 1000);
 
-
+    return false;
 }
 
 function EvaluateExercise(subject) {
