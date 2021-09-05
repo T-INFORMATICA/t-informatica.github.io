@@ -143,7 +143,7 @@ function ShowQuestion(definitions, question, questionNumber) {
     let answerType = random < .5 ? "definition" : "term";
 
     document.querySelector("#questionTitle").innerHTML = `Vraag ${questionNumber}`;
-    document.querySelector("#question").innerHTML = question[questionType];
+    document.querySelector("#question").appendChild(document.createTextNode(question[questionType]));
 
     for (let i = 0; i < definitions.length; i++) {
         document.querySelector(`#answer${i + 1}`).value = definitions[i][answerType];
