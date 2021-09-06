@@ -23,8 +23,7 @@ function confirmExit() {
     return "You have attempted to leave this page. Are you sure?";
 }
 
-function submitExercise(submitEvent) {
-    submitEvent.preventDefault();
+function submitExercise(event) {
 
     document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = true);
 
@@ -35,7 +34,7 @@ function submitExercise(submitEvent) {
 
     setTimeout(() => loadExercise(), 1000);
 
-
+    event.preventDefault();
 }
 
 function EvaluateExercise(subject) {
@@ -89,7 +88,7 @@ function CreateNewExercise(subject) {
 }
 
 function generateQuestion() {
-    window.onbeforeunload = confirmExit;
+    // window.onbeforeunload = confirmExit;
 
     document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = false);
 
@@ -144,10 +143,12 @@ function ShowQuestion(definitions, question, questionNumber) {
     let answerType = random < .5 ? "definition" : "term";
 
     document.querySelector("#questionTitle").innerHTML = `Vraag ${questionNumber}`;
+    document.querySelector("#question").innerHTML = "";
     document.querySelector("#question").appendChild(document.createTextNode(question[questionType]));
 
     for (let i = 0; i < definitions.length; i++) {
         document.querySelector(`#answer${i + 1}`).value = definitions[i][answerType];
-        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = definitions[i][answerType];
+        document.querySelector(`[for="answer${i + 1}"]`).innerHTML = "";
+        document.querySelector(`[for="answer${i + 1}"]`).appendChild(document.createTextNode(definitions[i][answerType]));
     }
 }
