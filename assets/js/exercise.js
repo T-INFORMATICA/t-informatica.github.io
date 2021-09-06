@@ -94,7 +94,8 @@ function generateQuestion() {
     document.querySelectorAll(`[name="answer"]`).forEach(el => el.disabled = false);
 
     let form = document.querySelector("#exercise");
-    form.addEventListener("submit", submitExercise);
+    // form.addEventListener("submit", submitExercise);
+    form.querySelectorAll(`input[type=radio]`).forEach(el => el.addEventListener("change", submitExercise));
 
     document.querySelector("#exercise").style.display = "";
     if (document.querySelector(`[name="answer"]:checked`)) {
@@ -120,7 +121,7 @@ function definitionsLoaded(e) {
 
                 numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
                 if (numQuestionsInExercise > 10) {
-                    window.onbeforeunload = null;
+                    // window.onbeforeunload = null;
                     EvaluateExercise(exercise.subject);
                     return;
                 }
