@@ -214,13 +214,11 @@ function definitionsLoaded(e) {
                 if (wordsLearned <= 0) {
                     continue;
                 }
-                if (subjectEl.querySelector(".maxWordsLearned") == false) {
-                    continue;
-                }
 
                 let subjectId = toCssSafeId(subject);
                 let subjectEl = document.querySelector(`#${subjectId}`);
-                if (subjectEl.querySelector(".numWordsLearned") == null) {
+                if (subjectEl.querySelector(".numWordsLearned") == null ||
+                    subjectEl.querySelector(".maxWordsLearned") == null) {
                     continue;
                 }
                 subjectEl.querySelector(".numWordsLearned").innerHTML = wordsLearned;
