@@ -8,7 +8,7 @@
             ?
         </div>
     </div>
-    {% if include.progressTotal > 0 %}
+    {% if include.progressTotal > 5 %}
     <div class="progressbar-bg">
         <div class="progressbar-progress" style="width: 0%"></div>
         <a href="/lms-exercise.html?subject={{include.subject}}" class="progressbar-label"><span class="numWordsLearned">0</span> / <span class="maxWordsLearned">{{include.progressTotal}}</span> woorden geleerd</a>

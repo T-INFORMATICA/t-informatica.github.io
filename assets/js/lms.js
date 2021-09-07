@@ -214,6 +214,9 @@ function definitionsLoaded(e) {
                 if (wordsLearned <= 0) {
                     continue;
                 }
+                if (!subjectEl.querySelector(".maxWordsLearned")) {
+                    continue;
+                }
 
                 let subjectId = toCssSafeId(subject);
                 let subjectEl = document.querySelector(`#${subjectId}`);
