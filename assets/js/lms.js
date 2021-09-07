@@ -214,7 +214,7 @@ function definitionsLoaded(e) {
                 if (wordsLearned <= 0) {
                     continue;
                 }
-                if (!subjectEl.querySelector(".maxWordsLearned")) {
+                if (subjectEl.querySelector(".maxWordsLearned") == false) {
                     continue;
                 }
 
