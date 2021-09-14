@@ -47,4 +47,4 @@ defaults:
           layout: "default"
 
 exclude:
-    - *.script.md
+    - "*.script.md"
