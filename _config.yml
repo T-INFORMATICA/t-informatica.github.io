@@ -45,3 +45,6 @@ defaults:
           path: ""
       values:
           layout: "default"
+
+exclude:
+    - "*.script.md"
