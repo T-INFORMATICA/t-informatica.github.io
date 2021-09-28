@@ -11,7 +11,7 @@ function changeUser() {
 }
 
 function getUserId() {
-    let userid = new URLSearchParams(window.location.search).get('userid');
+    let userid = new URLSearchParams(window.location.search).get('userid'); 
     userid = userid === null ? _user.uid : userid;
     return userid;
 }
