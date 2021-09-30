@@ -42,16 +42,62 @@ In dit hoofdstuk wordt getoond hoe je deze fouten herkend. In een volgend hoofds
 Hieronder staat één van de drie voorbeeld recepten.
 
 <table class="styledTable">
-<thead><tr><th>gerecht</th><td colspan="5">Coupe Kiwano</td></tr></thead><tbody>
- <tr><th>bereidingstijd (minuten)</th><td colspan="5">20</td></tr>
- <tr><th>bereidingswijze</th><td colspan="5">Schil de kiwano, snijd hem in stukjes, voeg de tequila toe en laat dit mengsel 15 minuten staan. Neem per persoon 3 bolletjes ijs en voeg hier de kiwano met tequila aan toe. Serveer met gezoete, stijfgeslagen slagroom.</td></tr>
- <tr><th rowspan="6">ingrediënten</th><th>product</th><th>hoeveelheid per persoon</th><th>eenheid</th><th>energie per eenheid (kcal)</th></tr>
- <tr><td>ijs</td><td>0.15</td><td>liter</td><td>1600</td></tr>
- <tr><td>kiwano</td><td>0.5</td><td>stuks</td><td>40</td></tr>
- <tr><td>slagroom</td><td>0.3</td><td>deciliter</td><td>336</td></tr>
- <tr><td>suiker</td><td>10</td><td>gram</td><td>4</td></tr>
- <tr><td>tequila</td><td>1</td><td>eetlepel</td><td>30</td></tr>
-</tbody></table>
+    <thead>
+        <tr>
+            <th>gerecht</th>
+            <td colspan="4">Coupe Kiwano</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>bereidingstijd (minuten)</th>
+            <td colspan="4">20</td>
+        </tr>
+        <tr>
+            <th>bereidingswijze</th>
+            <td colspan="4">Schil de kiwano, snijd hem in stukjes, voeg de tequila toe en laat dit mengsel 15 minuten
+                staan. Neem per persoon 3 bolletjes ijs en voeg hier de kiwano met tequila aan toe. Serveer met gezoete,
+                stijfgeslagen slagroom.</td>
+        </tr>
+        <tr>
+            <th rowspan="6">ingrediënten</th>
+            <th>product</th>
+            <th>hoeveelheid per persoon</th>
+            <th>eenheid</th>
+            <th>energie per eenheid (kcal)</th>
+        </tr>
+        <tr>
+            <td>ijs</td>
+            <td>0.15</td>
+            <td>liter</td>
+            <td>1600</td>
+        </tr>
+        <tr>
+            <td>kiwano</td>
+            <td>0.5</td>
+            <td>stuks</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>slagroom</td>
+            <td>0.3</td>
+            <td>deciliter</td>
+            <td>336</td>
+        </tr>
+        <tr>
+            <td>suiker</td>
+            <td>10</td>
+            <td>gram</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>tequila</td>
+            <td>1</td>
+            <td>eetlepel</td>
+            <td>30</td>
+        </tr>
+    </tbody>
+</table>
 
 Per recept zijn vier kenmerken opgenomen:
 
