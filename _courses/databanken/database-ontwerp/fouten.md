@@ -264,6 +264,7 @@ Met 'herhalend' wordt bedoeld dat hetzelfde soort "ding" meerdere keren voorkomt
 
 Bv.: 
 
+{:.styledTable}
 | ijs |
 | kiwano |
 | slagroom |
@@ -276,6 +277,7 @@ Met 'groep' wordt bedoeld dat één "ding" uit meerdere waardes bestaat in dezel
 
 Bv.: 
 
+{:.styledTable}
 | ijs | 0.15 | liter | 1600 | 
 
 #### Toevoegen van Data
