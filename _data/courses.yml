@@ -9,23 +9,24 @@
     - name: "Instructies"
       link: "/courses/programmeren/instructies/"
       rubrics:
+      # OLD
         - "A": "Variabelen worden correct geinitialiseerd en je maakt correct gebruik van de verschillende datatypes en operators."
           "B": "Enkele variabelen worden nog niet juist geinitialiseerd. Je maakt wel correct gebruik van de verschillende datatypes en operators."
           "C": "Je gebruik van de verschillende operators is correct. Je gebruikt de verschillende datatypes nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
           "D": "Je gebruik van de verschillende datatypes is correct. Je gebruikt de verschillende operators nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
           "E": "Variabelen worden niet goed geinitialiseerd, je maakt verkeerd gebruik van de verschillende datatypes en operators."
         # NIEUW:
-        # - "A": "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd."
-        #   "B": "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
-        #   "C": "Data wordt correct bewerkt met behulp van de juiste operators. Het bewaren van data kan voor problemen zorgen, omdat je variabelen niet correct gebruikt of initialiseert, of omdat de volgorde van instructies niet wordt gerespecteerd."
-        #   "D": "Data wordt correct bewaard met behulp van variabelen. Het bewerken van data kan voor problemen zorgen, omdat je de verschillende operators niet correct hanteert of omdat de volgorde van operators niet wordt gerespecteerd."
-        #   "E": "Je maakt onvoldoende gebruik van variabelen en operators om data op correcte wijze te bewaren en bewerken."
+        - "A": "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd."
+          "B": "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
+          "C": "Data wordt correct bewerkt met behulp van de juiste operators. Het bewaren van data kan voor problemen zorgen, omdat je variabelen niet correct gebruikt of initialiseert, of omdat de volgorde van instructies niet wordt gerespecteerd."
+          "D": "Data wordt correct bewaard met behulp van variabelen. Het bewerken van data kan voor problemen zorgen, omdat je de verschillende operators niet correct hanteert of omdat de volgorde van operators niet wordt gerespecteerd."
+          "E": "Je maakt onvoldoende gebruik van variabelen en operators om data op correcte wijze te bewaren en bewerken."
         
-        # - "A": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met leesbare commentaar. Data wordt opgeslagen met behulp van het juiste datatype."
-        #   "B": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met commentaar. Je commentaar is echter onvoldoende duidelijk. Data wordt opgeslagen met behulp van het juiste datatype."
-        #   "C": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met commentaar. Bij het opslaan van data kies je voor het verkeerde datatype."
-        #   "D": "Code wordt verduidelijkt met commentaar. Data wordt opgeslagen met behulp van het juiste datatype. De namen van variabelen zijn onvoldoende duidelijk."
-        #   "E": "Namen van variabelen zijn onvoldoende duidelijk. Je commentaar is onvoldoende uitgewerkt. Data wordt opgeslagen onder het verkeerde datatype."
+        - "A": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met leesbare commentaar. Data wordt opgeslagen met behulp van het juiste datatype."
+          "B": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met commentaar. Je commentaar is echter onvoldoende duidelijk. Data wordt opgeslagen met behulp van het juiste datatype."
+          "C": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met commentaar. Bij het opslaan van data kies je voor het verkeerde datatype."
+          "D": "Code wordt verduidelijkt met commentaar. Data wordt opgeslagen met behulp van het juiste datatype. De namen van variabelen zijn onvoldoende duidelijk."
+          "E": "Namen van variabelen zijn onvoldoende duidelijk. Je commentaar is onvoldoende uitgewerkt. Data wordt opgeslagen onder het verkeerde datatype."
       chapters:
         - name: Waardes
           link: "/courses/programmeren/instructies/waardes.html"
@@ -42,23 +43,24 @@
     - name: "Codeblokken"
       link: "/courses/programmeren/codeblokken/"
       rubrics:
+      # OLD
         - "A": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden gebruikt. Het DRY principe wordt zo goed mogelijk toegepast door te kiezen voor de juiste codeblokken."
           "B": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden gebruikt. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
           "C": "Iteraties, selecties en functies maken gebruik van de correcte voorwaarden en parameters. Iterator-variabelen worden niet gebruikt. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
           "D": "Iteraties en selecties maken gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
           "E": "Iteraties en selecties maken geen gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
         # NIEUW
-        # - "A": "De scope van codeblokken wordt gerespecteerd. Lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt zo goed mogelijk toegepast."
-        #   "B": "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt correct toegepast. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
-        #   "C": "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Er zijn echter duidelijke voorbeelden waarbij het D.R.Y. principe onvoldoende werd toegepast."
-        #   "D": "Het D.R.Y. principe wordt correct toegepast. De scope van codeblokken wordt echter niet altijd gerespecteerd, doordat lokale variabelen en parameters niet of verkeerd worden gebruikt. "
-        #   "E": "Je gebruikt geen codeblokken waar nodig, waardoor het D.R.Y. principe niet correct wordt toegepast en de scope van codeblokken ovoldoende wordt gerespecteerd."
+        - "A": "De scope van codeblokken wordt gerespecteerd. Lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt zo goed mogelijk toegepast."
+          "B": "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt correct toegepast. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
+          "C": "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Er zijn echter duidelijke voorbeelden waarbij het D.R.Y. principe onvoldoende werd toegepast."
+          "D": "Het D.R.Y. principe wordt correct toegepast. De scope van codeblokken wordt echter niet altijd gerespecteerd, doordat lokale variabelen en parameters niet of verkeerd worden gebruikt. "
+          "E": "Je gebruikt geen codeblokken waar nodig, waardoor het D.R.Y. principe niet correct wordt toegepast en de scope van codeblokken ovoldoende wordt gerespecteerd."
         
-        # - "A": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar."
-        #   "B": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
-        #   "C": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functiecommentaar is onvoldoende uitgewerkt en draagt weinig bij."
-        #   "D": "De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar. Functies worden echter niet beperkt tot één duidelijk doel, waardoor functies groter of complexer zijn dan nodig is."
-        #   "E": "Functies zijn onvoldoende uitgewerkt, of hebben geen duidelijk doel. De namen van functies en parameters zijn niet voldoende duidelijk. Functiecommentaar is onvoldoende uitgewerkt."
+        - "A": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar."
+          "B": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
+          "C": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functiecommentaar is onvoldoende uitgewerkt en draagt weinig bij."
+          "D": "De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar. Functies worden echter niet beperkt tot één duidelijk doel, waardoor functies groter of complexer zijn dan nodig is."
+          "E": "Functies zijn onvoldoende uitgewerkt, of hebben geen duidelijk doel. De namen van functies en parameters zijn niet voldoende duidelijk. Functiecommentaar is onvoldoende uitgewerkt."
       chapters:
         - name: Codeblokken
           link: "/courses/programmeren/codeblokken/codeblokken.html"
@@ -108,7 +110,7 @@
           "C": "Elementen worden correct genest. De semantisch juiste elementen werden gebruikt. Elementen zijn niet voldoende onderverdeeld in grotere elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
           "D": "Elementen worden correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn ingevuld waar nodig, maar hebben vaak onduidelijke naamgeving."
           "E": "Elementen worden niet correct genest. Elementen zijn niet voldoende onderverdeeld in grotere elementen. Er wordt geen rekening gehouden met de semantiek van de elementen. De id's en classes van elementen zijn niet of onduidelijk ingevuld waar nodig."
-
+      # NIEUW
         - "A": "Elementen worden correct genest. Elk element bestaat uit de juiste openings- en sluitingstag. Elementen zijn voorzien van de vereiste attributen en elk attribute is ingevuld met een correcte waarde. Bronnen zijn lokaal opgeslagen."
           "B": "Elementen worden correct genest. Elk element bestaat uit de juiste openings- en sluitingstag. Elementen zijn voorzien van de vereiste attributen. Attributes bevatten een foutieve waarde. Bronnen zijn lokaal opgeslagen."
           "C": "Elementen worden correct genest. Elk element bestaat uit de juiste openings- en sluitingstag. Elementen zijn niet voorzien van de vereiste attributen. Attributes bevatten een foutieve waarde. Bronnen zijn lokaal opgeslagen."
