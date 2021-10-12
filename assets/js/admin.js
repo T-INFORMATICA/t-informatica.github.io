@@ -46,7 +46,7 @@ function submitEvaluation(e) {
         }
     }
 
-    form.reset();
+    // form.reset();
 }
 
 function createNewEvalForm() {
