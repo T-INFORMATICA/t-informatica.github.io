@@ -26,7 +26,8 @@ function selectUser() {
 }
 
 function toCssSafeId(text) {
-    text = text.replace(/[!\d\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
+    text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
+    // text = text.replace(/[!\d\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, ''); // HACK: currently, subjects are saved with a digit if there are multiple possible evals.
     return text.toLowerCase();
 }
 
@@ -289,7 +290,9 @@ function addResultsToPage() {
 function showResultInSubjectElement(subject, result) {
     let subjectId = toCssSafeId(subject);
 
-    console.log(`${subjectId}`);
+    // console.log(`${subjectId}`);
+    
+    subjectId = subjectId.replace(/[!\d\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
 
     let subjectEl = document.querySelector(`#${subjectId}`);
     subjectEl.style.display = "";
