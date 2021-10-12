@@ -26,7 +26,7 @@ function selectUser() {
 }
 
 function toCssSafeId(text) {
-    text = text.replace(/[!\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
+    text = text.replace(/[!\d\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
     return text.toLowerCase();
 }
 
