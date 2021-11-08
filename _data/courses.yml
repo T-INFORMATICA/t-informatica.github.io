@@ -144,11 +144,23 @@
     - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
       rubrics:
+      #OLD
         - "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden samengevoegd waar nodig."
           "B": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden te weinig samengevoegd."
           "C": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
           "D": "Selectors zijn correct gedefinieerd, maar zijn vaak niet specifiek genoeg. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
-          "E": "Selectors zijn verkeerd of niet specifiek genoeg gedefinieerd. Selectors worden te weinig samengevoegd. Stijlregels, waardes en eenheden werden niet correct gebruikt. "
+          "E": "Selectors zijn verkeerd of niet specifiek genoeg gedefinieerd. Selectors worden te weinig samengevoegd. Stijlregels, waardes en eenheden werden niet correct gebruikt."
+      #NEW
+        - "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden samengevoegd waar nodig."
+          "B": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden samengevoegd waar nodig. Er zijn echter duidelijk oplossingen die korter of optimaler zijn."
+          "C": "Selectors zijn te vaag of te specifiek gedefinieerd, waardoor stijlregels te vaak overschreven moeten worden.  Selectors worden samengevoegd waar nodig."
+          "D": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden onvoldoende samengevoegd waar nodig."
+          "E": "Selectors zijn onvoldoende uitgewerkt."
+        - "A": "Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Je gebruikt relatieve eenheden (em, rem, ...) en custom properties (variabelen) waar nodig."
+          "B": "Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Je gebruikt relatieve eenheden (em, rem, ...) en custom properties (variabelen) waar nodig. Er zijn echter duidelijk oplossingen die korter of optimaler zijn."
+          "C": "Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Je gebruikt custom properties (variabelen) waar nodig. Je maakt onvoldoende gebruik van relatieve eenheden."
+          "D": "Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Je maakt onvoldoende gebruik van relatieve eenheden (em, rem, ...) en custom properties (variabelen)."
+          "E": "Je stijlregels zijn onvoldoende uitgewerkt of er werd te vaak gekozen voor verkeerde stijlregels, waardes of eenheden."
       chapters:
         - name: CSS
           link: "/courses/webontwikkeling/css/css.html"
@@ -167,8 +179,8 @@
     - name: "Statische Websites"
       link: "/courses/webontwikkeling/statische-websites"
       rubrics:
-        - "A": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt relatieve eenheden (em, rem) en custom properties (variabelen) waar nodig."
-          "B": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Je gebruikt custom properties (variabelen) waar nodig."
+        - "A": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets."
+          "B": "Layout, ruimte en interactie zijn correct geïmplementeerd. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets. Er zijn echter duidelijk oplossingen die korter of optimaler zijn."
           "C": "De interactie op jouw website is onvoldoende geïmplementeerd. Layout en ruimte zijn correct. De website is responsive en Mobile First ontwikkeld. Stijlregels zijn duidelijk en overzichtelijk verzameld in externe stylesheets."
           "D": "Ruimte en interactie zijn onvoldoende geïmplementeerd. De website is onvoldoende responsive. Je layout werkt en je hebt de website ontwikkeld volgens het Mobile First principe."
           "E": "Layout, ruimte en interactie zijn onvoldoende geïmplementeerd. De website is niet responsive. Er werd niet gewerkt volgens het Mobile First principe."
