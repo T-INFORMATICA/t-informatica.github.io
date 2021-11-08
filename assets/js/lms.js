@@ -292,7 +292,7 @@ function showResultInSubjectElement(subject, result) {
 
     // console.log(`${subjectId}`);
     
-    subjectId = subjectId.replace(/[!\d\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, '');
+    subjectId = subjectId.replace(/[!\d\s\"#$%&'\(\)\*\+,\.\/:;<=>\?\@\[\\\]\^`\{\|\}~]/g, ''); // HACK: currently, subjects are saved with a digit if there are multiple possible evals.
 
     let subjectEl = document.querySelector(`#${subjectId}`);
     subjectEl.style.display = "";
