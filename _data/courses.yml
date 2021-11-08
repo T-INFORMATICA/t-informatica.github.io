@@ -144,7 +144,7 @@
     - name: "Opmaak"
       link: "/courses/webontwikkeling/css"
       rubrics:
-        - "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors werden samengevoegd waar nodig."
+        - "A": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden samengevoegd waar nodig."
           "B": "Selectors zijn correct en voldoende specifiek gedefinieerd. Er werd gekozen voor de correcte stijlregels met de juiste waardes en eenheden. Selectors worden te weinig samengevoegd."
           "C": "Selectors zijn correct en voldoende specifiek gedefinieerd. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
           "D": "Selectors zijn correct gedefinieerd, maar zijn vaak niet specifiek genoeg. Selectors worden te weinig samengevoegd. Er werd gekozen voor de correcte stijlregels, maar de waardes en eenheden werden niet correct gebruikt. "
@@ -212,11 +212,23 @@
     - name: "Database Ontwerp"
       link: "/courses/databanken/database-ontwerp"
       rubrics:
-        - "A": "Databasefouten werden correct herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. "
-          "B": "Databasefouten werden correct herkend. Het strokendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. Het multipliciteitendiagram is onvoldoende uitgewerkt. "
-          "C": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Sleutels werden correct aangeduid. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. "
-          "D": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet correct aangeduid. "
-          "E": "Databasefouten werden niet goed herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet aangeduid. "
+        #OLD
+        # - "A": "Databasefouten werden correct herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. "
+        #   "B": "Databasefouten werden correct herkend. Het strokendiagram en populatiediagram zijn correct en volledig uitgewerkt. Sleutels werden correct aangeduid. Het multipliciteitendiagram is onvoldoende uitgewerkt. "
+        #   "C": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Sleutels werden correct aangeduid. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. "
+        #   "D": "Enkele databasefouten werden niet goed herkend. Het strokendiagram bevat alle nodige entiteiten. Het multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet correct aangeduid. "
+        #   "E": "Databasefouten werden niet goed herkend. Het strokendiagram, multipliciteitendiagram en populatiediagram is onvoldoende uitgewerkt. Sleutels werden niet aangeduid. "
+        #NEW
+        - "A": "Herhalende groepen worden verwijdert. Redundante data is zoveel mogelijk beperkt. Data is gestandaardiseerd waar mogelijk. Functionele afhankelijkheden en sleutels zijn bij elke stap correct aangeduid. Het normalisatie- en standaardisatieproces is volledig en correct gebruikt."
+          "B": "Herhalende groepen worden verwijdert. Redundante data is zoveel mogelijk beperkt. Data is gestandaardiseerd waar mogelijk. Sleutels zijn bij elke stap correct aangeduid. Het normalisatie- en standaardisatieproces is volledig en correct gebruikt."
+          "C": "Herhalende groepen worden verwijdert. Redundante data is zoveel mogelijk beperkt. Data is niet volledig gestandaardiseerd. Sleutels zijn niet correct of onvoldoende aangeduid. Het normalisatieproces is volledig en correct gebruikt."
+          "D": "Herhalende groepen worden verwijdert. Redundante data is nog aanwezig, maar kon weggewerkt worden. Sleutels zijn niet correct of onvoldoende aangeduid. Data is niet volledig gestandaardiseerd."
+          "E": "Het normalisatie- en standaardisatieproces werd onvoldoende uitgewerkt."
+        - "A": "Het multipliciteitendiagram werd volledig en correct uitgewerkt. Het populatiediagram bevat een uitgebreide populatie die zo goed mogelijk toont wat wel en niet mag in de database."
+          "B": "Het multipliciteitendiagram werd volledig en correct uitgewerkt. Het populatiediagram bevat een uitgebreide populatie, maar toont enkele belangrijke regels niet."
+          "C": "De optionaliteit of cardinaliteit van het multipliciteitendiagram werd niet volledig of correct uitgewerkt. Het populatiediagram bevat een uitgebreide populatie."
+          "D": "De optionaliteit en cardinaliteit van het multipliciteitendiagram werd niet volledig of correct uitgewerkt. Het populatiediagram bevat een uitgebreide populatie."
+          "E": "Het multipliciteitendiagram en populatiediagram werden onvoldoende uitgewerkt."
       chapters:
         - name: Inleiding
           link: "/courses/databanken/database-ontwerp/inleiding.html"
@@ -235,11 +247,28 @@
     - name: "SQL"
       link: "/courses/databanken/sql"
       rubrics:
-        - "A": "De projectie, brontabel en selectie is correct geimplementeerd voor de hoofd- en subqueries."
-          "B": "De projectie, brontabel en selectie is correct geimplementeerd. Er werd geen gebruik gemaakt van subqueries waar nodig."
-          "C": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit meerdere brontabellen. De selectie is niet correct geimplementeerd."
-          "D": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit één brontabel. De selectie is niet correct geimplementeerd."
-          "E": "De projectie, brontabel en selectie van queries zijn verkeerd geimplementeerd."
+      #OLD
+        # - "A": "De projectie, brontabel en selectie is correct geimplementeerd voor de hoofd- en subqueries."
+        #   "B": "De projectie, brontabel en selectie is correct geimplementeerd. Er werd geen gebruik gemaakt van subqueries waar nodig."
+        #   "C": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit meerdere brontabellen. De selectie is niet correct geimplementeerd."
+        #   "D": "De projectie is correct geimplementeerd. De brontabel werd correct aangeduid voor queries uit één brontabel. De selectie is niet correct geimplementeerd."
+        #   "E": "De projectie, brontabel en selectie van queries zijn verkeerd geimplementeerd."
+      #NEW
+        - "A": "De projectie bevat enkel de benodigde velden. Je geeft elk veld een duidelijke naam. Dubbele waarden worden gefilterd wanneer nodig. Velden worden samengevoegd wanneer dit handig is in het resultaat."
+          "B": "De projectie bevat enkel de benodigde velden. Je geeft elk veld een duidelijke naam. Dubbele waarden worden gefilterd wanneer nodig. Velden worden samengevoegd wanneer dit handig is in het resultaat. Er zijn echter duidelijk oplossingen die korter of optimaler zijn."
+          "C": "De projectie bevat enkel de benodigde velden. Je geeft elk veld een duidelijke naam. Dubbele waarden worden gefilterd wanneer nodig. Velden worden niet samengevoegd wanneer dit handig is."
+          "D": "De projectie bevat de benodigde velden, maar bevat ook velden die niet worden gebruikt. Je geeft elk veld een duidelijke naam. Velden worden niet samengevoegd wanneer dit handig is."
+          "E": "De projectie is onvoldoende uitgewerkt voor de gebruikte queries."
+        - "A": "Je gebruikt een minimaal aantal queries per actie. Wanneer data verspreid is over meerdere tabellen, voeg je tabellen samen tot 1 brontabel met de correcte methode. Je gebruikt hiervoor enkel de benodige tabellen."
+          "B": "Je gebruikt een minimaal aantal queries per actie. Wanneer data verspreid is over meerdere tabellen, voeg je tabellen samen tot 1 brontabel met de correcte methode. Je gebruikt hiervoor enkel de benodige tabellen. Er zijn echter duidelijk oplossingen die korter of optimaler zijn."
+          "C": "Je gebruikt een minimaal aantal queries per actie. Wanneer data verspreid is over meerdere tabellen, voeg je tabellen samen tot 1 brontabel met de correcte methode. Je voegt daarbij ook tabellen toe die je hier niet nodig voor hebt."
+          "D": "Je gebruikt meer queries per actie dan je nodig hebt. Wanneer data verspreid is over meerdere tabellen, voeg je tabellen samen tot 1 brontabel. Daarbij gebruik je niet de juiste methode of voeg je tabellen toe die je niet nodig hebt."
+          "E": "De brontabel is onvoldoende uitgewerkt voor de gebruikte queries."
+        - "A": "De selectie optimaliseert het resultaat van je query, door de resultaten te beperken, sorteren en te berekenen."
+          "B": "De selectie optimaliseert het resultaat van je query, door de resultaten te beperken, sorteren en te berekenen. Er zijn echter duidelijk oplossingen die korter of optimaler zijn."
+          "C": "De selectie optimaliseert het resultaat van je query, door de resultaten te sorteren en te berekenen."
+          "D": "De selectie optimaliseert het resultaat van je query, door de resultaten te sorteren."
+          "E": "De selectie is onvoldoende uitgewerkt voor de gebruikte queries."
       chapters:
         - name: Inleiding
           link: "/courses/databanken/sql/inleiding.html"
