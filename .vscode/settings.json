@@ -1,13 +1,9 @@
 {
-    "window.zoomLevel": 0,
-    "[markdown]": {
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.quickSuggestions": false,
-        "editor.wordWrapColumn": 80
-    },
     "workbench.colorCustomizations": {
-        "activityBar.background": "#053522",
-        "titleBar.activeBackground": "#074A30",
-        "titleBar.activeForeground": "#EFFEF8"
-    }
+        "activityBar.background": "#5A0E2D",
+        "titleBar.activeBackground": "#7D143F",
+        "titleBar.activeForeground": "#FEFCFD"
+    },
+    "window.zoomLevel": 0,
+    "liveServer.settings.port": 5501
 }

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% include contextmenu__default.html %}
+<input type="checkbox" id="blog-button" class="collapse-trigger">
+{% include explorer__blog.html %}
+{% include activity-bar.html %}
+
+<main>
+    <header class="full-bleed bg-accent-B">
+        <h1>{{ page.title }}</h1>
+    </header>
+
+    <article>
+        {{content}}
+    </article>
+</main>

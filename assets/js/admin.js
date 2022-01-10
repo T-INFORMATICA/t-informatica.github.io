@@ -45,8 +45,6 @@ function submitEvaluation(e) {
             }
         }
     }
-
-    // form.reset();
 }
 
 function createNewEvalForm() {
@@ -94,7 +92,7 @@ function rubricsLoaded(e) {
                     document.querySelector(`#gradeform-students>#gradeform-${studentId}`).innerHTML += tmpl_subject;
                     for (const [grade, comment] of Object.entries(grades)) {
                         let tmpl_gradeOption = tmpl_gradeForm_gradeOption(studentId, subjectId, grade, comment);
-                        document.querySelector(`#gradeform-${studentId}>#students-${studentId}-${subjectId}`).innerHTML += tmpl_gradeOption;
+                        document.querySelector(`#gradeform-${studentId} #students-${studentId}-${subjectId}`).innerHTML += tmpl_gradeOption;
                     }
                 }
 

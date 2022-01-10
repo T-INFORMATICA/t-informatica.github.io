@@ -1,0 +1,6 @@
+@media only screen and (min-width: 600px) {
+    .activity-bar-group[data-state="reversed"] {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

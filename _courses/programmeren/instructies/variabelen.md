@@ -21,7 +21,8 @@ description: Hoe maak je een variabele aan?
 
 Variabelen zijn de tweede bouwsteen van een programmeertaal. Zonder variabelen wordt het heel erg moeilijk om waardes op te slaan en op te vragen.
 
-<img src="{{ site.baseurl }}/assets/img/variabelen-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%">
+<!-- <img src="{{ site.baseurl }}/assets/img/variabelen-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%"> -->
+{% include svg/curriculum_programmeren.svg selected="variabelen" %}
 
 Een programma gebruikt en verandert waardes. Deze waardes worden opgeslagen in het **computergeheugen** (RAM). 
 
@@ -60,19 +61,19 @@ Het aanmaken van een variabele wordt ook wel het **declareren** van een variabel
 Wil je bijvoorbeeld bijhouden hoeveel levens een speler heeft, dan maak je een variabele zo aan:
 
 ```javascript
- 1	      2	       3		// 1: declareer; 2: benoem; 3: waarde;
+ 1       2         3  // 1: declareer; 2: benoem; 3: waarde;
 let aantalLevens = 3;
 
 /* Javascript bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
 ```
 ```php
-1  2            3		// 1: declareer; 2: benoem; 3: waarde;
+1  2            3  // 1: declareer; 2: benoem; 3: waarde;
 $aantalLevens = 3;
 
 /* PHP bepaalt zelf het datatype. Als je dus een waarde in de doos steekt, zal javascript de vorm van de doos zelf aanpassen, afhankelijk van wat je erin steekt. */
 ```
 ```csharp
- 1	   2	         3		// 1: declareer; 2: benoem; 3: waarde;
+ 1    2            3  // 1: declareer; 2: benoem; 3: waarde;
 int aantalLevens = 3;
 ```
  
@@ -104,25 +105,25 @@ Bv.: een speler start het spel opnieuw op, dus het 'aantalLevens' wordt terug op
 let aantalLevens = 1;
 
 // de speler start het spel opnieuw:
-aantalLevens = 3; 	// let op: 'let' wordt NIET opnieuw geschreven!
-			// 'let' dient om een nieuwe variabele te maken
-			// en hier passen we een bestaande variabele aan
+aantalLevens = 3;     // let op: 'let' wordt NIET opnieuw geschreven!
+                      // 'let' dient om een nieuwe variabele te maken
+                      // en hier passen we een bestaande variabele aan
 ```
 ```php
 $aantalLevens = 1;
 
 // de speler start het spel opnieuw:
-$aantalLevens = 3;	// let op: '$' wordt OOK HIER opnieuw geschreven!
-			// '$' dient om een nieuwe variabele te maken
-			// en OOK om een bestaande variabele te gebruiken!
+$aantalLevens = 3;    // let op: '$' wordt OOK HIER opnieuw geschreven!
+                      // '$' dient om een nieuwe variabele te maken
+                      // en OOK om een bestaande variabele te gebruiken!
 ```
 ```csharp
 int aantalLevens = 1;
 
 // de speler start het spel opnieuw:
-aantalLevens = 3; 	// let op: 'int' wordt NIET opnieuw geschreven!
-			// 'int' dient om een nieuwe integer variabele te maken
-			// en hier passen we een bestaande variabele aan
+aantalLevens = 3;     // let op: 'int' wordt NIET opnieuw geschreven!
+                      // 'int' dient om een nieuwe integer variabele te maken
+                      // en hier passen we een bestaande variabele aan
 ```
 
 Als bijvoorbeeld de speler een leven verliest kan het 'aantalLevens' vermindert worden met 1. 
@@ -145,12 +146,12 @@ aantalLevens = aantalLevens - 1;
 
  - Elke variabele heeft een **duidelijke naam**
    - De naam van een variabele wordt geschreven volgens lowerCamelCase
-     - bv: 	**m**y**F**irst**V**ariable
+     - bv:     **m**y**F**irst**V**ariable
    - De naam van een variabele omschrijft duidelijk waar de variabele voor dient
-     - bv: 	**userPhoneNumber**
+     - bv:     **userPhoneNumber**
 
 
  - Elke variabele heeft een **initiële waarde**
    - Over het algemeen wordt een variabele geïnitialiseerd op null, 0 of leeg (afhankelijk van het datatype).
-     - bv:	userAge = 0<br>
-	      	userName = ""
+     - bv:    userAge = 0<br>
+              userName = ""

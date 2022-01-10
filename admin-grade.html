@@ -2,31 +2,38 @@
 layout: admin
 ---
 
-<h1>Evaluatie</h1>
+<header class="full-bleed bg-accent-B">
+    <h1>Evaluatie</h1>
+</header> 
 
 
-<form id="gradeform">
-    <div>
-        <input type="text" name="evalName" id="evalName" placeholder="evaluation name" required>
+<form id="gradeform" class="full-width bg-complement elevated-low">
+    <header>
+        <div>
+            <input type="text" name="evalName" id="evalName" placeholder="evaluation name" required>
+        </div>
+        <div>
+            <input type="date" name="evalDate" id="evalDate" required>
+        </div>
+        <div>
+            <button type="button" onclick="evalChangeStudent(-1)" id="evalSelecPrevStudent"><span
+                    class="material-icons">chevron_left</span></button>
+            <select name="" id="evalStudentSelection" onchange="evalChangeStudent(0)">
+            </select>
+            <button type="button" onclick="evalChangeStudent(1)" id="evalSelectNextStudent"><span
+                    class="material-icons">chevron_right</span></button>
+        </div>
+    </header>
+
+    <div id="student-evals">
     </div>
-    <div>
-        <input type="date" name="evalDate" id="evalDate" required>
-    </div>
-    <div>
-        <button type="button" onclick="evalChangeStudent(-1)" id="evalSelecPrevStudent"><span
-                class="material-icons">chevron_left</span></button>
-        <select name="" id="evalStudentSelection" onchange="evalChangeStudent(0)">
-        </select>
-        <button type="button" onclick="evalChangeStudent(1)" id="evalSelectNextStudent"><span
-                class="material-icons">chevron_right</span></button>
-    </div>
-    <div id="gradeform-students">
-    </div>
+
+
 
     <input type="submit" value="VERZENDEN">
 </form>
 
-<script src="/assets/js/admin.js"></script>
+<script src="/assets/js/evalform.js"></script>
 <script>
 
     // documentReady(createNewEvalForm);

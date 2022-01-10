@@ -1,0 +1,14 @@
+
+    <nav id="explorer__blog" class="fixed-foldout | bg-complement elevated-medium">
+        <label for="blog-button" class="explorer-closebutton material-icons-outlined small-icon">close</label>
+        <ul class="explorer-group">
+            <li>
+                <a href="/blog.html">Blog Overview</a>
+            </li>
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url }}">{{ post.date | date: "%-d-%m-'%y" }} {{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>

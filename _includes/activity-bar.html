@@ -1,0 +1,83 @@
+<nav id="activity-bar" class="bg-contrast text-complement">
+    <div>
+        <ul id="nav-homegroup" class="activity-bar-group | bg-contrast" tabindex="0">
+            {% assign pages = "home,blog,news" | split: ',' %}
+            <li><label class="material-icons-outlined" {% if pages contains page.activity %} data-state="selected" {% endif %}>home</label></li>
+            <li><a href="/" data-tooltip="home" {% if page.activity=="home" %} data-state="selected" {% endif %}><span class="material-icons-outlined">home</span></a></li>
+            {% if page.activity=="blog" %}
+            <li><label data-tooltip="blog" data-state="selected" for="blog-button"><span class="material-icons-outlined">text_snippet</span></label></li>
+            {% else %}
+            <li><a href="/blog.html" data-tooltip="blog"><span class="material-icons-outlined">text_snippet</span></a></li>
+            {% endif %}
+        </ul>
+        <ul id="nav-coursegroup" class="activity-bar-group | bg-contrast" tabindex="0">
+            {% if page.activity=="course" %}
+            <li><label data-tooltip="cursus" data-state="selected" for="courses-button"><span class="material-icons-outlined">school</span></label></li>
+            {% else %}
+            <li><a href="/courses.html" data-tooltip="cursus"><span class="material-icons-outlined">school</span></a></li>
+            {% endif %}
+            <!-- <li><label data-tooltip="cursus" {% if page.activity=="course" %} data-state="selected" {% endif %} for="courses-button"><span class="material-icons-outlined">school</span></label></li> -->
+        </ul>
+        <ul id="nav-contactgroup" class="activity-bar-group | bg-contrast" tabindex="0">
+            {% assign pages = "contact,calendar" | split: ',' %}
+            <li><label class="material-icons-outlined" {% if pages contains page.activity %} data-state="selected" {% endif %}>email</label></li>
+            <!-- <li><a href="/contact.html" data-tooltip="contact" {% if page.activity=="contact" %} data-state="selected" {% endif %}><span class="material-icons-outlined">email</span></a></li> -->
+            <li><a href="/calendar.html" data-tooltip="kalender" {% if page.activity=="calendar" %} data-state="selected" {% endif %}><span class="material-icons-outlined">event</span></a></li>
+            <li><a href="/links.html" data-tooltip="links" {% if page.activity=="links" %} data-state="selected" {% endif %}><span class="material-icons-outlined">list_alt</span></a></li>
+        </ul>
+    </div>
+    <div>
+        <ul class="activity-bar-group | bg-contrast" tabindex="0" data-state="reversed">
+            <li>
+                <a href="#admin-foldout" class="forAdmin | material-icons-outlined" style="display: none;">admin_panel_settings</a>
+
+                <nav class="floating-foldout | bg-dominant elevated-high" id="admin-foldout">
+                    <a href="#close-foldout" class="floating-foldout-close"></a>    
+                    <ul class="floating-foldout-navlist">
+                        <li class="floating-foldout-button"><a href="/admin-grade.html">New Evaluation</a></li>
+                        <li class="floating-foldout-button"><a href="/admin-manageusers.html">Manage Users</a></li>
+                    </ul>         
+                </nav>
+            </li>
+        </ul>
+        <ul class="activity-bar-group | bg-contrast" tabindex="0" data-state="reversed">
+            <li>
+                <a href="#settings-foldout" class="material-icons-outlined">settings</a>
+
+                <nav class="floating-foldout | bg-dominant elevated-high" id="settings-foldout">
+                    <a href="#close-foldout" class="floating-foldout-close"></a>
+                    <ul class="floating-foldout-navlist">
+                        <li class="floating-foldout-button"><a href="#">Dark/light mode</a></li>
+                        <li class="floating-foldout-button"><a href="#">Reader mode</a></li>
+                    </ul>
+                </nav>
+            </li>
+        </ul>
+        <ul class="activity-bar-group | bg-contrast" tabindex="0" data-state="reversed">
+            <!-- <li><label class="material-icons-outlined">account_circle</label></li> -->
+            <li>
+                <a href="#account-foldout" class="material-icons-outlined">account_circle</a>
+
+                <nav class="floating-foldout | bg-dominant elevated-high" id="account-foldout">
+                    <a href="#close-foldout" class="floating-foldout-close"></a>    
+                    <ul class="floating-foldout-navlist">
+                        <li>
+                            <div id="firebaseui-auth-container"></div>
+                            <div id="loader">Loading...</div>
+                            <script>
+                                firebase.auth().onAuthStateChanged(function (user) {
+                                    authUser(user);
+                                    addUsersToMenu();
+                                });
+                            </script>
+                        </li>
+                        <li class="floating-foldout-button | forUser" style="display: none"><a href="/lms-profile.html">Mijn account</a></li>
+                        <li class="floating-foldout-button | forUser" style="display: none"><a href="/lms-reportcard.html">Rapport</a></li>
+                        <li class="floating-foldout-button | forUser" style="display: none"><a href="/lms-evaluations.html">Tijdslijn</a></li>
+                        <li class="floating-foldout-button | forUser" style="display: none"><a href="#" onclick="signOut()">Uitloggen</a></li>
+                    </ul>         
+                </nav>
+            </li>
+        </ul>
+    </div>
+</nav>

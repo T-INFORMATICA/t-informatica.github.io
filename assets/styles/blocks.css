@@ -1,0 +1,501 @@
+label {
+    cursor: pointer;
+}
+
+a {
+    color: var(--color-accent-A);
+}
+
+main>header {
+    text-align: center;
+}
+
+span.tag {
+    background-color: var(--color-complement);
+    color: var(--color-accent-A);
+    display: inline-block;
+    padding: .2rem .5rem;
+    margin: .2rem 0;
+    border-radius: 9999px;
+    font-size: .8em;
+}
+
+pre {
+    overflow-x: auto;
+    overflow-y: visible;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 16px;
+    font-family: 'B612 Mono', monospace;;
+}
+
+blockquote.warning p {
+    margin: 0;
+}
+
+blockquote.warning::before {
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+
+    font-family: 'Material Icons';
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.8rem;
+    content: '\e0f0';
+    color: var(--color-dominant);
+
+    border-radius: 9999px;
+    background-color: var(--color-accent-A);
+    border: .25rem solid var(--color-dominant);
+}
+
+/* ************* */
+/* REPORTCARD V2 */
+/* ************* */
+
+#timeline {
+    border-left: 2px solid var(--color-contrast);
+}
+
+#timeline table tbody.timeline-subject,
+#reportcard table tbody.reportcard-subject {
+    background-color: var(--color-contrast);
+    color: var(--color-dominant);
+}
+
+#timeline .timeline-subject__comment {
+    background-color: var(--color-dominant);
+    color: var(--color-contrast);
+}
+
+#reportcard table tbody.reportcard-subject {
+    border-top: 1px solid black;
+}
+
+#reportcard table tbody.reportcard-subject:last-child {
+    border-bottom: 1px solid black;
+}
+
+.timeline-evaluation::before {
+    font-family: "Material Icons";
+    content: "\e889";
+    position: absolute;
+    left: -1.9rem;
+    background-color: var(--color-dominant);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* ****** */
+/* TABLES */
+/* ****** */
+
+table.styledTable {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    border-spacing: 2px;
+    border-color: grey;
+}
+  
+table.styledTable thead,
+table.styledTable thead a {
+    background-color: var(--color-contrast);
+    color: var(--color-dominant);
+}
+  
+table.styledTable tbody tr:nth-child(odd) {
+    background-color: var(--color-complement);
+}
+  
+table.styledTable td,
+table.styledTable th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .75rem;
+    vertical-align: top;
+}
+  
+table.styledTable tr {
+    border-top: 1px solid #dee2e6;
+}
+
+/* ************ */
+/* ACTIVITY BAR */
+/* ************ */
+
+.activity-bar-group>li>a,
+.activity-bar-group>li>label {
+    color: inherit;
+    text-decoration: none;
+    
+    border-style: solid;
+    border-width: 0 0 4px 0;
+    border-color: var(--color-contrast);
+    opacity: .55;
+
+    cursor: pointer;
+}
+
+.activity-bar-group>li:not(first-child):not(:only-child) {
+    background-color: var(--color-contrast);
+}
+
+
+.activity-bar-group>li>a:hover,
+.activity-bar-group>li>label:hover {
+    opacity: 1;
+}
+
+.activity-bar-group>li>a[data-state="selected"],
+.activity-bar-group>li>label[data-state="selected"] {
+    border-color: var(--color-accent-A);
+    opacity: 1;
+}
+
+.activity-bar-group>li:first-child {
+    user-select: none;
+}
+
+/* ******************* */
+/* FIXED FOLDOUT MENUS */
+/* ******************* */
+
+.fixed-foldout {
+    overflow-y: auto;
+    border-radius: 0 .5rem 0 0;
+}
+
+.explorer-closebutton {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    /* background-color: var(--color-dominant); */
+    color: var(--color-contrast);
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+
+.explorer-closebutton:hover {
+    background-color: var(--color-accent-A);
+    color: var(--color-complement);
+}
+
+/* ********************** */
+/* FLOATING FOLDOUT MENUS */
+/* ********************** */
+
+.floating-foldout {
+    background-color: var(--color-dominant);
+}
+
+/* ********** */
+/* SEARCH BAR */
+/* ********** */
+
+#search-bar {
+    position: relative;
+    text-align: center;
+    padding-top: .3rem;
+    width: 200px;
+    flex: 0 1 auto;
+}
+
+#search-bar .search-bar__input {
+    margin: .25rem;
+    padding: .25rem .5rem;
+    width: 120px;
+    position: relative;
+    right: 0px;
+    top: 2px;
+}
+
+#search-bar .search-bar__input {
+    border-radius: 999px;
+    border: 1px solid var(--color-350);
+    transition: width .2s;
+}
+
+#search-bar .search-bar__icon {
+    position: absolute;
+    right: 2.8rem;
+    font-size: 1rem;
+    top: 1rem;
+}
+
+#search-bar .search-bar__icon {
+    pointer-events: none;
+    color: var(--color-200);
+}
+
+#search-bar .search-bar__input:focus+.search-bar__icon {
+    display: none;
+}
+
+#search-bar .search-bar__input:focus {
+    border: 1px solid var(--color-contrast);
+    outline: 1px solid var(--color-contrast);
+} 
+
+#search-bar .search-bar__output {
+    display: block;
+}
+
+
+/* ************** */
+/* CURRICULUM SVG */
+/* ************** */
+
+.connection-line {
+    fill: none;
+    stroke-width: .1rem;
+    stroke: var(--color-contrast)!important;
+}
+
+.connection-arrow {
+    stroke: none;
+    fill: var(--color-contrast)!important;
+}
+
+.subject rect {
+    stroke-width: .2rem;
+    transform: translate(0,0);
+    width: 100%;
+    height: 100%;
+    stroke: var(--color-contrast)!important;
+    fill: var(--color-contrast)!important;
+}
+
+.subject text {
+    font-size: .4rem;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    transform: translate(50%,50%);
+    stroke: none;
+    fill: var(--color-dominant)!important;
+}
+
+
+.subject.selected rect,
+.subject:hover rect {
+    fill: var(--color-accent-A)!important;
+    stroke: var(--color-contrast)!important;
+}
+
+.subject.selected text,
+.subject:hover text {
+    fill: var(--color-contrast)!important;
+}
+
+.subject.selected~.subject rect,
+.subject:hover~.subject rect {
+    fill: var(--color-contrast)!important;
+    stroke: var(--color-accent-A)!important;
+}
+
+.subject.selected~.subject text,
+.subject:hover~.subject text {
+    fill: var(--color-complement)!important;
+}
+
+
+
+/*  //////////////////*/
+/* //CARDS&TIMELINE//*/
+/*//////////////////*/
+
+/* .courseResults {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 32px;
+    position: relative;
+}
+
+.subjectResultCard-v2 {
+    width: 240px;
+    display: block;
+}
+
+.subjectResultCard-v2>.result {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    background-color: var(--color-contrast);
+    color: var(--color-complement);
+}
+
+
+.subjectResultCard-v2>.result>.subject {
+    min-width: 0;
+}
+
+.subjectResultCard-v2>.result>.subject * {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.subjectResultCard-v2>.result>.grade {
+    font-size: 2rem;
+    padding: .25rem;
+    margin: .25rem;
+    background-color: var(--color-complement);
+    color: var(--color-contrast);
+    width: 2.5rem;
+    text-align: center;
+}
+
+.subjectResultCard-v2>.result>.subject>.subtitle {
+    font-size: .75rem;
+}
+
+.subjectResultCard-v2>.result>.subject>.title {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.timelineItem {
+    position: relative;
+    border-left: 1px solid var(--color-contrast);
+    border-bottom: 1px dashed var(--color-complement);
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+
+.timelineItem .title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: .5rem;
+}
+
+.timelineItem .subtitle {
+    font-size: 1rem;
+}
+
+.timelineItem .marker {
+    position: absolute;
+    width: 1.5rem;
+    height: 2rem;
+    background-color: var(--color-dominant);
+    left: -12px;
+    top: 36px;
+    border-radius: 9999px;
+    font-size: 1.5rem;
+}
+
+.subjectResultCard-v2 .progressbar-bg {
+    height: 2rem;
+    border: 1px solid #a1a1a1;
+    position: relative;
+    background-color: #cbd8e3;
+}
+
+.subjectResultCard-v2 .progressbar-progress {
+    background-color: #30638e;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, #658096, #658096 5px, #30638e 5px, #30638e 10px);
+}
+
+.subjectResultCard-v2 .progressbar-label {
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+    color: white;
+} */
+
+
+
+/*  /////////////////*/
+/* //EXERCISE FORM//*/
+/*/////////////////*/
+
+#exerciseAnswers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 2rem .5rem;
+}
+
+#exerciseAnswers label {
+    font-weight: bold;
+    background-color: var(--color-contrast);
+    border-bottom: .5rem solid var(--color-contrast);
+    color: var(--color-dominant);
+    padding: 1rem;
+}
+
+#exerciseAnswers input {
+    display: none;
+}
+
+#exerciseAnswers input:not(disabled)+label:hover {
+    border-bottom: .5rem solid var(--color-accent-A);
+    /* outline: .25rem solid var(--color-accent-A); */
+}
+
+#exerciseAnswers input:not(disabled):checked+label {
+    color: var(--color-contrast);
+    border-bottom: .5rem solid var(--color-accent-A);
+    background-color: var(--color-accent-A);
+}
+
+#searchbarOutput {
+    border-radius: 0 0 .5rem .5rem;
+}
+
+/* ************ */
+/* DESKTOP LAST */
+/* ************ */
+
+@media only screen and (min-width: 600px) {
+
+    #search-bar .search-bar__input:focus {
+        width: 180px;
+        transition: width .2s;
+    }
+
+    .activity-bar-group>li>a,
+    .activity-bar-group>li>label {
+        border-width: 0 0 0 4px;
+        position: relative;
+    }
+
+    .activity-bar-group>li>a::after,
+    .activity-bar-group>li>label::after {
+        content: attr(data-tooltip);
+        display: block;
+    }
+
+    
+
+    .activity-bar-group>li>a[data-state="selected"],
+    .activity-bar-group>li>label[data-state="selected"] {
+        --elevation: .5;
+        box-shadow: calc(4.0px * var(--elevation)) 
+                    calc(8.0px * var(--elevation)) 
+                    calc(16.0px * var(--elevation)) 
+                    inset 
+                    hsl(0deg 0% 0% / calc(0.25 + calc(0.25 * calc(1.0 - var(--elevation)))));
+    }
+    
+    /* ************ */
+    /* CONTEXT MENU */
+    /* ************ */
+
+    #context-bar {
+        border-radius: .5rem;
+    }
+}

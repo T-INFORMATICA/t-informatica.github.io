@@ -1,8 +1,10 @@
 baseurl: ""
 
-repo: "https://github.com/T-INFORMATICA"
+repo: "https://github.com/T-INFORMATICA/DumbSchool"
 github_user: "T-INFORMATICA"
-github_repo: "t-informatica.github.io"
+github_repo: "t-informatica.github.io/DumbSchool"
+
+
 
 collections:
     courses:
@@ -14,37 +16,44 @@ defaults:
     - scope:
           path: "_tutorials"
       values:
-          layout: "tutorial"
+          layout: "course"
+          activity: "course"
     - scope:
           path: "_posts"
       values:
-          excerpt_separator: <!--more-->
-          layout: contentCentered
+          excerpt_separator: "<!--more-->"
+          layout: "post"
           video: false
+          activity: "blog"
     - scope:
           path: "_courses/programmeren"
       values:
           course: "programmeren"
           layout: "course"
+          activity: "course"
     - scope:
           path: "_courses/webontwikkeling"
       values:
           course: "webontwikkeling"
           layout: "course"
+          activity: "course"
     - scope:
           path: "_courses/databanken"
       values:
           course: "databanken"
           layout: "course"
+          activity: "course"
     - scope:
           path: "_courses/informatica"
       values:
           course: "informatica"
           layout: "course"
+          activity: "course"
     - scope:
           path: ""
       values:
           layout: "default"
+          activity: "home"
 
 exclude:
     - "*.script.md"

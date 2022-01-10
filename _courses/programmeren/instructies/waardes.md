@@ -16,6 +16,7 @@ definitions:
 description: Hoe kijkt een computer naar de wereld?
 ---
 
+
 ## Over `0` en `1`
 
 Computers zijn binaire machines: het enige dat ze kennen (en nodig hebben) zijn `0` en `1`! Dit is een groot voordeel, want dit maakt het idee achter een computer heel erg simpel: je slaat een hoop `0` en `1`-tjes op in het computergeheugen, voert enkele bewerkingen uit en  je krijgt een heleboel nieuwe `0`-en en `1`-en. 
@@ -29,7 +30,7 @@ Net zoals andere talen bestaat een programmeertaal uit een aantal bouwstenen. In
 
 ## Wat is een waarde?
 
-<img src="{{ site.baseurl }}/assets/img/waardes-1.svg" alt="bouwstenen van programmeren" style="height: auto; max-width: 100%">
+{% include svg/curriculum_programmeren.svg selected="waardes" %}
 
 De eerste, belangrijke bouwsteen zijn de waarden. **Waarden zijn de 'soorten dingen' die je kan opslaan op een computer.** Het idee achter deze waarden is heel simpel: welke dingen zijn (a) gemakkelijk om te begrijpen voor een mens en (b) gemakkelijk om te zetten naar `0` en `1`?
 

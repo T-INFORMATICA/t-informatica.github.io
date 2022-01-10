@@ -1,65 +1,48 @@
 ---
-layout: contentCentered
+layout: default
 ---
-<nav>
-{% assign pageFound = false %}
-{% for coursedata in site.data.courses %}
-    {% for subjectdata in coursedata.subjects %}
-        {% for chapterdata in subjectdata.chapters %}
-            {% if page.url == chapterdata.link %}
-            {% assign pageFound = true %}
-            <div>
-                {% if forloop.first == false %}
-                    {% assign prev_i = forloop.index0 | minus: 1 %}
-                    {% assign prev_page = subjectdata.chapters[prev_i] %}
-                    <a href="{{prev_page.link}}" id="previousPage">
-                        <span class="material-icons">
-                            chevron_left
-                        </span>
-                        {{prev_page.name}}
-                    </a>
-                {% endif %}
-            </div>
 
 
-            <div>
-                {% if forloop.last == false %}
-                    {% assign next_i = forloop.index0 | plus: 1 %}
-                    {% assign next_page = subjectdata.chapters[next_i] %}
-                    <a href="{{next_page.link}}" id="nextPage">
-                        {{next_page.name}}
-                        <span class="material-icons">
-                            chevron_right
-                        </span>
-                    </a>
-                {% endif %}
-            </div>
-            {% endif %}
-            {% if pageFound == true %}{% break %}{% endif %}
+{% include contextmenu__courses.html %}
+<input type="checkbox" id="courses-button" class="collapse-trigger">
+{% include explorer__courses.html %}
+{% include activity-bar.html %} 
+
+
+<main>
+    <header class="full-bleed bg-accent-B">
+        <h1>{{page.title}}</h1>
+
+        {% capture words %}
+            {{ content | number_of_words | minus: 180 }}
+        {% endcapture %}
+        {% unless words contains '-' %}
+        <p>
+            leestijd: {{ words | plus: 180 | divided_by: 180 | append: ' minuten' }}
+        </p>
+        {% endunless %}
+        
+        <div id="tags">
+        {% for tag in page.tags %}
+            <span class="tag">{{tag | escape}}</span>
         {% endfor %}
-        {% if pageFound == true %}{% break %}{% endif %}
-    {% endfor %}
-    {% if pageFound == true %}{% break %}{% endif %}
-{% endfor %}
-</nav>
+        </div>
 
-<h1>{{page.title}}</h1>
-{% if page.course == "programmeren" %}
-<div>
-    <select name="" class="lang-select">
-        <option value="language-javascript" class="language-javascript">JS</option>
-        <option value="language-php" class="language-php">PHP</option>
-        <option value="language-csharp" class="language-csharp">C</option>
-    </select>
-    <script src="/assets/js/proglang.js"></script>
-</div>
-<br>
-{% endif %}
+    </header>
+    
+    <article>
 
-<div id="tags">
-{% for tag in page.tags %}
-    <span class="tag">{{tag | escape}}</span>
-{% endfor %}
-</div>
-
-{{content}}
+        {% if page.course == "programmeren" %}
+        <div>
+            <select name="" class="lang-select">
+                <option value="language-javascript" class="language-javascript">JS</option>
+                <option value="language-php" class="language-php">PHP</option>
+                <option value="language-csharp" class="language-csharp">C#</option>
+            </select>
+            <script src="/assets/js/proglang.js"></script>
+        </div>
+        {% endif %}
+        
+        {{content}}
+    </article>
+</main>

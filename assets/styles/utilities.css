@@ -1,0 +1,115 @@
+.bg-dominant {
+    background-color: var(--color-dominant);
+}
+.bg-contrast {
+    background-color: var(--color-contrast);
+}
+.bg-complement {
+    background-color: var(--color-complement);
+}
+.bg-accent-A {
+    background-color: var(--color-accent-A);
+}
+.bg-accent-B {
+    background-color: var(--color-accent-B);
+}
+
+.text-dominant {
+    color: var(--color-dominant);
+}
+.text-contrast {
+    color: var(--color-contrast);
+}
+.text-complement {
+    color: var(--color-complement);
+}
+.text-accent-A {
+    color: var(--color-accent-A);
+}
+.text-accent-B {
+    color: var(--color-accent-A);
+}
+
+.small-icon {
+    font-size: 1rem; 
+}
+
+.large-icon {
+    font-size: 2rem; 
+}
+
+.rounded {
+    border-radius: .5rem;
+}
+
+input[type="checkbox"].collapse-trigger,
+input[type="checkbox"].collapse-trigger+*,
+input[type="radio"].collapse-trigger,
+input[type="radio"].collapse-trigger+* {
+    display: none;
+}
+
+input[type="checkbox"].collapse-trigger:checked+*,
+input[type="radio"].collapse-trigger:checked+* {
+    display: unset;
+}
+
+.elevated-low {
+    --elevation: .4;
+    box-shadow: calc(4.0px * var(--elevation))
+                calc(8.0px * var(--elevation))
+                calc(8.0px * var(--elevation))
+                hsl(0deg 0% 0% / calc(0.25 + calc(0.25 * calc(1.0 - var(--elevation)))));
+
+}
+
+.elevated-medium {
+    --elevation: .7;
+    box-shadow: calc(4.0px * var(--elevation))
+                calc(8.0px * var(--elevation))
+                calc(8.0px * var(--elevation))
+                hsl(0deg 0% 0% / calc(0.25 + calc(0.25 * calc(1.0 - var(--elevation)))));
+
+}
+
+.elevated-high {
+    --elevation: 1.0;
+    box-shadow: calc(4.0px * var(--elevation))
+                calc(8.0px * var(--elevation))
+                calc(8.0px * var(--elevation))
+                hsl(0deg 0% 0% / calc(0.25 + calc(0.25 * calc(1.0 - var(--elevation)))));
+
+}
+
+/*  ////////////////////*/
+/* //EVALUATION CARDS//*/
+/*////////////////////*/
+
+.timeline-subject__grade.resultA,
+.reportcard-subject__grade.resultA {
+    background-color: #42BF0D;
+}
+
+.timeline-subject__grade.resultB,
+.reportcard-subject__grade.resultB {
+    background-color: #6FBF0D;
+}
+
+.timeline-subject__grade.resultC,
+.reportcard-subject__grade.resultC {
+    background-color: #98BF0D;
+}
+
+.timeline-subject__grade.resultD,
+.reportcard-subject__grade.resultD {
+    background-color: #D2A10F;
+}
+
+.timeline-subject__grade.resultE,
+.reportcard-subject__grade.resultE {
+    background-color: #E9493E;
+}
+
+.resultUnknown {
+    /* opacity: .5; */
+}

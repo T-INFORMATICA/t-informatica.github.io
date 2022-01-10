@@ -1,0 +1,53 @@
+
+    <nav id="explorer__courses" class="fixed-foldout | bg-complement elevated-medium">
+        <label for="courses-button" class="explorer-closebutton material-icons-outlined small-icon">close</label>
+        <ul class="explorer-group">
+        {% for coursedata in site.data.courses %}
+            <li>
+                <h3>{{coursedata.name}}</h3>
+                <div>
+                {% for subjectdata in coursedata.subjects %}
+                    <div class="subject">
+                        <label class="subject__collapse-label" for="course-{{subjectdata.name | replace: " ", "-"}}">
+                            {{ subjectdata.name }}
+                            <sub class="material-icons-outlined small-icon">
+                                expand_more
+                            </sub>
+                        </label>
+                        <input type="checkbox" name="courses-menu__selection" id="course-{{subjectdata.name | replace: " ", "-"}}" class="collapse-trigger">
+                        <ul>
+                            <li class="chapter">
+                                <a class="chapter__link" href="{{ subjectdata.link }}"><strong>{{ subjectdata.name }}</strong></a>
+                            </li>
+                        {% for chapterdata in subjectdata.chapters %}
+                            <li class="chapter"> 
+                                <a class="chapter__link" href="{{chapterdata.link}}">{{chapterdata.name}}</a>
+                            </li>
+                        {%endfor%}
+                        </ul>
+                    </div>
+                {%endfor%}
+                
+                {% if coursedata.tutorials %}
+                    <div class="subject">
+                        <label class="subject__collapse-label" for="tutorials-{{coursedata.name | replace: " ", "-"}}">
+                            Tutorials
+                            <sub class="material-icons-outlined small-icon">
+                                expand_more
+                            </sub>
+                        </label>
+                        <input type="checkbox" name="courses-menu__selection" id="tutorials-{{coursedata.name | replace: " ", "-"}}" class="collapse-trigger">
+                        <ul>
+                        {% for tutorialdata in coursedata.tutorials %}
+                            <li class="chapter"> 
+                                <a class="chapter__link" href="{{tutorialdata.link}}">{{tutorialdata.name}}</a>
+                            </li>
+                        {%endfor%}
+                        </ul>
+                    </div>
+                {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </nav>

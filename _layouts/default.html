@@ -18,40 +18,29 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
 
     <script src="/assets/js/firebase-conf.js"></script>
-    <script src="/assets/js/firebase-auth-ui.js"></script>
+    <!-- <script src="/assets/js/firebase-auth-ui.js"></script> -->
+    
     <script src="/assets/js/html-templates.js"></script>
-    <script src="/assets/js/lms.js"></script>
+    <script src="/assets/js/lms-lib.js"></script>
+    <script src="/assets/js/lms-auth.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612+Mono&family=Roboto&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/composition.css">
+    <link rel="stylesheet" href="/assets/styles/utilities.css">
+    <link rel="stylesheet" href="/assets/styles/blocks.css">
+    <link rel="stylesheet" href="/assets/styles/exceptions.css">
+    <link rel="stylesheet" href="/assets/styles/syntax-highlighter.css">
 
-    <link rel="stylesheet" href="/assets/css/utilities.css">
-    <link rel="stylesheet" href="/assets/css/blocks.css">
-    <link rel="stylesheet" href="/assets/css/composition.css">
-    <link rel="stylesheet" href="/assets/css/exceptions.css">
-
-    <link rel="stylesheet" href="/assets/css/syntax-highlighting.css">
-
-    <title>Toegepaste Informatica</title>
+    <!-- <script src="/assets/js/default.js"></script> -->
+    <title>Project DumbSchool</title>
 </head>
 
 <body>
-    <a href="#" id="closeReaderMode" onclick="ChangeReaderMode()" class="material-icons">close</a>
-    <header class="glow">
-        {% include topNavigation.html %}
-        <script>
-            firebase.auth().onAuthStateChanged(function (user) {
-                authUser(user);
-                addUsersToMenu();
-            });
-        </script>
-    </header>
-    <main>
-        {{content}}
-    </main>
-    <footer class="bg-alt-color text-main-color">
-
-        created by Sam Van Battel
-    </footer>
+    {{content}}
 </body>
 
 </html>

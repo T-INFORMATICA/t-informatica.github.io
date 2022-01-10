@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke-linecap="square"
+    stroke-miterlimit="1.0" overflow="hidden" version="1" viewBox="0 0 448 208">
+    <style>
+        text {
+            font-size: 6px;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            transform: translate(50%,50%);
+            stroke: none;
+        }
+
+        rect {
+            stroke: #F00;
+            stroke-width: 1px;
+            transform: translate(0,0);
+            width: 100%;
+            height: 100%;
+            fill: none;
+        }
+
+        .connection-line {
+            fill: none;
+            stroke-width: 1px;
+        }
+
+        .connection-arrow {
+            stroke: none;
+            stroke-width: 1px;
+        }
+
+        .subject rect {
+            stroke: var(--color-accent-A);
+            fill: none;
+        }
+
+        .subject text {
+            stroke: none;
+            fill: var(--color-contrast);
+        }
+    </style>
+    <defs>
+        <path id="a" class="connection-arrow" d="M -2 -6 l 2 6 l 2 -6" />
+        <path id="a-r" class="connection-arrow" d="M -6 -2 l 6 2 l -6 2" />
+        <path id="a-l" class="connection-arrow" d="M 6 2 l -6 -2 l 6 -2" />
+        <g id="curriculum-programming">
+            <g id="subjects" fill="#F00" stroke="#F00">
+                <svg class="subject" id="klasse" x="192" y="192" width="64" height="16">
+                    <rect />
+                    <text>KLASSE</text>
+                </svg>
+                <svg class="subject" id="iteratie" x="384" y="144" width="64" height="16">
+                    <rect />
+                    <text>ITERATIE</text>
+                </svg>
+                <svg class="subject" id="selectie" x="384" y="96" width="64" height="16">
+                    <rect />
+                    <text>SELECTIE</text>
+                </svg>
+                <svg class="subject" id="functie" x="288" y="144" width="64" height="16">
+                    <rect />
+                    <text>FUNCTIE</text>
+                </svg>
+                <svg class="subject" id="object" x="192" y="96" width="64" height="16">
+                    <rect />
+                    <text>OBJECT</text>
+                </svg>
+                <svg class="subject" id="blok" x="288" y="48" width="64" height="16">
+                    <rect />
+                    <text>BLOK</text>
+                </svg>
+                <svg class="subject" id="instructie" x="96" y="144" width="64" height="16">
+                    <rect />
+                    <text>INSTRUCTIE</text>
+                </svg>
+                <svg class="subject" id="expressie" x="96" y="96" width="64" height="16">
+                    <rect />
+                    <text>EXPRESSIE</text>
+                </svg>
+                <svg class="subject" id="array" x="0" y="96" width="64" height="16">
+                    <rect />
+                    <text>ARRAY</text>
+                </svg>
+                <svg class="subject" id="variabelen" x="48" y="48" width="64" height="16">
+                    <rect />
+                    <text>VARIABELEN</text>
+                </svg>
+                <svg class="subject" id="waardes" x="48" y="0" width="64" height="16">
+                    <rect />
+                    <text>WAARDES</text>
+                </svg>
+            </g>
+                    
+            <g id="connections" stroke="#F00" fill="#F00">
+                <g class="connection" id="waardes-object">
+                    <path class="connection-line" d="M 112 8 h 112 v 88" />
+                    <use href="#a" x="224" y="96" />
+                </g>
+                <g class="connection" id="waardes-variabelen">
+                    <path class="connection-line" d="M 80 16 v 32" />
+                    <use href="#a" x="80" y="48" />
+                </g>
+                <g class="connection" id="variabelen-array">
+                    <path class="connection-line" d="M 80 64 v 16 h -48 v 16" />
+                    <use href="#a" x="32" y="96" />
+                </g>
+                <g class="connection" id="variabelen-expressie">
+                    <path class="connection-line" d="M 80 64 v 16 h 48 v 16" />
+                    <use href="#a" x="128" y="96" />
+                </g>
+                <g class="connection" id="expressie-instructie">
+                    <path class="connection-line" d="M 128 112 v 32" />
+                    <use href="#a" x="128" y="144" />
+                </g>
+                <g class="connection" id="instructie-functie">
+                    <path class="connection-line" d="M 160 152 h 60" />
+                    <path class="connection-line" d="M 228 152 h 60" />
+                    <use href="#a-r" x="288" y="152" />
+                </g>
+                <g class="connection" id="object-klasse">
+                    <path class="connection-line" d="M 224 112 v 80" />
+                    <use href="#a" x="224" y="192" />
+                </g>
+                <g class="connection" id="blok-functie">
+                    <path class="connection-line" d="M 320 64 v 80" />
+                    <use href="#a" x="320" y="144" />
+                </g>
+                <g class="connection" id="blok-object">
+                    <path class="connection-line" d="M 320 64 v 40 h -64" />
+                    <use href="#a-l" x="256" y="104" />
+                </g>
+                <g class="connection" id="functie-klasse">
+                    <path class="connection-line" d="M 320 160 v 40 h -64" />
+                    <use href="#a-l" x="256" y="200" />
+                </g>
+                <g class="connection" id="blok-selectie">
+                    <path class="connection-line" d="M 352 56 h 16 v 48 h 16" />
+                    <use href="#a-r" x="384" y="104" />
+                </g>
+                <g class="connection" id="blok-iteratie">
+                    <path class="connection-line" d="M 352 56 h 16 v 96 h 16" />
+                    <use href="#a-r" x="384" y="152" />
+                </g>
+            </g>
+        </g>
+    </defs>
+    <use href="#curriculum-programming" x="0" y="0" />
+</svg>

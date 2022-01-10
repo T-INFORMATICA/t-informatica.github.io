@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% include contextmenu__default.html %}
+{% if page.activity=="blog" %}
+<input type="checkbox" id="blog-button" class="collapse-trigger"checked>
+{% include explorer__blog.html %}
+{% endif %}
+{% if page.activity=="course" %}
+<input type="checkbox" id="courses-button" class="collapse-trigger" checked>
+{% include explorer__courses.html %}
+{% endif %}
+{% include activity-bar.html %}
+
+<main>
+    {{content}}
+</main>

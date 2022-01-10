@@ -1,0 +1,82 @@
+<nav id="context-menu">
+    <div></div>
+    <div id="context-bar" class="bg-complement elevated-low">
+        {% assign pageFound = false %}
+        {% for coursedata in site.data.courses %}
+            {% for subjectdata in coursedata.subjects %}
+                {% for chapterdata in subjectdata.chapters %}
+                    {% if page.url == chapterdata.link %}
+                    {% assign pageFound = true %}
+                        {% if forloop.first == false %}
+                            {% assign prev_i = forloop.index0 | minus: 1 %}
+                            {% assign prev_page = subjectdata.chapters[prev_i] %}
+                            <a href="{{prev_page.link}}" id="previousPage" class="contextmenu-bar__link">
+                                <span class="material-icons contextmenu-bar__linkicon">
+                                    chevron_left
+                                </span>
+                                <span class="contextmenu-bar__linktext">
+                                    {{prev_page.name}}
+                                </span>
+                            </a>
+                        {%else%}
+                            <div class="contextmenu-bar__link"></div>
+                        {% endif %}
+        
+                        
+                            <div id="search-bar">
+                                <input id="searchbarInput" class="search-bar__input">
+                                <span class="material-icons-outlined search-bar__icon">
+                                    search
+                                </span>
+                                <ul id="searchbarOutput" class="search-bar__output | elevated-low bg-complement">
+                                </ul>
+                            </div>
+        
+                        {% if forloop.last == false %}
+                            {% assign next_i = forloop.index0 | plus: 1 %}
+                            {% assign next_page = subjectdata.chapters[next_i] %}
+                            <a href="{{next_page.link}}" id="nextPage" class="contextmenu-bar__link">
+                                <span class="contextmenu-bar__linktext">
+                                    {{next_page.name}}
+                                </span>
+                                <span class="material-icons contextmenu-bar__linkicon">
+                                    chevron_right
+                                </span>
+                            </a>
+                        {%else%}
+                            <div class="contextmenu-bar__link"></div>
+                        {% endif %}
+                    {% endif %}
+                    {% if pageFound == true %}{% break %}{% endif %}
+                {% endfor %}
+                {% if pageFound == true %}{% break %}{% endif %}
+            {% endfor %}
+            {% if pageFound == true %}{% break %}{% endif %}
+        {% endfor %}
+    </div>
+    <div></div>
+</nav>
+
+
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+    var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('searchbarInput'),
+        resultsContainer: document.getElementById('searchbarOutput'),
+        json: '/assets/data/search.json'
+    });
+
+    document.querySelectorAll("span.tag").forEach(el => {
+        el.addEventListener("click", e => {
+            let val = e.target.innerHTML;
+            document.querySelector("#searchbarInput").value = val;
+            console.log(e.target);
+
+            let event = new Event('input', {
+                bubbles: true,
+                cancelable: true,
+            });
+            document.querySelector("#searchbarInput").dispatchEvent(event);
+        });
+    });
+</script>

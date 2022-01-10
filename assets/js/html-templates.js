@@ -1,35 +1,79 @@
 function tmpl_timelineItem(id, date, name) {
     return `
-    <div class="timelineItem" style="display: none">
-        <div class="marker">
-            <span class="material-icons-outlined">
-                schedule
-            </span>
-        </div>
-        <span class="subtitle">${date}</span>
-        <h2 class="title" id="eval-${id}">${name}</h2>
-        <div class="courseResults" id="${id}">
-        </div>
-    </div>
+<div class="timeline-evaluation" id="timeline-evaluation-${id}">
+    <header>
+        <h2>${name}</h2>
+        <time datetime="${date}">${date}</time>
+    </header>
+    <div class="results"></div>
+</div>
     `;
 }
 
 function tmpl_timelineResult(result, subject, comment) {
     return `
-    <div class="subjectResultCard-v2 timelineItem-result" id="${toCssSafeId(subject)}">
-    <div class="result result${result}" title="${subject}">
-        <div class="subject">
-            <span class="subtitle">${getResultLevelText(result)}</span>
-            <h3 class="title" id="title-${toCssSafeId(subject)}">${subject}</h3>
-        </div>
-        <div class="grade">
+<table class="timeline-evaluation__resultsTable">
+    <colgroup>
+        <col>
+        <col>
+    </colgroup>
+    <tbody id="${ toCssSafeId(subject) }" class="timeline-subject">
+    <tr>
+        <td rowspan="2" class="timeline-subject__grade result${result}">
             ${result}
+        </td>
+        <td class="timeline-subject__title">
+            <h3>${subject}</h3>
+        </td>
+    </tr>
+    <tr>
+        <td class="timeline-subject__levelText">
+            ${getResultLevelText(result)}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="timeline-subject__comment">
+        ${comment}
+        </td>
+    </tr>
+</tbody>
+</table>
+    `;
+}
+
+
+function tmpl_evalForm_subjectContainer(subjectId) {
+    return `
+    <div class="subjectContainer" id="subjectContainer-${subjectId}">
+        <label for="subjectCollapsible-${subjectId}">
+            <h3 class="subjectTitle" id="subjectTitle-${subjectId}">
+                ${subjectId}
+                <span class="material-icons-outlined">expand_more</span>
+            </h3>
+        </label>
+        <input type="checkbox" id="subjectCollapsible-${subjectId}" class="collapse-trigger">
+        <div class="subjectStudentContainers">
+            <!-- INSERT STUDENT CONTAINERS HERE -->
         </div>
     </div>
-    <div class="comments">
-        ${comment}
+    `;
+}
+
+function tmpl_evalForm_subjectStudentContainer(subjectId, studentId) {
+    return `
+    <div class="subjectStudentContainer studentContainer-${studentId}" id="${subjectId}-${studentId}" style="display: none">
+        <!-- INSERT GRADES HERE -->
     </div>
-</div>
+    `;
+}
+
+function tmpl_evalForm_subjectStudentGrade(subjectId, studentId, grade, comment) {
+    return `
+        <input type="radio" value="${grade}" name="students[${subjectId}][${studentId}]" id="${subjectId}-${studentId}-${grade}">
+        <label for="${subjectId}-${studentId}-${grade}" class="subjectStudentGrade">
+            <h4 class="grade">${grade}</h4>
+            <p contenteditable="true" class="comment">${comment}</p>
+        </label>
     `;
 }
 
@@ -43,11 +87,13 @@ function tmpl_gradeForm_studentSection(studentId, studentName) {
 
 function tmpl_gradeForm_subject(studentId, subjectId, subject) {
     return `
-        <label for="students-${studentId}-${subjectId}-evalShowGrades-${subjectId}">
-            <h3 id="grades-${subjectId}">${subject}</h3>
-        </label>
-        <input type="checkbox" id="students-${studentId}-${subjectId}-evalShowGrades-${subjectId}" class="evalShowGrades">
-        <div class="gradeform-subject" id="students-${studentId}-${subjectId}">
+        <div class="gradeform-subject | elevated-low">
+            <label for="students-${studentId}-${subjectId}-evalShowGrades-${subjectId}">
+                <h3 id="grades-${subjectId}">${subject} <span class="material-icons-outlined">expand_more</span></h3>
+            </label>
+            <input type="checkbox" id="students-${studentId}-${subjectId}-evalShowGrades-${subjectId}" data-subject="${subjectId}" class="evalShowGrades">
+            <div class="gradeform-subject-student" id="students-${studentId}-${subjectId}">
+            </div>
         </div>
     `;
 }
