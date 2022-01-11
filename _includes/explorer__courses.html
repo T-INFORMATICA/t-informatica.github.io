@@ -17,13 +17,16 @@
                         <input type="checkbox" name="courses-menu__selection" id="course-{{subjectdata.name | replace: " ", "-"}}" class="collapse-trigger">
                         <ul>
                             <li class="chapter">
-                                <a class="chapter__link" href="{{ subjectdata.link }}"><strong>{{ subjectdata.name }}</strong></a>
+                                <a class="chapter__link" href="{{ subjectdata.link }}"><strong>Overzicht {{ subjectdata.name }}</strong></a>
                             </li>
-                        {% for chapterdata in subjectdata.chapters %}
+                            <li class="chapter">
+                                <a class="chapter__link" href="/lms-exercise.html?subject={{ subjectdata.name }}"><strong>Theorie {{ subjectdata.name }}</strong></a>
+                            </li>
+                            {% for chapterdata in subjectdata.chapters %}
                             <li class="chapter"> 
                                 <a class="chapter__link" href="{{chapterdata.link}}">{{chapterdata.name}}</a>
                             </li>
-                        {%endfor%}
+                            {%endfor%}
                         </ul>
                     </div>
                 {%endfor%}
