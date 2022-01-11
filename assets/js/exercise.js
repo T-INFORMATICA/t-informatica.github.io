@@ -143,8 +143,11 @@ function ShowQuestion(definitions, question, questionNumber) {
     let answerType = random < .5 ? "definition" : "term";
 
     document.querySelector("#questionTitle").innerHTML = `Vraag ${questionNumber}`;
-    document.querySelector("#question").innerHTML = "";
-    document.querySelector("#question").appendChild(document.createTextNode(question[questionType]));
+    // document.querySelector("#question").innerHTML = "";
+    let item = document.querySelector("#question");
+    let textnode = document.createTextNode(question[questionType]);
+    item.replaceChild(textnode, item.childNodes[0]);
+    // document.querySelector("#question").appendChild(document.createTextNode(question[questionType]));
 
     for (let i = 0; i < definitions.length; i++) {
         document.querySelector(`#answer${i + 1}`).value = definitions[i][answerType];
