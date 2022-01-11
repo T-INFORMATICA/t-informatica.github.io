@@ -110,6 +110,10 @@ function generateQuestion() {
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
+    if(!response[exercise.subject]) {
+        return;
+    }
+
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
     exerciseref
@@ -143,11 +147,8 @@ function ShowQuestion(definitions, question, questionNumber) {
     let answerType = random < .5 ? "definition" : "term";
 
     document.querySelector("#questionTitle").innerHTML = `Vraag ${questionNumber}`;
-    // document.querySelector("#question").innerHTML = "";
-    let item = document.querySelector("#question");
-    let textnode = document.createTextNode(question[questionType]);
-    document.querySelector("#question").replaceChild(textnode, item.childNodes[0]);
-    // document.querySelector("#question").appendChild(document.createTextNode(question[questionType]));
+    document.querySelector("#question").innerHTML = "";
+    document.querySelector("#question").appendChild(document.createTextNode(question[questionType]));
 
     for (let i = 0; i < definitions.length; i++) {
         document.querySelector(`#answer${i + 1}`).value = definitions[i][answerType];
