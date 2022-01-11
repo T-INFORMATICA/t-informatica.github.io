@@ -110,9 +110,6 @@ function generateQuestion() {
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
-    if(response[exercise.subject].length === 0) {
-        return;
-    }
 
     let database = firebase.database();
     let exerciseref = database.ref(`exercises/${_user.uid}/${exerciseid}`);
@@ -121,6 +118,10 @@ function definitionsLoaded(e) {
         .then(
             snapshot => {
                 let exercise = snapshot.val();
+                
+                if(response[exercise.subject].length === 0) {
+                    return;
+                }
 
                 numQuestionsInExercise = exercise.questions ? Object.keys(exercise.questions).length + 1 : 1;
                 if (numQuestionsInExercise > 10) {
