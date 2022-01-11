@@ -146,7 +146,7 @@ function ShowQuestion(definitions, question, questionNumber) {
     // document.querySelector("#question").innerHTML = "";
     let item = document.querySelector("#question");
     let textnode = document.createTextNode(question[questionType]);
-    item.replaceChild(textnode, item.childNodes[0]);
+    document.querySelector("#question").replaceChild(textnode, item.childNodes[0]);
     // document.querySelector("#question").appendChild(document.createTextNode(question[questionType]));
 
     for (let i = 0; i < definitions.length; i++) {
