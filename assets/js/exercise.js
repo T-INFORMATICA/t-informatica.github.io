@@ -110,7 +110,7 @@ function generateQuestion() {
 function definitionsLoaded(e) {
     let response = JSON.parse(e.currentTarget.response);
 
-    if(!response[exercise.subject]) {
+    if(response[exercise.subject].length === 0) {
         return;
     }
 
