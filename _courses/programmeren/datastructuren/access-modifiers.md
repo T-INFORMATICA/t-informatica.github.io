@@ -29,9 +29,11 @@ Om te verduidelijken wat Access Modifiers precies zijn wordt een voorbeeld klass
 
 ```javascript
 class Leerling {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";	
-		this._leeftijd = 0;
+	#naam;
+	#leeftijd;
+	constructor() {
+		this.#naam = "";	
+		this.#leeftijd = 0;
 	}
 }
 ```
@@ -70,8 +72,8 @@ In het voorbeeld kan op dit moment elk field rechtstreeks aangepast worden. Er i
 
 ```javascript
 let leerling1 = new Leerling();
-Leerling1._naam = "#?!";			// Dit zou niet mogen!
-Leerling1._leeftijd = -2148;			// Dit zou niet mogen!
+Leerling1.#naam = "#?!";			// Dit mag niet!
+Leerling1.#leeftijd = -2148;			// Dit mag niet!
 ```
 ```php
 $leerling1 = new Leerling();
@@ -104,7 +106,16 @@ Er zijn 3 belangrijke access modifiers:
 **Fields moeten altijd private zijn** (indien mogelijk)! Alleen zo kunnen de semantische regels worden afgedwongen. Elke programmeertaal heeft zijn eigen regels over het gebruik van access modifiers.
 
 ```javascript
-// In Javascript bestaan er geen access modifiers. Alle fields en methods zijn altijd public! 
+// In Javascript is elk field of method met een # ervoor private.
+// Methods zonder access modifier zijn steeds public!
+class Leerling {
+	#naam;
+	#leeftijd;
+	constructor() {
+		this.#naam = "";	
+		this.#leeftijd = 0;
+	}
+}
 ```
 ```php
 // In PHP ben je verplicht om bij een field een access modifier te plaatsen!
@@ -146,14 +157,16 @@ Hieronder wordt het voorbeeld zo aangepast dat `_leeftijd` een Set functie krijg
 
 ```javascript
 class Leerling {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";	
-		this._leeftijd = 0;
+	#naam;
+	#leeftijd;
+	constructor() {
+		this.#naam = "";	
+		this.#leeftijd = 0;
 	}
 
-	function SetLeeftijd(leeftijd) {
-		If (leeftijd > 0) {
-			this._leeftijd = leeftijd;
+	set leeftijd(value) {
+		If (value > 0) {
+			this.#leeftijd = value;
 		}
 	}
 }
@@ -198,13 +211,15 @@ Hieronder wordt het voorbeeld zo aangepast dat `_naam` een Get functie krijgt, g
 
 ```javascript
 class Leerling {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";	
-		this._leeftijd = 0;
+	#naam;
+	#leeftijd;
+	constructor() {
+		this.#naam = "";	
+		this.#leeftijd = 0;
 	}
 
-	function GetNaam() {
-		return this._naam;
+	get naam() {
+		return this.#naam;
 	}
 }
 ```
