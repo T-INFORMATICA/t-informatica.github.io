@@ -41,19 +41,15 @@ In het voorbeeld hieronder zijn er 2 klassen `Leraar` en `Leerling` gedefinieerd
 ```javascript
 Javascript
 class Leerling {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";
-		this._leeftijd = 0;
-		this._hoed = null;
-	}
+	#naam = "";
+	#leeftijd = 0;
+	#hoed = null;
 }
 
 class Leraar {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";
-		this._leeftijd = 0;
-		this._diplomas = [];
-	}
+	#naam = "";
+	#leeftijd = 0;
+	#diplomas = [];
 }
 ```
 ```php
@@ -89,22 +85,16 @@ Daarom wordt er nu een derde klasse gemaakt: `Persoon`. Persoon wordt de **super
 
 ```javascript
 class Persoon {
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "";
-		this._leeftijd = 0;
-	}
+	#naam = "";
+	#leeftijd = 0;
 }
 
 class Leerling extends Persoon { // extends duid aan dat er wordt overgeërfd
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._hoed = null;
-	}
+	#hoed = null;
 }
 
 class Leraar extends Persoon {   // extends duid aan dat er wordt overgeërfd
-	constructor(naamLeerling, leeftijdLeerling) {
-		this._diplomas = [];
-	}
+	#diplomas = [];
 }
 ```
 ```php
