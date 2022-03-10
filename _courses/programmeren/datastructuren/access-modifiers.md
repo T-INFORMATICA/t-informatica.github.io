@@ -103,7 +103,7 @@ Er zijn 3 belangrijke access modifiers:
  - Protected: de field of method is **niet beschikbaar** buiten de scope van de klasse, **behalve voor de subklassen**.
  - Public: de field of method is **wel beschikbaar** buiten de scope van de klasse.
 
-**Fields moeten altijd private zijn** (indien mogelijk)! Alleen zo kunnen de semantische regels worden afgedwongen. Elke programmeertaal heeft zijn eigen regels over het gebruik van access modifiers.
+**Fields moeten altijd private zijn**! Alleen zo kunnen de semantische regels worden afgedwongen. Elke programmeertaal heeft zijn eigen regels over het gebruik van access modifiers.
 
 ```javascript
 // In Javascript is elk field of method met een # ervoor private.
@@ -184,10 +184,10 @@ class Leerling {
 	string naam = "";
 	int _leeftijd = 0;
 
-	public void SetLeeftijd(int leeftijd) {
-		If (leeftijd > 0) {
-			this._leeftijd = leeftijd;
-		}
+	public int Leeftijd {
+		set {
+			this._leeftijd = value;
+		} 
 	}
 }
 ```
@@ -227,11 +227,13 @@ class Leerling {
 ```
 ```csharp
 class Leerling {	
-	string naam = "";
+	string _naam = "";
 	int _leeftijd = 0;
 
-	public void GetNaam() {
-		return this._naam;
+	public string Naam {
+		get {
+			return this._naam;
+		}
 	}
 }
 ```
