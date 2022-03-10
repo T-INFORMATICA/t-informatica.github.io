@@ -63,9 +63,11 @@ Om deze waardes op te slaan, zijn variabelen nodig die bij de klasse Leerling ho
 
 ```javascript
 class Leerling {
+	#naam;
+	#leeftijd;
 	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = "Sam";	// _naam is een klasse-var
-		this._leeftijd = 18;	// _leeftijd is een klasse-var
+		this.#naam = "Sam";	// #naam is een klasse-variabele
+		this.#leeftijd = 18;	// #leeftijd is een klasse-variabele
 	}
 }
 let voorbeeldLeerling = new Leerling();
@@ -86,8 +88,8 @@ Leerling voorbeeldLeerling = new Leerling();
 ```
 
 In bovenstaand voorbeeld heeft de klasse Leerling dus 2 variabelen:
- - `_naam`
- - `_leeftijd`
+ - `naam`
+ - `leeftijd`
 
 Deze variabelen kunnen gebruikt worden in héél de klasse Leerling, omdat het klasse variabelen zijn. 
 
@@ -195,9 +197,11 @@ Het voorbeeld hieronder toont een klasse Leerling met twee fields: `_naam` en `_
 
 ```javascript
 class Leerling {
+	#naam;
+	#leeftijd;
 	constructor(naamLeerling, leeftijdLeerling) {
-		this._naam = naamLeerling;		
-		this._leeftijd = leeftijdLeerling;	
+		this.#naam = naamLeerling;		
+		this.#leeftijd = leeftijdLeerling;	
 	}
 }
 
