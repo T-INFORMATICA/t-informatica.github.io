@@ -3,7 +3,6 @@ baseurl: ""
 repo: "https://github.com/T-INFORMATICA/DumbSchool"
 github_user: "T-INFORMATICA"
 github_repo: "t-informatica.github.io/DumbSchool"
-markdown: GFM
 
 
 collections:
