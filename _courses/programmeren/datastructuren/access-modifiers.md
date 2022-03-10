@@ -14,7 +14,7 @@ definitions:
  - name: private
    definition: de field of method is niet beschikbaar buiten de scope van de klasse.
  - name: protected
-   definition: De field of method is niet beschikbaar buiten de scope van de klasse, behalve voor de subklassen.
+   definition: De field of method is niet beschikbaar buiten de scope van de klasse, behalve voor de klassen die ervan overerven.
  - name: setter
    definition: Een functie die ervoor zorgt dat een private field aangepast kan worden op een gecontroleerde manier.
  - name: getter
