@@ -23,9 +23,7 @@ Wanneer een klasse een variabele bevat, is er een relatie tussen die klasse en h
 
 ```javascript
 class Leerling {
-	constructor(naamLeerling) {
-		this._naam = "";		// Een relatie tussen Leerling en string
-	}
+	#naam = "";		// Een relatie tussen Leerling en string
 }
 ```
 ```php
