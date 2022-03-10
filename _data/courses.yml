@@ -85,12 +85,12 @@
           link: "/courses/programmeren/datastructuren/objecten.html"
         - name: Klassen
           link: "/courses/programmeren/datastructuren/klassen.html"
-        - name: Inheritance
-          link: "/courses/programmeren/datastructuren/inheritance.html"
         - name: "Access Modifiers"
           link: "/courses/programmeren/datastructuren/access-modifiers.html"
         - name: "Relaties"
           link: "/courses/programmeren/datastructuren/relaties.html"
+        - name: Inheritance
+          link: "/courses/programmeren/datastructuren/inheritance.html"
         - name: "Foutopsporing"
           link: "/courses/programmeren/datastructuren/foutopsporing-datastructuren.html"
 #    - name: "Software Ontwikkeling"
