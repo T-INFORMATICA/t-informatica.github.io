@@ -157,12 +157,8 @@ Hieronder wordt het voorbeeld zo aangepast dat `_leeftijd` een Set functie krijg
 
 ```javascript
 class Leerling {
-	#naam;
-	#leeftijd;
-	constructor() {
-		this.#naam = "";	
-		this.#leeftijd = 0;
-	}
+	#naam = "";
+	#leeftijd = 0;
 
 	set leeftijd(value) {
 		If (value > 0) {
@@ -211,12 +207,8 @@ Hieronder wordt het voorbeeld zo aangepast dat `_naam` een Get functie krijgt, g
 
 ```javascript
 class Leerling {
-	#naam;
-	#leeftijd;
-	constructor() {
-		this.#naam = "";	
-		this.#leeftijd = 0;
-	}
+	#naam = "";
+	#leeftijd = 0;
 
 	get naam() {
 		return this.#naam;
