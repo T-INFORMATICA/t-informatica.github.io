@@ -13,9 +13,7 @@ layout: null
                 {%- for course in site.courses -%}
                     {%- if course.url == chapter.link %}
                         {%- for definition in course.definitions %}
-                            {%- if course != site.courses.first -%}
-                                {%- if courseDefs == true or siteDefs == true %}, {% endif -%}
-                            {%- endif -%}
+                            {%- if courseDefs == true and siteDefs == true %}, {% endif -%}
                             {%- assign siteDefs = true -%}
                             {%- assign courseDefs = true %}
             {
