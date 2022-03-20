@@ -8,9 +8,9 @@ layout: null
         {%- assign siteDefs = false %}
     "{{subject.name}}": {
             {%- for chapter in subject.chapters -%}
+        "{{course.name}}": {
                 {%- assign courseDefs = false -%}
                 {%- for course in site.courses -%}
-        "{{course.name}}": {
                     {%- if course.url == chapter.link %}
                         {%- for definition in course.definitions %}
                             {%- if courseDefs == true or siteDefs == true %}, {% endif -%}
@@ -22,9 +22,9 @@ layout: null
             }
                         {%- endfor -%}
                     {%- endif -%}
-        },
-        
                 {%- endfor -%}
+        },
+
             {%- endfor %}
     }
     
