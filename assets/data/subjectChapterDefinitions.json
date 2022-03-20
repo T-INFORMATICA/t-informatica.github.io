@@ -23,6 +23,7 @@ layout: null
                         {%- endfor -%}
                     {%- endif -%}
         },
+        
                 {%- endfor -%}
             {%- endfor %}
     }
