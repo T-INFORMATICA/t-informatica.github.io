@@ -1,33 +1,17 @@
-# DumbSchool
+# Informatica
 
-### planning
- - events
- - deadlines
-  
-### vak
- - updates
- - schoolwerk
-	 - materiaal (bv. cursus/links/...)
-	 - planning (bv. taken/testen/...)
- - puntenboek
-	 - nieuwe evaluatie
-	 - rapport
-  
-### ledenbeheer
- - leden
-   - leerlingen
-   - ouders
-   - leerkrachten
-   - admins
- - groepen
-	 - klassen
-	 - graden
-	 - ...
-  
-### Leerlingendossier
- - aanwezigheden
- - nota's
- - rapportgeschiedenis
+courses
+
+lessons
+ - linked to 0 or more previous courses
+ - linked to 0 or more courses
+ - progress:
+   1. previous lesson theory exercises
+   2. lesson course texts
+   3. lesson theory exercises
+   4. code exercises
+
+
 
 ## docker/jekyll command
 ```
