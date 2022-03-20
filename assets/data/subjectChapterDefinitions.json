@@ -24,8 +24,7 @@ layout: null
                     {%- endif -%}
                 {%- endfor -%}
         ],
-
-            {%- endfor %}
+            {% endfor %}
     }
     
             {%- unless forloop.last %},{% endunless -%}
