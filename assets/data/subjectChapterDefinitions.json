@@ -23,7 +23,8 @@ layout: null
                         {%- endfor -%}
                     {%- endif -%}
                 {%- endfor %}
-        ],
+        ]
+                {%- unless forloop.last %},{% endunless -%}
             {% endfor %}
     }
     
