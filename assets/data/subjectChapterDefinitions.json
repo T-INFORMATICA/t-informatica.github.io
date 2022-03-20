@@ -7,8 +7,8 @@ layout: null
     {% for subject in coursedata.subjects %}
         {%- assign siteDefs = false %}
     "{{subject.name}}": {
-            {%- for chapter in subject.chapters -%}
-        "{{course.name}}": [
+            {%- for chapter in subject.chapters %}
+        "{{chapter.name}}": [
                 {%- assign courseDefs = false -%}
                 {%- for course in site.courses -%}
                     {%- if course.url == chapter.link %}
