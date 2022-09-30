@@ -58,8 +58,8 @@ In het voorbeeld hieronder:
    </tr>
    <tr>
       <th>naam</th>
-      <th>eenheid</th>
-      <th>energiePE</th>
+      <th>eenheid°</th>
+      <th>energiePE°</th>
    </tr>
    <tr>
       <td>ijs</td>
