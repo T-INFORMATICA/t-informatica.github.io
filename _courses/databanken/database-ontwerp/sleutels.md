@@ -57,69 +57,34 @@ In het voorbeeld hieronder:
       <td></td>
    </tr>
    <tr>
-      <th>gerecht</th>
-      <th>product</th>
-      <th>hoeveelheidPP</th>
+      <th>naam</th>
+      <th>eenheid</th>
+      <th>energiePE</th>
    </tr>
    <tr>
-      <td>Coupe Kiwano</td>
       <td>ijs</td>
-      <td>0.15</td>
+      <td>liter</td>
+      <td>1600</td>
    </tr>
    <tr>
-      <td>Coupe Kiwano</td>
       <td>kiwano</td>
-      <td>0.5</td>
+      <td>stuks</td>
+      <td>40</td>
    </tr>
    <tr>
-      <td>Coupe Kiwano</td>
       <td>slagroom</td>
-      <td>0.3</td>
+      <td>deciliter</td>
+      <td>336</td>
    </tr>
    <tr>
-      <td>Coupe Kiwano</td>
       <td>suiker</td>
-      <td>10</td>
+      <td>gram</td>
+      <td>4</td>
    </tr>
    <tr>
-      <td>Coupe Kiwano</td>
       <td>tequila</td>
-      <td>1</td>
-   </tr>
-   <tr>
-      <td>Glace Terrace</td>
-      <td>ijs</td>
-      <td>0.2</td>
-   </tr>
-   <tr>
-      <td>Glace Terrace</td>
-      <td>aardbeien</td>
-      <td>50</td>
-   </tr>
-   <tr>
-      <td>Glace Terrace</td>
-      <td>pernod</td>
-      <td>2</td>
-   </tr>
-   <tr>
-      <td>Glace Terrace</td>
-      <td>peper</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>Mango Plus Plus</td>
-      <td>mango</td>
-      <td>0.5</td>
-   </tr>
-   <tr>
-      <td>Mango Plus Plus</td>
-      <td>aardbeien</td>
-      <td>50</td>
-   </tr>
-   <tr>
-      <td>Mango Plus Plus</td>
-      <td>zure room</td>
-      <td>0.4</td>
+      <td>eetlepel</td>
+      <td>30</td>
    </tr>
 </table>
 
