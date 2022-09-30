@@ -52,7 +52,7 @@ In het voorbeeld hieronder:
 
 <table class="styledTable">
    <tr>
-      <td>← p →</td>
+      <th>← p →</th>
       <td></td>
       <td></td>
    </tr>
