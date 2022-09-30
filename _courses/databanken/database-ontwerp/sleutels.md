@@ -33,9 +33,9 @@ description: Een relationele databank bestaat uit tabellen. Maar hoe zijn die ta
 Eén van de regels voor een tabel zegt dat elke rij (record) uniek moet zijn. We kunnen daarom zeggen dat één kolom of een combinatie van kolommen ervoor zorgt dat de rij uniek is. Deze kolom of combinatie van kolommen wordt de **primaire sleutel** genoemd. De primaire sleutel is dus altijd uniek binnen de tabel.
 Een primaire sleutel van een tabel is een kolom of kolomcombinatie waarvoor geldt:
 
-Hij is verplicht.
-Hij is uniek.
-Hij bestaat uit zo weinig mogelijk kolommen.
+ 1. Hij is verplicht.
+ 2. Hij is uniek.
+ 3. Hij bestaat uit zo weinig mogelijk kolommen.
 
 Soms kunnen meerdere kolommen of combinaties van kolommen als primaire sleutel gebruikt worden. Dit zijn dan **kandidaatsleutels**. In dat geval wordt één ervan als primaire sleutel gekozen. Alle anderen zijn dan **alternatieve sleutels**.
 
