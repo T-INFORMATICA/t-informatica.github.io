@@ -73,7 +73,7 @@
         - name: "Foutopsporing"
           link: "/courses/programmeren/codeblokken/foutopsporing-codeblokken.html"
     - name: "Datastructuren"
-      link: "/courses/programmeren/datastructuren/"
+      # link: "/courses/programmeren/datastructuren/"
       rubrics:
         - "A": "Objecten, klassen fields, en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd. "
           "B": "Objecten, klassen, fields en methods worden correct aangemaakt. Overerving en associatie worden correct toegepast. Fields en methods zijn correct geimplementeerd, maar er zijn oplossingen die veel korter of sneller zijn. "
@@ -81,18 +81,18 @@
           "D": "Objecten en klassen worden correct aangemaakt. Fields en methods zijn echter niet juist aangemaakt en geimplementeerd. Overerving en associatie worden niet correct toegepast."
           "E": "Objecten, klassen, fields en methods worden op de verkeerde manier aangemaakt. Overerving en associatie worden niet correct toegepast."
       chapters:
-        - name: Objecten
-          link: "/courses/programmeren/datastructuren/objecten.html"
-        - name: Klassen
-          link: "/courses/programmeren/datastructuren/klassen.html"
-        - name: "Access Modifiers"
-          link: "/courses/programmeren/datastructuren/access-modifiers.html"
-        - name: "Relaties"
-          link: "/courses/programmeren/datastructuren/relaties.html"
-        - name: Inheritance
-          link: "/courses/programmeren/datastructuren/inheritance.html"
-        - name: "Foutopsporing"
-          link: "/courses/programmeren/datastructuren/foutopsporing-datastructuren.html"
+        # - name: Objecten
+        #   link: "/courses/programmeren/datastructuren/objecten.html"
+        # - name: Klassen
+        #   link: "/courses/programmeren/datastructuren/klassen.html"
+        # - name: "Access Modifiers"
+        #   link: "/courses/programmeren/datastructuren/access-modifiers.html"
+        # - name: "Relaties"
+        #   link: "/courses/programmeren/datastructuren/relaties.html"
+        # - name: Inheritance
+        #   link: "/courses/programmeren/datastructuren/inheritance.html"
+        # - name: "Foutopsporing"
+        #   link: "/courses/programmeren/datastructuren/foutopsporing-datastructuren.html"
 #    - name: "Software Ontwikkeling"
 #      link: "/courses/programmeren/software-ontwikkeling/"
 #      chapters:
