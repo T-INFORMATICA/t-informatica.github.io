@@ -16,17 +16,17 @@
         #   "D": "Je gebruik van de verschillende datatypes is correct. Je gebruikt de verschillende operators nog niet correct. Variabelen worden nog niet juist geinitialiseerd."
         #   "E": "Variabelen worden niet goed geinitialiseerd, je maakt verkeerd gebruik van de verschillende datatypes en operators."
         # NIEUW:
-        - "A": "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd."
-          "B": "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
-          "C": "Data wordt correct bewerkt met behulp van de juiste operators. Het bewaren van data kan voor problemen zorgen, omdat je variabelen niet correct gebruikt of initialiseert, of omdat de volgorde van instructies niet wordt gerespecteerd."
-          "D": "Data wordt correct bewaard met behulp van variabelen. Het bewerken van data kan voor problemen zorgen, omdat je de verschillende operators niet correct hanteert of omdat de volgorde van operators niet wordt gerespecteerd."
-          "E": "Je maakt onvoldoende gebruik van variabelen en operators om data op correcte wijze te bewaren en bewerken."
+        - "A" : "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd."
+          "B" : "Data wordt correct bewaard en bewerkt met behulp van variabelen en de juiste operators. De volgorde van instructies en operaties wordt gerespecteerd. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
+          "C" : "Data wordt correct bewerkt met behulp van de juiste operators. Het bewaren van data kan voor problemen zorgen, omdat je variabelen niet correct gebruikt of initialiseert, of omdat de volgorde van instructies niet wordt gerespecteerd."
+          "D" : "Data wordt correct bewaard met behulp van variabelen. Het bewerken van data kan voor problemen zorgen, omdat je de verschillende operators niet correct hanteert of omdat de volgorde van operators niet wordt gerespecteerd."
+          "E" : "Je maakt onvoldoende gebruik van variabelen en operators om data op correcte wijze te bewaren en bewerken."
         
-        - "A": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met leesbare commentaar. Data wordt opgeslagen met behulp van het juiste datatype."
-          "B": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met commentaar. Je commentaar is echter onvoldoende duidelijk. Data wordt opgeslagen met behulp van het juiste datatype."
-          "C": "Namen van variabelen zijn duidelijk. Code wordt verduidelijkt met commentaar. Bij het opslaan van data kies je voor het verkeerde datatype."
-          "D": "Code wordt verduidelijkt met commentaar. Data wordt opgeslagen met behulp van het juiste datatype. De namen van variabelen zijn onvoldoende duidelijk."
-          "E": "Namen van variabelen zijn onvoldoende duidelijk. Je commentaar is onvoldoende uitgewerkt. Data wordt opgeslagen onder het verkeerde datatype."
+        - "A" : "Namen van variabelen zijn duidelijk. Data wordt opgeslagen met behulp van het juiste datatype."
+          "B" : "Namen van variabelen zijn duidelijk. Data wordt opgeslagen met behulp van het juiste datatype."
+          "C" : "Namen van variabelen zijn duidelijk. Bij het opslaan van data kies je voor het verkeerde datatype."
+          "D" : "Data wordt opgeslagen met behulp van het juiste datatype. De namen van variabelen zijn onvoldoende duidelijk."
+          "E" : "Namen van variabelen zijn onvoldoende duidelijk. Data wordt opgeslagen onder het verkeerde datatype."
       chapters:
         - name: Waardes
           link: "/courses/programmeren/instructies/waardes.html"
@@ -50,17 +50,18 @@
         #   "D": "Iteraties en selecties maken gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
         #   "E": "Iteraties en selecties maken geen gebruik van de correcte voorwaarden. Iterator-variabelen worden niet gebruikt. Functies en parameters worden niet altijd correct toegepast. Het DRY principe wordt niet altijd toegepast door de codeblokken die je kiest."
         # NIEUW
-        - "A": "De scope van codeblokken wordt gerespecteerd. Lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt zo goed mogelijk toegepast."
-          "B": "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt correct toegepast. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
-          "C": "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Er zijn echter duidelijke voorbeelden waarbij het D.R.Y. principe onvoldoende werd toegepast."
-          "D": "Het D.R.Y. principe wordt correct toegepast. De scope van codeblokken wordt echter niet altijd gerespecteerd, doordat lokale variabelen en parameters niet of verkeerd worden gebruikt. "
-          "E": "Je gebruikt geen codeblokken waar nodig, waardoor het D.R.Y. principe niet correct wordt toegepast en de scope van codeblokken ovoldoende wordt gerespecteerd."
-        
-        - "A": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar."
-          "B": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
-          "C": "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Functiecommentaar is onvoldoende uitgewerkt en draagt weinig bij."
-          "D": "De namen van functies en parameters zijn duidelijk gekozen. Functies worden vooraf gegaan door duidelijke commentaar. Functies worden echter niet beperkt tot één duidelijk doel, waardoor functies groter of complexer zijn dan nodig is."
-          "E": "Functies zijn onvoldoende uitgewerkt, of hebben geen duidelijk doel. De namen van functies en parameters zijn niet voldoende duidelijk. Functiecommentaar is onvoldoende uitgewerkt."
+        - "A" : "De scope van codeblokken wordt gerespecteerd. Lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt zo goed mogelijk toegepast."
+          "B" : "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Het D.R.Y. principe wordt correct toegepast. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken."
+          "C" : "De scope van codeblokken wordt gerespecteerd, doordat lokale variabelen en parameters worden gebruikt waar nodig. Er zijn echter duidelijke voorbeelden waarbij het D.R.Y. principe onvoldoende werd toegepast."
+          "D" : "Het D.R.Y. principe wordt correct toegepast. De scope van codeblokken wordt echter niet altijd gerespecteerd, doordat lokale variabelen en parameters niet of verkeerd worden gebruikt."
+          "E" : "Je gebruikt geen codeblokken waar nodig, waardoor het D.R.Y. principe niet correct wordt toegepast en de scope van codeblokken ovoldoende wordt gerespecteerd."
+
+
+        - "A" : "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen."
+          "B" : "Functies beperken zich tot één duidelijk doel. De namen van functies en parameters zijn duidelijk gekozen. Er zijn echter betere oplossingen die je had kunnen bedenken en gebruiken. "
+          "C" : "Functies beperken zich tot één duidelijk doel. De namen van functies zijn duidelijk gekozen. De namen van parameters zijn onvoldoende duidelijk."
+          "D" : "De namen van functies en parameters zijn duidelijk gekozen. Functies worden echter niet beperkt tot één duidelijk doel, waardoor functies groter of complexer zijn dan nodig is."
+          "E" : "Functies zijn onvoldoende uitgewerkt, of hebben geen duidelijk doel. De namen van functies en parameters zijn niet voldoende duidelijk."
       chapters:
         - name: Codeblokken
           link: "/courses/programmeren/codeblokken/codeblokken.html"
@@ -311,11 +312,17 @@
     - name: "Basiskennis"
       link: "/courses/informatica/basiskennis/"
       rubrics:
-        - "A": "De code is voorzien van duidelijke en uitgebreide commentaar. Bestanden zijn georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt met duidelijke commentaar om code-wijzigingen bij te houden."
-          "B": "De code is voorzien van duidelijke en uitgebreide commentaar. Bestanden zijn georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt."
-          "C": "De code is voorzien van duidelijke en uitgebreide commentaar. Bestanden zijn onvoldoende georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt."
-          "D": "De code is onvoldoende voorzien van duidelijke en uitgebreide commentaar. Bestanden zijn georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt."
-          "E": "De code is niet voorzien van commentaar. Bestanden zijn niet goed georganiseerd. Een Version Control System is te weinig gebruikt."
+        - "A" : "Bestanden zijn georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt met duidelijke commentaar om code-wijzigingen bij te houden. "
+          "B" : "Bestanden zijn georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt."
+          "C" : "Bestanden zijn onvoldoende georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt. "
+          "D" : "Bestanden zijn georganiseerd met behulp van een duidelijk naamgeving en mappenstructuur. Een Version Control System wordt regelmatig gebruikt."
+          "E" : "Bestanden zijn niet goed georganiseerd. Een Version Control System is te weinig gebruikt. "
+
+        - "A" : "Je instructies bevatten duidelijke commentaar. Functies worden voorafgegaan door duidelijke functiecommentaar, waarin ook de parameters worden verduidelijkt."
+          "B" : "Je instructies bevatten duidelijke commentaar. Functies worden voorafgegaan door duidelijke functiecommentaar, waarin ook de parameters worden verduidelijkt, maar je gebruikt niet de commentaar-stijl van Javascript. "
+          "C" : "Je instructies bevatten commentaar. Functies worden voorafgegaan door functiecommentaar, waarin ook de parameters worden verduidelijkt. Je commentaar is echter niet altijd voldoende duidelijk. "
+          "D" : "Je instructies bevatten commentaar. Functies worden voorafgegaan door functiecommentaar. Je commentaar is echter niet altijd voldoende duidelijk. "
+          "E" : "Je instructies en functies zijn onvoldoende voorzien van commentaar."
       chapters:
         - name: "code editors"
           link: "/courses/informatica/basiskennis/code-editors.html"
